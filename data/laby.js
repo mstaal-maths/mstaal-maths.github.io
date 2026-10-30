@@ -65,11 +65,11 @@ const L6 = [
   depart:[["repeter",2,[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"]]]],
   aide:"Ce programme contient DEUX erreurs. Le motif est presque le bon : regarde dans quel sens le robot doit tourner. Compte ensuite combien de fois le motif doit se répéter pour arriver au drapeau.",
   sol:[["repeter",3,[["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"]]]]},
- {titre:"Défi : une boucle dans une boucle", defi:true, voir:true, dir:"E", max:4, blocs:MVR,
+ {titre:"Une boucle dans une boucle", voir:true, dir:"E", max:4, blocs:MVR,
   map:["########","########","########","#D...###","####.###","####.###","#R...###","########"],
   aide:"Tu n'as droit qu'à 4 blocs. Chaque côté du U, c'est « avancer 3 fois » puis « tourner ». Et « avancer 3 fois », ça peut s'écrire avec un « répéter »… placé à l'intérieur d'un autre « répéter » !",
   sol:[["repeter",3,[["repeter",3,[["avancer"]]],["gauche"]]]]},
- {titre:"Défi : le grand zigzag", defi:true, voir:true, dir:"E", max:7, blocs:MVR,
+ {titre:"Le grand zigzag", voir:true, dir:"E", max:7, blocs:MVR,
   map:["########","R...####","###.####","###.####","###....#","######.#","######.#","######D#"],
   aide:"Le motif « 3 cases vers la droite, puis 3 cases vers le bas » revient 2 fois. Avec seulement 7 blocs, il faut des « répéter » à l'intérieur d'un « répéter ». Commence par écrire le motif une seule fois, puis compte tes blocs.",
   sol:[["repeter",2,[["repeter",3,[["avancer"]]],["droite"],["repeter",3,[["avancer"]]],["gauche"]]]]},
@@ -82,7 +82,7 @@ const L6 = [
   map:["#########","#######D#","#######.#","#####...#","#####.###","###...###","###.#####","#R..#####","#########"],
   aide:"Chaque marche est plus grande : 2 cases en avant, puis 2 cases vers le haut. Écris le motif d'une marche (6 blocs), puis mets-le dans un « répéter ». Combien y a-t-il de marches ?",
   sol:[["repeter",3,[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"]]]]},
- /* ---- niveaux bonus « En autonomie » (indices 16 à 19) ---- */
+ /* ---- niveaux bonus « En autonomie » (indices 16 à 19, puis 20 à 33 plus bas) ---- */
  {titre:"La spirale", dir:"E", max:12, blocs:MVR,
   map:["#########","#R......#","#######.#","###...#.#","###.#.#.#","###.#D#.#","###.###.#","###.....#","#########"],
   aide:"Le robot fait 6 cases, tourne à droite, 6 cases, tourne à droite… puis 4 cases deux fois, puis 2 cases deux fois. Chaque paire « répéter … avancer, tourner à droite » peut se répéter 2 fois : une boucle dans une boucle !",
@@ -100,7 +100,69 @@ const L6 = [
  {titre:"La montagne", dir:"E", max:11, blocs:MVR,
   map:["##########","##########","####...###","###..#..##","##..###..#","#R.#####D#","##########"],
   aide:"Le robot monte un escalier, avance d'une case au sommet, puis descend l'autre escalier. Une boucle pour la montée, un bloc au sommet, une boucle pour la descente : dans la descente, le robot tourne d'abord à droite.",
-  sol:[["repeter",3,[["avancer"],["gauche"],["avancer"],["droite"]]],["avancer"],["repeter",3,[["avancer"],["droite"],["avancer"],["gauche"]]]]}
+  sol:[["repeter",3,[["avancer"],["gauche"],["avancer"],["droite"]]],["avancer"],["repeter",3,[["avancer"],["droite"],["avancer"],["gauche"]]]]},
+ /* ---- niveaux « En autonomie » ajoutés (indices 20 à 33 ; on ajoute toujours à la fin pour garder la progression enregistrée) ---- */
+ {titre:"Le robot regarde en bas", dir:"S", max:5, blocs:MVR,
+  map:["#########","##R######","##.######","##.######","##.....D#","#########"],
+  aide:"Attention : au départ, le robot regarde vers le bas de l'écran. Pour aller ensuite vers la droite de l'écran, il doit tourner à SA gauche ! Mets-toi à sa place (tu peux tourner ta feuille).",
+  sol:[["repeter",3,[["avancer"]]],["gauche"],["repeter",5,[["avancer"]]]]},
+ {titre:"Demi-tour !", dir:"O", max:7, blocs:MVR,
+  map:["#########","#######D#","#######.#","#######.#","##R.....#","#########"],
+  aide:"Le robot regarde vers la gauche, mais le chemin part vers la droite. Pour faire demi-tour, il faut tourner deux fois du même côté. Ensuite, regarde bien dans quel sens il regarde avant le virage.",
+  sol:[["droite"],["droite"],["repeter",5,[["avancer"]]],["gauche"],["repeter",3,[["avancer"]]]]},
+ {titre:"Dedans ou dehors ?", type:"bug", dir:"E", max:5, blocs:MVR,
+  map:["#########","#R......#","#######.#","#######D#","#########"],
+  depart:[["repeter",6,[["avancer"],["droite"]]],["repeter",2,[["avancer"]]]],
+  aide:"Un bloc est rangé au mauvais endroit : il est DANS la boucle, alors le robot le refait 6 fois ! Lance le programme et regarde quand le robot tourne. Sors ce bloc de la boucle et place-le juste après.",
+  sol:[["repeter",6,[["avancer"]]],["droite"],["repeter",2,[["avancer"]]]]},
+ {titre:"L'escalier à l'envers", dir:"O", max:6, blocs:MVR,
+  map:["#########","#D#######","#...#####","###...###","#####..R#","#########"],
+  aide:"Le robot regarde vers la gauche de l'écran et monte un escalier. Quand il regarde vers la gauche, monter, c'est tourner à SA droite ! Chaque marche : 2 cases en avant, puis une case vers le haut. Mets ce motif dans un « répéter ».",
+  sol:[["repeter",3,[["avancer"],["avancer"],["droite"],["avancer"],["gauche"]]]]},
+ {titre:"Prévois : départ vers le haut", type:"prevois", dir:"N", max:0, blocs:[],
+  map:["#########","#.....A.#","#.......#","#.......#","#.......#","#....BC.#","#.R.....#","#########"],
+  prog:[["repeter",3,[["avancer"]]],["droite"],["repeter",4,[["avancer"]]],["droite"],["repeter",2,[["avancer"]]]], rep:"C",
+  aide:"Au départ, le robot regarde vers le HAUT de l'écran. Suis-le avec ton doigt, case par case. Après chaque virage, demande-toi : vers où regarde-t-il maintenant ?",
+  sol:null},
+ {titre:"Deux chemins", dir:"S", max:5, blocs:MVR,
+  map:["##########","#R..######","#.#.######","#.#....###","#.####...#","#.######.#","#.......D#","##########"],
+  aide:"Deux chemins mènent au drapeau. Celui qui a l'air le plus direct tourne tout le temps : il demande beaucoup de blocs ! Avec 5 blocs seulement, quel chemin peux-tu programmer ? Attention, au départ le robot regarde vers le bas.",
+  sol:[["repeter",5,[["avancer"]]],["gauche"],["repeter",7,[["avancer"]]]]},
+ {titre:"Prévois : aller-retour", type:"prevois", dir:"E", max:0, blocs:[],
+  map:["########","#..A...#","#......#","#......#","#R.....#","#......#","#.C....#","#..B...#","########"],
+  prog:[["repeter",4,[["avancer"]]],["droite"],["droite"],["repeter",2,[["avancer"]]],["droite"],["repeter",3,[["avancer"]]]], rep:"A",
+  aide:"Deux « tourner à droite » de suite : le robot fait demi-tour ! Il revient alors sur ses pas. Ensuite, quand il regarde vers la gauche de l'écran, de quel côté est SA droite ?",
+  sol:null},
+ {titre:"Le vrai labyrinthe", dir:"E", max:11, blocs:MVR,
+  map:["##########","#R...#####","#.##.#.#D#","#.#..#.#.#","#.##.#.#.#","####.....#","####.###.#","##...###.#","##########"],
+  aide:"Attention aux culs-de-sac ! Trouve d'abord le bon chemin avec ton doigt. Il est fait de 4 lignes droites : compte les cases de chacune, puis écris une boucle « répéter » pour chaque ligne droite.",
+  sol:[["repeter",3,[["avancer"]]],["droite"],["repeter",4,[["avancer"]]],["gauche"],["repeter",4,[["avancer"]]],["gauche"],["repeter",3,[["avancer"]]]]},
+ {titre:"Trouve l'erreur : les nombres échangés", type:"bug", dir:"N", max:4, blocs:MVR,
+  map:["########","#.....D#","#.######","#.######","#.######","#.######","#R######","########"],
+  depart:[["repeter",5,[["repeter",2,[["avancer"]]],["droite"]]]],
+  aide:"Les bons blocs sont là, mais les deux nombres des boucles ont été échangés ! La petite boucle (à l'intérieur) fait avancer le robot le long d'un côté : combien de cases ? La grande boucle refait tout le côté : combien de fois ?",
+  sol:[["repeter",2,[["repeter",5,[["avancer"]]],["droite"]]]]},
+ {titre:"Le tour du rectangle", dir:"E", max:7, blocs:MVR,
+  map:["#########","#R......#","#######.#","#D#####.#","#.......#","#########"],
+  aide:"Le robot fait le tour d'un grand rectangle de haies : un grand côté (6 cases), un petit côté (3 cases), puis encore un grand et un petit. Écris le motif « grand côté, virage, petit côté, virage » avec deux boucles, puis répète-le. Le robot s'arrête dès qu'il touche le drapeau.",
+  sol:[["repeter",2,[["repeter",6,[["avancer"]]],["droite"],["repeter",3,[["avancer"]]],["droite"]]]]},
+ {titre:"L'escalier à paliers", dir:"E", max:8, blocs:MVR,
+  map:["###########","#######..D#","######..###","###....####","##..#######","#R.########","###########"],
+  aide:"Deux marches, puis un palier plat de 2 cases… et ça recommence. Une marche, c'est « avancer, tourner à gauche, avancer, tourner à droite ». Mets les 2 marches dans une boucle, ajoute le palier après cette boucle, puis répète le tout.",
+  sol:[["repeter",2,[["repeter",2,[["avancer"],["gauche"],["avancer"],["droite"]]],["repeter",2,[["avancer"]]]]]]},
+ {titre:"Prévois : l'escalier mystère", type:"prevois", dir:"E", max:0, blocs:[],
+  map:["#########","#R.....A#","#.......#","#.......#","#...B...#","#.......#","#.......#","#......C#","#########"],
+  prog:[["repeter",2,[["repeter",3,[["avancer"],["droite"],["avancer"],["gauche"]]],["gauche"]]]], rep:"A",
+  aide:"La petite boucle fait descendre un escalier de 3 marches. Puis le robot tourne à gauche : il ne regarde plus dans le même sens ! Au deuxième tour, refais l'escalier en partant de sa nouvelle direction.",
+  sol:null},
+ {titre:"Défi : le serpent", defi:true, voir:true, dir:"N", max:13, blocs:MVR,
+  map:["##########","#...#...##","#.#.#.#.##","#.#.#.#.##","#.#.#.#.##","#R#...#D##","##########"],
+  aide:"Le robot fait des allers-retours comme un serpent : 4 cases vers le haut, 2 vers la droite, 4 vers le bas, 2 vers la droite… En haut, il tourne à droite ; en bas, il tourne à gauche. Écris une montée ET une descente (avec des boucles pour les lignes droites), puis répète le tout.",
+  sol:[["repeter",2,[["repeter",4,[["avancer"]]],["droite"],["repeter",2,[["avancer"]]],["droite"],["repeter",4,[["avancer"]]],["gauche"],["repeter",2,[["avancer"]]],["gauche"]]]]},
+ {titre:"Défi : le tour de la croix", defi:true, voir:true, dir:"N", max:8, blocs:MVR,
+  map:["#########","###...###","###.#.###","#D#R#...#","#.#####.#","#...#...#","###.#.###","###...###","#########"],
+  aide:"Le robot fait le tour d'une croix de haies : 4 branches, toutes pareilles. Une branche : « 2 cases, tourner à droite » deux fois de suite, puis 2 cases et tourner à gauche. « 2 cases, tourner à droite » deux fois, c'est déjà une boucle dans une boucle… et il faut refaire la branche 4 fois. Trois boucles, les unes dans les autres !",
+  sol:[["repeter",4,[["gauche"],["repeter",3,[["droite"],["avancer"],["avancer"]]],["gauche"]]]]}
 ];
 
 /* ==================================================================
@@ -192,7 +254,7 @@ const L5 = [
   prog:[["repeter",2,[["ajouter",3]]],["repeter",3,[["multiplier",2]]],["repeter",5,[["avancer"]]]], rep:88,
   aide:"Première boucle : on ajoute 3, deux fois de suite. Deuxième boucle : on multiplie par 2, trois fois de suite. Note le nombre du robot après chaque calcul.",
   sol:null},
- /* ---- niveaux bonus « En autonomie » (18 à 22) ---- */
+ /* ---- niveaux bonus « En autonomie » (18 à 22, puis 23 à 35 plus bas) ---- */
  {titre:"Le virage des nombres", v0:2, dir:"E", max:7, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
   map:["######","#R.P##","###.##","###P##","###.##","###D##","######"], doors:[6,18],
   aide:"La porte du haut demande 6, celle du bas demande 18. Quel calcul fait passer de 2 à 6, puis de 6 à 18 ? N'oublie pas de tourner au coin, et pense au bloc « répéter » pour la fin du chemin.",
@@ -215,7 +277,65 @@ const L5 = [
   map:["########","#R..P.D#","########"], doors:[48],
   depart:[["repeter",3,[["multiplier",2]]],["repeter",5,[["avancer"]]]],
   aide:"Le robot affiche 24 au lieu de 48. 3 × 2 = 6, 6 × 2 = 12… Combien de fois faut-il doubler 3 pour obtenir 48 ?",
-  sol:[["repeter",4,[["multiplier",2]]],["repeter",5,[["avancer"]]]]}
+  sol:[["repeter",4,[["multiplier",2]]],["repeter",5,[["avancer"]]]]},
+ /* ---- niveaux « En autonomie » ajoutés (indices 23 à 35 ; toujours à la fin pour garder la progression enregistrée) ---- */
+ {titre:"Trop tard !", type:"bug", v0:10, dir:"E", max:8, blocs:["avancer","ajouter","enlever","multiplier"],
+  map:["#########","#R.P.P.D#","#########"], doors:[6,18],
+  depart:[["avancer"],["avancer"],["enlever",4],["avancer"],["avancer"],["multiplier",3],["avancer"],["avancer"]],
+  aide:"Les bons calculs sont là, mais le robot les fait trop tard : quand il arrive devant une porte, son nombre n'a pas encore changé ! Un calcul doit être fait AVANT d'arriver devant la porte. Déplace les deux blocs de calcul.",
+  sol:[["avancer"],["enlever",4],["avancer"],["avancer"],["multiplier",3],["avancer"],["avancer"],["avancer"]]},
+ {titre:"Le chemin des calculs", v0:1, dir:"E", max:8, fixe:{ajouter:3, multiplier:2}, blocs:["avancer","ajouter","multiplier"],
+  map:["#######","#R.P.D#","#######"], doors:[22],
+  aide:"Tu as seulement « ajouter 3 » et « multiplier par 2 », et le robot doit passer de 1 à 22 avec 4 calculs. Astuce : pars de la fin ! 22, c'est 11 × 2… Et 11, c'est 8 + 3…",
+  sol:[["ajouter",3],["multiplier",2],["ajouter",3],["multiplier",2],["avancer"],["avancer"],["avancer"],["avancer"]]},
+ {titre:"Sous zéro !", v0:5, dir:"E", max:5, blocs:["avancer","ajouter","enlever","multiplier","repeter"],
+  map:["#########","#RP..P.D#","#########"], doors:[-2,3],
+  aide:"La première porte demande −2 : un nombre plus petit que zéro ! Pour passer de 5 à −2, il faut enlever… Compte sur une droite graduée. Ensuite, pour passer de −2 à 3, il faut ajouter…",
+  sol:[["enlever",7],["avancer"],["ajouter",5],["repeter",5,[["avancer"]]]]},
+ {titre:"Trouve les erreurs : le virage", type:"bug", v0:6, dir:"E", max:6, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["######","#R...#","####.#","####P#","####.#","####D#","######"], doors:[24],
+  depart:[["repeter",3,[["avancer"]]],["gauche"],["ajouter",4],["repeter",4,[["avancer"]]]],
+  aide:"Ce programme contient DEUX erreurs : une dans le chemin, une dans le calcul. Lance-le et regarde où le robot se trompe. Ensuite : le robot part avec 6 et la porte demande 24. Or 6 + 4 = 10. Quel calcul avec le nombre 4 transforme 6 en 24 ?",
+  sol:[["repeter",3,[["avancer"]]],["droite"],["multiplier",4],["repeter",4,[["avancer"]]]]},
+ {titre:"Prévois en chemin", type:"prevois", v0:2, dir:"E", max:0, blocs:[],
+  map:["######","#R.###","##..##","###.D#","######"],
+  prog:[["repeter",2,[["avancer"],["multiplier",3],["droite"],["avancer"],["enlever",2],["gauche"]]],["avancer"]], rep:10,
+  aide:"Les blocs bleus font bouger le robot mais ne changent pas son nombre : ne regarde que les blocs de calcul (orange). Tour 1 : 2 × 3 = 6, puis 6 − 2 = 4. Tour 2 : on repart de 4…",
+  sol:null},
+ {titre:"Le coffre-fort à virgule", type:"coffre", dir:"E", max:0, blocs:[],
+  map:["########","#R...PD#","########"], doors:[9],
+  prog:[["multiplier",4],["enlever",1],["repeter",5,[["avancer"]]]], rep:2.5,
+  aide:"Remonte le programme à l'envers. Avant « enlever 1 », le robot affichait 9 + 1 = 10. Quel nombre multiplié par 4 donne 10 ? Ce n'est pas un nombre entier : c'est 10 ÷ 4. Écris-le avec une virgule.",
+  sol:null},
+ {titre:"Pair ou impair ?", v0:1, dir:"E", max:11, fixe:{ajouter:2, multiplier:3}, blocs:["avancer","gauche","droite","ajouter","multiplier","repeter"],
+  map:["#######","#.P..##","#R##.D#","#.P..##","#######"], doors:[10,15],
+  aide:"Deux chemins, deux portes : 10 en haut, 15 en bas. Avec « ajouter 2 » et « multiplier par 3 », en partant de 1, peux-tu obtenir 10 ? Essaie : 1, 3, 5, 7… 1 × 3 = 3… Un nombre impair plus 2, ou fois 3, reste-t-il impair ? Choisis bien ton chemin !",
+  sol:[["repeter",7,[["ajouter",2]]],["droite"],["avancer"],["gauche"],["repeter",3,[["avancer"]]],["gauche"],["avancer"],["droite"],["avancer"]]},
+ {titre:"Toujours le même code", type:"formule", dir:"E", max:4, blocs:["avancer","ajouter","enlever","multiplier","repeter"],
+  map:["########","#R..P.D#","########"], doors:["f"], fn:v=>5, formule:"5, quel que soit le nombre de départ", tests:[2,7,13],
+  aide:"Le robot part avec 2, puis 7, puis 13, et il doit toujours afficher 5. Il faudrait d'abord transformer n'importe quel nombre en 0… Quelle multiplication donne toujours 0 ?",
+  sol:[["multiplier",0],["ajouter",5],["repeter",5,[["avancer"]]]]},
+ {titre:"Le compte à rebours", v0:50, dir:"E", max:4, fixe:{enlever:6}, blocs:["avancer","enlever","repeter"],
+  map:["#######","#RP..D#","#######"], doors:[2],
+  aide:"Le robot part avec 50 et la porte demande 2. Tu as seulement le bloc « enlever 6 ». Combien de fois faut-il enlever 6 ? De 50 à 2, il faut descendre de 48…",
+  sol:[["repeter",8,[["enlever",6]]],["repeter",4,[["avancer"]]]]},
+ {titre:"Prévois : une boucle dans une boucle", type:"prevois", v0:1, dir:"E", max:0, blocs:[],
+  map:["########","#R....D#","########"],
+  prog:[["repeter",2,[["repeter",3,[["ajouter",2]]],["multiplier",2]]],["repeter",5,[["avancer"]]]], rep:40,
+  aide:"La grande boucle est faite 2 fois. À chaque tour : on ajoute 2, trois fois de suite, puis on multiplie par 2. Tour 1 : 1 + 2 + 2 + 2 = 7, puis 7 × 2 = 14. Tour 2 : on repart de 14…",
+  sol:null},
+ {titre:"Huit fois plus, et 3", type:"formule", dir:"E", max:5, fixe:{multiplier:2}, blocs:["avancer","ajouter","multiplier","repeter"],
+  map:["########","#R..P.D#","########"], doors:["f"], fn:v=>8*v+3, formule:"8 fois le nombre de départ, plus 3", tests:[1,4,10],
+  aide:"Ici, tu n'as que « multiplier par 2 ». Multiplier par 2, puis encore par 2, puis encore par 2 : c'est multiplier par combien ? Utilise un « répéter ». N'oublie pas d'ajouter 3 ensuite.",
+  sol:[["repeter",3,[["multiplier",2]]],["ajouter",3],["repeter",5,[["avancer"]]]]},
+ {titre:"Le tour des portes", v0:2, dir:"E", max:5, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["#######","#RP...#","#####P#","#####.#","#####.#","#D..P.#","#######"], doors:[6,18,54],
+  aide:"Le robot fait 3 côtés d'un carré. Sur chaque côté, une porte juste après le coin : 6, puis 18, puis 54. Chaque fois, le code est multiplié par 3. Un côté : « calculer, avancer 4 fois, tourner ». Mets ce motif dans une boucle… avec une boucle à l'intérieur !",
+  sol:[["repeter",3,[["multiplier",3],["repeter",4,[["avancer"]]],["droite"]]]]},
+ {titre:"Défi : la formule à réduire", defi:true, voir:true, type:"formule", dir:"E", max:4, blocs:["avancer","ajouter","enlever","multiplier","repeter"],
+  map:["########","#R..P.D#","########"], doors:["f"], fn:v=>3*(v+4)+3*v, formule:"3 × (nombre de départ + 4) + 3 × nombre de départ", tests:[1,4,10],
+  aide:"Le robot ne garde qu'un seul nombre : après avoir calculé 3 × (départ + 4), il a oublié le nombre de départ ! Il faut donc d'abord réduire l'expression. 3 × (x + 4) + 3 × x = 3x + 12 + 3x = … Il te reste 2 blocs de calcul.",
+  sol:[["multiplier",6],["ajouter",12],["repeter",5,[["avancer"]]]]}
 ];
 
 /* on retire les rangées de haies inutiles en haut et en bas (une seule rangée de bordure suffit) */
@@ -225,6 +345,8 @@ const L5 = [
 /* ------------------------------------------------------------------
    Simulation
 ------------------------------------------------------------------ */
+/* nombres affichés à la française : vrai signe moins, virgule décimale */
+const fmtN = v => String(v).replace("-","−").replace(".",",");
 function parse(L){ let R=null, G=null; const F={}, P=[]; L.map.forEach((row,y)=>[...row].forEach((c,x)=>{ if(c==="R") R=[x,y]; if(c==="D") G=[x,y]; if("ABC".includes(c)) F[c]=[x,y]; if(c==="P") P.push([x,y]); }));
   const doors={}; P.forEach((p,i)=>doors[p[0]+","+p[1]]=L.doors?L.doors[i]:null); return {R,G,F,doors}; }
 function simulate(L, prog, v0){
@@ -321,7 +443,7 @@ function mazeSVG(L){
   const FC={A:"#e8413c",B:"#2c7be5",C:"#7a3fd0"}; for(const k in F) s+=flag(F[k][0],F[k][1],FC[k],k);
   for(const k in doors){ const [x,y]=k.split(",").map(Number), X=x*CELL, Y=y*CELL, code=doors[k];
     s+=`<g class="ldoor" data-k="${k}"><rect x="${X+5}" y="${Y+3}" width="${CELL-10}" height="${CELL-6}" rx="4" fill="#9a6a3a" stroke="#6b4423" stroke-width="2"/><circle cx="${X+CELL-12}" cy="${Y+CELL/2+2}" r="2.4" fill="#f5d36b"/>
-      <rect x="${X+8}" y="${Y+9}" width="${CELL-16}" height="18" rx="3" fill="#fff8e1"/><text class="ldcode" x="${X+CELL/2}" y="${Y+23}" text-anchor="middle" style="font:800 13px Arial;fill:#5a3a1a">${code==="f"?"?":code}</text></g>`; }
+      <rect x="${X+8}" y="${Y+9}" width="${CELL-16}" height="18" rx="3" fill="#fff8e1"/><text class="ldcode" x="${X+CELL/2}" y="${Y+23}" text-anchor="middle" style="font:800 13px Arial;fill:#5a3a1a">${code==="f"?"?":fmtN(code)}</text></g>`; }
   s+=`<g class="lbot" id="lbot"><g transform="translate(${-CELL/2} ${-CELL/2})">
      <rect x="9" y="11" width="24" height="22" rx="7" fill="#4C97FF" stroke="#2c5fb3" stroke-width="2"/>
      <rect x="31" y="17" width="6" height="10" rx="2" fill="#2c5fb3"/>
@@ -398,7 +520,7 @@ function load(i){
   document.getElementById("lmaze").innerHTML = mazeSVG(L);
   document.getElementById("laide").textContent = L.aide;
   document.getElementById("lsol").innerHTML = (L.voir && L.sol) ? `<details class="lsolbox"><summary>Toujours bloqué ? Voir une solution possible</summary><p class="where">Essaie d'abord avec l'aide ! Voici <b>une</b> solution (il en existe parfois d'autres) :</p>${progHTML(L.sol, L.v0)}</details>`
-     : (L.voir && statique(L)) ? `<details class="lsolbox"><summary>Toujours bloqué ? Voir la réponse</summary><p>Le robot doit partir avec <b>${L.rep}</b>. Vérifie en refaisant le calcul dans l'ordre du programme.</p></details>` : "";
+     : (L.voir && statique(L)) ? `<details class="lsolbox"><summary>Toujours bloqué ? Voir la réponse</summary><p>Le robot doit partir avec <b>${fmtN(L.rep)}</b>. Vérifie en refaisant le calcul dans l'ordre du programme.</p></details>` : "";
   const h=document.querySelector(".laby details.lhelp"); if(h) h.open=false;
   levelsBar(); msg("");
   /* boutons */
@@ -479,7 +601,7 @@ function place(x, y, d, anim){
   bot.style.transition = tr; bot.style.transform = `translate(${x*CELL+CELL/2}px, ${y*CELL+CELL/2}px) rotate(${angle}deg)`;
   const val=document.getElementById("lval"); if(val){ val.style.transition=tr; val.style.transform=`translate(${x*CELL+CELL/2}px, ${y*CELL+CELL/2}px)`; }
 }
-function setVal(v){ const t=document.getElementById("lvalt"); if(t) t.textContent = (v===undefined?"":String(v).replace("-","−")); }
+function setVal(v){ const t=document.getElementById("lvalt"); if(t) t.textContent = (v===undefined?"":fmtN(v)); }
 function doorsReset(){ document.querySelectorAll(".ldoor").forEach(g=>g.classList.remove("open","shut")); }
 function msg(h, kind){ const el=document.getElementById("lmsg"); if(!el) return; el.hidden=!h; el.className="lmsg "+(kind||""); el.innerHTML=h; }
 function stop(){ if(timer){ clearTimeout(timer); timer=null; } if(WS) WS.highlightBlock(null); setBusy(false); }
@@ -502,7 +624,6 @@ function animate(res, fin, fast){
   };
   step();
 }
-const fmtN = v => String(v).replace("-","−");
 function win(extra){
   const d=done(), avant=SUB.every(i=>d.includes(i)); if(!d.includes(cur)){ d.push(cur); store.set("done", JSON.stringify(d)); } levelsBar();
   const nxt=SUB[SUB.indexOf(cur)+1];
