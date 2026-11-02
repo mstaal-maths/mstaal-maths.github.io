@@ -56,7 +56,7 @@ const pers5 = (()=>{ const c=15, W=32*c+8, H=10*c+8, p=(x,y)=>[4+x*c,4+y*c];
   [["a)",5,9.9],["b) un cube",18,9.9],["c)",25.5,9.9]].forEach(([t,x,y])=>{ s+=`<text x="${4+x*c}" y="${4+y*c-2}" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#222">${t}</text>`; });
   return s+"</svg>"; })();
 /* patron du dé complété */
-const de7 = vue([[1,0],[0,1],[1,1],[2,1],[1,2],[1,3]], "Le patron du dé complété", {c:38, nums:[[1,0,"6"],[0,1,"2"],[1,1,"3"],[2,1,"5"],[1,2,"1"],[1,3,"4"]]});
+const de7 = vue([[1,0],[0,1],[1,1],[2,1],[1,2],[1,3]], "", {c:38, nums:[[1,0,"6"],[0,1,"2"],[1,1,"3"],[2,1,"5"],[1,2,"1"],[1,3,"4"]]});
 
 /* ---------- schémas ---------- */
 const S_SOL = sch("Les solides usuels", co("solides","Cube, pavé droit, prisme droit, pyramide ; cylindre, cône, boule",440));
@@ -109,51 +109,49 @@ cours:[
 exos:[
 {t:"Les solides usuels", e:[
   {n:"Activité 1", t:"Le tri des solides", w:"Sur ton cahier", h:`${ex("act1","Huit solides numérotés de 1 à 8",490)}<p>1) Écris le nom de chaque solide sur ton cahier.</p><p>2) Classe-les en deux groupes : les polyèdres et les autres. Explique ton choix.</p>`,
-   c:`<p>1) ① cube · ② cylindre · ③ pyramide à base carrée · ④ boule · ⑤ prisme droit à base triangulaire · ⑥ pavé droit · ⑦ cône · ⑧ pyramide à base triangulaire</p><p>2) <b>Polyèdres</b> (toutes leurs faces sont des polygones) : ①, ③, ⑤, ⑥, ⑧. <b>Les autres</b> (ils ont une surface courbe) : ②, ④, ⑦.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Des objets et des solides", w:"Sur ta feuille", h:`<p>À quel solide te fait penser chaque objet ?</p><p>a) Une boîte à chaussures · b) Un dé à jouer · c) Une boîte de conserve · d) Un ballon de football · e) Un cornet de glace · f) Une tente canadienne · g) La pyramide du Louvre · h) Un morceau de sucre</p>`,
-   c:`<p>a) pavé droit · b) cube · c) cylindre · d) boule · e) cône · f) prisme droit (à base triangulaire) · g) pyramide (à base carrée) · h) cube (ou pavé droit)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Faces, arêtes et sommets", w:"Sur ta feuille", h:`<p>Aide-toi des solides de l'activité 1 pour compléter le tableau.</p><div class="scroll"><table class="std"><thead><tr><th>Solide</th><th>Faces</th><th>Arêtes</th><th>Sommets</th></tr></thead><tbody><tr><td>Cube</td><td></td><td></td><td></td></tr><tr><td>Pavé droit</td><td></td><td></td><td></td></tr><tr><td>Prisme droit à base triangulaire</td><td></td><td></td><td></td></tr><tr><td>Pyramide à base carrée</td><td></td><td></td><td></td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Solide</th><th>Faces</th><th>Arêtes</th><th>Sommets</th></tr></thead><tbody><tr><td>Cube</td><td>6</td><td>12</td><td>8</td></tr><tr><td>Pavé droit</td><td>6</td><td>12</td><td>8</td></tr><tr><td>Prisme droit à base triangulaire</td><td>5</td><td>9</td><td>6</td></tr><tr><td>Pyramide à base carrée</td><td>5</td><td>8</td><td>5</td></tr></tbody></table></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>a) Un cube est un pavé droit. · b) Toutes les faces d'un pavé droit sont des carrés. · c) Un cylindre est un polyèdre. · d) Une pyramide à base carrée a 5 faces. · e) Un cube a 12 arêtes de même longueur.</p>`,
-   c:`<p>a) <b>Vrai</b> (un pavé droit particulier). · b) <b>Faux</b> : ce sont des rectangles (des carrés seulement pour un cube). · c) <b>Faux</b> : il a une surface courbe. · d) <b>Vrai</b> : 4 triangles et 1 carré. · e) <b>Vrai</b> : ses 6 faces sont des carrés identiques, donc ses 12 arêtes ont la même longueur.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Représenter un solide", e:[
   {n:"Exercice 4", t:"Les arêtes cachées", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Voici un pavé droit ABCDEFGH dessiné sans ses arêtes cachées.</p><p>a) Complète le dessin en traçant les arêtes cachées en pointillés.</p><p>b) Quelles faces sont en vraie grandeur ?</p><p>c) Cite trois arêtes de même longueur que [AB].</p><p>d) Quelle face est opposée à la face BCGF ?</p></div>${ex("e4","Le pavé ABCDEFGH sans ses arêtes cachées",300)}</div>`,
-   c:`<div class="cpt"><div><p>a) Les arêtes cachées sont [AE], [EF] et [EH] (en pointillés).</p><p>b) La face avant <b>ABCD</b> et la face arrière <b>EFGH</b>.</p><p>c) <b>[DC], [EF] et [HG]</b>.</p><p>d) La face <b>ADHE</b>.</p></div>${pave4}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Compléter la perspective", w:"Sur ta feuille", h:`<p>Termine le dessin de chaque pavé droit en perspective cavalière (b est un cube). N'oublie pas les arêtes cachées en pointillés.</p>${ex("e5","Trois débuts de pavés sur quadrillage",490)}`,
-   c:`${pers5}<p>Les arêtes fuyantes sont toutes parallèles et de même longueur que celle déjà tracée ; les arêtes cachées (en rouge) sont en pointillés.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Patrons", e:[
   {n:"Exercice 6", t:"Patrons de cube ?", w:"Sur ta feuille", h:`<p>Parmi ces figures, lesquelles sont des patrons de cube ? Tu peux les reproduire sur ton cahier et les découper pour vérifier.</p>${ex("e6","Six figures de six carrés, a) à f)",490)}`,
-   c:`<p>Les patrons de cube sont <b>a), c) et f)</b>.</p><p>b) Non : les deux carrés du haut se plieraient sur la même face. · d) Non : deux carrés deviennent le dessus et il manque une face. · e) Non : avec 5 carrés en ligne, le premier et le dernier se superposent.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Le patron du dé", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Sur un dé, la somme des nombres de deux faces opposées est toujours égale à 7. Complète ce patron de dé avec les nombres 4, 5 et 6.</p><p><b>Aide :</b> imagine le pliage. Quelle face sera opposée à la face 1 ?</p></div>${ex("e7","Patron de dé avec 2, 3 et 1",240)}</div>`,
-   c:`<div class="cpt"><div><p>Dans la colonne de 4 carrés, deux carrés séparés par un carré sont opposés : le carré du haut est opposé au 1, il porte <b>6</b> ; le carré du bas est opposé au 3, il porte <b>4</b>.</p><p>Les deux carrés de côté sont opposés : en face du 2, on écrit <b>5</b>.</p></div><div class="figs">${de7}</div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Construire un patron", w:"Sur ton cahier", h:`<p>Construis en vraie grandeur un patron d'un pavé droit de longueur 5 cm, de largeur 3 cm et de hauteur 2 cm. Découpe-le et plie-le pour vérifier.</p>`,
-   c:(()=>{ const k=14, R=(x,y,w,h)=>`<rect x="${10+x*k}" y="${10+y*k}" width="${w*k}" height="${h*k}" style="fill:#fbe3c6;stroke:#222;stroke-width:1.8"/>`; let s=`<svg class="fig" viewBox="0 0 ${20+12*k} ${20+10*k}" width="${20+12*k}" role="img" aria-label="Un patron du pavé de 5 cm sur 3 cm sur 2 cm">`;
-     s+=R(2,0,5,3)+R(2,3,5,2)+R(2,5,5,3)+R(2,8,5,2)+R(0,5,2,3)+R(7,5,2,3); s+=`<text x="${10+4.5*k}" y="${10+1.7*k}" text-anchor="middle" style="font-size:12px">5 × 3</text><text x="${10+4.5*k}" y="${10+4.3*k}" text-anchor="middle" style="font-size:12px">5 × 2</text><text x="${10+4.5*k}" y="${10+6.7*k}" text-anchor="middle" style="font-size:12px">5 × 3</text><text x="${10+4.5*k}" y="${10+9.3*k}" text-anchor="middle" style="font-size:12px">5 × 2</text><text x="${10+1*k}" y="${10+6.7*k}" text-anchor="middle" style="font-size:11px">3×2</text><text x="${10+8*k}" y="${10+6.7*k}" text-anchor="middle" style="font-size:11px">3×2</text>`;
-     return `<p>Par exemple (figure réduite) : une bande de 4 rectangles (5 × 3, 5 × 2, 5 × 3, 5 × 2), et deux rectangles de 3 cm sur 2 cm sur les côtés.</p>${s}</svg><p>Les faces opposées sont identiques : 2 faces de 5 × 3, 2 faces de 5 × 2 et 2 faces de 3 × 2.</p>`; })()}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Volumes", e:[
   {n:"Exercice 9", t:"Compter les cubes", w:"Sur ta feuille", h:`<p>Chaque petit cube a un volume de 1 cm³. Les assemblages sont pleins : les cubes cachés qui soutiennent les autres sont présents. Donne le volume de chaque assemblage.</p>${ex("e9","Quatre assemblages de cubes a) à d)",490)}`,
-   c:`<p>On lit la profondeur sur les faces de côté (une ou deux rangées).</p><p>a) Couche du bas : 4 × 2 = 8 cubes (deux rangées) ; en haut : 2 cubes. <b>10 cm³</b>.</p><p>b) Devant : une colonne de 3 cubes et 2 cubes au sol ; derrière la colonne : une colonne de 2 cubes. <b>7 cm³</b>.</p><p>c) Deux couches de 3 × 2 = 6 cubes, et 2 cubes au sommet (l'un derrière l'autre). 6 + 6 + 2 = <b>14 cm³</b>.</p><p>d) Au sol : 3 cubes devant, et 2 cubes l'un derrière l'autre derrière celui du milieu ; au 2<sup>e</sup> étage : 2 cubes au milieu. 3 + 2 + 2 = <b>7 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Couche par couche", w:"Sur ta feuille", h:`<p>Un pavé droit est construit avec des cubes de 1 cm³. Il mesure 5 cubes de long, 3 cubes de large et 2 cubes de haut.</p><p>a) Combien de cubes y a-t-il dans une couche ? b) Combien y a-t-il de couches ? c) Quel est le volume de ce pavé ?</p>`,
-   c:`<p>a) 5 × 3 = <b>15 cubes</b>.</p><p>b) Le pavé a 2 cubes de haut : <b>2 couches</b>.</p><p>c) 2 × 15 = 30 cubes : <b>30 cm³</b>.</p>${iso([[2,2,2,2,2],[2,2,2,2,2],[2,2,2,2,2]],{s:26})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Combien en manque-t-il ?", w:"Sur ta feuille", h:`<div class="cpt"><div><p>On voulait construire un grand cube de 3 cubes de côté, mais on a enlevé quelques cubes, uniquement sur la couche du dessus.</p><p>a) Combien de cubes faut-il pour un grand cube complet ? b) Combien de cubes manque-t-il ? c) Quel est le volume de l'assemblage dessiné ?</p></div>${ex("e11","Un grand cube auquel il manque des cubes sur le dessus",170)}</div>`,
-   c:`<p>a) 3 × 3 × 3 = <b>27 cubes</b>.</p><p>b) Sur la couche du dessus, il reste 5 cubes (devant à gauche, au milieu à gauche, au centre, et derrière au milieu et à droite) : il en manque 9 − 5 = <b>4</b>.</p><p>c) 27 − 4 = <b>23 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Remplir une boîte", w:"Sur ta feuille", h:`<p>Une boîte en forme de pavé droit mesure 6 cm de long, 4 cm de large et 3 cm de haut. Combien de cubes de 1 cm³ peut-on y ranger ? Quel est le volume de la boîte ?</p>`,
-   c:`<p>Une couche : 6 × 4 = 24 cubes. 3 couches : 3 × 24 = <b>72 cubes</b>. Le volume de la boîte est <b>72 cm³</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Voir dans l'espace", e:[
   {n:"Activité 2", t:"Ateliers tournants (avec des cubes emboîtables)", w:"En classe", h:`<p>Par groupes, passez d'un atelier à l'autre (environ 10 minutes par atelier).</p><p><b>Atelier 1 — Reproduire :</b> construisez l'assemblage dessiné sur la carte, puis comptez ses cubes.</p><p><b>Atelier 2 — Dessiner les vues :</b> pour l'assemblage posé sur la table, dessinez sur papier quadrillé ses vues de dessus, de face et de droite.</p><p><b>Atelier 3 — Construire à partir des vues :</b> à partir des trois vues données sur la carte, construisez l'assemblage.</p><p><b>Atelier 4 — Défi :</b> avec 4 cubes, construisez le plus possible d'assemblages différents. Dessinez la vue de dessus de chacun.</p>`,
-   c:`<p>Les réponses dépendent des cartes données en classe.</p><p><b>Atelier 4 :</b> à plat, on trouve 5 formes de 4 cubes (le carré, la barre, le L, le T et le S) ; en empilant des cubes, on en trouve d'autres (par exemple 3 cubes au sol et 1 cube posé dessus).</p>${["[[0,0],[1,0],[0,1],[1,1]]","[[0,0],[1,0],[2,0],[3,0]]","[[0,0],[0,1],[0,2],[1,2]]","[[0,0],[1,0],[2,0],[1,1]]","[[1,0],[2,0],[0,1],[1,1]]"].map(t=>vue(JSON.parse(t),"",{c:18})).join("").replace(/<figure>/g,'<figure style="display:inline-block;margin:0 10px">')}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"La vue de dessus cotée", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Voici la vue de dessus d'un assemblage. Le nombre écrit dans chaque case indique combien de cubes sont empilés à cet endroit.</p><p>a) Combien de cubes compte cet assemblage ? b) Quel est son volume si chaque cube mesure 1 cm³ ? c) Sur ton cahier, dessine sa vue de face.</p></div>${ex("e13","Vue de dessus cotée",230)}</div>`,
-   c:`<p>a) On additionne les nombres des cases : 1 + 2 + 1 + 2 + 3 + 2 + 1 = <b>12 cubes</b>.</p><p>b) 12 cubes de 1 cm³ : <b>12 cm³</b>.</p><p>c) De face, on voit pour chaque colonne la plus grande hauteur : 3 à gauche, 2 au milieu, 2 à droite.</p><div class="figs">${vue([[0,0],[0,1],[0,2],[1,1],[1,2],[2,1],[2,2]],"Vue de face")}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Quelle vue ?", w:"Sur ta feuille", h:`<p>Pour cet assemblage, retrouve la vue de dessus, la vue de face et la vue de droite. Une des figures est un intrus.</p>${ex("e14","Un assemblage en escalier et quatre vues numérotées",490)}`,
-   c:`<p>Vue de dessus : <b>②</b> (3 cubes devant, et 1 cube derrière la colonne de gauche) · Vue de face : <b>①</b> (l'escalier 3, 2, 1) · Vue de droite : <b>③</b> (devant 3 cubes de haut, derrière 2) · L'intrus : <b>④</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Dessiner les vues", w:"Sur ta feuille", h:`<p>Dessine les vues de dessus, de face et de droite de cet assemblage.</p>${ex("e15","Un assemblage de cubes et trois quadrillages vides",490)}`,
-   c:(()=>{ const V=vues([[2,1,1],[1,0,3]]); return `<p>Devant : 2 cubes à gauche, 1 au milieu, 1 à droite. Derrière : 1 cube à gauche et une colonne de 3 cubes à droite. (8 cubes en tout.)</p><div class="figs">${vue(V.top,"Vue de dessus")}${vue(V.face,"Vue de face")}${vue(V.droite,"Vue de droite")}</div><p><i>Vue de droite : le devant de l'assemblage est à gauche, l'arrière à droite.</i></p>`; })()},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"En ++", t:"Le cube peint", w:"Sur ta feuille", h:`<div class="cpt"><div><p>On peint en orange l'extérieur de ce grand cube formé de 27 petits cubes, puis on le démonte.</p><p>Combien de petits cubes ont 3 faces peintes ? 2 faces peintes ? 1 seule face peinte ? Aucune face peinte ?</p></div>${ex("epp","Un grand cube orange de 3 × 3 × 3",150)}</div>`,
-   c:`<p><b>3 faces peintes :</b> les 8 cubes des coins. <b>2 faces :</b> les cubes au milieu des 12 arêtes, soit <b>12</b>. <b>1 face :</b> le cube au centre de chacune des 6 faces, soit <b>6</b>. <b>Aucune :</b> le cube tout au centre, soit <b>1</b>.</p><p>Vérification : 8 + 12 + 6 + 1 = 27.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -267,3 +265,4 @@ exos:[
 
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-19");

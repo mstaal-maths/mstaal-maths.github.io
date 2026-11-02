@@ -556,6 +556,19 @@ html.sheetmode #sheetpage{display:block;max-width:182mm;margin:0 auto;padding:0}
 .infoh{font-family:var(--f-display);font-size:1.3rem;margin:36px 0 14px}
 .chap.info p{margin:0}
 .feuillebox{margin:28px 0;border:2px dashed var(--line);border-radius:14px;padding:6px 16px;background:var(--surface)}.feuillebox>summary{cursor:pointer;font-weight:700;font-size:1.1rem;padding:10px 0}.feuillebox>summary small{font-weight:400;color:var(--muted)}
+/* corrections protégées par un code (version publique) */
+.lockbar{border:2px solid var(--c);border-radius:14px;padding:12px 16px;background:var(--surface);margin:0 0 18px}
+.lockbar p{margin:0 0 10px;font-weight:600}
+.lockform{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lockform input{font:inherit;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--paper);color:var(--ink);min-width:0;flex:1 1 180px;max-width:280px}
+.lockform input:focus{outline:3px solid color-mix(in srgb,var(--c) 45%,transparent);border-color:var(--c)}
+.lockform .btn{padding:10px 18px}
+.lockmsg{display:block;margin-top:8px;font-weight:600;min-height:0}
+.lockmsg.ko{color:var(--ko)}.lockmsg.ok{color:var(--ok)}
+.lockbar.lockdone{border-color:var(--ok)}
+.lockcorr{margin-top:16px;border:0;border-top:1.5px dashed var(--line);padding:12px 0 0;width:100%;text-align:left;background:none;font:inherit;font-weight:600;color:var(--muted);cursor:pointer;display:flex;gap:8px;align-items:center}
+.lockcorr:hover,.lockcorr:focus-visible{color:var(--c)}
+@media print{ .lockbar,.lockcorr{display:none!important} }
 .jeuxacc{margin:0 0 48px}.jeuxacc .infoh{margin-top:0}
 .jeuxacc .jsub{font-size:1.05rem;margin:18px 0 10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .jeuxautres{margin:14px 0;border:2px solid var(--line);border-radius:14px;background:var(--surface);padding:4px 14px}
@@ -1849,7 +1862,7 @@ function chapitre(id, n){
   const go = t => { if(TIMER){clearInterval(TIMER);TIMER=null;} app.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected", x.dataset.t===t));
     PRINT.cur = PRINTABLE[t] ? {t, D, nom:C.nom, n, titre:ch[0], key} : null; const pb=document.getElementById("printbar");
     if(pb){ const list=(TAB_DL[t]||[]).filter(([k])=>!/^ev/.test(k)||D.eval); pb.hidden=!list.length;
-      const box=document.getElementById("pbtns"); box.innerHTML=list.map(([k,l])=>`<button class="btn" type="button" data-k="${k}">${l}</button>`).join("");
+      const box=document.getElementById("pbtns"); box.innerHTML=list.map(([k,l])=>`<button class="btn" type="button" data-k="${k}">${k==="corr"&&LOCK.locked(key)?"🔒 "+l:l}</button>`).join("");
       box.querySelectorAll("button").forEach(b=>b.onclick=()=>dlPdf(b, b.dataset.k)); document.getElementById("printmsg").textContent="Pour l'avoir sur papier : télécharge le PDF, puis imprime-le."; }
     fill(t); };
   app.querySelectorAll(".tab").forEach(b=>b.onclick=()=>go(b.dataset.t));
@@ -1909,15 +1922,81 @@ function exCard(e, tag){
   return `<article class="card ex">${tag?`<span class="tag ${tag}">${tag==="aide"?"Coup de pouce":"Défi"}</span>`:""}
     <div class="t"><h3>${e.n?`<span>${fmt(e.n)}</span> · `:""}${fmt(e.t)}</h3>${e.w?`<span class="where">${e.w}</span>`:""}</div>
     <div class="body">${qfmt(fmt(e.h))}</div>
-    ${e.c?`<details><summary>Voir la correction</summary><div class="corr">${corr(e.c)}</div></details>`:""}</article>`;
+    ${e.c?(isLockedC(e.c)?lockBtn(e):`<details><summary>Voir la correction</summary><div class="corr">${corr(e.c)}</div></details>`):""}</article>`;
 }
+
+/* ---------- Corrections protégées par un code (seulement sur le site public) ----------
+   Le site public (fabriqué par .outils/sync.py) remplace la correction des exercices par un marqueur,
+   et range les vraies corrections, chiffrées (AES-GCM, clé tirée du code du chapitre), dans data/lock-<chapitre>.js.
+   Sans fichier lock (version de M. Staal), rien de tout cela ne s'active. */
+const LOCK_MARK = "\u2063🔒";
+const isLockedC = c => typeof c==="string" && c.indexOf(LOCK_MARK)>=0;
+const LOCK = {
+  key:new WeakMap(), idx:new WeakMap(), ck:{}, run:{},
+  init(){ const L=window.LOCKS||{}; for(const k in L){ this.key.set(L[k].D, k); L[k].e.forEach((e,i)=>{ this.key.set(e, k); this.idx.set(e, i); }); } },
+  of: x => LOCK.key.get(x) || null,
+  locked(k){ const L=window.LOCKS&&window.LOCKS[k]; return !!(L && L.e.some(e=>isLockedC(e.c))); },
+  norm: s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase().replace(/[^A-Z0-9]/g,""),
+  b64(s){ const b=atob(s), u=new Uint8Array(b.length); for(let i=0;i<b.length;i++) u[i]=b.charCodeAt(i); return u; },
+  async dec(k, box){ const iv=this.b64(box.v), d=this.b64(box.d);
+    return new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM", iv}, this.ck[k], d)); },
+  /* essaie un code ; renvoie "ok", "ko" (mauvais code) ou "err" (fichier introuvable, navigateur trop ancien) */
+  async open(k, code){
+    if(!this.locked(k)) return "ok";
+    const c=this.norm(code); if(!c) return "ko";
+    try{
+      if(!window.LOCKD || !window.LOCKD[k]) await loadJS(`data/lock-${k}.js`);
+      const B=window.LOCKD[k]; if(!window.crypto || !crypto.subtle) return "err";
+      const base=await crypto.subtle.importKey("raw", new TextEncoder().encode(c), "PBKDF2", false, ["deriveKey"]);
+      const key=await crypto.subtle.deriveKey({name:"PBKDF2", salt:this.b64(B.s), iterations:B.it, hash:"SHA-256"}, base, {name:"AES-GCM", length:256}, false, ["decrypt"]);
+      let txt; try{ this.ck[k]=key; txt=new TextDecoder().decode(await this.dec(k, B)); }catch(e){ delete this.ck[k]; return "ko"; }
+      const P=JSON.parse(txt), L=window.LOCKS[k].e; if(!Array.isArray(P.c) || P.c.length!==L.length){ delete this.ck[k]; return "err"; }
+      if(P.i) Object.assign(window.IMGB, P.i);   /* images des corrections, rangées elles aussi dans le fichier chiffré */
+      L.forEach((e,i)=>{ e.c=P.c[i]; });
+      store.set("code-"+k, c); return "ok";
+    }catch(e){ console.error("code", e); return "err"; }
+  },
+  /* corrections débloquées : on remplace les cadenas déjà affichés */
+  show(k){
+    document.querySelectorAll(`.lockcorr[data-lock="${k}"]`).forEach(b=>{ const e=window.LOCKS[k].e[+b.dataset.i]; if(!e) return;
+      const t=document.createElement("template"); t.innerHTML=`<details><summary>Voir la correction</summary><div class="corr">${corr(e.c)}</div></details>`; b.replaceWith(t.content); });
+    document.querySelectorAll(`.lockbar[data-lock="${k}"]`).forEach(b=>{ b.classList.add("lockdone"); b.innerHTML=`<p style="margin:0">✓ Les corrections de ce chapitre sont ouvertes.</p>`; setTimeout(()=>b.remove(), 4000); });
+    document.querySelectorAll(`#pbtns button[data-k="corr"]`).forEach(b=>{ if(PRINT.cur && PRINT.cur.key===k) b.textContent="Corrections (PDF)"; });
+  },
+  /* code déjà retenu sur cet appareil : on ouvre sans le redemander */
+  auto(k){ if(this.run[k]) return this.run[k]; const c=store.get("code-"+k); if(!c || !this.locked(k)) return Promise.resolve(false);
+    return this.run[k]=this.open(k, c).then(r=>{ if(r==="ok"){ this.show(k); return true; } if(r==="ko") try{ localStorage.removeItem("staal-code-"+k); }catch(e){} delete this.run[k]; return false; }); }
+};
+const lockBtn = e => { const k=LOCK.of(e); return `<button type="button" class="lockcorr" data-lock="${k||""}" data-i="${LOCK.idx.get(e)}"><span aria-hidden="true">🔒</span> Voir la correction</button>`; };
+const lockBar = k => `<div class="lockbar" data-lock="${k}" role="group" aria-label="Corrections protégées">
+  <p><span aria-hidden="true">🔒</span> Les corrections de ce chapitre sont protégées. Entre le code donné par M. Staal pour les voir.</p>
+  <form class="lockform" data-lock="${k}" novalidate><input type="text" name="code" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Code des corrections" placeholder="Le code"><button class="btn primary" type="submit">Déverrouiller</button></form>
+  <small class="lockmsg" aria-live="polite"></small></div>`;
+document.addEventListener("click", ev=>{ const b=ev.target.closest && ev.target.closest(".lockcorr"); if(!b) return; ev.preventDefault();
+  const k=b.dataset.lock; let bar=document.querySelector(`.lockbar[data-lock="${k}"]`);
+  if(!bar){ const card=b.closest("article")||b; card.insertAdjacentHTML("beforebegin", lockBar(k)); bar=card.previousElementSibling; }
+  const inp=bar.querySelector("input"), msg=bar.querySelector(".lockmsg");
+  if(msg && !msg.textContent){ msg.className="lockmsg"; msg.textContent="Entre d'abord le code, puis clique sur « Déverrouiller »."; }
+  if(inp){ bar.scrollIntoView({block:"center", behavior:"smooth"}); inp.focus({preventScroll:true}); } });
+document.addEventListener("submit", async ev=>{ const f=ev.target.closest && ev.target.closest(".lockform"); if(!f) return; ev.preventDefault();
+  const k=f.dataset.lock, inp=f.querySelector("input"), btn=f.querySelector("button"), msg=f.parentNode.querySelector(".lockmsg");
+  if(!LOCK.norm(inp.value)){ msg.className="lockmsg ko"; msg.textContent="Écris le code donné par M. Staal."; inp.focus(); return; }
+  btn.disabled=true; msg.className="lockmsg"; msg.textContent="Vérification…";
+  const r=await LOCK.open(k, inp.value); btn.disabled=false;
+  if(r==="ok"){ LOCK.show(k); return; }
+  msg.className="lockmsg ko"; msg.textContent = r==="ko" ? "Code incorrect. Vérifie l'orthographe et les deux chiffres." : "Impossible d'ouvrir les corrections sur cet appareil. Réessaie plus tard.";
+  inp.select(); });
+
 function renderExos(panel, D){
-  panel.innerHTML = D.exos.map((S,si)=>`<section class="exsec">
+  const lk=LOCK.of(D), locked=lk && LOCK.locked(lk);
+  panel.innerHTML = (locked?lockBar(lk):"") + D.exos.map((S,si)=>`<section class="exsec">
     <h2 class="sech"><span>${String.fromCharCode(65+si)}</span>${fmt(S.t)}</h2>
     ${S.note?`<p class="note">${fmt(S.note)}</p>`:""}
     ${S.e.map(e=>exCard(e)).join("")}
   </section>`).join("") + (D.feuille ? `<details class="feuillebox"><summary>Feuille de constructions <small>(faite en classe avec la feuille distribuée)</small></summary>
     ${D.feuille.map(e=>exCard(e)).join("")}</details>` : "");
+  if(locked && store.get("code-"+lk)){ const m=panel.querySelector(".lockmsg"); if(m) m.textContent="Ouverture des corrections…";
+    LOCK.auto(lk).then(ok=>{ if(!ok && m) m.textContent=""; }); }
 }
 
 /* ---------- Quiz : questions fixes ou générées, révision espacée ---------- */
@@ -2226,8 +2305,8 @@ function printHTML(P){
   if(P.t==="ex"){
     const enonces = D.exos.map((S,si)=>`<h2 class="psec">${String.fromCharCode(65+si)}. ${fmt(S.t)}</h2>${S.note?`<p class="pnote">${fmt(S.note)}</p>`:""}`
       + S.e.map(e=>`<div class="pblk keep"><h3><span>${e.n?fmt(e.n)+" · ":""}${fmt(e.t)}</span>${e.w?`<small>${e.w}</small>`:""}</h3><div class="body">${qfmt(fmt(e.h))}</div></div>`).join("")).join("");
-    const corriges = D.exos.map(S=>S.e.filter(e=>e.c).map(e=>`<div class="pblk"><h3><span>${e.n?fmt(e.n)+" · ":""}${fmt(e.t)}</span></h3><div class="body">${corr(e.c)}</div></div>`).join("")).join("");
-    return head(PRINTABLE.ex) + ident + enonces + `<div class="pbreak">${head("Corrections des exercices")}${corriges}</div>`;
+    const corriges = D.exos.map(S=>S.e.filter(e=>e.c && !isLockedC(e.c)).map(e=>`<div class="pblk"><h3><span>${e.n?fmt(e.n)+" · ":""}${fmt(e.t)}</span></h3><div class="body">${corr(e.c)}</div></div>`).join("")).join("");
+    return head(PRINTABLE.ex) + ident + enonces + (corriges ? `<div class="pbreak">${head("Corrections des exercices")}${corriges}</div>` : "");
   }
   if(P.t==="eval"){ const E=D.eval, T=pnum(E.exos.reduce((a,x)=>a+x.p,0));
     return head(esc(E.titre)) + ident + `<p><b>${E.info}</b> &nbsp;·&nbsp; Note : …… / ${T}</p>`
@@ -2329,8 +2408,16 @@ async function dlPdf(btn, kind){
   try{
     let blob;
     if(url==="pb"){ say("Préparation du PDF…");   /* PDF de M. Staal rangés dans pb/<chapitre>.js (base64) */
-      await loadJS(`pb/${P.key}.js`); const b64=(window.PDFB&&window.PDFB[P.key]||{})[pk]; if(!b64) throw new Error("fichier");
-      const bin=atob(b64), u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i); blob=new Blob([u],{type:"application/pdf"}); }
+      await loadJS(`pb/${P.key}.js`); const PB=(window.PDFB&&window.PDFB[P.key])||{}, b64=PB[pk];
+      if(!b64 && PB[pk+"x"]){   /* PDF chiffré (site public) : il faut le code du chapitre */
+        if(!LOCK.ck[P.key]) await LOCK.auto(P.key);
+        if(!LOCK.ck[P.key]){ const t=document.getElementById("tab-ex"); if(t && t.getAttribute("aria-selected")!=="true") t.click();
+          say("🔒 Les corrections sont protégées : entre d'abord le code de M. Staal (en haut des exercices).");
+          setTimeout(()=>{ const i=document.querySelector(`.lockbar[data-lock="${P.key}"] input`); if(i){ i.scrollIntoView({block:"center", behavior:"smooth"}); i.focus({preventScroll:true}); } }, 60);
+          return; }
+        blob=new Blob([await LOCK.dec(P.key, PB[pk+"x"])],{type:"application/pdf"}); }
+      else{ if(!b64) throw new Error("fichier");
+      const bin=atob(b64), u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i); blob=new Blob([u],{type:"application/pdf"}); } }
     else if(url){ say("Préparation du PDF…"); const r=await fetch(url); if(!r.ok) throw new Error("fichier"); blob=await r.blob(); }
     else{  /* chapitre sans PDF préparé : on le fabrique dans la page */
       box=document.createElement("div"); box.className="sheet"; box.style.cssText="position:absolute;left:-10000px;top:0;width:688px;background:#fff";
@@ -2383,7 +2470,7 @@ function sheetHTML(P, kind){
       + D.cours.map((c,i)=>{ tmp.innerHTML=fmt(c.h); const b=[...tmp.querySelectorAll(".retenir")].map(x=>x.outerHTML).join(""); return b?`<div class="sh-part">${sec(c.k||R[i],c.t)}<div class="body">${b}</div></div>`:""; }).join(""); }
   if(kind==="ex") return title("ex") + D.exos.map((S,si)=>sec(R[si],S.t)+(S.note?`<p class="sh-note">${fmt(S.note)}</p>`:"")
       + S.e.map(e=>`<div class="sh-ex keep">${exH(e)}<div class="body">${qfmt(fmt(e.h))}</div></div>`).join("")).join("");
-  if(kind==="corr") return title("corr") + D.exos.map((S,si)=>{ const L=S.e.filter(e=>e.c); return L.length?sec(R[si],S.t)
+  if(kind==="corr") return title("corr") + (D.exos.some(S=>S.e.some(e=>isLockedC(e.c))) ? `<p class="sh-note">🔒 Les corrections de ce chapitre sont protégées par un code.</p>` : "") + D.exos.map((S,si)=>{ const L=S.e.filter(e=>e.c && !isLockedC(e.c)); return L.length?sec(R[si],S.t)
       + L.map(e=>`<div class="sh-ex keep">${exH(e)}<div class="body">${corr(e.c)}</div></div>`).join(""):""; }).join("");
   let E=D.eval; if(!E) return "";
   if(kind==="evsa"||kind==="evca"){ E=amenOf(E)||E; kind=kind==="evsa"?"evs":"evc"; }
@@ -2490,6 +2577,7 @@ const affbtn=document.getElementById("affbtn"), affp=document.getElementById("af
 affbtn.onclick=()=>{ affp.hidden=!affp.hidden; affbtn.setAttribute("aria-expanded", !affp.hidden); };
 applyAff();
 window.addEventListener("hashchange", route);
+LOCK.init(); Object.keys(window.LOCKS||{}).forEach(k=>LOCK.auto(k));   /* corrections protégées : codes déjà retenus sur cet appareil */
 </script>
 <script src="data/anim.js"></script><script src="data/cartes.js"></script><script src="data/plus.js"></script>
 <script>route();</script>

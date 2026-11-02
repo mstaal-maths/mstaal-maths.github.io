@@ -190,20 +190,15 @@ exos: [
 {t:"Appartenance et alignement", e:[
   {n:"Exercice 1", t:"∈ ou ∉ ?", w:"Sur ton cahier", h:`${ex("p1-00","Figure de l'exercice 1",260)}<p>Recopie chaque ligne et complète avec le symbole ∈ ou ∉.</p>
    <p>1. B …… [AC] · 2. A …… [BC] · 3. A …… (BC) · 4. C …… (AB) · 5. D …… (AC) · 6. M …… (AD) · 7. M …… [AD] · 8. N …… [BD] · 9. N …… (AC) · 10. E …… (AD)</p>`,
-   c:`1. B ∈ [AC] · 2. A ∉ [BC] · 3. A ∈ (BC) · 4. C ∈ (AB) · 5. D ∉ (AC) · 6. M ∈ (AD) · 7. M ∉ [AD] · 8. N ∈ [BD] · 9. N ∉ (AC) · 10. E ∉ (AD)`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Trois façons de dire la même chose", w:"Sur ta feuille", h:`<p>Complète le tableau : écris chaque phrase mathématique en français, puis fais un dessin.</p>
    <div class="scroll"><table class="std"><thead><tr><th style="width:22%">Phrase mathématique</th><th style="width:33%">Phrase en français</th><th style="width:45%">Dessin</th></tr></thead><tbody><tr><td style="height:140px">A ∈ [CD]</td><td></td><td></td></tr><tr><td style="height:140px">B ∉ (EF)</td><td></td><td></td></tr><tr><td style="height:140px">H ∈ (PL) mais H ∉ [PL]</td><td></td><td></td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Phrase mathématique</th><th>Phrase en français</th><th>Dessin</th></tr></thead><tbody>
-   <tr><td>A ∈ [CD]</td><td>Le point A appartient au segment [CD].</td><td style="min-width:215px">${d2[0]}</td></tr>
-   <tr><td>B ∉ (EF)</td><td>Le point B n'appartient pas à la droite (EF).</td><td>${d2[1]}</td></tr>
-   <tr><td>H ∈ (PL) mais H ∉ [PL]</td><td>Le point H appartient à la droite (PL), mais il n'appartient pas au segment [PL].</td><td>${d2[2]}</td></tr></tbody></table></div>
-   <p>Ce n'est qu'un exemple de dessin. Tu peux placer les points ailleurs, si tu respectes la phrase. Pour H, tu peux aussi le placer avant P.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Placer des points", w:"Sur ta feuille", h:`${ex("p2-02","Points A, B, C, D, E de l'exercice 3",420)}<p>En t'aidant des points déjà placés, place les points G, H, I, L et M tels que :</p>
    <p>a) G ∈ (BE) et G ∈ [BE] · b) H ∈ (AE) et H ∉ [AE] · c) les points I, A et E sont alignés, et les points I, B et D le sont également · d) L ∈ (AB) et L ∈ (CD) · e) M ∈ (CD)</p>`,
-   c:`<ul><li>a) G est un point du segment [BE], entre B et E.</li><li>b) H est sur la droite (AE), mais à l'extérieur du segment [AE].</li><li>c) I est le point d'intersection des droites (AE) et (BD) : trace les deux droites, I est là où elles se coupent.</li><li>d) L est le point d'intersection des droites (AB) et (CD).</li><li>e) M est n'importe quel point de la droite (CD) : il y a une infinité de réponses possibles.</li></ul>
-   ${d3}<p>Les droites en pointillés servent à placer les points. G, H et M peuvent être placés ailleurs, s'ils respectent les conditions. I et L ont une seule position possible.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Une seule position ?", w:"Sur ton cahier", h:`<p>On sait que : A ∈ (BC) ; D ∉ (BC) et A ∉ [BC].</p><p>1 — Place les points A, B, C et D. 2 — Y a-t-il une seule position possible ? Dessine dans ton cahier toutes les autres possibilités que tu trouves.</p>`,
-   c:`<p>A est sur la droite (BC) mais pas sur le segment [BC] : il est soit du côté de B (avant B), soit du côté de C (après C).</p><p>D est n'importe où en dehors de la droite (BC).</p><p>Il n'y a donc pas une seule position possible : il y en a une infinité. Deux exemples :</p><div class="figs"><figure>${d4(262)}<figcaption>A est du côté de C.</figcaption></figure><figure>${d4(28)}<figcaption>A est du côté de B.</figcaption></figure></div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`${figAlign}<p>Complète avec ∈ ou ∉ : a. B …… (AC) · b. D …… (AC) · c. C …… [AB] · d. B …… [AC]</p>`,
   c:`a. B ∈ (AC) · b. D ∉ (AC) · c. C ∉ [AB] (C est après B) · d. B ∈ [AC] (B est entre A et C)`},
@@ -214,20 +209,14 @@ exos: [
   {n:"Exercice 5", t:"Quelle propriété ?", w:"Sur ton cahier", h:`<p>Pour chaque figure, réponds à la question puis cite la propriété que tu as utilisée.</p>
    <div class="figs"><figure>${ex("p3-03","Figure a de l'exercice 5",210)}<figcaption>a) Que peut-on dire des droites (AB) et (FE) ?</figcaption></figure>
    <figure>${ex("p3-04","Figure b de l'exercice 5",200)}<figcaption>b) Que peut-on dire des droites (AS) et (AB) ?</figcaption></figure></div>`,
-   c:`<p>a) Je sais que (AB) ⊥ (DC) et (FE) ⊥ (DC). Or si deux droites sont perpendiculaires à une même droite, alors elles sont parallèles entre elles. Donc (AB) // (FE).</p>
-   <p>b) Je sais que (AB) // (SR) et (AS) ⊥ (SR) (angle droit codé en S). Or si deux droites sont parallèles et si une troisième droite est perpendiculaire à l'une, alors elle est perpendiculaire à l'autre. Donc (AS) ⊥ (AB).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Repérer les droites utiles", w:"Sur ton cahier", h:`<div class="figs"><figure>${ex("p4-05","Figure a de l'exercice 6",300)}<figcaption>a) Que peut-on dire des droites (d₂) et (d₃) ?</figcaption></figure>
    <figure>${ex("p4-06","Figure b de l'exercice 6",260)}<figcaption>b) Que peut-on dire des droites (FY) et (GH) ?</figcaption></figure>
    <figure>${ex("p4-07","Figure c de l'exercice 6",200)}<figcaption>c) On sait que (NK) // (IC). Que peut-on dire des droites (NK) et (NI) ?</figcaption></figure></div>`,
-   c:`<p>a) (d₂) ⊥ (d₄) et (d₃) ⊥ (d₄) (angles droits codés). Or si deux droites sont perpendiculaires à une même droite, alors elles sont parallèles entre elles. Donc (d₂) // (d₃).</p>
-   <p>b) (FY) ⊥ (FG) et (GH) ⊥ (FG) (angles droits en F et en G). Même propriété : (FY) // (GH).</p>
-   <p>c) (NK) // (IC) et (NI) ⊥ (IC) (angle droit en I, et N est sur [AI]). Or si deux droites sont parallèles et si une troisième droite est perpendiculaire à l'une, alors elle est perpendiculaire à l'autre. Donc (NK) ⊥ (NI).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Toute la partie B", w:"Sur ton cahier", h:`${ex("p5-08","Figure de l'exercice 7 avec sept droites",420)}<p>On donne : (d₁) // (d₂) et (d₄) // (d₆).</p>
    <p>a) Trouve tous les couples de droites perpendiculaires que tu peux justifier. b) Trouve des couples de droites parallèles, et justifie chacun par une propriété du cours. c) Quelles droites sont sécantes sans être perpendiculaires ?</p>`,
-   c:`<p><b>Codés sur la figure :</b> (d₁) ⊥ (d₅), (d₃) ⊥ (d₅), (d₁) ⊥ (d₆).</p>
-   <p>a) Avec la propriété 2 : (d₁) // (d₂) et (d₁) ⊥ (d₅), donc (d₂) ⊥ (d₅). De même (d₂) ⊥ (d₆). (d₄) // (d₆) et (d₁) ⊥ (d₆), donc (d₁) ⊥ (d₄), et de même (d₂) ⊥ (d₄). En continuant, chacune des droites (d₁), (d₂), (d₃) est perpendiculaire à chacune des droites (d₄), (d₅), (d₆).</p>
-   <p>b) (d₁) // (d₃) : elles sont perpendiculaires à (d₅) (propriété 1). (d₅) // (d₆) : elles sont perpendiculaires à (d₁) (propriété 1). (d₄) // (d₅) : elles sont perpendiculaires à (d₁) (propriété 1). (d₂) // (d₃) : elles sont perpendiculaires à (d₅) (propriété 1).</p>
-   <p>c) (d₇) coupe chacune des six autres droites (parfois en les prolongeant), sans former d'angle droit.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>On sait que (u) ⊥ (w) et (v) ⊥ (w). Recopie et complète : Je sais que …… Or …… Donc ……</p>`,
   c:`Je sais que (u) ⊥ (w) et (v) ⊥ (w). Or si deux droites sont perpendiculaires à une même droite, alors elles sont parallèles entre elles. Donc (u) // (v).`},
@@ -237,19 +226,15 @@ exos: [
 {t:"Constructions", e:[
   {n:"Exercice 8", t:"Tracer des perpendiculaires", w:"Sur ta feuille", h:`<p>Dans chaque cas, trace la perpendiculaire à (d) passant par M. Nomme-la (d'). N'oublie pas de coder l'angle droit.</p>
    <div class="figs">${ex("p6-09","Cas a",300)}${ex("p6-11","Cas b",300)}${ex("p6-13","Cas c",250)}</div>`,
-   c:`<div class="figs"><figure>${perpCase(C8[0],0)}<figcaption>Cas a : M est sur (d).</figcaption></figure><figure>${perpCase(C8[1],1)}<figcaption>Cas b</figcaption></figure><figure>${perpCase(C8[2],2)}<figcaption>Cas c</figcaption></figure></div>
-   <p>Pour vérifier : pose ton équerre sur (d) et (d'), l'angle droit doit coller parfaitement, et (d') doit passer exactement par M. N'oublie pas le petit carré pour coder l'angle droit et le nom (d').</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Tracer des parallèles", w:"Sur ta feuille", h:`<p>Dans chaque cas, trace la parallèle à (d) passant par M. Nomme-la (d').</p>
    <div class="figs">${ex("p7-15","Cas a",300)}${ex("p7-17","Cas b",300)}${ex("p7-19","Cas c",300)}</div>`,
-   c:`<p>Méthode : trace d'abord la perpendiculaire (k) à (d) passant par M (en pointillés), puis la perpendiculaire à (k) passant par M : c'est (d').</p>
-   <div class="figs"><figure>${parCase(C9[0],0)}<figcaption>Cas a : (d') // (d)</figcaption></figure><figure>${parCase(C9[1],1)}<figcaption>Cas b : (d') // (d)</figcaption></figure><figure>${parCase(C9[2],2)}<figcaption>Cas c : (d') // (d)</figcaption></figure></div>
-   <p>Pour vérifier, l'écart entre (d) et (d') doit être le même partout.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Construire puis justifier", w:"Sur ta feuille", h:`${ex("p7-21","Figure de l'exercice 10",420)}<p>1 — Trace la droite (d₁) parallèle à (d) passant par A. 2 — Trace la droite (d₂) perpendiculaire à (d) passant par B. 3 — Que peut-on dire des droites (d₁) et (d₂) ? Justifie à l'aide d'une propriété du cours.</p>`,
-   c:`<p>Questions 1 et 2 : la figure attendue.</p>${d10}<p>(d₁) // (d)</p><p>3 — Je sais que (d₁) // (d) et (d₂) ⊥ (d). Or si deux droites sont parallèles et si une troisième droite est perpendiculaire à l'une, alors elle est perpendiculaire à l'autre. Donc (d₂) ⊥ (d₁).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Programmes de construction", w:"Sur ton cahier", h:`<p>1 — Exécute ce programme de construction : trace une droite (d), puis place deux points M et N sur (d). Trace la droite (d₁) perpendiculaire à (d) passant par M. Trace la droite (d₂) perpendiculaire à (d) passant par N. Que peut-on dire des droites (d₁) et (d₂) ? Justifie.</p>
    <p>2 — Écris à ton tour le programme de construction de la figure ci-dessous.</p>${ex("p8-23","Figure de l'exercice 11",240)}`,
-   c:`<p>1 — Voici la figure obtenue :</p>${d11}<p>Je sais que (d₁) ⊥ (d) et (d₂) ⊥ (d). Or si deux droites sont perpendiculaires à une même droite, alors elles sont parallèles entre elles. Donc (d₁) // (d₂).</p>
-   <p>2 — Un programme possible : trace une droite (d) et place un point A sur (d). Trace la droite (d₁) perpendiculaire à (d) passant par A. Place un point B sur (d₁). Trace la droite (d₂) parallèle à (d) passant par B.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Remets dans l'ordre les étapes pour tracer la perpendiculaire à (d) passant par M :</p><p>(1) On nomme la droite (d') et on code l'angle droit. (2) On pose un côté de l'angle droit de l'équerre sur (d), l'autre côté sur le point M. (3) On trace la droite le long du côté de l'équerre, puis on la prolonge à la règle.</p>`,
   c:`Ordre : (2), puis (3), puis (1).`},
@@ -430,3 +415,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-2");

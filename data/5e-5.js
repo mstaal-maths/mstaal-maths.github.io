@@ -276,93 +276,62 @@ exos:[
 {t:"Nombres relatifs, opposés, valeur absolue et droite graduée", e:[
   {n:"Activité 1", t:"Calculer le résultat de soustractions", w:"Sur ta feuille", h:`<p>Complète directement les pointillés.</p>
    ${cols(["a) 12 − 8 = ………","b) 3 − 8 = ………","c) 2 − 9 = ………","d) 100 − 71 = ………","e) 8 − 13 = ………","f) 10 − 4,3 = ………","g) 26 − 100 = ………","h) 14 − 30 = ………","i) 56 − 12 = ………","j) 15 − 22 = ………","k) 6,8 − 10 = ………","l) 3,4 − 5 = ………"])}`,
-   c:`<p>Quand on enlève plus que ce que l'on a, le résultat est négatif : on calcule la différence entre les deux nombres et on met le signe −.</p>
-   ${cols(["a) 12 − 8 = 4","b) 3 − 8 = −5","c) 2 − 9 = −7","d) 100 − 71 = 29","e) 8 − 13 = −5","f) 10 − 4,3 = 5,7","g) 26 − 100 = −74","h) 14 − 30 = −16","i) 56 − 12 = 44","j) 15 − 22 = −7","k) 6,8 − 10 = −3,2","l) 3,4 − 5 = −1,6"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Les nombres relatifs dans la vie quotidienne", w:"Sur ta feuille", h:`<p>Écris le nombre relatif associé à chaque situation (complète les pointillés).</p>
    <p>a) Une voiture est garée au 4<sup>e</sup> sous-sol : ………</p><p>b) Charlemagne a été sacré empereur en 800 après J.-C. : ………</p><p>c) Le Mont Blanc culmine à 4 810 m d'altitude : ………</p><p>d) Ce matin, la température est de 5 °C en dessous de zéro : ………</p><p>e) Sur mon compte, je suis « à découvert » de 120 € : ………</p><p>f) Jules César est né 100 ans avant J.-C. : ………</p>`,
-   c:`<p>a) −4 · b) +800 · c) +4 810 · d) −5 · e) −120 · f) −100</p><p><i>Sous le niveau 0 (sol, zéro degré, compte vide, naissance de J.-C.) : nombre négatif. Au-dessus : nombre positif.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Nombres relatifs et températures", w:"Sur ta feuille", h:`<p>Écris la température indiquée par chaque thermomètre (en °C).</p>${thermo([6,-4,0,-7,9,-10])}<p>A : ……… &nbsp; B : ……… &nbsp; C : ……… &nbsp; D : ……… &nbsp; E : ……… &nbsp; F : ………</p>`,
-   c:`<p>Chaque graduation vaut 1 °C.</p><p>A : 6 °C · B : −4 °C · C : 0 °C · D : −7 °C · E : 9 °C · F : −10 °C</p>${thermo([6,-4,0,-7,9,-10],true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Opposé et valeur absolue", w:"Sur ta feuille", h:`<p>Complète directement.</p>
    <p><b>1)</b> Donne l'opposé de chacun de ces nombres.</p>${cols(["a) 9 : ………","b) −4 : ………","c) 0 : ………","d) −2,7 : ………","e) +6,5 : ………"])}
    <p><b>2)</b> Complète.</p>${cols(["a) |+15| = ………","b) |−7,2| = ………","c) |−100| = ………","d) |0| = ………"])}
    <p><b>3)</b> Vrai ou faux ? Justifie sur ton cahier.</p><p>a) |−5| = |5| &nbsp;&nbsp; b) |−5| = −5 &nbsp;&nbsp; c) Un nombre et son opposé ont la même valeur absolue.</p>`,
-   c:`<p><b>1)</b> L'opposé d'un nombre a la même distance à zéro, mais le signe contraire.</p><p>a) −9 · b) 4 · c) 0 · d) 2,7 · e) −6,5</p>
-   <p><b>2)</b> a) |+15| = 15 · b) |−7,2| = 7,2 · c) |−100| = 100 · d) |0| = 0</p>
-   <p><b>3)</b> a) <b>Vrai</b> : |−5| = 5 et |5| = 5. · b) <b>Faux</b> : |−5| = 5 ; une valeur absolue n'est jamais négative. · c) <b>Vrai</b> : un nombre et son opposé ont la même distance à zéro.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Positif, négatif, strictement positif, strictement négatif", w:"Sur ta feuille", h:`<p>Voici des nombres : −3 ; 0 ; +5,2 ; −0,8 ; 12 ; −10 ; 0,4. Recopie ceux qui sont :</p>
    <p>a) strictement positifs : ……………</p><p>b) négatifs : ……………</p><p>c) à la fois positifs et négatifs : ……………</p><p>d) ni strictement positifs, ni strictement négatifs : ……………</p>`,
-   c:`<p>a) strictement positifs : +5,2 ; 12 ; 0,4</p><p>b) négatifs : −3 ; 0 ; −0,8 ; −10 <i>(0 est négatif !)</i></p><p>c) à la fois positifs et négatifs : 0</p><p>d) ni strictement positifs, ni strictement négatifs : 0</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Nombres relatifs décimaux et droite graduée", w:"Sur ta feuille", h:`<p><b>1)</b> Sur chacune des droites graduées, lis l'abscisse des points marqués par une lettre.</p>
    ${DR.map((d,i)=>`<div style="break-inside:avoid"><p><b>Droite n°${i+1} :</b> A(………) &nbsp; B(………) &nbsp; C(………) &nbsp; D(………)</p>${drw(d)}</div>`).join("")}
    <p><b>2)</b> Sur la droite graduée ci-dessous, place les points A(−2,5), B(1,5), C(−0,5), D(2) et E(−3,5).</p>${dg({min:-4,max:3,step:0.5})}`,
-   c:`<p><b>1)</b> On cherche d'abord combien vaut une graduation.</p>
-   <div style="break-inside:avoid"><p><b>Droite n°1</b> (une graduation = 1) : A(−4) &nbsp; B(−1) &nbsp; C(3) &nbsp; D(5)</p>${drw(DR[0],true)}</div>
-   <div style="break-inside:avoid"><p><b>Droite n°2</b> (une graduation = 0,1) : A(−0,7) &nbsp; B(−0,2) &nbsp; C(0,4) &nbsp; D(0,9)</p>${drw(DR[1],true)}</div>
-   <div style="break-inside:avoid"><p><b>Droite n°3</b> (une graduation = 0,5) : A(−2,5) &nbsp; B(−1) &nbsp; C(0,5) &nbsp; D(2,5)</p>${drw(DR[2],true)}</div>
-   <div style="break-inside:avoid"><p><b>Droite n°4</b> (une graduation = 5) : A(−35) &nbsp; B(−10) &nbsp; C(15) &nbsp; D(30)</p>${drw(DR[3],true)}</div>
-   <p><b>2)</b> Une graduation vaut 0,5.</p>${dg({min:-4,max:3,step:0.5,pts:D5b,show:true})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Comparer et ranger des nombres relatifs", e:[
   {n:"Activité 2", t:"Relevé de températures : ranger dans l'ordre croissant", w:"Sur ta feuille", h:`<p>Marie a relevé les températures tous les matins à la même heure pendant une semaine.</p>
    <div class="scroll"><table class="std"><thead><tr><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th><th>Samedi</th><th>Dimanche</th></tr></thead><tbody><tr><td>1,07 °C</td><td>−1,45 °C</td><td>1,5 °C</td><td>−1,8 °C</td><td>−0,5 °C</td><td>1,32 °C</td><td>−0,7 °C</td></tr></tbody></table></div>
    <p>Classe ces jours dans l'ordre croissant de leur température (du plus petit au plus grand). Tu indiqueras les températures.</p><p>………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; …………</p>`,
-   c:`<p>Les températures négatives d'abord : −1,8 est la plus loin de zéro, donc la plus petite. Puis les positives, de la plus petite à la plus grande.</p>
-   <p>Jeudi (−1,8 °C) &lt; Mardi (−1,45 °C) &lt; Dimanche (−0,7 °C) &lt; Vendredi (−0,5 °C) &lt; Lundi (1,07 °C) &lt; Samedi (1,32 °C) &lt; Mercredi (1,5 °C)</p>
-   ${dg({min:-2,max:2,step:0.1,lab:1,pts:[["J",-1.8],["Ma",-1.45],["D",-0.7],["V",-0.5,0,1],["L",1.07],["S",1.32,0,1],["Me",1.5]],alt:"Les sept températures sur une droite graduée"})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Comparaison de nombres relatifs", w:"Sur ta feuille", h:`<p>Compare avec &lt;, &gt; ou = (complète directement).</p>
    ${cols(["a) −3,5 …… 3,2","b) −10 …… −2","c) 5,8 …… 5,17","d) −7,3 …… −7,9","e) −4 …… −6","f) 9,2 …… 9,20","g) 1,4 …… 1,04","h) −6,1 …… −6,25"])}`,
-   c:`<p>a) −3,5 &lt; 3,2 <i>(un négatif est plus petit qu'un positif)</i></p><p>b) −10 &lt; −2 <i>(10 &gt; 2)</i></p><p>c) 5,8 &gt; 5,17 <i>(5,80 &gt; 5,17)</i></p><p>d) −7,3 &gt; −7,9 <i>(7,3 &lt; 7,9 : −7,3 est plus près de zéro)</i></p><p>e) −4 &gt; −6 <i>(4 &lt; 6)</i></p><p>f) 9,2 = 9,20</p><p>g) 1,4 &gt; 1,04 <i>(1,40 &gt; 1,04)</i></p><p>h) −6,1 &gt; −6,25 <i>(6,10 &lt; 6,25)</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Ranger des nombres relatifs", w:"Sur ta feuille", h:`<p>Complète directement.</p>
    <p><b>1)</b> Range dans l'ordre croissant : 3,25 ; −3,12 ; 3,6 ; 3,09 ; −3,7 ; −3</p><p>………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; …………</p>
    <p><b>2)</b> Range dans l'ordre décroissant : −4,10 ; 4,52 ; 4,7 ; 4,3 ; −4,25 ; 4,09 ; −4,3</p><p>……… &gt; ……… &gt; ……… &gt; ……… &gt; ……… &gt; ……… &gt; ………</p>`,
-   c:`<p>Les négatifs d'abord : le plus loin de zéro est le plus petit. Puis les positifs, du plus petit au plus grand.</p><p><b>1)</b> −3,7 &lt; −3,12 &lt; −3 &lt; 3,09 &lt; 3,25 &lt; 3,6</p><p><b>2)</b> 4,7 &gt; 4,52 &gt; 4,3 &gt; 4,09 &gt; −4,10 &gt; −4,25 &gt; −4,3</p><p><i>Astuce : on écrit tous les nombres avec deux chiffres après la virgule (−3,70 ; −3,12 ; −3,00…) pour bien les comparer.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Problèmes de rangement", w:"Sur ton cahier", h:`<p><b>1)</b> Relevé de températures à 6 h : Briançon −8,5 °C ; Lille 1,5 °C ; Strasbourg −3,2 °C ; Brest 4 °C ; Grenoble −3,25 °C ; Nice 9 °C.</p><p>a) Quelle ville est la plus froide ? la plus chaude ?</p><p>b) Range les villes de la plus chaude à la plus froide.</p>
    <p><b>2)</b> Fosse des Mariannes : −10 994 m ; Lac Assal : −155 m ; Mont Blanc : +4 810 m ; Paris : +35 m ; mer Morte : −430 m. Range ces altitudes dans l'ordre croissant, puis dis quel est le point le plus bas.</p>`,
-   c:`<p><b>1) a)</b> La ville la plus froide est Briançon (−8,5 °C). La ville la plus chaude est Nice (9 °C).</p>
-   <p><b>b)</b> 9 &gt; 4 &gt; 1,5 &gt; −3,2 &gt; −3,25 &gt; −8,5 : Nice, Brest, Lille, Strasbourg, Grenoble, Briançon.</p><p><i>Attention : −3,2 &gt; −3,25 car 3,20 &lt; 3,25. Strasbourg est donc un peu moins froide que Grenoble.</i></p>
-   <p><b>2)</b> −10 994 &lt; −430 &lt; −155 &lt; +35 &lt; +4 810</p><p>Fosse des Mariannes, mer Morte, lac Assal, Paris, Mont Blanc. Le point le plus bas est la fosse des Mariannes (−10 994 m).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Vrai ou faux ?", w:"Sur ton cahier", h:`<p>Réponds sur ton cahier et justifie chaque réponse (par un exemple, une droite graduée ou une propriété).</p>
    <p>a) −7 &lt; −2</p><p>b) −0,5 &gt; −0,05</p><p>c) Un nombre strictement négatif est toujours plus petit qu'un nombre strictement positif.</p><p>d) 0 est strictement positif.</p><p>e) |−8| est plus petit que |−3|.</p><p>f) Deux nombres opposés ont la même valeur absolue.</p><p>g) |−4,2| = −4,2</p>`,
-   c:`<p>a) <b>Vrai</b> : deux nombres négatifs, le plus grand est celui qui a la plus petite distance à zéro ; 7 &gt; 2, donc −7 &lt; −2.</p>
-   <p>b) <b>Faux</b> : 0,5 &gt; 0,05, donc −0,5 est plus loin de zéro : −0,5 &lt; −0,05.</p>
-   <p>c) <b>Vrai</b> : un nombre strictement négatif est à gauche de 0 et un nombre strictement positif à droite de 0. <i>(0 n'est ni strictement positif, ni strictement négatif.)</i></p>
-   <p>d) <b>Faux</b> : 0 n'a pas de signe ; il est positif, mais pas strictement positif.</p>
-   <p>e) <b>Faux</b> : |−8| = 8 et |−3| = 3, et 8 &gt; 3.</p>
-   <p>f) <b>Vrai</b> : c'est la propriété du cours, par exemple |4| = |−4| = 4.</p>
-   <p>g) <b>Faux</b> : |−4,2| = 4,2 ; une valeur absolue n'est jamais négative.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Qui suis-je ? / Intercaler", w:"Sur ton cahier", h:`<p><b>1)</b> Trouve le nombre :</p><p>a) Je suis strictement négatif et ma valeur absolue est 7.</p><p>b) Je suis l'opposé de −3,4.</p><p>c) Je suis à la fois positif et négatif.</p><p>d) Ma valeur absolue est 5 et je suis plus grand que 0.</p><p>e) Je suis le plus petit nombre entier relatif strictement plus grand que −3.</p>
    <p><b>2)</b> Écris un nombre relatif compris entre :</p>${cols(["a) −3 et −2","b) −0,4 et −0,3","c) 1 et 1,1","d) −5 et −4,9"])}`,
-   c:`<p><b>1)</b> a) −7 · b) 3,4 · c) 0 · d) 5 · e) −2 <i>(les entiers plus grands que −3 sont −2, −1, 0, 1… ; le plus petit est −2)</i></p>
-   <p><b>2)</b> Il y a beaucoup de bonnes réponses, par exemple :</p><p>a) −2,5 · b) −0,35 · c) 1,05 · d) −4,95</p><p><i>Vérifie avec une droite graduée : −3 &lt; −2,5 &lt; −2.</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Repérage dans le plan (activité 3)", e:[
   {n:"Exercice 11", t:"Coordonnées dans un repère", w:"Sur ta feuille", h:`<p>Complète directement, puis place les points dans le repère de droite.</p>
    <div class="figs">${rep({pts:P11, alt:"Repère de gauche avec les points A à H"})}${rep({alt:"Repère de droite, vide"})}</div>
    <p>a) Indique les coordonnées des points A à H (repère de gauche) : A(……… ; ………) &nbsp; B(……… ; ………) &nbsp; C(……… ; ………) &nbsp; D(……… ; ………) &nbsp; E(……… ; ………) &nbsp; F(……… ; ………) &nbsp; G(……… ; ………) &nbsp; H(……… ; ………)</p>
    <p>b) Dans le repère de droite, place les points I(4 ; 3), J(−2 ; 2), K(−4 ; 0) et L(0 ; −2).</p>`,
-   c:`<p>a) On lit d'abord l'abscisse (horizontalement), puis l'ordonnée (verticalement).</p><p>${coords(P11.slice(0,4))}</p><p>${coords(P11.slice(4))}</p>
-   <div class="figs">${rep({pts:P11, proj:["A","B","C","D","E","H"], grads:true})}</div>
-   <p><i>F a pour ordonnée 0 : il est sur l'axe des abscisses. G a pour abscisse 0 : il est sur l'axe des ordonnées.</i></p>
-   <p>b)</p><div class="figs">${rep({pts:P11b, grads:true})}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Repères et parallélogrammes", w:"Sur ta feuille", h:`<p>Utilise les deux repères ci-dessous.</p><div class="figs">${rep({alt:"Repère de gauche"})}${rep({alt:"Repère de droite"})}</div>
    <p><b>1)</b> Dans le repère de gauche, place A(−4 ; −2), B(1 ; −2) et C(3 ; 1). Place le point D pour que ABCD soit un parallélogramme et lis ses coordonnées : D(……… ; ………). Écris deux égalités de parallélisme : ……… // ……… et ……… // ………</p>
    <p><b>2)</b> Dans le repère de droite, place A(−3 ; 2), B(4 ; 1) et le point O, origine du repère. ABCD est un parallélogramme de centre O. Place C et D et lis leurs coordonnées : C(……… ; ………) D(……… ; ………). Que remarques-tu sur les coordonnées de A et de C ?</p>`,
-   c:`<p><b>1)</b> Dans un parallélogramme, les côtés opposés sont parallèles et de même longueur. Pour aller de B à C, on avance de 2 carreaux vers la droite et on monte de 3 carreaux. On fait le même déplacement depuis A : on arrive en D.</p>
-   <div class="figs">${rep({pts:[["A",-4,-2,-8,18],["B",1,-2,6,18],["C",3,1,8,-8],["D",-2,1,-8,-8]], poly:["A","B","C","D"], grads:true})}</div>
-   <p>D(−2 ; 1). &nbsp; (AB) // (DC) et (AD) // (BC)</p>
-   <p><b>2)</b> Les diagonales d'un parallélogramme se coupent en leur milieu. O est donc le milieu de [AC] et de [BD] : C est le symétrique de A par rapport à O, et D le symétrique de B.</p>
-   <div class="figs">${rep({pts:[["A",-3,2,-8,-8],["B",4,1,8,-8],["C",3,-2,8,18],["D",-4,-1,-8,18],["O",0,0,6,18]], poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], grads:true})}</div>
-   <p>C(3 ; −2) &nbsp; D(−4 ; −1)</p><p>Les coordonnées de C sont les <b>opposées</b> de celles de A : A(−3 ; 2) et C(3 ; −2).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Exercice en plus", e:[
   {n:"Exercice 13", t:"« Le mot caché »", w:"Sur ta feuille", h:`<p><b>Règle du jeu :</b> tu pars de la case T (départ). Tu te déplaces de case en case en suivant les flèches, mais on se déplace <b>obligatoirement vers un nombre plus petit</b>. Entoure au crayon les lettres utilisées. Une fois arrivé à la case E, relève toutes les lettres rencontrées et remets-les dans le bon ordre pour trouver le mot caché.</p>
    ${motCache(false)}<p>Mot caché : ……………………………</p>`,
-   c:`<p>À chaque case, on compare le nombre de la case avec ceux des cases où mènent les flèches, et on ne prend que les nombres plus petits.</p>
-   <p>T (3,2) → I (1,9) → F (−0,4) → A (−0,9) → L (−1,25) → R (−2,6) → E (−2,65)</p>
-   <p><i>Pièges : W (4,5), Y (2,05), U (0,3), O (−0,45), K (−1,2) et S (−2,06) sont plus grands, on ne peut pas y aller. M (1,09) et N (−1,3) sont plus petits, mais ce sont des impasses : aucune flèche n'en repart.</i></p>
-   ${motCache(true)}
-   <p>Entre le départ et l'arrivée, on a rencontré les lettres I, F, A, L, R. Remises dans l'ordre, elles forment le mot <b>FLAIR</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -517,3 +486,4 @@ CH["5e-5"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)=
   if(it.g){ const g=it.g; list[i]={g:()=>Object.assign(g(),{kb:"text"})}; } else it.kb="text";
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-5");

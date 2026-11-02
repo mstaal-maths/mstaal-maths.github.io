@@ -178,33 +178,28 @@ exos:[
 {t:"Développer avec la double distributivité", e:[
   {n:"Activité 1", t:"Programmes égaux ?", w:"Sur ton cahier", h:`<div class="progs">${prog("Programme 1",["Choisir un nombre.","Ajouter 8.","Multiplier par le nombre de départ.","Ajouter 12."])}<div class="pgc"><b>Programme 2</b>${img("3k5ex/prog2.png","Programme 2 : choisir un nombre ; d'un côté ajouter 6, de l'autre ajouter 2 ; multiplier les deux nombres obtenus.",260)}</div></div>
    <p>Si on choisit un même nombre de départ pour les programmes 1 et 2, prouve que ces deux programmes donneront toujours le même résultat.</p>`,
-   c:`<p>Je choisis un nombre quelconque <i>x</i>.</p><div class="calcs">${dv("P<sub>1</sub>","(x+8)*x+12")}${dv("P<sub>2</sub>","(x+6)(x+2)")}</div>
-   <p>Les deux expressions développées et réduites sont égales à <i>x</i>² + 8<i>x</i> + 12 : les deux programmes donnent <b>toujours le même résultat</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Développer à l'aide de la double distributivité", w:"Sur ton cahier", h:`<p>Développe et réduis chaque expression ci-dessous.</p>${grid([["A","(2x+3)*(6x+5)"],["B","(3y+5)*(4+2x)"],["C","(4x-7)(2x+5)"],["D","(-6x+2)(5-x)"],["E","(-7x-3)(-2+5y)"],["G","(3x+2)2"],["I","(x-9)2"]].map(([n,s])=>E(n,s)))}`,
-   c:grid([["A","(2x+3)*(6x+5)"],["B","(3y+5)*(4+2x)"],["C","(4x-7)(2x+5)"],["D","(-6x+2)(5-x)"],["E","(-7x-3)(-2+5y)"],["G","(3x+2)2"],["I","(x-9)2"]].map(([n,s])=>dv(n,s)))},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Trouve l'intrus", w:"Sur ton cahier", h:`<p><b>a)</b> Développe et réduis chaque expression.</p><p><b>b)</b> Regroupe les expressions littérales qui sont égales. Quelle expression se retrouve seule ?</p>
    ${grid([["A","8+8(2x-1)"],["B","(-2x-8)(5-x)"],["C","-40-2x(1-x)"],["D","(2x+3)(3x-1)+6x(1-x)"],["E","3x2-(8x+2x2)"],["F","10x-9+3(x+2)"],["G","(5*x-3)*4"],["H","3x2+(8x-2x2)"],["I","(8x-7)+(-5+12x)"],["J","(2x+2)(9-x)-(18-2x2)"],["K","(x-8)2+8(3x-8)"]].map(([n,s])=>E(n,s)))}`,
-   c:`<p><b>a)</b></p>${grid([["A","8+8(2x-1)"],["B","(-2x-8)(5-x)"],["C","-40-2x(1-x)"],["D","(2x+3)(3x-1)+6x(1-x)"],["E","3x2-(8x+2x2)"],["F","10x-9+3(x+2)"],["G","(5*x-3)*4"],["H","3x2+(8x-2x2)"],["I","(8x-7)+(-5+12x)"],["J","(2x+2)(9-x)-(18-2x2)"],["K","(x-8)2+8(3x-8)"]].map(([n,s])=>dv(n,s)))}
-   <p><b>b)</b> A = J = 16<i>x</i> · B = C = 2<i>x</i>² − 2<i>x</i> − 40 · D = F = 13<i>x</i> − 3 · G = I = 20<i>x</i> − 12 · H = K = <i>x</i>² + 8<i>x</i></p><p>L'intrus est <b>E</b> = <i>x</i>² − 8<i>x</i>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Démontrer avec le calcul littéral", e:[
   {n:"Exercice 3", t:"Affirmation vraie ou fausse ?", w:"Sur ton cahier", h:`<p>Indique, en justifiant, si chacune des affirmations suivantes est vraie ou fausse.</p><p><b>Affirmation 1 :</b> l'égalité (2<i>x</i> − 3)(−4<i>x</i> + 5) = 2<i>x</i>(11 − 3<i>x</i>) − (2<i>x</i>² + 15) est toujours vraie.</p><p><b>Affirmation 2 :</b> l'égalité (3<i>x</i> − 5)² = 25 + 10<i>x</i> + 9<i>x</i>(<i>x</i> − 3) est toujours vraie.</p>`,
-   c:`<p><b>Affirmation 1 :</b> c'est le problème 1 du cours.</p><div class="calcs">${dv("A","(2x-3)(-4x+5)")}${dv("B","2x(11-3x)-(2x2+15)")}</div><p>A = B : l'affirmation 1 est <b>vraie</b>.</p>
-   <p><b>Affirmation 2 :</b></p><div class="calcs">${dv("C","(3x-5)2")}${dv("D","25+10x+9x(x-3)")}</div><p>Les deux formes réduites sont différentes. Contre-exemple avec <i>x</i> = 1 :</p><div class="calcs"><p class="calc">C = (3 × 1 − 5)²<br>C = (−2)²<br>C = 4</p><p class="calc">D = 25 + 10 × 1 + 9 × 1 × (1 − 3)<br>D = 25 + 10 + 9 × (−2)<br>D = 35 − 18<br>D = 17</p></div><p>4 ≠ 17 : l'affirmation 2 est <b>fausse</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Programmes égaux ?", w:"Sur ton cahier", h:`<div class="progs">${prog("Programme 1",["Choisir un nombre.","Élever au carré.","Ajouter le triple du nombre de départ."])}${prog("Programme 2",["Choisir un nombre.","Ajouter 3.","Multiplier par le nombre de départ."])}</div>
    <p><b>1. a)</b> Montre que si on choisit 4 comme nombre de départ, les programmes donnent 28.</p><p><b>b)</b> Calcule le résultat des deux programmes si on choisit −5 comme nombre de départ.</p><p><b>c)</b> Que constate-t-on ? Émets une conjecture.</p><p><b>2.</b> Démontre la conjecture émise à la question précédente.</p>`,
-   c:`<p><b>1. a)</b> Avec 4 :</p><div class="calcs"><p class="calc">A = 4² + 3 × 4<br>A = 16 + 12<br>A = 28</p><p class="calc">B = (4 + 3) × 4<br>B = 7 × 4<br>B = 28</p></div><p><b>b)</b> Avec −5 :</p><div class="calcs"><p class="calc">C = (−5)² + 3 × (−5)<br>C = 25 − 15<br>C = 10</p><p class="calc">D = (−5 + 3) × (−5)<br>D = (−2) × (−5)<br>D = 10</p></div><p><b>c)</b> Il semble que les deux programmes donnent toujours le même résultat.</p>
-   <p><b>2.</b> Avec un nombre <i>x</i> :</p><div class="calcs">${calc(["P<sub>1</sub> = <i>x</i>² + 3<i>x</i>"])}${dv("P<sub>2</sub>","(x+3)*x")}</div><p>Les deux programmes donnent <i>x</i>² + 3<i>x</i> : la conjecture est <b>vraie</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Programmes égaux", w:"Sur ton cahier", h:`<div class="progs">${prog("Programme A",["Choisir un nombre.","Soustraire 1.","Élever au carré.","Soustraire 1."])}${prog("Programme B",["Choisir un nombre.","Soustraire 2.","Multiplier par le nombre choisi."])}</div>
    <p>Prouve que ces deux programmes donneront toujours le même résultat, si on choisit un même nombre au départ.</p>`,
-   c:`<p>Avec un nombre <i>x</i> :</p><div class="calcs">${dv("A","(x-1)2-1")}${dv("B","(x-2)*x")}</div><p>Les deux programmes donnent <i>x</i>² − 2<i>x</i> : ils donnent <b>toujours le même résultat</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Comprendre un programme Scratch", w:"Sur ton cahier", h:`<p>On considère le programme Scratch suivant :</p>${img("3k5ex/scratch.png","Programme Scratch : demander Choisis un nombre ; mettre a à réponse plus 1 ; mettre b à a fois a ; mettre c à b moins 8 ; dire c.",300)}
    <p><b>1.</b> Montre que si on choisit 4 comme nombre de départ, le programme donne 17.</p><p><b>2.</b> Calcule le résultat du programme si le nombre choisi est −7.</p><p><b>3. a)</b> On choisit le nombre <i>x</i> et on applique ce programme. Écris l'expression, en fonction de <i>x</i>, qui donne le résultat du programme.</p><p><b>b)</b> Développe et réduis cette expression. L'expression développée et réduite est <i>x</i>² + 2<i>x</i> − 7.</p>`,
-   c:`<div class="calcs"><p class="calc"><b>1.</b><br>A = (4 + 1)² − 8<br>A = 5² − 8<br>A = 25 − 8<br>A = 17</p><p class="calc"><b>2.</b><br>B = (−7 + 1)² − 8<br>B = (−6)² − 8<br>B = 36 − 8<br>B = <b>28</b></p></div><p><b>3. a)</b> (<i>x</i> + 1)² − 8</p><p><b>b)</b></p>${dv("C","(x+1)2-8")}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Comparaison d'aires", w:"Sur ton cahier", h:`<p><i>x</i> est un nombre supérieur à 9.</p>${img("3k5ex/aires.png","À gauche, le grand carré ACDE de côté x − 5, auquel on a enlevé le petit carré ABGF de côté 4 : il reste l'hexagone BCDEFG. À droite, le rectangle MNOP de longueur x − 1 et de largeur x − 9.",420)}
    <p>Montre que l'hexagone BCDEFG et le rectangle MNOP ont la même aire, quelle que soit la valeur de <i>x</i>.</p>`,
-   c:`<p>L'hexagone BCDEFG est le carré ACDE de côté <i>x</i> − 5, auquel on enlève le carré ABGF de côté 4.</p>${dv("A<sub>hexagone</sub>","(x-5)2-16")}
-   <p>Le rectangle MNOP a pour longueur <i>x</i> − 1 et pour largeur <i>x</i> − 9.</p>${dv("A<sub>rectangle</sub>","(x-1)(x-9)")}<p>Les deux aires sont égales à <i>x</i>² − 10<i>x</i> + 9 : l'hexagone et le rectangle ont <b>toujours la même aire</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -260,3 +255,4 @@ exos:[
 const WRAPC=h=>typeof h!=="string"?h:h.replace(/(<div class="calcs"[^>]*>)([\s\S]*?)(<\/div>)/g,(m,a,b,c)=>a+b.replace(/<p class="calc">([\s\S]*?)<\/p>/g,'<div><p class="calc">$1</p></div>')+c);
 { const D=CH["3e-5"]; (D.cours||[]).forEach(c=>c.h=WRAPC(c.h)); (D.exos||[]).forEach(S=>S.e.forEach(e=>{ e.h=WRAPC(e.h); e.c=WRAPC(e.c); })); if(D.eval) D.eval.exos.forEach(e=>{ e.h=WRAPC(e.h); e.c=WRAPC(e.c); }); }
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-5");

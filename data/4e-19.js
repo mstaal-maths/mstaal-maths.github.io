@@ -81,28 +81,24 @@ cours:[
 exos:[
 {t:"Rappels : les puissances d'exposant positif", e:[
   {n:"Exercice 1", t:"La contamination", w:"Sur ton cahier", h:`<p>Sans gestes barrières, une personne contaminée par le Covid-19 contamine 3 personnes.</p><p>Imaginons que le jour 1, une personne soit malade.</p><p>Le jour 2, cette personne contamine 3 personnes.</p><p>Le jour 3, ces 3 personnes contaminent chacune 3 nouvelles personnes. Et ainsi de suite.</p><p>Sans gestes barrières, combien de nouvelles personnes seront contaminées le 10<sup>e</sup> jour ?</p>`,
-   c:`<p><b>Méthode 1 :</b> on multiplie par 3 chaque jour.</p><p class="calc">Jour 2 : 3 · jour 3 : 3 × 3 = 9 · jour 4 : 9 × 3 = 27 · jour 5 : 81 · jour 6 : 243<br>jour 7 : 729 · jour 8 : 2 187 · jour 9 : 6 561 · jour 10 : 6 561 × 3 = 19 683</p>
-   <p><b>Méthode 2 :</b> avec les puissances. Jour 1 : 1 = 3<sup>0</sup> ; jour 2 : 3 = 3<sup>1</sup> ; jour 3 : 9 = 3<sup>2</sup>. L'exposant vaut le numéro du jour moins 1.</p><p class="calc">Jour 10 : 3<sup>9</sup> = 19 683</p><p>Sans gestes barrières, <b>19 683 nouvelles personnes</b> seront contaminées le 10<sup>e</sup> jour. Il est donc important de bien respecter les gestes barrières.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Écrire sous forme d'une puissance", w:"Sur ton cahier", h:`<p>Écris chaque produit sous la forme d'une puissance.</p>${cols(["a) 2 × 2 × 2 × 2","b) 3 × 3 × 3 × 3 × 3","c) 4 × 4 × 4 × 4 × 4 × 4","d) 5 × 5 × 5 × 5 × 5 × 5 × 5"])}`,
-   c:cols(["a) 2 × 2 × 2 × 2 = 2<sup>4</sup>","b) 3 × 3 × 3 × 3 × 3 = 3<sup>5</sup>","c) 4 × 4 × 4 × 4 × 4 × 4 = 4<sup>6</sup>","d) 5 × 5 × 5 × 5 × 5 × 5 × 5 = 5<sup>7</sup>"])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Calculer des puissances", w:"Sur ton cahier", h:`<p>Calcule.</p>${cols(["A = 2<sup>2</sup>","B = 2<sup>4</sup>","C = 2<sup>6</sup>","D = 3<sup>2</sup>","E = 3<sup>3</sup>","F = 3<sup>4</sup>","G = 10<sup>2</sup>","H = 10<sup>6</sup>","I = 10<sup>9</sup>","J = (−5)<sup>1</sup>","K = (−5)<sup>2</sup>","L = (−5)<sup>3</sup>"])}`,
-   c:`${chns([["A",[`2<sup>2</sup>`,`2 × 2`,`4`]],["B",[`2<sup>4</sup>`,`2 × 2 × 2 × 2`,`16`]],["C",[`2<sup>6</sup>`,`2 × 2 × 2 × 2 × 2 × 2`,`64`]],["D",[`3<sup>2</sup>`,`3 × 3`,`9`]],["E",[`3<sup>3</sup>`,`3 × 3 × 3`,`27`]],["F",[`3<sup>4</sup>`,`3 × 3 × 3 × 3`,`81`]],["G",[`10<sup>2</sup>`,`100`]],["H",[`10<sup>6</sup>`,`1 000 000`]],["I",[`10<sup>9</sup>`,`1 000 000 000`]],["J",[`(−5)<sup>1</sup>`,`−5`]],["K",[`(−5)<sup>2</sup>`,`(−5) × (−5)`,`25`]],["L",[`(−5)<sup>3</sup>`,`(−5) × (−5) × (−5)`,`−125`]]])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les puissances négatives", e:[
   {n:"Exercice 4", t:"Écrire avec un exposant négatif", w:"Sur ton cahier", h:`<p>Écris chaque quotient sous la forme d'une puissance d'exposant négatif.</p>${cols([`A = ${fr(1,"9 × 9")}`,`B = ${fr(1,"7 × 7 × 7")}`,`C = ${fr(1,"3 × 3 × 3 × 3")}`,`D = ${fr(1,"6 × 6 × 6 × 6 × 6")}`])}`,
-   c:chns([["A",[`${fr(1,"9 × 9")}`,`${fr(1,"9²")}`,`9<sup>−2</sup>`]],["B",[`${fr(1,"7 × 7 × 7")}`,`${fr(1,"7³")}`,`7<sup>−3</sup>`]],["C",[`${fr(1,"3 × 3 × 3 × 3")}`,`${fr(1,"3⁴")}`,`3<sup>−4</sup>`]],["D",[`${fr(1,"6 × 6 × 6 × 6 × 6")}`,`${fr(1,"6⁵")}`,`6<sup>−5</sup>`]]])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Les puissances négatives", w:"Sur ton cahier", h:`<p><b>Partie 1 :</b> complète les pointillés.</p><div class="calcs"><p class="calc" data-steps="1">A = 3<sup>−2</sup><br>A = ${fr(1,"3…")}<br>A = ${fr(1,"……")}<br>A = ${fr(1,"……")}</p><p class="calc" data-steps="1">B = 2<sup>−4</sup><br>B = ${fr(1,"2…")}<br>B = ${fr(1,"……")}<br>B = ${fr(1,"……")}</p></div>
    <p><b>Partie 2 :</b> écris chaque puissance sous la forme d'une fraction simplifiée.</p>${cols(["C = 3<sup>−3</sup>","D = 10<sup>−2</sup>","E = 6<sup>−1</sup>","F = (−2)<sup>−3</sup>","G = (−4)<sup>−2</sup>"])}
    <p><b>Partie 3 :</b> donne le résultat sous la forme d'un nombre décimal ou d'un quotient.</p>${cols(["H = 2<sup>3</sup>","I = 6<sup>−2</sup>","J = 10<sup>4</sup>","K = (−7)<sup>−2</sup>","L = (−5)<sup>0</sup>","M = 9<sup>−1</sup>"])}`,
-   c:`<p><b>Partie 1 :</b></p>${chns([["A",[`3<sup>−2</sup>`,`${fr(1,"3²")}`,`${fr(1,"3 × 3")}`,`${fr(1,9)}`]],["B",[`2<sup>−4</sup>`,`${fr(1,"2⁴")}`,`${fr(1,"2 × 2 × 2 × 2")}`,`${fr(1,16)}`]]])}
-   <p><b>Partie 2 :</b></p>${chns([["C",[`3<sup>−3</sup>`,`${fr(1,"3³")}`,`${fr(1,"3 × 3 × 3")}`,`${fr(1,27)}`]],["D",[`10<sup>−2</sup>`,`${fr(1,"10²")}`,`${fr(1,"10 × 10")}`,`${fr(1,100)}`]],["E",[`6<sup>−1</sup>`,`${fr(1,"6¹")}`,`${fr(1,6)}`]],["F",[`(−2)<sup>−3</sup>`,`${fr(1,"(−2)³")}`,`${fr(1,"(−2) × (−2) × (−2)")}`,`${fr(1,"−8")}`,`−${fr(1,8)}`]],["G",[`(−4)<sup>−2</sup>`,`${fr(1,"(−4)²")}`,`${fr(1,"(−4) × (−4)")}`,`${fr(1,16)}`]]])}
-   <p><b>Partie 3 :</b></p>${chns([["H",[`2<sup>3</sup>`,`2 × 2 × 2`,`8`]],["I",[`6<sup>−2</sup>`,`${fr(1,"6²")}`,`${fr(1,"6 × 6")}`,`${fr(1,36)}`]],["J",[`10<sup>4</sup>`,`10 000`]],["K",[`(−7)<sup>−2</sup>`,`${fr(1,"(−7)²")}`,`${fr(1,"(−7) × (−7)")}`,`${fr(1,49)}`]],["L",[`(−5)<sup>0</sup>`,`1`]],["M",[`9<sup>−1</sup>`,`${fr(1,"9¹")}`,`${fr(1,9)}`]]])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les puissances de 10 négatives", e:[
   {n:"Exercice 6", t:"Les puissances de 10", w:"Sur ton cahier", h:`<p><b>Partie 1 :</b> donne le résultat sous la forme d'un nombre décimal.</p>${cols(["A = 10<sup>−2</sup>","B = 10<sup>−5</sup>","C = 10<sup>−10</sup>","D = 10<sup>3</sup>","E = 10<sup>6</sup>"])}
    <p><b>Partie 2 :</b> sur chaque jeton est inscrit un nombre décimal. Associe les jetons par paire (deux jetons égaux).</p>${jetons(["10<sup>−6</sup>","0,001",fr(1,"10²"),"0,000 000 001","10<sup>−3</sup>","0,000 1","10<sup>7</sup>","1 000 000 000","10<sup>−4</sup>","10<sup>9</sup>","10<sup>−9</sup>","10 000 000","0,000 001","10<sup>−2</sup>"])}`,
-   c:`<p><b>Partie 1 :</b></p>${chns([["A",[`10<sup>−2</sup>`,`${fr(1,"10²")}`,`${fr(1,"100")}`,`0,01 &nbsp; (2 zéros)`]],["B",[`10<sup>−5</sup>`,`0,000 01 &nbsp; (5 zéros)`]],["C",[`10<sup>−10</sup>`,`0,000 000 000 1 &nbsp; (10 zéros)`]],["D",[`10<sup>3</sup>`,`1 000 &nbsp; (un 1 suivi de 3 zéros)`]],["E",[`10<sup>6</sup>`,`1 000 000 &nbsp; (un 1 suivi de 6 zéros)`]]])}
-   <p><b>Partie 2 :</b></p><p class="calc">10<sup>9</sup> = 1 000 000 000<br>10<sup>7</sup> = 10 000 000<br>10<sup>−2</sup> = ${fr(1,"10²")}<br>10<sup>−3</sup> = 0,001<br>10<sup>−4</sup> = 0,000 1<br>10<sup>−6</sup> = 0,000 001<br>10<sup>−9</sup> = 0,000 000 001</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les préfixes scientifiques", e:[
   {n:"Activité 1", t:"Découverte des préfixes scientifiques", w:"Sur ton cahier", h:`<p>Voici quelques informations :</p><ul><li>La distance entre la Terre et le Soleil est d'environ 149 600 000 000 mètres.</li><li>La distance entre la Terre et la Lune est de 384 400 000 mètres.</li><li>La distance entre Les Sables-d'Olonne et Strasbourg est de 942 000 mètres.</li><li>La hauteur de la tour Eiffel est de 324 mètres.</li><li>La taille d'une fourmi est de 0,007 mètre.</li><li>Le diamètre d'un cheveu est de 0,000 005 mètre.</li><li>La taille du virus de la grippe est de 0,000 000 1 mètre.</li></ul>
@@ -111,11 +107,9 @@ exos:[
    <p><b>2)</b> Utilise les puissances de 10 pour écrire ces conversions plus simplement : 1 Gm = … m ; 1 Mm = … m ; 1 km = 10<sup>3</sup> m ; 1 hm = … m ; 1 dam = … m ; 1 dm = … m ; 1 cm = … m ; 1 mm = … m ; 1 μm = … m ; 1 nm = … m.</p>
    <p><b>3)</b> Choisis une unité adaptée pour chaque information.</p><p>Exemple : 149 600 000 000 m = 149,6 Gm.</p>
    ${tabH(["","","Gm","","","Mm","","","km","hm","dam","m"],[["1","4","9","6","0","0","0","0","0","0","0","0"]])}<p>Dans le tableau, on voit que 149 600 000 000 m = 149,6 Gm : cette unité est plus adaptée.</p>`,
-   c:`<p><b>1) a)</b> 1 hm = 100 m ; 1 dam = 10 m ; 1 dm = 0,1 m ; 1 cm = 0,01 m ; 1 mm = 0,001 m.</p><p><b>b)</b> 1 Gm = 1 000 000 000 m ; 1 Mm = 1 000 000 m ; 1 μm = 0,000 001 m ; 1 nm = 0,000 000 001 m.</p>
-   <p><b>2)</b></p>${tabH(["1 Gm","1 Mm","1 km","1 hm","1 dam","1 dm","1 cm","1 mm","1 μm","1 nm"],[["10<sup>9</sup> m","10<sup>6</sup> m","10<sup>3</sup> m","10<sup>2</sup> m","10<sup>1</sup> m","10<sup>−1</sup> m","10<sup>−2</sup> m","10<sup>−3</sup> m","10<sup>−6</sup> m","10<sup>−9</sup> m"]])}<p>Les 4 nouvelles conversions (Gm, Mm, μm, nm) sont à connaître par cœur.</p>
-   <p><b>3)</b></p><p class="calc">Terre – Lune : 384 400 000 m = 384,4 Mm<br>Les Sables-d'Olonne – Strasbourg : 942 000 m = 942 km<br>Tour Eiffel : 324 m (déjà dans une unité adaptée)<br>Fourmi : 0,007 m = 7 mm<br>Cheveu : 0,000 005 m = 5 μm<br>Virus de la grippe : 0,000 000 1 m = 100 nm (ou 0,1 μm)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Des conversions", w:"Sur ton cahier", h:`<p>En t'aidant du tableau des préfixes, complète les conversions.</p><p><b>a)</b> Consommation d'Internet disponible sur mon téléphone portable : 50 Go (gigaoctets) = … o (octets).</p><p><b>b)</b> Diamètre d'un fil de toile d'araignée : 6 690 nm = … mm.</p><p><b>c)</b> Masse record d'une baleine bleue : 177 000 kg = … Mg.</p><p><b>d)</b> Masse d'un moustique : 0,000 001 5 kg = … mg.</p><p><b>e)</b> Taille d'un acarien : 0,012 5 mm = … μm.</p>`,
-   c:`<p class="calc">a) 50 Go = 50 × 10<sup>9</sup> o = 50 000 000 000 o<br>b) 1 mm = 1 000 000 nm, donc 6 690 nm = 0,006 69 mm<br>c) 1 Mg = 1 000 kg, donc 177 000 kg = 177 Mg<br>d) 1 kg = 1 000 000 mg, donc 0,000 001 5 kg = 1,5 mg<br>e) 1 mm = 1 000 μm, donc 0,012 5 mm = 12,5 μm</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -176,3 +170,4 @@ CH["4e-19"].quiz.forEach((N,ni)=>Object.values(N.q).forEach(list=>list.forEach((
   if(it.g){ const g=it.g; list[i]={g:()=>f(g())}; } else list[i]=f(it);
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-19");

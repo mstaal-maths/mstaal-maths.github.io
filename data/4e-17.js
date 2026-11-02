@@ -153,51 +153,42 @@ exos:[
   {n:"Exercice 1", t:"À la fac", w:"Sur ton cahier", h:`<p>Dans une classe en faculté de langue, on a demandé aux étudiants de donner leur âge. Voici leurs réponses :</p><p class="calc" style="white-space:normal">18 – 18 – 19 – 18 – 22 – 18 – 19 – 19 – 18 – 20 – 18 – 18 – 18 – 20 – 28 – 20 – 18 – 22 – 19 – 19 – 18 – 19 – 19 – 20 – 18 – 18 – 18 – 18 – 19 – 19</p>
    <p><b>1)</b> Recopie ces trois phrases sur ton cahier et complète-les :</p><p>a) La population étudiée est ……</p><p>b) Le caractère étudié est ……</p><p>c) Les valeurs sont ……</p>
    <p><b>2)</b> a) Construis un tableau d'effectifs.</p><p>b) Rajoute une ligne dans ton tableau pour donner la fréquence de chaque valeur sous forme fractionnaire.</p><p>c) Rajoute une dernière ligne dans ton tableau pour donner la fréquence de chaque valeur en pourcentage.</p>`,
-   c:`<p><b>1)</b> a) La population étudiée est une classe d'étudiants en faculté de langue.</p><p>b) Le caractère étudié est l'âge.</p><p>c) Les valeurs sont 18, 19, 20, 22 et 28.</p>
-   <p><b>2)</b></p>${tab(["Valeurs","18","19","20","22","28","Total"],[["Effectifs","14","9","4","2","1","30"],["Fréquences",F(14,30),F(9,30),F(4,30),F(2,30),F(1,30),`${F(30,30)} = 1`],["Fréquences (en %)","47","30","13","7","3","100"]])}
-   <p>Chaque fréquence en nombre décimal est arrondie au centième (par exemple {14/30} ≈ 0,47) pour que la somme des pourcentages soit bien égale à 100 : 47 + 30 + 13 + 7 + 3 = 100.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Les employés d'une entreprise", w:"Sur ton cahier", h:`<p>Une entreprise d'informatique emploie 22 programmeurs, 32 électroniciens, 6 infographistes et 20 commerciaux.</p><p>a) Calcule l'effectif total. Que représente-t-il ?</p><p>b) Construis un tableau donnant l'effectif et la fréquence (en %) de chaque métier.</p>`,
-   c:`<p>a) 22 + 32 + 6 + 20 = 80. L'effectif total est de 80 : c'est le nombre d'employés de l'entreprise.</p>
-   <p>b)</p>${tab(["Métier","Effectifs","Fréquence (en %)"],[["Programmeurs","22","27,5"],["Électroniciens","32","40"],["Infographistes","6","7,5"],["Commerciaux","20","25"],["Total","80","100"]])}<p>Par exemple, pour les programmeurs :</p><p class="calc">f = {22/80}<br>f = 0,275<br>f = 27,5 %</p><p>On vérifie que 27,5 + 40 + 7,5 + 25 = 100.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Diagrammes en bâtons et diagrammes circulaires", e:[
   {n:"Exercice 3", t:"Construire un diagramme en bâtons et un diagramme circulaire", w:"Sur ton cahier", h:`<p>On a interrogé des élèves de 5<sup>e</sup> sur leur sport préféré.</p>${tab(["Valeurs",...SP,"Total"],[["Effectif",...SPv.map(String),"20"]])}
    <p><b>1)</b> Sur ton cahier, représente ces données dans un diagramme en bâtons :</p><p>– les sports sur l'axe des abscisses ;</p><p>– les effectifs sur l'axe des ordonnées.</p><p>N'oublie pas d'indiquer le nom des deux axes et de donner un titre à ton diagramme.</p><p><b>Conseil :</b> pour créer tes deux axes, aide-toi des carreaux de ton cahier.</p>
    <p><b>2)</b> Sur ton cahier, représente ces données dans un diagramme circulaire. On arrondira les degrés à l'unité.</p><p>N'oublie pas d'indiquer la légende du diagramme à l'aide de couleurs et de donner un titre à ton diagramme.</p>`,
-   c:`<p><b>1)</b></p>${bars({cats:SP, vals:SPv, title:"Répartition d'une classe de 5e en fonction du sport pratiqué", ylab:"Effectifs", xlab:"Sports pratiqués", ymax:7, ystep:1, ylabStep:1, w:520, H:320})}
-   <p><b>2)</b></p>${tab(["Valeurs","Foot","Total"],[["Effectifs","6","20"],["Degrés","?","360"]])}<p class="calc">Produit en croix : 6 × 360 ÷ 20 = 108°</p><p>De la même façon, on trouve les autres mesures d'angle.</p>
-   ${tab(["Valeurs",...SP,"Total"],[["Effectifs",...SPv.map(String),"20"],["Degrés",...SPv.map(n=>`<b>${n*18}</b>`),"360"]])}<p>On vérifie que 108 + 54 + 54 + 90 + 36 + 18 = 360.</p>
-   ${pie({vals:SPv, title:"Répartition d'une classe de 5e en fonction du sport pratiqué", lab:i=>[SP[i], SPv[i]*18+"°"]})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Moyenne d'une série statistique", e:[
   {n:"Exercice 4", t:"Moyenne en technologie", w:"Sur ton cahier", h:`<p>Voici les notes (sur 20) obtenues par un élève en technologie ce trimestre :</p><p class="calc">13 ; 14 ; 7 ; 8 ; 16 ; 10 ; 9</p><p>Calcule sa moyenne trimestrielle en technologie.</p>`,
-   c:`<p class="calc">M = {13 + 14 + 7 + 8 + 16 + 10 + 9/7}<br>M = {77/7}<br>M = 11</p><p>On aurait aussi pu l'écrire comme ça : (13 + 14 + 7 + 8 + 16 + 10 + 9) ÷ 7 = 11.</p><p>Sa moyenne trimestrielle en technologie est donc de <b>11 sur 20</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Les SMS de Nolly", w:"Sur ton cahier", h:`<p>Voici le nombre de SMS envoyés par Nolly chaque jour d'une semaine :</p>${tab(["Jour","Lun.","Mar.","Mer.","Jeu.","Ven.","Sam.","Dim."],[["SMS","45","39","72","47","66","103","97"]])}<p><b>1)</b> Combien de SMS a-t-elle envoyés au cours de la semaine ?</p><p><b>2)</b> Combien de SMS envoie-t-elle en moyenne par jour ?</p>`,
-   c:`<p><b>1)</b> 45 + 39 + 72 + 47 + 66 + 103 + 97 = 469. Au cours de la semaine, elle a envoyé <b>469 SMS</b>.</p><p><b>2)</b> {469/7} = 67. En moyenne, Nolly envoie <b>67 SMS par jour</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Une douzaine d'œufs", w:"Sur ton cahier", h:`<p>On a pesé les œufs d'une boîte de douze. Voici leurs masses (en g) :</p><p class="calc">61 ; 62 ; 61 ; 58 ; 56 ; 63 ; 55 ; 64 ; 61 ; 63 ; 63 ; 65</p><p><b>1)</b> Quelle est la masse totale de la douzaine d'œufs ?</p><p><b>2)</b> Quelle est la masse moyenne d'un œuf ?</p>`,
-   c:`<p><b>1)</b> 61 + 62 + 61 + 58 + 56 + 63 + 55 + 64 + 61 + 63 + 63 + 65 = 732. La masse totale est de <b>732 g</b>.</p><p><b>2)</b> {732/12} = 61. La masse moyenne d'un œuf est de <b>61 g</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Moyenne à partir d'un tableau d'effectifs", e:[
   {n:"Exercice 7", t:"Des sacs de terreau", w:"Sur ton cahier", h:`<p>Une jardinerie a noté la masse (en kg) des sacs de terreau commandés par ses clients :</p><p class="calc" style="white-space:normal">12 – 15 – 12 – 20 – 20 – 20 – 12 – 15 – 15 – 12 – 15 – 12 – 20 – 12 – 20 – 12</p><p><b>1)</b> Recopie et complète le tableau d'effectifs.</p>${tab(["Masse du sac (en kg)","12","15","20"],[["Nombre de commandes","","",""]])}<p><b>2)</b> Combien y a-t-il de commandes en tout ?</p><p><b>3)</b> Calcule la masse moyenne d'une commande.</p>`,
-   c:`<p><b>1)</b></p>${tab(["Masse du sac (en kg)","12","15","20"],[["Nombre de commandes","7","4","5"]])}<p><b>2)</b> 7 + 4 + 5 = 16 : il y a 16 commandes en tout.</p>
-   <p><b>3)</b> Avec la série statistique :</p><p class="calc">M = {12 + 15 + 12 + 20 + 20 + 20 + 12 + 15 + 15 + 12 + 15 + 12 + 20 + 12 + 20 + 12/16}<br>M = {244/16}<br>M = 15,25</p><p><b>Méthode plus rapide</b>, avec le tableau d'effectifs :</p><p class="calc">M = {7 × 12 + 4 × 15 + 5 × 20/16}<br>M = {244/16}<br>M = 15,25</p><p>La masse moyenne d'une commande est de <b>15,25 kg</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"L'âge des participants", w:"Sur ton cahier", h:`<p>Voici l'âge des participants à un stage de sport :</p>${tab(["Âge (en ans)","13","14","15","16","17"],[["Effectif","2","6","3","1","3"]])}<p><b>1)</b> Quel est l'effectif total ?</p><p><b>2)</b> Calcule l'âge moyen d'un participant.</p>`,
-   c:`<p><b>1)</b> 2 + 6 + 3 + 1 + 3 = 15. L'effectif total est de 15.</p><p><b>2)</b></p><p class="calc">M = {2 × 13 + 6 × 14 + 3 × 15 + 1 × 16 + 3 × 17/15}<br>M = {222/15}<br>M = 14,8</p><p>L'âge moyen d'un participant est de <b>14,8 ans</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Les salaires d'une PME", w:"Sur ton cahier", h:`<p>Voici les salaires mensuels (en €) des employés d'une PME :</p>${tab(["Salaire (en €)","950","1 300","1 700","3 500","8 000"],[["Effectif","50","25","15","10","2"]])}<p><b>1)</b> Quel est l'effectif de cette PME ?</p><p><b>2)</b> Calcule le salaire moyen, arrondi à l'euro.</p>`,
-   c:`<p><b>1)</b> 50 + 25 + 15 + 10 + 2 = 102. L'effectif de cette PME est de 102.</p><p><b>2)</b></p><p class="calc">M = {50 × 950 + 25 × 1 300 + 15 × 1 700 + 10 × 3 500 + 2 × 8 000/102}<br>M = {156 500/102}<br>M ≈ 1 534</p><p>Le salaire moyen de cette entreprise est d'environ <b>1 534 €</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Moyenne à partir d'un diagramme", e:[
   {n:"Exercice 10", t:"Les spams", w:"Sur ton cahier", h:`<p>On a demandé aux élèves d'une classe combien de spams (courriels indésirables) ils ont reçus hier. Voici les résultats :</p>${bars({cats:["0","1","2","3","4","5","6","7","8"], vals:SPAM, title:"Nombre de spams reçus", ylab:"Nombre d'élèves", xlab:"Nombre de spams", ymax:7, ystep:1, ylabStep:1, w:520, H:310})}
    <p><b>1)</b> a) Combien d'élèves n'ont pas reçu de spam ?</p><p>b) Combien d'élèves ont reçu exactement 3 spams ?</p><p>c) Combien d'élèves ont répondu à ce sondage ?</p><p><b>2)</b> a) Combien de spams les élèves de la classe ont-ils reçus en tout ?</p><p>b) Calcule le nombre moyen de spams reçus par un élève de cette classe.</p>`,
-   c:`<p><b>1)</b> a) 3 élèves n'ont pas reçu de spam.</p><p>b) 5 élèves ont reçu exactement 3 spams.</p><p>c) 3 + 4 + 0 + 5 + 2 + 6 + 3 + 1 + 1 = 25 : 25 élèves ont répondu à ce sondage.</p>
-   <p><b>2)</b> a) 3 × 0 + 4 × 1 + 0 × 2 + 5 × 3 + 2 × 4 + 6 × 5 + 3 × 6 + 1 × 7 + 1 × 8 = 90 : les élèves ont reçu 90 spams en tout.</p><p>b) {90/25} = 3,6 : le nombre moyen de spams reçus par un élève est de <b>3,6</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Les notes de Mathieu", w:"Sur ton cahier", h:`<p>Voici les notes (sur 20) de Mathieu aux 12 devoirs de maths de l'année :</p>${bars({cats:MATH.map((_,i)=>String(i+1)), vals:MATH, title:"Notes de Mathieu", ylab:"Note sur 20", xlab:"Numéro du devoir", ymax:20, ystep:1, ylabStep:2, w:540, H:330})}
    <p><b>1)</b> À quel devoir Mathieu a-t-il eu sa meilleure note ?</p><p><b>2)</b> Calcule la moyenne de Mathieu en maths.</p>`,
-   c:`<p><b>1)</b> C'est au devoir n° 9 que Mathieu a eu sa meilleure note (19).</p><p><b>2)</b></p><p class="calc">M = {13 + 12 + 9 + 11 + 6 + 11 + 11 + 17 + 19 + 14 + 3 + 12/12}<br>M = {138/12}<br>M = 11,5</p><p>La moyenne de Mathieu en maths est de <b>11,5 sur 20</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"La pluie de la semaine", w:"Sur ton cahier", h:`<p>Le diagramme donne la hauteur de pluie tombée chaque jour d'une semaine.</p>${bars({cats:JOURS, vals:PLUIE, title:"Précipitations de la semaine", ylab:"Hauteur de pluie (mm)", ymax:18, ystep:1, ylabStep:2, w:520, H:300})}
    <p><b>1)</b> Quel a été le jour le plus pluvieux ? Combien a-t-il plu ce jour-là ?</p><p><b>2)</b> Quel a été le jour le moins pluvieux ?</p><p><b>3)</b> Un voisin affirme qu'il a plu en moyenne 9 mm par jour cette semaine. A-t-il raison ?</p>`,
-   c:`<p><b>1)</b> Le jour le plus pluvieux a été le jeudi : il a plu 16 mm.</p><p><b>2)</b> Le jour le moins pluvieux a été le vendredi : il n'a pas plu ce jour-là (0 mm).</p>
-   <p><b>3)</b> S'il avait plu 9 mm tous les jours, on aurait eu un total de 9 × 7 = 63 mm.</p><p>Or cette semaine, il est tombé 10 + 14 + 8 + 16 + 0 + 4 + 6 = 58 mm. Le voisin a donc <b>tort</b>.</p><p><b>Observation :</b> la moyenne des précipitations par jour est 58 ÷ 7 ≈ 8,29 mm : s'il avait plu 8,29 mm tous les jours, on aurait eu le même total pour la semaine.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -259,3 +250,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-17");

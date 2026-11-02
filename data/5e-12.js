@@ -83,33 +83,33 @@ cours:[
 exos:[
 {t:"Le carré d'un nombre", e:[
   {n:"Activité 1", t:"Compter des carreaux", w:"Sur ta feuille", h:`<p>On utilise des carreaux de 1 cm de côté.</p><div class="figs">${sq(3)}</div><p>1) Combien de petits carrés contient ce grand carré de côté 3 carreaux ?</p><p>2) Complète : ${P(3,2)} = ……</p><p>Combien de petits carrés aurait un carré de côté 5 ? de côté 10 ?</p>`,
-   c:`<p>1) Ce carré contient 3 × 3 = <b>9</b> petits carrés.</p><p>2) ${P(3,2)} = <b>9</b>.</p><p>Un carré de côté 5 contient ${P(5,2)} = <b>25</b> petits carrés.</p><p>Un carré de côté 10 en contient ${P(10,2)} = <b>100</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Écrire un produit et calculer", w:"Sur ton cahier", h:`<p>Écris sous forme d'un produit, puis calcule.</p>${cols([[3,2],[7,2],[2,3],[5,3],[10,2],[10,3]].map(([b,e],i)=>`${"ABCDEF"[i]} = ${P(b,e)}`))}`,
-   c:grid([[3,2],[7,2],[2,3],[5,3],[10,2],[10,3]].map(([b,e],i)=>["ABCDEF"[i], `${P(b,e)} = ${prod(b,e)} = <b>${D(pw(b,e))}</b>`]))},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Le tableau des carrés", w:"Sur ta feuille", h:`<p>Complète le tableau (les carrés de 0 à 12 sont à connaître par cœur).</p><div class="scroll"><table class="std"><thead><tr><th><i>n</i></th>${[...Array(13)].map((_,i)=>`<th>${i}</th>`).join("")}</tr></thead><tbody><tr><th><i>n</i><sup>2</sup></th>${[...Array(13)].map(()=>`<td></td>`).join("")}</tr></tbody></table></div><p>Complète : ${P(9,2)} = …… ; ${P(11,2)} = …… ; ${P(12,2)} = …… ; ${P(6,2)} = ……</p>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th><i>n</i></th>${[...Array(13)].map((_,i)=>`<th>${i}</th>`).join("")}</tr></thead><tbody><tr><th><i>n</i><sup>2</sup></th>${[...Array(13)].map((_,i)=>`<td>${i*i}</td>`).join("")}</tr></tbody></table></div><p>${P(9,2)} = <b>81</b> ; ${P(11,2)} = <b>121</b> ; ${P(12,2)} = <b>144</b> ; ${P(6,2)} = <b>36</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Carrés de décimaux et de fractions", w:"Sur ta feuille", h:`<p>Calcule mentalement et écris seulement les résultats.</p>${cols([P(8,2),P("0,1",2),P("0,3",2),P(`(${F(1,2)})`,2),P(`(${F(3,4)})`,2),P("1,5",2)].map((x,i)=>`${"ABCDEF"[i]} = ${x}`))}`,
-   c:grid([["A",`${P(8,2)} = 8 × 8 = <b>64</b>`],["B",`${P("0,1",2)} = 0,1 × 0,1 = <b>0,01</b>`],["C",`${P("0,3",2)} = 0,3 × 0,3 = <b>0,09</b>`],["D",`${P(`(${F(1,2)})`,2)} = ${F(1,2)} × ${F(1,2)} = <b>${F(1,4)}</b>`],["E",`${P(`(${F(3,4)})`,2)} = ${F(3,4)} × ${F(3,4)} = <b>${F(9,16)}</b>`],["F",`${P("1,5",2)} = 1,5 × 1,5 = <b>2,25</b>`]])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Corriger les erreurs", w:"Sur ton cahier", h:`<p>Vrai ou faux ? Justifie.</p><p>a) Marc affirme : « ${P(4,2)} = 8 ». Que vaut vraiment ${P(4,2)} ? Quelle erreur a-t-il commise ?</p><p>b) Inès affirme : « ${P(2,3)} = 6 ». A-t-elle raison ?</p><p>c) Tom affirme : « le carré de 5 est plus petit que le cube de 5 ». A-t-il raison ?</p>`,
-   c:`<p>a) Marc a calculé 4 × 2 au lieu de 4 × 4.</p>${NL("A",`${P(4,2)} = 4 × 4 = <b>16</b>`)}<p>b) <b>Non</b> : Inès a calculé 2 × 3.</p>${NL("B",`${P(2,3)} = 2 × 2 × 2 = <b>8</b>`)}<p>c) <b>Oui</b> : ${P(5,2)} = 25 et ${P(5,3)} = 125, et 25 &lt; 125.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Le cube d'un nombre", e:[
   {n:"Activité 2", t:"Compter des cubes", w:"Sur ta feuille", h:`<p>Un cube de côté 2 cm est formé de petits cubes de 1 cm de côté.</p><div class="figs">${cube(2)}</div><p>1) Combien de petits cubes contient ce cube ? Complète : ${P(2,3)} = ……</p><p>2) Même question pour un cube de côté 3 cm. Complète : ${P(3,3)} = ……</p>`,
-   c:`<p>1) Il contient 2 × 2 × 2 = <b>8</b> petits cubes : ${P(2,3)} = 8.</p><p>2) Un cube de côté 3 cm contient 3 × 3 × 3 = <b>27</b> petits cubes : ${P(3,3)} = 27.</p><div class="figs">${cube(3)}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Calculer des cubes", w:"Sur ton cahier", h:`<p>Calcule (calculatrice autorisée pour D, E et F).</p>${cols([1,4,10,0.1,6,20].map((b,i)=>`${"ABCDEF"[i]} = ${P(b,3)}`))}`,
-   c:grid([1,4,10,0.1,6,20].map((b,i)=>["ABCDEF"[i], `${P(b,3)} = ${prod(b,3)} = <b>${D(pw(b,3))}</b>`]))},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Aires de carrés et volumes de cubes", w:"Sur ton cahier", h:`<p>1) Quelle est l'aire d'un carré de côté 9 cm ? de côté 12 cm ? de côté 2,5 cm ?</p><p>2) Quel est le volume d'un cube de côté 4 cm ? de côté 10 cm ? de côté 1,5 cm ?</p><p>3) Un carré a pour aire 49 cm². Quel est son côté ?</p><p>Un cube a pour volume 27 cm³. Quel est son côté ?</p>`,
-   c:`<p>Aire d'un carré : <i>c</i><sup>2</sup>. Volume d'un cube : <i>c</i><sup>3</sup>.</p><p>1) ${P(9,2)} = 9 × 9 = <b>81 cm²</b> ; ${P(12,2)} = 12 × 12 = <b>144 cm²</b> ; ${P("2,5",2)} = 2,5 × 2,5 = <b>6,25 cm²</b>.</p><p>2) ${P(4,3)} = 4 × 4 × 4 = <b>64 cm³</b> ; ${P(10,3)} = 10 × 10 × 10 = <b>1 000 cm³</b> ; ${P("1,5",3)} = 1,5 × 1,5 × 1,5 = <b>3,375 cm³</b>.</p><p>3) 7 × 7 = 49 : le côté du carré mesure <b>7 cm</b>.</p><p>3 × 3 × 3 = 27 : le côté du cube mesure <b>3 cm</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer avec des carrés et des cubes", e:[
   {n:"Exercice 7", t:"Priorités avec des puissances", w:"Sur ton cahier", h:`<p>Calcule en respectant les priorités.</p>${cols([`A = 3 + ${P(2,2)}`,`B = 2 × ${P(5,2)}`,`C = ${P("(3+2)",2)}`,`D = 10 − ${P(2,3)}`,`E = ${P(4,2)} − ${P(3,2)}`,`F = ${P(2,3)} + ${P(3,2)}`])}`,
-   c:`<p>1) parenthèses · 2) carrés et cubes · 3) × et ÷ · 4) + et −</p>${grid([["A",`3 + ${P(2,2)} = 3 + 4 = <b>7</b>`],["B",`2 × ${P(5,2)} = 2 × 25 = <b>50</b>`],["C",`${P("(3+2)",2)} = ${P(5,2)} = <b>25</b>`],["D",`10 − ${P(2,3)} = 10 − 8 = <b>2</b>`],["E",`${P(4,2)} − ${P(3,2)} = 16 − 9 = <b>7</b>`],["F",`${P(2,3)} + ${P(3,2)} = 8 + 9 = <b>17</b>`]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Expressions plus longues", w:"Sur ton cahier", h:`<p>Calcule en détaillant les étapes.</p>${cols([`A = 4 + 3 × ${P(2,2)}`,`B = (4+3) × ${P(2,2)}`,`C = ${P(5,2)} − 2 × ${P(3,2)}`,`D = ${P("(5−2)",3)}`,`E = 100 − ${P(10,2)} × 0,5`,`F = 2 × ${P(3,3)} + 1`])}`,
-   c:grid([["A",`4 + 3 × ${P(2,2)} = 4 + 3 × 4 = 4 + 12 = <b>16</b>`],["B",`(4+3) × ${P(2,2)} = 7 × ${P(2,2)} = 7 × 4 = <b>28</b>`],["C",`${P(5,2)} − 2 × ${P(3,2)} = 25 − 2 × 9 = 25 − 18 = <b>7</b>`],["D",`${P("(5−2)",3)} = ${P(3,3)} = <b>27</b>`],["E",`100 − ${P(10,2)} × 0,5 = 100 − 100 × 0,5 = 100 − 50 = <b>50</b>`],["F",`2 × ${P(3,3)} + 1 = 2 × 27 + 1 = 54 + 1 = <b>55</b>`]])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Expressions littérales avec des puissances", w:"Sur ton cahier", h:`<p>Calcule la valeur de chaque expression pour la valeur de <i>x</i> indiquée.</p>${cols([`A = <i>x</i><sup>2</sup> + 1 pour <i>x</i> = 5`,`B = 3<i>x</i><sup>2</sup> pour <i>x</i> = 2`,`C = <i>x</i><sup>3</sup> − <i>x</i> pour <i>x</i> = 3`,`D = (<i>x</i>+1)<sup>2</sup> pour <i>x</i> = 4`,`E = <i>x</i><sup>2</sup> + <i>x</i> pour <i>x</i> = 10`,`F = 2<i>x</i><sup>3</sup> pour <i>x</i> = 0,5`])}`,
-   c:`<p>On remplace <i>x</i> par sa valeur (en remettant le signe ×), puis on respecte les priorités.</p>${grid([["A",`<i>x</i><sup>2</sup> + 1 = ${P(5,2)} + 1 = 25 + 1 = <b>26</b>`],["B",`3<i>x</i><sup>2</sup> = 3 × ${P(2,2)} = 3 × 4 = <b>12</b>`],["C",`<i>x</i><sup>3</sup> − <i>x</i> = ${P(3,3)} − 3 = 27 − 3 = <b>24</b>`],["D",`(<i>x</i>+1)<sup>2</sup> = ${P("(4+1)",2)} = ${P(5,2)} = <b>25</b>`],["E",`<i>x</i><sup>2</sup> + <i>x</i> = ${P(10,2)} + 10 = 100 + 10 = <b>110</b>`],["F",`2<i>x</i><sup>3</sup> = 2 × ${P("0,5",3)} = 2 × 0,125 = <b>0,25</b>`]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Aire et périmètre d'un carré", w:"Sur ton cahier", h:`<p>Une figure est composée d'un carré de côté <i>c</i> cm.</p><p>1) Exprime en fonction de <i>c</i> l'aire du carré, puis son périmètre.</p><p>2) Calcule l'aire et le périmètre pour <i>c</i> = 6, puis pour <i>c</i> = 12.</p><p>3) Quand on double le côté, l'aire est-elle doublée ? Explique avec les valeurs calculées.</p>`,
-   c:`<p>1) Aire : <b><i>c</i><sup>2</sup></b> ; périmètre : <b>4<i>c</i></b>.</p><p>2) Pour <i>c</i> = 6 : aire ${P(6,2)} = <b>36 cm²</b>, périmètre 4 × 6 = <b>24 cm</b>.</p><p>Pour <i>c</i> = 12 : aire ${P(12,2)} = <b>144 cm²</b>, périmètre 4 × 12 = <b>48 cm</b>.</p><p>3) <b>Non</b> : le périmètre est doublé (de 24 cm à 48 cm), mais l'aire est multipliée par 4 (de 36 cm² à 144 cm²).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -239,3 +239,4 @@ quiz:[
 ]
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-12");

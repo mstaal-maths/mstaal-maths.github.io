@@ -91,105 +91,79 @@ cours: [
 exos: [
 {t:"La numération décimale", e:[
   {n:"Activité 1", t:"Quel est ce nombre ?", w:"Sur ton cahier", h:`<p>Un cube représente 1 000 unités, une plaque 100, une barre 10 et un petit carré 1. Écris le nombre représenté, puis sa décomposition chiffre par chiffre sur ton cahier.</p>${img("c61ex/act1.png","Quatre assemblages de cubes, plaques, barres et petits carrés",520)}`,
-   c:`<p>a) 1 cube, 3 plaques, 5 barres et 2 petits carrés : <b>1 352</b> = 1 000 + 300 + 50 + 2.</p>
-   <p>b) 2 cubes et 4 barres : <b>2 040</b> = 2 000 + 40. <i>Il n'y a pas de plaque : le chiffre des centaines est 0.</i></p>
-   <p>c) 2 plaques et 7 petits carrés : <b>207</b> = 200 + 7. <i>Pas de barre : le chiffre des dizaines est 0.</i></p>
-   <p>d) 3 cubes, 1 plaque et 6 petits carrés : <b>3 106</b> = 3 000 + 100 + 6.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"La position des chiffres", w:"Sur ta feuille", h:`<p>Dans le nombre 38 254 306 917, quel est le chiffre : a) des centaines ? b) des dizaines de millions ? c) des centaines de mille ? d) des unités de milliards ?</p>`,
-   c:`<div class="scroll"><table class="num"><thead><tr><th colspan="2">milliards</th><th colspan="3">millions</th><th colspan="3">mille</th><th colspan="3">unités simples</th></tr><tr><th>d</th><th>u</th><th>c</th><th>d</th><th>u</th><th>c</th><th>d</th><th>u</th><th>c</th><th>d</th><th>u</th></tr></thead><tbody><tr>${"38254306917".split("").map(d=>`<td>${d}</td>`).join("")}</tr></tbody></table></div>
-   <p>a) <b>9</b> · b) <b>5</b> · c) <b>3</b> · d) <b>8</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>a) Dans 845 612, le chiffre 4 est le chiffre des dizaines de mille.</p><p>b) Dans « deux-cent-quatre-millions », on met un « s » à millions car il y en a plusieurs.</p><p>c) Il faut parfois compléter une classe avec un zéro.</p><p>d) Dans 92 408 715, le chiffre des centaines de mille est 4.</p>`,
-   c:`<p>a) <b>Vrai</b> : dans la classe des mille (845), 4 est le chiffre des dizaines de mille.</p><p>b) <b>Vrai</b> : « million » est un nom, il prend un « s » au pluriel (contrairement à « mille »).</p><p>c) <b>Vrai</b> : par exemple dans 2 000 305, la classe des mille s'écrit 000.</p><p>d) <b>Vrai</b> : dans la classe des mille (408), 4 est le chiffre des centaines de mille.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Qui suis-je ?", w:"Sur ta feuille", h:`<p>Je suis un nombre de cinq chiffres. Mon chiffre des dizaines est 7. Mon chiffre des centaines est le même que celui de 12 354. Mon chiffre des dizaines de mille est 4. Mon chiffre des unités est le double de mon chiffre des dizaines de mille. Mon chiffre des unités de mille est 0.</p><p>Qui suis-je ?</p>`,
-   c:`<p>Dizaines de mille : 4 · unités de mille : 0 · centaines : 3 (comme dans 12 354) · dizaines : 7 · unités : 2 × 4 = 8.</p><p>Je suis <b>40 378</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Lire et écrire les grands nombres", note:"<b>Rappels :</b> un trait d'union entre tous les mots ; « cent » et « vingt » prennent un « s » quand ils sont multipliés et que rien ne les suit ; « mille » ne prend jamais de « s » ; « million » et « milliard » prennent un « s » au pluriel.", e:[
   {n:"Activité 2", t:"La population des continents", w:"Sur ton cahier", h:`<p>Réécris chaque nombre en séparant les classes, puis écris-le en lettres sur ton cahier.</p><p>a) En 2017, la population mondiale était de 7550263500 habitants.</p><p>b) L'Afrique comptait environ 1256268000 habitants.</p><p>c) L'Europe comptait 742074000 habitants.</p><p>d) L'Océanie comptait 40691000 habitants.</p>`,
-   c:`<p>On sépare en tranches de trois chiffres <b>en partant de la droite</b>.</p>
-   <p>a) <b>7 550 263 500</b> : sept-milliards-cinq-cent-cinquante-millions-deux-cent-soixante-trois-mille-cinq-cents.</p>
-   <p>b) <b>1 256 268 000</b> : un-milliard-deux-cent-cinquante-six-millions-deux-cent-soixante-huit-mille.</p>
-   <p>c) <b>742 074 000</b> : sept-cent-quarante-deux-millions-soixante-quatorze-mille.</p>
-   <p>d) <b>40 691 000</b> : quarante-millions-six-cent-quatre-vingt-onze-mille.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Écrire en lettres", w:"Sur ta feuille", h:`<p>Écris ces nombres en lettres. Attention aux « s » et aux traits d'union !</p><p>a) 80 · b) 84 · c) 480 · d) 803 · e) 1 054 · f) 20 340 · g) 4 523 015 · h) 36 054 306 007 · i) 24 000 300</p>`,
-   c:`a) quatre-vingts · b) quatre-vingt-quatre · c) quatre-cent-quatre-vingts · d) huit-cent-trois · e) mille-cinquante-quatre · f) vingt-mille-trois-cent-quarante · g) 4 millions, 523 mille et 15 unités : quatre-millions-cinq-cent-vingt-trois-mille-quinze · h) 36 milliards, 54 millions, 306 mille et 7 unités : trente-six-milliards-cinquante-quatre-millions-trois-cent-six-mille-sept · i) 24 millions et 300 unités : vingt-quatre-millions-trois-cents`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Écrire en chiffres", w:"Sur ta feuille", h:`<p>Voici quelques données sur la Terre. Écris en chiffres les nombres en gras.</p><p>a) En juin 2018, la Terre comptait environ <b>sept-milliards-cinq-cent-cinquante-neuf-millions-deux-cent-quatre-vingt-huit-mille-trois-cents</b> habitants.</p><p>b) La longueur de l'équateur est d'environ <b>quarante-mille-soixante-quinze</b> km.</p><p>c) La Lune est à environ <b>trois-cent-quatre-vingt-quatre-mille</b> km de la Terre.</p><p>d) La superficie de la Terre est d'environ <b>cinq-cent-dix-millions-soixante-cinq-mille-six-cents</b> km².</p>`,
-   c:`<p>Je repère chaque classe (milliards, millions, mille, unités). Chaque classe s'écrit avec 3 chiffres : je complète avec des zéros si besoin.</p>
-   <p>a) 7 milliards, 559 millions, 288 mille et 300 unités : <b>7 559 288 300</b></p>
-   <p>b) 40 mille et 75 unités. La classe des unités s'écrit 075 : <b>40 075</b></p>
-   <p>c) 384 mille. La classe des unités s'écrit 000 : <b>384 000</b></p>
-   <p>d) 510 millions, 65 mille et 600 unités. La classe des mille s'écrit 065 : <b>510 065 600</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Corrige l'erreur", w:"Sur ta feuille", h:`<p>a) « quatre-vingts-trois » (83) · b) « neuf-cents-cinq » (905) · c) « deux-milles » (2 000) · d) « trois-million » (3 000 000)</p>`,
-   c:`a) quatre-vingt-trois : « vingt » est suivi de trois, il ne prend pas de « s ». · b) neuf-cent-cinq : « cent » est suivi de cinq, pas de « s ». · c) deux-mille : « mille » ne prend jamais de « s ». · d) trois-millions : « million » est un nom, il prend un « s » au pluriel.`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Décomposer un nombre", e:[
   {n:"Exercice 7", t:"Décomposer", w:"Sur ton cahier", h:`<p>Décompose ces nombres de deux façons (avec des additions, puis avec des multiplications), sur ton cahier.</p><p>a) 15 810 · b) 907 605 · c) 308 290 009</p>`,
-   c:`<p>a) 15 810 = 10 000 + 5 000 + 800 + 10<br>15 810 = (1 × 10 000) + (5 × 1 000) + (8 × 100) + (1 × 10)</p>
-   <p>b) 907 605 = 900 000 + 7 000 + 600 + 5<br>907 605 = (9 × 100 000) + (7 × 1 000) + (6 × 100) + 5</p>
-   <p>c) 308 290 009 = 300 000 000 + 8 000 000 + 200 000 + 90 000 + 9<br>308 290 009 = (3 × 100 000 000) + (8 × 1 000 000) + (2 × 100 000) + (9 × 10 000) + 9</p>
-   <p><i>On n'écrit pas les rangs où le chiffre est 0.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Retrouver le nombre", w:"Sur ta feuille", h:`<p>a) (5 × 100 000) + (3 × 1 000) + (7 × 10) + 2 = …… En lettres : ……</p><p>b) 7 000 000 + 40 000 + 300 + 6 = ……</p>`,
-   c:`<p>a) 500 000 + 3 000 + 70 + 2 = <b>503 072</b> : cinq-cent-trois-mille-soixante-douze.</p><p>b) 7 millions, 40 mille et 306 unités : <b>7 040 306</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Chiffre des… ou nombre de… ?", w:"Sur ta feuille", h:`<p>Complète le tableau pour le nombre 12 350.</p><div class="scroll"><table class="std"><thead><tr><th>Dans 12 350</th><th>le chiffre des…</th><th>le nombre de…</th></tr></thead><tbody><tr><th>dizaines</th><td>……</td><td>……</td></tr><tr><th>centaines</th><td>……</td><td>……</td></tr><tr><th>unités de mille</th><td>……</td><td>……</td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Dans 12 350</th><th>le chiffre des…</th><th>le nombre de…</th></tr></thead><tbody><tr><th>dizaines</th><td><b>5</b></td><td><b>1 235</b></td></tr><tr><th>centaines</th><td><b>3</b></td><td><b>123</b></td></tr><tr><th>unités de mille</th><td><b>2</b></td><td><b>12</b></td></tr></tbody></table></div><p>Pour le « nombre de », on garde tous les chiffres jusqu'au rang demandé.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Des problèmes", w:"Sur ton cahier", h:`<p>Réponds sur ton cahier en expliquant ta démarche.</p><p><b>Problème 1 :</b> dans un verger, Marc plante 234 poiriers en rangées de 10. Combien de rangées complètes va-t-il faire ?</p><p><b>Problème 2 :</b> on range 2 856 feuilles de papier. Combien de paquets complets de 1 000 feuilles peut-on faire ? Et de paquets de 100 feuilles ?</p><p><b>Problème 3 :</b> Charly le chocolatier a fabriqué 12 350 bonbons. Il les vend par sachets de 10, par boîtes de 100 ou par cartons de 1 000.</p><p>a) Combien de cartons peut-il remplir au maximum ? Et de boîtes ? Et de sachets ?</p><p>b) Il remplit d'abord le plus de cartons possible, puis le plus de boîtes possible avec le reste, puis des sachets. Combien de cartons, de boîtes et de sachets prépare-t-il ?</p>`,
-   c:`<p><b>Problème 1 :</b> le nombre de dizaines de 234 est 23. Marc fait <b>23 rangées complètes</b> (et il reste 4 poiriers).</p>
-   <p><b>Problème 2 :</b> le nombre de milliers de 2 856 est 2 : <b>2 paquets de 1 000</b>. Le nombre de centaines est 28 : <b>28 paquets de 100</b>.</p>
-   <p><b>Problème 3 :</b> a) Nombre de milliers de 12 350 : <b>12 cartons</b>. Nombre de centaines : <b>123 boîtes</b>. Nombre de dizaines : <b>1 235 sachets</b>.</p>
-   <p>b) 12 cartons (12 000 bonbons), il en reste 350 ; puis 3 boîtes (300 bonbons), il en reste 50 ; puis 5 sachets. Il prépare <b>12 cartons, 3 boîtes et 5 sachets</b>.</p>
-   <p><i>On retrouve les chiffres de 12 350 : 12 milliers, 3 centaines, 5 dizaines.</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Comparer et ranger", e:[
   {n:"Activité 3", t:"Les pays les plus peuplés", w:"Sur ta feuille", h:`<p>Classe ces pays du plus peuplé au moins peuplé (données de 2016).</p><div class="scroll"><table class="std"><thead><tr><th>Pays</th><th>Habitants</th><th>Pays</th><th>Habitants</th></tr></thead><tbody>
     <tr><td>Brésil</td><td>206 780 725</td><td>Inde</td><td>1 296 314 936</td></tr><tr><td>Chine</td><td>1 374 587 932</td><td>Indonésie</td><td>256 485 214</td></tr><tr><td>États-Unis</td><td>325 054 733</td><td>Royaume-Uni</td><td>64 879 887</td></tr><tr><td>France</td><td>66 870 633</td><td>Russie</td><td>146 327 158</td></tr><tr><td>Allemagne</td><td>79 830 324</td><td></td><td></td></tr></tbody></table></div>`,
-   c:`<p>On compare d'abord le nombre de chiffres : la Chine et l'Inde ont plus d'un-milliard d'habitants (10 chiffres). Ensuite, on compare les chiffres de gauche à droite.</p>
-   <p><b>Chine</b> (1 374 587 932) &gt; <b>Inde</b> (1 296 314 936) &gt; <b>États-Unis</b> (325 054 733) &gt; <b>Indonésie</b> (256 485 214) &gt; <b>Brésil</b> (206 780 725) &gt; <b>Russie</b> (146 327 158) &gt; <b>Allemagne</b> (79 830 324) &gt; <b>France</b> (66 870 633) &gt; <b>Royaume-Uni</b> (64 879 887).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Les plus hauts sommets", w:"Sur ta feuille", h:`<p>Range ces sommets dans l'ordre décroissant de leur altitude.</p><div class="scroll"><table class="std"><thead><tr><th>Sommet</th><th>Altitude</th><th>Sommet</th><th>Altitude</th></tr></thead><tbody>
     <tr><td>Kilimandjaro (Afrique)</td><td>5 895 m</td><td>Everest (Asie)</td><td>8 849 m</td></tr><tr><td>Denali (Amérique du Nord)</td><td>6 190 m</td><td>Mont-Blanc (Europe)</td><td>4 806 m</td></tr><tr><td>Aconcagua (Amérique du Sud)</td><td>6 961 m</td><td>Elbrouz (Europe)</td><td>5 642 m</td></tr><tr><td>Vinson (Antarctique)</td><td>4 892 m</td><td>Puncak Jaya (Océanie)</td><td>4 884 m</td></tr></tbody></table></div>`,
-   c:`<p>Ordre décroissant (du plus haut au moins haut) :</p><p><b>Everest</b> (8 849 m) &gt; <b>Aconcagua</b> (6 961 m) &gt; <b>Denali</b> (6 190 m) &gt; <b>Kilimandjaro</b> (5 895 m) &gt; <b>Elbrouz</b> (5 642 m) &gt; <b>Vinson</b> (4 892 m) &gt; <b>Puncak Jaya</b> (4 884 m) &gt; <b>Mont-Blanc</b> (4 806 m).</p><p><i>Pour les trois derniers, il faut aller jusqu'au chiffre des dizaines : 4 892 &gt; 4 884 &gt; 4 806.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Comparer", w:"Sur ta feuille", h:`<p>Complète par &lt;, &gt; ou =.</p><p>a) 45 678 …… 45 687 · b) 1 000 000 …… 999 999 · c) 307 012 …… 370 012 · d) 25 000 …… 2 500 000 · e) 12 345 678 …… 12 345 687 · f) 8 milliards …… 8 000 000 000</p>`,
-   c:`a) 45 678 &lt; 45 687 (7 dizaines &lt; 8 dizaines) · b) 1 000 000 &gt; 999 999 (7 chiffres contre 6) · c) 307 012 &lt; 370 012 (0 dizaine de mille &lt; 7 dizaines de mille) · d) 25 000 &lt; 2 500 000 (5 chiffres contre 7) · e) 12 345 678 &lt; 12 345 687 (7 dizaines &lt; 8 dizaines) · f) 8 milliards = 8 000 000 000 (1 milliard = 1 000 000 000)`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Les étiquettes", w:"Sur ta feuille", h:`<p>Voici cinq étiquettes : <b>407 · 52 · 9 · 800 · 36</b>. En les mettant toutes bout à bout, écris :</p><p>a) le plus petit nombre possible ; b) le plus grand nombre possible.</p>`,
-   c:`<p>Les cinq étiquettes donnent toujours un nombre de 11 chiffres : on compare donc les chiffres de gauche à droite.</p><p>a) On commence par les étiquettes qui débutent par les plus petits chiffres : <b>36 407 528 009</b> (36 · 407 · 52 · 800 · 9).</p><p>b) On commence par les étiquettes qui débutent par les plus grands chiffres : <b>98 005 240 736</b> (9 · 800 · 52 · 407 · 36).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Avant et après", w:"Sur ta feuille", h:`<div class="scroll"><table class="std"><thead><tr><th>Entier précédent</th><th>Nombre</th><th>Entier suivant</th></tr></thead><tbody><tr><td>……</td><td>350</td><td>……</td></tr><tr><td>……</td><td>499</td><td>……</td></tr><tr><td>……</td><td>12 999</td><td>……</td></tr><tr><td>……</td><td>250 000</td><td>……</td></tr><tr><td>……</td><td>430 099</td><td>……</td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Entier précédent</th><th>Nombre</th><th>Entier suivant</th></tr></thead><tbody><tr><td><b>349</b></td><td>350</td><td><b>351</b></td></tr><tr><td><b>498</b></td><td>499</td><td><b>500</b></td></tr><tr><td><b>12 998</b></td><td>12 999</td><td><b>13 000</b></td></tr><tr><td><b>249 999</b></td><td>250 000</td><td><b>250 001</b></td></tr><tr><td><b>430 098</b></td><td>430 099</td><td><b>430 100</b></td></tr></tbody></table></div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les demi-droites graduées", note:"<b>Rappel :</b> si un point A a pour abscisse 12, on écrit A(12).", e:[
   {n:"Exercice 15", t:"Compléter les graduations", w:"Sur ta feuille", h:`<p>Écris les nombres qui manquent sous les graduations.</p>
    ${axis({n:5, lab:[[0,"0"],[1,"…"],[2,"…"],[3,"…"],[4,"…"],[5,"10"]]})}
    ${axis({n:6, lab:[[0,"0"],[1,"…"],[2,"10"],[3,"…"],[4,"…"],[5,"…"],[6,"…"]]})}
    ${axis({n:7, lab:[[0,"0"],[1,"…"],[2,"…"],[3,"300"],[4,"…"],[5,"…"],[6,"…"],[7,"…"]]})}`,
-   c:`<p><b>1<sup>re</sup> demi-droite :</b> 5 intervalles pour aller de 0 à 10, donc l'écart est 10 ÷ 5 = 2 : 0, <b>2, 4, 6, 8</b>, 10.</p>
-   <p><b>2<sup>e</sup> demi-droite :</b> 10 est 2 graduations après 0, donc l'écart est 10 ÷ 2 = 5 : 0, <b>5</b>, 10, <b>15, 20, 25, 30</b>.</p>
-   <p><b>3<sup>e</sup> demi-droite :</b> 300 est 3 graduations après 0, donc l'écart est 300 ÷ 3 = 100 : 0, <b>100, 200</b>, 300, <b>400, 500, 600, 700</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 16", t:"Lire des abscisses", w:"Sur ta feuille", h:`<p>Pour chaque demi-droite graduée, calcule l'écart entre deux graduations, puis écris l'abscisse de chaque point (par exemple A(…)).</p>
    ${axis({n:10, lab:[[0,"0"],[10,"1 000"]], pts:[["A",2],["B",5],["C",9]]})}
    ${axis({n:10, lab:[[0,"0"],[10,"30"]], pts:[["A",2],["B",5],["C",7],["D",9]]})}
    ${axis({n:12, lab:[[0,"0"],[12,"96"]], pts:[["A",3],["B",7],["C",10]]})}`,
-   c:`<p><b>1<sup>re</sup> :</b> 10 intervalles de 0 à 1 000 : écart = 1 000 ÷ 10 = <b>100</b>. A(200) · B(500) · C(900).</p>
-   <p><b>2<sup>e</sup> :</b> 10 intervalles de 0 à 30 : écart = 30 ÷ 10 = <b>3</b>. A(6) · B(15) · C(21) · D(27).</p>
-   <p><b>3<sup>e</sup> :</b> 12 intervalles de 0 à 96 : écart = 96 ÷ 12 = <b>8</b>. A(24) · B(56) · C(80).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 17", t:"Placer des points", w:"Sur ta feuille", h:`<p>a) Place les points A(15), B(35) et C(50).</p>${axis({n:12, lab:[[0,"0"],[12,"60"]]})}
    <p>b) Place les points G(600), H(1 500) et I(2 100).</p>${axis({n:8, lab:[[0,"0"],[8,"2 400"]]})}
    <p>c) Place les points J(3 200), K(3 800) et M(3 500).</p>${axis({n:10, lab:[[0,"3 000"],[5,"3 500"],[10,"4 000"]], major:[5]})}`,
-   c:`<p>a) Écart = 60 ÷ 12 = 5. A est à la 3<sup>e</sup> graduation, B à la 7<sup>e</sup>, C à la 10<sup>e</sup>.</p>${axis({n:12, lab:[[0,"0"],[12,"60"]], pts:[["A",3],["B",7],["C",10]]})}
-   <p>b) Écart = 2 400 ÷ 8 = 300. G à la 2<sup>e</sup> graduation, H à la 5<sup>e</sup>, I à la 7<sup>e</sup>.</p>${axis({n:8, lab:[[0,"0"],[8,"2 400"]], pts:[["G",2],["H",5],["I",7]]})}
-   <p>c) De 3 000 à 4 000 en 10 intervalles : écart = 1 000 ÷ 10 = 100. J est 2 graduations après 3 000, M est sur la graduation 3 500, K est 8 graduations après 3 000.</p>${axis({n:10, lab:[[0,"3 000"],[5,"3 500"],[10,"4 000"]], major:[5], pts:[["J",2],["M",5],["K",8]]})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 18", t:"Défi — très grands nombres", w:"Sur ta feuille", h:`<p>Calcule l'écart entre deux graduations, puis écris l'abscisse des points A, B et C.</p>${axis({n:9, lab:[[0,"0"],[9,"1 800 000"]], pts:[["A",2],["B",5],["C",8]]})}`,
-   c:`<p>9 intervalles de 0 à 1 800 000 : écart = 1 800 000 ÷ 9 = <b>200 000</b>.</p><p>A(400 000) · B(1 000 000) · C(1 600 000)</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les priorités opératoires", note:"<b>Rappel :</b> les parenthèses d'abord, puis × et ÷, puis + et −. À priorité égale, de gauche à droite.", e:[
   {n:"Exercice 19", t:"Sans parenthèses", w:"Sur ta feuille", h:`<p>Calcule en écrivant une étape par ligne.</p><div class="calcs"><span>A = 5 + 2 × 3</span><span>B = 10 − 3 × 2</span><span>C = 4 × 5 + 6</span><span>D = 20 ÷ 4 + 7</span><span>E = 9 + 12 ÷ 3</span><span>F = 7 × 2 − 8</span><span>G = 6 + 5 × 4</span><span>H = 30 − 4 × 7</span><span>I = 8 × 3 − 15 ÷ 5</span><span>J = 40 ÷ 8 + 6 × 2</span></div>`,
-   c:`<p>Je calcule d'abord les multiplications et les divisions, puis les additions et les soustractions.</p><div class="calcs"><div><p class="calc">A = 5 + 2 × 3<br>A = 5 + 6<br>A = <b>11</b></p></div><div><p class="calc">B = 10 − 3 × 2<br>B = 10 − 6<br>B = <b>4</b></p></div><div><p class="calc">C = 4 × 5 + 6<br>C = 20 + 6<br>C = <b>26</b></p></div><div><p class="calc">D = 20 ÷ 4 + 7<br>D = 5 + 7<br>D = <b>12</b></p></div><div><p class="calc">E = 9 + 12 ÷ 3<br>E = 9 + 4<br>E = <b>13</b></p></div><div><p class="calc">F = 7 × 2 − 8<br>F = 14 − 8<br>F = <b>6</b></p></div><div><p class="calc">G = 6 + 5 × 4<br>G = 6 + 20<br>G = <b>26</b></p></div><div><p class="calc">H = 30 − 4 × 7<br>H = 30 − 28<br>H = <b>2</b></p></div><div><p class="calc">I = 8 × 3 − 15 ÷ 5<br>I = 24 − 3<br>I = <b>21</b></p></div><div><p class="calc">J = 40 ÷ 8 + 6 × 2<br>J = 5 + 12<br>J = <b>17</b></p></div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 20", t:"Avec des parenthèses", w:"Sur ta feuille", h:`<p>Calcule en écrivant une étape par ligne.</p><div class="calcs"><span>A = (6 + 4) × 5</span><span>B = 3 × (8 + 7)</span><span>C = (18 − 6) ÷ 3</span><span>D = 25 − 4 × (2 + 3)</span><span>E = (12 + 8) ÷ 4 + 9</span><span>F = 2 × (15 − 3 × 4)</span><span>G = (7 + 3) × (9 − 4)</span><span>H = 5 × (20 − 4 ÷ 2)</span><span>I = (36 ÷ 9 + 2) × 3</span><span>J = 100 − (5 + 3) × (10 − 4)</span></div>`,
-   c:`<p>Je calcule d'abord dans les parenthèses, puis les multiplications et les divisions, puis les additions et les soustractions.</p><div class="calcs" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))"><div><p class="calc">A = (6 + 4) × 5<br>A = 10 × 5<br>A = <b>50</b></p></div><div><p class="calc">B = 3 × (8 + 7)<br>B = 3 × 15<br>B = <b>45</b></p></div><div><p class="calc">C = (18 − 6) ÷ 3<br>C = 12 ÷ 3<br>C = <b>4</b></p></div><div><p class="calc">D = 25 − 4 × (2 + 3)<br>D = 25 − 4 × 5<br>D = 25 − 20<br>D = <b>5</b></p></div><div><p class="calc">E = (12 + 8) ÷ 4 + 9<br>E = 20 ÷ 4 + 9<br>E = 5 + 9<br>E = <b>14</b></p></div><div><p class="calc">F = 2 × (15 − 3 × 4)<br>F = 2 × (15 − 12)<br>F = 2 × 3<br>F = <b>6</b></p></div><div><p class="calc">G = (7 + 3) × (9 − 4)<br>G = 10 × 5<br>G = <b>50</b></p></div><div><p class="calc">H = 5 × (20 − 4 ÷ 2)<br>H = 5 × (20 − 2)<br>H = 5 × 18<br>H = <b>90</b></p></div><div><p class="calc">I = (36 ÷ 9 + 2) × 3<br>I = (4 + 2) × 3<br>I = 6 × 3<br>I = <b>18</b></p></div><div><p class="calc">J = 100 − (5 + 3) × (10 − 4)<br>J = 100 − 8 × 6<br>J = 100 − 48<br>J = <b>52</b></p></div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 21", t:"En détaillant les étapes", w:"Sur ton cahier", h:`<p>Calcule sur ton cahier en écrivant une étape par ligne.</p><div class="calcs"><span>A = 12 + 3 × (10 − 6)</span><span>B = (45 − 5) ÷ 8 + 7</span><span>C = 9 × 4 − 6 × 3</span><span>D = 50 − (2 + 4 × 6)</span><span>E = (14 − 2 × 5) × 7</span><span>F = 3 × (6 + 4) − 8 ÷ 4</span></div>`,
-   c:`<div class="calcs"><div><p class="calc">A = 12 + 3 × (10 − 6)<br>A = 12 + 3 × 4<br>A = 12 + 12<br>A = <b>24</b></p></div><div><p class="calc">B = (45 − 5) ÷ 8 + 7<br>B = 40 ÷ 8 + 7<br>B = 5 + 7<br>B = <b>12</b></p></div><div><p class="calc">C = 9 × 4 − 6 × 3<br>C = 36 − 18<br>C = <b>18</b></p></div><div><p class="calc">D = 50 − (2 + 4 × 6)<br>D = 50 − (2 + 24)<br>D = 50 − 26<br>D = <b>24</b></p></div><div><p class="calc">E = (14 − 2 × 5) × 7<br>E = (14 − 10) × 7<br>E = 4 × 7<br>E = <b>28</b></p></div><div><p class="calc">F = 3 × (6 + 4) − 8 ÷ 4<br>F = 3 × 10 − 8 ÷ 4<br>F = 30 − 2<br>F = <b>28</b></p></div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 22", t:"Placer des parenthèses", w:"Sur ton cahier", h:`<p>Recopie et place des parenthèses pour que l'égalité soit vraie.</p><p>a) 3 + 5 × 2 = 16 · b) 12 − 4 × 2 = 16 · c) 24 ÷ 6 + 2 = 3 · d) 10 + 2 × 3 = 36 · e) 7 × 4 − 2 = 14 · f) 30 − 10 + 5 = 15</p>`,
-   c:`a) (3 + 5) × 2 = 8 × 2 = 16 · b) (12 − 4) × 2 = 8 × 2 = 16 · c) 24 ÷ (6 + 2) = 24 ÷ 8 = 3 · d) (10 + 2) × 3 = 12 × 3 = 36 · e) 7 × (4 − 2) = 7 × 2 = 14 · f) 30 − (10 + 5) = 30 − 15 = 15`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 23", t:"Calculer astucieusement", w:"Sur ton cahier", h:`<p><b>Exemple :</b></p><p class="calc">A = 13 × 7 + 13 × 3<br>A = 13 × (7 + 3)<br>A = 13 × 10<br>A = 130</p><p>Calcule de la même façon, en écrivant une étape par ligne.</p><div class="calcs"><span>B = 17 × 9 + 17 × 1</span><span>C = 45 × 6 − 35 × 6</span><span>D = 6 × 102</span><span>E = 12 × 99</span><span>F = 25 × 8 × 4</span><span>G = 32 × 11</span></div>`,
-   c:`<div class="calcs"><div><p class="calc">B = 17 × 9 + 17 × 1<br>B = 17 × (9 + 1)<br>B = 17 × 10<br>B = <b>170</b></p></div><div><p class="calc">C = 45 × 6 − 35 × 6<br>C = (45 − 35) × 6<br>C = 10 × 6<br>C = <b>60</b></p></div><div><p class="calc">D = 6 × 102<br>D = 6 × 100 + 6 × 2<br>D = 600 + 12<br>D = <b>612</b></p></div><div><p class="calc">E = 12 × 99<br>E = 12 × 100 − 12 × 1<br>E = 1 200 − 12<br>E = <b>1 188</b></p></div><div><p class="calc">F = 25 × 8 × 4<br>F = (25 × 4) × 8<br>F = 100 × 8<br>F = <b>800</b></p></div><div><p class="calc">G = 32 × 11<br>G = 32 × 10 + 32 × 1<br>G = 320 + 32<br>G = <b>352</b></p></div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 24", t:"Les signes manquants", w:"Sur ton cahier", h:`<p>Remplace chaque ? par +, −, × ou ÷.</p><p>a) 5 ? 3 ? 2 = 13 · b) 8 ? 4 ? 2 = 16 · c) 20 ? 4 ? 3 = 8 · d) 15 ? 3 ? 4 = 9</p>`,
-   c:`a) 5 × 3 − 2 = 15 − 2 = 13 · b) 8 × 4 ÷ 2 = 32 ÷ 2 = 16 (ou 8 + 4 × 2 = 8 + 8 = 16) · c) 20 ÷ 4 + 3 = 5 + 3 = 8 (ou 20 − 4 × 3 = 20 − 12 = 8) · d) 15 ÷ 3 + 4 = 5 + 4 = 9`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"En ++ : Enquête au pays des nombres", e:[
   {n:"En ++", t:"Qui a agressé Madame 657 ?", w:"Sur ta feuille", h:`<p>« Hier soir, vers 20 h, quelqu'un s'est introduit chez moi et m'a volé plusieurs chiffres ! Aidez-moi à retrouver mon agresseur. »</p><p>Voici 14 suspects. Lis les six témoignages : chacun innocente certains suspects (barre-les). Le seul nombre jamais innocenté est le coupable !</p>
@@ -200,13 +174,7 @@ exos: [
    <p><b>Témoignage 4 :</b> les nombres qui ont plus de 6 dizaines de milliards sont trop âgés pour cambrioler une maison.</p>
    <p><b>Témoignage 5 :</b> les nombres dont le chiffre des centaines de mille est égal au chiffre des centaines étaient au cours de fitness de 19 h 30 à 20 h 30, avec leur professeur trente-trois-milliards-mille-cinq-cents.</p>
    <p><b>Témoignage 6 :</b> le chef de la police, Monsieur (1 × 100 000 000) + (9 × 10 000) + (4 × 1 000) + (4 × 100) + (2 × 10) + 1, était à un gala de charité.</p><p>Le coupable est : ……</p>`,
-   c:`<p><b>Témoignage 1 :</b> chiffre des dizaines de mille égal à 8 : D (1 2<b>8</b>2 531), J (2 3<b>8</b>6 752) et K (9 5<b>8</b>1 001). D, J et K sont innocents.</p>
-   <p><b>Témoignage 2 :</b> huit-cent-soixante-douze-mille-cent-huit = 872 108 = F. F est innocent.</p>
-   <p><b>Témoignage 3 :</b> 9 546 000 = A et 9 457 000 = C. La propriétaire du restaurant est 500 000 + 70 000 + 600 + 8 = 570 608 = L. A, C et L sont innocents.</p>
-   <p><b>Témoignage 4 :</b> plus de 6 dizaines de milliards, c'est plus que 60 000 000 000 : B (70 800 990 777) et H (82 787 963 124). B et H sont innocents.</p>
-   <p><b>Témoignage 5 :</b> chiffre des centaines de mille égal au chiffre des centaines : M (<b>5</b>42 <b>5</b>57) et N (524 <b>5</b>78 <b>5</b>71). Leur professeur est 33 000 001 500 = G. M, N et G sont innocents.</p>
-   <p><b>Témoignage 6 :</b> 100 000 000 + 90 000 + 4 000 + 400 + 20 + 1 = 100 094 421 = E. E est innocent.</p>
-   <p>Le seul suspect jamais innocenté est <b>I</b> : le coupable est <b>40 530 290 018</b> (quarante-milliards-cinq-cent-trente-millions-deux-cent-quatre-vingt-dix-mille-dix-huit).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -395,3 +363,4 @@ exos:[
 }
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-1");

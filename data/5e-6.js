@@ -199,107 +199,72 @@ exos:[
 {t:"Rappels de 6e : les triangles particuliers", e:[
   {n:"Exercice 1", t:"Nature d'un triangle", w:"Sur ta feuille", h:`<p>Donne la nature de chaque triangle d'après le codage de la figure.</p>
    <div class="figs">${fig("① ……………",ex("e1a","Triangle UVW",150))}${fig("② ……………",ex("e1b","Triangle GHI",150))}${fig("③ ……………",ex("e1c","Triangle JKL",150))}${fig("④ ……………",ex("e1d","Triangle XYZ",150))}</div>`,
-   c:`<p>① UVW est <b>isocèle en W</b> (WU = WV).</p><p>② GHI est <b>rectangle en H</b>.</p><p>③ JKL est <b>équilatéral</b> (trois côtés de même longueur).</p><p>④ XYZ est <b>quelconque</b> (aucun codage).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Constructions de triangles", w:"Sur ta feuille", h:`<p>Construis chaque triangle (règle graduée, équerre et compas).</p>
    <p><b>a)</b> ABC est un triangle isocèle en A tel que AB = AC = 5 cm et BC = 6 cm.</p><p><b>b)</b> DEF est un triangle équilatéral de côté 4,5 cm.</p><p><b>c)</b> MNP est un triangle rectangle en N tel que NM = 3 cm et NP = 4 cm.</p><p><b>d)</b> Mesure l'hypoténuse : MP = ……… cm.</p>`,
-   c:`<div class="figs">${fig("a)",cr("e2a","Triangle ABC isocèle en A",190))}${fig("b)",cr("e2b","Triangle DEF équilatéral",160))}${fig("c)",cr("e2c","Triangle MNP rectangle en N",170))}</div>
-   <p><b>a)</b> On trace [BC] = 6 cm, puis deux arcs de rayon 5 cm centrés en B et en C : ils se coupent en A.</p><p><b>b)</b> Trois côtés de 4,5 cm : on trace [DE], puis des arcs de rayon 4,5 cm depuis D et depuis E.</p><p><b>c)</b> L'angle droit ${ang("MNP")} se trace à l'équerre.</p><p><b>d)</b> MP = <b>5 cm</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La médiatrice d'un segment", e:[
   {n:"Exercice 3", t:"Construire une médiatrice", w:"Sur ta feuille", h:`<p>Construis les médiatrices demandées en laissant apparents tes traits de construction.</p>
    <p><b>a)</b> À l'équerre et à la règle graduée, trace la médiatrice (m) du segment [EF].</p><p><b>b)</b> Au compas et à la règle (sans équerre), trace la médiatrice (n) du segment [MN].</p><div class="figs">${fig("a)",ex("e3a","Segment [EF]",250))}${fig("b)",ex("e3b","Segment [MN]",250))}</div>`,
-   c:`<div class="figs">${fig("a)",cr("e3a","Médiatrice de [EF] à l'équerre",250))}${fig("b)",cr("e3b","Médiatrice de [MN] au compas",250))}</div>
-   <p><b>a)</b> On place le milieu I de [EF], puis on trace la perpendiculaire à [EF] passant par I (équerre).</p><p><b>b)</b> Avec une ouverture plus grande que la moitié de MN, on trace deux arcs centrés en M et deux arcs de même rayon centrés en N. Puis on relie leurs points d'intersection.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Utiliser les propriétés de la médiatrice", w:"Sur ta feuille", h:`<p>La droite (d) est la médiatrice du segment [EF]. Réponds en justifiant avec une propriété du cours.</p>
    <p><b>a)</b> M est un point de la droite (d) et ME = 5,4 cm. Que vaut MF ?</p><p><b>b)</b> N est un point tel que NE = NF. Où se trouve le point N ?</p><p><b>c)</b> P est un point tel que PE = 3 cm et PF = 4 cm. Le point P appartient-il à la droite (d) ?</p>`,
-   c:`<p><b>a)</b> M appartient à la médiatrice (d) de [EF], donc il est à égale distance de E et de F (propriété 1). <b>MF = ME = 5,4 cm.</b></p>
-   <p><b>b)</b> NE = NF : N est à égale distance des extrémités de [EF], donc il appartient à la médiatrice de [EF] (propriété 2). <b>N est sur (d).</b></p>
-   <p><b>c)</b> Si P appartenait à (d), on aurait PE = PF (propriété 1). Or PE = 3 cm et PF = 4 cm. Donc <b>P n'appartient pas à (d)</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Un point à égale distance de deux points", w:"Sur ta feuille", h:`<p>Place sur la droite (d) le point M qui est à égale distance des points A et B. Laisse apparents tes traits de construction.</p>
    ${ex("e5","Points A et B et droite (d)",320)}<p>Explique ta méthode.</p><p>Mesure MA et MB : MA = ……… cm et MB = ……… cm.</p>`,
-   c:`${cr("e5","Le point M, intersection de (d) et de la médiatrice de [AB]",320)}
-   <p>M est sur (d) et doit vérifier MA = MB.</p><p>D'après la propriété 2, M est aussi sur la médiatrice de [AB].</p><p>M est donc le point d'intersection de (d) et de la médiatrice de [AB].</p><p>On mesure <b>MA = MB ≈ 3,3 cm</b> (sur la fiche imprimée).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Une démonstration avec le losange", w:"Sur ta feuille", h:`<p>ABCD est un losange. Démontre que la droite (BD) est la médiatrice du segment [AC].</p>${ex("e6","Losange ABCD",260)}<p>Rédige ta démonstration.</p>`,
-   c:`<p>ABCD est un losange, donc ses quatre côtés ont la même longueur.</p>
-   <ul><li>BA = BC : B est à égale distance de A et de C, donc B appartient à la médiatrice de [AC] (propriété 2).</li><li>DA = DC : D est à égale distance de A et de C, donc D appartient à la médiatrice de [AC] (propriété 2).</li><li>B et D sont deux points distincts de la médiatrice de [AC] : <b>la droite (BD) est la médiatrice de [AC]</b>.</li></ul>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Le cercle circonscrit à un triangle", e:[
   {n:"Exercice 7", t:"Construire un cercle circonscrit", w:"Sur ta feuille", h:`<p>Trace le cercle circonscrit à chaque triangle. Laisse apparents tes traits de construction, puis réponds.</p>
    <p><b>Cas n°2 :</b> DEF est rectangle en E (ED = 3 cm et EF = 4 cm).</p><div class="figs">${fig("Cas n°1 : le triangle ABC",ex("e7a","Cas n°1 : triangle ABC",220))}${fig("Cas n°2 : le triangle DEF",ex("e7b","Cas n°2 : triangle DEF rectangle en E",220))}${fig("Cas n°3 : le triangle ABC",ex("e7c","Cas n°3 : triangle ABC",220))}</div>
    <p>Où se trouve le centre O ? Complète avec « à l'intérieur », « à l'extérieur » ou « sur un côté » du triangle.</p><p>Cas n°1 : ……………… &nbsp; Cas n°2 : ……………… &nbsp; Cas n°3 : ………………</p><p>Dans le cas n°2, le rayon du cercle mesure ……… cm.</p>`,
-   c:`<div class="figs">${fig("Cas n°1",cr("e7a","Cas n°1 corrigé",220))}${fig("Cas n°2",cr("e7b","Cas n°2 corrigé",220))}${fig("Cas n°3",cr("e7c","Cas n°3 corrigé",220))}</div>
-   <p><b>Cas n°1 :</b> O est <b>à l'intérieur</b> du triangle (les trois angles sont aigus).</p>
-   <p><b>Cas n°2 :</b> O est <b>sur un côté</b> : c'est le milieu de l'hypoténuse [DF]. DF = 5 cm, donc le rayon est <b>2,5 cm</b>.</p>
-   <p><b>Cas n°3 :</b> O est <b>à l'extérieur</b> du triangle (l'angle ${ang("ACB")} est obtus).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>Entoure VRAI ou FAUX. Si l'affirmation est fausse, corrige-la.</p>
    <p><b>a)</b> Le centre du cercle circonscrit à un triangle est à égale distance des trois sommets du triangle.</p><p><b>b)</b> Le centre du cercle circonscrit à un triangle est toujours à l'intérieur du triangle.</p><p><b>c)</b> Pour trouver le centre du cercle circonscrit, il faut obligatoirement tracer les trois médiatrices.</p><p><b>d)</b> Le centre du cercle circonscrit à un triangle rectangle est le milieu de l'hypoténuse.</p><p><b>e)</b> Si un côté d'un triangle est un diamètre de son cercle circonscrit, alors ce triangle est rectangle.</p><p><b>f)</b> Si O est le point d'intersection des médiatrices de [AB] et de [AC], alors OB = OC.</p>`,
-   c:`<p><b>a) VRAI.</b> Le centre est le point de concours des médiatrices : OA = OB = OC.</p>
-   <p><b>b) FAUX.</b> Il est à l'intérieur si les trois angles sont aigus, sur l'hypoténuse pour un triangle rectangle et à l'extérieur pour un triangle qui a un angle obtus.</p>
-   <p><b>c) FAUX.</b> Deux médiatrices suffisent : la troisième passe par leur point d'intersection.</p>
-   <p><b>d) VRAI.</b> Propriété du cours : le cercle circonscrit a pour diamètre l'hypoténuse.</p>
-   <p><b>e) VRAI.</b> Propriété du cours (réciproque).</p>
-   <p><b>f) VRAI.</b> OA = OB (O est sur la médiatrice de [AB]) et OA = OC (O est sur la médiatrice de [AC]), donc OB = OC.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Triangle rectangle et cercle circonscrit", w:"Sur ta feuille", h:`<p>Pour chaque question, justifie avec une propriété du cours.</p>
    <p><b>a)</b> ABC est un triangle rectangle en A et BC = 10 cm. Quel est le rayon de son cercle circonscrit ?</p><p><b>b)</b> MNP est un triangle rectangle en M. Son cercle circonscrit a pour rayon 3,5 cm. Calcule NP.</p><p><b>c)</b> RST est un triangle rectangle en S et I est le milieu de [RT]. On sait que IS = 4,2 cm. Calcule RT.</p>`,
-   c:`<p><b>a)</b> ABC est rectangle en A, donc son cercle circonscrit a pour diamètre l'hypoténuse [BC]. Son rayon est 10 ÷ 2 = <b>5 cm</b>.</p>
-   <p><b>b)</b> MNP est rectangle en M : l'hypoténuse [NP] est un diamètre du cercle circonscrit. NP = 2 × 3,5 = <b>7 cm</b>.</p>
-   <p><b>c)</b> RST est rectangle en S : le milieu I de l'hypoténuse [RT] est le centre de son cercle circonscrit. IS est un rayon, donc IR = IT = IS = 4,2 cm et RT = 2 × 4,2 = <b>8,4 cm</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Démonstrations", w:"Sur ta feuille", h:`<div class="figs">${ex("e10a","Cercle de centre O, diamètre [RS] et point T",200)}</div><p><b>a)</b> [RS] est un diamètre du cercle de centre O et T est un point de ce cercle. Quelle est la nature du triangle RST ? Justifie.</p>
    <div class="figs">${ex("e10b","Triangle ABC rectangle en A, I milieu de [BC]",220)}</div><p><b>b)</b> ABC est un triangle rectangle en A et I est le milieu de [BC]. Démontre que IA = IB = IC.</p><p><b>c)</b> Calcule IA lorsque BC = 8 cm.</p>`,
-   c:`<p><b>a)</b> Le triangle RST est inscrit dans le cercle de centre O (ses sommets sont sur le cercle) et son côté [RS] est un diamètre de ce cercle. Donc <b>RST est rectangle en T</b> (l'hypoténuse est [RS]).</p>
-   <p><b>b)</b> ABC est rectangle en A, donc son cercle circonscrit a pour diamètre l'hypoténuse [BC] : son centre est le milieu I de [BC]. A, B et C sont sur ce cercle de centre I, donc <b>IA = IB = IC</b> (ce sont des rayons).</p>
-   <p><b>c)</b> BC = 8 cm, donc IA = IB = IC = 8 ÷ 2 = <b>4 cm</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Le triangle des Bermudes", w:"Sur ta feuille", h:`<p>Le « triangle des Bermudes » est une zone de l'océan Atlantique délimitée par Miami, les Bermudes et Porto Rico.</p><p>Une station de secours doit être installée à égale distance de ces trois lieux.</p><p>Sur le plan simplifié ci-dessous, 1 cm représente 200 km.</p>
    ${ex("e11","Plan : Miami, Bermudes et Porto Rico",360)}
    <p><b>1)</b> Construis sur le plan le point S où installer la station.</p><p><b>2)</b> Quelle propriété as-tu utilisée ?</p><p><b>3)</b> Le point S est-il à l'intérieur ou à l'extérieur du triangle ?</p><p><b>4)</b> Mesure SM sur le plan (M = Miami) : SM = ……… cm. Calcule la distance réelle entre la station et Miami.</p>`,
-   c:`${cr("e11","Le point S, centre du cercle circonscrit",360)}
-   <p><b>1)</b> S est le point de concours des médiatrices des côtés du triangle Miami – Bermudes – Porto Rico (deux médiatrices suffisent).</p>
-   <p><b>2)</b> Le centre du cercle circonscrit à un triangle est le point de concours des médiatrices de ses côtés : il est à égale distance des trois sommets.</p>
-   <p><b>3)</b> Les trois angles du triangle sont aigus, donc S est <b>à l'intérieur</b> du triangle.</p>
-   <p><b>4)</b> Sur le plan de la fiche imprimée, SM = 4 cm. Distance réelle : 4 × 200 = <b>800 km</b> (la même pour les trois lieux).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les hauteurs d'un triangle", e:[
   {n:"Exercice 12", t:"Hauteur, médiane ou médiatrice ?", w:"Sur ta feuille", h:`<p>Dans chaque figure, le trait épais est-il une hauteur, une médiane, une médiatrice ou aucune des trois ? Justifie (tu peux utiliser tes instruments).</p>
    <div class="figs">${fig("Figure ①",ex("e12a","Figure 1",210))}${fig("Figure ②",ex("e12b","Figure 2",210))}${fig("Figure ③",ex("e12c","Figure 3",210))}${fig("Figure ④",ex("e12d","Figure 4",210))}</div>`,
-   c:`<p><b>①</b> <b>Hauteur issue de A</b> : (AH) passe par A et est perpendiculaire à (BC) (angle droit codé en H).</p>
-   <p><b>②</b> <b>Médiane issue de A</b> : I est le milieu de [BC] (codage BI = IC) et (AI) passe par le sommet A.</p>
-   <p><b>③</b> <b>Médiatrice de [BC]</b> : la droite est perpendiculaire à [BC] et passe par son milieu I (codages), mais elle ne passe pas par A.</p>
-   <p><b>④</b> <b>Aucune des trois</b> : K n'est pas le milieu de [BC] (K est très près de C) et (AK) n'est pas perpendiculaire à (BC).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Construire des hauteurs", w:"Sur ta feuille", h:`<p>Dans chaque triangle, trace les trois hauteurs (pense à prolonger les côtés si besoin) et nomme H leur point commun.</p>
    <div class="figs">${fig("Cas n°1",ex("e13a","Cas n°1 : triangle ABC",230))}${fig("Cas n°2",ex("e13b","Cas n°2 : triangle ABC",230))}</div><p><b>Cas n°1 :</b> H est à l'………… du triangle.</p><p><b>Cas n°2 :</b> H est à l'………… du triangle.</p>`,
-   c:`<div class="figs">${fig("Cas n°1",cr("e13a","Cas n°1 : les trois hauteurs",230))}${fig("Cas n°2",cr("e13b","Cas n°2 : les trois hauteurs",230))}</div>
-   <p><b>Cas n°1 :</b> les trois angles sont aigus : H est <b>à l'intérieur</b> du triangle.</p>
-   <p><b>Cas n°2 :</b> l'angle ${ang("BAC")} est obtus : H est <b>à l'extérieur</b> du triangle (il faut prolonger les côtés [AB] et [AC]).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>Entoure VRAI ou FAUX. Si l'affirmation est fausse, corrige-la.</p>
    <p><b>a)</b> Une hauteur d'un triangle est toujours à l'intérieur du triangle.</p><p><b>b)</b> Les trois hauteurs d'un triangle se coupent en un même point appelé l'orthocentre.</p><p><b>c)</b> L'orthocentre d'un triangle rectangle est le sommet de l'angle droit.</p><p><b>d)</b> La hauteur issue du sommet A d'un triangle ABC est la droite qui passe par A et par le milieu de [BC].</p><p><b>e)</b> Si le triangle ABC est rectangle en A, alors la droite (AB) est la hauteur issue de B.</p><p><b>f)</b> Si H est le pied de la hauteur issue de A dans le triangle ABC, alors AH est la distance du point A à la droite (BC).</p>`,
-   c:`<p><b>a) FAUX.</b> Dans un triangle qui a un angle obtus, deux hauteurs sont à l'extérieur du triangle.</p>
-   <p><b>b) VRAI.</b> Propriété du cours.</p>
-   <p><b>c) VRAI.</b> Les deux côtés de l'angle droit sont deux hauteurs : elles se coupent au sommet de l'angle droit.</p>
-   <p><b>d) FAUX.</b> C'est la médiane issue de A. La hauteur est perpendiculaire à (BC).</p>
-   <p><b>e) VRAI.</b> (AB) passe par B et est perpendiculaire à (AC), puisque l'angle ${ang("BAC")} est droit.</p>
-   <p><b>f) VRAI.</b> AH est la longueur de la hauteur issue de A.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les médianes d'un triangle", e:[
   {n:"Exercice 15", t:"Construire des médianes", w:"Sur ta feuille", h:`<p>Dans le triangle ABC, place les milieux des trois côtés (avec ta règle graduée), puis trace les trois médianes.</p>
    ${ex("e15","Triangle ABC",260)}<p>Que constates-tu ?</p><p>Le point commun s'appelle le <b>centre de gravité</b>. Nomme-le G sur la figure.</p>`,
-   c:`${cr("e15","Les trois médianes du triangle ABC et le point G",260)}<p>Les trois médianes se coupent en un même point G : <b>le centre de gravité</b> du triangle.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 16", t:"Médiane et aire", w:"Sur ton cahier", h:`<p>ABC est un triangle tel que BC = 10 cm. La hauteur issue de A mesure 6 cm. Le point I est le milieu de [BC].</p>
    <p><b>a)</b> Calcule l'aire du triangle ABC.</p><p><b>b)</b> Calcule la longueur BI, puis l'aire du triangle ABI.</p><p><b>c)</b> Calcule l'aire du triangle AIC. Que constates-tu ? Quelle propriété du cours retrouves-tu ?</p><p><b>d)</b> Le triangle MNP a pour aire 18,4 cm². Q est le milieu de [NP]. Quelle est l'aire du triangle MNQ ? Justifie.</p>`,
-   c:`<p><b>a)</b> Aire(ABC) = 10 × 6 ÷ 2 = <b>30 cm²</b>.</p>
-   <p><b>b)</b> I est le milieu de [BC] : BI = 10 ÷ 2 = <b>5 cm</b>. La hauteur issue de A est aussi celle de ABI : Aire(ABI) = 5 × 6 ÷ 2 = <b>15 cm²</b>.</p>
-   <p><b>c)</b></p><p class="calc">Aire(AIC) = IC × 6 ÷ 2<br>Aire(AIC) = 5 × 6 ÷ 2<br>Aire(AIC) = <b>15 cm²</b></p><p>Les triangles ABI et AIC ont la même aire (15 + 15 = 30 cm²) : une médiane partage un triangle en deux triangles de même aire.</p>
-   <p><b>d)</b> (MQ) est une médiane de MNP, donc Aire(MNQ) = 18,4 ÷ 2 = <b>9,2 cm²</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"L'aire d'un triangle", e:[
   {n:"Exercice 17", t:"Calculer des aires", w:"Sur ta feuille", h:`<p>Calcule l'aire de chaque triangle (figures non à l'échelle). Écris le calcul.</p><p><b>Attention :</b> une donnée peut être inutile !</p>
    <div class="figs">${fig("Triangle ① : Aire = ……………",ex("e17a","Triangle 1",270))}${fig("Triangle ② : Aire = ……………",ex("e17b","Triangle 2",270))}${fig("Triangle ③ : Aire = ……………",ex("e17c","Triangle 3",270))}${fig("Triangle ④ : Aire = ……………",ex("e17d","Triangle 4",270))}</div>`,
-   c:`<p>Aire = base × hauteur ÷ 2, avec la hauteur perpendiculaire à la base.</p><p><b>①</b> Base 8 cm, hauteur 5 cm :</p><p class="calc">A = 8 × 5 ÷ 2<br>A = 40 ÷ 2<br>A = <b>20 cm²</b></p><p><b>②</b> Les côtés de l'angle droit sont base et hauteur :</p><p class="calc">A = 9 × 6 ÷ 2<br>A = 54 ÷ 2<br>A = <b>27 cm²</b></p><p><b>③</b> La hauteur est à l'extérieur :</p><p class="calc">A = 7 × 4 ÷ 2<br>A = 28 ÷ 2<br>A = <b>14 cm²</b></p><p><b>④</b> Base 8 cm, hauteur 3 cm (la longueur 5 cm ne sert pas) :</p><p class="calc">A = 8 × 3 ÷ 2<br>A = 24 ÷ 2<br>A = <b>12 cm²</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 18", t:"Retrouver une longueur", w:"Sur ta feuille", h:`<p><b>Rappel :</b> Aire = base × hauteur ÷ 2, donc base × hauteur = Aire × 2.</p><p>Calcule la longueur demandée.</p>
    <p><b>a)</b> Un triangle a pour aire 24 cm² et pour base 8 cm. Calcule la hauteur correspondante.</p><p><b>b)</b> Un triangle a pour aire 18 cm² et pour hauteur 4 cm. Calcule la base correspondante.</p><p><b>c)</b> Un triangle a pour aire 7,5 cm² et pour base 5 cm. Calcule la hauteur correspondante.</p>`,
-   c:`<p><b>a)</b> La hauteur h :</p><p class="calc">h = 24 × 2 ÷ 8<br>h = 48 ÷ 8<br>h = <b>6 cm</b></p><p><b>b)</b> La base b :</p><p class="calc">b = 18 × 2 ÷ 4<br>b = 36 ÷ 4<br>b = <b>9 cm</b></p><p><b>c)</b> La hauteur h :</p><p class="calc">h = 7,5 × 2 ÷ 5<br>h = 15 ÷ 5<br>h = <b>3 cm</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 19", t:"Parallélogramme et triangle", w:"Sur ta feuille", h:`<p>ABCD est un parallélogramme : (AB) // (DC) et (AD) // (BC).</p><p>On donne AB = 9 cm et la hauteur issue de D mesure 4 cm.</p>${ex("e19","Parallélogramme ABCD",300)}
    <p><b>a)</b> Calcule l'aire du parallélogramme ABCD.</p><p><b>b)</b> Trace la diagonale [AC]. Quelle est l'aire du triangle ABC ? Explique.</p>`,
-   c:`<p><b>a)</b> Aire(ABCD) = base × hauteur = 9 × 4 = <b>36 cm²</b>.</p><p><b>b)</b> La diagonale [AC] partage le parallélogramme en deux triangles de même aire : Aire(ABC) = 36 ÷ 2 = <b>18 cm²</b>.</p><p>Vérification : 9 × 4 ÷ 2 = 18.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problème de synthèse", e:[
   {n:"Exercice 20", t:"Un triangle qui sait tout faire", w:"Sur ta feuille et sur ton cahier", h:`<p>Construis le triangle EFG tel que EF = 6 cm, FG = 8 cm et EG = 10 cm (règle et compas).</p><p>Puis réponds aux questions 1 à 4 sur ta figure et sur ton cahier.</p>
@@ -307,11 +272,7 @@ exos:[
    <p><b>2)</b> Trace le cercle circonscrit à EFG sans tracer de médiatrice. Explique comment tu fais et donne son rayon.</p>
    <p><b>3)</b> Trace la hauteur issue de F et nomme H son pied. Calcule l'aire de EFG avec EF et FG, puis déduis-en la longueur FH. Vérifie en mesurant.</p>
    <p><b>4)</b> Trace la médiane issue de F. Que remarques-tu ? Quelle est l'aire du triangle EFI, I étant le milieu de [EG] ?</p>`,
-   c:`${cr("e20","Triangle EFG, son cercle circonscrit, la hauteur [FH] et la médiane [FI]",300)}
-   <p><b>1)</b> L'hypoténuse est le côté opposé à l'angle droit : <b>[EG]</b> (le plus long côté). À l'équerre, on vérifie que l'angle ${ang("EFG")} est droit : EFG est rectangle en F.</p>
-   <p><b>2)</b> EFG est rectangle en F, donc son cercle circonscrit a pour diamètre l'hypoténuse [EG] : son centre est le milieu I de [EG]. Rayon : 10 ÷ 2 = <b>5 cm</b>.</p>
-   <p><b>3)</b></p><p class="calc">Aire(EFG) = EF × FG ÷ 2<br>Aire(EFG) = 6 × 8 ÷ 2<br>Aire(EFG) = <b>24 cm²</b></p><p>Avec la base [EG] : 10 × FH ÷ 2 = 24, donc :</p><p class="calc">FH = 24 × 2 ÷ 10<br>FH = 48 ÷ 10<br>FH = <b>4,8 cm</b></p>
-   <p><b>4)</b> I est le centre du cercle et F est sur le cercle : FI = 5 cm, c'est le rayon (la médiane issue de F mesure la moitié de l'hypoténuse). Aire(EFI) = 24 ÷ 2 = <b>12 cm²</b> (une médiane partage le triangle en deux triangles de même aire).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -490,3 +451,4 @@ exos:[
 };
 CH["5e-6"].eval = EVAL6;
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-6");

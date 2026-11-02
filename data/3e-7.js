@@ -76,56 +76,53 @@ cours:[
 exos:[
 {t:"Conversions de durées", e:[
   {n:"Activité rapide 1", t:"Conversions de durée", w:"Sur ton cahier", h:`<p><b>À connaître par cœur :</b> 1 h = 60 min / 1 min = 60 s / 1 h = 3 600 s.</p><p>Réponds en indiquant tes calculs.</p><p><b>1)</b> Convertis 8 min en secondes.</p><p><b>2)</b> Convertis 2 h 40 min en minutes.</p><p><b>3)</b> Convertis une journée en secondes.</p>`,
-   c:`<p><b>1)</b> 8 × 60 = 480 : 8 min = <b>480 s</b>.</p><p><b>2)</b></p><p class="calc">t = 2 × 60 + 40<br>t = 120 + 40<br>t = 160 min</p><p>2 h 40 min = <b>160 min</b>.</p><p><b>3)</b> 1 journée = 24 h et 24 × 3 600 = 86 400 : une journée = <b>86 400 s</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Grandeurs composées", e:[
   {n:"Activité 1", t:"Grandeurs composées", w:"Sur ton cahier", h:`<p><b>La vitesse moyenne en km/h</b></p><p><b>Problème 1 :</b> une voiture roule à une vitesse moyenne de 74,8 km/h. En 3 h, combien de kilomètres a-t-elle parcourus ?</p><p><b>Problème 2 :</b> une voiture a roulé 2 h et a parcouru 182,6 km. Quelle a été sa vitesse moyenne en km/h ?</p>
    <p><b>L'énergie en kWh (se lit « le kilowattheure »)</b></p><p><b>Problème 3 :</b> mon lave-vaisselle consomme une énergie de 3 kWh à chaque lavage.</p><p><i>Explication : mon lave-vaisselle a une puissance de 1 kW et il lave pendant 3 h. On dit qu'il consomme une énergie de 3 kWh, car 1 kW × 3 h = 3 kWh.</i></p><p>Cette semaine, j'ai mis en route mon lave-vaisselle 4 fois. Combien d'énergie ai-je consommée en kWh ?</p>`,
-   c:`<p><b>Problème 1 :</b></p>${pt(["Distance (en km)","74,8","?"],["Temps (en h)","1","3"])}<p class="calc">74,8 × 3 = 224,4</p><p>Elle a parcouru <b>224,4 km</b>.</p><p><b>Problème 2 :</b> 182,6 ÷ 2 = 91,3. Sa vitesse moyenne a été de <b>91,3 km/h</b>.</p><p><b>Problème 3 :</b> 4 × 3 = 12. J'ai consommé <b>12 kWh</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"La vitesse moyenne en km/h", w:"Sur ton cahier", h:`<p><b>Problème 1 :</b> avec son camion, un routier a parcouru 386 km en 4 h. Quelle a été sa vitesse moyenne en km/h ?</p><p><b>Problème 2 :</b> un automobiliste a roulé à une vitesse moyenne de 78,4 km/h et a parcouru 392 km. Combien d'heures a-t-il roulé ?</p>`,
-   c:`<p><b>Problème 1 :</b></p><p class="calc">V = {d/t}<br>V = {386/4}<br>V = 96,5</p><p>Sa vitesse moyenne a été de <b>96,5 km/h</b>.</p><p><b>Problème 2 :</b></p><p class="calc">t = {d/V}<br>t = {392/78,4}<br>t = 5</p><p>Il a roulé <b>5 h</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Le prix au kilo en €/kg", w:"Sur ton cahier", h:`<p><b>Problème 1 :</b> au supermarché, j'ai acheté 1,8 kg de poires et j'ai payé 3,27 €. Quel est le prix au kilo des poires ?</p><p><b>Problème 2 :</b> au supermarché, les courgettes sont à 2,41 €/kg. J'achète 3,7 kg de courgettes. Combien vais-je payer ?</p>`,
-   c:`<p><b>Problème 1 :</b> 3,27 ÷ 1,8 ≈ 1,82. Les poires coûtent environ <b>1,82 €/kg</b>.</p><p><b>Problème 2 :</b> 2,41 × 3,7 = 8,917. Je vais payer environ <b>8,92 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Vitesse moyenne du champion de France du 100 m", w:"Sur ton cahier", h:`<p>En 2020, en athlétisme, le champion de France du 100 m est Mouhamadou Fall. Il s'impose avec un temps de 10,16 s.</p><p>Calcule sa vitesse en m/s.</p>`,
-   c:`<p class="calc">V = {d/t}<br>V = {100/10,16}<br>V ≈ 9,84</p><p>Sa vitesse moyenne est d'environ <b>9,84 m/s</b> (arrondi au centième).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Le débit moyen", w:"Sur ton cahier", h:`<p>Le barrage de Bort-les-Orgues, sur la Dordogne, a une retenue d'eau d'environ 477 000 000 m<sup>3</sup>.</p><p>La Dordogne y déverse toute son eau avec un débit moyen de 23 m<sup>3</sup>/s.</p><p>Calcule la durée de remplissage de ce barrage :</p><p><b>a)</b> en secondes (arrondi à l'unité) ;</p><p><b>b)</b> en heures (arrondi à l'unité) ;</p><p><b>c)</b> en jours (arrondi à l'unité).</p>`,
-   c:`<p><b>a)</b> D = {V/t}, donc :</p><p class="calc">t = {V/D}<br>t = {477 000 000/23}<br>t ≈ <b>20 739 130 s</b></p><p><b>b)</b> 1 h = 3 600 s : 20 739 130 ÷ 3 600 ≈ <b>5 761 h</b>.</p><p><b>c)</b> 1 jour = 24 h : 5 760,87 ÷ 24 ≈ <b>240 jours</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Orage et vitesse du son", w:"Sur ton cahier", h:`<p>Le son se déplace à la vitesse de 330 m/s.</p><p>On entend le tonnerre 6 s après avoir vu un éclair. À quelle distance se situe l'orage ? Convertis en kilomètres.</p>`,
-   c:`${pt(["Distance (en m)","330","D"],["Temps (en s)","1","6"])}<p class="calc">D = 330 × 6<br>D = 1 980</p><p>L'orage se situe à <b>1 980 m</b>, soit <b>1,98 km</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Sujets de brevet", e:[
   {n:"Brevet 1", t:"Les 24 heures du Mans (Polynésie, juin 2015)", w:"Sur ton cahier", h:`<p>Les « 24 heures du Mans » est le nom d'une course automobile.</p>
    ${tab(["Document","Contenu"],[["1 : principe de la course","Les voitures tournent sur un circuit pendant 24 heures. La voiture gagnante est celle qui a parcouru la plus grande distance."],["2 : le circuit","La longueur d'un tour est de 13,629 km."],["3 : article extrait d'un journal","« 5 405,470 : c'est le nombre de kilomètres parcourus par l'Audi R15+ à l'issue de la course. »"],["4 : unités anglo-saxonnes","L'unité de mesure utilisée par les Anglo-Saxons est le mile par heure (mile per hour), noté mph. 1 mile ≈ 1 609 mètres."]])}
    <p>À l'aide des documents fournis :</p><p><b>1)</b> Détermine le nombre de tours complets que la voiture Audi R15+ a effectués lors de cette course.</p><p><b>2)</b> Calcule la vitesse moyenne en km/h de cette voiture. Arrondis à l'unité.</p><p><b>3)</b> On relève la vitesse de deux voitures au même moment : voiture n° 37 : 205 mph ; voiture n° 38 : 310 km/h. Quelle est la voiture la plus rapide ?</p>`,
-   c:`<p><b>1)</b> {5 405,470/13,629} ≈ 396,6. Elle a donc effectué <b>396 tours complets</b>.</p><p><b>2)</b> {5 405,470/24} ≈ 225. Sa vitesse moyenne est d'environ <b>225 km/h</b>.</p><p><b>3)</b> 1 mile ≈ 1,609 km, donc 205 mph ≈ 205 × 1,609 km/h, soit 329,845 km/h.</p><p>329,845 km/h &gt; 310 km/h : la voiture la plus rapide est la <b>n° 37</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Brevet 2", t:"Essence ou diesel ? (Polynésie, juin 2016)", w:"Sur ton cahier", h:`<p>M. Durand doit changer de voiture. Il choisit un modèle PRIMA qui existe en deux versions : ESSENCE ou DIESEL. Il dispose des informations suivantes :</p>
    ${tab(["Modèle PRIMA","Version ESSENCE","Version DIESEL"],[["Consommation moyenne","6,2 L pour 100 km","5,2 L pour 100 km"],["Type de moteur","essence","diesel"],["Carburant","SP 95","gazole"],["Prix d'achat","21 550 €","23 950 €"]])}
    <p><b>Estimation du prix des carburants par M. Durand en 2015 :</b> un litre de SP 95 coûte 1,415 € ; un litre de gazole coûte 1,224 €.</p>
    <p>Durant les dernières années, M. Durand a parcouru en moyenne 22 300 km par an. Pour choisir entre les deux modèles, il décide de réaliser le tableau comparatif ci-dessous, établi pour 22 300 km parcourus en un an.</p>
    ${tab(["","Version ESSENCE","Version DIESEL"],[["Consommation de carburant (en L)","1 383",""],["Budget de carburant (en €)","1 957",""]])}
    <p><b>1)</b> Recopie et complète le tableau en écrivant les calculs effectués.</p><p><b>2)</b> M. Durand choisit finalement la version DIESEL. Il parcourt 22 300 km tous les ans et le prix du carburant ne varie pas. Dans combien d'années l'économie réalisée sur le carburant compensera-t-elle la différence de prix d'achat entre les deux versions ?</p>`,
-   c:`<p><b>1) Version essence :</b></p>${pt(["Quantité d'essence (en L)","6,2","?"],["Distance (en km)","100","22 300"])}<p class="calc">6,2 × 22 300 ÷ 100 = 1 382,6</p><p>Avec la voiture essence, il consommera 1 382,6 L d'essence en 1 an.</p><p class="calc">1 382,6 × 1,415 ≈ 1 956,38</p><p>Son budget sera de 1 956,38 € (environ 1 957 €).</p>
-   <p><b>Version diesel :</b> 22 300 = 223 × 100, donc la consommation est 223 × 5,2 = 1 159,6 L de gazole en 1 an.</p><p class="calc">1 159,6 × 1,224 ≈ 1 419,35</p><p>Son budget sera de <b>1 419,35 €</b> (environ 1 419 €).</p><p><b>Le tableau complété</b> (arrondis à l'unité, comme dans l'énoncé) :</p>${tab(["","Version ESSENCE","Version DIESEL"],[["Consommation de carburant (en L)","1 383<br><small>6,2 × 22 300 ÷ 100</small>","1 160<br><small>5,2 × 22 300 ÷ 100</small>"],["Budget de carburant (en €)","1 957<br><small>1 382,6 × 1,415</small>","1 419<br><small>1 159,6 × 1,224</small>"]])}
-   <p><b>2)</b> 1 956,38 − 1 419,35 = 537,03 : chaque année, M. Durand économisera 537,03 € de carburant.</p><p>23 950 − 21 550 = 2 400 : la différence de prix d'achat entre les deux véhicules est de 2 400 €.</p><p class="calc">2 400 ÷ 537,03 ≈ 4,5</p><p>La différence de prix sera donc compensée <b>au cours de la 5<sup>e</sup> année</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Grandeurs composées et conversions", e:[
   {n:"Activité rapide 2", t:"Conversions de durée", w:"Sur ton cahier", h:`<p><b>a)</b> 845 min représentent combien d'heures ? Donne un arrondi à l'unité.</p><p><b>b)</b> Convertis 845 min en heures et minutes.</p>`,
-   c:`<p><b>a)</b> 845 ÷ 60 ≈ 14,08 : 845 min représentent environ <b>14 h</b>.</p><p><b>b)</b> 14 h = 14 × 60 = 840 min, donc 845 min = 840 min + 5 min = <b>14 h 05 min</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2", t:"Grandeurs composées et conversions", w:"Sur ton cahier", h:`<p><b>Problème 1 :</b> un ballon d'eau chaude de 300 L se vide en 20 min. Quel est le débit en L/s ?</p><p><b>Problème 2 :</b> un cycliste débutant a une vitesse moyenne de 5,3 m/s. Quelle est sa vitesse moyenne en km/h ?</p>`,
-   c:`<p><b>Problème 1 :</b> 20 min = 20 × 60 = 1 200 s.</p>${pt(["Volume (en L)","300","D"],["Temps (en s)","1 200","1"])}<p class="calc">D = 300 ÷ 1 200<br>D = 0,25</p><p>Le débit est de <b>0,25 L/s</b>.</p>
-   <p><b>Problème 2 :</b> 1 h = 3 600 s.</p>${pt(["Distance (en m)","5,3","D"],["Temps (en s)","1","3 600"])}<p class="calc">D = 5,3 × 3 600<br>D = 19 080</p><p>En 1 h, il parcourt 19 080 m, soit 19,08 km : sa vitesse est de <b>19,08 km/h</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"En voiture", w:"Sur ton cahier", h:`<p>Un conducteur met en moyenne 1 s avant de commencer à freiner quand il voit un obstacle.</p><p>Calcule la distance parcourue, en m, pendant ce temps de réaction s'il roule à 90 km/h.</p>`,
-   c:`<p>90 km = 90 000 m et 1 h = 3 600 s.</p>${pt(["Distance (en m)","90 000","D"],["Temps (en s)","3 600","1"])}<p class="calc">D = 90 000 ÷ 3 600<br>D = 25</p><p>Pendant son temps de réaction, il parcourt <b>25 m</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"La passerelle des Deux Rives", w:"Sur ton cahier", h:`<p>La passerelle des Deux Rives, à Strasbourg, est un pont piétonnier qui relie la France et l'Allemagne.</p><p>Sous ce pont, le Rhin a un débit de 2 000 m<sup>3</sup>/s.</p><p>Tom traverse le pont en 5 min. Combien de litres d'eau sont passés sous la passerelle pendant ce temps ?</p>`,
-   c:`<p>5 min = 5 × 60 = 300 s.</p><p class="calc">2 000 × 300 = 600 000</p><p>600 000 m<sup>3</sup> d'eau sont passés. Or 1 m<sup>3</sup> = 1 000 L : cela fait <b>600 000 000 L</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Vitesse d'un coureur", w:"Sur ton cahier", h:`<p>Un coureur a une vitesse moyenne de 10 km/h.</p><p>Quelle est sa vitesse moyenne en m/s ? Arrondis au centième.</p>`,
-   c:`<p>10 km = 10 000 m et 1 h = 3 600 s.</p><p class="calc">10 000 ÷ 3 600 ≈ 2,78</p><p>Sa vitesse moyenne est d'environ <b>2,78 m/s</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Débit moyen d'un robinet de baignoire", w:"Sur ton cahier", h:`<p>Le débit moyen d'un robinet de baignoire est de 0,2 L/s.</p><p>Transforme ce débit :</p><p><b>a)</b> en L/min ;</p><p><b>b)</b> en L/h ;</p><p><b>c)</b> en m<sup>3</sup>/h.</p>`,
-   c:`<p><b>a)</b> 1 min = 60 s : 0,2 × 60 = 12. Le débit est de <b>12 L/min</b>.</p><p><b>b)</b> 1 h = 3 600 s : 0,2 × 3 600 = 720. Le débit est de <b>720 L/h</b>.</p><p><b>c)</b> 720 L = 0,72 m<sup>3</sup>. Le débit est de <b>0,72 m<sup>3</sup>/h</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Vitesse d'un marcheur", w:"Sur ton cahier", h:`<p>Un randonneur a parcouru 5 km en 1 h 20 min.</p><p>Calcule sa vitesse moyenne en km/h.</p>`,
-   c:`<p>1 h 20 min = 60 min + 20 min = 80 min.</p>${pt(["Distance (en km)","5","D"],["Temps (en min)","80","60"])}<p class="calc">D = {5 × 60/80}<br>D = 3,75</p><p>Sa vitesse moyenne est de <b>3,75 km/h</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice supplémentaire", t:"Un chargeur branché pour rien", w:"Sur ton cahier", h:`<p>Un chargeur de smartphone branché sur une prise, mais non connecté à un smartphone, développe une puissance de 0,26 W.</p><p><b>a)</b> Calcule l'énergie ainsi consommée en une journée complète, en Wh.</p><p><b>b)</b> De même, calcule l'énergie consommée en une année de 365 jours. Convertis en kWh.</p>`,
-   c:`<p><b>a)</b></p><p class="calc">E = P × t<br>E = 0,26 W × 24 h<br>E = <b>6,24 Wh</b></p><p><b>b)</b> 6,24 × 365 = 2 277,6 Wh. Or 1 kWh = 1 000 Wh : cela fait <b>2,2776 kWh</b>, soit environ 2,28 kWh.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -189,3 +186,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-7");

@@ -186,63 +186,43 @@ const ACT = {n:"Activité découverte", t:"Au cinéma", w:"Sur ton cahier", h:`<
   <p><b>2)</b> On a représenté ces quatre situations dans un graphique. Quel est le point commun des représentations graphiques des situations proportionnelles trouvées à la question 1 ?</p><p><i>Aide : que se passe-t-il si l'on veut relier les points du graphique ?</i></p>
   <div class="figs">${CINE.map(([n,v])=>`<figure>${cineG(v,false)}<figcaption>${n}</figcaption></figure>`).join("")}</div>
   <p><b>3) Conclusion :</b> comment est représentée graphiquement une situation de proportionnalité ?</p>`,
- c:`<p><b>1)</b> <b>Cinémarin :</b> on cherche un coefficient de proportionnalité : ${F("7,5",1)} = 7,5 ; ${F(15,2)} = 7,5 ; ${F(30,4)} = 7,5 ; ${F(75,10)} = 7,5. On trouve 7,5 comme coefficient : <b>la situation est proportionnelle</b>.</p>
-  <p><b>Le Concorde :</b> une place coûte 11,50 €, mais si je double le nombre de places, le prix n'est pas doublé (11,5 × 2 ≠ 18). Cela suffit : <b>la situation n'est pas proportionnelle</b>.</p>
-  <p><b>Le Club :</b> deux places coûtent 17 €, mais pour 4 places le prix n'est pas doublé (17 × 2 ≠ 25) : <b>la situation n'est pas proportionnelle</b>.</p>
-  <p><b>Cinéville :</b> une place coûte 8,50 €. 8,5 × 2 = 17 ; 8,5 × 4 = 34 ; 8,5 × 10 = 85 : <b>la situation est proportionnelle</b>.</p>
-  <p><b>2)</b> Les situations proportionnelles sont celles du Cinémarin et du Cinéville. On relie les points dans chaque graphique :</p>
-  <div class="figs">${CINE.map(([n,v])=>`<figure>${cineG(v,true)}<figcaption>${n}</figcaption></figure>`).join("")}</div>
-  <p>Pour le Cinémarin, Le Concorde et le Cinéville, <b>les points sont alignés et forment une droite</b>.</p><p>Pour le Cinémarin et le Cinéville, la droite <b>passe par l'origine du repère</b>, contrairement à la droite du cinéma Le Concorde (qui partirait de 5 €).</p>
-  <p><b>3)</b> Une situation de proportionnalité est représentée graphiquement par <b>des points alignés avec l'origine du repère</b> : si on relie ces points, ils forment <b>une droite qui passe par l'origine du repère</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const EXA_G = rep({xmin:0,xmax:7,ymin:-1,ymax:8.8,gx:1,gy:1,kx:40,ky:30,ml:24, fns:[{f:x=>2*x,a:0,b:7,col:BLUE},{f:x=>x/2,a:0,b:7,col:GRN},{f:x=>x+3,a:0,b:7,col:PUR},{f:x=>x*x/3,a:0,b:7,col:RED}], alt:"Quatre courbes : bleue, verte, violette et rouge"});
 const EXA = {n:"Exercice A", t:"Quelles courbes traduisent la proportionnalité ?", w:"Sur ton cahier", h:`<p>Voici quatre courbes tracées dans un même repère : une bleue, une verte, une violette et une rouge.</p>${EXA_G}<p>Quelles courbes traduisent une situation de proportionnalité ? Justifie.</p>`,
- c:`<p>• La courbe <b style="color:${PUR}">violette</b> est une droite, mais elle ne passe pas par l'origine du repère : <b>elle ne traduit pas une situation de proportionnalité</b>.</p><p>• La courbe <b style="color:${RED}">rouge</b> passe par l'origine du repère, mais ce n'est pas une droite : <b>elle ne traduit pas une situation de proportionnalité</b>.</p><p>• Les courbes <b style="color:${GRN}">verte</b> et <b style="color:${BLUE}">bleue</b> sont des droites passant par l'origine du repère : <b>elles traduisent une situation de proportionnalité</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const B4=[["a",[[1,1.25],[2,2.5],[3,3.75],[4,5]]],["b",[[1,0.25],[2,1],[3,3],[4,5.5]]],["c",[[1,2.5],[2,3.5],[3,4.5],[4,5.5]]],["d",[[1,0.75],[2,1.5],[3,2.25],[4,3]]]];
 const g4=(P,join)=>rep({xmin:0,xmax:4.6,ymin:0,ymax:5.8,gx:1,gy:1,sub:4,kx:44,ky:34,pts:P.map(p=>["",p[0],p[1],RED]),lines:join?[{p:join,col:BLUE,dash:true}]:[]});
 const EXB = {n:"Exercice B", t:"Proportionnel ou non ?", w:"Sur ton cahier", h:`<p>Dans chaque cas, indique si le graphique représente une situation de proportionnalité. Justifie.</p><div class="figs">${B4.map(([l,P])=>`<figure>${g4(P)}<figcaption>${l})</figcaption></figure>`).join("")}</div>`,
- c:`<div class="figs">${B4.map(([l,P])=>`<figure>${g4(P, l==="a"||l==="d"?[[0,0],P[3]]:l==="c"?[[0,1.5],P[3]]:P)}<figcaption>${l})</figcaption></figure>`).join("")}</div>
-  <p><b>a)</b> Lorsqu'on relie les points, ils forment une droite passant par l'origine du repère : <b>c'est une situation de proportionnalité</b>.</p>
-  <p><b>b)</b> Lorsqu'on relie les points, ils ne forment pas une droite : <b>la situation n'est pas proportionnelle</b>.</p>
-  <p><b>c)</b> Lorsqu'on relie les points, ils forment une droite, mais celle-ci ne passe pas par l'origine du repère : <b>la situation n'est pas proportionnelle</b>.</p>
-  <p><b>d)</b> Lorsqu'on relie les points, ils forment une droite passant par l'origine du repère : <b>c'est une situation de proportionnalité</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const ESS=(extra=[])=>rep({xmin:0,xmax:70,ymin:0,ymax:95,gx:10,gy:10,sub:5,kx:7,ky:2.6,fns:[{f:x=>x*9/7,a:0,b:70,col:PUR}],xt:"Volume (L)",yt:"Prix (€)",...(extra.length?{lines:extra}:{} )});
 const EXC = {n:"Exercice C", t:"Le plein d'essence", w:"Sur ton cahier", h:`<p>Le graphique donne le prix payé à la pompe en fonction du volume d'essence.</p>${ESS()}<p><b>1)</b> Quel est le prix d'un plein de 54 L ?</p><p><b>2)</b> Le prix payé est-il proportionnel au volume d'essence ? Justifie.</p>`,
- c:`${ESS([{p:[[54,0],[54,54*9/7],[0,54*9/7]],col:BLUE,dash:true}])}<p><b>1)</b> On part de 54 L sur l'axe horizontal, on monte jusqu'à la droite, puis on lit sur l'axe vertical : pour un plein de 54 L, le prix est d'<b>environ 70 €</b>.</p>
-  <p><b>2)</b> La situation est représentée par une droite qui passe par l'origine du repère : <b>elle est donc proportionnelle</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const CUV=(withLine)=>rep({xmin:0,xmax:160,ymin:0,ymax:400,gx:10,gy:40,lx:20,ly:40,kx:3,ky:0.6,pts:[[ "",30,80],["",45,120],["",90,240],["",150,400]].map(p=>[p[0],p[1],p[2],RED]),lines:withLine?[{p:[[0,0],[150,400]],col:GRN},{p:[[0,300],[112.5,300],[112.5,0]],col:BLUE,dash:true}]:[],xt:"Hauteur (cm)",yt:"Capacité (L)",ml:44});
 const EX1 = {n:"Exercice 1", t:"Les cuves", w:"Sur ton cahier", h:`<p>Voici des renseignements sur des cuves.</p>${tab(["Hauteur (en cm)","30","45","90","150"],[["Capacité (en L)","80","120","240","400"]])}
   <p><b>a)</b> Représente ce tableau dans un repère (unités : 1 carreau pour 10 cm en abscisses et 1 carreau pour 40 L en ordonnées).</p><p><b>b)</b> Indique s'il s'agit d'un tableau de proportionnalité :</p><p>• en utilisant le graphique ;</p><p>• en utilisant le tableau.</p><p><b>c)</b> En utilisant le graphique, estime la hauteur d'une cuve de 300 L. Détermine ce résultat par le calcul.</p>`,
- c:`<p><b>a)</b></p>${CUV(true)}
-  <p><b>b) D'après le graphique :</b> lorsqu'on relie les points, ils forment une droite qui passe par l'origine du repère. Ce graphique représente donc une situation de proportionnalité.</p>
-  <p><b>D'après le tableau :</b> pour 30 cm, la capacité est de 80 L.</p><p>• 3<sup>e</sup> colonne : si l'on multiplie par 3 la hauteur (30 × 3 = 90 cm), la capacité est bien multipliée par 3 (80 × 3 = 240 L).</p><p>• 4<sup>e</sup> colonne : si l'on multiplie par 5 la hauteur (30 × 5 = 150 cm), la capacité est bien multipliée par 5 (80 × 5 = 400 L).</p><p>• 2<sup>e</sup> colonne : pour 90 cm, la capacité est de 240 L. Si on divise la hauteur par 2 (90 ÷ 2 = 45 cm), la capacité est bien divisée par 2 (240 ÷ 2 = 120 L).</p><p>Le tableau est donc un tableau de proportionnalité.</p>
-  <p><b>c) D'après le graphique</b> (tracé en bleu), pour une capacité de 300 L, la hauteur est d'environ 112 cm.</p><p><b>Par le calcul :</b></p>${tab(["Hauteur (en cm)","150","<i>h</i>"],[["Capacité (en L)","400","300"]])}<p class="calc"><i>h</i> = ${F("150 × 300",400)}<br><i>h</i> = 112,5 cm</p><p>On retrouve bien la valeur approchée graphiquement. Le graphique ne permet pas de donner une valeur exacte.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const CARg=(T,peri)=>rep({xmin:0,xmax:5,ymin:0,ymax:peri?20:22,gx:1,gy:2,ly:4,sub:2,kx:44,ky:10,pts:T.map(([c,p,a])=>["",c,peri?p:a,RED]),lines:peri?[{p:[[0,0],[5,20]],col:GRN,dash:true}]:[],xt:"côté (cm)",yt:peri?"Périmètre (cm)":"Aire (cm²)"});
 const CART=[[1,4,1],[2,8,4],[3,12,9],[4,16,16],[4.5,18,20.25]];
 const EXD = {n:"Exercice D", t:"Le périmètre et l'aire d'un carré", w:"Sur ton cahier", h:`<p><b>Rappels :</b> périmètre du carré = 4 × côté ; aire du carré = côté × côté.</p>
   <p><b>1)</b> Recopie et complète le tableau.</p>${tab(["Longueur du côté (en cm)","1","2","3","4","4,5"],[["Périmètre (en cm)","","","","",""],["Aire (en cm²)","","","","",""]])}
   <p><b>2)</b> Représente dans un repère le périmètre du carré en fonction de la longueur de son côté.</p><p><i>Aide : la longueur du côté du carré est en abscisses, le périmètre est en ordonnées.</i></p>
   <p><b>3)</b> Représente dans un autre repère l'aire du carré en fonction de la longueur de son côté.</p><p><b>4)</b> Le périmètre d'un carré est-il proportionnel à la longueur de son côté ? Et l'aire ? Justifie avec les graphiques.</p>`,
- c:`<p><b>1)</b></p>${tab(["Longueur du côté (en cm)","1","2","3","4","4,5"],[["Périmètre (en cm)","4","8","12","16","18"],["Aire (en cm²)","1","4","9","16","20,25"]])}
-  <div class="figs"><figure>${CARg(CART,true)}<figcaption>2) Périmètre en fonction du côté</figcaption></figure><figure>${CARg(CART,false)}<figcaption>3) Aire en fonction du côté</figcaption></figure></div>
-  <p><b>4)</b> Sur le graphique du périmètre, on peut tracer une droite reliant tous les points et passant par l'origine : <b>le périmètre d'un carré est proportionnel à la longueur de son côté</b>.</p><p>Sur le graphique de l'aire, on ne peut pas tracer une droite qui relie tous les points : <b>l'aire d'un carré n'est pas proportionnelle à la longueur de son côté</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const EPa=[[1,2],[2,4],[4.5,7],[5.5,11]], EPb=[[1,2.25],[3,6.75],[5,11.25],[6,13.5]];
 const EPg=(P,line)=>rep({xmin:0,xmax:7,ymin:0,ymax:15,gx:1,gy:1,ly:2,sub:2,kx:34,ky:14,pts:P.map(p=>["",p[0],p[1],"var(--ink)"]),lines:line?[{p:line,col:RED}]:[],xt:"x",yt:"y"});
 const EXP = {n:"Exercice en +", t:"Graphiquement et par le calcul", w:"Sur ton cahier", h:`<p>Pour chaque tableau, représente les points dans un repère, puis indique si c'est une situation de proportionnalité :</p><p>• graphiquement ;</p><p>• par le calcul.</p>
   <p><b>1)</b></p>${tab(["x","1","2","4,5","5,5"],[["y","2","4","7","11"]])}<p><b>2)</b></p>${tab(["x","1","3","5","6"],[["y","2,25","6,75","11,25","13,5"]])}`,
- c:`<div class="figs"><figure>${EPg(EPa)}<figcaption>1)</figcaption></figure><figure>${EPg(EPb,[[0,0],[6.6,14.85]])}<figcaption>2)</figcaption></figure></div>
-  <p><b>1) Graphiquement :</b> on ne peut pas relier l'ensemble des points pour former une droite passant par l'origine : la situation n'est pas proportionnelle.</p><p><b>Par le calcul :</b> on recherche s'il existe un coefficient de proportionnalité : ${F(2,1)} = 2 ; ${F(4,2)} = 2 ; ${F(7,"4,5")} ≈ 1,6. Il n'y a pas de coefficient de proportionnalité : <b>la situation n'est pas proportionnelle</b>.</p>
-  <p><b>2) Graphiquement :</b> on peut relier les points et former une droite passant par l'origine : la situation est proportionnelle.</p><p><b>Par le calcul :</b> ${F("2,25",1)} = 2,25 ; ${F("6,75",3)} = 2,25 ; ${F("11,25",5)} = 2,25 ; ${F("13,5",6)} = 2,25. On trouve le coefficient de proportionnalité 2,25 : <b>la situation est proportionnelle</b>.</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const CUBE2 = pave({...CUBEo, alt:"Cube ABCDEFGH"});
 const EX2 = {n:"Exercice 2", t:"Les coordonnées des sommets d'un cube", w:"Sur ton cahier", h:`<p>ABCDEFGH est le cube représenté ci-contre.</p>${CUBE2}<p>Écris les coordonnées de tous les points de la figure, dans le repère (A ; B, D, E).</p>`,
- c:`<p>A(0 ; 0 ; 0) ; B(1 ; 0 ; 0) ; C(1 ; 1 ; 0) ; D(0 ; 1 ; 0)</p><p>E(0 ; 0 ; 1) ; F(1 ; 0 ; 1) ; G(1 ; 1 ; 1) ; H(0 ; 1 ; 1)</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 const MN = {"0,0,0":"M","1,0,0":"N","1,1,0":"P","0,1,0":"Q","0,0,1":"R","1,0,1":"S","1,1,1":"T","0,1,1":"U"};
 const PV3 = pave({a:1,b:1,c:1, ex:[330,0], ey:[60,-48], ez:[0,-90], V:MN, hid:"0,1,0", alt:"Parallélépipède rectangle MNPQRSTU"});
 const EX3 = {n:"Exercice 3", t:"Changer de repère", w:"Sur ton cahier", h:`<p>MNPQRSTU est le parallélépipède rectangle représenté ci-dessous.</p>${PV3}
   <p>Lis les coordonnées de tous les points de la figure :</p><p><b>a)</b> dans le repère (M ; N, Q, R) ;</p><p><b>b)</b> dans le repère (P ; Q, N, T).</p>
   <div class="retenir" data-l="Aide"><p>Travailler dans le repère <b>(M ; N, Q, R)</b> veut dire que :</p><p>• <b>M</b> est l'origine du repère ;</p><p>• l'arête <b>[MN]</b> représente une unité en abscisse ;</p><p>• l'arête <b>[MQ]</b> représente une unité en ordonnée ;</p><p>• l'arête <b>[MR]</b> représente une unité en altitude.</p></div>
   <div class="attention"><b>ATTENTION :</b> le repère change entre la question a) et la question b), donc les coordonnées des points changent.</div>`,
- c:`<p><b>a)</b> M(0 ; 0 ; 0) ; N(1 ; 0 ; 0) ; P(1 ; 1 ; 0) ; Q(0 ; 1 ; 0)</p><p>R(0 ; 0 ; 1) ; S(1 ; 0 ; 1) ; T(1 ; 1 ; 1) ; U(0 ; 1 ; 1)</p>
-  <p><b>b)</b> M(1 ; 1 ; 0) ; N(0 ; 1 ; 0) ; P(0 ; 0 ; 0) ; Q(1 ; 0 ; 0)</p><p>R(1 ; 1 ; 1) ; S(0 ; 1 ; 1) ; T(0 ; 0 ; 1) ; U(1 ; 0 ; 1)</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 /* exercice 4 : repère (A ; B, D, E) avec [AB] vers l'avant */
 const P4o = {a:1,b:1,c:1, ex:[-58,48], ey:[230,0], ez:[0,-125], V:{"0,0,0":"A","1,0,0":"B","1,1,0":"C","0,1,0":"D","0,0,1":"E","1,0,1":"F","1,1,1":"G","0,1,1":"H"}, hid:"0,0,0"};
 const PV4 = pave({...P4o, alt:"Parallélépipède rectangle ABCDEFGH en perspective cavalière"});
@@ -250,7 +230,7 @@ const PV4c = pave({...P4o, pts:[["I",0.5,0,1,RED,-14,-6],["J",0,0.5,0.5,RED,0,-1
 const EX4 = {n:"Exercice 4", t:"Placer des points dans un pavé droit", w:"Sur ton cahier", h:`<p><b>a)</b> Représente en perspective cavalière un parallélépipède rectangle ABCDEFGH, comme celui-ci :</p>${PV4}
   <p><b>b)</b> Place les points I, J, K dont les coordonnées dans le repère (A ; B, D, E) sont : I(${F(1,2)} ; 0 ; 1) ; J(0 ; ${F(1,2)} ; ${F(1,2)}) ; K(1 ; ${F(1,2)} ; 0).</p>
   <p><b>c)</b> Place le milieu M de l'arête [CD], le milieu N de l'arête [GH] et le point d'intersection P des diagonales de la face EFGH.</p><p>Quelles sont les coordonnées des points M, N et P ?</p>`,
- c:`${PV4c}<p><b>b)</b> I est le milieu de [EF] ; J est le centre de la face ADHE ; K est le milieu de [BC].</p><p><b>c)</b> M(${F(1,2)} ; 1 ; 0) ; N(${F(1,2)} ; 1 ; 1) ; P(${F(1,2)} ; ${F(1,2)} ; 1)</p>`};
+ c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."};
 CH["4e-16"].exos[0].e=[ACT,EXA,EXB,EXC]; CH["4e-16"].exos[1].e=[EX1,EXD,EXP]; CH["4e-16"].exos[2].e=[EX2,EX3,EX4];
 
 /* ===================== QCM ===================== */
@@ -313,3 +293,4 @@ exos:[
   <p>c) J est sur la face du dessus EFGH (altitude 2) ; K est sur la face de gauche ADHE (abscisse 0). <i>(1 point par point placé et 0,5 point par face, soit 3 points)</i></p>`}
 ]};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-16");

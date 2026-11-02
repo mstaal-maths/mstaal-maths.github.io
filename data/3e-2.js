@@ -111,17 +111,17 @@ const o0k=gr=>Math.min(20, 330/(gr[2]-gr[0]));
 /* les six transformations de l'activité 1 (carreaux) */
 const A1=[
  {K:[1,4], grid:[0,-1,16,9], T:p=>[16-p[0],p[1]], ex:{line:[[[8,-1],[8,9],"rd",0,0]], txt:[["(d)",[8,8.6],14,0,"fill:#c0392b"]]},
-  rep:"<b>Symétrie axiale</b> : la figure 1 se retourne. L'axe de symétrie <b style=\"color:#c0392b\">(d)</b> (en rouge) est la droite verticale située à 2 carreaux à droite de la figure 1 (au milieu des deux figures)."},
+  rep:""},
  {K:[1,8], grid:[0,-1,18,13], T:p=>[p[0]+11,p[1]-4], ex:{vec:[[[1,8],[12,4],"#c0392b"]]},
-  rep:"<b>Translation</b> : la figure glisse sans tourner, de 11 carreaux vers la droite et de 4 carreaux vers le bas (flèche rouge)."},
+  rep:""},
  {K:[1,4], grid:[0,-1,16,19], T:p=>[16-p[0],18-p[1]], ex:{x:[[8,9]], xcol:"#1e5aa8", txt:[["O",[8,9],12,-12,"fill:#1e5aa8"]], seg:[[[1,0],[15,18],"bd"]]},
-  rep:"<b>Symétrie centrale</b> : la figure 1 fait un demi-tour (180°). Le centre de symétrie <b style=\"color:#1e5aa8\">O</b> (en bleu) est le milieu du segment qui relie un point de la figure 1 à son image (le bas du mât et le haut du mât de la figure 2)."},
+  rep:""},
  {K:[12,4], grid:[0,-1,18,16], T:p=>[p[1]+2,p[0]-2], ex:{line:[[[2,0],[17,15],"rd",0,0]], txt:[["(d)",[16,14],-16,0,"fill:#c0392b"]]},
-  rep:"<b>Symétrie axiale</b> : la figure 1 se retourne. L'axe de symétrie <b style=\"color:#c0392b\">(d)</b> (en rouge) est une droite oblique : elle suit les diagonales des carreaux."},
+  rep:""},
  {K:[10,6], grid:[0,0,17,12], T:p=>V.rot(p,[10,2],90), ex:{x:[[10,2]], txt:[["O",[10,2],12,14,"fill:#c0392b"]], angs:[[[10,2],[10,6],[6,2],"90°",1.4,"#c0392b"]]},
-  rep:"<b>Rotation</b> de centre O (le bas du mât de la figure 1), d'angle 90° dans le sens antihoraire : la figure tourne d'un quart de tour."},
+  rep:""},
  {K:[13,4], grid:[0,-1,19,10], T:p=>[p[0]-11,p[1]], ex:{vec:[[[13,8],[2,8],"#c0392b"]]},
-  rep:"<b>Translation</b> : la figure glisse sans tourner, de 11 carreaux vers la gauche (flèche rouge)."}
+  rep:""}
 ];
 const A1fig=(i,show)=>flags(A1[i].K, A1[i].T, A1[i].grid, show, A1[i].ex);
 
@@ -311,31 +311,24 @@ exos:[
 {t:"Reconnaître une transformation", e:[
   {n:"Activité 1", t:"Différentes transformations du plan", w:"Sur ta feuille", h:`<p>Dans chaque cas, la figure 2 est l'image de la figure 1 par une transformation.</p><p>Au crayon de bois, indique la transformation et ses caractéristiques.</p>
    <div class="figs">${A1.map((x,i)=>fig("Transformation "+(i+1),A1fig(i,false))).join("")}</div>`,
-   c:`<div class="figs">${A1.map((x,i)=>fig("Transformation "+(i+1),A1fig(i,true))).join("")}</div>${A1.map((x,i)=>`<p><b>Transformation ${i+1} :</b> ${x.rep}</p>`).join("")}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Symétries et translation (rappels)", e:[
   {n:"Exercice 1", t:"Constructions d'images par symétrie et translation", w:"Sur ta feuille", h:`<div class="attention"><b>CONSIGNES :</b> pour les constructions avec quadrillage, ne laisse pas les traits de construction. Pour les constructions sans quadrillage, laisse les traits de construction.</div>
    <p><b>Symétrie axiale :</b> dans les deux cas, trace le symétrique du triangle DEC par rapport à la droite <b style="color:#c0392b">(d)</b> (l'axe de symétrie, en rouge). Tu le nommeras D'E'C'.</p><div class="figs">${ex1Axial(true,false)}${ex1Axial(false,false)}</div>
    <p><b>Symétrie centrale :</b> dans les deux cas, trace le symétrique du triangle DEC par rapport au point <b style="color:#1e5aa8">F</b> (le centre de symétrie, en bleu). Tu le nommeras D'E'C'.</p><div class="figs">${ex1Central(true,false)}${ex1Central(false,false)}</div>
    <p><b>Translation :</b> dans les deux cas, trace l'image du triangle DEC par la translation qui transforme H en I. Tu la nommeras D'E'C'.</p><div class="figs">${ex1Trans(true,false)}${ex1Trans(false,false)}</div>`,
-   c:`<p><b>Symétrie axiale :</b> (d) coupe [DD'], [EE'] et [CC'] perpendiculairement en leur milieu. Sur le quadrillage, (d) suit les diagonales des carreaux : on compte les diagonales de chaque côté de (d).</p><div class="figs">${ex1Axial(true,true)}${ex1Axial(false,true)}</div>
-   <p><b>Symétrie centrale :</b> F est le milieu de [DD'], de [EE'] et de [CC']. Sur le quadrillage : pour aller de E à F, on descend de 2 carreaux, donc on descend encore de 2 carreaux pour placer E'.</p><div class="figs">${ex1Central(true,true)}${ex1Central(false,true)}</div>
-   <p><b>Translation :</b> pour aller de H à I, on se déplace de 4 carreaux vers la droite et de 1 carreau vers le bas. On fait le même déplacement à partir de D, de E et de C. Sans quadrillage : (HI) // (DD') et HI = DD' (on peut tracer le parallélogramme HIDD'), de même pour E et C.</p><div class="figs">${ex1Trans(true,true)}${ex1Trans(false,true)}</div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Construire l'image d'une figure par rotation", e:[
   {n:"Activité 2", t:"Construire l'image d'une figure par rotation", w:"Sur ta feuille", h:`<p><b>1)</b> Trace l'image de ABC par la rotation de centre A, d'angle 90° dans le sens antihoraire. Nomme-la A'B'C'.</p>${rotFig(R1)}
    <p><b>2)</b> Trace l'image de ABC par la rotation de centre A, d'angle 70° dans le sens antihoraire. Nomme-la A'B'C'. <i>Laisse les traits de construction.</i></p>${rotFig(R2)}
    <p><b>3)</b> Trace l'image du triangle BCD par la rotation de centre A, d'angle 142° dans le sens horaire. Nomme-la B'C'D'.</p>${rotFig(R3)}`,
-   c:`<p><b>1)</b> A est le centre : il ne bouge pas (A' = A). [AB] est vertical vers le bas : en tournant d'un quart de tour dans le sens antihoraire, [AB'] est horizontal vers la droite, avec AB' = AB = 3 carreaux. De même, C' est à 3 carreaux à droite et 2 carreaux au-dessus de A.</p>${rotFig({...R1, show:true})}
-   <p><b>2)</b> Avec le rapporteur : ${ang("BAB'")} = 70° dans le sens antihoraire. Avec le compas : AB' = AB. De même pour C : ${ang("CAC'")} = 70° et AC' = AC.</p>${rotFig({...R2, show:true})}
-   <p><b>3)</b> Pour chaque sommet M du triangle : ${ang("MAM'")} = 142° dans le sens horaire (rapporteur) et AM' = AM (compas).</p>${rotFig({...R3, show:true})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Construire une image par rotation sur feuille blanche", w:"Sur ta feuille", h:`<p><b>1)</b> Construis l'image du triangle ABC par la rotation de centre C, d'angle 102° dans le sens horaire. Nomme-la A'B'C'.</p>${rotFig(S1)}
    <p><b>2)</b> Construis l'image du triangle ABC par la rotation de centre D, d'angle 84° dans le sens antihoraire. Nomme-la A'B'C'.</p>${rotFig(S2)}
    <p><b>3)</b> Construis l'image du quadrilatère ABCD par la rotation de centre E, d'angle 77° dans le sens antihoraire. Nomme-la A'B'C'D'.</p>${rotFig(S3)}`,
-   c:`<p>Pour chaque sommet M de la figure : on trace la demi-droite [OM') qui fait avec [OM) l'angle demandé, dans le bon sens (rapporteur), puis on reporte la longueur OM (compas). O est le centre de la rotation.</p>
-   <p><b>1)</b> C est le centre : C' = C. ${ang("ACA'")} = ${ang("BCB'")} = 102° dans le sens horaire.</p>${rotFig({...S1, show:true})}
-   <p><b>2)</b> ${ang("ADA'")} = ${ang("BDB'")} = ${ang("CDC'")} = 84° dans le sens antihoraire, et DA' = DA, DB' = DB, DC' = DC.</p>${rotFig({...S2, show:true})}
-   <p><b>3)</b> ${ang("AEA'")} = ${ang("BEB'")} = ${ang("CEC'")} = ${ang("DED'")} = 77° dans le sens antihoraire, et EA' = EA, EB' = EB, EC' = EC, ED' = ED.</p>${rotFig({...S3, show:true})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Repérer des images dans des rosaces et des pavages", e:[
   {n:"Activité 3", t:"Repérer des images", w:"Sur ta feuille", h:`<p><b>Cas n°1 :</b> cette rosace a été créée en reproduisant le motif 1 par rotations successives.</p>${ex("rosace","Rosace de 6 motifs numérotés de 1 à 6 autour du point R",190)}
@@ -344,9 +337,7 @@ exos:[
    <p>Par quelle transformation passe-t-on <b>du triangle DOC au triangle COB</b> ?</p>
    <p><b>Cas n°3 :</b> l'hexagone ABCDEF est composé de six triangles équilatéraux.</p>${ex("hexa","Hexagone ABCDEF de centre O",230)}
    <p><b>a)</b> L'image du triangle AFO par la translation qui transforme A en B est ………</p><p><b>b)</b> L'image du triangle ABO par la translation de vecteur ${vec("CD")} est ………</p>`,
-   c:`<p><b>Cas n°1 :</b> il y a 6 motifs : 360° ÷ 6 = 60°. On passe du motif 1 au motif 2 par la rotation de centre R, d'angle <b>60°</b> dans le sens <b>horaire</b>.</p>
-   <p><b>Cas n°2 :</b> D → C, O → O et C → B. On passe du triangle DOC au triangle COB par la <b>rotation de centre O, d'angle 72° dans le sens horaire</b> (360° ÷ 5 = 72°).</p>
-   <p><b>Cas n°3 :</b></p><p><b>a)</b> A → B, F → O et O → C : l'image du triangle AFO est le triangle <b>BOC</b>.</p><p><b>b)</b> A → F, B → O et O → E : l'image du triangle ABO est le triangle <b>FOE</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Retrouver les images", w:"Sur ta feuille", h:`<p><b>Cas n°1 :</b> cette rosace a été créée en reproduisant le motif 1 par rotations successives.</p>${ex("rosace","Rosace de 6 motifs numérotés de 1 à 6 autour du point R",190)}
    <p><b>a)</b> L'image du motif 2 par la rotation de centre R, d'angle 120° dans le sens antihoraire est le motif …</p><p><b>b)</b> L'image du motif 4 par la symétrie de centre R est le motif …</p>
    <p><b>Cas n°2 :</b> le pentagone ABCDE est composé de 5 triangles isocèles égaux.</p>${ex("penta","Pentagone ABCDE de centre O",200)}
@@ -355,10 +346,7 @@ exos:[
    <p><b>a)</b> L'image du triangle OBC par la translation qui transforme B en O est ………</p><p><b>b)</b> L'image du triangle OED par la translation de vecteur ${vec("CB")} est ………</p><p><b>c)</b> L'image du triangle OEF par la symétrie d'axe (OB) est ………</p>
    <p><b>Cas n°4 :</b> à partir du triangle BEJ, rectangle isocèle en J, on a obtenu le pavage ci-dessous.</p>${ex("pavage","Pavage obtenu à partir du triangle BEJ",230)}
    <p><b>a)</b> Quelle est l'image du triangle BEJ par la symétrie d'axe (BD) ?</p><p><b>b)</b> Quelle est l'image du triangle AMH par la translation qui transforme E en B ?</p><p><b>c)</b> Par quelle transformation passe-t-on du triangle AMH au triangle DMG ?</p>`,
-   c:`<p><b>Cas n°1 :</b></p><p><b>a)</b> 120° = 2 × 60° : on tourne de 2 motifs dans le sens antihoraire (2 → 1 → 6). C'est le motif <b>6</b>.</p><p><b>b)</b> La symétrie de centre R est un demi-tour (180° = 3 × 60°). C'est le motif <b>1</b>.</p>
-   <p><b>Cas n°2 :</b></p><p><b>a)</b> 144° = 2 × 72° : D → B, O → O et E → C. C'est le triangle <b>BOC</b>.</p><p><b>b)</b> O et A sont sur l'axe : ils ne bougent pas, et B → E. C'est le triangle <b>OAE</b>.</p>
-   <p><b>Cas n°3 :</b></p><p><b>a)</b> O → E, B → O et C → D. C'est le triangle <b>EOD</b>.</p><p><b>b)</b> O → A, E → F et D → O. C'est le triangle <b>AFO</b>.</p><p><b>c)</b> O reste fixe, E est sur l'axe (OB) donc il reste fixe, et F → D. C'est le triangle <b>OED</b>.</p>
-   <p><b>Cas n°4 :</b></p><p><b>a)</b> B → B, E → F et J → J. C'est le triangle <b>BFJ</b>.</p><p><b>b)</b> A → E, M → F et H → M. C'est le triangle <b>EFM</b>.</p><p><b>c)</b> A → D, M → M et H → G : c'est la <b>rotation de centre M, d'angle 90° dans le sens horaire</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Brevet, Amérique du Nord, juin 2019", w:"Sur ta feuille", h:`<p><i>Dans cet exercice, aucune justification n'est attendue.</i></p><p>On considère l'hexagone ABCDEF de centre O représenté ci-dessous.</p>${ex("hexb","Hexagone ABCDEF de centre O",220)}
    <p><b>1)</b> Parmi les propositions suivantes, entoure la figure qui correspond à l'image du quadrilatère CDEO par la symétrie de centre O.</p>
    <div class="scroll"><table class="std"><thead><tr><th>Proposition 1</th><th>Proposition 2</th><th>Proposition 3</th></tr></thead><tbody><tr><td>ABFO</td><td>ABOF</td><td>ABCO</td></tr></tbody></table></div>
@@ -366,10 +354,7 @@ exos:[
    <p><b>3)</b> On considère la rotation de centre O qui transforme le triangle OAB en le triangle OCD. Quelle est l'image du triangle BOC par cette rotation ?</p>
    <p><b>4)</b> La figure ci-dessous représente un pavage dont le motif de base a la même forme que l'hexagone ci-dessus. On a numéroté certains de ces hexagones.</p>${ex("pavh","Pavage d'hexagones numérotés de 1 à 24",300)}
    <p>Quelle est l'image de l'hexagone 14 par la translation qui transforme l'hexagone 2 en l'hexagone 12 ?</p>`,
-   c:`<p><b>1)</b> C → F, D → A, E → B et O → O : l'image de CDEO est FABO, c'est-à-dire <b>ABOF</b> (proposition 2 : mêmes sommets, dans le même ordre autour de la figure).</p>
-   <p><b>2)</b> A → E et O → O (O est sur l'axe) : c'est le segment <b>[EO]</b>.</p>
-   <p><b>3)</b> Cette rotation envoie A sur C et B sur D : elle fait tourner de 120° dans le sens horaire. B → D, O → O et C → E : c'est le triangle <b>DOE</b>.</p>
-   <p><b>4)</b> Pour aller de l'hexagone 2 à l'hexagone 12, on se déplace d'une colonne vers la gauche et de trois demi-hexagones vers le bas. On fait le même déplacement à partir de l'hexagone 14 : c'est l'hexagone <b>19</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -452,3 +437,4 @@ eval:(()=>{
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-2");

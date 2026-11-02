@@ -104,14 +104,14 @@ window.S48={grid, pyrEdges, pyrFig, coneFig, conesFig, net, netSA, netReg, netTe
 /* ===================== données ===================== */
 const SOL=[ /* activité 1 : [n°, groupe, faces, sommets, arêtes, nb bases, nature, nb latérales, nature] */
  [1,"Parallélépipède rectangle",6,8,12,2,"rectangles",4,"rectangles"],
- [2,"Autre : cône de révolution",2,1,0,1,"disque",1,"portion de disque (face courbe)"],
+ [2,"",2,1,0,1,"disque",1,""],
  [3,"Cube",6,8,12,2,"carrés",4,"carrés"],
- [4,"Autre : pyramide à base rectangulaire",5,5,8,1,"rectangle",4,"triangles"],
- [5,"Cylindre",3,0,0,2,"disques",1,"face courbe (un rectangle quand on la déroule)"],
+ [4,"",5,5,8,1,"rectangle",4,"triangles"],
+ [5,"Cylindre",3,0,0,2,"disques",1,""],
  [6,"Prisme droit à base triangulaire",5,6,9,2,"triangles",3,"rectangles"],
- [7,"Prisme droit à base hexagonale",8,12,18,2,"hexagones",6,"rectangles"],
- [8,"Autre : cône de révolution",2,1,0,1,"disque",1,"portion de disque (face courbe)"],
- [9,"Autre : pyramide à base triangulaire (tétraèdre)",4,4,6,1,"triangle",3,"triangles"]];
+ [7,"",8,12,18,2,"hexagones",6,"rectangles"],
+ [8,"",2,1,0,1,"disque",1,""],
+ [9,"",4,4,6,1,"triangle",3,"triangles"]];
 /* exercice 2 : figures de M. Staal (en carreaux) */
 const PY=[
  {size:[10,11], base:[[1,10],[6,10],[9,7],[4,7]], S:[5,1.5], given:[[[1,10],[6,10]],[[6,10],[9,7]],[[1,10],[4,7],"h"],[[4,7],[9,7],"h"],[[5,1.5],[4,7],"h"]], Sd:[10,-6]},
@@ -187,8 +187,7 @@ exos:[
 {t:"Les solides", e:[
   {n:"Activité 1", t:"Remplir le tableau", w:"Sur ta feuille", h:`<p>Pour chaque solide, indique son groupe (cube, parallélépipède rectangle, prisme droit, cylindre ou autre : indique son nom), le nombre total de faces, de sommets et d'arêtes, puis le nombre et la nature de ses bases (faces parallèles au sol) et de ses faces latérales (les autres faces).</p>
    <div class="figs">${[1,2,3,4,5,6,7,8,9].map(i=>{ const N=[0,4,7,6,9,8,5,3,2,1][i]; /* numéro écrit dans l'image de M. Staal */ return fig(`Solide ${N}`,ex("s"+i,"Solide "+N,[0,150,150,100,110,90,100,150,100,110][i])); }).join("")}</div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>N°</th><th>Groupe</th><th>Faces</th><th>Sommets</th><th>Arêtes</th><th>Bases</th><th>Faces latérales</th></tr></thead><tbody>${SOL.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]} ${r[6]}</td><td>${r[7]} ${r[8]}</td></tr>`).join("")}</tbody></table></div>
-   <p>Le cylindre et le cône n'ont pas d'arête : leurs bords sont des cercles, pas des segments.</p><p>Les solides 4 et 9 ont des faces latérales triangulaires qui se rejoignent en un sommet : ce sont des <b>pyramides</b>. Les solides 2 et 8 sont des <b>cônes</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Les pyramides", e:[
   {n:"Activité 2", t:"Pyramides", w:"Sur ta feuille", h:`<p><b>1)</b> À l'aide de ces représentations en perspective cavalière et de ces patrons de pyramides (et de l'activité 1), trouve la définition d'une pyramide.</p>
@@ -196,37 +195,22 @@ exos:[
    <div class="figs">${fig("d)",ex("pd","Patron : le triangle EIN et trois triangles de sommet R",190))}${fig("e) ABCD est un carré de côté 5 cm et BE = 7 cm.",grid({size:[7,5.6],k:30,nogrid:true,segs:[[[0,5],[4.6,5]],[[4.6,5],[6.4,3.6]],[[0.5,0],[0,5]],[[0.5,0],[4.6,5]],[[0.5,0],[6.4,3.6]],[[0,5],[1.8,3.6],"h"],[[1.8,3.6],[6.4,3.6],"h"],[[0.5,0],[1.8,3.6],"h"],[[3.2,4.3],[0.5,0],"h"],[[0,5],[6.4,3.6],"h"],[[4.6,5],[1.8,3.6],"h"]],pts:[["E",[0.5,0],0,-10],["A",[0,5],-10,8],["B",[4.6,5],4,16],["C",[6.4,3.6],12,0],["D",[1.8,3.6],-12,-4],["F",[3.2,4.3],2,16]],w:220,alt:"Pyramide EABCD à base carrée, de hauteur [EF]"}).replace("</svg>",`<path d="M109.2 139.4 L118 137.5 L122.8 145.1" style="fill:none;stroke:var(--ink);stroke-width:1.5"/></svg>`))}${fig("f) ETUO est un carré.",ex("pf","Pyramide RETUO : base carrée de 3 cm, hauteur [RS] de 8 cm",170))}</div>
    <div class="figs">${fig("g)",ex("pg","Patron : le quadrilatère SEMP et quatre triangles de sommet T",170))}${fig("h)",ex("ph","Pyramide AEZI : base EZI, hauteur [AT] de 4",190))}${fig("i)",ex("pi","Pyramide de sommet P et de base QRST",170))}</div>
    <p>En t'aidant de ton cours, réponds aux questions suivantes.</p><p><b>2)</b> Colorie, au crayon de bois, la base de chaque pyramide.</p><p><b>3)</b> Entoure les tétraèdres en vert et les pyramides régulières en rouge.</p><p><b>4)</b> Si cela est possible, indique la hauteur de chaque pyramide.</p><p><b>5)</b> Sur une feuille de brouillon, construis le patron de la pyramide <b>e)</b>.</p>`,
-   c:`<p><b>1)</b> Une pyramide est un solide qui a une <b>base</b> en forme de <b>polygone</b> et des <b>faces latérales</b> qui sont des <b>triangles</b> ; ces triangles ont un sommet commun : le sommet de la pyramide.</p>
-   <p><b>2) et 4)</b></p><div class="scroll"><table class="std"><thead><tr><th></th><th>Base</th><th>Hauteur</th><th>Particularité</th></tr></thead><tbody>
-   <tr><th>a)</th><td>le pentagone ABCDE</td><td>pas tracée</td><td>—</td></tr>
-   <tr><th>b)</th><td>le pentagone ORITE (patron)</td><td>impossible sur un patron</td><td>régulière (côtés de la base et arêtes latérales codés)</td></tr>
-   <tr><th>c)</th><td>le rectangle ABCD</td><td>[SA], 12 cm</td><td>—</td></tr>
-   <tr><th>d)</th><td>le triangle EIN (patron)</td><td>impossible sur un patron</td><td>tétraèdre</td></tr>
-   <tr><th>e)</th><td>le carré ABCD</td><td>[EF]</td><td>régulière</td></tr>
-   <tr><th>f)</th><td>le carré ETUO</td><td>[RS], 8 cm</td><td>régulière</td></tr>
-   <tr><th>g)</th><td>le quadrilatère SEMP (patron)</td><td>impossible sur un patron</td><td>—</td></tr>
-   <tr><th>h)</th><td>le triangle EZI</td><td>[AT], 4</td><td>tétraèdre</td></tr>
-   <tr><th>i)</th><td>le quadrilatère QRST</td><td>pas tracée</td><td>—</td></tr></tbody></table></div>
-   <p><b>3)</b> Tétraèdres (en vert) : <b>d) et h)</b>. Pyramides régulières (en rouge) : <b>b), e) et f)</b> (base carrée ou pentagone aux côtés égaux et arêtes latérales de même longueur).</p>
-   <p><b>5)</b> Patron de la pyramide e) : le carré ABCD de 5 cm de côté et quatre triangles isocèles dont les côtés mesurent 5 cm, 7 cm et 7 cm (on trace les arcs de rayon 7 cm au compas).</p>${netReg(5,7,"EABCD",{w:300,alt:"Patron de la pyramide EABCD : un carré de 5 cm et quatre triangles isocèles de côtés 7 cm"})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Perspective cavalière", e:[
   {n:"Exercice 1", t:"Représentation en perspective cavalière d'un cône", w:"Sur ta feuille", h:`<p><b>a)</b> Complète les représentations en perspective cavalière des deux cônes de sommet S.</p>${ex("e1c","Deux cônes à compléter sur quadrillage",340)}<p><b>b)</b> Sur ton cahier, dessine deux représentations en perspective cavalière différentes d'un cône de sommet R.</p>`,
-   c:`<p><b>a)</b> En couleur, les traits ajoutés. La moitié arrière de la base est cachée : en pointillés.</p>${conesFig(CONES,true,[10,5],"Les deux cônes complétés")}<p><b>b)</b> Par exemple, un cône « debout » et un cône « la pointe en bas » (voir la correction de l'exercice 2 du cours) ; on nomme R le sommet.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Représentation en perspective cavalière de pyramides", w:"Sur ta feuille", h:`<p>Avec ton crayon de bois et ta règle, complète les représentations en perspective cavalière des différentes pyramides à base rectangulaire et de sommet S.</p>
    <div class="figs">${fig("①",ex("e2f1","Figure 1",180))}${fig("②",ex("e2f2","Figure 2",150))}${fig("③",ex("e2f3","Figure 3",200))}${fig("④",ex("e2f4","Figure 4",170))}</div>`,
-   c:`<p>On complète d'abord la base : c'est un parallélogramme (les côtés opposés sont parallèles et de même longueur). Puis on relie S aux quatre sommets de la base. Les arêtes cachées sont en pointillés.</p>
-   <div class="figs">${PY.map((o,i)=>fig("①②③④"[i],pyrFig(o,true))).join("")}</div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Patrons", e:[
   {n:"Exercice 3", t:"Patron d'une pyramide", w:"Sur ta feuille", h:`<p>Avec tes instruments de géométrie, construis le patron de la pyramide SABCD à base rectangulaire.</p>${ex("e3","Pyramide SABCD : SA = 5 cm perpendiculaire à la base, AB = 5 cm, BC = 4 cm",200)}<p><b>Données :</b></p><ul><li>le triangle SBC est rectangle en B ;</li><li>le triangle SDC est rectangle en D.</li></ul><p>Tu découperas et plieras ton patron pour vérifier qu'il est correct.</p>`,
-   c:`${netSA(5,4,5,{len:[["A","B","5 cm",0,14],["B","C","4 cm",26,0],["A","S1","5 cm",-32,0]]})}
-   <p>On trace la base : le rectangle ABCD (AB = 5 cm, BC = 4 cm).</p><p>[SA] est perpendiculaire à la base : SAB et SAD sont rectangles en A, avec SA = 5 cm.</p><p>SBC est rectangle en B : on reporte SB (déjà tracée sur SAB) au compas, perpendiculairement à [BC]. SDC est rectangle en D : on reporte SD (déjà tracée sur SAD).</p><p>Les arêtes qui se rejoignent quand on plie ont la même longueur : elles ont le même codage.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Patron d'un tétraèdre", w:"Sur ta feuille", h:`${ex("e4","Tétraèdre HDCB : HD = DC = CB = 6 cm, angles droits en D et en C",190)}<p>Construis le patron de ce tétraèdre.</p>`,
-   c:`${netTet(6)}<p>Les codages indiquent HD = DC = CB = 6 cm. Les angles ${'<span class="ang">HDC</span>'}, ${'<span class="ang">HDB</span>'} et ${'<span class="ang">DCB</span>'} sont droits.</p>
-   <p>On trace la base DCB (rectangle en C), puis la face HDC rectangle en D et la face HDB rectangle en D (HD = 6 cm).</p><p>La dernière face HCB est rectangle en C : on reporte HC au compas depuis la face HDC. Les arêtes qui se rejoignent ont le même codage.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Défi : trois représentations en perspective cavalière différentes", w:"Sur ta feuille", h:`<p>Complète les figures pour obtenir les représentations en perspective cavalière :</p><ul><li>d'un parallélépipède rectangle ;</li><li>de deux prismes droits à base triangulaire différents.</li></ul><div class="figs">${fig("",ex("defi","Le départ : trois segments sur quadrillage",150))}${fig("",ex("defi","Le départ : trois segments sur quadrillage",150))}${fig("",ex("defi","Le départ : trois segments sur quadrillage",150))}</div>`,
-   c:`<p>Une solution possible pour chaque figure (traits ajoutés en couleur, arêtes cachées en pointillés) :</p><div class="figs">${fig("Parallélépipède rectangle",defiFig("pave"))}${fig("Prisme : bases triangulaires en haut et en bas",defiFig("prisme1"))}${fig("Prisme : bases triangulaires devant et derrière",defiFig("prisme2"))}</div><p>Dans chaque cas, les arêtes parallèles dans la réalité restent parallèles sur le dessin, et elles ont la même longueur.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -291,3 +275,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-8");

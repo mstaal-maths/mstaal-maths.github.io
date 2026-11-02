@@ -191,14 +191,10 @@ exos:[
 <p><b>2 –</b> ${$g} est la fonction qui, à un nombre ${$x} de tickets achetés, associe le prix payé en €. Donne la relation algébrique de cette fonction : ${$g} : ${$x} ↦ …</p>
 <p><b>3 –</b> Trace la représentation graphique de la fonction ${$g} (${$x} de 0 à 7, ${fx("g")} de 0 à 10).</p>
 <p><b>4 –</b> Note les points communs entre ces deux fonctions (sur leur relation algébrique, leur représentation graphique…).</p>`,
-   c:`<p><b>Fonction n°1</b></p><p><b>1 –</b></p>${vt(`${$x} (antécédents)`,[-2,1,3],`${fx("f")} (images)`,[6,-3,-9])}<div class="calcs"><p class="calc">${fx("f","−2")} = −3 × (−2)<br>${fx("f","−2")} = 6</p><p class="calc">${fx("f","1")} = −3 × 1<br>${fx("f","1")} = −3</p><p class="calc">${fx("f","3")} = −3 × 3<br>${fx("f","3")} = −9</p></div>
-<p><b>2 –</b> On place les points (−2 ; 6), (1 ; −3) et (3 ; −9), puis on trace la droite.</p>${G_A1f}
-<p><b>Fonction n°2</b></p><p><b>1 –</b></p>${vt("Nombre de tickets achetés",[1,5,6],"Prix payé (en €)",["1,50","7,50","9"])}
-<p><b>2 –</b> ${$g} : ${$x} ↦ 1,5${$x}</p><p><b>3 –</b> On place les points (1 ; 1,5), (5 ; 7,5) et (6 ; 9), puis on trace la droite.</p>${G_A1g}
-<p><b>4 –</b> Points communs :</p><ul><li>les deux fonctions sont de la forme ${$x} ↦ ${$a}${$x} (on multiplie ${$x} par un nombre) ;</li><li>leurs tableaux de valeurs sont des tableaux de proportionnalité ;</li><li>leurs représentations graphiques sont des droites qui passent par l'origine du repère.</li></ul><p>Ce sont des <b>fonctions linéaires</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Reconnaître des fonctions linéaires", w:"Sur ta feuille", h:`<p>Entoure les fonctions linéaires et, pour celles-ci, indique leur coefficient.</p>
 ${cols([`${fx("f")} = 5${$x}`,`${fx("g")} = ${$x} × 4,2`,`${fx("h")} = 2${$x} + 1`,`${fx("i")} = −1,4${$x}`,`${fx("j")} = {2/3}${$x}`,`${fx("k")} = 1 + ${$x}`])}`,
-   c:tabH(["Fonction","Linéaire ?","Coefficient"],[[`${fx("f")} = 5${$x}`,"Oui","5"],[`${fx("g")} = ${$x} × 4,2`,"Oui","4,2"],[`${fx("h")} = 2${$x} + 1`,"Non (on ajoute 1)","—"],[`${fx("i")} = −1,4${$x}`,"Oui","−1,4"],[`${fx("j")} = {2/3}${$x}`,"Oui","{2/3}"],[`${fx("k")} = 1 + ${$x}`,"Non (on ajoute 1)","—"]])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Calcul d'images et d'antécédents", w:"Sur ton cahier", h:`<p><b>Situation 1 :</b> des cerises sont vendues à 4,35 € le kilo. On note ${$p} la fonction qui, à la masse ${$x} de cerises (en kg), associe le prix à payer (en €).</p>
 <p><b>1 –</b> Complète le tableau suivant sans justifier.</p>${vt($x,[0,1,"2,4","",""],fx("p"),["","","","21,75","29,58"])}
 <p><b>2 –</b> Vérifie que ${fx("p","3,6")} = 15,66. Interprète cette valeur (ce que signifie cette égalité pour la situation).</p>
@@ -206,29 +202,22 @@ ${cols([`${fx("f")} = 5${$x}`,`${fx("g")} = ${$x} × 4,2`,`${fx("h")} = 2${$x} +
 <p><b>Situation 2 :</b> on note ${$f} la fonction linéaire telle que ${fx("f")} = −2,4${$x}.</p>
 <p><b>1 –</b> Calcule l'image de 1,7 par la fonction ${$f}. (Rédige tes calculs avec le langage des fonctions.)</p>
 <p><b>2 –</b> Calcule l'antécédent de −3,6 par la fonction ${$f}. (Rédige tes calculs avec le langage des fonctions.)</p>`,
-   c:`<p><b>Situation 1</b></p><p><b>1 –</b></p>${vt($x,[0,1,"2,4",5,"6,8"],fx("p"),[0,"4,35","10,44","21,75","29,58"])}
-<p>4,35 × 2,4 = 10,44 · 21,75 ÷ 4,35 = 5 · 29,58 ÷ 4,35 = 6,8</p>
-<p><b>2 –</b></p><p class="calc">${fx("p","3,6")} = 4,35 × 3,6<br>${fx("p","3,6")} = 15,66</p><p>3,6 kg de cerises coûtent 15,66 €.</p>
-<p><b>3 –</b> a) ${fx("p")} = 4,35${$x} · b) Oui, ${$p} est une fonction linéaire de coefficient 4,35.</p>
-<p><b>Situation 2</b></p><p><b>1 –</b></p>${calc([`${fx("f","1,7")} = −2,4 × 1,7`,`${fx("f","1,7")} = −4,08`])}<p>L'image de 1,7 par ${$f} est −4,08.</p>
-<p><b>2 –</b> On cherche ${$x} tel que ${fx("f")} = −3,6.</p>${calc([`−2,4${$x} = −3,6`,[`${$x} = −3,6 ÷ (−2,4)`,"÷ (−2,4)"],`${$x} = 1,5`])}<p>L'antécédent de −3,6 par ${$f} est 1,5.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Représentation graphique d'une fonction linéaire", w:"Sur ta feuille", h:`<p><b>Partie 1 :</b> aux États-Unis, les distances sont mesurées en miles. 1 mile représente environ 1,6 km.</p>
 <p>${$d} est la fonction qui, à une distance ${$x} en miles, associe la distance en km. Donc ${$d} est une fonction linéaire telle que ${fx("d")} = 1,6${$x}.</p>
 <p>Trace la représentation graphique de la fonction ${$d} (${$x} de 0 à 2, ${fx("d")} de 0 à 3,5).</p>
 <p><b>Partie 2 :</b> sur ton cahier, représente graphiquement la fonction ${fx("f")} = −2${$x}.</p>`,
-   c:`<p><b>Partie 1 :</b> ${$d} est linéaire : sa droite passe par l'origine. ${fx("d","1")} = 1,6 et ${fx("d","2")} = 3,2 : on place (1 ; 1,6) et (2 ; 3,2).</p>${G_E3a}
-<p><b>Partie 2 :</b> ${$f} est linéaire : sa droite passe par l'origine.</p><p class="calc">${fx("f","1")} = −2 × 1<br>${fx("f","1")} = −2</p><p>On place (1 ; −2).</p>${G_E3b}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Reconnaître graphiquement une fonction linéaire", w:"Sur ta feuille", h:`<p>Voici les représentations graphiques de 5 fonctions : ${$f}, ${$g}, ${$h}, ${$i} et ${X("j")}.</p>
 <div class="schRow">${img("3k19ex/e4a.png","Repère avec deux droites : i coupe l'axe des ordonnées au-dessus de 0 et monte ; j passe par l'origine et descend",300)}${img("3k19ex/e4b.png","Repère avec trois droites passant par l'origine : f et g montent (f plus vite que g), h descend",360)}</div>
 <p>Pour chaque fonction, dis si c'est une fonction linéaire (oui ou non). Pour les fonctions linéaires, donne le signe de leur coefficient.</p>
 <p><i>Pour aller plus loin (pas au programme de 3<sup>e</sup>) : tu peux indiquer la relation algébrique de chaque fonction.</i></p>`,
-   c:`${tabH(["Fonction","Linéaire ?","Signe du coefficient"],[[$f,"Oui : la droite passe par l'origine","positif (la droite monte)"],[$g,"Oui : la droite passe par l'origine","positif (la droite monte)"],[$h,"Oui : la droite passe par l'origine","négatif (la droite descend)"],[$i,"Non : la droite ne passe pas par l'origine","—"],[X("j"),"Oui : la droite passe par l'origine","négatif (la droite descend)"]])}
-<p><i>Pour aller plus loin :</i> la droite de ${$f} passe par (1 ; 3), donc ${fx("f")} = 3${$x} · celle de ${$g} par (2 ; 3), donc ${fx("g")} = 1,5${$x} · celle de ${$h} par (1 ; −1), donc ${fx("h")} = −${$x}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4 bis", t:"Modéliser une situation et reconnaître une fonction linéaire", w:"Sur ta feuille", h:`<p>Pour chaque situation, écris la fonction ${$p}, puis dis si c'est une fonction linéaire (oui ou non).</p>
 <p><b>1 –</b> Des abricots sont vendus à 2,50 € le kg. On note ${$p} la fonction qui, à la masse ${$x} d'abricots (en kg), associe le prix à payer (en €).</p>
 <p><b>2 –</b> Sur internet, Joanna commande des DVD au prix de 9,95 € l'un. Elle paye en plus 3,90 € de frais de port. On note ${$p} la fonction qui, au nombre ${$x} de DVD achetés, associe le prix à payer (en €).</p>
 <p><b>3 –</b> On considère un carré de côté ${$x}. On note ${$p} la fonction qui, au côté ${$x} du carré, associe son périmètre.</p>`,
-   c:`<p><b>1 –</b> ${fx("p")} = 2,5${$x} : <b>oui</b>, fonction linéaire (de coefficient 2,5).</p><p><b>2 –</b> ${fx("p")} = 9,95${$x} + 3,90 : <b>non</b>, on ajoute les frais de port.</p><p><b>3 –</b> ${fx("p")} = 4${$x} : <b>oui</b>, fonction linéaire (de coefficient 4).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
 ]},
 {t:"Fonctions affines", e:[
   {n:"Activité 2", t:"Les fonctions affines", w:"Sur ta feuille", h:`<p><b>Fonction n°1 :</b> soit ${$f} la fonction telle que ${fx("f")} = −2${$x} + 3.</p>
@@ -239,29 +228,20 @@ ${cols([`${fx("f")} = 5${$x}`,`${fx("g")} = ${$x} × 4,2`,`${fx("h")} = 2${$x} +
 <p><b>2 –</b> ${$g} est la fonction qui, à un nombre ${$x} de livres achetés, associe le prix payé en €. Donne la relation algébrique de cette fonction : ${fx("g")} = …</p>
 <p><b>3 –</b> Trace la représentation graphique de la fonction ${$g} (${$x} de 0 à 5,5, ${fx("g")} de 0 à 25).</p>
 <p><b>4 –</b> Ces deux fonctions sont-elles linéaires ? Pourquoi ?</p><p><b>5 –</b> Quels sont les points communs de ces deux fonctions ?</p>`,
-   c:`<p><b>Fonction n°1</b></p><p><b>1 –</b></p>${vt($x,[-2,0,1],fx("f"),[7,3,1])}<div class="calcs"><p class="calc">${fx("f","−2")} = −2 × (−2) + 3<br>${fx("f","−2")} = 7</p><p class="calc">${fx("f","0")} = −2 × 0 + 3<br>${fx("f","0")} = 3</p><p class="calc">${fx("f","1")} = −2 × 1 + 3<br>${fx("f","1")} = 1</p></div>
-<p><b>2 –</b></p>${G_A2f}
-<p><b>Fonction n°2</b></p><p><b>1 –</b></p>${vt("Nombre de livres achetés",[1,3,5],"Prix payé (en €)",[6,14,22])}<p>4 × 1 + 2 = 6 · 4 × 3 + 2 = 14 · 4 × 5 + 2 = 22</p>
-<p><b>2 –</b> ${fx("g")} = 4${$x} + 2</p><p><b>3 –</b></p>${G_A2g}
-<p><b>4 –</b> Non : elles ne sont pas de la forme ${$a}${$x} (on ajoute un nombre), leurs tableaux ne sont pas des tableaux de proportionnalité et leurs droites ne passent pas par l'origine.</p>
-<p><b>5 –</b> Elles sont de la forme ${$a}${$x} + ${$b} et leurs représentations graphiques sont des droites. Ce sont des <b>fonctions affines</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Reconnaître des fonctions affines", w:"Sur ta feuille", h:`<p>Entoure les fonctions affines et, pour celles-ci, indique la valeur de ${$a} (le coefficient directeur) et la valeur de ${$b} (l'ordonnée à l'origine).</p>
 ${cols([`${fx("f")} = 3${$x} + 9`,`${fx("g")} = 2,4${$x} − 6`,`${fx("h")} = 2${sq($x)} + 3`,`${fx("i")} = <span class="fr"><span>1</span><span>${$x}</span></span> + 7`,`${fx("j")} = {2/3}${$x} − 3`,`${fx("k")} = 5 + 7${$x}`,`${fx("l")} = −2${$x}`,`${fx("m")} = 5`])}`,
-   c:tabH(["Fonction","Affine ?",`${$a}`,`${$b}`],[[`${fx("f")} = 3${$x} + 9`,"Oui","3","9"],[`${fx("g")} = 2,4${$x} − 6`,"Oui","2,4","−6"],[`${fx("h")} = 2${sq($x)} + 3`,`Non (il y a ${sq($x)})`,"—","—"],[`${fx("i")} = <span class="fr"><span>1</span><span>${$x}</span></span> + 7`,`Non (${$x} est au dénominateur)`,"—","—"],[`${fx("j")} = {2/3}${$x} − 3`,"Oui","{2/3}","−3"],[`${fx("k")} = 5 + 7${$x}`,"Oui","7","5"],[`${fx("l")} = −2${$x}`,"Oui (linéaire)","−2","0"],[`${fx("m")} = 5`,"Oui (constante)","0","5"]])},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Calcul d'images et d'antécédents", w:"Sur ton cahier", h:`<p><b>Situation 1 :</b> on a le programme de calcul suivant.</p>${prog("",["Choisir un nombre","Multiplier le nombre par −4","Soustraire 3"])}
 <p>On note ${$h} la fonction qui, au nombre choisi, associe le résultat du programme.</p>
 <p><b>1 –</b> Donne l'expression algébrique de la fonction affine ${$h}.</p><p><b>2 –</b> Quelle est l'image de −6 par la fonction ${$h} ?</p><p><b>3 –</b> Quel est l'antécédent de 10 par la fonction ${$h} ?</p>
 <p><b>Situation 2 :</b> on a la fonction affine ${$g} telle que ${fx("g")} = 2 + 3${$x}.</p>
 <p><b>1 –</b> Quelle est l'image de {4/5} par la fonction ${$g} ?</p><p><b>2 –</b> Quel est l'antécédent de 12 par la fonction ${$g} ?</p>`,
-   c:`<p><b>Situation 1</b></p><p><b>1 –</b> ${$x} → −4${$x} → −4${$x} − 3. Donc ${fx("h")} = −4${$x} − 3.</p>
-<p><b>2 –</b></p>${calc([`${fx("h","−6")} = −4 × (−6) − 3`,`${fx("h","−6")} = 24 − 3`,`${fx("h","−6")} = 21`])}<p>L'image de −6 par ${$h} est 21.</p>
-<p><b>3 –</b> On résout ${fx("h")} = 10.</p>${calc([`−4${$x} − 3 = 10`,[`−4${$x} = 13`,"+ 3"],[`${$x} = 13 ÷ (−4) = −3,25`,"÷ (−4)"]])}<p>L'antécédent de 10 par ${$h} est −3,25.</p>
-<p><b>Situation 2</b></p><p><b>1 –</b></p>${calc([`${fx("g","{4/5}")} = 2 + 3 × {4/5}`,`${fx("g","{4/5}")} = {10/5} + {12/5}`,`${fx("g","{4/5}")} = {22/5}`,`${fx("g","{4/5}")} = 4,4`])}<p>L'image de {4/5} par ${$g} est {22/5}, c'est-à-dire 4,4.</p>
-<p><b>2 –</b> On résout ${fx("g")} = 12.</p>${calc([`2 + 3${$x} = 12`,[`3${$x} = 10`,"− 2"],[`${$x} = {10/3}`,"÷ 3"]])}<p>L'antécédent de 12 par ${$g} est {10/3}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"De la représentation graphique à l'expression algébrique", w:"Sur ta feuille", h:`${img("3k19ex/e7.png","Repère avec quatre droites nommées m, n, p et q",420)}
 <p>Chacune des droites représente une des quatre fonctions ci-dessous. Écris le nom de la droite qui représente chaque fonction.</p>
 ${cols([`${fx("f")} = −5${$x} + 3`,`${fx("g")} = 3${$x} − 2`,`${fx("h")} = −0,8${$x}`,`${fx("j")} = 2${$x}`])}`,
-   c:`${tabH(["Fonction","Droite","Pourquoi"],[[`${fx("f")} = −5${$x} + 3`,"(m)",`${$a} = −5 &lt; 0 : elle descend ; elle coupe l'axe des ordonnées en 3`],[`${fx("g")} = 3${$x} − 2`,"(p)",`${$a} = 3 &gt; 0 : elle monte ; elle coupe l'axe des ordonnées en −2`],[`${fx("h")} = −0,8${$x}`,"(n)","linéaire : elle passe par l'origine et descend"],[`${fx("j")} = 2${$x}`,"(q)","linéaire : elle passe par l'origine et monte"]])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
 ]},
 {t:"Vu au brevet", e:[
   {n:"Exercice 8", t:"Polynésie, septembre 2018", w:"Sur ton cahier", h:`<p>Une personne s'intéresse à un magazine sportif qui paraît une fois par semaine. Elle étudie plusieurs formules d'achat de ces magazines, détaillées ci-après.</p>
@@ -273,21 +253,13 @@ ${cols([`${fx("f")} = −5${$x} + 3`,`${fx("g")} = 3${$x} − 2`,`${fx("h")} = �
 <p>b) Avec 120 €, combien peut-on acheter de magazines au maximum dans une année avec la formule C ?</p>
 <p>c) Si on décide de ne pas dépasser un budget de 100 € pour l'année, quelle est alors la formule qui permet d'acheter le plus grand nombre de magazines ?</p>
 <p><b>3.</b> Indique la formule la plus avantageuse selon le nombre de magazines achetés dans l'année.</p>`,
-   c:`<p><b>1.</b> La formule A est représentée par la droite (D2) · la formule B par la droite (D3) · la formule C par la droite (D1).</p>${G_POLY(1)}
-<p><b>2.</b> a) On lit 60 € (3,75 × 16 = 60).</p><p>b) On lit 40 magazines ((120 − 30) ÷ 2,25 = 40).</p><p>c) On lit un peu plus de 31 magazines, mais pas 32, avec la formule C. C'est la formule C (avec la formule A, on n'en achète que 26 ; la formule B coûte 130 €).</p>
-<p><b>3.</b> On cherche, pour chaque nombre de magazines, la droite la plus basse :</p><ul><li>de 0 à 19 magazines, la formule la plus avantageuse est la formule A ;</li><li>pour 20 magazines, les formules A et C sont les plus avantageuses (75 €) ;</li><li>de 21 à 44 magazines, la formule la plus avantageuse est la formule C ;</li><li>de 45 à 52 magazines, c'est la formule B.</li></ul>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Nouvelle-Calédonie, décembre 2017", w:"Sur ton cahier", h:`<p>Voici un programme de calcul :</p>${prog("",["Choisir un nombre","Ajouter 1 à ce nombre","Calculer le carré du résultat","Soustraire le carré du nombre de départ au résultat précédent","Écrire le résultat"])}
 <p><b>1.</b> On choisit 4 comme nombre de départ. Prouve par le calcul que le résultat obtenu avec le programme est 9.</p>
 <p><b>2.</b> On note ${$x} le nombre choisi.</p><p>a) Exprime le résultat du programme en fonction de ${$x}.</p><p>b) Prouve que ce résultat est égal à 2${$x} + 1.</p>
 <p><b>3.</b> Soit ${$f} la fonction définie par ${fx("f")} = 2${$x} + 1.</p><p>a) Calcule l'image de 0 par ${$f}.</p><p>b) Détermine par le calcul l'antécédent de 5 par ${$f}.</p><p>c) Dans le repère ci-dessous, trace la droite représentative de la fonction ${$f}.</p>${G_NC(0)}
 <p>d) Par lecture graphique, détermine le résultat obtenu en choisissant −3 comme nombre de départ dans le programme de calcul. Laisse les traits de construction apparents.</p>`,
-   c:`<p><b>1.</b> 4 → 4 + 1 = 5 → 5<sup>2</sup> = 25 → 25 − 4<sup>2</sup> = 25 − 16 = 9.</p>
-<p><b>2.</b> a) ${$x} → ${$x} + 1 → (${$x} + 1)<sup>2</sup> → (${$x} + 1)<sup>2</sup> − ${sq($x)}.</p>
-<p>b) On note R le résultat.</p>${calc([`R = (${$x} + 1)<sup>2</sup> − ${sq($x)}`,`R = (${$x} + 1)(${$x} + 1) − ${sq($x)}`,`R = ${sq($x)} + ${$x} + ${$x} + 1 − ${sq($x)}`,`R = 2${$x} + 1`])}
-<p><b>3.</b> a)</p><p class="calc">${fx("f","0")} = 2 × 0 + 1<br>${fx("f","0")} = 1</p><p>L'image de 0 est égale à 1.</p>
-<p>b) On cherche ${$x} tel que ${fx("f")} = 5.</p>${calc([`2${$x} + 1 = 5`,[`2${$x} = 4`,"− 1"],[`${$x} = 2`,"÷ 2"]])}<p>L'antécédent de 5 par ${$f} est 2.</p>
-<p>c) ${$f} est affine : on place (0 ; 1) et (2 ; 5) (car ${fx("f","2")} = 5), puis on trace la droite.</p>${G_NC(1)}
-<p>d) La verticale passant par le point d'abscisse −3 coupe la droite en un point d'ordonnée −5. En choisissant −3 comme nombre de départ, on obtient −5.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
 ]}
 ],
 
@@ -381,3 +353,4 @@ ${plot({x:[0,16],y:[0,100],u:30,v:2.6,gy:10,ys:20,xs:2,c:[D(6,0,{a:0,b:100/6,col
 };
 window.FN19={F,P,X,fx,FR,SV,mono,lin,calc,cols,prog,sq,vt,tabH,plot,red,isDec,gcd,RED,BLUE,GRN,D,nz,r6};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-19");

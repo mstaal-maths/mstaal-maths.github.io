@@ -148,104 +148,79 @@ exos:[
   {n:"Activité 1", t:"Les ballons (calculatrice autorisée)", w:"Sur ton cahier", h:`${img("3k1ex/ballons.jpg","Un bouquet de ballons de baudruche",130)}
    <p><b>1.</b> À la fin d'une fête de village, les 7 enfants présents se partagent équitablement les 402 ballons de baudruche qui ont servi à la décoration.</p><p>Combien reste-t-il de ballons ?</p>
    <p><b>2.</b> L'année suivante, les enfants présents se partagent équitablement la <b>totalité</b> des 402 ballons utilisés.</p><p>Combien pouvait-il y avoir d'enfants ? <i>Donne toutes les possibilités.</i></p>`,
-   c:`<p><b>1.</b> 402 = 7 × 57 + 3 : chaque enfant reçoit 57 ballons et il reste <b>3 ballons</b>.</p>
-   <p><b>2.</b> Le nombre d'enfants doit être un <b>diviseur</b> de 402 (le partage tombe juste).</p><p class="calc">402 = 1 × 402<br>402 = 2 × 201<br>402 = 3 × 134<br>402 = 6 × 67</p><p>Les diviseurs de 402 sont donc : 1, 2, 3, 6, 67, 134, 201 et 402.</p><p>Il y a plusieurs enfants : il pouvait y avoir <b>2, 3, 6, 67, 134, 201 ou 402 enfants</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Diviseurs et multiples", w:"Sur ta feuille", h:`<p><b>a)</b> Cite tous les diviseurs de 8.</p><p><b>b)</b> Cite trois multiples de 8.</p><p><b>c)</b> Cite tous les diviseurs de 20.</p><p><b>d)</b> Cite trois multiples de 20.</p><p><b>e)</b> Cite les <b>trois premiers multiples</b> de 20.</p><p><b>f)</b> Cite tous les diviseurs de 36.</p>`,
-   c:`<p><b>a)</b> 8 = 1 × 8 = 2 × 4. Les diviseurs de 8 sont 1, 2, 4 et 8.</p><p><b>b)</b> 8 × 1 = 8 ; 8 × 2 = 16 ; 8 × 3 = 24. Par exemple 8, 16 et 24.</p><p><b>c)</b> 20 = 1 × 20 = 2 × 10 = 4 × 5. Les diviseurs de 20 sont 1, 2, 4, 5, 10 et 20.</p><p><b>d)</b> 20 × 1 = 20 ; 20 × 2 = 40 ; 20 × 3 = 60. Par exemple 20, 40 et 60.</p><p><b>e)</b> 20 × 0 = 0 ; 20 × 1 = 20 ; 20 × 2 = 40. Les trois premiers multiples de 20 sont 0, 20 et 40.</p><p><b>f)</b> 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. Les diviseurs de 36 sont 1, 2, 3, 4, 6, 9, 12, 18 et 36.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Critères de divisibilité", w:"Sur ta feuille", h:`<p><b>a)</b> Complète le tableau en mettant une croix lorsque le nombre est divisible par 2, 3, 5, 9 ou 10.</p>${critTab([3640,924,1435,837],false)}
    <p><b>b)</b> Énonce les critères de divisibilité par 2, 3, 5, 9 et 10.</p><p>Un nombre est divisible par 2 si…</p><p>Un nombre est divisible par 3 si…</p><p>Un nombre est divisible par 5 si…</p><p>Un nombre est divisible par 9 si…</p><p>Un nombre est divisible par 10 si…</p>`,
-   c:`<p><b>a)</b></p>${critTab([3640,924,1435,837],true)}
-   <p>Sommes des chiffres : 3640 → 3 + 6 + 4 + 0 = 13 · 924 → 9 + 2 + 4 = 15 · 1435 → 1 + 4 + 3 + 5 = 13 · 837 → 8 + 3 + 7 = 18</p>
-   <p><b>b)</b> Un nombre est divisible par 2 s'il se termine par 0, 2, 4, 6 ou 8 (il est pair).</p><p>Un nombre est divisible par 3 si la somme de ses chiffres est un multiple de 3.</p><p>Un nombre est divisible par 5 s'il se termine par 0 ou 5.</p><p>Un nombre est divisible par 9 si la somme de ses chiffres est un multiple de 9.</p><p>Un nombre est divisible par 10 s'il se termine par 0.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité rapide 1", t:"Diviseurs et multiples", w:"Sur ton cahier", h:`<p>Indique :</p><p><b>a)</b> tous les diviseurs de 24 ;</p><p><b>b)</b> tous les diviseurs de 40 ;</p><p><b>c)</b> les 3 premiers multiples de 24 ;</p><p><b>d)</b> les 3 premiers multiples de 40.</p>`,
-   c:`<p><b>a)</b> 24 = 1 × 24 = 2 × 12 = 3 × 8 = 4 × 6. Les diviseurs de 24 sont 1, 2, 3, 4, 6, 8, 12 et 24.</p><p><b>b)</b> 40 = 1 × 40 = 2 × 20 = 4 × 10 = 5 × 8. Les diviseurs de 40 sont 1, 2, 4, 5, 8, 10, 20 et 40.</p><p><b>c)</b> 24 × 0 = 0 ; 24 × 1 = 24 ; 24 × 2 = 48. Les 3 premiers multiples de 24 sont 0, 24 et 48.</p><p><b>d)</b> 40 × 0 = 0 ; 40 × 1 = 40 ; 40 × 2 = 80. Les 3 premiers multiples de 40 sont 0, 40 et 80.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité rapide 2", t:"Vrai ou faux ?", w:"Sur ton cahier", h:`<p><b>a)</b> Vrai ou faux ? 2 075 est un multiple de 5. Justifie.</p><p><b>b)</b> Vrai ou faux ? 3 est un diviseur de 403. Justifie.</p><p><b>c)</b> Donne 3 diviseurs de 28.</p><p><b>d)</b> Existe-t-il des nombres qui ne possèdent aucun diviseur ?</p>`,
-   c:`<p><b>a)</b> Vrai : 2 075 se termine par 5 (2 075 = 5 × 415).</p><p><b>b)</b> Faux : 4 + 0 + 3 = 7 et 7 n'est pas un multiple de 3.</p><p><b>c)</b> Par exemple 1, 2 et 4 (les diviseurs de 28 sont 1, 2, 4, 7, 14 et 28).</p><p><b>d)</b> Non : tout nombre entier non nul est divisible par 1 et par lui-même. Il a donc au moins un diviseur.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité rapide 3", t:"Affirmation vraie ou fausse", w:"Sur ton cahier", h:`<p>Indique, <b>en justifiant rigoureusement</b>, si l'affirmation est vraie ou fausse.</p><p><b>Affirmation :</b> plus un nombre est grand, plus il a de diviseurs.</p>`,
-   c:`<p><b>Faux.</b> Un contre-exemple suffit :</p><p>12 a 6 diviseurs : 1, 2, 3, 4, 6 et 12.</p><p>13 est plus grand que 12, mais il n'a que 2 diviseurs : 1 et 13.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 1", t:"Qui suis-je ?", w:"Sur ton cahier", h:`<p>Je suis un nombre entier de 4 chiffres, multiple de 9 et de 10.</p><p>Mon chiffre des dizaines est le même que mon chiffre des centaines.</p><p>Mon chiffre des unités de mille divise tous les nombres entiers.</p><p><b>Qui suis-je ?</b></p>`,
-   c:`<p>Le chiffre qui divise tous les nombres entiers est 1 : le nombre s'écrit 1 ? ? 0 (il se termine par 0 car il est multiple de 10).</p><p>Les chiffres des centaines et des dizaines sont égaux : 1 <i>a</i> <i>a</i> 0.</p><p>Multiple de 9 : 1 + <i>a</i> + <i>a</i> + 0 doit être un multiple de 9. Avec <i>a</i> = 4 : 1 + 4 + 4 + 0 = 9. (Avec les autres chiffres, la somme fait 1, 3, 5, 7, 11, 13, 15, 17 ou 19 : ce n'est pas un multiple de 9.)</p><p>Je suis <b>1 440</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 2", t:"Exactement 5 diviseurs", w:"Sur ton cahier", h:`<p>Quel est le plus petit nombre possédant exactement 5 diviseurs ?</p>`,
-   c:`<p><b>16</b>, car ses diviseurs sont 1, 2, 4, 8 et 16.</p><p>Aucun nombre plus petit n'a exactement 5 diviseurs (par exemple 12 en a 6 et 15 en a 4).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 3", t:"Quel est ce nombre ?", w:"Sur ton cahier", h:`<p>C'est un nombre entier compris entre 100 et 400.</p><p>Il est pair.</p><p>Il est divisible par 11.</p><p>Il a aussi 3 et 5 comme diviseurs.</p><p><b>Quel est ce nombre ?</b></p>`,
-   c:`<p>Il est divisible par 2, 3, 5 et 11 : c'est un multiple de 2 × 3 × 5 × 11 = 330.</p><p>Entre 100 et 400, le seul multiple de 330 est <b>330</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 4", t:"Les romans de Charlotte", w:"Sur ton cahier", h:`<p>Charlotte adore la lecture et possède entre 400 et 450 romans. Elle décide de revendre ses livres sur internet pour en acheter d'autres.</p><p>Lorsqu'elle regroupe ses livres par 3, par 4 ou par 5, il en reste toujours 1.</p><p><b>Combien de romans possède-t-elle exactement ?</b></p>`,
-   c:`<p>Si on enlève 1 livre, le nombre obtenu est un multiple de 3, de 4 et de 5, donc un multiple de 60.</p><p>Entre 399 et 449, le seul multiple de 60 est 420 : 420 est un multiple de 3 (4 + 2 + 0 = 6), de 4 (420 = 4 × 105) et de 5 (il se termine par 0).</p><p>Charlotte possède <b>421 romans</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Nombres premiers", e:[
   {n:"Activité 2", t:"Crible d'Ératosthène", w:"Sur ta feuille", h:`<p>Dans le tableau suivant :</p><p><b>a)</b> Entoure 2 puis raye tous les multiples de 2.</p><p><b>b)</b> Entoure 3 puis raye tous les multiples de 3.</p><p><b>c)</b> Recommence ainsi avec le premier nombre non rayé suivant, jusqu'à ce que tous les nombres soient rayés ou entourés.</p><p><b>d)</b> Que peut-on dire de tous les nombres entourés ?</p>${crible(false)}`,
-   c:`<p><b>a) b) c)</b> On entoure 2, 3, 5, 7, puis 11, 13… (en gras) ; leurs multiples sont rayés. 1 est rayé : il n'a qu'un seul diviseur.</p>${crible(true)}
-   <p><b>d)</b> Les nombres entourés sont les <b>nombres premiers</b> inférieurs à 100 : ils n'ont que deux diviseurs, 1 et eux-mêmes.</p><p>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 et 97.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Affirmations sur les nombres premiers", w:"Sur ton cahier", h:`<p>Indique, <b>en justifiant rigoureusement</b>, si chacune des affirmations est vraie ou fausse.</p><p><b>Affirmation 1 :</b> 210 est un nombre premier.</p><p><b>Affirmation 2 :</b> 51 est un nombre premier.</p><p><b>Affirmation 3 :</b> tous les nombres impairs sont des nombres premiers.</p><p><b>Affirmation 4 :</b> un nombre premier ne peut pas être pair.</p>`,
-   c:`<p><b>Affirmation 1 : fausse.</b> 210 se termine par 0 : il est divisible par 2 (210 = 2 × 105). Il a donc d'autres diviseurs que 1 et 210.</p>
-   <p><b>Affirmation 2 : fausse.</b> 5 + 1 = 6 est un multiple de 3 : 51 = 3 × 17. Il a 4 diviseurs : 1, 3, 17 et 51.</p>
-   <p><b>Affirmation 3 : fausse.</b> Contre-exemple : 9 est impair, mais 9 = 3 × 3 n'est pas premier.</p>
-   <p><b>Affirmation 4 : fausse.</b> Contre-exemple : 2 est pair et il est premier (ses seuls diviseurs sont 1 et 2).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 5", t:"Quel est le numéro de l'appartement de Bastien ?", w:"Sur ton cahier", h:`<p>Bastien a invité chez lui son ami Pierre et lui a donné quelques indices pour trouver le numéro de son appartement.</p>
    <p><b>Indice 1 :</b> le numéro de l'appartement de Bastien est un nombre premier plus petit que 100.</p><p><b>Indice 2 :</b> Noé, le voisin de Bastien, habite un appartement dont le numéro est divisible par 3 et par 5.</p><p><b>Indice 3 :</b> le numéro de l'appartement de Noé est le nombre entier qui précède le numéro de l'appartement de Bastien.</p>
    <p><b>a)</b> Devant l'immeuble, Pierre se rend compte qu'il lui manque des informations pour trouver de façon certaine le numéro de l'appartement de Bastien. Quels sont tous les numéros d'appartement possibles ?</p>
    <p><b>b)</b> Bastien réalise alors que son ami Pierre ne pourra pas trouver le numéro. Il lui envoie un SMS : le numéro de l'appartement de Noé est divisible par 4. Quel est le numéro de l'appartement de Bastien ?</p>`,
-   c:`<p><b>a)</b> Le numéro de Noé est divisible par 3 et par 5, donc par 15 : 15, 30, 45, 60, 75 ou 90.</p><p>Le numéro de Bastien est le suivant : 16, 31, 46, 61, 76 ou 91.</p><p>16, 46 et 76 sont pairs ; 91 = 7 × 13. Seuls 31 et 61 sont premiers : <b>31 ou 61</b>.</p>
-   <p><b>b)</b> 30 n'est pas divisible par 4, mais 60 = 4 × 15 l'est. Noé habite au 60 et Bastien au <b>61</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Décomposition en produit de facteurs premiers", e:[
   {n:"Exercice en + 1", t:"Décomposer en produit de facteurs premiers", w:"Sur ton cahier", h:`<p>Décompose les nombres suivants en produit de facteurs premiers.</p><div class="calcs">${[26,16,90,147,243,168].map(n=>`<span>${n}</span>`).join("")}</div>`,
-   c:[26,16,90,147,243,168].map(n=>`<p class="calc">${stepLines(n).join("<br>")}${steps(n).length>1&&pow(factors(n))!==flat(factors(n))?` = ${pow(factors(n))}`:""}</p>`).join("")},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice en + 2", t:"Utiliser une décomposition", w:"Sur ton cahier", h:`<p>On sait que 8 712 = 88 × 99.</p><p><b>a)</b> Écris la décomposition en facteurs premiers de 8 712.</p><p><b>b)</b> Parmi les nombres suivants, quels sont les diviseurs de 8 712 ? <i>Ne fais pas de calculs.</i></p><div class="calcs"><span>6</span><span>33</span><span>8</span><span>2<sup>2</sup> × 3 × 11</span><span>3<sup>2</sup> × 11<sup>2</sup></span><span>2<sup>2</sup> × 7</span></div>`,
-   c:`<p><b>a)</b> 88 = 2 × 2 × 2 × 11 et 99 = 3 × 3 × 11.</p><p class="calc">8 712 = 2 × 2 × 2 × 11 × 3 × 3 × 11 = 2<sup>3</sup> × 3<sup>2</sup> × 11<sup>2</sup></p>
-   <p><b>b)</b> Un diviseur de 8 712 ne contient que des facteurs de sa décomposition.</p><p>6 = 2 × 3 : <b>oui</b> · 33 = 3 × 11 : <b>oui</b> · 8 = 2<sup>3</sup> : <b>oui</b> · 2<sup>2</sup> × 3 × 11 : <b>oui</b> · 3<sup>2</sup> × 11<sup>2</sup> : <b>oui</b> · 2<sup>2</sup> × 7 : <b>non</b> (7 n'apparaît pas dans la décomposition de 8 712)</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Plus grand diviseur commun et problèmes de partage", e:[
   {n:"Activité 3", t:"Le petit-déjeuner", w:"Sur ton cahier", h:`${img("3k1ex/croissants.png","Une corbeille de croissants et de pains au chocolat",220)}
    <p><b>Problème 1 :</b> nous préparons les tables du petit-déjeuner dans une chambre d'hôtes. Ce matin, le boulanger nous a livré 16 croissants et 28 pains au chocolat.</p><p>Nous voulons les répartir dans des corbeilles ayant toutes le même contenu.</p>
    <p>Combien pourrons-nous faire de corbeilles et quel sera le contenu de chaque corbeille ? <b>Donne toutes les possibilités.</b></p>`,
-   c:`<p>Le nombre de corbeilles doit diviser 16 <b>et</b> 28.</p><p>Diviseurs de 16 : 1, 2, 4, 8, 16. Diviseurs de 28 : 1, 2, 4, 7, 14, 28.</p><p>Diviseurs communs : 1, 2 et 4.</p>
-   ${tab(["Nombre de corbeilles","Croissants par corbeille","Pains au chocolat par corbeille"],[["1","16","28"],["2","8","14"],["4","4","7"]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 3 (suite)", t:"Problèmes de répartition", w:"Sur ton cahier", h:`<p><b>Problème 2 :</b> chez le fleuriste, il reste 12 roses rouges et 18 roses blanches. Le commerçant souhaite faire des bouquets identiques avec toutes les fleurs qu'il lui reste.</p><p><b>a)</b> Combien de bouquets pourra-t-il faire ? <b>Donne toutes les possibilités.</b></p><p><b>b)</b> Quelle sera la composition de chaque bouquet ?</p>
    <p><b>Problème 3 :</b> Louise achète 78 crevettes et 52 huîtres. Elle invite des amis à dîner. Elle souhaite utiliser tous les fruits de mer et les présenter dans des assiettes identiques.</p><p><b>a)</b> Combien d'assiettes <b>au maximum</b> peut-elle faire ?</p><p><b>b)</b> Quelle sera alors la composition de chaque assiette ?</p>
    <p><b>Problème 4 :</b> nous préparons les tables du petit-déjeuner dans un hôtel. Ce matin, le boulanger nous a livré 120 croissants et 132 pains au chocolat. Nous voulons les répartir dans un nombre maximum de corbeilles ayant toutes le même contenu.</p><p><b>a)</b> Combien pourrons-nous faire de corbeilles ?</p><p><b>b)</b> Quel sera le contenu de chaque corbeille ?</p>`,
-   c:`<p><b>Problème 2.</b> Diviseurs communs à 12 et 18 : 1, 2, 3 et 6.</p>${tab(["Nombre de bouquets","Roses rouges","Roses blanches"],[["1","12","18"],["2","6","9"],["3","4","6"],["6","2","3"]])}
-   <p><b>Problème 3.</b> 78 = 2 × 3 × 13 = 26 × 3 et 52 = 2 × 2 × 13 = 26 × 2.</p><p><b>a)</b> Le plus grand diviseur commun est 2 × 13 = 26 : <b>26 assiettes</b> au maximum.</p><p><b>b)</b> 78 ÷ 26 = 3 et 52 ÷ 26 = 2 : <b>3 crevettes et 2 huîtres</b> par assiette.</p>
-   <p><b>Problème 4.</b> 120 = 2 × 2 × 2 × 3 × 5 = 12 × 10 et 132 = 2 × 2 × 3 × 11 = 12 × 11.</p><p><b>a)</b> Le plus grand diviseur commun est 2 × 2 × 3 = 12 : <b>12 corbeilles</b>.</p><p><b>b)</b> 120 ÷ 12 = 10 et 132 ÷ 12 = 11 : <b>10 croissants et 11 pains au chocolat</b> par corbeille.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Recherche du plus grand diviseur commun (PGCD)", w:"Sur ta feuille", h:`<p>Pour chaque cas, écris chaque nombre sous la forme « produit des facteurs communs × reste », puis donne le plus grand diviseur commun aux deux nombres.</p>
    <p><b>Cas n° 1 :</b> 63 = 3 × 3 × 7 et 42 = 2 × 3 × 7</p><p><b>Cas n° 2 :</b> 300 = 2 × 2 × 3 × 5 × 5 et 350 = 2 × 5 × 5 × 7</p><p><b>Cas n° 3 :</b> 1 638 = 2 × 3 × 3 × 7 × 13 et 572 = 2 × 2 × 11 × 13</p>
    <p><b>Cas n° 4 :</b> 1 575 = 3<sup>2</sup> × 5<sup>2</sup> × 7 et 750 = 2 × 3 × 5<sup>3</sup></p><p><b>Cas n° 5 :</b> 1 040 = 2<sup>4</sup> × 5 × 13 et 3 500 = 2<sup>2</sup> × 5<sup>3</sup> × 7</p><p><b>Cas n° 6 :</b> 675 = 3<sup>3</sup> × 5<sup>2</sup> et 75 = 3 × 5<sup>2</sup></p><p><b>Cas n° 7 :</b> 40 = 2<sup>3</sup> × 5 et 57 = 3 × 19</p>`,
-   c:[[63,42],[300,350],[1638,572],[1575,750],[1040,3500],[675,75],[40,57]].map(([a,b],i)=>{ const g=gcd(a,b); return `<p><b>Cas n° ${i+1} :</b></p><p class="calc">${pgcdLine(a,g)}<br>${pgcdLine(b,g)}</p><p>${comTxt(a,b)}. Le plus grand diviseur commun à ${sp(a)} et ${sp(b)} est <b>${sp(g)}</b>.</p>`; }).join("")},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Chez le primeur", w:"Sur ton cahier", h:`<p><i>Calculatrice autorisée pour les décompositions : pas besoin de détailler les étapes de calculs.</i></p><p>Un primeur dispose de 440 pommes et 100 poires. Il souhaite préparer avec tous ses fruits des paquets de composition identique.</p><p>Combien de paquets le primeur peut-il faire au maximum et quelle sera la composition de chaque paquet ?</p>`,
-   c:`<p class="calc">440 = 2 × 2 × 2 × 5 × 11 = 20 × 22<br>100 = 2 × 2 × 5 × 5 = 20 × 5</p><p>Le plus grand diviseur commun à 440 et 100 est 2 × 2 × 5 = 20 : le primeur peut faire <b>20 paquets</b> au maximum.</p><p>440 ÷ 20 = 22 et 100 ÷ 20 = 5 : chaque paquet contiendra <b>22 pommes et 5 poires</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Colliers de perles", w:"Sur ton cahier", h:`<p>Laura possède 12 perles bleues et 30 perles grises. Elle souhaite faire des colliers identiques avec toutes ses perles.</p><p><b>a)</b> Combien de colliers peut-elle faire ? Donne toutes les possibilités. Elle ne veut pas faire qu'un seul collier.</p><p><b>b)</b> Quelle sera la composition de chaque collier ?</p>`,
-   c:`<p><b>a)</b> Diviseurs de 12 : 1, 2, 3, 4, 6, 12. Diviseurs de 30 : 1, 2, 3, 5, 6, 10, 15, 30.</p><p>Diviseurs communs : 1, 2, 3 et 6. Elle ne veut pas un seul collier : elle peut faire <b>2, 3 ou 6 colliers</b>.</p>
-   <p><b>b)</b></p>${tab(["Nombre de colliers","Perles bleues","Perles grises"],[["2","6","15"],["3","4","10"],["6","2","5"]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice en + 3", t:"Plantation (calculatrice autorisée)", w:"Sur ton cahier", h:`<p>Ludovic dirige un grand terrain de camping de forme triangulaire dont les dimensions sont 518 m, 448 m et 350 m.</p><p>Pour le protéger du vent et du soleil, Ludovic envisage de planter des arbres, régulièrement espacés, le long des côtés, avec un arbre à chaque sommet du triangle.</p><p>Il décide que la distance qui séparera deux arbres consécutifs doit être un nombre entier de mètres.</p>
    <p><b>1.</b> Quel est le nombre minimum d'arbres qu'il faut acheter ?</p><p><b>2.</b> Sachant qu'un arbre coûte 54 €, quel sera le coût de cet investissement ?</p>`,
-   c:`<p><b>1.</b> La distance entre deux arbres doit diviser 518, 448 et 350. Pour avoir le moins d'arbres possible, elle doit être la plus grande possible : c'est le plus grand diviseur commun.</p>
-   <p class="calc">518 = 2 × 7 × 37<br>448 = 2 × 2 × 2 × 2 × 2 × 2 × 7<br>350 = 2 × 5 × 5 × 7</p><p>Le plus grand diviseur commun est 2 × 7 = 14 : un arbre tous les 14 m.</p>
-   <p>Périmètre : 518 + 448 + 350 = 1 316 m. Sur un tour complet, il y a autant d'arbres que d'intervalles : 1 316 ÷ 14 = 94.</p><p>Il faut acheter au minimum <b>94 arbres</b>.</p>
-   <p><b>2.</b> 94 × 54 = 5 076 : l'investissement coûtera <b>5 076 €</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Bilan", e:[
   {n:"QCM", t:"Arithmétique QCM", w:"Sur ton cahier", h:`<p>Pour chaque proposition, il y a toujours une ou plusieurs bonnes réponses. Trouve-les toutes.</p>
    ${tab(["Proposition","A","B","C"],[["1. 423 est un nombre :","divisible par 9.","premier.","qui n'est pas premier."],["2. 59 est un nombre :","premier.","qui n'est pas premier.","divisible par 9."],["3. 3 021 est un nombre :","premier.","divisible par 3.","multiple de 1 007."],["4. La décomposition en facteurs premiers de 32 est :","8 × 4","4 × 2 × 2 × 2","2 × 2 × 2 × 2 × 2"],["5. La décomposition en facteurs premiers de 56 est :","7 × 8","2 × 2 × 2 × 7","28 × 2"],["6. 600 = 8 × 3 × 25. La décomposition en produit de facteurs premiers de 600 est :","2 × 2 × 2 × 3 × 5 × 5","8 × 3 × 25","3 × 5 × 5 × 8"]])}`,
-   c:`<p><b>1. A et C.</b> 4 + 2 + 3 = 9 : 423 est divisible par 9 (423 = 9 × 47), donc il n'est pas premier.</p>
-   <p><b>2. A.</b> 59 n'est divisible que par 1 et 59 : il est premier (5 + 9 = 14, il n'est pas divisible par 9).</p>
-   <p><b>3. B et C.</b> 3 + 0 + 2 + 1 = 6 : 3 021 est divisible par 3, et 3 021 = 3 × 1 007 : c'est un multiple de 1 007. Il n'est pas premier.</p>
-   <p><b>4. C.</b> 8 et 4 ne sont pas premiers : 32 = 2 × 2 × 2 × 2 × 2.</p>
-   <p><b>5. B.</b> 56 = 2 × 2 × 2 × 7 (8 et 28 ne sont pas premiers).</p>
-   <p><b>6. A.</b> 600 = 2 × 2 × 2 × 3 × 5 × 5 : seuls des nombres premiers (8 et 25 ne le sont pas).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Soutien", e:[
   {n:"Soutien 1", t:"Tournoi de handball", w:"Sur ton cahier", h:`<p>Le professeur d'EPS veut organiser un tournoi de handball avec toutes les classes de 3<sup>e</sup> du collège. Il souhaite que chaque équipe soit composée du même nombre de filles et du même nombre de garçons.</p><p>Sachant qu'il y a 96 filles et 132 garçons, donne le nombre maximum d'équipes que le professeur peut faire. Indique la composition d'une équipe.</p>`,
-   c:`<p class="calc">96 = 2 × 2 × 2 × 2 × 2 × 3 = 12 × 8<br>132 = 2 × 2 × 3 × 11 = 12 × 11</p><p>Le plus grand diviseur commun est 2 × 2 × 3 = 12 : <b>12 équipes</b> au maximum.</p><p>96 ÷ 12 = 8 et 132 ÷ 12 = 11 : chaque équipe a <b>8 filles et 11 garçons</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Soutien 2", t:"Plus grand diviseur commun", w:"Sur ton cahier", h:`<p>Dans chaque cas, décompose chaque nombre en produit de facteurs premiers, et donne le plus grand diviseur commun à ces deux nombres.</p><p><b>Série 1 :</b> 240 et 252</p><p><b>Série 2 :</b> 86 et 153</p>`,
-   c:`<p><b>Série 1 :</b></p><p class="calc">240 = 2 × 2 × 2 × 2 × 3 × 5 = 2<sup>4</sup> × 3 × 5<br>252 = 2 × 2 × 3 × 3 × 7 = 2<sup>2</sup> × 3<sup>2</sup> × 7</p><p>Le plus grand diviseur commun est 2 × 2 × 3 = <b>12</b>.</p>
-   <p><b>Série 2 :</b></p><p class="calc">86 = 2 × 43<br>153 = 3 × 3 × 17 = 3<sup>2</sup> × 17</p><p>Aucun facteur premier commun : le plus grand diviseur commun est <b>1</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Soutien 3", t:"Vrai ou faux ?", w:"Sur ton cahier", h:`<p>Pour chaque affirmation, dis si elle est vraie ou fausse, et <b>justifie rigoureusement</b> ta réponse.</p><p><b>a)</b> 36 est un multiple de 6.</p><p><b>b)</b> 387 est un nombre premier.</p><p><b>c)</b> 16 possède 4 diviseurs.</p>`,
-   c:`<p><b>a)</b> Vrai : 6 × 6 = 36.</p><p><b>b)</b> Faux : 3 + 8 + 7 = 18 est un multiple de 3, donc 387 est divisible par 3 (387 = 3 × 129).</p><p><b>c)</b> Faux : 16 a 5 diviseurs : 1, 2, 4, 8 et 16.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Soutien 4", t:"Tournoi de softball", w:"Sur ton cahier", h:`<p>Le professeur d'EPS veut organiser un tournoi de softball avec toutes les classes de 3<sup>e</sup> du collège.</p><p>Il souhaite que, dans chaque équipe, il y ait le même nombre de filles et le même nombre de garçons, qu'il n'y ait aucun remplaçant, et qu'une équipe soit composée de 8 à 15 joueurs.</p><p>Sachant qu'il y a 72 filles et 108 garçons, donne toutes les compositions possibles des équipes.</p>`,
-   c:`<p>Le nombre d'équipes doit diviser 72 et 108.</p><p class="calc">72 = 2<sup>3</sup> × 3<sup>2</sup> et 108 = 2<sup>2</sup> × 3<sup>3</sup></p><p>Le plus grand diviseur commun est 2<sup>2</sup> × 3<sup>2</sup> = 36. Les diviseurs communs sont les diviseurs de 36 : 1, 2, 3, 4, 6, 9, 12, 18 et 36.</p>
-   <p>Il y a 72 + 108 = 180 joueurs. Une équipe a 180 ÷ (nombre d'équipes) joueurs, entre 8 et 15. Avec 1, 2, 3, 4 ou 6 équipes, il y aurait 180, 90, 60, 45 ou 30 joueurs par équipe : c'est beaucoup trop.</p>
-   ${tab(["Nombre d'équipes","9","12","18","36"],[["Joueurs par équipe","20 (trop)","15","10","5 (pas assez)"]])}
-   <p><b>12 équipes de 6 filles et 9 garçons</b> (15 joueurs), ou <b>18 équipes de 4 filles et 6 garçons</b> (10 joueurs).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -324,3 +299,4 @@ exos:[
 const WRAPC=h=>typeof h!=="string"?h:h.replace(/(<div class="calcs"[^>]*>)([\s\S]*?)(<\/div>)/g,(m,a,b,c)=>a+b.replace(/<p class="calc">([\s\S]*?)<\/p>/g,'<div><p class="calc">$1</p></div>')+c);
 { const D=CH["3e-1"]; (D.cours||[]).forEach(c=>c.h=WRAPC(c.h)); (D.exos||[]).forEach(S=>S.e.forEach(e=>{ e.h=WRAPC(e.h); e.c=WRAPC(e.c); })); if(D.eval) D.eval.exos.forEach(e=>{ e.h=WRAPC(e.h); e.c=WRAPC(e.c); }); }
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-1");

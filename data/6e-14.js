@@ -93,47 +93,47 @@ cours:[
 exos:[
 {t:"Unités de numération et unités de mesure", e:[
   {n:"Activité 1", t:"Que veulent dire les préfixes ?", w:"Sur ta feuille", h:`<p>Complète à l'aide du tableau du cours.</p><p>a) « déci » veut dire …… · b) « centi » veut dire …… · c) « milli » veut dire …… · d) « kilo » veut dire ……</p><p>e) 1 dg = un …… de g · f) 1 cL = un …… de L · g) 1 mm = un …… de m · h) 1 hm = …… m</p>`,
-   c:`<p>a) un <b>dixième</b> · b) un <b>centième</b> · c) un <b>millième</b> · d) <b>mille</b> (1 000)</p><p>e) un <b>dixième</b> de g · f) un <b>centième</b> de L · g) un <b>millième</b> de m · h) 1 hm = <b>100</b> m</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Des égalités", w:"Sur ta feuille", h:`<p>a) 1 m = …… dm · b) 1 dm = …… m · c) 1 cL = …… L · d) 1 kg = …… g · e) 1 mg = …… g · f) 1 hL = …… L · g) 1 dam = …… m · h) 1 L = …… mL</p>`,
-   c:`<p>a) 1 m = <b>10</b> dm · b) 1 dm = <b>0,1</b> m · c) 1 cL = <b>0,01</b> L · d) 1 kg = <b>1 000</b> g</p><p>e) 1 mg = <b>0,001</b> g · f) 1 hL = <b>100</b> L · g) 1 dam = <b>10</b> m · h) 1 L = <b>1 000</b> mL</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Convertir des longueurs", w:"Sur ta feuille", h:`<p>a) 4 cm = …… mm · b) 3,7 m = …… cm · c) 20 cm = …… m · d) 2 300 m = …… km · e) 52 mm = …… cm · f) 0,45 km = …… m · g) 1 250 cm = …… m · h) 0,06 m = …… mm</p><p>i) Un terrain de football mesure 0,1 km, c'est-à-dire …… m, ou encore …… dam, ou …… hm.</p>`,
-   c:`<p>a) 1 cm = 10 mm : 4 × 10 = <b>40</b> mm · b) 1 m = 100 cm : 3,7 × 100 = <b>370</b> cm · c) 20 ÷ 100 = <b>0,2</b> m · d) 1 km = 1 000 m : 2 300 ÷ 1 000 = <b>2,3</b> km</p><p>e) 52 ÷ 10 = <b>5,2</b> cm · f) 0,45 × 1 000 = <b>450</b> m · g) 1 250 ÷ 100 = <b>12,5</b> m · h) 1 m = 1 000 mm : 0,06 × 1 000 = <b>60</b> mm</p><p>i) 0,1 km = <b>100</b> m = <b>10</b> dam = <b>1</b> hm.</p>${tabConv("L",[{cells:["","","","3,","7","0",""],txt:"3,7 m = 370 cm"},{cells:["","","","1","2,","5","0"],txt:"1 250 cm = 12,5 m"},{cells:["","","","0,","0","6","0"],txt:"0,06 m = 60 mm"}])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Masses et contenances", w:"Sur ta feuille", h:`<p>a) 2,5 kg = …… g · b) 750 g = …… kg · c) 3 dg = …… g · d) 1,5 L = …… cL · e) 33 cL = …… L · f) 250 mL = …… L · g) 4 hL = …… L · h) 0,8 g = …… mg</p>`,
-   c:`<p>a) 1 kg = 1 000 g : 2,5 × 1 000 = <b>2 500</b> g · b) 750 ÷ 1 000 = <b>0,75</b> kg · c) 1 dg = 0,1 g : 3 ÷ 10 = <b>0,3</b> g · d) 1 L = 100 cL : 1,5 × 100 = <b>150</b> cL</p><p>e) 33 ÷ 100 = <b>0,33</b> L · f) 1 L = 1 000 mL : 250 ÷ 1 000 = <b>0,25</b> L · g) 1 hL = 100 L : 4 × 100 = <b>400</b> L · h) 1 g = 1 000 mg : 0,8 × 1 000 = <b>800</b> mg</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Ranger des longueurs", w:"Sur ta feuille", h:`<p>Range ces longueurs dans l'ordre croissant. Commence par les convertir dans la même unité.</p><p class="calc">1,2 m ; 95 cm ; 0,013 km ; 1 050 mm ; 11 dm</p>`,
-   c:`<p>En cm : 1,2 m = 120 cm ; 95 cm ; 0,013 km = 1 300 cm ; 1 050 mm = 105 cm ; 11 dm = 110 cm.</p><p class="calc"><b>95 cm &lt; 1 050 mm &lt; 11 dm &lt; 1,2 m &lt; 0,013 km</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Problèmes", w:"Sur ta feuille", h:`<p><b>Problème 1 :</b> une bouteille contient 1,5 L de jus. Combien de verres de 25 cL peut-on remplir ?</p><p><b>Problème 2 :</b> un sac contient 2 kg de farine. Une recette de gâteau utilise 350 g de farine. Combien de gâteaux peut-on faire ? Quelle masse de farine restera-t-il ?</p>`,
-   c:`<p><b>Problème 1 :</b> 1,5 L = 150 cL. 150 ÷ 25 = 6. On peut remplir <b>6 verres</b>.</p><p><b>Problème 2 :</b> 2 kg = 2 000 g. 2 000 = 350 × 5 + 250. On peut faire <b>5 gâteaux</b>, et il restera <b>250 g</b> de farine.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Comparer des périmètres", e:[
   {n:"Activité 2", t:"Le jardin", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Le polygone vert représente un jardin. Chaque carreau du quadrillage a pour côté 1 m.</p><p>1) Quelle longueur de grillage faut-il pour clôturer entièrement le jardin ?</p><p>2) Dessine sur le quadrillage un autre jardin qui a le même périmètre, mais une autre forme.</p></div>${ex("act2","Le jardin vert sur le quadrillage",240)}</div>`,
-   c:`<p>1) En faisant le tour, je compte les côtés de carreau : 3 + 3 + 7 + 3 + 3 + 4 + 2 + 2 + 5 + 6 = 38. Il faut <b>38 m</b> de grillage.</p><p>2) Par exemple, un rectangle de 12 m sur 7 m : 12 + 7 + 12 + 7 = 38 m. (Il y a beaucoup d'autres réponses possibles.)</p>${jardin}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Comparer sans calculer", w:"Sur ta feuille", h:`<p>Sur le quadrillage, compte les côtés de carreau pour trouver le périmètre de chaque figure (en côtés de carreau).</p>${ex("e6","Quatre figures F1, F2, F3, F4 sur un quadrillage",490)}<p>Quelles figures ont le même périmètre ?</p>`,
-   c:`<p>Je fais le tour de chaque figure en comptant les côtés de carreau :</p><p>F1 : 5 + 4 + 5 + 4 = <b>18</b><br>F2 : 6 + 6 + 2 + 2 + 2 + 2 + 2 + 6 = <b>28</b><br>F3 : 7 + 2 + 7 + 2 = <b>18</b><br>F4 : 2 + 2 + 3 + 2 + 3 + 2 + 2 + 2 + 3 + 2 + 3 + 2 = <b>28</b></p><p><b>F1 et F3</b> ont le même périmètre, ainsi que <b>F2 et F4</b>, alors qu'elles n'ont pas la même forme.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Comparer avec le compas", w:"Sur ta feuille", h:`<p>Sans rien mesurer, reporte au compas les côtés du triangle ABC sur la demi-droite [Ox), puis ceux du quadrilatère EFGH sur la demi-droite [Sy). Quelle figure a le plus grand périmètre ?</p>${ex("e7","Le triangle ABC, le quadrilatère EFGH et deux demi-droites",490)}`,
-   c:`${ex("e7c","Les côtés reportés bout à bout sur les deux demi-droites",490)}<p>Le segment obtenu sur [Sy) est plus long : <b>le quadrilatère EFGH a le plus grand périmètre</b>. <i>(Sur la fiche : environ 10,4 cm pour EFGH et 9,3 cm pour ABC.)</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer un périmètre", e:[
   {n:"Exercice 8", t:"Mesurer puis calculer", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Mesure les côtés du polygone MNPQR, puis calcule son périmètre.</p><p>MN = …… cm · NP = …… cm · PQ = …… cm · QR = …… cm · RM = …… cm</p></div>${ex("e8","Le polygone MNPQR en forme de maison",200)}</div>`,
-   c:`<p>Sur la fiche imprimée : MN = <b>5 cm</b> · NP = <b>3 cm</b> · PQ = <b>3,5 cm</b> · QR = <b>3,5 cm</b> · RM = <b>3 cm</b>.</p><p class="calc">P = MN + NP + PQ + QR + RM<br>P = 5 + 3 + 3,5 + 3,5 + 3<br>P = 18 cm</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Carrés et rectangles", w:"Sur ta feuille", h:`<p>1) Calcule le périmètre d'une salle carrée de 6,5 m de côté.</p><p>2) Une feuille A4 est un rectangle de 21 cm sur 29,7 cm. Calcule son périmètre.</p><p>3) Calcule le périmètre d'un rectangle de longueur 1,2 m et de largeur 80 cm. Attention aux unités !</p>`,
-   c:`${KCS([KC("P",["4 × 6,5","<b>26 m</b>"],"1)"), KC("P",["2 × (29,7 + 21)","2 × 50,7","<b>101,4 cm</b>"],"2)")])}<p>3) 1,2 m = 120 cm.</p>${KC("P",["2 × (120 + 80)","2 × 200","<b>400 cm</b>, soit 4 m"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Des polygones", w:"Sur ta feuille", h:`<p>Les figures sont faites à main levée. Calcule le périmètre de chaque polygone. Pour le polygone 1, donne le résultat en cm.</p>${ex("e10","Polygone 1 avec des longueurs en dm, cm et mm ; polygone 2 en forme de L",490)}`,
-   c:`<p><b>Polygone 1 :</b> je convertis en cm : 0,3 dm = 3 cm et 18 mm = 1,8 cm.</p><p class="calc">P = 3 + 4 + 1,8 + 2,5 + 3 + 2<br>P = 16,3 cm</p><p><b>Polygone 2 :</b></p><p class="calc">P = 5 + 4 + 3 + 2 + 8 + 6<br>P = 28 m</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Retrouver une longueur", w:"Sur ta feuille", h:`<p>1) Un terrain carré a un périmètre de 24 m. Longueur de son côté ?</p><p>2) Un autre terrain carré a un périmètre de 25 m. Longueur de son côté ?</p><p>3) Un rectangle a un périmètre de 30 cm et une longueur de 9 cm. Sa largeur ?</p><p>4) Un triangle équilatéral a un périmètre de 13,5 cm. Longueur de ses côtés ?</p>`,
-   c:`<p>1) 24 ÷ 4 = <b>6 m</b>.</p><p>2) 25 ÷ 4 = <b>6,25 m</b>.</p><p>3) La longueur et la largeur font la moitié du périmètre : 30 ÷ 2 = 15 cm. Largeur : 15 − 9 = <b>6 cm</b>.</p><p>4) 13,5 ÷ 3 = <b>4,5 cm</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Clôturer un champ", w:"Sur ta feuille", h:`<p>Un champ rectangulaire mesure 120 m sur 75 m. Le fermier veut l'entourer avec 3 rangées de fil.</p><p>1) Quelle longueur de fil lui faut-il ?</p><p>2) Le fil est vendu en rouleaux de 250 m. Combien de rouleaux doit-il acheter ?</p>`,
-   c:`<p>1) Le périmètre P :</p><p class="calc">P = 2 × (120 + 75)<br>P = 2 × 195<br>P = 390 m</p><p>Avec 3 rangées : 3 × 390 = <b>1 170 m</b> de fil.</p><p>2) 1 170 = 250 × 4 + 170 : 4 rouleaux ne suffisent pas (il manque 170 m). Il doit acheter <b>5 rouleaux</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La longueur d'un cercle", e:[
   {n:"Activité 3", t:"Des objets ronds", w:"Sur ta feuille", h:`<p>Avec un mètre de couturière, mesure le diamètre et le tour de quatre objets ronds (boîte, verre, rouleau…). Complète, puis calcule le quotient du tour par le diamètre à la calculatrice.</p><div class="scroll"><table class="std"><thead><tr><th>Objet</th><th>Diamètre d</th><th>Tour P</th><th>P ÷ d (arrondi au dixième)</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table></div><p>Que remarques-tu ?</p>`,
-   c:`<p>Exemple : un verre de diamètre 7 cm a un tour d'environ 22 cm : 22 ÷ 7 ≈ 3,1.</p><p>Pour tous les objets, on trouve un quotient d'environ <b>3,1</b> : le tour d'un cercle est toujours un peu plus de 3 fois son diamètre. Ce nombre est <b>π</b> (π ≈ 3,14).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Calculer la longueur d'un cercle", w:"Sur ta feuille", h:`${ex("e13","a) cercle de centre O et de rayon 3 cm ; b) cercle de centre I et de diamètre 10 cm",330)}<p>1) Sans calculatrice, donne un ordre de grandeur de la longueur de chaque cercle (prends π ≈ 3).</p><p>2) Calcule la longueur de chaque cercle, arrondie à l'unité. Rédige tes calculs.</p>`,
-   c:`<p>1) a) Le diamètre est 6 cm : environ 3 × 6 = <b>18 cm</b>. b) Environ 3 × 10 = <b>30 cm</b>.</p><p>2)</p>${KCS([KC("P",["2 × π × r","2 × π × 3","≈ 18,85","≈ <b>19 cm</b>"],"a)"), KC("P",["π × d","π × 10","≈ 31,42","≈ <b>31 cm</b>"],"b)")])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Des problèmes", w:"Sur ta feuille", h:`<p><b>Problème 1 :</b> le cadran de la montre de Nina est un cercle de 2,3 cm de diamètre. Calcule sa longueur, arrondie au dixième.</p><p><b>Problème 2 :</b> le rond central d'un terrain de football a un rayon de 9,15 m. Calcule sa longueur, arrondie au centième.</p><p><b>Problème 3 :</b> une roue de vélo a un diamètre de 70 cm. Quelle distance parcourt le vélo quand la roue fait 1 tour ? Et 100 tours ? Donne les résultats arrondis au dixième.</p>`,
-   c:`<p><b>Problème 1 :</b> la longueur P du cadran :</p><p class="calc">P = π × 2,3<br>P ≈ 7,23</p><p>La longueur du cadran est environ <b>7,2 cm</b>.</p><p><b>Problème 2 :</b> la longueur P du rond central :</p><p class="calc">P = 2 × π × 9,15<br>P ≈ 57,491</p><p>Le rond central mesure environ <b>57,49 m</b>.</p><p><b>Problème 3 :</b> en 1 tour, le vélo parcourt la longueur P de la roue :</p><p class="calc">P = π × 70<br>P ≈ 219,91</p><p>Soit environ <b>219,9 cm</b>. En 100 tours, la distance d :</p><p class="calc">d = 100 × π × 70<br>d ≈ 21 991,15</p><p>Soit environ <b>21 991,1 cm</b> (environ 220 m).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Demi-cercle et piste", w:"Sur ta feuille", h:`<div class="cpt"><p>1) Calcule le périmètre de cette figure, formée d'un demi-cercle et du segment [AB]. Arrondis au dixième.</p>${ex("e15a","Un demi-cercle de diamètre AB = 6 cm",170)}</div><div class="cpt"><p>2) Une piste d'athlétisme est formée de deux lignes droites de 85 m et de deux demi-cercles de 73 m de diamètre. Calcule la longueur d'un tour, arrondie au mètre.</p>${ex("e15b","Une piste : deux lignes droites de 85 m et deux demi-cercles de 73 m de diamètre",210)}</div>`,
-   c:`<p>1) Le demi-cercle mesure la moitié d'un cercle de diamètre 6 cm : π × 6 ÷ 2 ≈ 9,42 cm. On ajoute le segment [AB] : P ≈ 9,42 + 6 = 15,42, soit environ <b>15,4 cm</b>.</p><p>2) Les deux demi-cercles forment un cercle entier de diamètre 73 m : π × 73 ≈ 229,34 m. On ajoute les deux lignes droites : 229,34 + 2 × 85 = 399,34. Un tour mesure environ <b>399 m</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -214,3 +214,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-14");

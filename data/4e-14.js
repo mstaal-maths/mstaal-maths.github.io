@@ -114,41 +114,30 @@ cours:[
 exos:[
 {t:"Multiplier des fractions", e:[
   {n:"Exercice 1", t:"Multiplier puis simplifier", w:"Sur ton cahier", h:`<p>Calcule et donne le résultat sous forme d'une fraction simplifiée.</p><p>A = {3/5} × {7/2}</p><p>B = {1/4} × {3/5}</p><p>C = {−1/5} × {5/−3}</p><p>D = {−3/5} × {7/9}</p><p>E = 6 × {1/5}</p><p>F = (−9) × {−2/3}</p>`,
-   c:`${calc("A",["{3/5} × {7/2}","{3 × 7/5 × 2}","{21/10}"])}${calc("B",["{1/4} × {3/5}","{1 × 3/4 × 5}","{3/20}"])}
-   ${calc("C",["{−1/5} × {5/−3}","{−1 × 5/5 × (−3)}","{−5/−15}","{−5 ÷ 5/−15 ÷ 5}","{−1/−3}","{1/3}"])}<p>Deux nombres négatifs que l'on divise donnent un nombre positif.</p>
-   ${calc("D",["{−3/5} × {7/9}","{−3 × 7/5 × 9}","{−21/45}","{−21 ÷ 3/45 ÷ 3}","{−7/15}"])}
-   ${calc("E",["6 × {1/5}","{6/1} × {1/5}","{6/5}"])}${calc("F",["(−9) × {−2/3}","{−9/1} × {−2/3}","{18/3}","{18 ÷ 3/3 ÷ 3}","{6/1}","6"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Simplifier avant de multiplier", w:"Sur ton cahier", h:`<p>Calcule en simplifiant avant d'effectuer les multiplications.</p><p>A = {3/7} × {8/3}</p><p>B = {2/15} × {15/11}</p><p>C = {14/23} × {1/7}</p><p>D = {2/11} × {3/4}</p><p>E = {7/8} × {1/21}</p><p>F = {2/3} × {3/4} × {4/5}</p>`,
-   c:`${calc("A",["{3/7} × {8/3}","{3 × 8/7 × 3}","{8/7}"])}${calc("B",["{2/15} × {15/11}","{2 × 15/15 × 11}","{2/11}"])}${calc("C",["{14/23} × {1/7}","{14 × 1/23 × 7}","{7 × 2 × 1/23 × 7}","{2/23}"])}
-   ${calc("D",["{2/11} × {3/4}","{2 × 3/11 × 4}","{2 × 3/11 × 2 × 2}","{3/22}"])}${calc("E",["{7/8} × {1/21}","{7 × 1/8 × 21}","{7 × 1/8 × 7 × 3}","{1/24}"])}${calc("F",["{2/3} × {3/4} × {4/5}","{2 × 3 × 4/3 × 4 × 5}","{2/5}"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Décomposer pour simplifier", w:"Sur ton cahier", h:`<p>Calcule et donne le résultat sous forme d'une fraction simplifiée.</p><p>A = {35/26} × {13/70}</p><p>B = {45/24} × {8/9}</p><p>C = {63/36} × {12/81}</p><p>D = {32/27} × {54/28}</p>`,
-   c:`${calc("A",["{35/26} × {13/70}","{35 × 13/26 × 70}","{35 × 13/13 × 2 × 35 × 2}","{1/4}"])}${calc("B",["{45/24} × {8/9}","{45 × 8/24 × 9}","{9 × 5 × 8/8 × 3 × 9}","{5/3}"])}
-   ${calc("C",["{63/36} × {12/81}","{63 × 12/36 × 81}","{9 × 7 × 12/3 × 12 × 9 × 9}","{7/27}"])}${calc("D",["{32/27} × {54/28}","{32 × 54/27 × 28}","{4 × 8 × 6 × 9/9 × 3 × 7 × 4}","{8 × 6/3 × 7}","{8 × 3 × 2/3 × 7}","{16/7}"])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Prendre une fraction d'un nombre", e:[
   {n:"Exercice 4", t:"Les bonbons", w:"Sur ton cahier", h:`<p>Arthur achète un sachet de 30 bonbons.</p><p>Les {2/5} des bonbons sont au chocolat et le reste des bonbons sont au caramel.</p><p>Combien y a-t-il de bonbons au chocolat ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${bande(5,2,6)}<p>30 ÷ 5 = 6 : {1/5} du paquet représente 6 bonbons.</p><p>{2/5} des bonbons sont au chocolat, donc on fait 2 × 6 = 12.</p>
-   <p><b>Méthode 2 :</b></p><p class="calc">{2/5} × 30 = {2 × 30/5} = {2 × 5 × 6/5} = 12</p><p>Donc <b>12 bonbons</b> sont au chocolat.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Dans une entreprise", w:"Sur ton cahier", h:`<p>Dans une entreprise de 250 salariés, les {11/50} sont blonds.</p><p>Combien y a-t-il de personnes blondes dans cette entreprise ?</p>`,
-   c:`<p>Différentes méthodes sont possibles.</p><p class="calc">{11/50} × 250 = {11 × 250/50} = {11 × 50 × 5/50} = 55</p><p>Donc <b>55 employés</b> sont blonds.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Calcul mental", w:"Sur ton cahier", h:`<p>Indique la quantité représentée dans chaque cas.</p><p>a) {1/4} de 20 élèves</p><p>b) {1/3} de 33 m</p><p>c) {5/6} de 48 L</p><p>d) {3/5} de 25 moutons</p>`,
-   c:`<p>a) 20 ÷ 4 = 5 : <b>5 élèves</b>.</p><p>b) 33 ÷ 3 = 11 : <b>11 m</b>.</p><p>c) 48 ÷ 6 = 8 et 5 × 8 = 40 : <b>40 L</b>.</p><p>d) 25 ÷ 5 = 5 et 3 × 5 = 15 : <b>15 moutons</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"L'abonnement de bus (calculatrice autorisée)", w:"Sur ton cahier", h:`<p>Dans une agglomération, le coût réel de l'abonnement mensuel au réseau de bus est de 142 €.</p><p>Mais la communauté d'agglomération prend en charge les {4/5} de ce montant.</p><p>Combien l'usager paie-t-il cet abonnement mensuel ?</p>`,
-   c:`<p class="calc">{4/5} × 142 = 113,6</p><p>La communauté d'agglomération prend en charge 113,60 € sur les 142 €.</p><p class="calc">142 − 113,60 = 28,40</p><p>L'usager ne paiera que <b>28,40 €</b> pour un abonnement mensuel.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Inverse et division", e:[
   {n:"Exercice 8", t:"Inverse d'un nombre", w:"Sur ton cahier", h:`<p>Donne l'inverse de chaque nombre.</p><p>a) {2/5}</p><p>b) {−3/7}</p><p>c) {15/−5}</p><p>d) −{8/17}</p><p>e) 5</p>`,
-   c:`<p>a) L'inverse de {2/5} est <b>{5/2}</b>.</p><p>b) L'inverse de {−3/7} est <b>{7/−3}</b> (c'est-à-dire {−7/3}).</p><p>c) L'inverse de {15/−5} est <b>{−5/15}</b> (c'est-à-dire {−1/3}).</p><p>d) L'inverse de −{8/17} est <b>−{17/8}</b>.</p><p>e) L'inverse de 5 est <b>{1/5}</b>.</p><p>Vérification, par exemple : {2/5} × {5/2} = {10/10} = 1.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Diviser des fractions", w:"Sur ton cahier", h:`<p>Calcule et donne le résultat sous forme d'une fraction simplifiée.</p><p>A = {3/7} ÷ {4/5}</p><p>B = {6/11} ÷ {5/4}</p><p>C = {11/9} ÷ {1/2}</p><p>D = {15/4} ÷ 2</p><p>E = 4 ÷ {7/9}</p><p>F = {3/8} ÷ {5/7}</p>`,
-   c:`${calc("A",["{3/7} ÷ {4/5}","{3/7} × {5/4}","{3 × 5/7 × 4}","{15/28}"])}${calc("B",["{6/11} ÷ {5/4}","{6/11} × {4/5}","{6 × 4/11 × 5}","{24/55}"])}${calc("C",["{11/9} ÷ {1/2}","{11/9} × {2/1}","{22/9}"])}
-   ${calc("D",["{15/4} ÷ 2","{15/4} ÷ {2/1}","{15/4} × {1/2}","{15 × 1/4 × 2}","{15/8}"])}${calc("E",["4 ÷ {7/9}","{4/1} ÷ {7/9}","{4/1} × {9/7}","{4 × 9/7}","{36/7}"])}${calc("F",["{3/8} ÷ {5/7}","{3/8} × {7/5}","{3 × 7/8 × 5}","{21/40}"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Des fractions de fractions", w:"Sur ton cahier", h:`<p>Calcule et donne le résultat sous forme d'une fraction simplifiée.</p>
    <div class="figs" style="gap:40px"><p>A = ${FR2("{2/9}","−{5/3}")}</p><p>B = ${FR2("{3/5}","{1/5}")}</p><p>C = ${FR2("−3","{6/5}")}</p><p>D = ${FR2("−{3/6}","5")}</p></div>`,
-   c:`<p><b>Remarque :</b> −{5/3} = {−5/3}.</p>
-   <p class="calc">A = {2/9} ÷ (−{5/3})<br>A = {2/9} ÷ ({−5/3})<br>A = {2/9} × {3/−5}<br>A = {2 × 3/3 × 3 × (−5)}<br>A = {2/−15}<br>A = {−2/15}</p>
-   <p class="calc">B = {3/5} ÷ {1/5}<br>B = {3/5} × {5/1}<br>B = {3 × 5/5 × 1}<br>B = {3/1}<br>B = 3</p>
-   <p class="calc">C = −3 ÷ {6/5}<br>C = {−3/1} ÷ {6/5}<br>C = {−3/1} × {5/6}<br>C = {−15/6}<br>C = {−15 ÷ 3/6 ÷ 3}<br>C = {−5/2}</p>
-   <p class="calc">D = −{3/6} ÷ 5<br>D = {−3/6} ÷ {5/1}<br>D = {−3/6} × {1/5}<br>D = {−3/30}<br>D = {−3 ÷ 3/30 ÷ 3}<br>D = {−1/10}</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -211,3 +200,4 @@ exos:[
 /* calculs en chaîne « A = … » dans les explications du QCM (multiplier, inverse, diviser ; outil défini dans 4e-1.js) */
 CH["4e-14"].quiz.forEach((N,ni)=>{ if(ni===1) return; Object.entries(N.q).forEach(([l,list])=>{ if(ni===2 && l==="3") return; list.forEach((it,i)=>{ if(it.g){ const g=it.g; list[i]={g:()=>window.CHN4.qChain(g())}; } else list[i]=window.CHN4.qChain(it); }); }); });
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-14");

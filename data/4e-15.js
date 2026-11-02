@@ -103,53 +103,40 @@ cours:[
 exos:[
 {t:"Appliquer un pourcentage", note:"Les exercices A à J sont les exercices du manuel que M. Staal avait donnés avec la fiche d'exercices.", e:[
   {n:"Exercice A", t:"Les poules rousses", w:"Sur ton cahier", h:`<p>Dans un poulailler de 75 poules, 60 % des poules sont rousses.</p><p>Combien y a-t-il de poules rousses ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Nombre de poules rousses",h2:"Nombre total de poules",r1:["60","!45"],r2:["100","75"]})}<p class="calc">Produit en croix : ${F("60 × 75",100)} = 45</p>
-   <p><b>Méthode 2 :</b> on calcule P, 60 % de 75 poules :</p><p class="calc">P = ${F(60,100)} × 75<br>P = 0,60 × 75<br>P = 45</p><p>Il y a donc <b>45 poules rousses</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice B", t:"Les filles du club", w:"Sur ton cahier", h:`<p>Un club sportif compte 225 licenciés. 36 % des licenciés sont des filles.</p><p>Combien de filles sont licenciées dans ce club ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Nombre de filles",h2:"Nombre total de licenciés",r1:["36","!81"],r2:["100","225"]})}<p class="calc">Produit en croix : ${F("36 × 225",100)} = 81</p>
-   <p><b>Méthode 2 :</b> on calcule P, 36 % de 225 licenciés :</p><p class="calc">P = ${F(36,100)} × 225<br>P = 0,36 × 225<br>P = 81</p><p>Il y a donc <b>81 filles licenciées</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice C", t:"Le sucre", w:"Sur ton cahier", h:`<p>Léa prépare un gâteau de 800 g. Le sucre représente 15 % de la masse du gâteau.</p><p>Quelle masse de sucre a-t-elle utilisée ?</p>`,
-   c:`<p>On peut utiliser les deux méthodes. Voici la deuxième (attendue en 4<sup>e</sup>).</p><p>On calcule 15 % de 800 grammes :</p><p class="calc">P = ${F(15,100)} × 800<br>P = 0,15 × 800<br>P = 120</p><p>Elle a utilisé <b>120 g de sucre</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Le paquet de biscuits", w:"Sur ton cahier", h:`<p>Sur un paquet de biscuits, on a relevé les informations suivantes :</p>${BISC("3,6","15","81,4",24)}<p>Quelle est la masse de matières grasses ?</p>`,
-   c:`<p>On calcule 3,6 % de 24 grammes :</p><p class="calc">P = ${F("3,6",100)} × 24<br>P = 0,036 × 24<br>P = 0,864</p><p>Il y a <b>0,864 g de matières grasses</b> dans un biscuit.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Chercher un pourcentage", e:[
   {n:"Exercice D", t:"Les vaches noires", w:"Sur ton cahier", h:`<p>Dans une ferme, 36 vaches sur 45 sont noires.</p><p>Quel est le pourcentage de vaches noires dans cette ferme ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Nombre de vaches noires",h2:"Nombre total de vaches",r1:["36","!80"],r2:["45","100"]})}<p class="calc">Produit en croix : ${F("36 × 100",45)} = 80</p>
-   <p><b>Méthode 2 :</b> il y a 36 vaches sur 45 qui sont noires : la proportion de vaches noires est égale à ${F(36,45)}.</p><p class="calc">p = ${F(36,45)}<br>p = 0,8<br>p = ${F(80,100)}<br>p = 80 %</p><p>Il y a donc <b>80 % de vaches noires</b> dans cette ferme.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice E", t:"Les filles d'un autre club", w:"Sur ton cahier", h:`<p>Un club compte 320 licenciés, dont 144 filles.</p><p>Quel est le pourcentage de filles dans ce club ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Nombre de filles",h2:"Nombre total de licenciés",r1:["144","!45"],r2:["320","100"]})}<p class="calc">Produit en croix : ${F("144 × 100",320)} = 45</p>
-   <p><b>Méthode 2 :</b> la proportion de filles licenciées est égale à ${F(144,320)}.</p><p class="calc">p = ${F(144,320)}<br>p = 0,45<br>p = ${F(45,100)}<br>p = 45 %</p><p>Il y a donc <b>45 % de filles</b> dans ce club.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice F", t:"L'élection du délégué", w:"Sur ton cahier", h:`<p>Pour élire le délégué de la classe, les 28 élèves ont voté.</p>${tab(["Candidat","Claire","Martin","Léo"],[["Nombre de voix","15","8","5"]])}<p>Calcule le pourcentage de voix obtenu par chaque candidat. Arrondis à l'unité.</p>`,
-   c:`<p>On peut utiliser les deux méthodes. Voici la deuxième (attendue en 4<sup>e</sup>).</p>
-   <p>• Claire : 15 élèves sur 28, la proportion p est :</p><p class="calc">p = ${F(15,28)}<br>p ≈ 0,54<br>p ≈ ${F(54,100)}<br>p ≈ 54 %</p><p>Environ <b>54 %</b> des élèves ont voté pour Claire.</p>
-   <p>• Martin :</p><p class="calc">p = ${F(8,28)}<br>p ≈ 0,29<br>p ≈ ${F(29,100)}<br>p ≈ 29 %</p><p>Environ <b>29 %</b> des élèves ont voté pour Martin.</p>
-   <p>• Léo :</p><p class="calc">p = ${F(5,28)}<br>p ≈ 0,18<br>p ≈ ${F(18,100)}<br>p ≈ 18 %</p><p>Environ <b>18 %</b> des élèves ont voté pour Léo.</p>
-   <p><b>Remarque :</b> 54 % + 29 % + 18 % = 101 %. On ne trouve pas exactement 100 % car les pourcentages ont été arrondis.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Appliquer un pourcentage d'augmentation ou de réduction", e:[
   {n:"Exercice 2", t:"Différentes situations", w:"Sur ton cahier", h:`<p><b>Problème 1 –</b> Pendant les soldes, Sophie achète un pantalon qui a une réduction de 20 %. Ce pantalon coûte à la base 44,95 €. Combien Sophie va-t-elle le payer ?</p>
    <p><b>Problème 2 –</b> Le salaire de Paul était de 1 450 € en 2014. Depuis, il a augmenté de 8 %. Combien gagne-t-il aujourd'hui ?</p>
    <p><b>Problème 3 –</b> Une voiture perd 17,5 % de sa valeur chaque année. Le 1<sup>er</sup> janvier 2018, Olivier achète sa voiture à 25 000 €. Quelle sera sa valeur au 1<sup>er</sup> janvier 2019 ?</p>`,
-   c:`<p><b>Problème 1 :</b> on calcule P, 20 % de 44,95 € :</p><p class="calc">P = ${F(20,100)} × 44,95<br>P = 0,20 × 44,95<br>P = 8,99</p>${ptab({h1:"Remise (en €)",h2:"Prix initial (en €)",r1:["20","!8,99"],r2:["100","44,95"]})}<p>La réduction est de 8,99 €. 44,95 − 8,99 = 35,96 : le pantalon coûte <b>35,96 €</b>.</p>
-   <p><b>Problème 2 :</b> on calcule 8 % de 1 450 € : 0,08 × 1 450 = 116. L'augmentation est de 116 €.</p><p>1 450 + 116 = 1 566 : il gagne maintenant <b>1 566 €</b>.</p>
-   <p><b>Problème 3 :</b> on calcule P, 17,5 % de 25 000 € :</p><p class="calc">P = ${F("17,5",100)} × 25 000<br>P = 0,175 × 25 000<br>P = 4 375</p><p>La baisse est de 4 375 €.</p><p>25 000 − 4 375 = 20 625 : la voiture vaudra <b>20 625 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice G", t:"La moyenne de la classe", w:"Sur ton cahier", h:`<p>La moyenne générale d'une classe était de 12,5.</p><p>Au trimestre suivant, elle a augmenté de 12 %.</p><p>Quelle est la nouvelle moyenne de la classe ?</p>`,
-   c:`<p>On calcule P, 12 % de 12,5 :</p><p class="calc">P = ${F(12,100)} × 12,5<br>P = 0,12 × 12,5<br>P = 1,5</p><p>La moyenne a donc augmenté de 1,5 point.</p><p>12,5 + 1,5 = 14 : la moyenne est maintenant de <b>14</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Chercher un pourcentage d'augmentation ou de réduction", e:[
   {n:"Exercice H", t:"Les chaussures", w:"Sur ton cahier", h:`<p>Une paire de chaussures coûtait 58 €. Son prix a augmenté de 7,25 €.</p><p>Quel est le pourcentage d'augmentation du prix de ces chaussures ?</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Augmentation (en €)",h2:"Prix initial (en €)",r1:["7,25","!12,5"],r2:["58","100"]})}<p class="calc">Produit en croix : ${F("7,25 × 100",58)} = 12,5</p>
-   <p><b>Méthode 2 :</b> l'augmentation est de 7,25 € pour un prix initial de 58 € : la proportion d'augmentation est ${F("7,25",58)}.</p><p class="calc">p = ${F("7,25",58)}<br>p = 0,125<br>p = ${F("12,5",100)}<br>p = 12,5 %</p><p>Le prix de ces chaussures a augmenté de <b>12,5 %</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice I", t:"La remise", w:"Sur ton cahier", h:`<p>Sur un article qui coûte 340 €, un vendeur fait une remise de 60 €.</p><p>Quel est le pourcentage de réduction ? Arrondis à l'unité.</p>`,
-   c:`<p><b>Méthode 1 :</b></p>${ptab({h1:"Remise (en €)",h2:"Prix initial (en €)",r1:["60","!18"],r2:["340","100"]})}<p class="calc">Produit en croix : ${F("60 × 100",340)} ≈ 18</p>
-   <p><b>Méthode 2 :</b> la proportion de réduction est ${F(60,340)}.</p><p class="calc">p = ${F(60,340)}<br>p ≈ 0,18<br>p ≈ ${F(18,100)}<br>p ≈ 18 %</p><p>Le pourcentage de baisse est d'environ <b>18 %</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice J", t:"Les lunettes", w:"Sur ton cahier", h:`<p>Une paire de lunettes coûtait 28 €. Elle est maintenant vendue 18,20 €.</p><p>Quel est le pourcentage de réduction ?</p>`,
-   c:`<p>28 − 18,2 = 9,8 : le prix a baissé de 9,80 €.</p><p>La proportion de la réduction par rapport au prix initial est égale à ${F("9,8",28)}.</p><p class="calc">p = ${F("9,8",28)}<br>p = 0,35<br>p = ${F(35,100)}<br>p = 35 %</p><p>Le pourcentage de réduction est de <b>35 %</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Différentes situations (2)", w:"Sur ton cahier", h:`<p><b>Problème 1 –</b> La famille LORDIER n'a pas réussi à diminuer sa consommation. Elle a utilisé 225 m³ d'eau en 2017 et 234 m³ en 2018.</p><p>Quel est le pourcentage d'augmentation de cette consommation ?</p>
    <p><b>Problème 2 –</b> En 40 ans, la surface de la forêt amazonienne est passée de 6,25 millions à 5,5 millions de km². Exprime cette diminution en pourcentage.</p>`,
-   c:`<p><b>Problème 1 :</b> 234 − 225 = 9. En un an, la consommation a augmenté de 9 m³.</p><p>La proportion d'augmentation par rapport à la consommation initiale est ${F(9,225)}.</p><p class="calc">p = ${F(9,225)}<br>p = 0,04<br>p = ${F(4,100)}<br>p = 4 %</p><p>Leur consommation a augmenté de <b>4 %</b>.</p>
-   <p><b>Problème 2 :</b> 6,25 − 5,5 = 0,75. En 40 ans, la surface a diminué de 0,75 million de km².</p><p>La proportion de diminution par rapport à la surface initiale est ${F("0,75","6,25")}.</p><p class="calc">p = ${F("0,75","6,25")}<br>p = 0,12<br>p = ${F(12,100)}<br>p = 12 %</p><p>En 40 ans, la surface de la forêt amazonienne a diminué de <b>12 %</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -205,3 +192,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-15");

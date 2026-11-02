@@ -169,89 +169,78 @@ exos:[
   {n:"Activité 1", t:"Partager une barre", w:"Sur ta feuille", h:`<p>Un constructeur partage des barres de <b>Lego</b>.</p>
    <p>1) Il coupe une barre de 3 dm en 4 morceaux de même longueur. Quelle est la longueur exacte d'un morceau ? Écris-la sous la forme d'une fraction, puis avec un nombre décimal.</p>
    <p>2) Il coupe maintenant une barre de 1 dm en 3 morceaux de même longueur. Quelle est la longueur exacte d'un morceau ? Peut-on l'écrire avec un nombre décimal ? Explique.</p>`,
-   c:`<p>1) 3 ÷ 4 = ${F(3,4)} dm, soit 0,75 dm.</p><p>2) 1 ÷ 3 = ${F(1,3)} dm. La division « ne tombe pas juste » : on trouve 0,333… avec des 3 sans fin.</p><p>Le nombre ${F(1,3)} n'a donc pas d'écriture décimale exacte : on garde la fraction.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Opérations à trous", w:"Sur ta feuille", h:`<p>Donne le nombre manquant sous la forme d'une fraction (ou d'un entier).</p><p>Puis donne son écriture décimale quand elle existe.</p>
    <div class="scroll"><table class="std"><thead><tr><th>Égalité à compléter</th><th>Fraction</th><th>Écriture décimale</th></tr></thead><tbody>${["7 × …… = 35","10 × …… = 1","3 × …… = 7","4 × …… = 5","8 × …… = 3","6 × …… = 1"].map(x=>`<tr><td>${x}</td><td></td><td></td></tr>`).join("")}</tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Égalité</th><th>Fraction</th><th>Écriture décimale</th></tr></thead><tbody>
-    <tr><td>7 × <b>5</b> = 35</td><td>5</td><td>5</td></tr>
-    <tr><td>10 × <b>${F(1,10)}</b> = 1</td><td>${F(1,10)}</td><td>0,1</td></tr>
-    <tr><td>3 × <b>${F(7,3)}</b> = 7</td><td>${F(7,3)}</td><td>pas d'écriture décimale exacte</td></tr>
-    <tr><td>4 × <b>${F(5,4)}</b> = 5</td><td>${F(5,4)}</td><td>1,25</td></tr>
-    <tr><td>8 × <b>${F(3,8)}</b> = 3</td><td>${F(3,8)}</td><td>0,375</td></tr>
-    <tr><td>6 × <b>${F(1,6)}</b> = 1</td><td>${F(1,6)}</td><td>pas d'écriture décimale exacte</td></tr></tbody></table></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Multiplier une fraction par son dénominateur", w:"Sur ta feuille", h:`<p>Complète.</p><p>a) 5 × ${F(3,5)} = …… · b) ${F(12,17)} × 17 = …… · c) 6 × ${F("…",6)} = 11 · d) ${F("…",9)} × 9 = 7 · e) 4 × ${F("…",4)} = 3 · f) ${F(9,13)} × …… = 9</p>`,
-   c:`<p>On multiplie une fraction par son dénominateur : on trouve son numérateur. b × ${F("a","b")} = a.</p><p>a) 5 × ${F(3,5)} = <b>3</b></p><p>b) ${F(12,17)} × 17 = <b>12</b></p><p>c) 6 × <b>${F(11,6)}</b> = 11</p><p>d) <b>${F(7,9)}</b> × 9 = 7</p><p>e) 4 × <b>${F(3,4)}</b> = 3</p><p>f) ${F(9,13)} × <b>13</b> = 9</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Lire des abscisses", w:"Sur ta feuille", h:`<p>Lis l'abscisse de chaque point sous la forme d'une fraction.</p>${fl({units:3, sub:4, pts:[["A",3],["B",5],["C",9],["D",11]]})}<p>A(……) &nbsp; B(……) &nbsp; C(……) &nbsp; D(……)</p>`,
-   c:`<p>Chaque unité est partagée en 4.</p>${fl({units:3, sub:4, pts:[["A",3],["B",5],["C",9],["D",11]], show:true})}<p>A(${F(3,4)}) &nbsp; B(${F(5,4)}) &nbsp; C(${F(9,4)}) &nbsp; D(${F(11,4)})</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Placer des fractions", w:"Sur ta feuille", h:`<p>Place les points demandés sur chaque droite, puis écris leur nom au-dessus.</p>
    <p>1) Sur la première droite : A(${F(1,3)}), B(${F(4,3)}) et C(${F(5,3)}).</p>${fl({units:2, sub:3})}
    <p>2) Sur la seconde droite : D(${F(3,10)}), E(${F(11,10)}) et G(${F(17,10)}).</p>${fl({units:2, sub:10})}`,
-   c:`<p>1) Chaque unité est partagée en 3.</p>${fl({units:2, sub:3, pts:[["A",1],["B",4],["C",5]], show:true})}<p>2) Chaque unité est partagée en 10.</p>${fl({units:2, sub:10, pts:[["D",3],["E",11],["G",17]], show:true})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Partie entière et fraction", w:"Sur ton cahier", h:`<p>Écris chaque fraction sous la forme « entier + fraction inférieure à 1 ».</p><p>Aide-toi de la division euclidienne.</p><p>a) ${F(7,4)} · b) ${F(17,5)} · c) ${F(23,6)} · d) ${F(31,10)} · e) ${F(25,8)} · f) ${F(40,9)}</p>`,
-   c:`<p>a) ${F(7,4)} = <b>1 + ${F(3,4)}</b> &nbsp; (7 = 4 × 1 + 3)</p><p>b) ${F(17,5)} = <b>3 + ${F(2,5)}</b> &nbsp; (17 = 5 × 3 + 2)</p><p>c) ${F(23,6)} = <b>3 + ${F(5,6)}</b> &nbsp; (23 = 6 × 3 + 5)</p><p>d) ${F(31,10)} = <b>3 + ${F(1,10)}</b> &nbsp; (31 = 10 × 3 + 1)</p><p>e) ${F(25,8)} = <b>3 + ${F(1,8)}</b> &nbsp; (25 = 8 × 3 + 1)</p><p>f) ${F(40,9)} = <b>4 + ${F(4,9)}</b> &nbsp; (40 = 9 × 4 + 4)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Prendre une fraction d'une quantité", w:"Sur ton cahier", h:`<p>Calcule.</p><p>a) les ${F(3,4)} de 20 · b) les ${F(2,5)} de 35 · c) les ${F(7,10)} de 40 · d) les ${F(5,6)} de 18 · e) les ${F(3,8)} de 64 · f) les ${F(4,9)} de 27</p>`,
-   c:`<p>Je divise par le dénominateur, puis je multiplie par le numérateur.</p><div class="calcs">${[[3,4,20],[2,5,35],[7,10,40],[5,6,18],[3,8,64],[4,9,27]].map(([a,b,Q],i)=>`<div>${NL("ABCDEF"[i],`${Q} ÷ ${b} × ${a} = ${Q/b} × ${a} = <b>${Q/b*a}</b>`).replace('<p class="calc">',`<p class="calc">${"abcdef"[i]}) `)}</div>`).join("")}</div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Fractions égales et simplification", e:[
   {n:"Activité 2", t:"Des parts égales ?", w:"Sur ta feuille", h:`<p>Amélie et Victoire se partagent deux paquets de biscuits identiques.</p><p>Amélie mange les ${F(2,5)} du premier paquet. Victoire mange les ${F(6,15)} du second.</p>
    ${bars([{n:5,lab:"Amélie"},{n:15,lab:"Victoire"}], {alt:"Deux barres identiques : l'une partagée en 5, l'autre en 15"})}
    <p>1) Colorie la part mangée par chacune.</p><p>2) Laquelle a mangé le plus de biscuits ? Que peut-on dire des fractions ${F(2,5)} et ${F(6,15)} ?</p><p>3) Complète : ${F(2,5)} = ${F("2 × …","5 × …")} = ${F(6,"…")}.</p>`,
-   c:`<p>1)</p>${bars([{n:5,k:2,lab:"Amélie"},{n:15,k:6,lab:"Victoire"}], {alt:"2 parts sur 5 et 6 parts sur 15 coloriées : même longueur"})}<p>2) Elles ont mangé la même quantité : les deux parts coloriées ont la même longueur. Donc ${F(2,5)} = ${F(6,15)}.</p><p>3) ${F(2,5)} = ${F("2 × 3","5 × 3")} = ${F(6,15)}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Compléter des égalités de fractions", w:"Sur ta feuille", h:`<p>Complète.</p><p>a) ${F(3,4)} = ${F("…",20)} · b) ${F(2,7)} = ${F(10,"…")} · c) ${F(18,30)} = ${F("…",5)} · d) 4 = ${F("…",3)} · e) ${F(40,16)} = ${F("…",4)} · f) ${F(1,6)} = ${F("…",42)}</p>`,
-   c:`<p>a) ${F(3,4)} = <b>${F(15,20)}</b> &nbsp; (× 5)</p><p>b) ${F(2,7)} = <b>${F(10,35)}</b> &nbsp; (× 5)</p><p>c) ${F(18,30)} = <b>${F(3,5)}</b> &nbsp; (÷ 6)</p><p>d) 4 = <b>${F(12,3)}</b> &nbsp; (4 × 3 = 12)</p><p>e) ${F(40,16)} = <b>${F(10,4)}</b> &nbsp; (÷ 4)</p><p>f) ${F(1,6)} = <b>${F(7,42)}</b> &nbsp; (× 7)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Reconnaître des fractions égales", w:"Sur ta feuille", h:`<p>Entoure toutes les fractions égales à la fraction donnée. Justifie sur ton cahier.</p>
    <p>a) Fractions égales à ${F(5,4)} : &nbsp; ${F(15,12)} &nbsp;&nbsp; ${F(6,5)} &nbsp;&nbsp; ${F(35,28)} &nbsp;&nbsp; ${F(4,5)} &nbsp;&nbsp; ${F(50,40)}</p>
    <p>b) Fractions égales à ${F(20,24)} : &nbsp; ${F(10,12)} &nbsp;&nbsp; ${F(30,34)} &nbsp;&nbsp; ${F(5,6)} &nbsp;&nbsp; ${F(60,72)} &nbsp;&nbsp; ${F(40,46)}</p>`,
-   c:`<p>a) ${F(5,4)} = <b>${F(15,12)}</b> = <b>${F(35,28)}</b> = <b>${F(50,40)}</b> (on multiplie par 3, par 7 et par 10).</p><p>${F(6,5)} et ${F(4,5)} ne sont pas égales à ${F(5,4)}.</p>
-   <p>b) ${F(20,24)} = ${F(5,6)} (on divise par 4).</p><p>Sont égales : <b>${F(10,12)}</b> (÷ 2 donne ${F(5,6)}), <b>${F(5,6)}</b> et <b>${F(60,72)}</b> (÷ 12 donne ${F(5,6)}).</p><p>${F(30,34)} et ${F(40,46)} ne le sont pas.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Simplifier des fractions", w:"Sur ton cahier", h:`<p>Simplifie chaque fraction au maximum. Détaille tes étapes.</p>${cols(["A) "+F(16,20),"B) "+F(30,18),"C) "+F(35,14),"D) "+F(80,60),"E) "+F(54,21),"F) "+F(18,72),"G) "+F(40,48),"H) "+F(45,60)])}`,
-   c:`<p>A) ${F(16,20)} = ${F("16 ÷ 4","20 ÷ 4")} = <b>${F(4,5)}</b></p><p>B) ${F(30,18)} = ${F("30 ÷ 6","18 ÷ 6")} = <b>${F(5,3)}</b></p><p>C) ${F(35,14)} = ${F("35 ÷ 7","14 ÷ 7")} = <b>${F(5,2)}</b></p><p>D) ${F(80,60)} = ${F("80 ÷ 20","60 ÷ 20")} = <b>${F(4,3)}</b></p><p>E) ${F(54,21)} = ${F("54 ÷ 3","21 ÷ 3")} = <b>${F(18,7)}</b></p><p>F) ${F(18,72)} = ${F("18 ÷ 18","72 ÷ 18")} = <b>${F(1,4)}</b></p><p>G) ${F(40,48)} = ${F("40 ÷ 8","48 ÷ 8")} = <b>${F(5,6)}</b></p><p>H) ${F(45,60)} = ${F("45 ÷ 15","60 ÷ 15")} = <b>${F(3,4)}</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Fractions irréductibles", w:"Sur ta feuille", h:`<p>Parmi ces fractions, lesquelles sont irréductibles ? Entoure-les.</p><p>${[[7,12],[15,21],[8,9],[14,35],[11,22],[9,10]].map(([a,b])=>F(a,b)).join(" &nbsp;&nbsp;&nbsp; ")}</p>`,
-   c:`<p>${F(7,12)} : <b>irréductible</b></p><p>${F(15,21)} : non, ${F(15,21)} = ${F(5,7)} (÷ 3)</p><p>${F(8,9)} : <b>irréductible</b></p><p>${F(14,35)} : non, ${F(14,35)} = ${F(2,5)} (÷ 7)</p><p>${F(11,22)} : non, ${F(11,22)} = ${F(1,2)} (÷ 11)</p><p>${F(9,10)} : <b>irréductible</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Trouver l'intrus", w:"Sur ton cahier", h:`<p>Parmi ces fractions, une seule n'est pas égale aux autres : laquelle ? Justifie.</p><p>${[[3,5],[6,10],[9,15],[12,25],[15,25],[30,50]].map(([a,b])=>F(a,b)).join(" &nbsp;&nbsp;&nbsp; ")}</p>`,
-   c:`<p>Les fractions ${F(6,10)}, ${F(9,15)}, ${F(15,25)} et ${F(30,50)} se simplifient toutes en ${F(3,5)} (on divise par 2, par 3, par 5 et par 10).</p><p>Mais ${F(12,25)} est irréductible : <b>${F(12,25)} est l'intrus</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Comparer des fractions", e:[
   {n:"Exercice 12", t:"Même dénominateur", w:"Sur ta feuille", h:`<p>Complète avec &lt;, &gt; ou =.</p><p>a) ${F(5,9)} …… ${F(7,9)} · b) ${F(13,8)} …… ${F(11,8)} · c) ${F(4,15)} …… ${F(9,15)} · d) ${F(21,10)} …… ${F(12,10)}</p>`,
-   c:`<p>a) ${F(5,9)} <b>&lt;</b> ${F(7,9)} · b) ${F(13,8)} <b>&gt;</b> ${F(11,8)} · c) ${F(4,15)} <b>&lt;</b> ${F(9,15)} · d) ${F(21,10)} <b>&gt;</b> ${F(12,10)}</p><p><i>Même dénominateur : on compare les numérateurs.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Comparer avec un multiple", w:"Sur ton cahier", h:`<p>Compare chaque couple de fractions en justifiant.</p><p>a) ${F(3,5)} et ${F(11,20)} · b) ${F(7,4)} et ${F(5,2)} · c) ${F(2,3)} et ${F(7,12)} · d) ${F(9,10)} et ${F(4,5)} · e) ${F(12,35)} et ${F(2,7)} · f) ${F(8,5)} et ${F(21,15)}</p>`,
-   c:`<p>a) ${F(3,5)} = ${F(12,20)} ; comme 12 &gt; 11, <b>${F(3,5)} &gt; ${F(11,20)}</b>.</p><p>b) ${F(5,2)} = ${F(10,4)} ; comme 7 &lt; 10, <b>${F(7,4)} &lt; ${F(5,2)}</b>.</p><p>c) ${F(2,3)} = ${F(8,12)} ; comme 8 &gt; 7, <b>${F(2,3)} &gt; ${F(7,12)}</b>.</p><p>d) ${F(4,5)} = ${F(8,10)} ; comme 9 &gt; 8, <b>${F(9,10)} &gt; ${F(4,5)}</b>.</p><p>e) ${F(2,7)} = ${F(10,35)} ; comme 12 &gt; 10, <b>${F(12,35)} &gt; ${F(2,7)}</b>.</p><p>f) ${F(8,5)} = ${F(24,15)} ; comme 24 &gt; 21, <b>${F(8,5)} &gt; ${F(21,15)}</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Des dénominateurs sans lien", w:"Sur ton cahier", h:`<p>Ici, aucun dénominateur n'est un multiple de l'autre. Compare chaque couple de fractions en justifiant.</p><p>a) ${F(5,6)} et ${F(7,9)} (essaie avec 18) · b) ${F(3,4)} et ${F(5,7)} (essaie avec 28) · c) ${F(7,10)} et ${F(8,15)} (essaie avec 30)</p>`,
-   c:`<p>a) ${F(5,6)} = ${F(15,18)} et ${F(7,9)} = ${F(14,18)} ; comme 15 &gt; 14, <b>${F(5,6)} &gt; ${F(7,9)}</b>.</p><p>b) ${F(3,4)} = ${F(21,28)} et ${F(5,7)} = ${F(20,28)} ; comme 21 &gt; 20, <b>${F(3,4)} &gt; ${F(5,7)}</b>.</p><p>c) ${F(7,10)} = ${F(21,30)} et ${F(8,15)} = ${F(16,30)} ; comme 21 &gt; 16, <b>${F(7,10)} &gt; ${F(8,15)}</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Ranger des fractions", w:"Sur ton cahier", h:`<p>1) Range dans l'ordre croissant : ${F(1,2)} ; ${F(3,4)} ; ${F(5,8)} ; ${F(7,16)} ; 1.</p><p>2) Range dans l'ordre décroissant : ${F(2,3)} ; ${F(5,6)} ; ${F(1,2)} ; ${F(3,4)} ; ${F(7,12)}.</p>`,
-   c:`<p>1) Avec le dénominateur 16 : ${F(8,16)} ; ${F(12,16)} ; ${F(10,16)} ; ${F(7,16)} ; ${F(16,16)}.</p><p>Ordre croissant : <b>${F(7,16)} &lt; ${F(1,2)} &lt; ${F(5,8)} &lt; ${F(3,4)} &lt; 1</b></p><p>2) Avec le dénominateur 12 : ${F(8,12)} ; ${F(10,12)} ; ${F(6,12)} ; ${F(9,12)} ; ${F(7,12)}.</p><p>Ordre décroissant : <b>${F(5,6)} &gt; ${F(3,4)} &gt; ${F(2,3)} &gt; ${F(7,12)} &gt; ${F(1,2)}</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 16", t:"Château ou vaisseau ?", w:"Sur ton cahier", h:`<p>Léo a construit les ${F(7,12)} de son château en briques.</p><p>Mia a construit les ${F(5,8)} de son vaisseau.</p><p>Les deux constructions demandent le même nombre de briques.</p><p>Qui a le plus avancé ? Justifie.</p>`,
-   c:`<p>24 est un multiple de 12 et de 8.</p><p class="calc">${F(7,12)} = ${F(14,24)} &nbsp; et &nbsp; ${F(5,8)} = ${F(15,24)}</p><p>Comme 14 &lt; 15, ${F(7,12)} &lt; ${F(5,8)} : c'est <b>Mia</b> qui a le plus avancé.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Additionner et soustraire des fractions", e:[
   {n:"Activité 3", t:"Partager un pain d'épices", w:"Sur ta feuille", h:`<p>Alice et Benoît se partagent un pain d'épices.</p><p>Alice en mange la moitié. Benoît en mange ${F(1,6)}.</p>
    ${bars([{n:6,lab:"Le pain d'épices"}], {lw:150, w:420, alt:"Un pain d'épices partagé en 6 parts égales"})}
    <p>1) Colorie la part d'Alice puis celle de Benoît (avec deux couleurs).</p><p>2) Écris la part d'Alice avec des sixièmes : ${F(1,2)} = ${F("…",6)}.</p><p>3) Quelle fraction du pain d'épices ont-ils mangée à eux deux ? Quelle fraction reste-t-il ?</p>`,
-   c:`<p>1) Alice : 3 parts (en orange). Benoît : 1 part (en bleu).</p>${bars([{n:6,k:3,k2:1,lab:"Le pain d'épices"}], {lw:150, w:420, alt:"3 parts sur 6 en orange pour Alice, 1 part en bleu pour Benoît"})}
-   <p>2) ${F(1,2)} = ${F(3,6)}.</p><p>3) ${F(1,2)} + ${F(1,6)} = ${F(3,6)} + ${F(1,6)} = ${F(4,6)} = ${F(2,3)} : ils ont mangé les <b>${F(2,3)}</b> du pain d'épices.</p><p>Il reste 1 − ${F(2,3)} = ${F(3,3)} − ${F(2,3)} = <b>${F(1,3)}</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 17", t:"Même dénominateur", w:"Sur ton cahier", h:`<p>Calcule, puis simplifie le résultat si c'est possible.</p>${cols([`A = ${F(1,7)} + ${F(2,7)}`,`B = ${F(9,6)} − ${F(4,6)}`,`C = ${F(3,10)} + ${F(5,10)}`,`D = ${F(3,9)} + ${F(6,9)}`,`E = ${F(10,12)} + ${F(8,12)}`,`F = ${F(47,30)} − ${F(2,30)}`,`G = ${F(20,24)} + ${F(10,24)}`,`H = ${F(40,42)} − ${F(5,42)}`,`I = ${F(59,32)} − ${F(31,32)}`])}`,
-   c:[["A",1,7,"+",2,7],["B",9,6,"−",4,6],["C",3,10,"+",5,10],["D",3,9,"+",6,9],["E",10,12,"+",8,12],["F",47,30,"−",2,30],["G",20,24,"+",10,24],["H",40,42,"−",5,42],["I",59,32,"−",31,32]].map(([n,a,b,o,c,d])=>`<div>${NL(n,steps2(a,b,o,c,d))}</div>`).join("").replace(/^/,'<p>Même dénominateur : on additionne (ou on soustrait) les numérateurs et on garde le dénominateur. Puis on simplifie.</p><div class="calcs">')+"</div>"},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 18", t:"Dénominateurs différents", w:"Sur ton cahier", h:`<p>Calcule, puis simplifie le résultat si c'est possible.</p>${cols([`A = ${F(3,20)} + ${F(2,5)}`,`B = ${F(3,4)} + ${F(11,12)}`,`C = ${F(25,36)} − ${F(6,9)}`,`D = ${F(1,4)} + ${F(2,32)}`,`E = ${F(10,8)} − ${F(2,40)}`,`F = ${F(7,21)} + ${F(4,3)}`,`G = ${F(5,6)} − ${F(3,10)}`,`H = ${F(4,5)} + 2`,`I = 4 − ${F(2,3)}`])}`,
-   c:[["A",3,20,"+",2,5],["B",3,4,"+",11,12],["C",25,36,"−",6,9],["D",1,4,"+",2,32],["E",10,8,"−",2,40],["F",7,21,"+",4,3],["G",5,6,"−",3,10],["H",4,5,"+",2,1],["I",4,1,"−",2,3]].map(([n,a,b,o,c,d])=>`<div>${NL(n,steps2(a,b,o,c,d))}</div>`).join("").replace(/^/,'<p>On écrit les deux fractions avec le même dénominateur (un multiple commun), puis on calcule et on simplifie.</p><div class="calcs">')+"</div>"},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 19", t:"Trouver l'erreur", w:"Sur ton cahier", h:`<p>Deux élèves se sont trompés. Explique chaque erreur, puis donne le bon résultat.</p><p>1) Juliette a écrit : ${F(2,3)} + ${F(1,4)} = ${F(3,7)}.</p><p>2) Hugo a écrit : ${F(5,6)} − ${F(1,3)} = ${F(4,3)}.</p>`,
-   c:`<p>1) Juliette a additionné les numérateurs <b>et</b> les dénominateurs. Il faut d'abord mettre les fractions sur le même dénominateur :</p>${NL("A",`${F(2,3)} + ${F(1,4)} = ${F(8,12)} + ${F(3,12)} = <b>${F(11,12)}</b>`)}
-   <p>2) Hugo a soustrait les numérateurs et les dénominateurs. Le bon calcul est :</p>${NL("B",`${F(5,6)} − ${F(1,3)} = ${F(5,6)} − ${F(2,6)} = ${F(3,6)} = <b>${F(1,2)}</b>`)}<p>Le résultat de Hugo est d'ailleurs supérieur à ${F(5,6)} : impossible pour une soustraction.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 20", t:"Enchaîner les calculs", w:"Sur ton cahier", h:`<p>Calcule en détaillant (de gauche à droite, avec un dénominateur commun).</p>${cols([`A = ${F(1,2)} + ${F(1,3)} + ${F(1,6)}`,`B = ${F(3,4)} − ${F(1,2)} + ${F(1,8)}`,`C = ${F(5,6)} − ${F(1,3)} + ${F(1,12)}`,`D = 2 − ${F(1,4)} − ${F(3,8)}`])}`,
-   c:`<div class="calcs"><div>${NL("A",`${F(1,2)} + ${F(1,3)} + ${F(1,6)} = ${F(3,6)} + ${F(2,6)} + ${F(1,6)} = ${F(6,6)} = <b>1</b>`)}</div><div>${NL("B",`${F(3,4)} − ${F(1,2)} + ${F(1,8)} = ${F(6,8)} − ${F(4,8)} + ${F(1,8)} = <b>${F(3,8)}</b>`)}</div><div>${NL("C",`${F(5,6)} − ${F(1,3)} + ${F(1,12)} = ${F(10,12)} − ${F(4,12)} + ${F(1,12)} = <b>${F(7,12)}</b>`)}</div><div>${NL("D",`2 − ${F(1,4)} − ${F(3,8)} = ${F(16,8)} − ${F(2,8)} − ${F(3,8)} = <b>${F(11,8)}</b>`)}</div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 21", t:"Murs de briques", w:"Sur ta feuille", h:`<p>Dans un mur de briques, chaque brique est égale à la <b>somme</b> des deux briques placées juste en dessous.</p><p>Complète.</p><div class="figs">${wall(W1,[1,1,1,0,0,0])}${wall(W2,[1,0,1,1,0,1])}</div>`,
-   c:`<div class="figs">${wall(W1,[1,1,1,0,0,0],true)}${wall(W2,[1,0,1,1,0,1],true)}</div>
-   <p>Mur de gauche :</p><p class="calc">${F(1,2)} + ${F(1,4)} = ${F(2,4)} + ${F(1,4)} = ${F(3,4)} &nbsp;·&nbsp; ${F(1,4)} + ${F(3,4)} = ${F(4,4)} = 1 &nbsp;·&nbsp; ${F(3,4)} + 1 = ${F(3,4)} + ${F(4,4)} = ${F(7,4)}</p>
-   <p>Mur de droite :</p><p class="calc">${F(5,12)} − ${F(1,4)} = ${F(5,12)} − ${F(3,12)} = ${F(2,12)} = ${F(1,6)}</p><p class="calc">${F(1,6)} + ${F(1,3)} = ${F(1,6)} + ${F(2,6)} = ${F(3,6)} = ${F(1,2)}</p><p>On vérifie :</p><p class="calc">${F(5,12)} + ${F(1,2)} = ${F(5,12)} + ${F(6,12)} = ${F(11,12)}</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes", e:[
   {n:"Exercice 22", t:"La boîte de briques", w:"Sur ton cahier", h:`<p>Une boîte contient 120 briques Lego.</p><p>${F(1,4)} des briques sont rouges, ${F(1,3)} sont bleues, ${F(1,6)} sont jaunes et les autres sont vertes.</p><p>1) Quelle fraction de la boîte représentent les briques rouges ou bleues ?</p><p>2) Quelle fraction de la boîte représentent les briques vertes ?</p><p>3) Combien y a-t-il de briques de chaque couleur ?</p>`,
-   c:`<p>1) ${F(1,4)} + ${F(1,3)} = ${F(3,12)} + ${F(4,12)} = <b>${F(7,12)}</b></p><p>2) Rouges, bleues et jaunes : ${F(3,12)} + ${F(4,12)} + ${F(2,12)} = ${F(9,12)} = ${F(3,4)}.</p><p>Vertes : 1 − ${F(3,4)} = <b>${F(1,4)}</b>.</p><p>3) Rouges : 120 ÷ 4 = <b>30</b> ; bleues : 120 ÷ 3 = <b>40</b> ; jaunes : 120 ÷ 6 = <b>20</b> ; vertes : 120 ÷ 4 = <b>30</b>.</p><p>Vérification : 30 + 40 + 20 + 30 = 120.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 23", t:"Une tour en briques", w:"Sur ton cahier", h:`<p>Max avait 96 briques pour construire une tour.</p><p>Le samedi, il en utilise les ${F(3,8)}. Le dimanche, il en utilise ${F(1,4)}.</p><p>1) Quelle fraction de ses briques a-t-il utilisée en tout ?</p><p>2) Combien de briques lui reste-t-il à la fin du dimanche ?</p>`,
-   c:`<p>1) ${F(3,8)} + ${F(1,4)} = ${F(3,8)} + ${F(2,8)} = <b>${F(5,8)}</b></p><p>2) Il reste 1 − ${F(5,8)} = ${F(3,8)} des briques : 96 ÷ 8 × 3 = <b>36 briques</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 24", t:"Le budget de Zoé", w:"Sur ton cahier", h:`<p>Zoé a un budget de 60 € pour ses cadeaux Lego.</p><p>Elle dépense les ${F(2,5)} du budget pour un vaisseau et le ${F(1,3)} du budget pour une voiture.</p><p>1) Quelle fraction du budget a-t-elle dépensée ?</p><p>2) Quelle somme lui reste-t-il ?</p>`,
-   c:`<p>1) ${F(2,5)} + ${F(1,3)} = ${F(6,15)} + ${F(5,15)} = <b>${F(11,15)}</b></p><p>2) Il reste 1 − ${F(11,15)} = ${F(15,15)} − ${F(11,15)} = ${F(4,15)} du budget : 60 ÷ 15 × 4 = <b>16 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 25", t:"Pour aller plus loin : fractions égyptiennes", w:"Sur ton cahier", h:`<p>Les Égyptiens de l'Antiquité n'écrivaient que des fractions de numérateur 1.</p><p>Écris chaque fraction comme la somme de <b>deux fractions de numérateur 1 différentes</b>.</p><p>Aide : les dénominateurs sont des diviseurs du dénominateur de départ.</p><p>a) ${F(3,4)} · b) ${F(5,6)} · c) ${F(7,12)} · d) ${F(2,3)}</p>`,
-   c:`<p>a) ${F(3,4)} = <b>${F(1,2)} + ${F(1,4)}</b> &nbsp; car ${F(2,4)} + ${F(1,4)} = ${F(3,4)}</p><p>b) ${F(5,6)} = <b>${F(1,2)} + ${F(1,3)}</b> &nbsp; car ${F(3,6)} + ${F(2,6)} = ${F(5,6)}</p><p>c) ${F(7,12)} = <b>${F(1,3)} + ${F(1,4)}</b> &nbsp; car ${F(4,12)} + ${F(3,12)} = ${F(7,12)}</p><p>d) ${F(2,3)} = <b>${F(1,2)} + ${F(1,6)}</b> &nbsp; car ${F(3,6)} + ${F(1,6)} = ${F(4,6)} = ${F(2,3)}</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -411,3 +400,4 @@ quiz:[
 ]
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-7");

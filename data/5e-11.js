@@ -28,7 +28,7 @@ const S_PCT = sch("Prendre un pourcentage", `<p class="calc">${"<i>t</i>"} % de 
 
 /* ===================== données de la fiche ===================== */
 const E1 = [
-  ["2 | 3 | 5 en première ligne et 5 | 7,5 | 12,5 en seconde ligne", true, `les quotients valent tous 2,5 : coefficient 2,5.`],
+  ["2 | 3 | 5 en première ligne et 5 | 7,5 | 12,5 en seconde ligne", true, ``],
   ["4 | 6 | 10 en première ligne et 10 | 15 | 30 en seconde ligne", false, `${Q(10,4)} = 2,5 et ${Q(15,6)} = 2,5, mais ${Q(30,10)} = 3.`],
   ["Le périmètre d'un carré et la longueur de son côté", true, `<i>P</i> = 4<i>c</i> : coefficient 4.`],
   ["L'aire d'un carré et la longueur de son côté", false, `côté 2 cm : aire 4 cm<sup>2</sup> ; côté 4 cm : aire 16 cm<sup>2</sup> (pas le double).`],
@@ -92,41 +92,39 @@ exos:[
    <p><b>Situation 1 :</b> le prix de pommes achetées au marché.</p>${T2("Masse (kg)",["1","3","5"],"Prix (€)",["2,40","7,20","12"],["Prix ÷ masse",["","",""]])}
    <p><b>Situation 2 :</b> l'âge et la taille d'un enfant.</p>${T2("Âge (ans)",["5","10","15"],"Taille (m)",["1,10","1,40","1,70"],["Taille ÷ âge",["","",""]])}
    <p><b>1)</b> Dans quelle situation les quotients sont-ils tous égaux ?</p><p><b>2)</b> Dans quelle situation les deux grandeurs sont-elles proportionnelles ? Quel est alors le coefficient ?</p>`,
-   c:`${T2("Masse (kg)",["1","3","5"],"Prix (€)",["2,40","7,20","12"],["Prix ÷ masse",["2,4","2,4","2,4"]])}${T2("Âge (ans)",["5","10","15"],"Taille (m)",["1,10","1,40","1,70"],["Taille ÷ âge",["0,22","0,14","≈ 0,113"]])}
-   <p><b>1)</b> Dans la situation 1 : 2,4 à chaque fois. Dans la situation 2, les quotients sont différents.</p><p><b>2)</b> La situation 1 est une situation de proportionnalité, de coefficient <b>2,4</b> (le prix d'un kilogramme). La situation 2 n'en est pas une.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Reconnaître une situation de proportionnalité", w:"Sur ta feuille", h:`<p>Pour chaque situation, coche la bonne case, puis justifie sur ton cahier.</p>${TB(["Situation","Oui","Non"], E1.map(([s])=>[s,"☐","☐"]))}`,
-   c:E1.map(([s,ok,why],i)=>`<p>${"abcdef"[i]}) ${s} : <b>${ok?"oui":"non"}</b> — ${why}</p>`).join("")}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer une valeur dans une situation de proportionnalité", e:[
   {n:"Exercice 2", t:"Compléter avec le coefficient", w:"Sur ta feuille", h:`<p>Ces tableaux sont des tableaux de proportionnalité. Complète-les en cherchant le coefficient.</p>${T2("Masse (kg)",["2","4","7","10"],"Prix (€)",["5","","","25"])}${T2("Durée (min)",["10","25","40","5"],"Eau (L)",["","15","24",""])}`,
-   c:`${T2("Masse (kg)",["2","4","7","10"],"Prix (€)",["5","<b>10</b>","<b>17,5</b>","25"])}<p>Coefficient : 5 ÷ 2 = 2,5. Chaque valeur de la 2<sup>e</sup> ligne est la valeur de la 1<sup>re</sup> ligne multipliée par 2,5.</p>
-   ${T2("Durée (min)",["10","25","40","5"],"Eau (L)",["<b>6</b>","15","24","<b>3</b>"])}<p>Coefficient : 15 ÷ 25 = 0,6. Chaque valeur de la 2<sup>e</sup> ligne est la valeur de la 1<sup>re</sup> ligne multipliée par 0,6.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Utiliser la linéarité", w:"Sur ta feuille", h:`<p>Un paquet de 4 minifigurines coûte 12 €. Complète en utilisant la linéarité (sans retour à l'unité).</p>${T2("Nombre de minifigurines",["4","8","2","6","10"],"Prix (€)",["12","","","",""])}<p>Écris sur ton cahier comment tu as obtenu les prix pour 6 et pour 10.</p>`,
-   c:`${T2("Nombre de minifigurines",["4","8","2","6","10"],"Prix (€)",["12","<b>24</b>","<b>6</b>","<b>18</b>","<b>30</b>"])}<p>8 = 4 × 2 donc 12 × 2 = 24</p><p>2 = 4 ÷ 2 donc 12 ÷ 2 = 6</p><p>6 = 4 + 2 donc 12 + 6 = 18</p><p>10 = 8 + 2 donc 24 + 6 = 30</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Retour à l'unité", w:"Sur ton cahier", h:`<p>Utilise le retour à l'unité.</p><p>a) 5 stylos coûtent 6,50 €. Combien coûtent 8 stylos ?</p><p>b) 12 œufs pèsent 720 g. Combien pèsent 7 œufs ?</p><p>c) Une voiture consomme 28 L pour 400 km. Combien consomme-t-elle pour 650 km ?</p>`,
-   c:`<p>a) 1 stylo : 6,50 ÷ 5 = 1,30 € ; 8 stylos : 8 × 1,30 = <b>10,40 €</b>.</p><p>b) 1 œuf : 720 ÷ 12 = 60 g ; 7 œufs : 7 × 60 = <b>420 g</b>.</p><p>c) Ici, l'unité est 100 km : 28 ÷ 4 = 7 L pour 100 km ; 650 km = 6,5 × 100 km, donc 6,5 × 7 = <b>45,5 L</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"La recette de crêpes", w:"Sur ta feuille", h:`<p>Voici la recette de crêpes pour 4 personnes. Complète pour 6, 8 et 10 personnes.</p>${TB(["Ingrédients","4 personnes","6 personnes","8 personnes","10 personnes"], CREP.map(([n,q])=>[n,String(q),"","",""]))}`,
-   c:`${TB(["Ingrédients","4 personnes","6 personnes","8 personnes","10 personnes"], CREP.map(([n,q])=>[n,String(q),F(q*1.5),F(q*2),F(q*2.5)]))}<p>Pour 6 personnes : 6 = 4 × 1,5 · pour 8 : 4 × 2 · pour 10 : 4 × 2,5</p><p>On multiplie chaque quantité par 1,5, par 2 ou par 2,5.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Vitesse moyenne", w:"Sur ton cahier", h:`<p>Un cycliste roule à la vitesse moyenne constante de 18 km/h.</p><p><b>1)</b> Quelle distance parcourt-il en 2 h ? en 30 min ? en 3 h 30 min ?</p><p><b>2)</b> Quelle durée lui faut-il pour parcourir 45 km ?</p>`,
-   c:`<p>La distance est proportionnelle à la durée : en 1 h, le cycliste parcourt 18 km.</p><p><b>1)</b> En 2 h : 2 × 18 = <b>36 km</b>.</p><p>En 30 min (0,5 h) : 18 ÷ 2 = <b>9 km</b>.</p><p>En 3 h 30 min (3,5 h) : 3,5 × 18 = <b>63 km</b>.</p><p><b>2)</b> 45 ÷ 18 = 2,5 h, soit <b>2 h 30 min</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Lire une carte", w:"Sur ton cahier", h:`<p>Sur une carte à l'échelle ${Q(1,"50 000")}, 1 cm représente 500 m dans la réalité.</p><p>a) Deux villes sont distantes de 4 cm sur la carte. Quelle est la distance réelle, en kilomètres ?</p><p>b) Un chemin mesure 7,5 cm sur la carte. Quelle est sa longueur réelle ?</p><p>c) Un sentier mesure 6 km dans la réalité. Quelle longueur a-t-il sur la carte ?</p>`,
-   c:`<p>a) 4 × 500 = 2 000 m, soit <b>2 km</b>.</p><p>b) 7,5 × 500 = 3 750 m, soit <b>3,75 km</b>.</p><p>c) 6 km = 6 000 m et 6 000 ÷ 500 = 12 : le sentier mesure <b>12 cm</b> sur la carte.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Proportions et pourcentages", e:[
   {n:"Exercice 8", t:"Les briques de la boîte", w:"Sur ta feuille", h:`<p>Une boîte contient 24 briques : 6 rouges, 9 bleues et 9 jaunes. Donne chaque proportion sous trois formes.</p>${TB(["Couleur","Fraction irréductible","Nombre décimal","Pourcentage"],[["Rouge","","",""],["Bleue","","",""],["Jaune","","",""]])}`,
-   c:`${TB(["Couleur","Fraction irréductible","Nombre décimal","Pourcentage"],[["Rouge",`${Q(6,24)} = ${Q(1,4)}`,"0,25","25 %"],["Bleue",`${Q(9,24)} = ${Q(3,8)}`,"0,375","37,5 %"],["Jaune",`${Q(9,24)} = ${Q(3,8)}`,"0,375","37,5 %"]])}<p>Vérification : 25 % + 37,5 % + 37,5 % = 100 %.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Pourcentages mentaux", w:"Sur ta feuille", h:`<p>Calcule mentalement et écris seulement les résultats.</p><p>a) 50 % de 90 : …… b) 25 % de 120 : …… c) 10 % de 350 : …… d) 1 % de 800 : …… e) 75 % de 40 : …… f) 20 % de 60 : ……</p>`,
-   c:`<p>a) 50 % de 90 : la moitié, 90 ÷ 2 = <b>45</b></p><p>b) 25 % de 120 : le quart, 120 ÷ 4 = <b>30</b></p><p>c) 10 % de 350 : 350 ÷ 10 = <b>35</b></p><p>d) 1 % de 800 : 800 ÷ 100 = <b>8</b></p><p>e) 75 % de 40 : trois quarts, 40 ÷ 4 = 10 puis 10 × 3 = <b>30</b></p><p>f) 20 % de 60 : 10 % de 60 = 6, donc pour P = 20 % de 60 :</p>${KC("P",["6 × 2","<b>12</b>"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Calculer avec des pourcentages", w:"Sur ton cahier", h:`<p>Calcule (calculatrice autorisée).</p><p>a) 15 % de 60 b) 30 % de 250 c) 12 % de 150 d) 18 élèves sur 24 : quel pourcentage ? e) 45 élèves sur 150 : quel pourcentage ? f) 21 élèves sur 25 : quel pourcentage ?</p>`,
-   c:`<p>Pour <i>t</i> % de Q, je calcule Q × ${Q("t",100)}. Pour un pourcentage, je calcule la proportion ${Q("quantité","total")}.</p><p>a)</p>${KC("P",[`60 × ${Q(15,100)}`,"900 ÷ 100","<b>9</b>"])}<p>b)</p>${KC("P",[`250 × ${Q(30,100)}`,"7 500 ÷ 100","<b>75</b>"])}<p>c)</p>${KC("P",[`150 × ${Q(12,100)}`,"1 800 ÷ 100","<b>18</b>"])}<p>d)</p>${KC("p",[Q(18,24),"18 ÷ 24","0,75","<b>75 %</b>"])}<p>e)</p>${KC("p",[Q(45,150),"45 ÷ 150","0,3","<b>30 %</b>"])}<p>f)</p>${KC("p",[Q(21,25),"21 ÷ 25","0,84","<b>84 %</b>"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"L'élection des délégués", w:"Sur ta feuille", h:`<p>Pour l'élection des délégués, 4 élèves se présentent. Chaque élève de la classe (25 élèves) a voté pour un seul candidat. Complète le tableau.</p>${TB(["Candidat","Chloé","Hugo","Zoé","Léo","Total"],[["Nombre de voix","10","7","5","3","25"],["Pourcentage","","","","",""]])}<p>Que vaut la somme des pourcentages ? Explique pourquoi sur ton cahier.</p>`,
-   c:`${TB(["Candidat","Chloé","Hugo","Zoé","Léo","Total"],[["Nombre de voix","10","7","5","3","25"],["Pourcentage","40 %","28 %","20 %","12 %","100 %"]])}<p>Chaque pourcentage : ${Q("voix",25)} = ${Q("voix × 4",100)}.</p><p>La somme est 40 + 28 + 20 + 12 = <b>100 %</b> : toutes les voix représentent le tout.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Comparer des proportions", w:"Sur ton cahier", h:`<p>Compare les proportions (calculatrice autorisée).</p><p>a) En 5<sup>e</sup>C, 21 élèves sur 25 ont réussi leur ASSR. En 5<sup>e</sup>D, le taux de réussite est de 84 %. Lola affirme : « La proportion d'élèves ayant réussi est la même dans les deux classes. » A-t-elle raison ?</p><p>b) Dans la préparation A, il y a 44 mL de sirop pour une boisson de 400 mL. Dans la préparation B, il y a 38 mL de sirop pour 350 mL. Laquelle est la plus concentrée en sirop ?</p><p>c) Majid obtient 11 fois Face sur 25 lancers. Alice obtient 12 fois Pile sur 20 lancers. Qui a obtenu la plus grande proportion de Face ?</p>`,
-   c:`<p>a) En 5<sup>e</sup>C :</p>${KC("p",[Q(21,25),Q(84,100),"84 %"])}<p><b>Oui, Lola a raison</b>.</p><p>b) Préparation A :</p>${KC("p",[Q(44,400),"0,11","11 %"])}<p>Préparation B :</p>${KC("p",[Q(38,350),"≈ 0,1086","≈ 10,9 %"])}<p><b>La préparation A</b> est la plus concentrée.</p><p>c) Majid :</p>${KC("p",[Q(11,25),"0,44","44 %"])}<p>Alice a 20 − 12 = 8 Face sur 20 :</p>${KC("p",[Q(8,20),"0,4","40 %"])}<p><b>Majid</b> a la plus grande proportion de Face.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Réductions et augmentations", w:"Sur ton cahier", h:`<p>a) Un jeu coûte 45 €. Pendant les soldes, il bénéficie d'une réduction de 20 %. Quel est le montant de la réduction ? Quel est le nouveau prix ?</p><p>b) Un sweat coûte 60 €. Un magasin propose 15 % de réduction. Quel est son prix après réduction ?</p><p>c) Un abonnement coûte 80 € par an. Son prix augmente de 10 %. Quel est le nouveau prix ?</p>`,
-   c:`<p>a) Réduction : 45 × ${Q(20,100)} = <b>9 €</b> ; nouveau prix : 45 − 9 = <b>36 €</b>.</p><p>b) Réduction : 60 × ${Q(15,100)} = 9 € ; prix : 60 − 9 = <b>51 €</b>.</p><p>c) Augmentation : 80 × ${Q(10,100)} = 8 € ; nouveau prix : 80 + 8 = <b>88 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Pour aller plus loin : une œuvre à l'échelle", w:"Sur ton cahier", h:`<p>Pour reproduire une œuvre de Kandinsky de 80 cm sur 60 cm, on la dessine à l'échelle ${Q(1,4)} (toutes les longueurs sont divisées par 4).</p><p><b>1)</b> Quelles sont les dimensions de la reproduction ?</p><p><b>2)</b> Quelles seraient les dimensions à l'échelle ${Q(1,8)} ?</p>`,
-   c:`<p><b>1)</b> 80 ÷ 4 = 20 cm et 60 ÷ 4 = 15 cm : la reproduction mesure <b>20 cm sur 15 cm</b>.</p><p><b>2)</b> 80 ÷ 8 = 10 cm et 60 ÷ 8 = 7,5 cm : <b>10 cm sur 7,5 cm</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -273,3 +271,4 @@ quiz:[
 ]
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-11");

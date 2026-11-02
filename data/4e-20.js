@@ -153,42 +153,27 @@ cours:[
 exos:[
 {t:"Découvrir le théorème de Pythagore", e:[
   {n:"Activité 1", t:"L'armoire de Julia", w:"Sur ton cahier", h:`<p>Julia monte une armoire qu'elle veut placer sur sa mezzanine, qui a une hauteur de plafond de 1,60 m.</p>${ex("a1","Julia monte l'armoire à plat ; notice : 144 cm de haut et 60 cm de profondeur",420)}<p>Elle commence à monter l'armoire sur le sol, à plat. Une fois construite, Julia va-t-elle avoir un problème pour relever son armoire ? Explique.</p>`,
-   c:`<div class="figs">${cr("a1tri","Le triangle ABC rectangle en C : AC = 144 cm, CB = 60 cm, AB = ?",90)}${cr("a1carres","Les carrés construits sur les côtés",250)}</div>
-   <p>Pour savoir si Julia va pouvoir relever son armoire, il faut connaître la longueur <b>AB</b> (la diagonale de l'armoire).</p><ul><li>Si AB mesure moins de 1,60 m, alors Julia pourra relever son armoire.</li><li>Si AB mesure plus de 1,60 m, alors Julia ne pourra pas la relever.</li></ul>
-   <p>ABC est un triangle rectangle en C, avec AC = 144 cm et CB = 60 cm.</p><p>Donc, d'après le théorème de Pythagore, la somme de l'aire du petit carré et de l'aire du moyen carré est égale à l'aire du grand carré.</p>
-   <p class="calc">60 × 60 = 3 600 : l'aire du petit carré est 3 600 cm².<br>144 × 144 = 20 736 : l'aire du moyen carré est 20 736 cm².<br>20 736 + 3 600 = 24 336 : l'aire du grand carré est 24 336 cm².</p>
-   <p>On cherche le nombre tel que … × … = 24 336. Après plusieurs essais à la calculatrice : 156 × 156 = 24 336.</p><p>La longueur AB est donc égale à 156 cm.</p>
-   <p>156 cm est plus petit que 1,60 m (160 cm) : <b>Julia arrivera à relever son armoire.</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Aires et longueurs", w:"Sur ta feuille", h:`<p>Dans chacun des cas, complète les pointillés (aires et longueurs). Tu n'es pas obligé d'écrire tes calculs.</p>${ex("e1","Trois triangles rectangles avec les carrés construits sur leurs côtés",620)}`,
-   c:`${cr("e1","Les trois cas complétés",620)}
-   <p><b>Cas n°1 :</b> aire du moyen carré : 4 × 4 = 16 cm². Aire du grand carré : 16 + 9 = 25 cm². On cherche … × … = 25 : 5 × 5 = 25, donc RT = <b>5 cm</b>.</p>
-   <p><b>Cas n°2 :</b> aire du petit carré : 6 × 6 = 36 cm². Aire du moyen carré : 8 × 8 = 64 cm². Aire du grand carré : 36 + 64 = 100 cm². 10 × 10 = 100, donc ZI = <b>10 cm</b>.</p>
-   <p><b>Cas n°3 :</b> aire du petit carré : 5 × 5 = 25 cm². Aire du <b>grand</b> carré : 13 × 13 = 169 cm². Aire du moyen carré : 25 + … = 169, donc 169 − 25 = 144 cm². 12 × 12 = 144, donc NI = <b>12 cm</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer une longueur", e:[
   {n:"Exercice 2", t:"Le côté manquant", w:"Sur ton cahier", h:`<p>Dans chacun de ces triangles, calcule la longueur du côté manquant.</p><p>Cette fois, tu rédigeras tes réponses comme indiqué dans le cours.</p>
    <div class="figs">${fig("a.",ex("e2a","Triangle MJX rectangle en M : MJ = 4,2 ; MX = 5,6 ; JX = ?",220))}${fig("b.",ex("e2b","Triangle PIF rectangle en I : IF = 4,2 cm ; PF = 5,8 cm",280))}</div>
    <p><b>c.</b> LIN est un triangle rectangle en L tel que IL = 2,8 cm et LN = 9,6 cm.</p><p><b>d.</b> TER est un triangle rectangle en R tel que ER = 4,8 cm et TE = 5,2 cm.</p>`,
-   c:`<p><b>a.</b></p>${pyth("MJX","M",{MJ:4.2,MX:5.6},"JX").h}<p><b>b.</b></p>${pyth("PIF","I",{IF:4.2,PF:5.8},"PI").h.replace("Donc PI² + 17,64","Donc PI² + 17,64")}
-   <p><b>c.</b></p><div class="figs">${cr("e2c","Triangle LIN rectangle en L",220)}</div>${pyth("LIN","L",{IL:2.8,LN:9.6},"NI").h}
-   <p><b>d.</b></p><div class="figs">${cr("e2d","Triangle TER rectangle en R",200)}</div>${pyth("TER","R",{ER:4.8,TE:5.2},"TR").h}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes", e:[
   {n:"Exercice 3", t:"L'échelle n°1", w:"Sur ton cahier", h:`${ex("echelle","Une échelle [HB] posée contre un mur [HC]",100)}<p>Combien mesure l'échelle n°1, sachant que le bas de l'échelle est situé à 1,4 m du mur et que le haut de l'échelle permet d'atteindre 4,8 m de hauteur ?</p>`,
-   c:`${cr("e3","Le triangle HBC rectangle en C : BC = 1,4 m, HC = 4,8 m",130)}${pyth("HBC","C",{BC:1.4,HC:4.8},"HB","m").h}<p>L'échelle mesure donc 5 m.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2", t:"L'échelle n°2", w:"Sur ton cahier", h:`${ex("echelle","Une échelle [HB] posée contre un mur [HC]",100)}<p>Combien mesure l'échelle n°2, sachant que le bas de l'échelle est situé à 2 m du mur et que le haut de l'échelle permet d'atteindre 4 m de hauteur ?</p>`,
-   c:`${cr("a2","Le triangle HBC rectangle en C : BC = 2 m, HC = 4 m",120)}<p>HBC est un triangle rectangle en C.</p><p>Donc, d'après le théorème de Pythagore, on sait que : <b>BC² + HC² = HB²</b></p><p class="calc">BC² = 2 × 2 = 4 et HC² = 4 × 4 = 16<br>Donc HB² = 4 + 16 = 20</p>
-   <p>Pour trouver la longueur HB, il faut trouver le nombre tel que … × … = 20. Avec la calculatrice, je fais plusieurs essais (je tâtonne) :</p>
-   <p class="calc">5 × 5 = 25 (je prends un nombre plus petit que 5)<br>4,5 × 4,5 = 20,25 (plus petit que 4,5)<br>4,4 × 4,4 = 19,36 (plus grand que 4,4)<br>4,45 × 4,45 = 19,802 5 (plus grand que 4,45)<br>4,47 × 4,47 = 19,980 9 (plus grand que 4,47)<br>4,48 × 4,48 = 20,070 4 (plus petit que 4,48)<br>4,475 × 4,475 = 20,025 625 (plus petit que 4,475)…</p>
-   <p>Cela peut durer très longtemps… On ne trouve pas de nombre tel que … × … = 20 exactement.</p><p>Mais ce nombre existe bien ! C'est ${rac("20")}, qui se lit « racine de 20 » : ${rac("20")} × ${rac("20")} = 20.</p>
-   <p>Donc HB = ${rac("20")}. À la calculatrice, on trouve ${rac("20")} ≈ 4,472 135 955… On dira que HB ≈ 4,47.</p><p><b>L'échelle mesure environ 4,47 m.</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Échauffement de foot", w:"Sur ton cahier", h:`<p>Le terrain de football du village de Romain est un rectangle de dimensions 110 m sur 80 m.</p><p>Pour s'échauffer, l'entraîneur de Romain demande aux joueurs de faire un sprint sur la diagonale du terrain.</p><p>Quelle distance les joueurs parcourent-ils ? <i>Donne un arrondi à l'unité près.</i></p>`,
-   c:`${cr("e4","Le terrain FOUT : FO = 110 m, OU = 80 m, diagonale [FU]",300)}${pyth("FOU","O",{FO:110,OU:80},"FU","m",0).h}<p>Les joueurs parcourent environ <b>136 m</b> pour faire leur sprint.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Rampe d'accès", w:"Sur ton cahier", h:`${ex("rampe","Pictogramme d'une rampe d'accès",120)}<p>Une rampe d'accès pour les personnes à mobilité réduite mesure 2,50 m de long et la porte d'accès est à une hauteur de 0,80 m.</p><p>De quelle longueur au sol doit-on disposer pour pouvoir poser cette rampe ? <i>Donne un arrondi au centième près.</i></p>`,
-   c:`${cr("e5","Le triangle RAM rectangle en M : RA = 2,50 m, AM = 0,80 m",160)}${pyth("RAM","M",{AM:0.8,RA:2.5},"RM","m",2).h}<p>Pour poser la rampe, on aura besoin d'environ <b>2,37 m</b> au sol.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Le théorème de Pythagore dans l'architecture", w:"Sur ton cahier", h:`${ex("maison","Schéma de la maison : hauteur 450 cm au faîte, 300 cm au mur, largeur 700 cm, longueur 1 000 cm",340)}<p>Voici le schéma d'une maison de plain-pied. L'architecte souhaite connaître les dimensions de la toiture de cette maison, qui n'existe que sur papier.</p><p>Comment peut-il faire ? À toi de l'aider.</p>`,
-   c:`${cr("e6","Le triangle TOI rectangle en O sous le toit",300)}<p>On connaît déjà une mesure du toit : la longueur IU, qui mesure 1 000 cm, soit 10 m.</p><p>Il faut maintenant connaître la longueur IT. Pour cela, on utilise le théorème de Pythagore dans le triangle TOI rectangle en O. Il faut d'abord connaître TO et OI.</p>
-   <p class="calc">450 − 300 = 150 : la longueur TO est égale à 150 cm.<br>700 ÷ 2 = 350 : la longueur OI est égale à 350 cm.</p>${pyth("TOI","O",{TO:150,OI:350},"TI","cm",0).h}<p>Les dimensions de chaque pan de la toiture sont donc d'environ <b>381 cm (soit 3,81 m) sur 10 m</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -246,3 +231,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-20");

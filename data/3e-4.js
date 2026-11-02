@@ -116,74 +116,61 @@ exos:[
 {t:"Reconnaître des solides", e:[
   {n:"Activité 1", t:"Reconnaître des solides", w:"Sur ta feuille", h:`<p>Pour chaque solide :</p><ul><li>indique <b>sa nature</b> ;</li><li>hachure, au crayon de bois, <b>la (ou les) base(s)</b> et indique <b>la hauteur</b> en notant h.</li></ul>
    <div class="figs">${[1,2,3,4,5,6].map(k=>fig(k+") ……………",ex(`a1_${k}.png`,"Solide n°"+k,k===4?110:120))).join("")}</div>`,
-   c:`<p>Les bases sont hachurées. La hauteur h est tracée en rouge.</p>
-   <div class="figs">${[[1,"cylindre",130],[2,"prisme droit",130],[3,"pavé droit",110],[4,"pyramide",130],[5,"prisme droit",150],[6,"cône",140]].map(([k,t,w])=>fig(k+") "+t,ex(`a1_${k}c.png`,"Solide n°"+k+" corrigé : "+t+", bases hachurées et hauteur h",w))).join("")}</div>
-   <p><b>1)</b> un <b>cylindre</b> (2 bases : des disques) · <b>2)</b> un <b>prisme droit</b> à base hexagonale (2 bases : des hexagones) · <b>3)</b> un <b>pavé droit</b> (2 bases : des rectangles) · <b>4)</b> une <b>pyramide</b> à base triangulaire (base ABC, hauteur [SC]) · <b>5)</b> un <b>prisme droit</b> à base triangulaire (bases ABC et DEF) · <b>6)</b> un <b>cône</b> de révolution (base : un disque).</p><p>Pour un prisme, un pavé ou un cylindre, la hauteur est la distance entre les deux bases ; pour une pyramide ou un cône, c'est la distance du sommet à la base.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Reconnaître des solides", w:"Sur ta feuille", h:`<p>Même consigne que l'activité 1.</p><div class="figs">${[1,2,3,4,5,6].map(k=>fig(k+") ……………",ex(`e1_${k}.png`,"Solide n°"+k,150))).join("")}</div>`,
-   c:`<p>Les bases sont hachurées. La hauteur h est tracée en rouge.</p>
-   <div class="figs">${[[1,"pyramide",190],[2,"prisme droit",160],[3,"cube",190],[4,"pyramide",170],[5,"prisme droit",150],[6,"demi-cylindre",190]].map(([k,t,w])=>fig(k+") "+t,ex(`e1_${k}c.png`,"Solide n°"+k+" corrigé : "+t+", bases hachurées et hauteur h",w))).join("")}</div>
-   <p><b>1)</b> une <b>pyramide</b> à base rectangulaire ABDC (hauteur [EF]) · <b>2)</b> un <b>prisme droit</b> (bases : les deux faces en forme de « Z ») · <b>3)</b> un <b>cube</b> (2 bases : deux faces opposées, ici EFGH et ABCD) · <b>4)</b> une <b>pyramide</b> à base triangulaire (base BCD en jaune, hauteur [AH]) · <b>5)</b> un <b>prisme droit</b> (bases : les deux faces bleues) · <b>6)</b> un <b>demi-cylindre</b> (bases : deux demi-disques de diamètre 3 cm, hauteur 4 cm).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Reconnaître des solides composés", w:"Sur ta feuille", h:`<p>Ces solides sont composés de plusieurs solides. Indique la nature de chacun d'eux.</p><div class="figs">${fig("1)",ex("e2_1.png","Solide composé n°1",170))}${fig("2)",ex("e2_2.png","Solide composé n°2",200))}${fig("3)",ex("e2_3.png","Solide composé n°3",280))}</div>`,
-   c:`<p><b>1)</b> un <b>pavé droit</b> ABCDEFGH surmontant une <b>pyramide</b> à base rectangulaire EFGH et de sommet I.</p><p><b>2)</b> un <b>cône</b> (à gauche), un <b>cylindre</b> (au milieu) et une <b>demi-boule</b> (à droite).</p><p><b>3)</b> un <b>demi-cylindre</b> (à gauche), un <b>pavé droit</b> (au milieu) et un <b>prisme droit</b> à base triangulaire (à droite).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Rappels : périmètres, aires et volumes", e:[
   {n:"Activité 2", t:"Calcul de périmètres, d'aires et de volumes (rappels)", w:"Sur ta feuille", h:`<p>Dans chaque cas, indique le ou les calcul(s) qui te permettent de répondre à la question et complète la phrase réponse.</p>
    <div class="figs">${fig("Le carré",ex("a2_carre.png","Carré de 3 cm de côté",110))}${fig("Le rectangle",ex("a2_rect.png","Rectangle de 5 cm sur 3 cm",180))}</div><p>Calcule le <b>périmètre</b> (longueur du contour) et l'<b>aire</b> (mesure de la surface intérieure) du carré et du rectangle.</p>
    <div class="figs">${fig("Le cube",ex("a2_cube.png","Cube de 3 cm d'arête",150))}${fig("Le pavé droit",ex("a2_pave.png","Pavé droit de 7 cm, 3 cm et 4 cm",170))}</div><p>Calcule le <b>volume</b> (mesure de l'espace occupé) du cube et du pavé droit.</p>`,
-   c:`<p><b>Carré :</b> </p><p class="calc">P = 4 × 3<br>P = 12 cm<br>A = 3 × 3<br>A = 9 cm²</p><p><b>Rectangle :</b> </p><p class="calc">P = 2 × 5 + 2 × 3<br>P = 16 cm<br>A = 5 × 3<br>A = 15 cm²</p><p><b>Cube :</b></p><p class="calc">V = 3 × 3 × 3<br>V = 27 cm³</p><p><b>Pavé droit :</b></p><p class="calc">V = 7 × 3 × 4<br>V = 84 cm³</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Apprendre et retrouver les formules", w:"Sur ton cahier", h:`<p><b>1 –</b> Écris les 3 formules que tu dois apprendre par cœur car tu n'as pas de moyen de les retrouver : le périmètre d'un cercle, l'aire d'un disque et le volume d'une boule.</p>
    <p><b>2 – a)</b> Pour retrouver les formules de l'aire d'un triangle rectangle, d'un triangle quelconque ou d'un parallélogramme, de quelle formule d'aire t'aides-tu ? Explique.</p>
    <p><b>b)</b> Il existe UNE formule générale qui permet de calculer le volume d'un cube, d'un pavé droit, d'un prisme droit et d'un cylindre. Quelle est cette formule ?</p>
    <p><b>c)</b> En 4<sup>e</sup>, on a rempli un cône avec de l'eau pour remplir un cylindre de même base et de même hauteur.</p>
    <div class="figs">${ex("manip1.jpg","Un cône et un cylindre de même base et de même hauteur",200)}${ex("manip2.jpg","On verse le cône rempli d'eau dans le cylindre",170)}${ex("manip3.jpg","Après 3 remplissages, le cylindre est plein",170)}</div>
    <p>Au bout de 3 remplissages, le cylindre est rempli : 3 × Volume du cône = Volume du cylindre.</p><p>Déduis-en la formule du volume d'un cône. De la même manière, 3 × Volume de la pyramide = Volume du prisme droit : déduis-en la formule du volume d'une pyramide.</p>`,
-   c:`<p><b>1 –</b> Périmètre d'un cercle : P = 2 × π × r (ou P = π × d). Aire d'un disque : A = π × r². Volume d'une boule : V = {4/3} × π × r³.</p>
-   <p><b>2 – a)</b> On s'aide de l'aire du <b>rectangle</b> : un triangle rectangle est la moitié d'un rectangle ({L × ℓ/2}) ; un triangle est la moitié d'un rectangle de même base et de même hauteur ({b × h/2}) ; un parallélogramme se découpe et se recolle en rectangle (c × h).</p>
-   <p><b>b)</b> V = aire de la base × hauteur.</p><p><b>c)</b> Volume du cône = {Volume du cylindre/3} = {π × r² × h/3}. Volume de la pyramide = {Volume du prisme/3} = {aire de la base × h/3}.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer des volumes", e:[
   {n:"Exercice 4", t:"Quille en bois", w:"Sur ton cahier", h:`${ex("quille.png","Quille en bois : un cylindre surmonté d'une boule",60)}<p>Une quille en bois est formée d'un cylindre surmonté d'une boule, qui ont tous deux le même rayon de 3 cm.</p><p>La hauteur du cylindre est de 21 cm.</p><p>Calcule le volume de cette quille, en cm³. Donne l'arrondi au dixième près.</p>`,
-   c:`<p class="calc">V<sub>cylindre</sub> = π × 3² × 21<br>V<sub>cylindre</sub> = 189π cm³<br>V<sub>boule</sub> = {4/3} × π × 3³<br>V<sub>boule</sub> = 36π cm³<br>V<sub>quille</sub> = 189π + 36π<br>V<sub>quille</sub> = 225π<br>V<sub>quille</sub> ≈ 706,9 cm³</p><p>La quille a un volume d'environ <b>706,9 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Cuve d'eau", w:"Sur ton cahier", h:`${ex("cuve.png","Cuve : un cube posé sur une pyramide à base carrée",120)}<p>Une cuve a la forme ci-contre :</p><ul><li>sa partie supérieure est un cube de 5 m d'arête ;</li><li>sa partie inférieure est une pyramide régulière à base carrée ;</li><li>la hauteur totale de la cuve est de 8,50 m.</li></ul><p>Calcule le volume de cette cuve, en m³. Donne l'arrondi au centième près.</p>`,
-   c:`<p class="calc">V<sub>cube</sub> = 5³<br>V<sub>cube</sub> = 125 m³</p><p>La hauteur de la pyramide est 8,50 − 5 = 3,50 m et sa base est un carré de 5 m de côté.</p><p class="calc">V<sub>pyramide</sub> = {5 × 5 × 3,5/3}<br>V<sub>pyramide</sub> = {87,5/3}<br>V<sub>pyramide</sub> ≈ 29,17 m³<br>V<sub>cuve</sub> = 125 + {87,5/3}<br>V<sub>cuve</sub> ≈ 154,17 m³</p><p>La cuve a un volume d'environ <b>154,17 m³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Plot en béton", w:"Sur ton cahier", h:`${ex("plot.png","Plot en béton : un cylindre surmonté d'une demi-boule",80)}<p>Une entreprise doit construire des plots en béton pour border des trottoirs.</p><p>Ces plots sont formés d'un cylindre surmonté d'une demi-boule.</p><p>La hauteur du cylindre doit être de 40 cm et son rayon de 20 cm.</p><p>Calcule le volume, en cm³, de ce plot. Donne l'arrondi à l'unité près.</p>`,
-   c:`<p class="calc">V<sub>cylindre</sub> = π × 20² × 40<br>V<sub>cylindre</sub> = 16 000π cm³<br>V<sub>demi-boule</sub> = {4/3} × π × 20³ ÷ 2<br>V<sub>demi-boule</sub> = {16 000/3}π cm³<br>V<sub>plot</sub> = 16 000π + {16 000/3}π<br>V<sub>plot</sub> = {64 000/3}π<br>V<sub>plot</sub> ≈ 67 021 cm³</p><p>Le plot a un volume d'environ <b>67 021 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Rampe d'accès", w:"Sur ton cahier", h:`${ex("e7.jpg","Dimensions de la rampe : palier de 2 m, hauteur 0,50 m, pente de 4,50 m, longueur au sol 4,47 m, largeur 1,50 m",420)}<p>Calcule le volume de béton, en m³, nécessaire pour construire cette rampe d'accès pour personnes à mobilité réduite.</p>`,
-   c:`<p>La rampe est composée d'un <b>pavé droit</b> (le palier du haut) et d'un <b>prisme droit</b> dont la base est un triangle rectangle (la pente).</p>
-   <p class="calc">V<sub>pavé</sub> = 2 × 1,50 × 0,50<br>V<sub>pavé</sub> = 1,5 m³</p><p class="calc">A<sub>base</sub> = {4,47 × 0,50/2}<br>A<sub>base</sub> = 1,117 5 m²<br>V<sub>prisme</sub> = 1,117 5 × 1,50<br>V<sub>prisme</sub> = 1,676 25 m³</p><p class="calc">V = 1,5 + 1,676 25<br>V = 3,176 25<br>V ≈ 3,18 m³</p><p>Il faut environ <b>3,18 m³</b> de béton. (La longueur 4,50 m de la pente ne sert pas.)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Quantité d'eau", w:"Sur ton cahier", h:`${ex("e8.png","Cylindre de rayon 8 cm et de hauteur 15 cm contenant une boule",150)}<p>Je pose une boule métallique de diamètre 12 cm au fond du cylindre, puis je remplis entièrement d'eau le cylindre.</p><p>Quelle quantité d'eau, en cm³, ai-je versée ? Donne l'arrondi au dixième près.</p>`,
-   c:`<p class="calc">V<sub>cylindre</sub> = π × 8² × 15<br>V<sub>cylindre</sub> = 960π cm³</p><p>Le rayon de la boule est 12 ÷ 2 = 6 cm.</p><p class="calc">V<sub>boule</sub> = {4/3} × π × 6³<br>V<sub>boule</sub> = 288π cm³<br>V<sub>eau</sub> = 960π − 288π<br>V<sub>eau</sub> = 672π<br>V<sub>eau</sub> ≈ 2 111,2 cm³</p><p>J'ai versé environ <b>2 111,2 cm³</b> d'eau.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Conversions d'unités de volume et de contenance", e:[
   {n:"Activité 3", t:"Conversions d'unités de volume et de capacité", w:"Sur ton cahier", h:`${ex("cubes.png","Un cube de 1 cm³ et un cube de 1 000 mm³",260)}
    <p><b>1)</b> Un cube de 1 cm d'arête contient combien de cubes de 1 mm d'arête ? Complète : 1 cm³ = ……… mm³ et 1 dm³ = ……… cm³.</p>
    <p><b>2)</b> Complète : 1 cL = ……… mL et 1 L = ……… cL.</p>
    <p><b>3)</b> Selon toi, 1 L est égal à : 1 m³ ? 1 dm³ ? 1 cm³ ? 1 mm³ ? (Aide : pense à une brique d'un litre de lait.)</p>`,
-   c:`<p><b>1)</b> 10 × 10 × 10 = 1 000 : <b>1 cm³ = 1 000 mm³</b> et <b>1 dm³ = 1 000 cm³</b>. Chaque unité de volume occupe 3 colonnes.</p><p><b>2)</b> 1 cL = 10 mL et 1 L = 100 cL. Chaque unité de contenance occupe 1 colonne.</p><p><b>3)</b> <b>1 L = 1 dm³</b> (une brique de lait est un pavé d'environ 1 dm³).</p>${convTab([])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Problèmes de conversions", w:"Sur ton cahier", h:`<p>Chaque problème est indépendant et doit être justifié rigoureusement.</p>
    <p><b>Problème 1 :</b> dans l'exercice 6, le plot en béton a un volume environ égal à 67 021 cm³. Quel est son volume en dm³ ?</p>
    <p><b>Problème 2 :</b> dans l'exercice 4, la quille en bois a un volume environ égal à 706,9 cm³. Quel est son volume en dm³ ?</p>
    <p><b>Problème 3 :</b> ce verre peut contenir 20 cL d'eau. Avec une bouteille d'un litre, combien puis-je remplir de verres ?</p>${ex("verre.png","Un verre d'eau",60)}
    <p><b>Problème 4 :</b> une baignoire standard a les dimensions suivantes : L = 170 cm, ℓ = 80 cm et h = 55 cm. Son volume est égal à 748 000 cm³. Quelle quantité d'eau, en L, est nécessaire pour remplir totalement la baignoire ?</p>`,
-   c:`<p><b>Problème 1 :</b> 1 dm³ = 1 000 cm³, donc 67 021 ÷ 1 000 = 67,021 : 67 021 cm³ = <b>67,021 dm³</b>.</p><p><b>Problème 2 :</b> 1 dm³ = 1 000 cm³, donc 706,9 ÷ 1 000 = 0,706 9 : 706,9 cm³ = <b>0,706 9 dm³</b>.</p><p><b>Problème 3 :</b> 1 L = 100 cL et 100 ÷ 20 = 5 : je peux remplir <b>5 verres</b>.</p><p><b>Problème 4 :</b> 748 000 ÷ 1 000 = 748, donc 748 000 cm³ = 748 dm³. Et 1 dm³ = 1 L : 748 dm³ = <b>748 L</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes", e:[
   {n:"Exercice 10", t:"Volume de glace dans un cornet", w:"Sur ton cahier", h:`${ex("cornet.png","Cornet de glace : un cône de sommet B surmonté d'une demi-boule de centre A",110)}<p>Un cornet de glace est composé d'un cône surmonté d'une demi-boule.</p><p>Sur le dessin, on donne : AB = 13 cm ; AC = 2,5 cm.</p><p>On suppose que le cône est entièrement rempli de glace.</p><p>Quelle est la quantité de glace dans ce cornet, en cL ? (Arrondi à l'unité.)</p>`,
-   c:`<p>Le cône a pour rayon AC = 2,5 cm et pour hauteur AB = 13 cm. La demi-boule a pour rayon 2,5 cm.</p>
-   <p class="calc">V<sub>cône</sub> = {π × 2,5² × 13/3}<br>V<sub>cône</sub> = {81,25/3}π<br>V<sub>cône</sub> ≈ 85,08 cm³<br>V<sub>boule</sub> = {4/3} × π × 2,5³<br>V<sub>boule</sub> = {62,5/3}π<br>V<sub>demi-boule</sub> = {62,5/3}π ÷ 2<br>V<sub>demi-boule</sub> = {31,25/3}π<br>V<sub>demi-boule</sub> ≈ 32,72 cm³<br>V<sub>glace</sub> = {81,25/3}π + {31,25/3}π<br>V<sub>glace</sub> = 37,5π<br>V<sub>glace</sub> ≈ 117,81 cm³</p>
-   <p>100 cm³ = 10 cL, donc 117,81 cm³ = 11,781 cL. Le cornet contient environ <b>12 cL</b> de glace.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Volume d'eau dans une piscine", w:"Sur ton cahier", h:`${ex("piscine.png","Piscine : demi-cylindre de diamètre 5 m, pavé de 10 m sur 5 m, prisme à base triangulaire de hauteur 3,1 m ; profondeur 1,2 m",360)}<p>Voici la représentation en perspective cavalière d'une piscine (les proportions ne sont pas respectées).</p><p>On veut remplir cette piscine jusqu'au bord : quel volume d'eau, en L, peut-on mettre au maximum ? (Arrondis à l'unité.)</p>`,
-   c:`<p>La piscine est composée d'un demi-cylindre (à gauche), d'un pavé droit (au milieu) et d'un prisme droit à base triangulaire (à droite), tous de hauteur 1,2 m.</p>
-   <p><b>Demi-cylindre :</b> le rayon est 5 ÷ 2 = 2,5 m.</p><p class="calc">V<sub>1</sub> = π × 2,5² × 1,2<br>V<sub>1</sub> ≈ 23,562 m³<br>V<sub>2</sub> = 23,562 ÷ 2<br>V<sub>2</sub> ≈ 11,781 m³</p><p><b>Pavé droit :</b></p><p class="calc">V<sub>3</sub> = 10 × 5 × 1,2<br>V<sub>3</sub> = 60 m³</p><p><b>Prisme droit :</b></p><p class="calc">A<sub>base</sub> = {5 × 3,1/2}<br>A<sub>base</sub> = 7,75 m²<br>V<sub>4</sub> = 7,75 × 1,2<br>V<sub>4</sub> = 9,3 m³</p><p><b>Total :</b></p><p class="calc">V = 11,781 + 60 + 9,3<br>V = 81,081 m³</p>
-   <p>81,081 m³ = 81 081 dm³ = 81 081 L : on peut mettre au maximum environ <b>81 081 L</b> d'eau.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Le composteur (d'après le brevet 2021)", w:"Sur ton cahier", h:`${ex("compost.png","Composteur : un pavé droit de 70 cm sur 67 cm surmonté d'un prisme droit à base trapèze ABCD ; hauteur totale 1,1 m ; trapèze : petit côté 39 cm, grand côté 67 cm, hauteur 45 cm",440)}
    <p>Pour réduire leur production de déchets, certaines familles utilisent un composteur.</p><p>Le modèle présenté, qui n'est pas à l'échelle, est composé d'un pavé droit et d'un prisme droit.</p><p>Le descriptif indique qu'il a une contenance d'environ 0,5 m³. On souhaite vérifier cette information.</p>
    <p><b>a)</b> Vérifie que l'aire du trapèze ABCD est de 2 385 cm².</p><p><b>b)</b> Calcule le volume du composteur.</p>${ex("rappels.png","Rappels : aire du trapèze = (petit côté + grand côté) × hauteur ÷ 2 ; volume du prisme droit = aire de la base × hauteur ; volume du pavé droit = longueur × largeur × hauteur",330)}`,
-   c:`<p><b>a)</b></p><p class="calc">A<sub>trapèze</sub> = {(39 + 67) × 45/2}<br>A<sub>trapèze</sub> = {106 × 45/2}<br>A<sub>trapèze</sub> = 2 385 cm²</p>
-   <p><b>b)</b> Le prisme droit a pour base le trapèze ABCD et pour hauteur 70 cm :</p><p class="calc">V<sub>prisme</sub> = 2 385 × 70<br>V<sub>prisme</sub> = 166 950 cm³</p><p>Le pavé droit a pour hauteur h = 1,1 m − 45 cm :</p><p class="calc">h = 110 − 45<br>h = 65 cm<br>V<sub>pavé</sub> = 70 × 67 × 65<br>V<sub>pavé</sub> = 304 850 cm³</p>
-   <p class="calc">V = 166 950 + 304 850<br>V = 471 800 cm³<br>V = 0,4718 m³</p><p>0,4718 m³ ≈ 0,5 m³ : l'information du descriptif est <b>correcte</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Calcul du volume d'une boule", w:"Sur ton cahier", h:`<p>Calcule le volume de ces 2 boules. Donne la valeur exacte et l'arrondi au dixième. Rédige rigoureusement tes réponses.</p><div class="figs">${fig("Boule 1 : rayon 6 cm",ex("boule6.png","Boule de rayon 6 cm",170))}${fig("Boule 2 : diamètre 10 cm",ex("boule10.png","Boule de diamètre 10 cm",130))}</div>`,
-   c:`<p><b>Boule 1 :</b> le rayon est 6 cm.</p><p class="calc">V = {4/3} × π × 6³<br>V = 288π<br>V ≈ 904,8 cm³</p><p><b>Boule 2 :</b> 10 ÷ 2 = 5, le rayon est 5 cm.</p><p class="calc">V = {4/3} × π × 5³<br>V = {500/3}π<br>V ≈ 523,6 cm³</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -246,3 +233,4 @@ exos:[
 ]}))()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-4");

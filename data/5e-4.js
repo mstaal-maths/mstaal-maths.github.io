@@ -358,31 +358,19 @@ exos:[
   {n:"Activité 1", t:"Quadrilatères particuliers", h:`<p><b>Rappels de 6<sup>e</sup></b></p>
    <div class="cgrid"><figure><figcaption><b>Le rectangle</b> – Définition : quadrilatère qui a 4 angles droits.</figcaption>${F_RECT}</figure><figure><figcaption><b>Le losange</b> – Définition : quadrilatère qui a 4 côtés de même mesure.</figcaption>${F_LOS}</figure><figure><figcaption><b>Le carré</b> – Définition : quadrilatère qui a 4 angles droits et 4 côtés de même mesure.</figcaption>${F_CAR}</figure></div>
    <p>Relis ces trois définitions et observe le codage de chaque figure : les petits carrés indiquent les angles droits, les petits traits indiquent les côtés de même longueur.</p>`,
-   c:`<p>Cette activité est un rappel : il n'y a rien à calculer, mais il faut savoir lire le codage.</p>
-   <p><b>Rectangle</b> : 4 petits carrés, donc 4 angles droits.</p><p><b>Losange</b> : le même petit trait sur les 4 côtés, donc 4 côtés de même longueur.</p><p><b>Carré</b> : 4 angles droits <b>et</b> 4 côtés de même longueur.</p>
-   <p><i>À retenir : un carré est à la fois un rectangle (il a 4 angles droits) et un losange (il a 4 côtés de même longueur).</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Repérer des parallélogrammes", w:"Sur ton cahier", h:`${ex("ex1","Droites de couleur et points d'intersection",420)}<p>Donne trois noms de parallélogrammes de la figure, sachant que deux droites de même couleur sont parallèles entre elles.</p>`,
-   c:`<p>Chaque parallélogramme est formé par deux paires de droites parallèles.</p>
-   <p>Droites rouges et droites bleues : <b>SPGI</b>.</p><p>Droites rouges et droites vertes : <b>MRNH</b>.</p><p>Droites bleues et droites vertes : <b>KLOJ</b>.</p>
-   <p><i>On peut nommer un parallélogramme en partant de n'importe quel sommet, en tournant dans un sens ou dans l'autre : SPGI, PGIS, ISPG… sont justes. Mais SGPI ne l'est pas, car S et G ne sont pas voisins.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Tracer des parallélogrammes", w:"Sur ton cahier", h:`<p>Reproduis les points A, B et C sur ton cahier : <b>un carreau de la figure = un carreau de ton cahier</b>.</p>${gridFig({A:G2.A,B:G2.B,C:G2.C})}<p>a) Place le point D tel que ABDC soit un parallélogramme. b) Place le point E tel que AEBC soit un parallélogramme.</p>`,
-   c:`<p>a) ABDC est un parallélogramme : [AB] et [CD] sont des côtés opposés, donc ils sont parallèles et de même longueur. Pour aller de A à B, on se déplace de 4 carreaux vers la droite et de 1 carreau vers le bas. Je fais le même déplacement à partir de C : j'arrive en D.</p>
-   <p>b) AEBC est un parallélogramme : [AE] et [BC] sont des côtés opposés, donc ils sont parallèles et de même longueur. Pour aller de C à B : 3 carreaux vers la droite et 2 vers le haut. Je fais le même déplacement à partir de A : j'arrive en E.</p>
-   ${geo({pts:G2, grid:{c:10,r:7}, s:30, w:350, polys:[{v:["A","B","D","C"]},{v:["A","E","B","C"],k:"img"}], marks:["A","B","C","D","E"]})}
-   <p><i>Vérification : les diagonales d'un parallélogramme se coupent en leur milieu. Le milieu de [AD] est aussi celui de [BC].</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Lire les informations sur un parallélogramme", w:"Sur ton cahier", h:`<p>Les deux quadrilatères ABCD et LIRE sont des parallélogrammes ; LIRE a pour centre O. Les longueurs sont en cm. <i>Les figures ne sont pas en vraie grandeur.</i></p>
    <div class="figs">${fq({pts:E3a, poly:["A","B","C","D"], arcs:[["B","A","C","60°"]], lens:[["A","B","5,4 cm"],["B","C","3 cm"]], s:30})}${fq({pts:E3b, poly:["L","I","R","E"], segs:[["L","R"],["I","E"]], marks:["O"], lens:[["O","I","2,3"],["O","R","3,2"],["I","R","4"]], s:30})}</div>
    <p>En t'aidant des propriétés du cours, recopie chaque figure et écris dessus le maximum d'informations (longueurs, mesures d'angles, droites parallèles, codages…).</p>`,
-   c:`<p><b>ABCD :</b></p><p>Côtés opposés parallèles : (AB) // (DC) et (AD) // (BC).</p><p>Côtés opposés de même longueur : DC = AB = 5,4 cm et AD = BC = 3 cm.</p><p>Angles opposés égaux : ${ov("ADC")} = ${ov("ABC")} = 60°, et ${ov("DAB")} = ${ov("BCD")} (ces deux angles ont la même mesure).</p>
-   ${fq({pts:E3a, poly:["A","B","C","D"], arcs:[["B","A","C","60°"],["D","C","A","60°"]], lens:[["A","B","5,4 cm"],["B","C","3 cm"],["D","C","5,4 cm"],["A","D","3 cm"]], s:30})}
-   <p><b>LIRE :</b></p><p>Côtés opposés parallèles : (LI) // (ER) et (LE) // (IR).</p><p>Côtés opposés de même longueur : LE = IR = 4 cm.</p><p>Diagonales qui se coupent en leur milieu : OE = OI = 2,3 cm et OL = OR = 3,2 cm. Donc IE = 2 × 2,3 = 4,6 cm et LR = 2 × 3,2 = 6,4 cm.</p>
-   ${fq({pts:E3b, poly:["L","I","R","E"], segs:[["L","R"],["I","E"]], marks:["O"], lens:[["O","I","2,3"],["O","R","3,2"],["I","R","4"],["O","E","2,3"],["O","L","3,2"],["L","E","4"]], ticks:[["O","I",1],["O","E",1],["O","R",2],["O","L",2]], s:44})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2", t:"Utiliser les propriétés pour démontrer et construire", w:"Sur ton cahier", h:`<p>ABCD est un parallélogramme de centre E. On donne : EC = 2,3 cm, EB = 3,2 cm et BC = 4,5 cm. <i>La figure n'est pas en vraie grandeur.</i></p>
    ${fq({pts:A2, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["E"], lens:[["E","C","2,3"],["E","B","3,2"],["B","C","4,5"]], s:30})}
    <p>1. Donne les longueurs DE et EA. Justifie. 2. Construis ce parallélogramme en vraie grandeur.</p>`,
-   c:`<p>1. Je sais que ABCD est un parallélogramme de centre E. Or si un quadrilatère est un parallélogramme, alors ses diagonales se coupent en leur milieu. Donc DE = EB = 3,2 cm et EA = EC = 2,3 cm.</p>
-   <p>2. Construction :</p><ol><li>Je trace [BC] de 4,5 cm.</li><li>Avec le compas : un arc de centre C et de rayon 2,3 cm, un arc de centre B et de rayon 3,2 cm. Ils se coupent en E.</li><li>Je trace la demi-droite [CE) et je place A tel que EA = 2,3 cm.</li><li>Je trace la demi-droite [BE) et je place D tel que ED = 3,2 cm.</li><li>Je trace le quadrilatère ABCD.</li></ol>
-   ${fq({pts:A2, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["E"], ticks:[["E","C",1],["E","A",1],["E","B",2],["E","D",2]], s:30})}<p><i>Figure réduite : sur ton cahier, BC mesure 4,5 cm.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Tracés de parallélogrammes", w:"Sur ton cahier", h:`<p>Construis ces parallélogrammes en vraie grandeur sur ton cahier. Pour c), f) et g), fais un dessin à main levée avant de les tracer. <i>Les figures a), b), d) et e) ne sont pas en vraie grandeur.</i></p>
    <div class="cgrid">
     <figure><figcaption><b>a)</b> le parallélogramme OINL</figcaption>${fq({pts:X4.a, poly:["O","I","N","L"], arcs:[["O","I","L","117°","#e57fb0"]], lens:[["O","I","4 cm"],["O","L","2,5 cm"]], s:S4, fit:FIT})}</figure>
@@ -391,26 +379,12 @@ exos:[
     <figure><figcaption><b>e)</b> le parallélogramme ABCD de centre E</figcaption>${fq({pts:X4.e, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["E"], arcs:[["E","D","C","80°","#7fb2e5"]],  s:S4, fit:FIT})}<p class="dat">${"DE = "+"5 cm"} · ${"EC = "+"2,5 cm"}</p></figure>
    </div>
    <p>c) Trace un parallélogramme GRIS tel que GS = 2 cm, SI = 5 cm et ${ov("GSI")} = 50°.</p><p>f) Trace un parallélogramme ROME tel que RO = 4 cm, RM = 6 cm et OM = 5 cm.</p><p>g) Trace un parallélogramme LUNE tel que LU = 3 cm, UN = 5,5 cm et ${ov("LUN")} = 108°.</p>`,
-   c:`<p>Les figures ci-dessous sont à l'échelle, mais réduites : sur ton cahier, les longueurs doivent être celles de l'énoncé.</p>
-   <div class="cgrid">
-    <figure><figcaption><b>a)</b> Je trace [OI] de 4 cm, puis l'angle de 117° en O et L à 2,5 cm de O. Côtés opposés de même longueur : N est à 2,5 cm de I et à 4 cm de L (compas).</figcaption>${fq({pts:X4.a, poly:["O","I","N","L"], arcs:[["O","I","L","117°","#e57fb0"]], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>b)</b> Je trace [IJ] de 6 cm. K est à 4 cm de J et à 7 cm de I (deux arcs). Puis L est à 6 cm de K et à 4 cm de I.</figcaption>${fq({pts:X4.b, poly:["L","K","J","I"], segs:[["I","K","cons"]], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>c)</b> Je trace [SI] de 5 cm, l'angle de 50° en S, et G à 2 cm de S. R est à 5 cm de G et à 2 cm de I.</figcaption>${fq({pts:X4.c, poly:["G","R","I","S"], arcs:[["S","I","G","50°"]], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>d)</b> Je trace le triangle FJG (FG = 6 cm, FJ = 4,3 cm, JG = 3 cm). Les diagonales se coupent en leur milieu : je prolonge [FJ) de 4,3 cm (point H) et [GJ) de 3 cm (point I).</figcaption>${fq({pts:X4.d, poly:["F","G","H","I"], segs:[["F","H"],["G","I"]], marks:["J"], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>e)</b> Les diagonales se coupent en leur milieu : DB = 2 × 5 = 10 cm et AC = 2 × 2,5 = 5 cm. Je trace [DB] de 10 cm et son milieu E, puis une droite qui fait un angle de 80° avec [ED] en E, et je place C et A à 2,5 cm de E.</figcaption>${fq({pts:X4.e, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["E"], arcs:[["E","D","C","80°","#7fb2e5"]], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>f)</b> Je trace le triangle ROM (RO = 4 cm, RM = 6 cm, OM = 5 cm). Puis E est à 5 cm de R et à 4 cm de M.</figcaption>${fq({pts:X4.f, poly:["R","O","M","E"], segs:[["R","M","cons"]], s:S4, fit:FIT})}</figure>
-    <figure><figcaption><b>g)</b> Je trace [UN] de 5,5 cm, l'angle de 108° en U, et L à 3 cm de U. E est à 5,5 cm de L et à 3 cm de N.</figcaption>${fq({pts:X4.g, poly:["L","U","N","E"], arcs:[["U","N","L","108°","#e57fb0"]], s:S4, fit:FIT})}</figure>
-   </div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Prouver qu'un quadrilatère est un parallélogramme", e:[
   {n:"Activité 3", t:"Vraie ou fausse ?", w:"Sur ton cahier", h:`<p>Parmi ces propriétés, certaines sont vraies et d'autres sont fausses. Recopie les propriétés vraies.</p>
    <p>a) Si un quadrilatère a deux côtés opposés parallèles, alors c'est un parallélogramme.</p><p>b) Si un quadrilatère a ses côtés opposés parallèles, alors c'est un parallélogramme.</p><p>c) Si un quadrilatère a deux côtés opposés de même longueur, alors c'est un parallélogramme.</p><p>d) Si un quadrilatère a ses côtés opposés de même longueur, alors c'est un parallélogramme.</p><p>e) Si un quadrilatère a deux côtés opposés parallèles et de même longueur, alors c'est un parallélogramme.</p><p>f) Si un quadrilatère a ses diagonales qui se coupent en leur milieu, alors c'est un parallélogramme.</p>`,
-   c:`<p>a) <b>Fausse</b> : un trapèze a deux côtés opposés parallèles, mais ce n'est pas un parallélogramme.</p>
-   ${fq({pts:{A:[0,0],B:[5,0],C:[3.6,2],D:[1,2]}, poly:["A","B","C","D"], s:22, alt:"Trapèze"})}
-   <p>b) <b>Vraie</b> (c'est la définition).</p>
-   <p>c) <b>Fausse</b> : ce trapèze a deux côtés opposés de même longueur, mais ce n'est pas un parallélogramme.</p>
-   ${fq({pts:{A:[0,0],B:[5,0],C:[3.8,2],D:[1.2,2]}, poly:["A","B","C","D"], ticks:[["A","D",1],["B","C",1]], s:22, alt:"Trapèze isocèle"})}
-   <p>d) <b>Vraie</b> : c'est la propriété 2 du cours.</p><p>e) <b>Vraie</b> : c'est la propriété 3 du cours.</p><p>f) <b>Vraie</b> : c'est la propriété 4 du cours.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Prouver qu'un quadrilatère est un parallélogramme", w:"Sur ton cahier", h:`<p>a) Parmi les 6 quadrilatères ci-dessous, lesquels sont des parallélogrammes ? b) Justifie rigoureusement pourquoi ces quadrilatères sont des parallélogrammes. <i>On ne peut utiliser que les codages et les informations écrites.</i></p>
    <div class="cgrid">
     <figure><figcaption><b>a.</b></figcaption>${fq({pts:{A:[0,0],B:[3.4,0],C:[4.4,1.6],D:[1,1.6]}, poly:["A","B","C","D"], hide:["A","B","C","D"], s:24, m:16})}</figure>
@@ -420,41 +394,25 @@ exos:[
     <figure><figcaption><b>e.</b></figcaption>${fq({pts:{A:[0,0],B:[3.4,0],C:[2.8,1.7],D:[0,1.7]}, poly:["A","B","C","D"], lens:[["D","C","5"],["A","D","5"]], hide:["A","B","C","D"], s:24, m:20})}</figure>
     <figure><figcaption><b>f.</b></figcaption>${fq({pts:{A:[0,0],B:[3.6,0],C:[4.4,1.6],D:[0.8,1.6]}, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], lens:[["A","C","8",1,12,0.78],["B","D","8",-1,12,0.78]], hide:["A","B","C","D"], s:24, m:16})}</figure>
    </div>`,
-   c:`<p>a) Les parallélogrammes sont <b>b</b>, <b>c</b> et <b>d</b>.</p>
-   <p>b) <b>b.</b> Je sais que ses côtés opposés sont de même longueur (codages). Or si un quadrilatère a ses côtés opposés de même longueur, alors c'est un parallélogramme. Donc le quadrilatère b est un parallélogramme.</p>
-   <p><b>c.</b> Je sais que (LI) // (ER) et LI = ER = 4. Or si un quadrilatère a deux côtés opposés parallèles et de même longueur, alors c'est un parallélogramme. Donc LIRE est un parallélogramme.</p>
-   <p><b>d.</b> Je sais que ses diagonales se coupent en leur milieu (codages). Or si un quadrilatère a ses diagonales qui se coupent en leur milieu, alors c'est un parallélogramme. Donc le quadrilatère d est un parallélogramme.</p>
-   <p><b>a.</b> Aucune information : on ne peut rien prouver, même s'il « a l'air » d'un parallélogramme. <b>e.</b> Deux côtés <b>consécutifs</b> de même longueur ne suffisent pas. <b>f.</b> Des diagonales de même longueur ne suffisent pas : il faut qu'elles se coupent en leur milieu.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Parallélogrammes particuliers", e:[
   {n:"Activité 4", t:"Propriétés des parallélogrammes particuliers", w:"Sur ton cahier", h:`<p>Recopie et complète chaque phrase avec <b>rectangle</b>, <b>losange</b> ou <b>carré</b>.</p>
    <p>a) Un parallélogramme qui a un angle droit est un ……</p><p>b) Un parallélogramme qui a des diagonales de même longueur est un ……</p><p>c) Un parallélogramme qui a deux côtés consécutifs de même longueur est un ……</p><p>d) Un parallélogramme qui a des diagonales perpendiculaires est un ……</p><p>e) Un rectangle qui a des diagonales perpendiculaires est un ……</p><p>f) Un losange qui a un angle droit est un ……</p>`,
-   c:`<p>a) rectangle</p><p>b) rectangle</p><p>c) losange</p><p>d) losange</p><p>e) carré</p><p>f) carré</p>${MAP}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Prouver la nature d'un parallélogramme avec ses côtés", w:"Sur ton cahier", h:`<p>Les quadrilatères suivants sont des parallélogrammes. <i>Ils sont dessinés à main levée.</i></p>${ex("ex6","Six parallélogrammes codés numérotés de 1 à 6",640)}<p>1. Parmi eux, il y a des parallélogrammes particuliers. Donne la nature de chacun. 2. Justifie ton choix pour le parallélogramme 4 et pour le parallélogramme 5.</p>`,
-   c:`<p>1. ① rectangle · ② carré · ③ losange · ④ rectangle · ⑤ carré · ⑥ losange</p>
-   <p>2. <b>④</b> Je sais que ④ est un parallélogramme qui a un angle droit (deux côtés consécutifs perpendiculaires). Or si un parallélogramme a deux côtés consécutifs perpendiculaires, alors c'est un rectangle. Donc ④ est un rectangle.</p>
-   <p><b>⑤</b> Je sais que ⑤ est un parallélogramme qui a un angle droit et deux côtés consécutifs de même longueur. Or si un parallélogramme a deux côtés consécutifs perpendiculaires et de même longueur, alors c'est un carré. Donc ⑤ est un carré.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Prouver la nature d'un parallélogramme avec ses diagonales", w:"Sur ton cahier", h:`${ex("ex7","Diagonales codées de quatre quadrilatères",640)}<p>1. En observant les codages des diagonales de ces quatre quadrilatères, donne leur nature. 2. Justifie ton choix pour ABCD et pour EFGH.</p>`,
-   c:`<p>1. a. ABCD : rectangle · b. EFGH : losange · c. IJKL : carré · d. MNOP : parallélogramme</p>
-   <p>2. <b>ABCD</b> : je sais que ses diagonales se coupent en leur milieu, donc ABCD est un parallélogramme. De plus, ses diagonales ont la même longueur (les quatre moitiés ont le même codage). Or si un parallélogramme a des diagonales de même longueur, alors c'est un rectangle. Donc ABCD est un rectangle.</p>
-   <p><b>EFGH</b> : je sais que ses diagonales se coupent en leur milieu, donc EFGH est un parallélogramme. De plus, ses diagonales sont perpendiculaires. Or si un parallélogramme a des diagonales perpendiculaires, alors c'est un losange. Donc EFGH est un losange.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Construire avec les propriétés des côtés", w:"Sur ton cahier", h:`<p>Construis en vraie grandeur. <i>Les figures ne sont pas en vraie grandeur.</i></p>
    <div class="figs"><figure><figcaption>1. Le losange IJKL</figcaption>${fq({pts:X8a, poly:["I","J","K","L"], arcs:[["K","J","L","28°","#e57fb0"]],  ticks:[["I","J",1],["J","K",1],["K","L",1],["L","I",1]], s:28, ar:40})}<p class="dat">${"IL = "+"4,1 cm"}</p></figure>
    <figure><figcaption>2. Le rectangle LION</figcaption>${fq({pts:X8b, poly:["L","I","O","N"], segs:[["N","I","ln"]], rights:[["O","N","I"]],  s:34})}<p class="dat">${"NO = "+"3,8 cm"} · ${"NI = "+"4,5 cm"}</p></figure></div>`,
-   c:`<p><b>1.</b> Je trace l'angle ${ov("JKL")} de 28°, et je place J et L à 4,1 cm de K. Puis I est à 4,1 cm de J et à 4,1 cm de L (deux arcs de cercle) : les quatre côtés ont la même longueur.</p>
-   ${fq({pts:X8a, poly:["I","J","K","L"], arcs:[["K","J","L","28°","#e57fb0"]], ticks:[["I","J",1],["J","K",1],["K","L",1],["L","I",1]], s:28, ar:40})}
-   <p><b>2.</b> Je trace [NO] de 3,8 cm, puis la perpendiculaire à (NO) en O. Avec le compas, un arc de centre N et de rayon 4,5 cm coupe cette perpendiculaire en I. Enfin, L est tel que NL = OI et LI = NO (ou je trace les perpendiculaires).</p>
-   ${fq({pts:X8b, poly:["L","I","O","N"], segs:[["N","I","cons"]], rights:[["O","N","I"],["N","L","O"],["L","I","N"],["I","O","L"]], s:34})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Construire avec les propriétés des diagonales", w:"Sur ton cahier", h:`<p>Construis en vraie grandeur. <i>Les figures ne sont pas en vraie grandeur.</i></p>
    <div class="figs"><figure><figcaption>1. Le losange EFGH de centre O</figcaption>${fq({pts:X9a, poly:["E","F","G","H"], segs:[["E","G"],["F","H"]], marks:["O"], rights:[["O","H","E"]],  s:22})}<p class="dat">${"EO = "+"3,5 cm"} · ${"OH = "+"2 cm"}</p></figure>
    <figure><figcaption>2. Le rectangle ABCD de centre O</figcaption>${fq({pts:X9b, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["O"],  s:24})}<p class="dat">${"AD = "+"6 cm"} · ${"AO = "+"3,5 cm"}</p></figure>
    <figure><figcaption>3. Le carré MNOP</figcaption>${fq({pts:X9c, poly:["M","N","O","P"], segs:[["P","N","ln"]],  hide:["K"], s:34})}<p class="dat">${"PN = "+"4 cm"}</p></figure></div>`,
-   c:`<p><b>1.</b> Un losange a des diagonales perpendiculaires qui se coupent en leur milieu. Je trace [EG] de 2 × 3,5 = 7 cm et son milieu O, puis la perpendiculaire à (EG) en O. Je place F et H sur cette perpendiculaire, à 2 cm de O.</p>
-   ${fq({pts:X9a, poly:["E","F","G","H"], segs:[["E","G"],["F","H"]], marks:["O"], rights:[["O","H","E"]], ticks:[["E","O",2],["O","G",2],["F","O",1],["O","H",1]], s:22})}
-   <p><b>2.</b> Un rectangle a des diagonales de même longueur qui se coupent en leur milieu. Je trace [AD] de 6 cm. A et D sont à 3,5 cm de O : deux arcs de rayon 3,5 cm, de centres A et D, se coupent en O. Je prolonge [AO) et [DO) de 3,5 cm : j'obtiens C et B.</p>
-   ${fq({pts:X9b, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["O"], ticks:[["A","O",1],["O","C",1],["B","O",1],["O","D",1]], s:24})}
-   <p><b>3.</b> Un carré a des diagonales perpendiculaires, de même longueur, qui se coupent en leur milieu. Je trace [PN] de 4 cm et son milieu K, puis la perpendiculaire à (PN) en K. Je place M et O sur cette perpendiculaire, à 2 cm de K (MO = PN = 4 cm, donc KM = KO = 4 ÷ 2 = 2 cm).</p>
-   ${fq({pts:X9c, poly:["M","N","O","P"], segs:[["P","N"],["M","O"]], marks:["K"], rights:[["K","N","M"]], ticks:[["P","K",1],["K","N",1],["M","K",1],["K","O",1]], s:34})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -520,3 +478,4 @@ eval: EVAL
 /* le chapitre 3 a sa propre évaluation d'entraînement, plus courte (5e-3.js) */
 window.FIG54 = {fq, P, add, sub, mul, dist, fourth, inter2, MAP};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-4");

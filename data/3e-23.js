@@ -99,24 +99,24 @@ exos:[
    <p><b>2)</b> … de lunes pour les cœurs ?</p>${syms(["MMHMMHMH","H"],"Des lunes et des cœurs")}
    <p><b>3)</b> … de cœurs pour les triangles ?</p>${syms(["HHTTTHTT","TTTTTHTH","HHHTTHTH","HHH"],"Des cœurs et des triangles")}
    <p><b>4)</b> … de carrés pour les cercles ?</p>${syms(["CCCCSCCC","CSCCCCC"],"Des cercles et des carrés")}`,
-   c:`<p><b>1)</b> 5 étoiles et 14 carrés : <b>5 : 14</b>.</p><p><b>2)</b> 5 lunes et 4 cœurs : <b>5 : 4</b>.</p><p><b>3)</b> 13 cœurs et 14 triangles : <b>13 : 14</b>.</p><p><b>4)</b> 2 carrés et 13 cercles : <b>2 : 13</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice en + 1", t:"Ratios de bonbons", w:"Sur ton cahier", h:`<p><b>Explication de cours :</b> la notion de ratio est très utile dans divers domaines (en économie, en géographie…).</p><p>Par exemple, le <b>sexe-ratio</b> à la naissance est un indicateur démographique : il exprime le nombre de garçons par rapport au nombre de filles d'une population donnée.</p><p>En France, on dit que le sexe-ratio des naissances est de 105 : 100, parce qu'il naît environ 105 garçons pour 100 filles.</p>
    <p><b>a)</b> Un paquet de bonbons contient 7 bonbons à la fraise et 10 au cola. Dans quel ratio sont les bonbons à la fraise et au cola ?</p><p><b>b)</b> Un paquet contient 3 bonbons à la fraise, 10 au cola et 5 au citron. Dans quel ratio sont les bonbons à la fraise, au cola et au citron ?</p><p><b>c)</b> Un paquet contient 12 bonbons à la fraise et 10 au cola. Dans quel ratio sont les bonbons à la fraise et au cola ?</p>`,
-   c:`<p><b>a)</b> <b>7 : 10</b>.</p><p><b>b)</b> <b>3 : 10 : 5</b>.</p><p><b>c)</b> <b>12 : 10</b>, c'est-à-dire aussi <b>6 : 5</b> (on divise 12 et 10 par 2).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Partager une quantité selon un ratio", e:[
   {n:"Activité 1", t:"Le partage de Mona et Ninon", w:"Sur ton cahier", h:`<p>240 € sont partagés entre Mona et Ninon dans le ratio 2 : 3.</p><p><i>Cela signifie que Mona reçoit 2 parts de la somme globale et que Ninon reçoit 3 parts de la somme globale.</i></p><p>Combien chacune d'elles reçoit-elle ?</p>`,
-   c:`${bande([2,3],["Mona","Ninon"],"48 €")}<p>2 + 3 = 5 : il y a 5 parts.</p><p>240 ÷ 5 = 48 : une part vaut 48 €.</p><p>Mona : 2 × 48 = <b>96 €</b>. Ninon : 3 × 48 = <b>144 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"La vinaigrette", w:"Sur ton cahier", h:`<p>Retrouve la quantité d'huile et de vinaigre pour 500 mL de vinaigrette réalisée dans le ratio 3 : 1.</p>`,
-   c:`<p>Il y a 4 portions (3 + 1).</p><p>500 ÷ 4 = 125 : il y a 125 mL par portion.</p><p>125 × 3 = 375 : il y aura <b>375 mL d'huile</b>.</p><p>125 × 1 = 125 : il y aura <b>125 mL de vinaigre</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Les biscuits sablés", w:"Sur ton cahier", h:`<p>Une recette de biscuits sablés commence par la fabrication d'un « sable » réalisé avec de la farine, du beurre et du sucre dans le ratio 10 : 6 : 5.</p><p>Une pâte homogène est ensuite fabriquée avec ce sable et un peu de lait.</p><p>Quelles masses de farine, de beurre et de sucre doit-on prendre pour créer ce « sable » de 630 g ?</p>`,
-   c:`<p>Il y a 21 portions (10 + 6 + 5).</p><p>630 ÷ 21 = 30 : il y a 30 g par portion.</p><p>10 × 30 = 300 : il y aura <b>300 g de farine</b>.</p><p>6 × 30 = 180 : il y aura <b>180 g de beurre</b>.</p><p>5 × 30 = 150 : il y aura <b>150 g de sucre</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Les chocolats", w:"Sur ton cahier", h:`<p>Les 3 enfants Horatio, William et Juliette ont respectivement 5, 9 et 11 ans.</p><p>On décide de partager 100 chocolats dans le ratio « de leurs âges » 5 : 9 : 11.</p><p>Combien de chocolats aura chaque enfant ?</p>`,
-   c:`<p>5 + 9 + 11 = 25 : il y a donc 25 parts.</p><p>Une part représente 100 ÷ 25 = 4 chocolats.</p><p>Horatio aura 5 × 4, soit <b>20 chocolats</b>.</p><p>William aura 9 × 4, soit <b>36 chocolats</b>.</p><p>Juliette aura 11 × 4, soit <b>44 chocolats</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"L'investissement", w:"Sur ton cahier", h:`<p>J'ai investi 300 € et toi 500 € dans une société.</p><p>Celle-ci a pris de la valeur et nous avons maintenant 11 000 € à nous partager proportionnellement à nos mises.</p><p>Combien chacun de nous va-t-il obtenir ?</p>`,
-   c:`<p>Le ratio est de 300 : 500, ou encore 3 : 5. Il y a donc 8 parts.</p><p>11 000 ÷ 8 = 1 375 : une part vaut 1 375 €.</p><p>3 × 1 375 = 4 125 : je récupérerai <b>4 125 €</b>.</p><p>5 × 1 375 = 6 875 : tu récupéreras <b>6 875 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice en + 2", t:"Le loto", w:"Sur ton cahier", h:`<p>Deux amis ont joué au loto. Leur mise s'est faite selon le ratio 3 : 5.</p><p>Ils gagnent 64 €.</p><p>Quelle est la somme d'argent qui revient à chacun d'eux ?</p>`,
-   c:`<p>3 + 5 = 8 : il y a 8 parts.</p><p>64 ÷ 8 = 8 : une part vaut 8 €.</p><p>Le premier ami reçoit 3 × 8 = <b>24 €</b> et le second 5 × 8 = <b>40 €</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -168,3 +168,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-23");

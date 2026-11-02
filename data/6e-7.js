@@ -90,55 +90,37 @@ cours:[
 exos:[
 {t:"Convertir des durées", e:[
   {n:"Activité 1", t:"Les relations à connaître", w:"Sur ta feuille", h:`<p>1) Complète le tableau des égalités à connaître par cœur.</p><div class="scroll"><table class="std"><thead><tr><th>Les petites durées</th><th>Les grandes durées</th></tr></thead><tbody><tr><td>1 minute (min) = …… secondes (s)</td><td>1 an = …… mois</td></tr><tr><td>1 heure (h) = …… min</td><td>1 décennie = …… ans</td></tr><tr><td>1 jour = …… h</td><td>1 siècle = …… ans</td></tr><tr><td>1 semaine = …… jours</td><td>1 millénaire = …… ans</td></tr><tr><td>1 mois = ……, ……, …… ou …… jours</td><td></td></tr></tbody></table></div><p>2) Convertis en expliquant ta démarche à chaque fois : a) 5 h en minutes · b) 2 h 42 min en minutes · c) 240 s en minutes · d) 368 s en min et s</p>`,
-   c:`<p>1)</p><div class="scroll"><table class="std"><thead><tr><th>Les petites durées</th><th>Les grandes durées</th></tr></thead><tbody><tr><td>1 minute (min) = <b>60</b> secondes (s)</td><td>1 an = <b>12</b> mois</td></tr><tr><td>1 heure (h) = <b>60</b> min</td><td>1 décennie = <b>10</b> ans</td></tr><tr><td>1 jour = <b>24</b> h</td><td>1 siècle = <b>100</b> ans</td></tr><tr><td>1 semaine = <b>7</b> jours</td><td>1 millénaire = <b>1 000</b> ans</td></tr><tr><td>1 mois = <b>28</b>, <b>29</b>, <b>30</b> ou <b>31</b> jours</td><td></td></tr></tbody></table></div>
-   <p>2) a) 1 h = 60 min, donc 5 h = 5 × 60 = <b>300 min</b>.</p><p>b) 2 h 42 min en minutes :</p><p class="calc">t = 2 × 60 + 42<br>t = 120 + 42<br>t = <b>162 min</b></p><p>c) 240 s = 240 ÷ 60 = <b>4 min</b>.</p><p>d) 368 = 6 × 60 + 8, donc 368 s = <b>6 min 8 s</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Convertir en minutes", w:"Sur ta feuille", h:`<p>a) 3 h · b) 1 h 48 min · c) 7 h 12 min · d) 180 s · e) 4 h 05 min · f) 600 s</p>`,
-   c:`<p>a) 3 × 60 = 180 min · b) 60 + 48 = 108 min</p><p>c) 7 h 12 min en minutes :</p><p class="calc">t = 7 × 60 + 12<br>t = 420 + 12<br>t = 432 min</p><p>d) 180 ÷ 60 = 3 min · e) 4 × 60 + 5 = 245 min · f) 600 ÷ 60 = 10 min</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Convertir en secondes", w:"Sur ta feuille", h:`<p>a) 4 min · b) 6 min 37 s · c) 20 min · d) 1 h · e) 2 min 09 s · f) 1 h 10 min</p>`,
-   c:`<p>a) 4 × 60 = 240 s</p><p>b) 6 min 37 s en secondes :</p><p class="calc">t = 6 × 60 + 37<br>t = 360 + 37<br>t = 397 s</p><p>c) 20 × 60 = 1 200 s · d) 1 h = 60 min = 60 × 60 = 3 600 s · e) 2 × 60 + 9 = 129 s · f) 1 h 10 min = 70 min = 70 × 60 = 4 200 s</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Convertir en minutes et secondes", w:"Sur ta feuille", h:`<p>a) 138 s · b) 550 s · c) 245 s · d) 1 000 s</p>`,
-   c:`a) 138 = 2 × 60 + 18 : 2 min 18 s · b) 550 = 9 × 60 + 10 : 9 min 10 s · c) 245 = 4 × 60 + 5 : 4 min 5 s · d) 1 000 = 16 × 60 + 40 : 16 min 40 s`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Convertir en heures, minutes et secondes", w:"Sur ta feuille", h:`<p>1) a) Convertis 8 853 s en minutes et secondes. b) Convertis le nombre de minutes trouvé en heures et minutes. c) Déduis-en la conversion de 8 853 s en heures, minutes et secondes.</p><p>2) De la même façon, convertis 32 790 s en heures, minutes et secondes.</p>`,
-   c:`<p>1) a) 8 853 = 147 × 60 + 33, donc 8 853 s = <b>147 min 33 s</b>.</p><p>b) 147 = 2 × 60 + 27, donc 147 min = <b>2 h 27 min</b>.</p><p>c) 8 853 s = <b>2 h 27 min 33 s</b>.</p>
-   <p>2) 32 790 = 546 × 60 + 30, donc 32 790 s = 546 min 30 s. Puis 546 = 9 × 60 + 6, donc 546 min = 9 h 6 min.</p><p>Finalement : 32 790 s = <b>9 h 06 min 30 s</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Écrire correctement une durée", w:"Sur ta feuille", h:`<p>Une durée est bien écrite lorsque le nombre de minutes est inférieur à 60. Complète.</p><p>a) 2 h 73 min = 3 h …… min · b) 10 h 108 min = 11 h …… min · c) 1 h …… min = 2 h 41 min · d) 3 h …… min = 4 h 27 min · e) 5 h 95 min = …… h …… min · f) …… h …… min = 7 h 134 min</p>`,
-   c:`a) 73 = 60 + 13 : 2 h 73 min = 3 h <b>13</b> min · b) 108 = 60 + 48 : 11 h <b>48</b> min · c) 1 h <b>101</b> min = 2 h 41 min (60 + 41 = 101) · d) 3 h <b>87</b> min = 4 h 27 min (60 + 27 = 87) · e) 95 = 60 + 35 : 5 h 95 min = <b>6 h 35 min</b> · f) 134 = 2 × 60 + 14 : <b>9 h 14 min</b> = 7 h 134 min`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>Réponds par vrai ou faux, puis corrige lorsque c'est faux.</p><p>a) 1 h 30 min, c'est la même durée que 1,30 h. · b) Une demi-heure dure 30 minutes. · c) 0,25 h, c'est 25 minutes. · d) 90 minutes, c'est 1 h 30 min.</p>`,
-   c:`a) <b>Faux</b> : 1 h 30 min = 1,5 h (une demi-heure, c'est 0,5 h). · b) <b>Vrai</b> : la moitié de 60 min, c'est 30 min. · c) <b>Faux</b> : 0,25 h, c'est un quart d'heure, soit 60 ÷ 4 = 15 min. · d) <b>Vrai</b> : 90 min = 60 min + 30 min = 1 h 30 min.`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer un horaire ou une durée", note:"<b>Rappel :</b> fais d'abord un schéma (une frise) pour voir ce que tu cherches.", e:[
   {n:"Activité 2", t:"Trouver l'horaire d'arrivée", w:"Sur ta feuille", h:`<p><b>Problème 1 :</b> Timéo prend l'avion à Paris à 14 h 48 pour se rendre à Berlin. Le trajet dure 2 h 07 min. À quelle heure arrive-t-il ?</p><p><b>Problème 2 :</b> Clotilde s'est connectée à internet à 12 h 38 et y est restée 1 h 43 min. À quelle heure s'est-elle déconnectée ?</p>`,
-   c:`<p><b>Problème 1 :</b> on cherche l'horaire d'arrivée : on ajoute la durée.</p>${tl(14*60+48,16*60+55,"b")}<p class="calc">14 h 48 min + 2 h 07 min = 16 h 55 min</p><p>Timéo arrive à <b>16 h 55</b>.</p>
-   <p><b>Problème 2 :</b></p>${tl(12*60+38,14*60+21,"b")}<p class="calc">H = 12 h 38 min + 1 h 43 min<br>H = 13 h 81 min<br>H = 14 h 21 min</p><p>car 81 min = 60 min + 21 min = 1 h 21 min.</p><p>Clotilde s'est déconnectée à <b>14 h 21</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 3", t:"Trouver l'horaire de départ ou la durée", w:"Sur ta feuille", h:`<p><b>Problème 1 :</b> Alexis a sorti son gâteau du four à 9 h 52, après une cuisson de 35 min. À quelle heure l'a-t-il mis au four ?</p><p><b>Problème 2 :</b> Léo et sa famille sont partis de chez eux à 8 h 46 et sont arrivés au camping à 12 h 17. Combien de temps a duré leur trajet ?</p>`,
-   c:`<p><b>Problème 1 :</b> on cherche l'horaire de départ : on retire la durée.</p>${tl(9*60+17,9*60+52,"a")}<p class="calc">9 h 52 min − 35 min = 9 h 17 min</p><p>Alexis a mis le gâteau au four à <b>9 h 17</b>.</p>
-   <p><b>Problème 2 :</b> on cherche une durée : on retire l'horaire de départ à l'horaire d'arrivée.</p>${tl(8*60+46,12*60+17,"d")}<p class="calc">t = 12 h 17 min − 8 h 46 min<br>t = 11 h 77 min − 8 h 46 min<br>t = 3 h 31 min</p><p>Le trajet a duré <b>3 h 31 min</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Compléter un tableau", w:"Sur ta feuille", h:`<p>Dans chaque ligne, il manque une information. Complète le tableau.</p><div class="scroll"><table class="std"><thead><tr><th>Horaire de départ</th><th>Durée</th><th>Horaire d'arrivée</th></tr></thead><tbody>
     <tr><td>8 h 15</td><td>2 h 30 min</td><td>……</td></tr><tr><td>14 h 35</td><td>2 h 50 min</td><td>……</td></tr><tr><td>9 h 20</td><td>3 h 55 min</td><td>……</td></tr><tr><td>……</td><td>1 h 25 min</td><td>11 h 10</td></tr><tr><td>……</td><td>2 h 40 min</td><td>16 h 05</td></tr><tr><td>7 h 35</td><td>……</td><td>9 h 50</td></tr><tr><td>13 h 42</td><td>……</td><td>15 h 18</td></tr><tr><td>10 h 05</td><td>50 min</td><td>……</td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Départ</th><th>Durée</th><th>Arrivée</th><th>Calcul</th></tr></thead><tbody>
-    <tr><td>8 h 15</td><td>2 h 30 min</td><td><b>10 h 45</b></td><td>8 h 15 + 2 h 30 = 10 h 45</td></tr>
-    <tr><td>14 h 35</td><td>2 h 50 min</td><td><b>17 h 25</b></td><td>H = 14 h 35 + 2 h 50<br>H = 16 h 85<br>H = 17 h 25</td></tr>
-    <tr><td>9 h 20</td><td>3 h 55 min</td><td><b>13 h 15</b></td><td>H = 9 h 20 + 3 h 55<br>H = 12 h 75<br>H = 13 h 15</td></tr>
-    <tr><td><b>9 h 45</b></td><td>1 h 25 min</td><td>11 h 10</td><td>H = 11 h 10 − 1 h 25<br>H = 10 h 70 − 1 h 25<br>H = 9 h 45</td></tr>
-    <tr><td><b>13 h 25</b></td><td>2 h 40 min</td><td>16 h 05</td><td>H = 16 h 05 − 2 h 40<br>H = 15 h 65 − 2 h 40<br>H = 13 h 25</td></tr>
-    <tr><td>7 h 35</td><td><b>2 h 15 min</b></td><td>9 h 50</td><td>9 h 50 − 7 h 35 = 2 h 15</td></tr>
-    <tr><td>13 h 42</td><td><b>1 h 36 min</b></td><td>15 h 18</td><td>t = 15 h 18 − 13 h 42<br>t = 14 h 78 − 13 h 42<br>t = 1 h 36</td></tr>
-    <tr><td>10 h 05</td><td>50 min</td><td><b>10 h 55</b></td><td>10 h 05 + 50 min = 10 h 55</td></tr></tbody></table></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Des problèmes à résoudre", w:"Sur ta feuille", h:`<p>1) Sohan et sa famille sont partis de leur domicile à 8 h 50 ; le trajet jusqu'à la montagne a duré 6 h 25. À quelle heure sont-ils arrivés ?</p><p>2) Un randonneur part à 9 h 25 et rentre à 11 h 48. Pendant combien de temps a-t-il marché ?</p><p>3) J'ai rendez-vous à 17 h 15. Mon GPS indique 1 h 34 min de trajet. À quelle heure dois-je partir pour arriver pile à l'heure ?</p><p>4) Après le conseil de classe, le professeur principal reçoit ses 26 élèves et leurs parents. Il compte 10 min par rendez-vous et commence à 17 h. S'il respecte son timing, à quelle heure aura-t-il terminé ?</p>`,
-   c:`<p>1) L'horaire d'arrivée H :</p><p class="calc">H = 8 h 50 min + 6 h 25 min<br>H = 14 h 75 min<br>H = 15 h 15 min</p><p>Ils sont arrivés à <b>15 h 15</b>.</p>
-   <p>2) 11 h 48 min − 9 h 25 min = 2 h 23 min. Il a marché <b>2 h 23 min</b>.</p>
-   <p>3) L'horaire de départ H :</p><p class="calc">H = 17 h 15 min − 1 h 34 min<br>H = 16 h 75 min − 1 h 34 min<br>H = 15 h 41 min</p><p>Je dois partir à <b>15 h 41</b>.</p>
-   <p>4) 26 × 10 = 260 min, et 260 = 4 × 60 + 20, donc 260 min = 4 h 20 min. 17 h + 4 h 20 min = 21 h 20 min. Il aura terminé à <b>21 h 20</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Lire un tableau d'horaires", e:[
   {n:"Exercice 9", t:"Les trains", w:"Sur ta feuille", h:`<p>Voici les horaires de trois trains au départ de Nantes.</p><div class="scroll"><table class="std"><thead><tr><th>Gare</th><th>Train A</th><th>Train B</th><th>Train C</th></tr></thead><tbody><tr><th>Nantes</th><td>7 h 02</td><td>9 h 18</td><td>13 h 44</td></tr><tr><th>La Roche-sur-Yon</th><td>7 h 55</td><td>10 h 12</td><td>14 h 39</td></tr><tr><th>Les Sables d'Olonne</th><td>8 h 21</td><td>10 h 38</td><td>15 h 05</td></tr></tbody></table></div>
    <p>1) Combien de temps dure le trajet Nantes — Les Sables d'Olonne avec le train A ?</p><p>2) Combien de temps dure le trajet Nantes — La Roche-sur-Yon avec le train B ?</p><p>3) Je dois être aux Sables d'Olonne avant 15 h. Quels trains puis-je prendre ?</p><p>4) Le train C arrive aux Sables avec 12 min de retard. À quelle heure arrive-t-il ?</p><p>5) Quel est le train le plus rapide entre Nantes et Les Sables d'Olonne ? Justifie.</p>`,
-   c:`<p>1) 8 h 21 min − 7 h 02 min = <b>1 h 19 min</b>.</p><p>2) La durée t du trajet :</p><p class="calc">t = 10 h 12 − 9 h 18<br>t = 9 h 72 − 9 h 18<br>t = <b>54 min</b></p><p>3) Le train A (arrivée 8 h 21) et le train B (arrivée 10 h 38). Le train C arrive à 15 h 05 : trop tard.</p><p>4) 15 h 05 + 12 min = <b>15 h 17</b>.</p>
-   <p>5) Train A : 1 h 19 min · Train B : 10 h 38 − 9 h 18 = 1 h 20 min</p><p>Train C :</p><p class="calc">t = 15 h 05 − 13 h 44<br>t = 14 h 65 − 13 h 44<br>t = 1 h 21 min</p><p>Le plus rapide est le <b>train A</b> (1 h 19 min).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"La soirée télé", w:"Sur ta feuille", h:`<p>Complète le programme de la soirée.</p><div class="scroll"><table class="std"><thead><tr><th>Émission</th><th>Début</th><th>Durée</th><th>Fin</th></tr></thead><tbody><tr><td>Le journal</td><td>20 h 00</td><td>35 min</td><td>……</td></tr><tr><td>Le film</td><td>20 h 45</td><td>1 h 58 min</td><td>……</td></tr><tr><td>Le débat</td><td>……</td><td>50 min</td><td>23 h 40</td></tr></tbody></table></div><p>1) Combien de temps s'écoule entre la fin du journal et le début du film ?</p><p>2) Combien de temps s'écoule entre la fin du film et le début du débat ?</p><p>3) Quelle est la durée totale de la soirée, du début du journal à la fin du débat ?</p>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Émission</th><th>Début</th><th>Durée</th><th>Fin</th></tr></thead><tbody><tr><td>Le journal</td><td>20 h 00</td><td>35 min</td><td><b>20 h 35</b></td></tr><tr><td>Le film</td><td>20 h 45</td><td>1 h 58 min</td><td><b>22 h 43</b></td></tr><tr><td>Le débat</td><td><b>22 h 50</b></td><td>50 min</td><td>23 h 40</td></tr></tbody></table></div>
-   <p>Journal : 20 h 00 + 35 min = 20 h 35.</p><p>Fin du film :</p><p class="calc">H = 20 h 45 + 1 h 58<br>H = 21 h 103<br>H = 22 h 43</p><p>Début du débat :</p><p class="calc">H = 23 h 40 − 50 min<br>H = 22 h 100 − 50 min<br>H = 22 h 50</p>
-   <p>1) 20 h 45 − 20 h 35 = <b>10 min</b>.</p><p>2) 22 h 50 − 22 h 43 = <b>7 min</b>.</p><p>3) 23 h 40 − 20 h 00 = <b>3 h 40 min</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -257,3 +239,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-7");

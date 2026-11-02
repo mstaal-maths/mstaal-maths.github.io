@@ -80,17 +80,17 @@ const EX12=[["a",6,4,3,-8],["b",3,-5,2,4],["d",5,3,2,-4],["c",-2,3,3,18],["e",2,
 const EX13=[["21 a",5,3,2,6],["21 b",3,-4,-4,17],["21 c",2,-2,3,11],["21 d",3,1,-2,11],["22 a",4,3,2,6],["22 b",7,2,3,9],["22 c",5,-3,2,8],["22 d",5,3,-2,-3],["23 a",3,-1,2,1],["23 b",2,-1,4,-7],["23 c",5,6,2,9],["23 d",3,1,4,4]];
 const lineEq=(l,t)=>`<p class="calc"><b>${l})</b> ${solve(...t).L.join("<br>")}</p><p>La solution est <b>${solve(...t).s}</b>.</p>`;
 const BAL=[
-  {G:[{b:1},{w:200}], D:[{w:500}], eq:`${b} + 200 = 500`, L:[`${b} = 500 − 200 &nbsp;<span class="op">(on enlève 200 g de chaque côté)</span>`,`${b} = 300`], r:"300"},
-  {G:[{b:4}], D:[{w:500}], eq:`4${b} = 500`, L:[`${b} = 500 ÷ 4 &nbsp;<span class="op">(on partage chaque côté en 4)</span>`,`${b} = 125`], r:"125"},
-  {G:[{b:2},{w:500},{w:200,on:26,stack:true}], D:[{b:3},{w:20}], eq:`2${b} + 700 = 3${b} + 20`, L:[`700 = ${b} + 20 &nbsp;<span class="op">(on enlève 2 boules de chaque côté)</span>`,`680 = ${b} &nbsp;<span class="op">(on enlève 20 g de chaque côté)</span>`], r:"680"},
-  {G:[{b:7},{w:200}], D:[{w:500},{w:20,on:26,stack:true},{b:3}], eq:`7${b} + 200 = 520 + 3${b}`, L:[`4${b} + 200 = 520 &nbsp;<span class="op">(on enlève 3 boules de chaque côté)</span>`,`4${b} = 320 &nbsp;<span class="op">(on enlève 200 g de chaque côté)</span>`,`${b} = 80 &nbsp;<span class="op">(on partage chaque côté en 4)</span>`], r:"80"}
+  {G:[{b:1},{w:200}], D:[{w:500}], eq:`${b} + 200 = 500`, L:[`${b}`,`${b} = 300`], r:"300"},
+  {G:[{b:4}], D:[{w:500}], eq:`4${b} = 500`, L:[`${b}`,`${b} = 125`], r:"125"},
+  {G:[{b:2},{w:500},{w:200,on:26,stack:true}], D:[{b:3},{w:20}], eq:`2${b} + 700 = 3${b} + 20`, L:[`700 = ${b}`,`680 = ${b}`], r:"680"},
+  {G:[{b:7},{w:200}], D:[{w:500},{w:20,on:26,stack:true},{b:3}], eq:`7${b} + 200 = 520 + 3${b}`, L:[`4${b}`,`4${b}`,`${b}`], r:"80"}
 ];
 /* étapes dessinées de la résolution (activité 2 suite, question 1) : [gauche, droite, ce que l'on fait] */
 const BSTEP=[
-  [[[{b:1}],[{w:300}],"on enlève 200 g de chaque côté"]],
-  [[[{b:1}],[{w:125}],"on partage chaque côté en 4"]],
-  [[[{w:500},{w:200,on:26,stack:true}],[{b:1},{w:20}],"on enlève 2 boules de chaque côté"],[[{w:680}],[{b:1}],"on enlève 20 g de chaque côté : 700 − 20 = 680"]],
-  [[[{b:4},{w:200}],[{w:500},{w:20,on:26,stack:true}],"on enlève 3 boules de chaque côté"],[[{b:4}],[{w:320}],"on enlève 200 g de chaque côté : 520 − 200 = 320"],[[{b:1}],[{w:80}],"on partage chaque côté en 4 : 320 ÷ 4 = 80"]]
+  [[[{b:1}],[{w:300}],""]],
+  [[[{b:1}],[{w:125}],""]],
+  [[[{w:500},{w:200,on:26,stack:true}],[{b:1},{w:20}],""],[[{w:680}],[{b:1}],""]],
+  [[[{b:4},{w:200}],[{w:500},{w:20,on:26,stack:true}],""],[[{b:4}],[{w:320}],""],[[{b:1}],[{w:80}],""]]
 ];
 const balAlt=i=>["Balance équilibrée : à gauche une boule et 200 g ; à droite 500 g","Balance équilibrée : à gauche 4 boules ; à droite 500 g","Balance équilibrée : à gauche 2 boules, 500 g et 200 g ; à droite 3 boules et 20 g","Balance équilibrée : à gauche 7 boules et 200 g ; à droite 500 g, 20 g et 3 boules"][i];
 const say=(who,t)=>`<p><b>${who} :</b> « ${t} »</p>`;
@@ -132,58 +132,50 @@ exos:[
    <p><b>PARTIE 3 : Lou et Jules</b></p><p>Lou (× 5, puis + 3) et Jules (× 4, puis + 9) choisissent un même nouveau nombre et trouvent le même résultat. Quel est le nombre qu'ils ont choisi au départ ?</p>
    <p><b>PARTIE 4 : deux nouveaux programmes</b></p>${say("Lou","Cette fois, je le multiplie par 7, puis j'ajoute 3.")}${say("Jules","Moi, je multiplie mon nombre par 2, puis j'ajoute 15.")}<p>Ils choisissent un même nouveau nombre et trouvent le même résultat. Quel est le nombre qu'ils ont choisi au départ ?</p>
    <p><b>PARTIE 5 : deux nouveaux programmes</b></p>${say("Lou","Je multiplie mon nombre par 8 et j'ajoute 7.")}${say("Jules","Je multiplie mon nombre par 5 et j'ajoute 12.")}<p>Ils choisissent un même nouveau nombre et trouvent le même résultat. Quel est le nombre qu'ils ont choisi au départ ?</p>`,
-   c:`<p><b>PARTIE 1 a)</b> Facilement, on trouve que 2 × 5 + 3 = 13 : le nombre de départ est <b>2</b>.</p>
-   <p><b>b) Méthode 1 – par tâtonnement :</b> avec la calculatrice, je teste différents nombres. 4 × 5 + 3 = 23 et 5 × 5 + 3 = 28 : le nombre est compris entre 4 et 5. Après plusieurs essais, je trouve 4,2 × 5 + 3 = 24.</p><p><b>Méthode 2 – remonter le programme :</b> je fais les opérations inverses : 24 − 3 = 21, puis 21 ÷ 5 = 4,2. Le nombre de départ est <b>4,2</b>.</p>
-   <p><b>c)</b> Je remonte le programme : −40 − 3 = −43, puis −43 ÷ 5 = −8,6. Le nombre de départ est <b>−8,6</b>.</p>
-   <p><b>PARTIE 2 a)</b> 39,4 − 9 = 30,4, puis 30,4 ÷ 4 = 7,6. Le nombre de départ est <b>7,6</b>.</p><p><b>b)</b> 10 − 9 = 1, puis 1 ÷ 4 = 0,25. Le nombre de départ est <b>0,25</b>.</p>
-   <p><b>PARTIE 3</b> On ne peut pas remonter les programmes, car on n'a pas le résultat final. J'utilise la méthode 1, le tâtonnement. Après plusieurs essais : 6 × 5 + 3 = 33 et 6 × 4 + 9 = 33. Le nombre choisi au départ est <b>6</b>.</p>
-   <p><b>PARTIE 4</b> Par tâtonnement : avec 1, Lou trouve 10 et Jules 17 ; avec 2, Lou trouve 17 et Jules 19 ; avec 3, Lou trouve 24 et Jules 21. À partir de 3, le résultat de Lou est devenu plus grand : les résultats ont été égaux pour un nombre compris entre 2 et 3.</p><p>Après plusieurs essais : 2,4 × 7 + 3 = 19,8 et 2,4 × 2 + 15 = 19,8. Le nombre choisi au départ est <b>2,4</b>.</p>
-   <p><b>PARTIE 5</b> Le tâtonnement prend beaucoup de temps et on ne trouve pas de résultat exact. L'activité 2 (les balances) permet de résoudre ce problème :</p>
-   <p>Si ${n} est le nombre choisi, je cherche ${n} pour que ${n} × 8 + 7 donne le même résultat que ${n} × 5 + 12 :</p><p class="calc">${solve(8,7,5,12,{v:"n"}).L.join("<br>")}</p><p>Le nombre choisi au départ est <b>{5/3}</b>.</p><p>Vérification à la calculatrice : {5/3} × 8 + 7 = {61/3} et {5/3} × 5 + 12 = {61/3}.</p>
-   <div class="attention"><b>BILAN :</b> « 8${n} + 7 = 5${n} + 12 » est une <b>équation</b>. Tu viens de résoudre une équation !</div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Découvrir les équations avec des balances", e:[
   {n:"Activité 2", t:"Masse de la boule", w:"Sur ton cahier", h:`<p>Dans chacun des cas suivants, trouve la masse d'une boule et explique ta méthode.</p><p>Dans chaque cas, la balance est équilibrée et la masse de la boule est différente. Les masses sont en grammes.</p>
    ${BAL.map((B,i)=>`<p><b>Cas ${i+1}</b></p>${balance(B.G,B.D,{alt:balAlt(i)})}`).join("")}`,
-   c:`<p><b>Cas 1 :</b> une boule et 200 g pèsent autant que 500 g. 500 − 200 = 300 : la boule pèse <b>300 g</b> (300 + 200 = 500).</p><p><b>Cas 2 :</b> 4 boules pèsent 500 g. 500 ÷ 4 = 125 : la boule pèse <b>125 g</b> (4 × 125 = 500).</p><p><b>Cas 3 :</b> j'enlève deux boules de chaque côté, la balance reste équilibrée : 200 g + 500 g d'un côté, une boule + 20 g de l'autre. J'enlève 20 g de chaque côté : la boule pèse 700 − 20 = <b>680 g</b>.</p><p><b>Cas 4 :</b> j'enlève trois boules de chaque côté : 4 boules + 200 g d'un côté, 520 g de l'autre. J'enlève 200 g de chaque côté : 4 boules pèsent 320 g. 4 × 80 = 320 : la boule pèse <b>80 g</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2 (suite)", t:"Traduire les balances par des égalités", w:"Sur ton cahier", h:`<p>Reprends les quatre balances de l'activité 2.</p><p><b>1)</b> Retrouve la masse d'une boule en dessinant les étapes successives de résolution, en maintenant la balance équilibrée.</p><p><b>2)</b> Dans chaque cas, traduis mathématiquement le contenu des balances par une égalité d'expressions littérales.</p><p>Par exemple, on peut dire que ${b} est la masse d'une boule. Pour le premier cas, on a : ${b} + 200 = 500.</p>`,
-   c:`<p><b>1)</b> On garde la balance équilibrée : ce que l'on enlève (ou partage) d'un côté, on le fait aussi de l'autre côté.</p>${BAL.map((B,i)=>`<p><b>Cas ${i+1} :</b></p><div class="figs" style="align-items:flex-start">${BSTEP[i].map(([G,D,t],k)=>`<figure>${balance(G,D,{w:330,alt:"Étape "+(k+1)+" : "+t})}<figcaption>Étape ${k+1} : ${t}</figcaption></figure>`).join("")}</div><p>La boule pèse <b>${B.r} g</b>.</p>`).join("")}<p><b>2)</b></p>${BAL.map((B,i)=>`<p><b>Cas ${i+1} :</b> si ${b} est la masse d'une boule :</p><p class="calc">${B.eq}<br>${B.L.join("<br>")}</p><p>La boule pèse <b>${B.r} g</b>.</p>`).join("")}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 3", t:"Masse d'un ballotin", w:"Sur ton cahier", h:`<p>Amélie utilise une balance pour préparer des ballotins de chocolats de même masse. Les masses sont indiquées en grammes.</p>${balance([{b:3},{w:20}],[{b:1},{w:100},{w:20},{w:20},{w:10,on:22,stack:true}],{alt:"Balance équilibrée : à gauche 3 ballotins et 20 g ; à droite 1 ballotin et 150 g (100 g, 20 g, 20 g et 10 g)"})}
    <p>À gauche : 3 ballotins et une masse de 20 g. À droite : 1 ballotin et des masses de 100 g, 20 g, 20 g et 10 g.</p><p><b>1)</b> Quelle est la masse d'un ballotin ?</p><p><b>2)</b> On appelle ${b} la masse d'un ballotin. Traduis mathématiquement chaque étape.</p>`,
-   c:`<p>À droite, les masses font 100 + 20 + 20 + 10 = 150 g.</p><p class="calc">3${b} + 20 = ${b} + 150<br>2${b} + 20 = 150 &nbsp;${opl("− 1 ballotin de chaque côté")}<br>2${b} = 130 &nbsp;${opl("− 20 g de chaque côté")}<br>${b} = 65 &nbsp;${opl("÷ 2 de chaque côté")}</p><p>Un ballotin pèse <b>65 g</b>. Vérification : 3 × 65 + 20 = 215 et 65 + 150 = 215.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Résoudre des équations", e:[
   {n:"Exercice 1", t:"Résoudre des équations", w:"Sur ton cahier", h:`<p>Résous les équations suivantes.</p><div class="calcs">${EX1.map(t=>`<span>${t[0]}) ${eqW(t)}</span>`).join("")}</div>`,
-   c:EX1.map(eqC).join("")}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Résoudre des problèmes avec une équation", e:[
   {n:"Exercice 2", t:"Prix d'un DVD", w:"Sur ton cahier", h:`<p>Ces deux bons cadeaux ont la même valeur, et chaque DVD est au même prix.</p><div class="cgrid"><figure style="border:1.5px solid var(--line)"><p>6 DVD (au choix parmi 50)</p><p>1 skateboard (valeur 55 €)</p></figure><figure style="border:1.5px solid var(--line)"><p>2 DVD (au choix parmi 50)</p><p>1 trottinette (valeur 85 €)</p></figure></div><p>Quel est le prix d'un DVD ?</p>`,
-   c:`<p>On appelle ${X("d")} le prix d'un DVD (en €). Les deux bons ont la même valeur :</p><p class="calc">${solve(6,55,2,85,{v:"d"}).L.join("<br>")}</p><p>Un DVD coûte <b>7,50 €</b>. Vérification : 6 × 7,5 + 55 = 100 et 2 × 7,5 + 85 = 100.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Largeur d'un rectangle", w:"Sur ton cahier", h:`<p>Un rectangle a pour longueur 9. Sa largeur est inconnue.</p><p>Quelle doit être la largeur du rectangle pour que son périmètre soit égal à 33 ?</p>`,
-   c:`<p>On appelle ${x} la largeur. Le périmètre est 2 × (9 + ${x}) = 2${x} + 18.</p><p class="calc">${solve(2,18,0,33).L.join("<br>")}</p><p>La largeur doit être égale à <b>7,5</b>. Vérification : 2 × (9 + 7,5) = 2 × 16,5 = 33.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Retrouver le nombre de départ (1)", w:"Sur ton cahier", h:`${progs(prog("Programme 1",["Choisir un nombre","Multiplier par 4","Ajouter 6"]))}<p><b>a)</b> Le résultat trouvé avec ce programme est 38,8. Quel était le nombre choisi au départ ?</p><p><b>b)</b> Le résultat trouvé avec ce programme est 0. Quel était le nombre choisi au départ ?</p>`,
-   c:`<p>Si ${x} est le nombre de départ, le résultat est 4${x} + 6.</p><p class="calc"><b>a)</b> ${solve(4,6,0,38.8).L.join("<br>")}</p><p>Le nombre de départ était <b>8,2</b>.</p><p class="calc"><b>b)</b> ${solve(4,6,0,0).L.join("<br>")}</p><p>Le nombre de départ était <b>−1,5</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Retrouver le nombre de départ (2)", w:"Sur ton cahier", h:`${progs(prog("Programme 2",["Choisir un nombre","Ajouter 2","Multiplier par 7"]))}<p>Le résultat trouvé avec ce programme est 48. Quel était le nombre choisi au départ ?</p>`,
-   c:`<p>Si ${x} est le nombre de départ, le résultat est (${x} + 2) × 7 = 7${x} + 14.</p><p class="calc">${solve(7,14,0,48).L.join("<br>")}</p><p>Le nombre de départ était <b>{34/7}</b>. Vérification : ({34/7} + 2) × 7 = {48/7} × 7 = 48.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Retrouver le nombre de départ (3)", w:"Sur ton cahier", h:`${progs(prog("Programme 3",["Choisir un nombre","Ajouter 4","Multiplier la somme par 7","Retirer 6"]))}<p><b>a)</b> Le résultat trouvé avec ce programme est 71. Quel était le nombre choisi au départ ?</p><p><b>b)</b> Le résultat trouvé avec ce programme est −22,8. Quel était le nombre choisi au départ ?</p>`,
-   c:`<p>Si ${x} est le nombre de départ, le résultat est (${x} + 4) × 7 − 6 = 7${x} + 28 − 6 = 7${x} + 22.</p><p class="calc"><b>a)</b> ${solve(7,22,0,71).L.join("<br>")}</p><p>Le nombre de départ était <b>7</b>.</p><p class="calc"><b>b)</b> ${solve(7,22,0,-22.8).L.join("<br>")}</p><p>Le nombre de départ était <b>−6,4</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Un rectangle qui devient un carré", w:"Sur ton cahier", h:`<p>${x} est une longueur. Un rectangle a pour longueur ${x} + 6 et pour largeur 3${x} − 4.</p>${window.CL12.rect({top:[["<i>x</i> + 6",200]], left:"3<i>x</i> − 4", H:80, alt:"Rectangle de longueur x + 6 et de largeur 3x − 4"}).replace(/viewBox="0 0 (\d+) (\d+)" width="(\d+)"/,(m,w,h,W)=>`viewBox="-40 0 ${+w+40} ${h}" width="${+W+40}"`).replace(/<text x="13" /,'<text x="-6" ')}<p><b>a)</b> Quelle doit être la valeur de ${x} pour que ce rectangle soit un carré ?</p><p><b>b)</b> Quelle est alors la longueur de son côté ?</p>`,
-   c:`<p><b>a)</b> Pour que ce soit un carré, il faut que ses deux dimensions soient égales :</p><p class="calc">${solve(1,6,3,-4).L.join("<br>")}</p><p>Il faut ${x} = <b>5</b>.</p><p><b>b)</b> 5 + 6 = 11 et 3 × 5 − 4 = 11 : le côté du carré mesure <b>11</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Retrouver le nombre de départ (4)", w:"Sur ton cahier", h:`${progs(prog("Programme 4",["Choisir un nombre","Ajouter 3","Multiplier la somme par 6","Retirer le double du nombre de départ"]))}<p><b>a)</b> Le résultat trouvé avec ce programme est 27. Quel était le nombre choisi au départ ?</p><p><b>b)</b> Le résultat trouvé avec ce programme est 0. Quel était le nombre choisi au départ ?</p>`,
-   c:`<p>Si ${x} est le nombre de départ, le résultat est (${x} + 3) × 6 − 2${x} = 6${x} + 18 − 2${x} = 4${x} + 18.</p><p class="calc"><b>a)</b> ${solve(4,18,0,27).L.join("<br>")}</p><p>Le nombre de départ était <b>2,25</b>.</p><p class="calc"><b>b)</b> ${solve(4,18,0,0).L.join("<br>")}</p><p>Le nombre de départ était <b>−4,5</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Même périmètre", w:"Sur ton cahier", h:`<p>${x} est une longueur. Un carré a pour côté ${x} + 2. Un triangle équilatéral a pour côté ${x} + 3.</p>${window.CL21.sqTri("<i>x</i> + 2","<i>x</i> + 3","<i>x</i> + 3")}<p>Quelle doit être la valeur de ${x} pour que le triangle et le carré aient le même périmètre ?</p>`,
-   c:`<p>Périmètre du carré : 4(${x} + 2) = 4${x} + 8. Périmètre du triangle : 3(${x} + 3) = 3${x} + 9.</p><p class="calc">${solve(4,8,3,9).L.join("<br>")}</p><p>Il faut ${x} = <b>1</b>. Vérification : 4 × 3 = 12 et 3 × 4 = 12.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Les programmes de Mélanie", w:"Sur ton cahier", h:`${progs(prog("Programme 1",["Choisir un nombre","Multiplier par 5","Ajouter 3"]),prog("Programme 2",["Choisir un nombre","Soustraire 6","Multiplier par 3"]))}<p>Mélanie choisit un nombre de départ et l'applique au programme 1. Elle prend le même nombre de départ et l'applique au programme 2. Elle trouve le même résultat avec les deux programmes.</p><p>Quel était le nombre choisi au départ ?</p>`,
-   c:`<p>Si ${x} est le nombre de départ : programme 1 → 5${x} + 3 ; programme 2 → (${x} − 6) × 3 = 3${x} − 18.</p><p class="calc">${solve(5,3,3,-18).L.join("<br>")}</p><p>Le nombre choisi au départ était <b>−10,5</b>. Vérification : 5 × (−10,5) + 3 = −49,5 et (−10,5 − 6) × 3 = −16,5 × 3 = −49,5.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Une histoire de périmètre", w:"Sur ton cahier", h:`<p>Le segment [AB] mesure 8,4 cm. Le point M est sur [AB]. On construit un triangle équilatéral de côté [AM] et un carré de côté [MB].</p><svg class="fig" viewBox="0 0 330 150" width="320" role="img" aria-label="Segment AB avec un point M : un triangle équilatéral sur AM et un carré sur MB"><polygon points="20,120 180,120 100,${(120-80*Math.sqrt(3)).toFixed(1)}" class="ln"/><rect x="180" y="20" width="100" height="100" class="ln"/><line x1="20" y1="120" x2="280" y2="120" class="ln"/><text x="20" y="142" class="lab">A</text><text x="180" y="142" class="lab">M</text><text x="280" y="142" class="lab">B</text></svg>
    <p>Où doit-on placer le point M sur le segment [AB] pour que le carré et le triangle équilatéral aient le même périmètre ?</p>`,
-   c:`<p>On appelle ${x} la longueur AM (en cm). Alors MB = 8,4 − ${x}.</p><p>Périmètre du triangle : 3${x}. Périmètre du carré : 4 × (8,4 − ${x}) = 33,6 − 4${x}.</p><p class="calc">${solve(3,0,-4,33.6,{od:"n"}).L.join("<br>")}</p><p>Il faut placer M à <b>4,8 cm</b> de A (et donc à 3,6 cm de B). Vérification : 3 × 4,8 = 14,4 et 4 × 3,6 = 14,4.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Équations avec des nombres négatifs", e:[
   {n:"Exercice 12", t:"Résoudre des équations qui comportent un nombre négatif", w:"Sur ton cahier", h:`<p>Résous les équations suivantes, dans cet ordre : a), b), d), c), e).</p><div class="calcs">${EX12.map(([l,...t])=>`<span>${l}) ${eqW([l,...t])}</span>`).join("")}</div>`,
-   c:EX12.map(([l,...t])=>lineEq(l,t)).join("")},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Résoudre n'importe quelle équation", w:"Sur ton cahier", h:`<p>Résous les équations suivantes.</p><div class="calcs">${EX13.map(([l,...t])=>`<div><span><b>${l})</b> ${eqW([l,...t])}</span></div>`).join("")}</div>`,
-   c:EX13.map(([l,...t])=>lineEq(l,t)).join("")}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -246,3 +238,4 @@ CH["4e-22"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)
   if(it.g){ const g=it.g; list[i]={g:()=>Object.assign(g(),{kb:"text"})}; } else it.kb="text";
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-22");

@@ -144,16 +144,15 @@ cours:[
 exos:[
 {t:"Comparer des fractions", e:[
   {n:"Activité 1", t:"Devoir d'anglais", w:"Sur ton cahier", h:`<p>Mathilde a fait deux devoirs d'anglais en février.</p><p>Elle a obtenu {7/20} et ensuite {6/10}.</p><p>Sans utiliser la calculatrice, mais en notant ton raisonnement, détermine la meilleure des deux notes.</p>`,
-   c:`<p>On écrit les deux notes sur 20 :</p><p class="calc">{6/10} = {6 × 2/10 × 2} = {12/20}</p><p>{12/20} &gt; {7/20} : la meilleure note est la deuxième, <b>{6/10}</b> (c'est-à-dire 12 sur 20).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Quel est le meilleur buteur ?", w:"Sur ton cahier", h:`<p>Sur 6 tirs au but, Lilian en a réussi 4. On dira que sa proportion de réussite est de {4/6}.</p><p>Sur 12 tirs au but, Guénolé en a réussi 7. Sa proportion de réussite est de {7/12}.</p><p>Quel joueur a la plus grande proportion de réussite ?</p>`,
-   c:`<p class="calc">{4/6} = {4 × 2/6 × 2} = {8/12}</p><p>{8/12} &gt; {7/12} : c'est <b>Lilian</b> qui a la plus grande proportion de réussite.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Cake aux olives", w:"Sur ton cahier", h:`<p>Mathilde a mangé {2/5} du cake et Thomas a mangé {3/10} du cake.</p><p>Qui a mangé la plus grande part du cake ?</p>`,
-   c:`<p class="calc">{2/5} = {2 × 2/5 × 2} = {4/10}</p><p>{4/10} &gt; {3/10} : c'est <b>Mathilde</b> qui a mangé la plus grande part.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Tableau d'honneur", w:"Sur ton cahier", h:`<p>Durant l'année 2017, Claire a gagné 3 matchs sur 5 alors que Karim a gagné 2 matchs sur 3.</p><p>Quel joueur a la plus grande proportion de réussite ?</p>`,
-   c:`<p>Claire : {3/5} ; Karim : {2/3}. Le dénominateur commun est 5 × 3 = 15.</p><p class="calc">{3/5} = {3 × 3/5 × 3} = {9/15} &nbsp;et&nbsp; {2/3} = {2 × 5/3 × 5} = {10/15}</p><p>{10/15} &gt; {9/15} : c'est <b>Karim</b> qui a la plus grande proportion de réussite.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Comparer deux fractions", w:"Sur ton cahier", h:`<p>Compare les deux fractions. Explique tes choix sur ton cahier.</p><p>a) {9/5} et {26/15}</p><p>b) {7/4} et {12/8}</p><p>c) {2/3} et {8/12}</p><p>d) {5/7} et {2/3}</p><p>e) {11/5} et {10/4}</p><p>f) 3 et {13/4}</p>`,
-   c:`<p>On écrit les deux fractions avec le même dénominateur, puis on compare les numérateurs.</p><p>a) {9/5} = {9 × 3/5 × 3} = {27/15} et {27/15} &gt; {26/15}, donc <b>{9/5} &gt; {26/15}</b>.</p><p>b) {7/4} = {7 × 2/4 × 2} = {14/8} et {14/8} &gt; {12/8}, donc <b>{7/4} &gt; {12/8}</b>.</p><p>c) {2/3} = {2 × 4/3 × 4} = {8/12}, donc <b>{2/3} = {8/12}</b>.</p>
-   <p>d) {5/7} = {5 × 3/7 × 3} = {15/21} et {2/3} = {2 × 7/3 × 7} = {14/21}.</p><p>{15/21} &gt; {14/21}, donc <b>{5/7} &gt; {2/3}</b>.</p><p>e) {11/5} = {11 × 4/5 × 4} = {44/20} et {10/4} = {10 × 5/4 × 5} = {50/20}.</p><p>{44/20} &lt; {50/20}, donc <b>{11/5} &lt; {10/4}</b>.</p><p>f) 3 = {3 × 4/1 × 4} = {12/4} et {12/4} &lt; {13/4}, donc <b>3 &lt; {13/4}</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Additionner et soustraire des fractions", e:[
   {n:"Activité 2", t:"Somme et différence de fractions", w:"Sur ta feuille et sur ton cahier", h:`
@@ -163,53 +162,36 @@ exos:[
    ${op3(disk(2,0),"Part d'Alice","+",disk(5,0),"Part de Benoît",disk(10,0),"Part totale mangée par les 2")}
    <p><b>3) Partage de la pizza</b></p>${ex("pizza.png","Pizza",130)}<p>Au dîner, Arnaud et Jules ont mangé à tous les deux la moitié de la pizza. Arnaud a mangé les {2/5} de la pizza.</p><p>Quelle fraction de la pizza a mangé Jules ?</p>
    ${op3(disk(2,0),"Part mangée au total","−",disk(5,0),"Part d'Arnaud",disk(10,0),"Part de Jules")}`,
-   c:`<p><b>1)</b> Un tiers = {1/3} = {2/6}.</p>${op3(bar(3,1,150),"{1/3}","+",bar(6,1,180),"{1/6}",bar(6,3,180),"{3/6}")}
-   <p class="calc">{1/3} + {1/6} = {1 × 2/3 × 2} + {1/6} = {2/6} + {1/6} = {3/6} = {1/2}</p><p>Les deux enfants ont mangé <b>la moitié</b> du pain d'épices.</p>
-   <p><b>2)</b> La moitié = {1/2} = {5/10} et {2/5} = {4/10}.</p>${op3(disk(2,1),"{1/2}","+",disk(5,2),"{2/5}",disk(10,9),"{9/10}")}
-   <p class="calc">{1/2} + {2/5} = {1 × 5/2 × 5} + {2 × 2/5 × 2} = {5/10} + {4/10} = {9/10}</p><p>Ils ont mangé <b>{9/10}</b> de la tarte.</p>
-   <p><b>3)</b></p>${op3(disk(2,1),"{1/2}","−",disk(5,2),"{2/5}",disk(10,1),"{1/10}")}
-   <p class="calc">{1/2} − {2/5} = {5/10} − {4/10} = {1/10}</p><p>Jules a mangé <b>{1/10}</b> de la pizza.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Le cocktail", w:"Sur ton cahier", h:`${ex("cocktail.jpg","Cocktail",140)}<p>Maya prépare un cocktail pour son anniversaire. Dans une carafe ayant une contenance d'un litre, elle verse :</p><p>{1/3} L de jus d'orange, {1/4} L de jus de mangue et {2/12} L de jus d'ananas.</p><p>Son copain Achille lui crie : « Stop, ça va déborder ! »</p><p>A-t-il raison ?</p>`,
-   c:`<p>Le dénominateur commun est 12.</p><p class="calc">{1/3} + {1/4} + {2/12} = {4/12} + {3/12} + {2/12} = {9/12} = {3/4}</p><p>{3/4} L est moins que 1 L ({3/4} &lt; 1) : <b>non</b>, Achille a tort, ça ne va pas déborder.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Voyage en Espagne", w:"Sur ton cahier", h:`<p>Deux classes de 4<sup>e</sup> partent en voyage en Espagne. Pour financer le voyage, les élèves d'une classe décident de vendre des cartes de vœux.</p><p>Ils récoltent ainsi les trois cinquièmes de la somme nécessaire.</p><p>Les élèves de l'autre classe décident de vendre des tickets de tombola, ce qui leur permet d'obtenir les trois huitièmes de la somme totale.</p><p>Les élèves ont-ils suffisamment d'argent pour payer la totalité du voyage ?</p>`,
-   c:`<p class="calc">{3/5} + {3/8} = {3 × 8/5 × 8} + {3 × 5/8 × 5} = {24/40} + {15/40} = {39/40}</p><p>{39/40} &lt; {40/40} = 1 : <b>non</b>, il leur manque {1/40} de la somme totale.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Tapisserie", w:"Sur ton cahier", h:`<p>Maxime refait la tapisserie de son salon.</p><p>Il pose {4/15} du papier peint le premier jour, {2/5} le deuxième jour et {1/6} le troisième jour.</p><p>A-t-il fini ?</p>`,
-   c:`<p>Le dénominateur commun est 30 (15 × 2 = 30 ; 5 × 6 = 30 ; 6 × 5 = 30).</p><p class="calc">{4/15} + {2/5} + {1/6} = {8/30} + {12/30} + {5/30} = {25/30} = {5/6}</p><p>{5/6} &lt; 1 : <b>non</b>, il n'a pas fini. Il lui reste {1/6} du papier peint à poser.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Élections", w:"Sur ton cahier", h:`<p>Lors des élections des délégués de classe, il y avait trois candidats : Axelle, Marc et Léa.</p><p>Axelle a obtenu {5/12} des voix, Marc {1/4} des voix et Léa le reste.</p><p>Quel élève a obtenu le plus de voix ?</p>`,
-   c:`<p>Marc : {1/4} = {3/12}.</p><p class="calc">Léa : 1 − {5/12} − {3/12} = {12/12} − {5/12} − {3/12} = {4/12} = {1/3}</p><p>Axelle {5/12}, Marc {3/12}, Léa {4/12} : c'est <b>Axelle</b> qui a obtenu le plus de voix.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Utilisation de l'eau sur Terre", w:"Sur ton cahier", h:`<p>Sept dixièmes de l'eau utilisée sur la Terre servent à l'agriculture ; l'industrie en utilise le cinquième.</p><p>Le reste est pour la consommation domestique (boisson, cuisine, hygiène).</p><p>Quelle fraction de la consommation totale représente la consommation domestique ?</p>`,
-   c:`<p class="calc">Agriculture et industrie : {7/10} + {1/5} = {7/10} + {2/10} = {9/10}<br>Consommation domestique : 1 − {9/10} = {10/10} − {9/10} = {1/10}</p><p>La consommation domestique représente <b>{1/10}</b> de la consommation totale.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Le TGV", w:"Sur ton cahier", h:`<p>Un TGV vient de quitter Paris en direction de Bordeaux. Il roule jusqu'à Poitiers sans arrêt.</p><p>Au départ de Paris, le tiers des places de la voiture n° 16 sont occupées.</p><p>Lors de son arrêt à Poitiers, aucun passager ne descend mais des passagers montent à bord. Les {5/7} des places de la voiture n° 16 sont maintenant occupées.</p><p>Quelle fraction du nombre de places de la voiture n° 16 représentent les places prises par les passagers montés à Poitiers ?</p>`,
-   c:`<p class="calc">{5/7} − {1/3} = {5 × 3/7 × 3} − {1 × 7/3 × 7} = {15/21} − {7/21} = {8/21}</p><p>Les passagers montés à Poitiers occupent <b>{8/21}</b> des places de la voiture n° 16.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Entraînement aux calculs", e:[
   {n:"Exercice 11", t:"Entraînement aux calculs", w:"Sur ton cahier", h:`<p><b>1)</b> Calcule ces 5 expressions.</p><p>A = {1/3} + {2/4}</p><p>B = {8/5} + {3/7}</p><p>C = {3/8} + {2/6}</p><p>D = {7/18} + {2/9}</p><p>E = 4 + {3/5}</p>
    <p><b>2)</b> Simplifie ces fractions en indiquant tes calculs.</p><p>A = {12/10}</p><p>B = {28/35}</p><p>C = {−40/48}</p><p>D = {−16/−24}</p><p>E = {108/72}</p>`,
-   c:`<p><b>1)</b></p>${calc("A",["{1/3} + {2/4}","{1 × 4/3 × 4} + {2 × 3/4 × 3}","{4/12} + {6/12}","{10/12}","{10 ÷ 2/12 ÷ 2}","{5/6}"])}
-   ${calc("B",["{8/5} + {3/7}","{8 × 7/5 × 7} + {3 × 5/7 × 5}","{56/35} + {15/35}","{71/35}"])}
-   ${calc("C",["{3/8} + {2/6}","{3 × 3/8 × 3} + {2 × 4/6 × 4}","{9/24} + {8/24}","{17/24}"])}
-   ${calc("D",["{7/18} + {2/9}","{7/18} + {2 × 2/9 × 2}","{7/18} + {4/18}","{11/18}"])}
-   ${calc("E",["4 + {3/5}","{4 × 5/1 × 5} + {3/5}","{20/5} + {3/5}","{23/5}"])}
-   <p><b>2)</b></p>${calc("A",["{12/10}","{12 ÷ 2/10 ÷ 2}","{6/5}"])}${calc("B",["{28/35}","{28 ÷ 7/35 ÷ 7}","{4/5}"])}${calc("C",["{−40/48}","{−40 ÷ 8/48 ÷ 8}","{−5/6}"])}
-   ${calc("D",["{−16/−24}","{16/24}","{16 ÷ 8/24 ÷ 8}","{2/3}"])}<p>(Le quotient de deux nombres négatifs est positif.)</p>${calc("E",["{108/72}","{108 ÷ 36/72 ÷ 36}","{3/2}"])}<p>(On peut aussi simplifier en plusieurs étapes : par 9 puis par 4, ou par 4 puis par 9.)</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Pour les plus rapides", e:[
   {n:"Exercice 12", t:"Défi", w:"Sur ton cahier", h:`<p>Avec deux des quatre nombres suivants :</p><p class="calc">{2/5} &nbsp;&nbsp; {−3/5} &nbsp;&nbsp; −{7/10} &nbsp;&nbsp; {11/20}</p><p>a) calcule la plus grande somme possible A ;</p><p>b) calcule la plus petite somme possible B ;</p><p>c) calcule la plus grande différence possible C ;</p><p>d) calcule la plus petite différence possible D.</p>`,
-   c:`<p>On écrit les quatre nombres en vingtièmes : {2/5} = {8/20} ; {−3/5} = {−12/20} ; −{7/10} = {−14/20} ; {11/20}.</p><p>Rangés : {−14/20} &lt; {−12/20} &lt; {8/20} &lt; {11/20}.</p>
-   <p>a) On ajoute les deux plus grands. b) On ajoute les deux plus petits.</p>${chns([["A",["{2/5} + {11/20}","{8/20} + {11/20}","<b>{19/20}</b>"]],["B",["{−3/5} + (−{7/10})","{−12/20} + {−14/20}","{−26/20}","<b>{−13/10}</b>"]]])}
-   <p>c) Le plus grand moins le plus petit. d) Le plus petit moins le plus grand.</p>${chns([["C",["{11/20} − (−{7/10})","{11/20} + {14/20}","{25/20}","<b>{5/4}</b>"]],["D",["−{7/10} − {11/20}","{−14/20} − {11/20}","{−25/20}","<b>{−5/4}</b>"]]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"À vélo", w:"Sur ton cahier", h:`${ex("velo.jpg","Vélo",130)}<p>Coline part du collège à vélo pour rentrer chez elle.</p><p>Elle parcourt les deux cinquièmes de son trajet quand elle s'aperçoit que son cartable est tombé de son porte-bagages.</p><p>Elle fait donc demi-tour et roule en sens inverse sur un sixième du parcours total, ramasse son cartable et remonte sur son vélo.</p><p>Il lui reste 2,3 km à parcourir jusque chez elle.</p><p>Quelle est la distance entre chez elle et son collège ?</p>`,
-   c:`<p>Après le demi-tour, Coline se trouve à :</p><p class="calc">{2/5} − {1/6} = {12/30} − {5/30} = {7/30} du trajet</p><p>Il lui reste donc 1 − {7/30} = {23/30} du trajet, qui correspondent à 2,3 km.</p><p class="calc">{1/30} du trajet : 2,3 ÷ 23 = 0,1 km<br>Le trajet entier : 30 × 0,1 = 3 km</p><p>La distance entre chez elle et le collège est <b>3 km</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Sommeil", w:"Sur ton cahier", h:`<p>Notre nuit de sommeil se divise en quatre phases : le temps d'endormissement, le sommeil léger, le sommeil lent profond et le sommeil paradoxal.</p><p>Dans un hôpital, on a enregistré les durées des différents types de sommeil d'un patient, en fraction de la durée totale :</p><p>• temps d'endormissement : {1/48} ;</p><p>• sommeil profond : {7/24} ;</p><p>• la phase de sommeil léger est plus longue que celle de sommeil profond ;</p><p>• la différence entre la phase de sommeil léger et celle de sommeil profond représente {1/8} de la durée totale de sommeil.</p><p>Quelle est la part de la phase de sommeil paradoxal ?</p>`,
-   c:`<p class="calc">Sommeil léger : {7/24} + {1/8} = {7/24} + {3/24} = {10/24}</p><p>On écrit tout en quarante-huitièmes : {1/48} ; {7/24} = {14/48} ; {10/24} = {20/48}.</p><p class="calc">Sommeil paradoxal : 1 − {1/48} − {14/48} − {20/48} = {48/48} − {35/48} = {13/48}</p><p>Le sommeil paradoxal représente <b>{13/48}</b> de la durée totale de sommeil.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Carré divisé", w:"Sur ton cahier", h:`${CARRE}<p><b>1)</b> Quelle fraction du carré est :</p><p>a) violette ?</p><p>b) orange ?</p><p>c) rouge ?</p><p>d) noire ?</p><p><b>2)</b> Calcule la somme de ces fractions.</p>`,
-   c:`<p>On partage le carré en 16 petits carrés (4 × 4). Un petit carré = {1/16} du carré.</p>
-   <p><b>1)</b> a) Violette : un carré de 2 × 2 = 4 petits carrés, plus un triangle de 1 petit carré : 5 petits carrés, soit <b>{5/16}</b>.</p><p>b) Orange : trois rectangles de 2 petits carrés et deux triangles de 1 petit carré : 8 petits carrés, soit {8/16} = <b>{1/2}</b>.</p>
-   <p>c) Rouge : le carré penché vaut 2 petits carrés (4 moitiés) et le petit triangle vaut une moitié de petit carré : 5 moitiés de petit carré.</p><p>Le grand carré contient 16 × 2 = 32 moitiés de petit carré : la partie rouge est <b>{5/32}</b> du carré.</p><p>d) Noire : une moitié de petit carré, soit <b>{1/32}</b> du carré.</p>
-   <p><b>2)</b></p><p class="calc">{5/16} + {1/2} + {5/32} + {1/32} = {10/32} + {16/32} + {5/32} + {1/32} = {32/32} = 1</p><p>La somme vaut 1 : les quatre couleurs recouvrent tout le carré.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 16", t:"Observer", w:"Sur ton cahier", h:`<p>Dans cette grille, retrouve six carrés de 4 cases où figurent des nombres dont la somme est 1.</p>${grid(GRILLE)}`,
-   c:`<p>On écrit tous les nombres en douzièmes ({1/6} = {2/12} ; {1/3} = {4/12} ; {1/4} = {3/12} ; {1/2} = {6/12}) : il faut que les 4 numérateurs fassent 12.</p>
-   <p>Les six carrés (lignes ; colonnes) :</p><p>lignes 1-2 et colonnes 3-4 : 2 + 5 + 4 + 1 = 12</p><p>lignes 1-2 et colonnes 5-6 : 4 + 4 + 3 + 1 = 12</p><p>lignes 2-3 et colonnes 1-2 : 4 + 2 + 3 + 3 = 12</p><p>lignes 3-4 et colonnes 2-3 : 3 + 6 + 2 + 1 = 12</p><p>lignes 3-4 et colonnes 3-4 : 6 + 4 + 1 + 1 = 12</p><p>lignes 3-4 et colonnes 4-5 : 4 + 2 + 1 + 5 = 12</p>${grid(GRILLE,squares(GRILLE))}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -278,3 +260,4 @@ exos:[
 /* calculs en chaîne « A = … » dans les explications du QCM (simplifier, additionner et soustraire) */
 CH["4e-11"].quiz.forEach((N,ni)=>{ if(ni!==1 && ni!==3) return; Object.values(N.q).forEach(list=>list.forEach((it,i)=>{ if(it.g){ const g=it.g; list[i]={g:()=>qChain(g())}; } else list[i]=qChain(it); })); });
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-11");

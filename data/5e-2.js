@@ -142,16 +142,11 @@ exos:[
    <p>1) Complète le nom de la transformation 2.</p>
    <p>2) Quand c'est possible, associe chacune des figures ci-dessous à l'une des transformations ci-dessus. Indique la transformation et construis, à main levée, la droite ou le point.</p>
    ${ex("act1","Six paires de cocottes numérotées de 1 à 6",520)}`,
-   c:`<p>1) Transformation 2 : la <b>symétrie centrale</b> (le demi-tour).</p>
-   <p>2) Figure 1 : symétrie axiale · Figure 2 : symétrie centrale (demi-tour) · Figure 3 : symétrie axiale · Figure 4 : symétrie centrale (demi-tour) · Figure 5 : aucune des deux, la cocotte a seulement glissé : elle n'a été ni retournée, ni tournée · Figure 6 : symétrie centrale (demi-tour)</p>
-   ${ex("act1c","Les axes et les centres tracés sur les six paires de cocottes",520)}
-   <p>Les axes de symétrie sont en pointillés <b style="color:${AXC}">rouges</b>, les centres des demi-tours sont les croix <b style="color:${CTC}">bleues</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Le symétrique par rapport à une droite", w:"Sur ta feuille", h:`<p>Construis le symétrique de chaque figure par rapport à la droite (d), avec la technique de ton choix.</p><div class="figs">${ex("p2-03","Triangle ABC et droite (d)",230)}${ex("p2-04","Quadrilatère ABCD et droite (d)",230)}</div>`,
-   c:`<p>Pour chaque sommet, la droite (d) est la médiatrice du segment qui le relie à son image : je trace la perpendiculaire à (d) et je reporte la même distance de l'autre côté.</p>
-   ${cg([["a)",sa(E1a,["A","B","C"],"d1","d2"),""],["b)",sa(E1b,["A","B","C","D"],"d1","d2"),""]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 8", t:"Sur quadrillage", w:"Sur ta feuille", h:`<p>En t'aidant du quadrillage, construis le symétrique de chaque triangle par rapport à la droite (d).</p><div class="figs">${img("5c2fc/p3-13.png","Triangle ABC sur quadrillage",150)}${img("5c2fc/p3-14.png","Triangle DCE sur quadrillage",220)}</div>`,
-   c:`<p>Sur quadrillage, je compte les carreaux : chaque image est à la même distance de (d) que son point de départ, de l'autre côté.</p>
-   ${cg([["a)",sa(F8a,["A","B","C"],"d1","d2",{grid:{c:6,r:13},s:22,t:0.85,w:170}),"(d) est horizontale : je compte les carreaux verticalement."],["b)",sa(F8b,["D","C","E"],"d1","d2",{grid:{c:8,r:8},s:30,t:0.02,w:260}),"(d) est en diagonale : je compte en diagonale, en traversant les carreaux."]])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Sur quadrillage, le point A est à 3 carreaux à gauche d'une droite verticale (d). Où est son symétrique A' ?</p>`, c:`A' est sur la même ligne, à 3 carreaux à droite de (d).${sa({A:[1,2],d1:[4,0],d2:[4,4]},["A"],"d1","d2",{grid:{c:8,r:4},s:30,w:260})}`},
  defi:{t:"Deux symétries à la suite", w:"Sur ton cahier", h:`<p>Sur un quadrillage, place A, puis A₁ symétrique de A par rapport à une droite verticale (d₁), puis A₂ symétrique de A₁ par rapport à une droite horizontale (d₂). Que remarques-tu sur A et A₂ ?</p>`,
@@ -159,17 +154,15 @@ exos:[
 },
 {t:"Construire le symétrique par un demi-tour", e:[
   {n:"Activité 2", t:"Technique pour tracer l'image d'une figure par symétrie centrale", w:"Sur ta feuille", h:`<p>Trace l'image du triangle ABC par la symétrie de centre H. Tu la nommeras A'B'C'.</p>${ex("p2-05","Triangle ABC et point H",420)}`,
-   c:`<p>Pour chaque sommet, je trace la demi-droite qui part du sommet et passe par H, puis je reporte au compas la même longueur de l'autre côté de H : H est le milieu de [AA'], de [BB'] et de [CC']. Je relie ensuite A', B' et C'.</p>${dt(FA2,["A","B","C"],"H",{w:420})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 1", t:"Triangle HNP", w:"Sur ta feuille", h:`${img("5c2fc/p1-00.png","Triangle HNP et point Q",420)}<p>a) Trace le symétrique du triangle HNP par rapport au point Q. Nomme-le H'N'P'. b) Trace le symétrique du triangle HNP par rapport à P. Nomme-le H''N''P''.</p>`,
-   c:`<p>a) Q est le milieu de [HH'], de [NN'] et de [PP'].</p>${dt(F1,["H","N","P"],"Q")}
-   <p>b) Le centre est le sommet P : P'' = P, et P est le milieu de [HH''] et de [NN''].</p>${dt(F1,["H","N","P"],"P",{suf:"''",names:{P:"P = P''"}})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 2", t:"Quadrilatère LIRE", w:"Sur ta feuille", h:`${img("5c2fc/p1-01.png","Quadrilatère LIRE et point V",420)}<p>a) Trace le symétrique de LIRE par rapport à V. Nomme-le L'I'R'E'. b) Trace le symétrique de LIRE par rapport à R. Nomme-le L''I''R''E''.</p>`,
-   c:`${dt(F2,["L","I","R","E"],"V")}<p>b) R est sa propre image : R'' = R.</p>${dt(F2,["L","I","R","E"],"R",{suf:"''",names:{R:"R = R''"}})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 3", t:"Un cercle", w:"Sur ta feuille", h:`${img("5c2fc/p1-02.png","Cercle de centre S et point U",380)}<p>Trace le symétrique du cercle (C) par rapport au point U. Nomme-le (C').</p>`,
-   c:`<p>Je construis S', symétrique du centre S par rapport à U, puis je trace le cercle de centre S' et de <b>même rayon</b> (propriété 3).</p>
-   ${geo({pts:{...F3,"S'":S(F3.S,F3.U)}, circles:[{c:"S",r:131},{c:"S'",r:131,k:"img"}], cons:[["S","U","S'",1]], marks:["U"]})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 9", t:"Quadrilatère ABCD", w:"Sur ta feuille", h:`${img("5c2fc/p3-19.png","Quadrilatère ABCD et point O",300)}<p>Construis le symétrique du quadrilatère ABCD par rapport à O. Nomme-le A'B'C'D'.</p>`,
-   c:`${dt(F9,["A","B","C","D"],"O")}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Place deux points A et O. Construis A', symétrique de A par rapport à O, en suivant les 3 étapes du cours.</p>`, c:`${methode}`},
  defi:{t:"Retrouver le centre", w:"Sur ta feuille", h:`<p>Les deux figures ci-dessous sont symétriques par rapport à un point C. Place le centre de symétrie C, en laissant les traits de construction visibles.</p>${co("p3-14","Deux quadrilatères GHIJ et G'H'I'J' symétriques",460)}`,
@@ -177,10 +170,9 @@ exos:[
 },
 {t:"Le demi-tour sur quadrillage", e:[
   {n:"Feuille · Exercice 4", t:"Par rapport au point F", w:"Sur ta feuille", h:`<p>En t'aidant du quadrillage, construis le symétrique du triangle DEC par rapport au point F. Nomme-le D'E'C'.</p><div class="figs">${img("5c2fc/p2-05.png","Triangle DEC et point F, figure 1",290)}${img("5c2fc/p2-06.png","Triangle DEC et point F, figure 2",270)}</div>`,
-   c:`<p>Pour aller de F à l'image, je fais le même déplacement que pour aller du point à F. Exemple : de E à F, 4 carreaux vers la droite ; donc de F à E', encore 4 carreaux vers la droite.</p>
-   <div class="figs">${lab("Figure 1",dt(F4a,["D","E","C"],"F",{grid:{c:10,r:4},s:40,w:440}))}${lab("Figure 2",dt(F4b,["D","E","C"],"F",{grid:{c:9,r:5},s:40,w:400}))}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 5", t:"Par rapport au point E", w:"Sur ta feuille", h:`<p>En t'aidant du quadrillage, construis le symétrique du triangle DEC par rapport au point E. Nomme-le D'E'C'.</p><div class="figs">${img("5c2fc/p2-07.png","Triangle DEC, figure 1",270)}${img("5c2fc/p2-08.png","Triangle DEC, figure 2",220)}</div>`,
-   c:`<p>Le centre est le sommet E : E' = E.</p><div class="figs">${lab("Figure 1",dt(F5a,["D","E","C"],"E",{grid:{c:9,r:3},s:40,w:400,names:{E:"E = E'"}}))}${lab("Figure 2",dt(F5b,["D","E","C"],"E",{grid:{c:7,r:6},s:40,w:320,names:{E:"E = E'"}}))}</div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`${qg({A:[1,1],O:[3,2]},["A","O"])}<p>Pour aller de A à O : combien de carreaux vers la droite ? vers le bas ? Place A' en faisant le même déplacement à partir de O.</p>`,
   c:`De A à O : 2 carreaux à droite et 1 en bas. Donc de O à A' : encore 2 à droite et 1 en bas.${geo({pts:{A:[1,1],O:[3,2],"A'":[5,3]}, cons:[["A","O","A'",1]], marks:["A","O","A'"], grid:{c:8,r:6}, s:GR, w:300})}`},
@@ -188,11 +180,9 @@ exos:[
 },
 {t:"Demi-tour ou symétrie axiale ?", e:[
   {n:"Feuille · Exercice 6", t:"Triangle RAP", w:"Sur ta feuille", h:`${img("5c2fc/p2-11.png","Triangle RAP, point B et droite (e)",360)}<p>a) Trace le symétrique du triangle RAP par rapport à la droite (e). Nomme-le R'A'P'. b) Trace le symétrique du triangle RAP par rapport au point B. Nomme-le R''A''P''.</p>`,
-   c:`<p>a) Symétrie axiale : (e) est la médiatrice de [RR'], [AA'] et [PP'].</p>${sa(F6,["R","A","P"],"e1","e2",{lab:"(e)",t:0.05})}
-   <p>b) Demi-tour : B est le milieu de [RR''], [AA''] et [PP''].</p>${dt(F6,["R","A","P"],"B",{suf:"''"})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille · Exercice 7", t:"Encore le triangle RAP", w:"Sur ta feuille", h:`${img("5c2fc/p3-12.png","Triangle RAP",200)}<p>a) Trace le symétrique du triangle RAP par rapport à la droite (RA). Nomme-le R'A'P'. b) Trace le symétrique du triangle RAP par rapport au point A. Nomme-le R''A''P''.</p>`,
-   c:`<p>a) R et A sont sur l'axe : ils sont leur propre image (R' = R, A' = A). Seul P bouge.</p>${sa(F7,["R","A","P"],"R","A",{lab:"(RA)",t:-0.15,names:{R:"R = R'",A:"A = A'"}})}
-   <p>b) A est le centre : A'' = A.</p>${dt(F7,["R","A","P"],"A",{suf:"''",names:{A:"A = A''"}})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Complète : pour une symétrie axiale, la droite est la ………… de [MM'] ; pour un demi-tour, le centre est le ………… de [MM'].</p>`, c:`médiatrice · milieu`},
  defi:{t:"Un point qui ne bouge pas", w:"Sur ton cahier", h:`<p>Par un demi-tour de centre O, quel est le seul point qui est sa propre image ? Et par une symétrie axiale d'axe (d) ?</p>`, c:`Pour un demi-tour, seul le centre O ne bouge pas. Pour une symétrie axiale, tous les points de l'axe (d) sont leur propre image.`}
@@ -204,15 +194,9 @@ exos:[
    <p><b>Partie 2 – Découverte de propriétés de conservation de la symétrie centrale.</b> Lorsqu'on construit le symétrique d'une figure par symétrie centrale, qu'ont en commun cette figure et son symétrique ? Complète :</p>
    <p>Propriété 1 : Si deux segments sont symétriques par rapport à un point, alors ils sont …</p><p>Propriété 2 : Si deux droites sont symétriques par rapport à un point, alors elles sont …</p><p>Propriété 3 : Si deux cercles sont symétriques par rapport à un point, alors …</p>${ex("p3-06","Deux cercles (C) et (C') de centres M et M', symétriques par rapport à O",300)}
    <p><b>Partie 3 – Répondre à une question en justifiant.</b> Le segment [ID] mesure 3 cm. Combien mesure le segment [EL] ? Justifie en t'aidant d'une propriété trouvée dans la partie 2.</p>`,
-   c:`<p><b>Partie 1</b></p><p>a) Le point O.</p><p>b) Le segment [LE].</p><p>c) La droite (EP).</p><p>d) L'angle LOS.</p>
-   <p><i>Les sommets se correspondent dans l'ordre : A et O, U et P, D et E, I et L.</i></p>
-   <p><b>Partie 2</b></p><p>Propriété 1 : … alors ils sont <b>parallèles et de même longueur</b>.</p><p>Propriété 2 : … alors elles sont <b>parallèles</b>.</p><p>Propriété 3 : … alors ils ont le <b>même rayon</b> (et leurs centres sont symétriques).</p>
-   <p><b>Partie 3</b></p><p>Je sais que les segments [ID] et [LE] sont symétriques par rapport au point C. Or si deux segments sont symétriques par rapport à un point, alors ils sont de même longueur. Donc EL = ID = 3 cm.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"ABCD et IJKL", w:"Sur ton cahier", h:`${ex("p4-14","Quadrilatères ABCD et IJKL symétriques par rapport à O",420)}<p>Les quadrilatères ABCD et IJKL sont symétriques par rapport au point O. Chaque réponse doit être justifiée.</p><p>a) Détermine la longueur du segment [KL]. b) Détermine la mesure de l'angle <span class="ang">JIL</span>. c) Détermine le périmètre du quadrilatère IJKL.</p>`,
-   c:`<p>Les sommets se correspondent dans l'ordre : A et I, B et J, C et K, D et L.</p>
-   <p>a) Je sais que [KL] est le symétrique de [CD] par rapport à O. Or le demi-tour conserve les longueurs. Donc KL = CD = 4 cm (sur la figure, [CD] et [DA] ont le même codage, et DA = 4 cm).</p>
-   <p>b) Je sais que l'angle <span class="ang">JIL</span> est le symétrique de l'angle <span class="ang">BAD</span>. Or le demi-tour conserve les mesures d'angles. Donc <span class="ang">JIL</span> = 122°.</p>
-   <p>c) Le demi-tour conserve les longueurs, donc IJKL a le même périmètre que ABCD : 5 + 6 + 4 + 4 = 19 cm.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Les segments [AB] et [A'B'] sont symétriques par rapport à O, et AB = 7 cm. Recopie et complète : Je sais que … Or … Donc A'B' = …</p>`, c:`Je sais que [AB] et [A'B'] sont symétriques par rapport au point O. Or le demi-tour conserve les longueurs. Donc A'B' = AB = 7 cm.`},
  defi:{t:"Avec des droites", w:"Sur ton cahier", h:`<p>Les triangles ABC et A'B'C' sont symétriques par rapport à O. Que peut-on dire des droites (BC) et (B'C') ? Justifie.</p>`, c:`Je sais que les droites (BC) et (B'C') sont symétriques par rapport au point O. Or si deux droites sont symétriques par rapport à un point, alors elles sont parallèles. Donc (BC) // (B'C').`}
@@ -222,15 +206,13 @@ exos:[
    <div class="figs">${lab("Cocottes 2",ex("p4-11","Cocotte 2 et son image",330))}${lab("Cocottes 4",ex("p4-12","Cocotte 4 et son image",260))}</div>
    <p><b>Partie 2 : Repérer des symétriques dans une rosace.</b> On considère l'hexagone régulier ABCDEF de centre O représenté ci-dessous. Complète les phrases suivantes :</p>${ex("p4-13","Hexagone régulier ABCDEF de centre O",220)}
    <p>a) Le symétrique du point A par rapport au point O est …</p><p>b) Le symétrique du point A par rapport à la droite (BO) est …</p><p>c) Le symétrique du triangle FOE par rapport au point O est …</p><p>d) Le symétrique du triangle FOE par rapport à la droite (FO) est …</p>`,
-   c:`<p><b>Partie 1.</b> Le centre de symétrie est le milieu de chaque segment qui relie un point et son symétrique.<br>Je relie deux sommets de la cocotte blanche à leurs symétriques sur la cocotte grise (traits gris).<br>Le centre C (en <b style="color:${CTC}">bleu</b>) est le point d'intersection de ces deux segments : c'est aussi leur milieu.</p>
-   <div class="figs">${lab("Cocottes 2",ex("p4-11c","Construction du centre C pour la cocotte 2",380))}${lab("Cocottes 4",ex("p4-12c","Construction du centre C pour la cocotte 4",300))}</div>
-   <p><b>Partie 2.</b></p><p>a) Le point D (O est le milieu de [AD]).</p><p>b) Le point C (la droite (BO) passe aussi par E : c'est un axe de symétrie de l'hexagone).</p><p>c) Le triangle COB (F a pour symétrique C, O reste en O, E a pour symétrique B).</p><p>d) Le triangle FOA (F et O sont sur l'axe, E a pour symétrique A).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"L'hexagone régulier", w:"Sur ton cahier", h:`${ex("p5-17","Hexagone régulier ABCDEF de centre O",260)}<p>Complète : a) Le symétrique du point E par rapport au point O est … b) Le symétrique du triangle COD par rapport au point O est … c) Le symétrique du point B par rapport à la droite (OC) est … d) Le symétrique du triangle ABO par rapport à la droite (AO) est … e) Le symétrique du point D par rapport à la droite (OB) est …</p>`,
-   c:`a) B · b) le triangle FOA · c) D · d) le triangle AFO · e) F`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Le pavage de triangles équilatéraux", w:"Sur ton cahier", h:`${ex("p5-16","Pavage de triangles équilatéraux",390)}<p>a) Le symétrique du point E par rapport au point C est … b) Le symétrique du point E par rapport à la droite (CB) est … c) Le symétrique du triangle JKI par rapport au point K est … d) Le symétrique du triangle ACB par rapport au point E est … e) Le symétrique du triangle ADB par rapport à la droite (CZ) est …</p>`,
-   c:`a) S · b) A · c) le triangle ZKB · d) le triangle LJM · e) le triangle EKB`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5 (suite)", t:"Le pavage du carré", w:"Sur ton cahier", h:`${ex("p5-15","Pavage d'un carré ABCD de centre M",250)}<p>À partir du triangle BEJ, rectangle isocèle en J, on a obtenu ce pavage. a) Le symétrique du point F par rapport au point M est … b) Le symétrique du point E par rapport à la droite (BM) est … c) Le symétrique du triangle AHM par rapport au point M est … d) Le symétrique du triangle CGK par rapport au point K est … e) Le symétrique du triangle MHD par rapport à la droite (HM) est … f) Le symétrique du quadrilatère MDGF par rapport au point M est … g) Le symétrique du carré ABCD par rapport au point M est …</p>`,
-   c:`a) H · b) F · c) le triangle CFM · d) le triangle MFK · e) le triangle MHA · f) le quadrilatère MBEH · g) le carré lui-même (A va en C, B en D, C en A, D en B)`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Dans l'hexagone de l'exercice 4, quel est le symétrique du point A par rapport au point O ?</p>`, c:`D : O est le milieu de [AD].`},
  defi:{t:"Deux transformations", w:"Sur ton cahier", h:`<p>Dans l'hexagone de l'exercice 4, le symétrique du point A par rapport à la droite (BO) est … ? Et le symétrique du triangle FOE par rapport à la droite (FO) ?</p>`, c:`Le symétrique de A par rapport à (BO) est C. Le symétrique du triangle FOE par rapport à (FO) est le triangle FOA.`}
@@ -238,9 +220,9 @@ exos:[
 {t:"Axes et centres de symétrie", e:[
   {n:"Activité 5", t:"Axe de symétrie et centre de symétrie", w:"Sur ta feuille", h:`<div class="figs" style="align-items:center"><p style="flex:1;min-width:220px"><b>Propriété :</b> une droite (d) est un <b>axe de symétrie</b> d'une figure lorsque cette figure est son propre symétrique par rapport à cette droite (d).</p>${exM}</div><div class="figs" style="align-items:center"><p style="flex:1;min-width:220px"><b>Propriété :</b> un point O est le <b>centre de symétrie</b> d'une figure lorsque cette figure est son propre symétrique par rapport à ce point O.</p>${exH}</div><p><b>Exercice :</b> pour chaque lettre ou symbole, trace les axes de symétrie <b style="color:${AXC}">en rouge</b> et marque le centre de symétrie <b style="color:${CTC}">en bleu</b>, s'il en possède.</p>
    <div class="figs" style="align-items:center">${["E","L","X","cœur","carreau"].map(k=>sym5(k,false,70)).join("")}</div>`,
-   c:`${LEG}${cg([["E",sym5("E",true,90),"1 axe horizontal, pas de centre."],["L",sym5("L",true,90),"Ni axe, ni centre."],["X",sym5("X",true,90),"2 axes et un centre."],["Cœur",sym5("cœur",true,90),"1 axe vertical, pas de centre."],["Carreau",sym5("carreau",true,90),"2 axes et un centre."]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Figures usuelles", w:"Sur ta feuille", h:`<p>Pour chaque figure, trace les axes de symétrie <b style="color:${AXC}">en rouge</b> et marque le centre de symétrie <b style="color:${CTC}">en bleu</b>, quand elle en possède.</p>${cg(USU.map(([n,k])=>[n,usu(k,false),""]))}`,
-   c:`${LEG}${cg(USU.map(([n,k,t])=>[n,usu(k,true),t]))}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>La lettre H a-t-elle un centre de symétrie ? Fais un demi-tour avec ta feuille pour vérifier.</p>`, c:`Oui : le centre de la lettre H. Après un demi-tour, la lettre se superpose à elle-même. Elle a aussi 2 axes.`},
  defi:{t:"Des lettres sans axe", w:"Sur ton cahier", h:`<p>Trouve deux lettres majuscules qui ont un centre de symétrie mais aucun axe de symétrie.</p>`, c:`Par exemple N, S et Z : elles se superposent à elles-mêmes après un demi-tour, mais aucun pliage ne marche.`}
@@ -253,12 +235,7 @@ exos:[
    <p><b>Question 4.</b> a) Si A est le milieu de [BC], alors B et C sont symétriques par rapport au point A. b) Si A et B sont symétriques par rapport à la droite (d), alors (d) est la médiatrice de [AB]. c) Si les segments [AB] et [CD] sont symétriques par rapport à une droite, alors les droites (AB) et (CD) sont parallèles.</p>
    <p><b>Question 5.</b> a) Si F' est le symétrique de F par rapport au point O, alors F est le symétrique de F' par rapport au point O. b) Si F' est le symétrique de F par rapport à la droite (d), alors F est le symétrique de F' par rapport à (d).</p>
    <p><b>Question 6.</b> ABC est un triangle équilatéral d'aire 10 cm². D et E sont les symétriques de B et A par rapport à C. F et G sont les symétriques de D et C par rapport à E. Quelle est l'aire du triangle FEG ? a) 90 cm² · b) 10 cm² · c) 30 cm² · d) 29,97 cm²</p>`,
-   c:`<p><b>Question 1 :</b> b et d. Dans la figure 1, les deux bonshommes regardent du même côté : ce n'est pas un pliage. Dans la figure 3, un demi-tour autour de O ne superpose pas les deux oiseaux : O n'est pas un centre de symétrie.</p>
-   <p><b>Question 2 :</b> a, b, c et d (toutes).</p>
-   <p><b>Question 3 :</b> d seulement. Par une symétrie axiale, le symétrique d'une droite n'est pas forcément parallèle à cette droite.</p>
-   <p><b>Question 4 :</b> a et b. La c est fausse : par une symétrie axiale, les droites ne sont pas forcément parallèles.</p>
-   <p><b>Question 5 :</b> a et b.</p>
-   <p><b>Question 6 :</b> b) 10 cm². DEC est l'image de BAC par le demi-tour de centre C, puis FEG est l'image de DEC par le demi-tour de centre E. Le demi-tour conserve les aires : l'aire reste 10 cm².</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]
 }
 ],
@@ -335,3 +312,4 @@ eval: window.EVAL5_1
 /* figures réutilisées par les schémas de « Je m'entraîne » */
 window.FIG5 = {dt, sa, methode, usu, USU, step, AXC, CTC, LEG};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-2");

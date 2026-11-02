@@ -180,13 +180,11 @@ exos:[
 {t:"Division euclidienne", e:[
   {n:"Activité 1", t:"Le trésor d'un galion", w:"Sur ton cahier", h:`<p>Le trésor d'un galion contient 185 pièces d'or. Le capitaine décide de les partager entre les 12 marins les plus valeureux de son équipage, chaque marin devant recevoir le même nombre de pièces.</p>
    <p>1 – Combien de pièces d'or aura reçu chaque marin ?</p><p>2 – Combien le trésor aurait-il dû contenir de pièces supplémentaires pour que chaque marin en reçoive une de plus et que toutes les pièces soient distribuées ?</p>`,
-   c:`${pot(185,12,"12 × 15 + 5 = 185")}<p>1 – Chaque marin reçoit 15 pièces d'or, et il reste 5 pièces.</p><p>2 – Pour que chaque marin reçoive 16 pièces, il faut 12 × 16 = 192 pièces. Il aurait fallu 192 − 185 = 7 pièces supplémentaires.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Tournoi de rugby", w:"Sur ton cahier", h:`<p>186 élèves du collège sont inscrits à un tournoi de rugby.</p><p>a) Combien d'équipes complètes de 15 joueurs peut-on former ? b) Combien manque-t-il d'élèves pour former une équipe supplémentaire ?</p>`,
-   c:`${pot(186,15,"15 × 12 + 6 = 186")}<p>a) On peut former 12 équipes complètes (il reste 6 élèves).</p><p>b) Il manque 15 − 6 = 9 élèves pour une équipe de plus.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"À la bibliothèque", w:"Sur ton cahier", h:`<p>Un bibliothécaire doit répartir 420 livres sur des étagères, avec le même nombre de livres sur chaque étagère. Est-ce possible avec 18 étagères ? Avec 21 étagères ? Explique.</p>`,
-   c:`<div class="figs" style="align-items:center">${potence(420,18)}${potence(420,21)}</div>
-   <p>Avec 18 étagères : 18 × 23 + 6 = 420. Le reste n'est pas nul : ce n'est <b>pas possible</b> (il resterait 6 livres).</p>
-   <p>Avec 21 étagères : 21 × 20 = 420. Le reste est nul : c'est <b>possible</b>, avec 20 livres par étagère.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Pose la division euclidienne de 47 par 5, puis complète : 5 × … + … = 47.</p>`, c:`${pot(47,5,"5 × 9 + 2 = 47 : le quotient est 9 et le reste est 2.")}`},
  defi:{t:"Le trésor du galion", w:"Sur ton cahier", h:`<p>185 pièces d'or sont partagées entre 12 marins, chacun recevant le même nombre de pièces. Combien chaque marin reçoit-il ? Combien de pièces aurait-il fallu en plus pour que chaque marin en reçoive une de plus et que toutes soient distribuées ?</p>`,
@@ -196,22 +194,15 @@ exos:[
   {n:"Activité 2", t:"Trouver le nombre de marins possibles", w:"Sur ton cahier", h:`<p>Dans un autre galion, le trésor contient 28 pièces d'or. Le capitaine a également partagé équitablement ces pièces d'or et il n'en reste plus à la fin. Combien pouvait-il y avoir de marins ?</p>
    <p>Énumère toutes les possibilités dans un tableau comme celui-ci :</p>
    <div class="scroll"><table class="std"><tbody><tr><th>Nombre de marins</th><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><th>Nombre de pièces d'or par marin</th><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr></tbody></table></div>`,
-   c:`<p>Il ne reste aucune pièce : le nombre de marins doit être un <b>diviseur</b> de 28. Je cherche les produits égaux à 28 : 1 × 28, 2 × 14, 4 × 7.</p>
-   <div class="scroll"><table class="std"><tbody><tr><th>Nombre de marins</th><td>1</td><td>2</td><td>4</td><td>7</td><td>14</td><td>28</td></tr><tr><th>Nombre de pièces d'or par marin</th><td>28</td><td>14</td><td>7</td><td>4</td><td>2</td><td>1</td></tr></tbody></table></div>
-   <p>Il pouvait y avoir 1, 2, 4, 7, 14 ou 28 marins : ce sont les diviseurs de 28.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Liste de diviseurs", w:"Sur ton cahier", h:`<p>Cite tous les diviseurs de : a) 15 · b) 24 · c) 16 · d) 11</p>`,
-   c:`<p>Je cherche les produits égaux au nombre.</p><p>a) 15 = 1 × 15 = 3 × 5 : <b>1, 3, 5, 15</b> · b) 24 = 1 × 24 = 2 × 12 = 3 × 8 = 4 × 6 : <b>1, 2, 3, 4, 6, 8, 12, 24</b> · c) 16 = 1 × 16 = 2 × 8 = 4 × 4 : <b>1, 2, 4, 8, 16</b> · d) 11 = 1 × 11 seulement : <b>1, 11</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Les critères de divisibilité", w:"Sur ton cahier", h:`<p>Réponds par oui ou non. Le nombre 780 est-il divisible par 2 ? par 5 ? par 10 ? par 3 ? par 9 ? Même question pour 576.</p>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th></th><th>par 2</th><th>par 5</th><th>par 10</th><th>par 3</th><th>par 9</th></tr></thead><tbody>
-   <tr><td><b>780</b></td><td>oui</td><td>oui</td><td>oui</td><td>oui (7 + 8 + 0 = 15)</td><td>non (15 n'est pas un multiple de 9)</td></tr>
-   <tr><td><b>576</b></td><td>oui</td><td>non</td><td>non</td><td>oui (5 + 7 + 6 = 18)</td><td>oui (18 = 9 × 2)</td></tr></tbody></table></div><p>Par 2, par 5 et par 10 : je regarde le chiffre des unités (0 pour 780, 6 pour 576).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Pour aller plus loin", w:"Sur ton cahier", h:`<p>1. Vrai ou faux ? Justifie. a) Un multiple de 3 est forcément multiple de 9. b) Un multiple de 9 est forcément multiple de 3.</p><p>2. Complète : « Un nombre multiple de 10 est forcément multiple de … »</p>`,
-   c:`<p>1. a) Faux : 6 est un multiple de 3 (3 × 2) mais pas de 9. Un seul contre-exemple suffit.</p>
-   <p>b) Vrai : 9 = 3 × 3. Un multiple de 9 s'écrit 9 × un nombre, c'est donc aussi 3 × 3 × ce nombre : c'est un multiple de 3.</p>
-   <p>2. … de 2 et de 5 (car 10 = 2 × 5), et aussi de 1 et de 10.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Vocabulaire de la divisibilité", w:"Sur ton cahier", h:`<p>a) Cite tous les diviseurs de 30. b) Cite des multiples de 30. c) Cite les trois premiers multiples de 30. d) Le nombre 4 656 est-il divisible par 2 ? par 5 ? par 10 ? par 3 ? par 9 ?</p>`,
-   c:`<p>a) 30 = 1 × 30 = 2 × 15 = 3 × 10 = 5 × 6 : 1, 2, 3, 5, 6, 10, 15, 30</p><p>b) Par exemple 60, 90, 300 (30 × 2, 30 × 3, 30 × 10)</p><p>c) 0, 30 et 60 (car 30 × 0 = 0). Si on ne compte pas 0 : 30, 60 et 90.</p>
-   <p>d) Par 2 : oui (unités : 6) · Par 5 : non (unités : 6) · Par 10 : non (unités : 6) · Par 3 : oui (4 + 6 + 5 + 6 = 21) · Par 9 : non (21 n'est pas un multiple de 9)</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Complète : 18 = 1 × 18 = 2 × … = 3 × … Puis donne tous les diviseurs de 18.</p>`, c:`18 = 1 × 18 = 2 × 9 = 3 × 6. Les diviseurs de 18 sont 1, 2, 3, 6, 9 et 18. On les trouve « par paires ».`},
  defi:{t:"Un critère à inventer", w:"Sur ton cahier", h:`<p>Trouve le plus petit nombre de 4 chiffres divisible à la fois par 2, 3, 5 et 9.</p>`, c:`Divisible par 2 et 5 : il se termine par 0. Divisible par 9 (donc aussi par 3) : la somme de ses chiffres est un multiple de 9. Le plus petit est 1 080 (1 + 0 + 8 + 0 = 9).`}
@@ -219,16 +210,11 @@ exos:[
 {t:"Problèmes de partage", e:[
   {n:"Exercice 7", t:"Corbeilles de petit déjeuner", w:"Sur ton cahier", h:`<p>Le boulanger a livré 16 croissants et 28 pains au chocolat. On veut préparer des corbeilles identiques en utilisant toutes les viennoiseries.</p>
    ${ex("p2-01","Corbeille de croissants et de pains au chocolat",260)}<p>1. Combien de corbeilles peut-on faire, et quel sera le contenu de chacune ? Donne toutes les possibilités. 2. Que représentent les nombres de corbeilles possibles pour 16 et 28 ?</p>`,
-   c:`<p>1. Diviseurs de 16 : 1, 2, 4, 8, 16 · Diviseurs de 28 : 1, 2, 4, 7, 14, 28 · Diviseurs communs : 1, 2, 4.</p>
-   <div class="scroll"><table class="std"><thead><tr><th>Corbeilles</th><th>Croissants</th><th>Pains au chocolat</th></tr></thead><tbody><tr><td>1</td><td>16</td><td>28</td></tr><tr><td>2</td><td>8</td><td>14</td></tr><tr><td>4</td><td>4</td><td>7</td></tr></tbody></table></div>
-   <p>2. Ce sont les diviseurs communs à 16 et 28.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Différents problèmes", w:"Sur ton cahier", h:`<p><b>Problème 1.</b> Claude veut planter 162 pommiers en rangées qui ont toutes le même nombre de pommiers. Peut-il faire 13 rangées complètes ? 9 rangées complètes ? Justifie.</p>
    <p><b>Problème 2.</b> Au goûter, 36 crêpes ont été mangées et chaque personne en a mangé le même nombre. Combien pouvait-il y avoir de personnes ? Donne toutes les possibilités.</p>
    <p><b>Problème 3.</b> Un fleuriste a 12 roses rouges et 18 roses blanches. Il veut faire des bouquets identiques avec toutes ses fleurs. Combien de bouquets, et quelle composition ? Donne toutes les possibilités.</p>`,
-   c:`<p><b>Problème 1.</b> 13 × 12 + 6 = 162 : le reste n'est pas nul, 13 rangées complètes c'est impossible. 9 × 18 = 162 : c'est possible, avec 18 pommiers par rangée (on pouvait aussi voir que 1 + 6 + 2 = 9).</p>
-   <p><b>Problème 2.</b> Le nombre de personnes est un diviseur de 36. 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6 : 1, 2, 3, 4, 6, 9, 12, 18 ou 36 personnes.</p>
-   <p><b>Problème 3.</b> Diviseurs de 12 : 1, 2, 3, 4, 6, 12. Diviseurs de 18 : 1, 2, 3, 6, 9, 18.</p><p>Diviseurs communs à 12 et 18 : 1, 2, 3, 6.</p>
-   <div class="scroll"><table class="std"><thead><tr><th>Bouquets</th><th>Roses rouges</th><th>Roses blanches</th></tr></thead><tbody><tr><td>1</td><td>12</td><td>18</td></tr><tr><td>2</td><td>6</td><td>9</td></tr><tr><td>3</td><td>4</td><td>6</td></tr><tr><td>6</td><td>2</td><td>3</td></tr></tbody></table></div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>On a 6 billes rouges et 9 billes bleues. On fait des sachets identiques avec toutes les billes. Combien de sachets peut-on faire ?</p>`, c:`Diviseurs de 6 : 1, 2, 3, 6 · Diviseurs de 9 : 1, 3, 9 · Diviseurs communs : 1 et 3. Donc 1 sachet (6 rouges, 9 bleues) ou 3 sachets (2 rouges, 3 bleues).`},
  defi:{t:"Le plus de corbeilles possible", w:"Sur ton cahier", h:`<p>On a 48 bonbons et 72 sucettes. On veut faire le plus grand nombre possible de paquets identiques avec tout. Combien de paquets, et que contient chacun ?</p>`, c:`Il faut le plus grand diviseur commun à 48 et 72 : c'est 24. On fait 24 paquets de 2 bonbons et 3 sucettes.`}
@@ -238,12 +224,10 @@ exos:[
    <p>2) Avec le crible d'Ératosthène, trouve tous les nombres premiers inférieurs à 50 : barre 1 ; entoure 2 et barre ses multiples ; entoure 3 et barre ses multiples ; continue avec le premier nombre non barré.</p>
    <div class="scroll"><table class="std" style="margin:8px 0"><tbody>${[0,1,2,3,4].map(r=>`<tr>${[1,2,3,4,5,6,7,8,9,10].map(c=>`<td style="text-align:center;height:2.4em;min-width:2.6em">${r*10+c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
    <p>3) Liste les nombres premiers inférieurs à 50.</p><p>4) Vrai ou faux : « Tous les nombres premiers sont impairs. »</p>`,
-   c:`<p>1) 11, car ses seuls diviseurs sont 1 et 11.</p><p>2) On barre 1, qui n'est pas premier. On entoure 2 et on barre ses multiples (4, 6, 8…) ; on entoure 3 et on barre ses multiples (9, 15, 21…) ; on entoure 5 et on barre 25 et 35 ; on entoure 7 et on barre 49 (leurs autres multiples sont déjà barrés). Les nombres qui restent sont tous premiers : on les entoure.</p>${(()=>{ const pr=n=>{ if(n<2) return false; for(let d=2;d*d<=n;d++) if(n%d===0) return false; return true; }; let h='<div class="scroll"><table class="std" style="text-align:center;margin:8px 0"><tbody>'; for(let r=0;r<5;r++){ h+='<tr>'; for(let c=1;c<=10;c++){ const n=r*10+c; h+= pr(n) ? `<td style="text-align:center"><span style="display:inline-block;min-width:1.9em;text-align:center;border:2px solid currentColor;border-radius:50%;font-weight:700">${n}</span></td>` : `<td style="color:#888;text-align:center"><s>${n}</s></td>`; } h+='</tr>'; } return h+'</tbody></table></div>'; })()}<p>3) 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47</p><p>4) Faux : 2 est un nombre premier et il est pair. C'est le seul nombre premier pair.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Le code du coffre au trésor", w:"Sur ton cahier", h:`<p>Le code est un nombre à 2 chiffres. Indices : ① je suis compris entre 40 et 90 ; ② je suis un multiple de 6 ; ③ la division euclidienne de mon nombre par 8 donne un reste de 2 ; ④ la somme de mes deux chiffres est un multiple de 4 ; ⑤ je ne suis pas un multiple de 5.</p>
    <p>a) Liste les nombres qui vérifient ① et ②. b) Élimine ceux qui ne vérifient pas ③. c) Utilise ④ et ⑤ pour trouver le code.</p>`,
-   c:`<p>a) 42, 48, 54, 60, 66, 72, 78, 84, 90</p>
-   <p>b) On garde ceux dont le reste par 8 est 2 : 42 (8 × 5 + 2), 66 (8 × 8 + 2) et 90 (8 × 11 + 2).</p>
-   <p>c) 90 est un multiple de 5 : on l'élimine. Somme des chiffres : 42 → 6, 66 → 12. Seul 12 est un multiple de 4 : <b>le code est 66</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ],
  aide:{t:"Pour démarrer", w:"Sur ton cahier", h:`<p>Le nombre 9 est-il premier ? Et 7 ?</p>`, c:`9 n'est pas premier : ses diviseurs sont 1, 3 et 9 (trois diviseurs). 7 est premier : ses seuls diviseurs sont 1 et 7.`},
  defi:{t:"Entre 50 et 70", w:"Sur ton cahier", h:`<p>Trouve tous les nombres premiers compris entre 50 et 70. Justifie pour ceux que tu élimines.</p>`, c:`53, 59, 61 et 67. Les autres sont éliminés : les nombres pairs (divisibles par 2), 51, 57 et 69 (divisibles par 3), 55 et 65 (divisibles par 5), 63 (divisible par 3 et 9).`}
@@ -328,3 +312,4 @@ quiz:[
 eval: EVAL5
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-1");

@@ -154,57 +154,40 @@ exos:[
    <p><b>a)</b></p>${tab(["Masse de fromage (en g)","40","120"],[["Apport calorique (en kcal)","130","…"]])}
    <p><b>b)</b> Hauteur d'eau dans l'aquarium :</p>${tab(["Hauteur d'eau (en cm)","5","9"],[["Nombre de litres","30","…"]])}
    <p><b>c)</b></p>${tab(["Nombre de croissants","8","12"],[["Prix (en €)","6,80","…"]])}`,
-   c:`<p><b>a)</b> 120 = 40 × 3, donc 130 × 3 = <b>390 kcal</b>.</p>${ptab({h1:"Masse (en g)",h2:"Apport (en kcal)",r1:["40","120"],r2:["130","!390"],top:[[0,1,"× 3"]],bot:[[0,1,"× 3"]]})}
-   <p><b>b)</b> 30 ÷ 5 = 6 (coefficient), donc 9 × 6 = <b>54 L</b>.</p>${ptab({h1:"Hauteur (en cm)",h2:"Nombre de litres",r1:["5","9"],r2:["30","!54"],side:"× 6"})}
-   <p><b>c)</b> 12 = 8 + 4 et 4 croissants coûtent 6,80 ÷ 2 = 3,40 €. Donc 6,80 + 3,40 = <b>10,20 €</b>.</p>${ptab({h1:"Nombre de croissants",h2:"Prix (en €)",r1:["8","!4","12"],r2:["6,80","!3,40","!10,20"],top:[[0,1,"÷ 2"]],bot:[[0,1,"÷ 2"]]})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 1", t:"Tableaux à compléter", w:"Sur ton cahier", h:`<p>Dans les deux cas ci-dessous, complète le tableau, si possible.</p>
    <p><b>a) Chez le boulanger</b></p><p>Le boulanger nous a vendu 2 baguettes au prix de 1,80 €.</p><p>Il n'y a pas d'offre en cours dans la boulangerie.</p>
    ${tab(["Nombre de baguettes","2","6","8","13"],[["Prix (en €)","1,80","","",""]])}
    <p><b>b) Chez le dentiste</b></p><p>Paul a rendez-vous chez le dentiste ce matin.</p><p>À 5 ans, il a aujourd'hui 20 dents.</p>
    ${tab(["Âge de Paul","5","10","20","30"],[["Nombre de dents","20","","",""]])}`,
-   c:`<p><b>a)</b> Il n'y a pas d'offre : le prix est proportionnel au nombre de baguettes. Une baguette coûte 1,80 ÷ 2 = 0,90 €.</p>
-   ${ptab({h1:"Nombre de baguettes",h2:"Prix (en €)",r1:["2","6","8","13"],r2:["1,80","!5,40","!7,20","!11,70"],side:"× 0,9"})}
-   <p>6 × 0,90 = 5,40 € · 8 × 0,90 = 7,20 € · 13 × 0,90 = 11,70 €</p>
-   <p><b>b)</b> On ne peut pas compléter ce tableau : le nombre de dents n'est pas proportionnel à l'âge.</p><p>À 10 ans, Paul n'aura pas 40 dents (un adulte en a au plus 32).</p><p>Ce n'est pas une situation de proportionnalité.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Prime annuelle (sans calculatrice)", w:"Sur ton cahier", h:`<p>La prime annuelle d'un vendeur est proportionnelle au montant de ses ventes.</p><p>Le directeur du magasin utilise le tableau suivant pour verser les primes à ses vendeurs.</p><p>Recopie et complète les cases vides.</p><p>Note les calculs et la méthode utilisée sur ton cahier.</p>
    ${tab(["Ventes (en €)","2 000","8 000","","18 000","20 000","38 000"],[["Primes (en €)","","500","1 000","1 125","1 250",""]])}`,
-   c:`<p>On divise les ventes par 16 pour obtenir la prime : 8 000 ÷ 500 = 16 (coefficient ${F(1,16)}).</p>
-   <p>• 2 000 = 8 000 ÷ 4, donc la prime est 500 ÷ 4 = <b>125 €</b>.</p><p>• 1 000 = 500 × 2, donc les ventes sont 8 000 × 2 = <b>16 000 €</b>.</p><p>• 38 000 = 18 000 + 20 000, donc la prime est 1 125 + 1 250 = <b>2 375 €</b>.</p>
-   ${tab(["Ventes (en €)","2 000","8 000","<b>16 000</b>","18 000","20 000","38 000"],[["Primes (en €)","<b>125</b>","500","1 000","1 125","1 250","<b>2 375</b>"]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Travaux de jardinage (calculatrice autorisée)", w:"Sur ton cahier", h:`<p>Gaspard effectue des travaux de jardinage. Il est payé à l'heure.</p><p>Cette semaine, pour 20 h de travail, il a gagné 213 €.</p>
    <p><b>a)</b> Combien est-il payé pour 1 h de travail ?</p><p><b>b)</b> La semaine prochaine, il prévoit de travailler 17 h. Quelle somme va-t-il gagner ?</p><p><b>c)</b> La semaine dernière, il a gagné 138,45 €. Combien d'heures a-t-il travaillé ?</p>`,
-   c:`<p><b>a)</b> 213 ÷ 20 = 10,65 : il est payé <b>10,65 €</b> pour 1 h.</p><p><b>b)</b> 17 × 10,65 = 181,05 : il va gagner <b>181,05 €</b>.</p><p><b>c)</b> 138,45 ÷ 10,65 = 13 : il a travaillé <b>13 h</b>.</p>
-   ${ptab({h1:"Nombre d'heures",h2:"Salaire (en €)",r1:["20","1","17","!13"],r2:["213","!10,65","!181,05","138,45"],side:"× 10,65"})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Au supermarché (calculatrice autorisée)", w:"Sur ton cahier", h:`<p>Les citrons sont vendus à 1 € l'unité.</p><p>Les carottes sont vendues à 1,80 €/kg.</p>
    <p><b>a)</b> Le prix des citrons est-il proportionnel à leur poids ?</p><p><b>b)</b> Peut-on dire la même chose des carottes ?</p><p><b>c)</b> Quel serait le prix de 1,5 kg de carottes ?</p><p><b>d)</b> Quel serait le prix de 1,340 kg de carottes ?</p>`,
-   c:`<p><b>a)</b> Non : les citrons sont vendus à l'unité. Le prix dépend du nombre de citrons, pas de leur poids (deux citrons de poids différents coûtent le même prix).</p>
-   <p><b>b)</b> Oui : les carottes sont vendues au kilogramme. Le prix est proportionnel au poids (coefficient 1,80).</p>
-   <p><b>c)</b> 1,5 × 1,80 = 2,70 : <b>2,70 €</b>.</p><p><b>d)</b> 1,340 × 1,80 = 2,412 : environ <b>2,41 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Restaurant asiatique", w:"Sur ton cahier", h:`<p>Anna et Philippe adorent la cuisine asiatique.</p><p>Ils décident d'acheter des nems et des samoussas à emporter pour les manger à la maison. Voici leur commande :</p>
    <div class="attention"><p>4 nems poulet ; 4 samoussas au bœuf ; 2 nems crevettes ;</p><p>4 nems crabe et 2 samoussas au porc ;</p><p>une part de porc au caramel de 0,420 kg avec une part de riz cantonais de 450 g.</p></div>
    <p>Le prix de chaque nem et samoussa est de 0,95 €.</p><p>Le prix du porc au caramel est de 19 €/kg.</p><p>Le prix du riz est de 7,90 €/kg.</p>
    <p><b>Philippe possède 30 € en liquide. Doit-il sortir sa carte bleue pour payer ou est-ce que sa monnaie suffira ?</b></p>`,
-   c:`<p>Nems : 4 + 2 + 4 = 10. Samoussas : 4 + 2 = 6. Cela fait 16 nems et samoussas.</p>
-   <p class="calc">Nems et samoussas : 16 × 0,95 = 15,20 €<br>Porc au caramel : 0,420 × 19 = 7,98 €<br>Riz : 450 g = 0,450 kg</p><p>Prix R du riz :</p><p class="calc">R = 0,450 × 7,90<br>R = 3,555<br>R ≈ 3,56 €</p>
-   <p>Total T :</p><p class="calc">T = 15,20 + 7,98 + 3,555<br>T = 26,735<br>T ≈ 26,74 €</p>
-   <p>26,74 € &lt; 30 € : <b>sa monnaie suffira</b>, il n'a pas besoin de sortir sa carte bleue.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Compléter un tableau avec le produit en croix", e:[
   {n:"Exercice 5", t:"Journaux à imprimer", w:"Sur ton cahier", h:`<p>Pour imprimer des journaux, on utilise des rouleaux de papier.</p><p>On considère que la masse d'un rouleau est proportionnelle à la longueur de papier.</p>
    ${tab(["Masse (en kg)","900","750"],[["Longueur (en km)","15","<i>y</i>"]])}
    <p><b>a)</b> Calcule la valeur de <i>y</i> dans ce tableau. Explique l'ensemble de tes calculs.</p><p><b>b)</b> Interprète ensuite ce résultat.</p>
    <div class="retenir" data-l="Définition"><p><b>Interpréter un résultat</b> signifie écrire une phrase qui explique ce résultat dans le contexte de l'exercice.</p></div>`,
-   c:`<p><b>a)</b> C'est un tableau de proportionnalité. D'après l'égalité des produits en croix :</p>${croix("900","15","750","!y")}
-   <p class="calc">900 × <i>y</i> = 15 × 750<br><i>y</i> = ${F("15 × 750",900)}<br><i>y</i> = ${F("11 250",900)}<br><i>y</i> = 12,5</p>
-   <p><b>b)</b> Un rouleau de papier de 750 kg contient <b>12,5 km</b> de papier.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Voyage au Royaume-Uni", w:"Sur ton cahier", h:`<p>Le cours de la livre sterling est de 1,15 €. Ce qui signifie que : 1 £ = 1,15 €.</p><p>Avant de partir, j'ai échangé 40 € dans un bureau de change.</p><p>Combien ai-je de livres sterling pour mon voyage ?</p>`,
-   c:`${tab(["Livres sterling (£)","1","<i>x</i>"],[["Euros (€)","1,15","40"]])}
-   <p class="calc"><i>x</i> × 1,15 = 1 × 40<br><i>x</i> = 40 ÷ 1,15<br><i>x</i> ≈ 34,78</p><p>J'ai environ <b>34,78 £</b> pour mon voyage.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Voyage aux États-Unis", w:"Sur ton cahier", h:`<p>L'an dernier, Zoé a échangé 29 € contre 38,20 $.</p><p>Cette année, elle retourne aux États-Unis.</p><p>Le cours du dollar n'a pas changé et cette fois, elle échange avant de partir 60 €.</p><p>Combien aura-t-elle de dollars ?</p>`,
-   c:`${tab(["Euros (€)","29","60"],[["Dollars ($)","38,20","<i>x</i>"]])}
-   <p class="calc">29 × <i>x</i> = 38,20 × 60<br><i>x</i> = ${F("38,20 × 60",29)}<br><i>x</i> = ${F("2 292",29)}<br><i>x</i> ≈ 79,03</p><p>Zoé aura environ <b>79,03 $</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Livre sterling", w:"Sur ton cahier", h:`<p>Le cours de la livre sterling est de 1,35 €.</p><p>Sophie achète sur internet deux places pour un concert à Londres.</p><p>Elle paie 102,4 livres sterling.</p><p><b>Combien coûte en euros une place de concert ?</b></p>`,
-   c:`<p>1 £ = 1,35 €, donc le prix P en euros de 102,4 £ :</p><p class="calc">P = 102,4 × 1,35<br>P = 138,24 €</p><p>Pour une place : 138,24 ÷ 2 = 69,12.</p><p>Une place de concert coûte <b>69,12 €</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Démontrer qu'un tableau est proportionnel", e:[
   {n:"Activité 2", t:"Bracelets en élastiques", w:"Sur ton cahier", h:`<p>Louise veut acheter des sachets d'élastiques pour réaliser des bracelets.</p><p>Après ses recherches, Louise a le choix entre ces deux possibilités :</p>
@@ -212,34 +195,25 @@ exos:[
    <p><b>a)</b> Recopie et complète les tableaux ci-dessous pour chaque proposition.</p><p>Ensuite, explique le choix de magasin que Louise va faire selon le nombre de sachets qu'elle va acheter.</p>
    ${tab(["Nombre de sachets achetés","4","8","10"],[["Prix chez « Le Bazar » en €","","",""]])}${tab(["Nombre de sachets achetés","4","8","10"],[["Prix chez « Netbracelet » en €","","",""]])}
    <p><b>b)</b> Indique pour chaque tableau si c'est un tableau de proportionnalité ou non. <b>Explique.</b></p>`,
-   c:`<p><b>a)</b> Le Bazar : 4 × 1,50 = 6 € · 8 × 1,50 = 12 € · 10 × 1,50 = 15 €.</p><p>Netbracelet : 4 × 0,75 + 5 = 8 € · 8 × 0,75 + 5 = 11 € · 10 × 0,75 + 5 = 12,50 €.</p>
-   ${tab(["Nombre de sachets achetés","4","8","10"],[["Prix chez « Le Bazar » en €","6","12","15"],["Prix chez « Netbracelet » en €","8","11","12,50"]])}
-   <p>Pour 4 sachets, Louise choisit <b>Le Bazar</b> (6 € &lt; 8 €).</p><p>Pour 8 ou 10 sachets, elle choisit <b>Netbracelet</b> (11 € &lt; 12 € et 12,50 € &lt; 15 €).</p><p>(En calculant, Le Bazar est moins cher jusqu'à 6 sachets, Netbracelet à partir de 7 sachets.)</p>
-   <p><b>b)</b> Le Bazar : 6 ÷ 4 = 1,5 ; 12 ÷ 8 = 1,5 ; 15 ÷ 10 = 1,5. Les quotients sont égaux : <b>c'est un tableau de proportionnalité</b>.</p><p>Netbracelet : 8 ÷ 4 = 2 et 11 ÷ 8 = 1,375. 2 ≠ 1,375 : <b>ce n'est pas un tableau de proportionnalité</b> (à cause des frais de port).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Situations de proportionnalité ?", w:"Sur ton cahier", h:`<p>Parmi les situations suivantes, lesquelles sont des situations de proportionnalité ? <b>Justifie.</b></p>
    <p><b>a)</b></p>${tab(["Âge de Laurent (années)","5","10","15"],[["Taille de Laurent (m)","0,8","1,2","1,6"]])}
    <p><b>b)</b></p>${tab(["Volume de pâte à crêpe (L)","1","0,2","0,8"],[["Nombre de crêpes préparées","25","5","20"]])}`,
-   c:`<p><b>a)</b> 0,8 ÷ 5 = 0,16 et 1,2 ÷ 10 = 0,12. 0,16 ≠ 0,12 : <b>ce n'est pas une situation de proportionnalité</b>.</p>
-   <p><b>b)</b> 25 ÷ 1 = 25 · 5 ÷ 0,2 = 25 · 20 ÷ 0,8 = 25. Les quotients sont égaux : <b>c'est une situation de proportionnalité</b> (25 crêpes par litre de pâte).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Attention au volant !", w:"Sur ton cahier", h:`<p>Ce schéma illustre la violence des chocs subis par les piétons renversés par une voiture.</p>${VOLANT}
    <p><b>a)</b> Explique la signification de ce schéma.</p><p><b>b)</b> En présentant les données dans un tableau, indique si la violence du choc subi par un piéton est proportionnelle ou non à la vitesse de la voiture.</p>`,
-   c:`<p><b>a)</b> Un piéton renversé par une voiture qui roule à 50 km/h subit le même choc que s'il tombait du 3<sup>e</sup> étage d'un immeuble.</p><p>À 90 km/h, c'est comme tomber du 11<sup>e</sup> étage. À 130 km/h, c'est comme tomber du 22<sup>e</sup> étage.</p>
-   <p><b>b)</b></p>${tab(["Vitesse (en km/h)","50","90","130"],[["Étage","3","11","22"]])}
-   <p class="calc">3 ÷ 50 = 0,06 · 11 ÷ 90 ≈ 0,12</p><p>Les quotients ne sont pas égaux : la violence du choc <b>n'est pas proportionnelle</b> à la vitesse.</p><p>Elle augmente beaucoup plus vite que la vitesse : la vitesse fait moins que tripler (de 50 à 130 km/h), mais l'étage est multiplié par plus de 7.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Pack de yaourts", w:"Sur ton cahier", h:`<p>Un pack de 6 yaourts coûte 1,50 €.</p><p>Un pack de 10 yaourts de la même marque est vendu à 2 €.</p><p>Le prix du pack est-il proportionnel au nombre de yaourts ? Explique.</p>`,
-   c:`${tab(["Nombre de yaourts","6","10"],[["Prix du pack (en €)","1,50","2"]])}<p class="calc">1,50 ÷ 6 = 0,25 · 2 ÷ 10 = 0,20</p><p>0,25 ≠ 0,20 : le prix du pack <b>n'est pas proportionnel</b> au nombre de yaourts.</p><p>(Un yaourt revient à 0,25 € dans le petit pack et à 0,20 € dans le grand.)</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Pour aller plus loin : les défis", e:[
   {n:"Défi 1", t:"Le jardinier", w:"Sur ton cahier", h:`<p>Un jardinier utilise 60 L d'eau pour arroser pendant 3 jours un potager de 80 m<sup>2</sup>.</p><p>Quelle quantité d'eau va-t-il utiliser pour arroser pendant 7 jours un potager de 120 m<sup>2</sup> ?</p>`,
-   c:`<p>En 1 jour, pour 80 m<sup>2</sup> : 60 ÷ 3 = 20 L.</p><p>En 1 jour, pour 1 m<sup>2</sup> : 20 ÷ 80 = 0,25 L.</p><p>En 7 jours, pour 120 m<sup>2</sup> : 0,25 × 120 × 7 = 210 L.</p><p>Il va utiliser <b>210 L</b> d'eau.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 2", t:"Les flacons de parfum", w:"Sur ton cahier", h:`<p>Un parfumeur propose ces trois flacons en forme de parallélépipèdes rectangles de sa célèbre « Eau de parfum ».</p>${FLACONS}
    <p>Le prix d'un flacon est proportionnel au volume de parfum qu'il contient.</p><p>Voici trois étiquettes à coller sur ces flacons : <b>48 €</b> · <b>75 €</b> · <b>…… €</b></p><p>Détermine le prix à inscrire sur la 3<sup>e</sup> étiquette.</p>`,
-   c:`<p>Volumes : A : 4 × 4 × 6 = 96 cm<sup>3</sup> · B : 6 × 4 × 8 = 192 cm<sup>3</sup> · C : 10 × 5 × 6 = 300 cm<sup>3</sup>.</p>
-   <p>On cherche à quels flacons correspondent 48 € et 75 €. Le prix pour 1 cm<sup>3</sup> doit être le même :</p>
-   <p class="calc">48 ÷ 192 = 0,25 et 75 ÷ 300 = 0,25</p><p>Donc 48 € va sur le flacon B et 75 € sur le flacon C (1 cm<sup>3</sup> coûte 0,25 €).</p>
-   <p>Flacon A : 96 × 0,25 = 24. Il faut inscrire <b>24 €</b> sur la 3<sup>e</sup> étiquette (flacon A).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Défi 3", t:"Le budget essence de Laura", w:"Sur ton cahier", h:`<p>La voiture de Laura consomme 5 L pour 100 km.</p><p>Laura parcourt en moyenne 560 km par semaine.</p><p>Avant le 1<sup>er</sup> juin, 1 L d'essence coûte 1,30 €.</p><p>Le 1<sup>er</sup> juin, le prix de l'essence augmente de 10 centimes.</p><p>Laura veut conserver le même budget pour l'essence : elle décide donc de moins utiliser sa voiture et de prendre plus souvent son vélo.</p><p><b>Combien de kilomètres doit-elle parcourir en vélo chaque semaine pour respecter son objectif ?</b></p>`,
-   c:`<p>Essence pour 560 km : 560 ÷ 100 × 5 = 28 L.</p><p>Budget par semaine : 28 × 1,30 = 36,40 €.</p><p>Nouveau prix : 1,30 + 0,10 = 1,40 €. Avec 36,40 €, elle achète 36,40 ÷ 1,40 = 26 L.</p><p>Avec 26 L, elle roule 26 ÷ 5 × 100 = 520 km.</p><p>560 − 520 = 40 : elle doit parcourir <b>40 km en vélo</b> chaque semaine.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -314,3 +288,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-3");

@@ -155,28 +155,25 @@ exos:[
 {t:"Trouver la valeur de l'inconnue", e:[
   {n:"Activité 1", t:"Trouver la valeur de x", w:"Sur ton cahier", h:`<p>Dans chaque cas, trouve la valeur de ${$x} en expliquant tes étapes de calcul.</p>
    ${cols([...ACT1.map((r,i)=>`<b>Cas n°${i+1} :</b> ${r[0]}`),`<b>Cas n°8 :</b> ${FX($x,3)} = 4`])}`,
-   c:`${ACT1.map((r,i)=>`<p><b>Cas n°${i+1}</b></p>${solveRow(r)}`).join("")}<p><b>Cas n°8</b></p>${calc([`${FX($x,3)} = 4`,[`${$x} = 4 × 3 = 12`,"× 3"]])}<p>La solution de l'équation est <b>12</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Résoudre des équations", w:"Sur ton cahier", h:`<p>Résous les équations suivantes.</p>${cols(EX1.map((r,i)=>`<b>${L8[i]})</b> ${r[0]}`))}`,
-   c:corrList(EX1)}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Programmes de calcul et équations a<i>x</i> + b = c", e:[
   {n:"Activité 2", t:"Avec un programme, trouver le résultat ou le nombre de départ", w:"Sur ton cahier", h:`<p>On donne le programme de calcul suivant :</p>${prog("",["Choisir un nombre","Multiplier par 5","Ajouter 3"])}
    <p><b>1 –</b> Louise choisit le nombre −6 et applique le programme. Montre qu'elle obtiendra −27.</p><p><b>2 –</b> Paul choisit le nombre −4 et applique le programme. Quel résultat va-t-il obtenir ?</p><p><b>3 –</b> Timéo a choisi un nombre, a appliqué le programme et a trouvé 21,5. Quel était son nombre de départ ?</p>`,
-   c:`<p><b>1 –</b> −6 × 5 = −30 puis −30 + 3 = −27. Louise obtient bien −27.</p><p><b>2 –</b> −4 × 5 = −20 puis −20 + 3 = −17. Paul obtient −17.</p>
-   <p><b>3 –</b> On appelle ${$x} le nombre de départ de Timéo. Le programme donne 5${$x} + 3. On résout :</p>${calc(steps(5,3,0,21.5))}<p>Le nombre de départ de Timéo était <b>3,7</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Trouve le nombre choisi au départ", w:"Sur ton cahier", h:`<p>Résous ces deux problèmes à l'aide d'équations.</p>
    <p><b>Problème 1 :</b> on donne le programme de calcul suivant :</p>${prog("",["Choisir un nombre","Multiplier par 7","Soustraire 5"])}<p>Léa a choisi un nombre, a appliqué le programme et a trouvé 1,02. Quel était son nombre de départ ?</p>
    <p><b>Problème 2 :</b> on donne le programme de calcul suivant :</p>${prog("",["Choisir un nombre","Multiplier par −4","Ajouter 5"])}<p>Quel nombre doit-on choisir pour obtenir −6 avec ce programme ?</p>`,
-   c:`<p><b>Problème 1 :</b> on note ${$x} le nombre de départ. Le programme donne 7${$x} − 5.</p>${calc([`7${$x} − 5 = 1,02`,[`7${$x} = 6,02`,"+ 5"],[`${$x} = 6,02 ÷ 7 = 0,86`,"÷ 7"]])}<p>Le nombre de départ de Léa était <b>0,86</b>.</p>
-   <p><b>Problème 2 :</b> le programme donne −4${$x} + 5.</p>${calc(steps(-4,5,0,-6))}<p>Il faut choisir <b>2,75</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Entraînement : équations de la forme a<i>x</i> + b = c", w:"Sur ton cahier", h:`<p>Résous les équations suivantes.</p>${cols(EX3.map((r,i)=>`<b>${L8[i]})</b> ${r[0]}`))}`,
-   c:corrList(EX3)},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Penser à développer et à réduire chaque membre", w:"Sur ton cahier", h:`<p><b>1 –</b> Lis la partie « Cours » avant de faire l'exercice.</p>
    <div class="retenir" data-l="Cours"><p>Avant de résoudre une équation, il faut <b>développer et réduire</b> chaque membre de l'équation.</p></div>
    <p><b>Exemple :</b> résoudre l'équation 6(2${$x} − 5) = −8.</p>${calc([`6(2${$x} − 5) = −8`,`6 × 2${$x} + 6 × (−5) = −8`,`12${$x} − 30 = −8`,[`12${$x} = 22`,"+ 30"],[`${$x} = {22/12} = {11/6}`,"÷ 12"]])}<p>La solution de l'équation est {11/6}.</p>
    <p><b>2 –</b> Résous les équations suivantes.</p>${cols([`<b>a)</b> −2(3${$x} − 5) = −2`,`<b>b)</b> 10${$x} − (6${$x} + 6) = 5`])}`,
-   c:`<p><b>a)</b></p>${calc([`−2(3${$x} − 5) = −2`,`−2 × 3${$x} + (−2) × (−5) = −2`,`−6${$x} + 10 = −2`,...steps(-6,10,0,-2).slice(1)])}${concl(-12,-6)}
-   <p><b>b)</b> Attention au signe « − » devant la parenthèse : on change les signes des termes de la parenthèse.</p>${calc([`10${$x} − (6${$x} + 6) = 5`,`10${$x} − 6${$x} − 6 = 5`,`4${$x} − 6 = 5`,...steps(4,-6,0,5).slice(1)])}${concl(11,4)}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Équations de la forme a<i>x</i> + b = c<i>x</i> + d", e:[
   {n:"Activité 3", t:"Même résultat avec deux programmes : quel est le nombre de départ ?", w:"Sur ton cahier", h:`<p>On donne les deux programmes de calcul suivants :</p>${PA}${PB}
@@ -188,32 +185,24 @@ exos:[
    <p>On obtient les résultats suivants :</p>${sheet(A3x,[["Résultat du programme A",v=>8*v+7],["Résultat du programme B",v=>5*v+12]])}
    <p>Au vu du tableau, quelle conjecture peut-on faire sur l'encadrement à l'unité du nombre à saisir pour obtenir le même résultat ?</p>
    <p>Détermine par le calcul le nombre de départ à saisir pour obtenir le même résultat, et vérifie la conjecture sur l'encadrement.</p>`,
-   c:`<p><b>1 – a)</b> −3 × 8 = −24 puis −24 + 7 = −17. Louise obtient bien −17.</p><p><b>b)</b> −3 × 5 = −15 puis −15 + 12 = −3. Elle obtient −3.</p>
-   <p><b>Tableur : a)</b> dans B2 : <b>=B1*8+7</b> · <b>b)</b> dans B3 : <b>=B1*5+12</b></p>
-   <p><b>Conjecture :</b> pour 1, A donne 15 et B donne 17 (A &lt; B) ; pour 2, A donne 23 et B donne 22 (A &gt; B). Le nombre cherché est compris entre 1 et 2.</p>
-   <p><b>2 –</b> On note ${$x} le nombre de départ. Programme A : 8${$x} + 7 ; programme B : 5${$x} + 12.</p>${calc(steps(8,7,5,12))}
-   <p>Louise cherche le nombre <b>{5/3}</b>. {5/3} ≈ 1,67 est bien compris entre 1 et 2 : la conjecture est vérifiée.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Résoudre des équations de la forme a<i>x</i> + b = c<i>x</i> + d", w:"Sur ton cahier", h:`<p><b>1 –</b> Résous les équations suivantes.</p>${cols([...EX5.map((r,i)=>`<b>${L8[i]})</b> ${r[0]}`),`<b>d)</b> 4${$x}² − 5${$x} + 2 = 4${$x}² + 3${$x} + 12`])}
    <p><b>2 –</b> Vérifie ton résultat en testant chaque membre de l'égalité avec le nombre trouvé.</p>`,
-   c:`${corrList(EX5)}<p><b>d)</b> On commence par enlever 4${$x}² dans les deux membres.</p>${calc([`4${$x}² − 5${$x} + 2 = 4${$x}² + 3${$x} + 12`,[`−5${$x} + 2 = 3${$x} + 12`,"− 4"+$x+"²"],...steps(-5,2,3,12).slice(1)])}${concl(10,-8)}
-   <p><b>2 – Vérifications :</b></p><p>a) 8 × 1,2 + 3 = 12,6 et 3 × 1,2 + 9 = 12,6.</p><p>b) 3 × ({−9/7}) − 7 = {−76/7} et 10 × ({−9/7}) + 2 = {−76/7}.</p><p>c) −4 × 1,2 + 2 = −2,8 et 6 × 1,2 − 10 = −2,8.</p><p>d) −5 × (−1,25) + 2 = 8,25 et 3 × (−1,25) + 12 = 8,25 (les termes en ${$x}² sont égaux dans les deux membres).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Résoudre des problèmes", e:[
   {n:"Exercice 6", t:"Le prix d'un lot de stylos", w:"Sur ton cahier", h:`<p>Lors d'une vente caritative, Damian et Ruben devaient vendre des lots de stylos.</p><p>Damian a vendu 12 lots et reçu 20 € de dons.</p><p>Ruben a vendu 15 lots et reçu 2 € de dons.</p><p>Ils ont tous les deux récolté la même somme.</p><p>Détermine le prix, en euros, d'un lot de stylos.</p>`,
-   c:`<p>On note ${$x} le prix d'un lot, en euros. Damian a récolté 12${$x} + 20 et Ruben 15${$x} + 2.</p>${calc(steps(12,20,15,2))}<p>Un lot de stylos coûte <b>6 €</b>.</p><p><i>Vérification : 12 × 6 + 20 = 92 et 15 × 6 + 2 = 92.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité rapide", t:"Comprendre un programme Scratch", w:"Sur ton cahier", h:`<p>Voici deux séries de deux programmes Scratch. On prend ${$x} comme nombre de départ.</p>
    <p>Pour chaque programme, écris le résultat en fonction de ${$x}. Il n'est pas demandé de développer et de réduire l'expression obtenue.</p>
    <p><b>Série 1</b></p><div class="figs"><figure>${ex("ar1","Programme Scratch 1 de la série 1 : a prend la valeur réponse moins 4, b prend la valeur a fois a, Résultat prend la valeur b moins 10",240)}<figcaption>Programme 1</figcaption></figure><figure>${ex("ar2","Programme Scratch 2 de la série 1 : a prend la valeur réponse plus 5, b prend la valeur réponse moins 2, Résultat prend la valeur a fois b",260)}<figcaption>Programme 2</figcaption></figure></div>
    <p><b>Série 2</b></p><div class="figs"><figure>${ex("ar3","Programme Scratch 1 de la série 2 : a prend la valeur réponse plus 3, b prend la valeur a fois 10, c prend la valeur b moins 5, dire c",240)}<figcaption>Programme 1</figcaption></figure><figure>${ex("ar4","Programme Scratch 2 de la série 2 : a prend la valeur réponse plus 3, puis a prend la valeur a fois 10, puis a prend la valeur a moins 5, dire a",240)}<figcaption>Programme 2</figcaption></figure></div>`,
-   c:`<p><b>Série 1 :</b> programme 1 : (${$x} − 4) × (${$x} − 4) − 10, soit (${$x} − 4)² − 10 · programme 2 : (${$x} + 5)(${$x} − 2).</p>
-   <p><b>Série 2 :</b> programme 1 : (${$x} + 3) × 10 − 5 · programme 2 : (${$x} + 3) × 10 − 5 aussi.</p><p>Dans le programme 2, la variable a change de valeur à chaque ligne : les deux programmes donnent le même résultat.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Exercice de brevet 2020", w:"Sur ton cahier", h:`<p>On donne les deux programmes de calcul suivants :</p>${prog("Programme A",["Choisir un nombre","Soustraire 5 à ce nombre","Multiplier le résultat par le nombre de départ"])}${prog("Programme B",["Choisir un nombre","Mettre ce nombre au carré","Soustraire 4 au résultat"])}
    <p><b>1.</b> Alice choisit le nombre 4 et applique le programme A. Montre qu'elle obtiendra −4.</p><p><b>2.</b> Lucie choisit le nombre −3 et applique le programme B. Quel résultat va-t-elle obtenir ?</p>
    <p>Tom souhaite trouver un nombre pour lequel les deux programmes de calcul donnent le même résultat. Il choisit ${$x} comme nombre de départ pour les deux programmes.</p>
    <p><b>3.</b> Montre que le résultat du programme A peut s'écrire ${$x}² − 5${$x}.</p><p><b>4.</b> Exprime en fonction de ${$x} le résultat obtenu avec le programme B.</p><p><b>5.</b> Quel est le nombre que Tom cherche ?</p><p><i>Toute trace de recherche, même non aboutie, sera prise en compte dans la notation.</i></p>`,
-   c:`<p><b>1.</b> 4 − 5 = −1 puis −1 × 4 = −4. Alice obtient bien −4.</p><p><b>2.</b> (−3)² = 9 puis 9 − 4 = 5. Lucie obtient 5.</p>
-   <p><b>3.</b> On note A le résultat du programme A :</p><p class="calc">A = (${$x} − 5) × ${$x}<br>A = ${$x} × ${$x} − 5 × ${$x}<br>A = ${$x}² − 5${$x}</p><p><b>4.</b> Programme B : ${$x}² − 4.</p>
-   <p><b>5.</b></p>${calc([`${$x}² − 5${$x} = ${$x}² − 4`,[`−5${$x} = −4`,"− "+$x+"²"],[`${$x} = {−4/−5} = {4/5} = 0,8`,"÷ (−5)"]])}<p>Tom cherche le nombre <b>0,8</b>.</p><p><i>Vérification : (0,8 − 5) × 0,8 = −3,36 et 0,8² − 4 = −3,36.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Exercice de brevet 2015", w:"Sur ton cahier", h:`<p><b>Partie 1.</b> Mathilde et Paul saisissent sur leur calculatrice un même nombre. Voici leurs programmes de calcul :</p>
    ${prog("Programme de calcul de Mathilde",["Saisir un nombre","Multiplier ce nombre par 9","Soustraire 8 au résultat obtenu"])}${prog("Programme de calcul de Paul",["Saisir un nombre","Multiplier ce nombre par −3","Ajouter 31 au résultat obtenu"])}
    <p><b>1.</b> On considère la feuille de calcul suivante :</p>${sheet(range(0,10),[["Mathilde"],["Paul"]])}
@@ -224,24 +213,18 @@ exos:[
    <p><b>Partie 2.</b> Voici un programme Scratch :</p>${ex("e8","Programme Scratch : demander un nombre, mettre A à réponse, mettre A à A plus 3, mettre A à A fois 2, mettre A à A moins 5, dire le programme de calcul donne A",300)}
    <p><b>a.</b> Écris sur ta copie les deux dernières étapes du programme de calcul :</p>${prog("",["Choisir un nombre.","Ajouter 3 à ce nombre.","…","…"])}
    <p><b>b.</b> Si on choisit le nombre 8 au départ, quel sera le résultat ?</p><p><b>c.</b> Si on choisit ${$x} comme nombre de départ, montre que le résultat obtenu avec ce programme de calcul sera 2${$x} + 1.</p><p><b>d.</b> Quel nombre doit-on choisir au départ pour obtenir 6 ?</p>`,
-   c:`<p><b>Partie 1. 1. a.</b> <b>=9*B1-8</b> · <b>b.</b> <b>=-3*B1+31</b></p>
-   <p><b>2.</b> Pour 3 : Mathilde 19 et Paul 22 (Mathilde &lt; Paul). Pour 4 : Mathilde 28 et Paul 19 (Mathilde &gt; Paul). Le nombre cherché est compris entre 3 et 4.</p>
-   <p><b>3.</b> On note ${$x} le nombre saisi. Mathilde : 9${$x} − 8 ; Paul : −3${$x} + 31.</p>${calc(steps(9,-8,-3,31))}<p>Il faut saisir <b>3,25</b>, qui est bien compris entre 3 et 4.</p>
-   <p><b>Partie 2. a.</b> Multiplier le résultat par 2 · Soustraire 5.</p><p><b>b.</b> 8 + 3 = 11 ; 11 × 2 = 22 ; 22 − 5 = 17. Le résultat est 17.</p>
-   <p><b>c.</b> On note R le résultat :</p><p class="calc">R = (${$x} + 3) × 2 − 5<br>R = 2${$x} + 6 − 5<br>R = 2${$x} + 1</p><p><b>d.</b></p>${calc(steps(2,1,0,6))}<p>Il faut choisir <b>2,5</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Différence entre les deux énoncés", w:"Sur ton cahier", h:`<p>Les deux questions sont indépendantes.</p><div class="attention"><b>ATTENTION :</b> elles sont souvent confondues !</div>
    <p><b>1 –</b> Trouve la valeur de ${$x} pour laquelle 5(4${$x} − 3) = 8${$x} + 6.</p><p><b>2 –</b> Montre que, pour toutes les valeurs de ${$x}, on a 5(4${$x} − 3) = 14${$x} + 3(2${$x} − 5).</p>`,
-   c:`<p><b>1 –</b> C'est une équation : on cherche <b>une</b> valeur de ${$x}.</p>${calc([`5(4${$x} − 3) = 8${$x} + 6`,`20${$x} − 15 = 8${$x} + 6`,...steps(20,-15,8,6).slice(1)])}${concl(21,12)}
-   <p><b>2 –</b> C'est une égalité vraie pour <b>toutes</b> les valeurs de ${$x} : on développe et on réduit chaque membre séparément.</p>
-   <p class="calc">A = 5(4${$x} − 3)<br>A = 20${$x} − 15</p><p class="calc">B = 14${$x} + 3(2${$x} − 5)<br>B = 14${$x} + 6${$x} − 15<br>B = 20${$x} − 15</p><p>A et B sont égaux à 20${$x} − 15 : l'égalité est vraie pour toutes les valeurs de ${$x}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Même périmètre", w:"Sur ton cahier", h:`<p>${$x} est une longueur. Le triangle est équilatéral.</p>${carreTri(2,3)}<p>Quelle doit être la valeur de ${$x} pour que le triangle et le carré aient le même périmètre ?</p>`,
-   c:`<p>Périmètre du carré : 4 × (${$x} + 2) = 4${$x} + 8.</p><p>Périmètre du triangle équilatéral : 3 × (${$x} + 3) = 3${$x} + 9.</p>${calc(steps(4,8,3,9))}<p>Pour ${$x} = <b>1</b>, le carré et le triangle ont le même périmètre (12).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Feuille tableur", t:"Retrouver un nombre avec le tableur", w:"Sur ton cahier", h:`<p>Le tableur n'est pas un simple outil de création de tableau : c'est un <b>outil de calcul</b>. On calcule avec le tableur, pas besoin de calculatrice !</p>${RAPPEL}
    <p><b>Problème :</b> voici deux programmes de calcul.</p>${P1}${P2}<p>Tom a choisi un nombre entre 1 et 2. En appliquant chacun des programmes, il a trouvé le même résultat.</p>
    <p><b>1 –</b> Line essaye de retrouver le nombre qu'il a choisi en utilisant le tableur. On considère la feuille de calcul suivante :</p>${sheet(range(1,2,0.1),[["Résultat du programme 1"],["Résultat du programme 2"]])}
    <p><b>a)</b> Quelle formule doit-on saisir dans la cellule B2, puis étirer jusqu'à la cellule L2, pour obtenir les résultats du programme 1 ?</p><p><b>b)</b> Quelle formule doit-on saisir dans la cellule B3, puis étirer jusqu'à la cellule L3, pour obtenir les résultats du programme 2 ?</p>
    <p><b>2 –</b> On obtient les résultats suivants :</p>${sheet(range(1,2,0.1),[["Résultat du programme 1",v=>(v-4)**2],["Résultat du programme 2",v=>v*v+2*v]])}<p>Quel nombre de départ a choisi Tom pour obtenir le même résultat avec les deux programmes ?</p>`,
-   c:`<p><b>1 – a)</b> <b>=(B1-4)^2</b> · <b>b)</b> <b>=B1^2+2*B1</b></p><p><b>2 –</b> Dans la colonne H, pour 1,6, les deux programmes donnent 5,76. Tom a choisi <b>1,6</b>.</p><p>C'est bien la solution trouvée par le calcul dans le cours : ${$x}² − 8${$x} + 16 = ${$x}² + 2${$x} donne ${$x} = 1,6.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -335,3 +318,4 @@ CH["3e-9"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)=
   if(it.g){ const g=it.g; list[i]={g:()=>Object.assign(g(),{kb:"text"})}; } else it.kb="text";
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-9");

@@ -203,102 +203,80 @@ exos:[
   {n:"Exercice 1", t:"Les températures", w:"Sur ton cahier", h:`<p>Marie a relevé les températures tous les matins durant une semaine, à la même heure.</p><p>Voici ses données (en °C) :</p>
    ${tabH(["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],[[-1,0,1.3,-1.5,-0.5,1,-0.7].map(F)])}
    <p>Range ces températures dans l'ordre croissant.</p>`,
-   c:`<p>Les nombres négatifs sont les plus petits. Entre deux nombres négatifs, le plus petit est celui qui a la plus grande distance à zéro.</p><p class="calc">−1,5 &lt; −1 &lt; −0,7 &lt; −0,5 &lt; 0 &lt; 1 &lt; 1,3</p><p>Jeudi, lundi, dimanche, vendredi, mardi, samedi, mercredi.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Calculer des sommes", w:"Sur ton cahier", h:`<p>Calcule.</p>${cols(["A = (+2) + (+2)","B = (−1) + (−3)","C = (+4) + (+5)","D = (−5) + (−2)","E = (+3) + (+6)","F = (−2) + (−7)","G = (−5) + (+2)","H = (−1) + (+4)","I = (+5) + (−3)","J = (−3) + (+7)","K = (+3) + (−2)","L = (−7) + (+5)","M = (+5) + (−8)","N = (−6) + (+3)","O = (+5) + (−1)"])}`,
-   c:`<p><b>Même signe :</b> on garde le signe et on additionne les distances à zéro.</p>${chns([["A",["(+2) + (+2)","(+4)"]],["B",["(−1) + (−3)","(−4)"]],["C",["(+4) + (+5)","(+9)"]],["D",["(−5) + (−2)","(−7)"]],["E",["(+3) + (+6)","(+9)"]],["F",["(−2) + (−7)","(−9)"]]])}
-   <p><b>Signes contraires :</b> on soustrait les distances à zéro et on prend le signe du nombre qui a la plus grande distance à zéro.</p>${chns([["G",["(−5) + (+2)","(−3)"]],["H",["(−1) + (+4)","(+3)"]],["I",["(+5) + (−3)","(+2)"]],["J",["(−3) + (+7)","(+4)"]],["K",["(+3) + (−2)","(+1)"]],["L",["(−7) + (+5)","(−2)"]],["M",["(+5) + (−8)","(−3)"]],["N",["(−6) + (+3)","(−3)"]],["O",["(+5) + (−1)","(+4)"]]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Additions de plus de deux nombres relatifs", w:"Sur ton cahier", h:`<p><b>Exemple :</b> on regroupe les nombres positifs, puis les nombres négatifs.</p>
    <p class="calc">A = (−4) + (+2) + (−3) + (+5) + (+2) + (−3)<br>A = (+2) + (+5) + (+2) + (−4) + (−3) + (−3)<br>A = (+9) + (−10)<br>A = (−1)</p>
    <div class="retenir" data-l="Remarque"><p>Lorsqu'il y a deux nombres opposés dans une somme, on peut les rayer : leur somme est 0.</p></div>
    <p>Calcule à ton tour : B = (−5) + (−3) + (+2) + (+3) + (−4).</p>`,
-   c:`<p>(−3) et (+3) sont opposés : on les raye.</p><p class="calc">B = (−5) + <s>(−3)</s> + (+2) + <s>(+3)</s> + (−4)<br>B = (−5) + (+2) + (−4)<br>B = (+2) + (−5) + (−4)<br>B = (+2) + (−9)<br>B = (−7)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Jeu vidéo", w:"Sur ton cahier", h:`<p>Quatre copains jouent à un jeu vidéo.</p><p>Richard gagne 25 points à la première partie et perd 18 points à la deuxième.</p><p>Nicolas perd 2 points à la première manche et perd 11 points à la seconde.</p><p>Jean-Baptiste gagne 9 points à la première partie et perd 24 points à la deuxième.</p><p>Dylan perd 27 points à la première manche et gagne 33 points à la seconde.</p>
    <p><b>1)</b> Écris les quatre additions qui permettent de calculer le score de chacun.</p><p><b>2)</b> Qui a gagné le plus de points ?</p>`,
-   c:`<p><b>1)</b></p><p class="calc">Richard : (+25) + (−18) = (+7)<br>Nicolas : (−2) + (−11) = (−13)<br>Jean-Baptiste : (+9) + (−24) = (−15)<br>Dylan : (−27) + (+33) = (+6)</p><p><b>2)</b> −15 &lt; −13 &lt; +6 &lt; +7 : c'est <b>Richard</b> qui a gagné le plus de points (7 points).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Les pyramides additives", w:"Sur ta feuille", h:`<p>Dans chaque brique, le nombre à inscrire est la <b>somme</b> des nombres écrits dans les deux briques du dessous.</p><p>Complète chaque pyramide.</p>
    <div class="figs"><div><p><b>a.</b></p>${pyr(PA)}</div><div><p><b>b.</b></p>${pyr(PB,knownB)}</div></div>`,
-   c:`<p><b>a.</b> 15 + (−7) = 8 · (−7) + (−12) = −19 · 8 + (−19) = −11</p>${pyr(PA,undefined,true)}
-   <p><b>b.</b> On cherche le nombre qui manque dans chaque somme :</p><p>−6 + … = 4, donc … = 10 · 8 + … = −6, donc … = −14 · −14 + … = 10, donc … = 24</p><p>−15 + … = 8, donc … = 23 · 23 + … = −14, donc … = −37 · −37 + … = 24, donc … = 61</p>${pyr(PB,knownB,true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Envisager tous les cas", w:"Sur ton cahier", h:`<p>Les signes des nombres ont été remplacés par ■.</p><p>Pour chaque égalité, retrouve les signes en envisageant tous les cas possibles.</p>${cols(["a. ■8,5 + (■13,7) = ■5,2","b. ■4,8 + (■7,3) = ■12,1","c. ■17,4 + (■29) = ■11,6","d. ■9,6 + (■15,1) = ■24,7"])}`,
-   c:`<p><b>a.</b> 13,7 − 8,5 = 5,2 : les signes sont contraires.</p><p class="calc">+8,5 + (−13,7) = −5,2 &nbsp; ou &nbsp; −8,5 + (+13,7) = +5,2</p>
-   <p><b>b.</b> 4,8 + 7,3 = 12,1 : les signes sont les mêmes.</p><p class="calc">+4,8 + (+7,3) = +12,1 &nbsp; ou &nbsp; −4,8 + (−7,3) = −12,1</p>
-   <p><b>c.</b> 29 − 17,4 = 11,6 : les signes sont contraires.</p><p class="calc">+17,4 + (−29) = −11,6 &nbsp; ou &nbsp; −17,4 + (+29) = +11,6</p>
-   <p><b>d.</b> 9,6 + 15,1 = 24,7 : les signes sont les mêmes.</p><p class="calc">+9,6 + (+15,1) = +24,7 &nbsp; ou &nbsp; −9,6 + (−15,1) = −24,7</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Le tarot", w:"Sur ton cahier", h:`<p>Charlotte, Amandine, Marion et Estelle jouent au tarot.</p><p>À la première partie, Marion a gagné 30 points et Estelle en a gagné 60. Charlotte et Amandine ont toutes les deux perdu 45 points.</p><p>Voici la feuille de score :</p>
    ${tabH(TAROT.map(r=>r[0]),[TAROT.map(r=>S(r[1])),TAROT.map(()=>"&nbsp;"),TAROT.map(()=>"&nbsp;")])}
    <p><b>Remarque :</b> la somme des scores doit toujours être égale à 0.</p><p>En effet, (−45) + (−45) + (+30) + (+60) = 0.</p>
    <p><b>1)</b> À la deuxième partie, Marion a gagné 40 points et Charlotte en a gagné 20. Amandine et Estelle ont toutes les deux perdu 30 points.</p><p>Écris sur la 2<sup>e</sup> ligne leur nouveau score. Par exemple, pour Charlotte : (−45) + (+20) = …</p>
    <p><b>2)</b> À la troisième partie, Charlotte a gagné 60 points et Amandine en a gagné 30. Marion et Estelle ont toutes les deux perdu 45 points.</p><p>Écris leur nouveau score sur la 3<sup>e</sup> ligne.</p>`,
-   c:`<p><b>1)</b> Charlotte : (−45) + (+20) = −25 · Amandine : (−45) + (−30) = −75 · Marion : (+30) + (+40) = +70 · Estelle : (+60) + (−30) = +30</p><p>Vérification : (−25) + (−75) + (+70) + (+30) = 0.</p>
-   <p><b>2)</b> Charlotte : (−25) + (+60) = +35 · Amandine : (−75) + (+30) = −45 · Marion : (+70) + (−45) = +25 · Estelle : (+30) + (−45) = −15</p><p>Vérification : (+35) + (−45) + (+25) + (−15) = 0.</p>
-   ${tabH(TAROT.map(r=>r[0]),[0,1,2].map(l=>TAROT.map(r=>{ let t=r[1]; for(let k=1;k<=l;k++) t+=r[k+1]; return S(t); })))}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La soustraction de deux nombres relatifs", e:[
   {n:"Activité 1", t:"Comprendre la soustraction de nombres relatifs", w:"Sur ton cahier", h:`<p>Le jeu contient les cartes numérotées de −6 à 8 :</p><p class="calc">−6 ; −5 ; −4 ; −3 ; −2 ; −1 ; 0 ; 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8</p>
    <p><b>Partie 1 : paquet de cartes sans les cartes « −5 » et « −4 »</b></p><p><b>a)</b> Fais la somme des cartes.</p><p><b>b)</b> Retire la carte 3 et fais la somme des cartes.</p><p><b>c)</b> Remets la carte 3. Retire la carte −3 et fais la somme des cartes.</p>
    <p><b>Partie 2 : paquet de cartes entier</b></p><p><b>a)</b> Fais la somme des cartes.</p><p><b>b)</b> Retire la carte 3 et fais la somme des cartes.</p><p><b>c)</b> Remets la carte 3. Retire la carte −3 et fais la somme des cartes.</p>
    <p><b>Bilan :</b> retirer une carte, c'est faire une soustraction. Quel calcul revient au même que « 24 − (−3) » ?</p>`,
-   c:`<p><b>Partie 1 :</b> on raye les cartes opposées (−3 et 3, −2 et 2, −1 et 1, −6 et 6). Il reste 0 + 4 + 5 + 7 + 8.</p><p><b>a)</b> La somme des cartes est égale à <b>24</b>.</p><p><b>b)</b> Sans la carte 3 : 24 − 3 = <b>21</b>.</p><p><b>c)</b> Sans la carte −3 : la somme augmente de 3 : <b>27</b>. Donc 24 − (−3) = 27 = 24 + 3.</p>
-   <p><b>Partie 2 :</b> on ajoute les cartes −5 et −4 : 24 + (−5) + (−4) = 15.</p><p><b>a)</b> La somme des cartes est égale à <b>15</b>.</p><p><b>b)</b> Sans la carte 3 : 15 − 3 = <b>12</b>.</p><p><b>c)</b> Sans la carte −3 : 15 − (−3) = <b>18</b>.</p>
-   <p><b>Bilan :</b> 24 − (−3) = 24 + (+3) : soustraire un nombre, c'est ajouter son opposé.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Entraînement aux soustractions", w:"Sur ton cahier", h:`<p>Calcule les expressions suivantes.</p>${cols(["A = 8 − (−4)","B = (−4) − (+10)","C = (−13) − (−3)","D = 15 − (−15)","E = (−22) − (−22)","F = 7 − (+12)"])}`,
-   c:`<p>Soustraire un nombre, c'est ajouter son opposé.</p>${chns([["A",["8 − (−4)","8 + (+4)","12"]],["B",["(−4) − (+10)","(−4) + (−10)","−14"]],["C",["(−13) − (−3)","(−13) + (+3)","−10"]],["D",["15 − (−15)","15 + (+15)","30"]],["E",["(−22) − (−22)","(−22) + (+22)","0"]],["F",["7 − (+12)","7 + (−12)","−5"]]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Les cercles", w:"Sur ta feuille", h:`<p>Un nombre écrit dans un cercle rouge <b>moins</b> le nombre écrit dans le cercle bleu diamétralement opposé doit donner −5.</p><p>Exemple : 4 − 9 = −5.</p><p>Complète les cercles vides.</p>${cercles(-5,CV,CK)}`,
-   c:`<p class="calc">Cercle rouge en face de −1 : … − (−1) = −5, donc … = −6 car −6 − (−1) = −6 + 1 = −5.<br>Cercle bleu en face de 0,7 : 0,7 − … = −5, donc … = 5,7 car 0,7 − 5,7 = −5.<br>Cercle bleu en face de −11 : −11 − … = −5, donc … = −6 car −11 − (−6) = −11 + 6 = −5.</p>${cercles(-5,CV,CK,true)}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La multiplication de deux nombres relatifs", e:[
   {n:"Activité 2", t:"Jeu du lancer de cerceaux", w:"Sur ton cahier", h:`<p><b>Règle du jeu :</b> on lance des balles dans les cerceaux, puis on fait la somme de tous les points pour avoir le score final.</p><p><b>Objectif :</b> avoir le plus de points possible.</p>
    ${ex("cerceaux.jpg","Cerceaux : marron +10, violet −8, jaune +7, vert +5, bleu clair −6, bleu foncé +3, rouge −12",420)}
    <p>Juliette et Alexis ont joué à ce jeu.</p><p>Juliette a envoyé <b>26 balles</b> : 8 dans un cerceau jaune, 5 dans un cerceau bleu clair, 4 dans un cerceau vert, 4 dans un cerceau violet et 5 lancers ratés.</p><p>Alexis a voulu laisser de l'avance à Juliette et n'a lancé que <b>20 balles</b> : 3 dans un cerceau rouge, 11 dans un cerceau jaune et le reste dans un cerceau bleu clair.</p>
    <p>Lequel des deux copains a gagné la partie ?</p>`,
-   c:`<p>Juliette : 8 × (+7) = +56 · 5 × (−6) = −30 · 4 × (+5) = +20 · 4 × (−8) = −32 (les lancers ratés ne rapportent rien).</p><p class="calc">56 + (−30) + 20 + (−32) = 76 + (−62) = 14</p>
-   <p>Alexis : 20 − 3 − 11 = 6 balles dans un cerceau bleu clair. 3 × (−12) = −36 · 11 × (+7) = +77 · 6 × (−6) = −36.</p><p class="calc">(−36) + 77 + (−36) = 77 + (−72) = 5</p><p>14 &gt; 5 : c'est <b>Juliette</b> qui a gagné la partie.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 3", t:"Une conjecture sur le produit", w:"Sur ta feuille", h:`<p>Complète le tableau : dans chaque case, écris le produit du nombre de la ligne par le nombre de la colonne.</p><p>Aide-toi des régularités : dans chaque ligne, les résultats augmentent (ou diminuent) toujours du même nombre.</p>${tabMul(false)}
    <p>Que remarques-tu sur le signe du produit de deux nombres négatifs ? d'un nombre positif et d'un nombre négatif ?</p>`,
-   c:`${tabMul(true)}<p>Le produit de deux nombres <b>de même signe</b> est <b>positif</b> : par exemple (−3) × (−2) = 6.</p><p>Le produit de deux nombres <b>de signes contraires</b> est <b>négatif</b> : par exemple (−3) × 2 = −6.</p><p>Un produit dont un facteur est 0 est égal à 0.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Les pyramides multiplicatives", w:"Sur ta feuille", h:`<p>Dans chaque brique, le nombre à inscrire est le <b>produit</b> des nombres écrits dans les deux briques du dessous.</p><p>Complète chaque pyramide.</p>
    <div class="figs"><div><p><b>a.</b></p>${pyr(PM1)}</div><div><p><b>b.</b></p>${pyr(PM2)}</div></div><div class="figs"><div><p><b>c.</b></p>${pyr(PM3)}</div><div><p><b>d.</b></p>${pyr(PM4)}</div></div>`,
-   c:`<p><b>a.</b> (−2) × 0,5 = −1 · 0,5 × (−8) = −4 · (−1) × (−4) = 4</p>${pyr(PM1,undefined,true)}
-   <p><b>b.</b> (−3) × (−4) = 12 · (−4) × 0,5 = −2 · 0,5 × (−10) = −5 · 12 × (−2) = −24 · (−2) × (−5) = 10 · (−24) × 10 = −240</p>${pyr(PM2,undefined,true)}
-   <p><b>c.</b> (−2) × 3 = −6 · 3 × (−7) = −21 · (−6) × (−21) = 126</p>${pyr(PM3,undefined,true)}
-   <p><b>d.</b> (−3) × (−2) = 6 · (−2) × 1 = −2 · 1 × (−5) = −5 · 6 × (−2) = −12 · (−2) × (−5) = 10 · (−12) × 10 = −120</p>${pyr(PM4,undefined,true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"C'est toi le prof !", w:"Sur ton cahier", h:`<p>Lila est interrogée sur les opérations de nombres relatifs.</p><p>Elle obtient :</p><ul><li>1 point pour chaque bonne réponse ;</li><li>0 point s'il n'y a aucune réponse ;</li><li>−0,5 point si la réponse est fausse.</li></ul><p>Voici sa copie :</p>
    <div class="scroll"><table class="std"><tbody>${LILA.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join("")}</tbody></table></div>
    <p><b>1)</b> Corrige sa copie.</p><p><b>2)</b> Calcule la note de Lila.</p>`,
-   c:`<p><b>1)</b></p><div class="scroll"><table class="std"><tbody>${LILA.map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td><td>${r[3]?"<b>Juste</b>":`<b>Faux</b> : le résultat est ${F(r[2])}`}</td></tr>`).join("")}</tbody></table></div>
-   <p>Les calculs corrigés (f : même signe, donc le produit est positif) :</p>${chns([["A",["(−15) + (−5)","−20"]],["C",["(+7) − (+2)","(+7) + (−2)","5"]],["F",["(−5) × (−3)","15"]],["H",["(−11) − (+5)","(−11) + (−5)","−16"]]])}
-   <p><b>2)</b> Lila a 4 bonnes réponses et 4 réponses fausses.</p><p class="calc">4 × 1 + 4 × (−0,5) = 4 + (−2) = 2</p><p>Lila a <b>2 points sur 8</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Simplification d'écriture", e:[
   {n:"Exercice 12", t:"Simplification", w:"Sur ton cahier", h:`<p>Simplifie, puis calcule.</p>${cols(["A = (+5) + (+7)","B = (−4) + (−3)","C = (−4) + (+8)","D = (+5) + (−7)"])}`,
-   c:`<p>On supprime le signe d'addition et les parenthèses.</p>${chns([["A",["(+5) + (+7)","5 + 7","12"]],["B",["(−4) + (−3)","−4 − 3","−7"]],["C",["(−4) + (+8)","−4 + 8","4"]],["D",["(+5) + (−7)","5 − 7","−2"]]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Déjà simplifiées", w:"Sur ton cahier", h:`<p>Calcule.</p>${cols(["A = 8 − 11","B = −5 + 11","C = −4 − 8","D = −7 + 3","E = 14 − 8","F = −2 − 7"])}`,
-   c:`${chns([["A",["8 − 11","−3"]],["B",["−5 + 11","6"]],["C",["−4 − 8","(−4) + (−8)","−12"]],["D",["−7 + 3","−4"]],["E",["14 − 8","6"]],["F",["−2 − 7","−9"]]])}<p>Pour C, on peut écrire −4 − 8 comme la somme (−4) + (−8).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Étiquettes égales", w:"Sur ta feuille", h:`<p>Entoure les étiquettes qui ont le même résultat.</p><p><i>Si tu as besoin, écris tes calculs.</i></p>${etiq(ETQ.map((t,i)=>"ABCDEFGH"[i]+" = "+t))}`,
-   c:`${chns([["A",["−3 − (−9)","−3 + 9","6"]],["B",["(−2,5) + (−1,5)","−4"]],["C",["−8 − (−14)","−8 + 14","6"]],["D",["4,6 − 8,6","−4"]],["E",["7,3 + (−3,3)","4"]],["F",["−3,2 − 2,8","−6"]],["G",["−1,5 − 4,5","−6"]],["H",["11 − (+7)","11 + (−7)","4"]]])}
-   <p>Égales à 6 : A et C.</p><p>Égales à −4 : B et D.</p><p>Égales à 4 : E et H.</p><p>Égales à −6 : F et G.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Histoire de simplification", w:"Sur ton cahier", h:`<p>−1 + 2 − 3 + 4 + 5 est l'écriture simplifiée de (−1) + (+2) − (+3) + (+4) − (−5).</p><p>Associe chaque calcul à son écriture simplifiée, puis effectue chaque calcul.</p>
    ${tab(["Calcul","Écriture simplifiée"],[["a. A = (−6) + (+11) + (−9)","(1) −6 + 11 + 9"],["b. B = (+6) + (−11) − (+9)","(2) 6 − 11 − 9"],["c. C = (−6) − (−11) + (+9)","(3) 6 − 11 + 9"],["d. D = (+6) − (+11) − (−9)","(4) −6 + 11 − 9"]])}`,
-   c:`<p>Soustraire (+11), c'est ajouter (−11) : on écrit « − 11 ». Soustraire (−11), c'est ajouter (+11) : on écrit « + 11 ».</p><p>Associations : a va avec (4), b avec (2), c avec (1) et d avec (3).</p>${chns([["A",["(−6) + (+11) + (−9)","−6 + 11 − 9","5 − 9","−4"]],["B",["(+6) + (−11) − (+9)","6 − 11 − 9","−5 − 9","−14"]],["C",["(−6) − (−11) + (+9)","−6 + 11 + 9","5 + 9","14"]],["D",["(+6) − (+11) − (−9)","6 − 11 + 9","−5 + 9","4"]]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 16", t:"L'ascenseur fou", w:"Sur ton cahier", h:`<p>Maïna est au deuxième étage.</p><p>Elle entre dans l'ascenseur et appuie sur le bouton RDC (rez-de-chaussée).</p><p>Mais au lieu de descendre, il se met à monter et à descendre n'importe comment.</p><p>Il monte de 3 étages, puis descend de 4 et encore de 2, pour enfin s'arrêter un étage plus haut.</p><p>Maïna va-t-elle se retrouver au rez-de-chaussée ?</p>`,
-   c:`<p>Le rez-de-chaussée correspond à l'étage 0. On part de l'étage 2.</p><p class="calc">2 + 3 − 4 − 2 + 1 = 6 − 6 = 0</p><p>Oui : Maïna se retrouve à l'étage 0, c'est-à-dire au <b>rez-de-chaussée</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes ouverts", e:[
   {n:"Exercice 17", t:"Le carré magique", w:"Sur ta feuille", h:`<p>Ce tableau se complète uniquement avec les nombres entiers de −8 compris à 7 compris (chacun une seule fois).</p><p>Complète-le de façon que les sommes sur chaque ligne, chaque colonne et chaque diagonale soient égales.</p>
    <div class="scroll"><table class="std" style="width:auto">${[[null,null,-7,4],[null,1,2,-1],[null,null,-2,3],[null,null,5,null]].map(r=>`<tr>${r.map(v=>`<td style="width:52px;height:40px;text-align:center">${v===null?"":F(v)}</td>`).join("")}</tr>`).join("")}</table></div>`,
-   c:`<p>La somme de tous les nombres de −8 à 7 est −8 (les opposés s'annulent, il reste −8). Il y a 4 lignes : chaque ligne a pour somme −8 ÷ 4 = <b>−2</b>.</p><p>On complète de proche en proche :</p><p class="calc">2<sup>e</sup> ligne : … + 1 + 2 + (−1) = −2, donc … = −4.<br>Dernière colonne : 4 + (−1) + 3 + … = −2, donc … = −8.<br>Diagonale qui descend : … + 1 + (−2) + (−8) = −2, donc … = 7.<br>1<sup>re</sup> ligne : 7 + … + (−7) + 4 = −2, donc … = −6.</p><p>Il reste les nombres −5 ; −3 ; 0 et 6.</p><p class="calc">Diagonale qui monte : 4 + 2 + … + … = −2 : les deux cases valent −8 ensemble, donc ce sont −3 et −5.<br>2<sup>e</sup> colonne : −6 + 1 + … + … = −2 : la case de la 3<sup>e</sup> ligne est −3 (avec −5, il faudrait 8, qui n'est pas dans la liste), et celle du bas est 6.<br>Donc la case en bas à gauche est −5, et la dernière case est 0.</p>
-   <div class="scroll"><table class="std" style="width:auto">${[[7,-6,-7,4],[-4,1,2,-1],[0,-3,-2,3],[-5,6,5,-8]].map((r,i)=>`<tr>${r.map((v,j)=>{ const g=[[0,0,1,1],[0,1,1,1],[0,0,1,1],[0,0,1,0]][i][j]; return `<td style="width:52px;height:40px;text-align:center${g?"":";color:var(--c);font-weight:700"}">${F(v)}</td>`; }).join("")}</tr>`).join("")}</table></div>
-   <p>Vérification : 7 + (−6) + (−7) + 4 = −2 · 7 + 1 + (−2) + (−8) = −2 · 4 + 2 + (−3) + (−5) = −2.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 18", t:"Imaginer une stratégie", w:"Sur ta feuille", h:`<p>Place dans les disques neuf nombres entiers relatifs <b>consécutifs</b>, de façon que les sommes sur chaque ligne, chaque colonne et chaque diagonale soient égales à 0.</p>
    <svg class="fig" viewBox="0 0 230 230" width="230" role="img" aria-label="Neuf disques en carré, reliés par lignes, colonnes et diagonales">${[[35,35,195,35],[35,115,195,115],[35,195,195,195],[35,35,35,195],[115,35,115,195],[195,35,195,195],[35,35,195,195],[195,35,35,195]].map(([a,b,c,d])=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" class="thin"/>`).join("")}${[35,115,195].map(y=>[35,115,195].map(x=>`<circle cx="${x}" cy="${y}" r="24" style="fill:#f8c9bd;stroke:#b23a2a;stroke-width:2"/>`).join("")).join("")}</svg>`,
-   c:`<p>Pour que les sommes soient nulles, il faut autant de positifs que de négatifs : on prend les nombres de −4 à 4. Le nombre 0 va au centre, et deux nombres opposés sont toujours face à face.</p>
-   <svg class="fig" viewBox="0 0 230 230" width="230" role="img" aria-label="Solution : −3, 2, 1 / 4, 0, −4 / −1, −2, 3">${[[35,35,195,35],[35,115,195,115],[35,195,195,195],[35,35,35,195],[115,35,115,195],[195,35,195,195],[35,35,195,195],[195,35,35,195]].map(([a,b,c,d])=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" class="thin"/>`).join("")}${[[-3,2,1],[4,0,-4],[-1,-2,3]].map((r,i)=>r.map((v,j)=>`<circle cx="${35+80*j}" cy="${35+80*i}" r="24" style="fill:#f8c9bd;stroke:#b23a2a;stroke-width:2"/><text x="${35+80*j}" y="${41+80*i}" text-anchor="middle" style="font-size:18px;font-weight:700;fill:#1a1a1a">${F(v)}</text>`).join("")).join("")}</svg>
-   <p>Lignes : −3 + 2 + 1 = 0 · 4 + 0 + (−4) = 0 · −1 + (−2) + 3 = 0.</p><p>Colonnes : −3 + 4 + (−1) = 0 · 2 + 0 + (−2) = 0 · 1 + (−4) + 3 = 0.</p><p>Diagonales : −3 + 0 + 3 = 0 · 1 + 0 + (−1) = 0.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 19", t:"La salle du trésor", w:"Sur ton cahier", h:`<div class="scroll"><table class="std" style="width:auto">${[[-7,-8,-9],[-4,-5,-6],[-1,-2,-3]].map((r,i)=>`<tr>${r.map((v,j)=>`<td style="width:56px;height:44px;text-align:center;font-weight:700${i===2&&j===0?";background:#f4a08f;color:#1a1a1a":i===0&&j===2?";background:#9fcdf2;color:#1a1a1a":""}">${F(v)}</td>`).join("")}</tr>`).join("")}</table></div>
    <p>Pour traverser la salle du trésor, on peut passer d'une case à l'autre :</p><ul><li>soit en allant vers la <b>droite</b>, ce qui correspond à <b>additionner</b> les deux nombres situés dans les cases ;</li><li>soit en allant vers le <b>haut</b>, ce qui correspond à <b>multiplier</b> les deux nombres situés dans les cases.</li></ul><p>Les déplacements vers la gauche et vers le bas sont interdits.</p><p>On entre par la case −1 et on sort par la case −9.</p><p>À la sortie, le résultat obtenu est le cumul des sommes gagnées ou perdues à chaque déplacement.</p><p>Quel est le gain maximal que l'on peut obtenir ?</p>`,
-   c:`<p>Il faut faire 2 déplacements vers la droite (D) et 2 vers le haut (H) : il y a 6 chemins possibles.</p>
-   ${tab(["Chemin","Déplacements","Total"],[["D D H H","(−1) + (−2) = −3 · (−2) + (−3) = −5 · (−3) × (−6) = 18 · (−6) × (−9) = 54","<b>64</b>"],["D H D H","−3 · (−2) × (−5) = 10 · (−5) + (−6) = −11 · 54","50"],["D H H D","−3 · 10 · (−5) × (−8) = 40 · (−8) + (−9) = −17","30"],["H D D H","(−1) × (−4) = 4 · (−4) + (−5) = −9 · −11 · 54","38"],["H D H D","4 · −9 · 40 · −17","18"],["H H D D","4 · (−4) × (−7) = 28 · (−7) + (−8) = −15 · −17","0"]])}
-   <p>Le gain maximal est <b>64</b> : on va deux fois vers la droite, puis deux fois vers le haut.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -374,3 +352,4 @@ CH["4e-1"].quiz.forEach((N,ni)=>Object.entries(N.q).forEach(([l,list])=>list.for
   if(it.g){ const g=it.g; list[i]={g:()=>f(g())}; } else list[i]=f(it);
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-1");

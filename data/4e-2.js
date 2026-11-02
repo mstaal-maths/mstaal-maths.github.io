@@ -276,92 +276,64 @@ exos:[
    <div class="figs">${fig("Frise ①",ex("a1f1","Frise de flèches orange",380))}</div>
    <div class="figs">${fig("Frise ② : frise d'une église romane de Saintonge (Charente-Maritime)",ex("a1f2","Frise sculptée de feuilles",330))}${fig("L'église",ex("a1eglise","Le portail de l'église",230))}</div>
    <div class="figs">${fig("Frise ③",ex("a1f3","Frise de gouttes bleues",380))}</div>`,
-   c:`<p><b>Frise ① :</b> le motif répété est <b>une flèche orange</b> (un chevron). On passe d'une flèche à la suivante en la faisant glisser vers la droite.</p>
-   <p><b>Frise ② :</b> le motif répété est <b>une feuille en forme de cœur</b>, avec ses deux volutes au-dessus.</p>
-   <p><b>Frise ③ :</b> le motif répété est formé de <b>deux gouttes en bas et de deux gouttes en haut</b>.</p>
-   <p>Dans chaque frise, le motif glisse toujours de la même façon : c'est une translation.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Reproduire des frises", w:"Sur ta feuille", h:`<p>Dans chaque cas, le motif de base de la frise est représenté.</p><p>Continue la frise en reproduisant 3 motifs de base :</p>
    <p><b>a)</b> par la translation qui transforme G en H.</p>${fr1a()}
    <p><b>b)</b> par la translation qui transforme L en M.</p>${fr1b()}
    <p><b>c)</b> par la translation représentée par la flèche.</p>${fr1c()}
    <p><b>d)</b> par la translation qui transforme W en Z.</p>${fr1d()}`,
-   c:`<p><b>a)</b> De G à H : 3 carreaux vers la droite.</p>${fr1a(true)}
-   <p><b>b)</b> De L à M : 2 carreaux vers la droite.</p>${fr1b(true)}
-   <p><b>c)</b> On reporte la longueur de la flèche (au compas ou à la règle), toujours vers la droite.</p>${fr1c(true)}
-   <p><b>d)</b> On reporte la longueur WZ, vers la droite, à partir de chaque sommet du motif.</p>${fr1d(true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Observations de frises", w:"Sur ta feuille", h:`<p><b>1)</b> Sur chaque frise, entoure le motif de base qui a été reproduit plusieurs fois par translation.</p><p><b>2)</b> Ensuite, explique comment le motif de base a été construit.</p>
    ${ex("e2f12","Frises 1 et 2",560)}${ex("e2f34","Frises 3 et 4",560)}`,
-   c:`<p><b>1)</b> Dans chaque frise, le motif de base est la partie qui se répète, toujours décalée de la même longueur vers la droite :</p>
-   <ul><li><b>Frise 1 :</b> le losange du milieu avec ses quatre triangles.</li><li><b>Frise 2 :</b> un chevron « Λ » avec ses deux pointes.</li><li><b>Frise 3 :</b> une « étoile » formée de deux grands triangles pointus.</li><li><b>Frise 4 :</b> le motif en forme de « Z » avec ses deux triangles.</li></ul>
-   <p><b>2)</b> Chaque motif de base est lui-même construit avec des symétries :</p>
-   <ul><li><b>Frise 1 :</b> le motif a deux axes de symétrie (un vertical et un horizontal).</li><li><b>Frise 2 :</b> le motif a un axe de symétrie vertical.</li><li><b>Frise 3 :</b> le motif a un axe de symétrie horizontal.</li><li><b>Frise 4 :</b> le motif a un centre de symétrie (symétrie centrale).</li></ul>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Pavages", e:[
   {n:"Activité 2", t:"Pavages", w:"Sur ta feuille", h:`<p>Un <b>pavage</b> est une portion de plan sur laquelle des <b>motifs</b> apparaissent de façon répétée.</p><p><b>1)</b> À toi de reconnaître le motif de base de ces deux pavages.</p><p><b>2)</b> Ensuite, explique de quelle manière il a été reproduit. (Attention : ne pas tenir compte des couleurs !)</p>
    <div class="figs">${fig("Pavage ① : le motif pied-de-poule est un motif utilisé dans le textile",ex("a2pied","Pavage pied-de-poule",260))}${fig("",ex("a2manteau","Un manteau pied-de-poule",140))}${fig("Pavage ②",ex("a2hexa","Pavage de tomettes hexagonales",250))}</div>`,
-   c:`<p><b>Pavage ① :</b> le motif de base est une « dent » noire du pied-de-poule.</p><p>Il est reproduit par <b>deux translations</b> : une translation horizontale (vers le motif voisin de droite) et une translation verticale (vers le motif voisin du dessous).</p>
-   <p><b>Pavage ② :</b> le motif de base est <b>un hexagone</b> (une tomette).</p><p>Il est reproduit par <b>deux translations</b> : une verticale (vers la tomette du dessous) et une oblique (vers la tomette voisine de la colonne suivante).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Reconnaître une translation", e:[
   {n:"Exercice 3", t:"Reconnaître des transformations", w:"Sur ton cahier", h:`<p>Complète, si possible, les phrases suivantes par une transformation et ses caractéristiques.</p><p>Tu ne peux pas rajouter de points sur la figure.</p>${parSVG()}
    <p>La transformation qui permet de passer du parallélogramme 1 au parallélogramme :</p><p><b>a)</b> 2 est : ……………</p><p><b>b)</b> 3 est : ……………</p><p><b>c)</b> 4 est : ……………</p><p><b>d)</b> 5 est : ……………</p>`,
-   c:`<p><b>a)</b> 2 : la <b>translation qui transforme A en D</b> (ou B en C).</p>
-   <p><b>b)</b> 3 : la <b>rotation de centre C, d'angle 90°</b>, dans le sens inverse des aiguilles d'une montre.</p>
-   <p><b>c)</b> 4 : la <b>translation qui transforme C en A</b>.</p>
-   <p><b>d)</b> 5 : la <b>rotation de centre A, d'angle 90°</b>, dans le sens des aiguilles d'une montre.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Observation de frise", w:"Sur ton cahier", h:`<p>Observe la figure ci-dessous et complète le tableau.</p>${latSVG(LP,LSEG,{w:560})}
    <div class="scroll"><table class="std"><thead><tr><th></th><th>Translation</th><th>Figure initiale</th><th>Image obtenue</th></tr></thead><tbody>
    <tr><th>①</th><td>qui transforme G en H</td><td>BCG</td><td>……</td></tr><tr><th>②</th><td>qui transforme K en J</td><td>FBG</td><td>……</td></tr><tr><th>③</th><td>qui transforme H en K</td><td>……</td><td>EIJF</td></tr><tr><th>④</th><td>qui transforme I en ……</td><td>ABF</td><td>CDH</td></tr></tbody></table></div>`,
-   c:`<p>① De G à H : 5 carreaux vers la droite. B → C ; C → D ; G → H : l'image est <b>CDH</b>.</p>
-   <p>② De K à J : 5 carreaux vers la gauche. F → E ; B → A ; G → F : l'image est <b>EAF</b>.</p>
-   <p>③ On cherche la figure qui a pour image EIJF. On fait le chemin inverse (de K vers H) : E vient de B, I vient de F, J vient de G et F vient de C. La figure initiale est <b>BFGC</b>.</p>
-   <p>④ A a pour image C : 10 carreaux vers la droite. I glisse aussi de 10 carreaux vers la droite : la translation transforme I en <b>K</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Dans un hexagone", w:"Sur ton cahier", h:`${ex("e5","Hexagone ABCDEF de centre O",220)}<p>L'hexagone ABCDEF est composé de six triangles équilatéraux.</p><p>Complète les phrases suivantes.</p>
    <p><b>a)</b> L'image du triangle FAO par la symétrie axiale d'axe (AO) est ……</p><p><b>b)</b> L'image du triangle FEO par la symétrie axiale d'axe (OB) est ……</p><p><b>c)</b> L'image du triangle ABO par la symétrie centrale de centre O est ……</p><p><b>d)</b> L'image du triangle AFO par la translation qui transforme F en O est ……</p><p><b>e)</b> L'image du triangle OED par la translation qui transforme O en A est ……</p><p><b>f)</b> L'image du triangle FEO par la translation qui transforme D en C est ……</p>`,
-   c:`<p><b>a)</b> A et O sont sur l'axe, F a pour image B : <b>BAO</b>.</p>
-   <p><b>b)</b> E et O sont sur l'axe (BE), F a pour image D : <b>DEO</b>.</p>
-   <p><b>c)</b> A → D ; B → E ; O → O : <b>DEO</b>.</p>
-   <p><b>d)</b> F glisse vers O, donc A glisse vers B et O glisse vers C : <b>BOC</b>.</p>
-   <p><b>e)</b> O glisse vers A, donc E glisse vers F et D glisse vers O : <b>AFO</b>.</p>
-   <p><b>f)</b> D glisse vers C, donc F glisse vers A, E glisse vers O et O glisse vers B : <b>AOB</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Construire un pavage", e:[
   {n:"Exercice 6", t:"Un pavage sur quadrillage", w:"Sur ta feuille", h:`<p>À l'intérieur du rectangle noir, construis un pavage en transformant chaque triangle par les translations de vecteur ${vec("ED")} et de vecteur ${vec("FG")}.</p>${pav6()}`,
-   c:`<p>De E à D : 2 carreaux vers la droite et 2 vers le bas. De F à G : 1 carreau vers la droite et 1 vers le haut.</p><p>On applique ces translations au triangle ABC, puis aux nouveaux triangles, tant qu'ils restent dans le rectangle.</p>${pav6(true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Un pavage sur feuille blanche", w:"Sur ta feuille", h:`<p>À l'intérieur du rectangle noir, construis un pavage en transformant chaque triangle par les translations de vecteur ${vec("KL")} et de vecteur ${vec("MN")}.</p>${pav7()}`,
-   c:`<p>On reporte les flèches ${vec("KL")} et ${vec("MN")} à partir de chaque sommet (au compas, avec des parallélogrammes).</p><p>On obtient 12 triangles dans le rectangle.</p>${pav7(true)}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Construire l'image d'une figure", e:[
   {n:"Activité 3", t:"Le téléphérique", w:"Sur ta feuille", h:`<p>Le téléphérique de Renon, situé dans la région du Trentin-Haut-Adige en Italie, relie la ville de Bolzano au plateau de Renon sur une distance de 4 500 m.</p><p>Ci-dessous, on a représenté le téléphérique par le polygone AEGFD pendant sa descente.</p>
    <p><b>1)</b> Représente le téléphérique quand il sera au point A’’. On appellera ses points E’’, F’’, G’’ et D’’.</p><p><b>2)</b> Représente le téléphérique quand il était au point A’. On appellera ses points E’, F’, G’ et D’.</p>${telSVG()}`,
-   c:`<p><b>1)</b> De A à A’’ : 6 carreaux vers la droite et 1 vers le bas. On fait glisser chaque sommet de la même façon.</p><p><b>2)</b> Pour A’, il n'y a pas de quadrillage : on reporte la flèche de A vers A’ à partir de chaque sommet (même direction, même sens, même longueur).</p>${telSVG(true)}<p>Le téléphérique ne tourne pas : il glisse le long du câble. C'est une translation.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 4", t:"Démonstration", w:"Sur ta feuille", h:`<p><b>1)</b> Construis l'image du triangle ABC par la translation qui transforme D en E.</p>${blank(ADEM,"ABC","D","E",{w:340})}`,
-   c:`${blank(ADEM,"ABC","D","E",{w:340,sol:true,altS:"Le triangle ABC et son image A’B’C’"})}<p>A’ est tel que DEA’A est un parallélogramme : arc de centre A et de rayon DE, arc de centre E et de rayon DA.</p><p>On fait de même pour B’ et C’.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Construire une image par translation", w:"Sur ta feuille", h:`<p><b>1)</b> Construis l'image du triangle PIC par la translation de vecteur ${vec("AB")}. Nomme-la P’I’C’.</p>${blank(E81,"PIC","A","B",{vec:true,w:330})}
    <p><b>2)</b> Construis l'image du quadrilatère ABCD par la translation qui transforme E en F. Nomme-la A’B’C’D’.</p>${blank(E82,"ABCD","E","F",{w:420})}
    <p><b>3)</b> Construis l'image du triangle ABC par la translation de vecteur ${vec("AD")}. Nomme-la A’B’C’.</p>${blank(E83,"ABC","A","D",{w:400})}`,
-   c:`<p><b>1)</b> ABP’P, ABI’I et ABC’C sont des parallélogrammes.</p>${blank(E81,"PIC","A","B",{vec:true,w:330,sol:true,altS:"Le triangle PIC et son image P’I’C’"})}
-   <p><b>2)</b> Chaque sommet glisse comme E glisse vers F (vers la gauche et un peu vers le bas).</p>${blank(E82,"ABCD","E","F",{w:420,sol:true,altS:"Le quadrilatère ABCD et son image A’B’C’D’"})}
-   <p><b>3)</b> A a pour image D : le point A’ est confondu avec D. Puis ADB’B et ADC’C sont des parallélogrammes.</p>${blank(E83,"ABC","A","D",{w:400,sol:true,altS:"Le triangle ABC et son image A’B’C’"})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Le drapeau (exercice en +)", w:"Sur ta feuille", h:`<p><b>a)</b> Trace le drapeau 2, image du drapeau 1 par la translation qui transforme A en B.</p><p><b>b)</b> Trace le drapeau 3, image du drapeau 1 par la translation qui transforme A en C.</p>${flagSVG()}`,
-   c:`<p><b>a)</b> De A à B : 5 carreaux vers la droite.</p><p><b>b)</b> De A à C : 4 carreaux vers la gauche et 3 vers le haut.</p>${flagSVG(true)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"L'avion (exercice en +)", w:"Sur ta feuille", h:`<p><b>a)</b> Trace l'avion 2, image de l'avion 1 par la translation qui transforme Q en R.</p><p><b>b)</b> Trace l'avion 3, image de l'avion 1 par la translation qui transforme S en T.</p>${planeSVG()}`,
-   c:`<p><b>a)</b> De Q à R : 6 carreaux vers la droite et 2 vers le bas.</p><p><b>b)</b> De S à T : 1 carreau vers la gauche et 4 vers le bas.</p>${planeSVG(true)}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Démontrer avec une translation", e:[
   {n:"Exercice 11", t:"Démonstration", w:"Sur ton cahier", h:`<p>La frise ci-dessous a été construite à l'aide d'une même translation à partir du motif de base.</p><div class="figs">${fig("Motif de base",ex("e9motif","Le motif de base avec ses codages",120))}${fig("Frise",ex("e9frise","La frise et le quadrilatère ABCD",320))}</div><p>Détermine la nature du quadrilatère ABCD en justifiant rigoureusement.</p>`,
-   c:`<p>Sur le motif de base, les quatre « bras » qui partent du centre sont codés de la même longueur.</p>
-   <p>Les côtés [DA], [AB], [BC] et [CD] du quadrilatère sont des bras du motif de base ou de ses images par la translation.</p>
-   <p>Or une translation conserve les longueurs. Donc DA = AB = BC = CD.</p>
-   <p>Un quadrilatère qui a ses quatre côtés de la même longueur est un losange. Donc <b>ABCD est un losange</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Sur l'ordinateur", e:[
   {n:"Activité 5", t:"Une frise avec Scratch (TP)", w:"Sur ton cahier", h:`<p>Écris un script qui permet de reproduire cette frise sur Scratch. Mets de la couleur quand la frise sera terminée.</p>${scratchFrise()}
    <p><b>Indications :</b></p><p>Ton script doit commencer ainsi, pour que le lutin se replace toujours au même endroit quand tu cliques sur le drapeau vert. Il ira aux coordonnées (−220 ; 0).</p>${ex("a5debut","Début du script : quand drapeau cliqué, effacer tout, aller à x : −220, y : 0",190)}<p>Le bloc « effacer tout » efface les tracés précédents.</p>
    <p>Voici les mesures pour tracer le premier motif.</p>${scratchMotif()}<p>Ce motif sera répété 5 fois par translation. Entre deux motifs, il y a une distance de 30 pixels.</p>`,
-   c:`${cr("a5script","Script de la frise : répéter 5 fois le motif, puis avancer de 30 pixels et changer de couleur",250)}
-   <p>Dans la boucle « répéter 5 fois » :</p><ul><li>« répéter 3 fois : avancer de 60, tourner de 90 degrés » trace trois côtés du grand carré de 60 pixels ;</li><li>« répéter 4 fois : avancer de 30, tourner de 90 degrés » trace le petit carré de 30 pixels ;</li><li>puis on relève le stylo et on avance de 30 pixels : c'est l'écart entre deux motifs ;</li><li>« ajouter 40 à la couleur du stylo » change la couleur de chaque motif.</li></ul>
-   <p>Chaque motif est l'image du précédent par une translation de 60 + 30 = 90 pixels vers la droite.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -436,3 +408,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-2");

@@ -203,55 +203,37 @@ exos:[
    <p><b>On dira que le triangle AB'C' est l'image du triangle ABC par l'homothétie de centre A et de rapport 3.</b></p>
    <p><b>2)</b> Trace le triangle AB''C'', image du triangle ABC par l'homothétie de centre A et de rapport ${"{1/2}"} (avec B'' ∈ [AB] et C'' ∈ [AC]).</p>
    <p><b>Premier bilan :</b> soit AB'C' l'image du triangle ABC par une homothétie de centre A et de rapport k. Que peut-on dire ?</p>`,
-   c:`<p><b>1) a)</b> AB = 6 carreaux, donc AB' = 3 × 6 = 18 carreaux sur la demi-droite [AB). Pour aller de A à C : 2 carreaux vers la droite et 4 vers le haut ; pour aller de A à C' : 3 × 2 = 6 carreaux vers la droite et 3 × 4 = 12 vers le haut.</p>
-   ${homFig({...ACT, show:true, imgs:[[3,"'"],[0.5,"''"]]})}
-   <p><b>b)</b> Les droites (BC) et (B'C') sont <b>parallèles</b> : (BC) // (B'C').</p><p><b>c)</b> B'C' = 3 × BC.</p>
-   <p><b>2)</b> AB'' = 6 ÷ 2 = 3 carreaux ; C'' est à 1 carreau vers la droite et 2 vers le haut de A (milieu de [AC]).</p>
-   <p><b>Premier bilan :</b> les points A, B et B' sont alignés, ainsi que A, C et C' ; (BC) // (B'C') ; AB' = k × AB, AC' = k × AC et B'C' = k × BC.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Trouver le centre et le rapport d'une homothétie", e:[
   {n:"Exercice 1", t:"Centre, rapport et longueur", w:"Sur ta feuille", h:`<p><b>Situation 1 :</b> on passe du triangle OBE au triangle ABC par une homothétie.</p>${ex("e1a","Triangles OBE et ABC : BO = 8 cm, BC = 32 cm, OE = 4,5 cm, BA = 20 cm",280)}
    <p><b>1)</b> L'homothétie est de centre …… et de rapport …… (calcul : ……).</p><p><b>2)</b> AC = …… cm (calcul : ……).</p>
    <p><b>Situation 2 :</b> on passe du triangle OBE au triangle ABC par une homothétie.</p>${ex("e1b","Triangles OBE et ABC : BO = 10 cm, BC = 6 cm, CA = 3,5 cm",200)}
    <p><b>3)</b> L'homothétie est de centre …… et de rapport …… (calcul : ……).</p><p><b>4)</b> OE = …… cm (calcul : ……).</p>`,
-   c:`<p><b>1)</b> B est commun aux deux triangles : l'homothétie est de <b>centre B</b>. O a pour image C :</p><p class="calc">k = ${"{BC/BO}"}<br>k = ${"{32/8}"}<br>k = <b>4</b></p><p>(positif : C et O sont du même côté de B).</p>
-   <p><b>2)</b> E a pour image A et O a pour image C, donc :</p><p class="calc">AC = 4 × OE<br>AC = 4 × 4,5<br>AC = <b>18 cm</b></p>
-   <p><b>3)</b> Centre <b>B</b>. O a pour image C :</p><p class="calc">k = ${"{BC/BO}"}<br>k = ${"{6/10}"}<br>k = <b>0,6</b></p><p>(C et O sont du même côté de B : c'est une réduction).</p>
-   <p><b>4)</b> E a pour image A et O a pour image C, donc CA = 0,6 × OE. D'où :</p><p class="calc">OE = 3,5 ÷ 0,6<br>OE = ${"{35/6}"}<br>OE ≈ <b>5,83 cm</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Trouver le centre et le rapport", w:"Sur ta feuille", h:`<p><b>Situation 1 :</b> on passe du triangle ABC au triangle EBO par une homothétie.</p>${ex("e2a","Triangles ABC et EBO : BA = 4,2 cm, AC = 7 cm, BC = 6,3 cm, BO = 9,45 cm",230)}<p>L'homothétie est de centre …… et de rapport …… (calcul : ……).</p>
    <p><b>Situation 2 :</b> on passe du triangle ABC au triangle A'B'C' par une homothétie.</p>${ex("e2b","Triangles ABC et A'B'C' : AB = 3 cm, AC = 1,8 cm, A'C' = 4,5 cm",210)}<p>L'homothétie est de centre …… et de rapport …… (calcul : ……).</p>
    <p><b>Situation 3 :</b> on passe du triangle ABC au triangle EBD par une homothétie.</p>${ex("e2c","Triangles ABC et EBD : AB = 4,5 cm, AC = 4 cm, BC = 3 cm, BD = 1,8 cm",220)}<p>L'homothétie est de centre …… et de rapport …… (calcul : ……).</p>`,
-   c:`<p><b>Situation 1 :</b> <b>centre B</b>. C a pour image O, et C et O sont de part et d'autre de B : le rapport est négatif. ${"{BO/BC}"} = ${"{9,45/6,3}"} = 1,5, donc le rapport est <b>−1,5</b>.</p>
-   <p><b>Situation 2 :</b> <b>centre O</b> (O = A = A'). C a pour image C', du même côté de O : ${"{A'C'/AC}"} = ${"{4,5/1,8}"} = 2,5, donc le rapport est <b>2,5</b>.</p>
-   <p><b>Situation 3 :</b> <b>centre B</b>. A a pour image D, et A et D sont de part et d'autre de B : ${"{BD/BA}"} = ${"{1,8/4,5}"} = 0,4, donc le rapport est <b>−0,4</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Trouver le centre et le rapport d'homothétie", w:"Sur ta feuille", h:`<p>Trouve le centre et le rapport d'homothétie en t'aidant du quadrillage.</p><p>Dans chaque cas, le triangle A'B'C' est l'image du triangle ABC par l'homothétie de centre …… et de rapport ……</p>
    <div class="figs">${fig("Cas 1",ex("e3a","Cas 1",300))}${fig("Cas 2",ex("e3b","Cas 2",280))}${fig("Cas 3",ex("e3c","Cas 3",250))}${fig("Cas 4",ex("e3d","Cas 4",280))}${fig("Cas 5",ex("e3e","Cas 5",200))}${fig("Cas 6",ex("e3f","Cas 6",300))}</div>`,
-   c:`<p>On cherche le point où se coupent les droites (AA'), (BB') et (CC') : c'est le centre. Puis on compare les distances au centre en comptant les carreaux.</p>
-   <p><b>Cas 1 :</b> centre <b>O</b> ; OA' = 2 × OA et A' est du même côté que A : rapport <b>2</b>.</p>
-   <p><b>Cas 2 :</b> centre <b>O</b> ; OA' = 0,5 × OA et les triangles sont de part et d'autre de O : rapport <b>−0,5</b>.</p>
-   <p><b>Cas 3 :</b> centre <b>A</b> ; AB' = 2 × AB, du même côté : rapport <b>2</b>.</p>
-   <p><b>Cas 4 :</b> centre <b>O</b> ; OA' = OA et les triangles sont de part et d'autre de O : rapport <b>−1</b> (c'est la symétrie de centre O).</p>
-   <p><b>Cas 5 :</b> centre <b>A</b> (A' = A) ; AC' = 2 × AC et C' est de l'autre côté de A : rapport <b>−2</b>.</p>
-   <p><b>Cas 6 :</b> centre <b>O</b> ; OA' = 0,5 × OA (1,5 carreau au lieu de 3), du même côté : rapport <b>0,5</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer avec le rapport d'homothétie", e:[
   {n:"Exercice 4", t:"Calculer une longueur", w:"Sur ta feuille", h:`<p>Dans les deux cas, calcule A'B'. Note directement le calcul et le résultat.</p>
    <div class="figs">${fig("1) Le triangle A'B'C' est l'image du triangle ABC par l'homothétie de centre O et de rapport 2,5.",ex("e4a","AB = 3 cm, AC = 1,8 cm, centre O = A",210))}${fig("2) Le triangle A'B'C' est l'image du triangle ABC par l'homothétie de centre O et de rapport −0,5.",ex("e4b","AB = 3 cm, AC = 1,8 cm",300))}</div>`,
-   c:`<p><b>1)</b></p><p class="calc">A'B' = 2,5 × AB<br>A'B' = 2,5 × 3<br>A'B' = <b>7,5 cm</b></p><p><b>2)</b> On utilise la distance à zéro de −0,5 :</p><p class="calc">A'B' = 0,5 × AB<br>A'B' = 0,5 × 3<br>A'B' = <b>1,5 cm</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Trouver le rapport d'homothétie", w:"Sur ta feuille", h:`<p>Dans chaque cas, calcule le rapport d'homothétie k. Note directement le calcul et le résultat.</p>
    <div class="figs">${fig("1) Le triangle A'B'C' est l'image du triangle ABC par une homothétie de centre O.",ex("e5a","AB = 4,5 cm, AC = 3 cm, A'B' = 7,2 cm",260))}${fig("2) Le triangle A'B'C' est l'image du triangle ABC par une homothétie de centre O.",ex("e5b","AB = 2,5 cm, BC = 3 cm, AC = 1,9 cm ; A'C' = 2,28 cm, A'B' = 3 cm",270))}${fig("3) Le triangle A'B'C' est l'image du triangle ABC par une homothétie de centre A.",ex("e5c","AB = 2 cm, AC = 1,4 cm, A'C' = 4,2 cm",260))}</div>`,
-   c:`<p><b>1)</b> ${"{A'B'/AB}"} = ${"{7,2/4,5}"} = 1,6 et les triangles sont du même côté de O : <b>k = 1,6</b>.</p>
-   <p><b>2)</b> ${"{A'B'/AB}"} = ${"{3/2,5}"} = 1,2 (et ${"{2,28/1,9}"} = 1,2) ; les triangles sont de part et d'autre de O : <b>k = −1,2</b>.</p>
-   <p><b>3)</b> ${"{A'C'/AC}"} = ${"{4,2/1,4}"} = 3 ; C et C' sont de part et d'autre de A : <b>k = −3</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Calculer une aire", w:"Sur ton cahier", h:`${ex("e6","Triangle ABC, centre O et triangle A'B'C'",280)}<p>Le triangle A'B'C' est l'image du triangle ABC par l'homothétie de centre O de rapport 3,5.</p><p>L'aire du triangle ABC est égale à 7 cm².</p><p>Calcule l'aire du triangle A'B'C'.</p>`,
-   c:`<p>Par une homothétie de rapport 3,5, les aires sont multipliées par 3,5².</p><p class="calc">Aire(A'B'C') = 3,5² × 7<br>Aire(A'B'C') = 12,25 × 7<br>Aire(A'B'C') = 85,75 cm²</p><p>L'aire du triangle A'B'C' est <b>85,75 cm²</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Construire l'image d'une figure", e:[
   {n:"Exercice 7", t:"Construction (centre A)", w:"Sur ta feuille", h:`<p><b>a)</b> Trace le triangle ${sub("A",1)}${sub("B",1)}${sub("C",1)}, image du triangle ABC par l'homothétie de centre A et de rapport 2.</p><p><b>b)</b> Trace le triangle ${sub("A",2)}${sub("B",2)}${sub("C",2)}, image du triangle ABC par l'homothétie de centre A et de rapport −0,5.</p>${homFig(E7)}`,
-   c:`<p>A est le centre : ${sub("A",1)} = ${sub("A",2)} = A.</p><p><b>a)</b> Pour aller de A à B : 4 carreaux vers la droite, donc ${sub("B",1)} est à 2 × 4 = 8 carreaux à droite de A. Pour aller de A à C : 5 vers la droite et 3 vers le haut, donc ${sub("C",1)} est à 10 vers la droite et 6 vers le haut.</p>
-   <p><b>b)</b> Rapport −0,5 : on prend la moitié des déplacements, dans l'autre sens. ${sub("B",2)} est à 2 carreaux à gauche de A ; ${sub("C",2)} est à 2,5 carreaux vers la gauche et 1,5 vers le bas.</p>${homFig({...E7, show:true})}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7 bis", t:"Construction (centre O)", w:"Sur ta feuille", h:`<p><b>a)</b> Trace le triangle ${sub("A",1)}${sub("B",1)}${sub("C",1)}, image du triangle ABC par l'homothétie de centre O et de rapport 0,5.</p><p><b>b)</b> Trace le triangle ${sub("A",2)}${sub("B",2)}${sub("C",2)}, image du triangle ABC par l'homothétie de centre O et de rapport −1.</p>${homFig(E7b)}`,
-   c:`<p><b>a)</b> Rapport 0,5 : chaque point image est au milieu du segment qui le relie à O (${sub("A",1)} milieu de [OA], ${sub("B",1)} milieu de [OB], ${sub("C",1)} milieu de [OC]).</p><p><b>b)</b> Rapport −1 : chaque point image est le symétrique du point par rapport à O (O milieu de [A${sub("A",2)}], de [B${sub("B",2)}] et de [C${sub("C",2)}]).</p>${homFig({...E7b, show:true})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -315,3 +297,4 @@ eval:(()=>{
 };
 window.G3k20={V, geo, F, ang, fig, sub, homFig, randHom, randFig, natTxt, az};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-20");

@@ -103,41 +103,29 @@ exos:[
 {t:"Reconnaître une somme ou un produit", e:[
   {n:"Activité rapide", t:"Modéliser par une expression littérale", w:"Sur ta feuille", h:`<p>Quel sera le résultat de chaque programme de calcul si ${x} est le nombre choisi au départ ?</p>
    ${progs(prog("1) Programme 1",["Choisir un nombre","Multiplier par 7","Soustraire 3"]),prog("2) Programme 2",["Choisir un nombre","Ajouter 5","Multiplier par 3"]),prog("3) Programme 3",["Choisir un nombre","Multiplier par 8","Ajouter 5","Multiplier par 3"]))}<p>A = …… &nbsp; B = …… &nbsp; C = ……</p>`,
-   c:`<p>1)</p><p class="calc">A = ${x} × 7 − 3<br>A = <b>7${x} − 3</b></p><p>2) B = <b>(${x} + 5) × 3</b> (développée : ${S([[3,"x"],[15,""]])})</p><p>3) C = <b>(8${x} + 5) × 3</b> (développée : ${S([prod([3,""],[8,"x"]),prod([3,""],[5,""])])})</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 1", t:"Reconnaître une somme algébrique et un produit", w:"Sur ta feuille", h:`<p>Parmi les expressions ci-dessous, entoure en rouge les sommes et en vert les produits.</p><div class="calcs">${ACT1.map(([n,e])=>`<span>${n} = ${e}</span>`).join("")}</div>`,
-   c:`<p>On regarde la dernière opération à effectuer.</p><p><b>Sommes</b> (en rouge) : ${ACT1.filter(t=>t[2]==="S").map(t=>t[0]).join(", ")}.</p><p><b>Produits</b> (en vert) : ${ACT1.filter(t=>t[2]==="P").map(t=>t[0]).join(", ")}.</p><p>Par exemple, H = (2${x} + 4) + 3${x} est une somme : la dernière opération est l'addition « + 3${x} ».</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Développer avec la simple distributivité", e:[
   {n:"Activité 2", t:"L'aire d'un rectangle de deux façons", w:"Sur ton cahier", h:`<p>On considère le rectangle suivant, et ${x} est un nombre positif.</p>${rect({top:[["5<i>x</i>",150],["3",80]], left:"4", alt:"Rectangle de hauteur 4, partagé en deux rectangles de largeurs 5x et 3"})}<p>Exprime, de deux façons, l'aire de ce rectangle en fonction de ${x}.</p>`,
-   c:`<p><b>1<sup>re</sup> façon :</b> le grand rectangle a pour longueur 5${x} + 3 et pour largeur 4 : son aire est <b>4 × (5${x} + 3)</b>.</p><p><b>2<sup>e</sup> façon :</b> on additionne les aires des deux petits rectangles : <b>4 × 5${x} + 4 × 3</b> = ${S([prod([4,""],[5,"x"]),[12,""]])}.</p><p>Donc :</p><p class="calc">A = 4 × (5${x} + 3)<br>A = 4 × 5${x} + 4 × 3<br>A = 20${x} + 12</p><p>C'est la simple distributivité.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:`Développer des expressions de la forme ${k} × (${a} + ${b})`, w:"Sur ton cahier", h:`<p>Recopie les expressions sur ton cahier et développe-les.</p><div class="calcs"><span>A = 5 × (${x} + 6)</span><span>B = 3${x} × (2${x} + 7)</span><span>C = (5 + ${x}) × 8</span></div>`,
-   c:`<p class="calc">A = 5 × (${x} + 6)<br>A = 5 × ${x} + 5 × 6<br>A = ${S([[5,"x"],[30,""]])}</p><p class="calc">B = 3${x} × (2${x} + 7)<br>B = 3${x} × 2${x} + 3${x} × 7<br>B = ${S([prod([3,"x"],[2,"x"]),prod([3,"x"],[7,""])])}</p><p class="calc">C = (5 + ${x}) × 8<br>C = 8 × 5 + 8 × ${x}<br>C = ${S([[40,""],[8,"x"]])}</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Peut-on développer ?", w:"Sur ton cahier", h:`<div class="calcs"><span>A = 3 × (${x} + 4)</span><span>B = 5${x} × (5 + 2${x})</span><span>C = 4 + (8 + 2${x})</span><span>D = −2(5${y} + 8)</span><span>E = (${x} + 4) × 3${x}</span><span>F = 3${y}(5 + 2${x})</span><span>G = (5 + 2${x}) − 9</span><span>H = (5 + 2${x}) × (−4${y})</span></div>
    <p><b>1)</b> Entoure les lettres des expressions que tu peux développer.</p><p><b>2)</b> Ensuite, développe et réduis ces expressions entourées.</p>`,
-   c:`<p><b>1)</b> On peut développer les <b>produits</b> : A, B, D, E, F et H. C et G sont des sommes.</p><p><b>2)</b></p>
-   <p class="calc">A = 3 × (${x} + 4)<br>A = 3 × ${x} + 3 × 4<br>A = ${S([[3,"x"],[12,""]])}</p><p class="calc">B = 5${x} × (5 + 2${x})<br>B = 5${x} × 5 + 5${x} × 2${x}<br>B = ${S([prod([5,"x"],[5,""]),prod([5,"x"],[2,"x"])])}</p>
-   <p class="calc">D = −2(5${y} + 8)<br>D = −2 × 5${y} + (−2) × 8<br>D = −10${y} + (−16)<br>D = ${S([prod([-2,""],[5,"y"]),prod([-2,""],[8,""])])}</p><p class="calc">E = (${x} + 4) × 3${x}<br>E = 3${x} × ${x} + 3${x} × 4<br>E = ${S([prod([3,"x"],[1,"x"]),prod([3,"x"],[4,""])])}</p>
-   <p class="calc">F = 3${y}(5 + 2${x})<br>F = 3${y} × 5 + 3${y} × 2${x}<br>F = ${S([prod([3,"y"],[5,""]),prod([3,"y"],[2,"x"])])}</p><p class="calc">H = (5 + 2${x}) × (−4${y})<br>H = (−4${y}) × 5 + (−4${y}) × 2${x}<br>H = −20${y} + (−8${x}${y})<br>H = ${S([prod([-4,"y"],[5,""]),prod([-4,"y"],[2,"x"])])}</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:`Développer des expressions de la forme ${k} × (${a} − ${b})`, w:"Sur ton cahier", h:`<p>Recopie les expressions sur ton cahier et développe-les.</p><div class="calcs"><span>A = 8 × (2${x} − 6)</span><span>B = 5${x} × (4 − 3${x})</span><span>C = (2${x} − 3) × 9</span><span>D = −5 × (3${x} − 6)</span><span>E = 6${x} × (−7 − 5${x})</span><span>F = (6 − 4${x}) × (−2)</span></div>`,
-   c:`<p class="calc">A = 8 × (2${x} − 6)<br>A = 8 × (2${x} + (−6))<br>A = 8 × 2${x} + 8 × (−6)<br>A = 16${x} + (−48)<br>A = ${S([prod([8,""],[2,"x"]),prod([8,""],[-6,""])])}</p>
-   <p class="calc">B = 5${x} × (4 − 3${x})<br>B = 5${x} × (4 + (−3${x}))<br>B = 5${x} × 4 + 5${x} × (−3${x})<br>B = 20${x} + (−15${x}<sup>2</sup>)<br>B = ${S([prod([5,"x"],[4,""]),prod([5,"x"],[-3,"x"])])}</p>
-   <p class="calc">C = (2${x} − 3) × 9<br>C = (2${x} + (−3)) × 9<br>C = 9 × 2${x} + 9 × (−3)<br>C = 18${x} + (−27)<br>C = ${S([prod([9,""],[2,"x"]),prod([9,""],[-3,""])])}</p>
-   <p class="calc">D = −5 × (3${x} − 6)<br>D = −5 × (3${x} + (−6))<br>D = −5 × 3${x} + (−5) × (−6)<br>D = ${S([prod([-5,""],[3,"x"]),prod([-5,""],[-6,""])])}</p>
-   <p class="calc">E = 6${x} × (−7 − 5${x})<br>E = 6${x} × (−7 + (−5${x}))<br>E = 6${x} × (−7) + 6${x} × (−5${x})<br>E = −42${x} + (−30${x}<sup>2</sup>)<br>E = ${S([prod([6,"x"],[-7,""]),prod([6,"x"],[-5,"x"])])}</p>
-   <p class="calc">F = (6 − 4${x}) × (−2)<br>F = (6 + (−4${x})) × (−2)<br>F = (−2) × 6 + (−2) × (−4${x})<br>F = ${S([prod([-2,""],[6,""]),prod([-2,""],[-4,"x"])])}</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Développer tout type d'expressions littérales", w:"Sur ton cahier", h:`<p>Développe et réduis les expressions suivantes.</p><div class="calcs">${EX5.map(t=>`<span>${t[0]} = ${w5(t)}</span>`).join("")}</div>`,
-   c:EX5.map(c5).join("")},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Développer et réduire", w:"Sur ton cahier", h:`<p>Réduis chacune des expressions suivantes.</p><div class="calcs"><span>E = 5${x}(4 + 3${x}) − 8${x}</span><span>F = 3${x} + (4 − 8${x}) × 2</span><span>G = 7${x} − 5(3${x} − 4)</span></div>`,
-   c:`<p class="calc">E = 5${x}(4 + 3${x}) − 8${x}<br>E = 5${x} × 4 + 5${x} × 3${x} − 8${x}<br>E = 20${x} + 15${x}<sup>2</sup> − 8${x}<br>E = ${S([[20,"x"],[15,"x2"],[-8,"x"]])}</p>
-   <p class="calc">F = 3${x} + (4 − 8${x}) × 2<br>F = 3${x} + 2 × 4 + 2 × (−8${x})<br>F = 3${x} + 8 − 16${x}<br>F = ${S([[3,"x"],[8,""],[-16,"x"]])}</p>
-   <p class="calc">G = 7${x} − 5(3${x} − 4)<br>G = 7${x} + (−5) × 3${x} + (−5) × (−4)<br>G = 7${x} − 15${x} + 20<br>G = ${S([[7,"x"],[-15,"x"],[20,""]])}</p>
-   <p><i>Attention à G : le « − » devant 5 fait partie du facteur −5.</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Factoriser avec la simple distributivité", e:[
   {n:"Activité 3", t:"Aire de rectangles", w:"Sur ton cahier", h:`<p><b>Partie 1 :</b> soit ${x} un nombre positif.</p>${rect({top:[["2<i>x</i> + 5",240]], left:"6<i>x</i>", H:80, fill:"color-mix(in srgb,#f4d03f 35%,transparent)", alt:"Rectangle de longueur 2x + 5 et de largeur 6x"})}<p>Donne l'expression développée et réduite de l'aire de ce rectangle en fonction de ${x}.</p>
    <p><b>Partie 2 :</b> soit ${x} un nombre positif.</p>${rect({top:[["?",240]], left:"?", inner:"2<i>x</i><sup>2</sup> + 6<i>x</i>", H:80, fill:"color-mix(in srgb,#f4d03f 35%,transparent)", alt:"Rectangle d'aire 2x² + 6x, de dimensions inconnues"})}<p>L'aire de ce rectangle est égale à 2${x}<sup>2</sup> + 6${x}.</p><p>Quelles peuvent être les dimensions (largeur et longueur) de ce rectangle ? Explique ta réponse.</p><p><i>Plusieurs réponses sont possibles.</i></p>`,
-   c:`<p><b>Partie 1 :</b></p><p class="calc">Aire = 6${x} × (2${x} + 5)<br>Aire = 6${x} × 2${x} + 6${x} × 5<br>Aire = ${S([prod([6,"x"],[2,"x"]),prod([6,"x"],[5,""])])}</p>
-   <p><b>Partie 2 :</b> on cherche à écrire 2${x}<sup>2</sup> + 6${x} sous la forme d'un produit : on <b>factorise</b>.</p><p class="calc">A = 2${x}<sup>2</sup> + 6${x}<br>A = 2${x} × ${x} + 2${x} × 3<br>A = 2${x}(${x} + 3)</p><p>Le rectangle peut mesurer 2${x} sur ${x} + 3.</p><p class="calc">A = 2${x}<sup>2</sup> + 6${x}<br>A = ${x} × 2${x} + ${x} × 6<br>A = ${x}(2${x} + 6)</p><p>Il peut aussi mesurer ${x} sur 2${x} + 6.</p><p>On vérifie en développant : 2${x}(${x} + 3) = ${S([prod([2,"x"],[1,"x"]),prod([2,"x"],[3,""])])}.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -200,3 +188,4 @@ exos:[
 /* calculs en chaîne « A = … » dans les explications du QCM (outil défini dans 4e-1.js) */
 CH["4e-12"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)=>{ if(it.g){ const g=it.g; list[i]={g:()=>window.CHN4.qChain(g())}; } else list[i]=window.CHN4.qChain(it); })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-12");

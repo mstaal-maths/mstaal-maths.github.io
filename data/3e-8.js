@@ -140,61 +140,43 @@ cours:[
 exos:[
 {t:"Démontrer qu'un triangle est rectangle ou non", e:[
   {n:"Activité 1", t:"Prouver qu'un triangle est rectangle ou non", w:"Sur ton cahier", h:`<div class="figs">${fig("a) Le triangle EFG est-il rectangle ? Justifie.",ex("a1a","Triangle EFG : GE = 9,6 cm, EF = 4 cm, GF = 10,4 cm",170))}${fig("b) Le triangle OEA est-il rectangle ? Justifie.",ex("a1b","Triangle OEA : OE = 10 cm, EA = 7,8 cm, OA = 6,6 cm",170))}</div>`,
-   c:`<div class="figs">${fig("a)",cr("a1a","Carrés construits sur les côtés du triangle EFG",260))}${fig("b)",cr("a1b","Carrés construits sur les côtés du triangle OEA",240))}</div>
-   <p><b>a)</b> Le plus grand côté est [GF].</p><div class="figs"><p class="calc">GF² = 10,4²<br>GF² = 108,16</p><p class="calc">GE² + EF² = 9,6² + 4²<br>GE² + EF² = 92,16 + 16<br>GE² + EF² = 108,16</p></div><p>GF² = GE² + EF² : l'égalité de Pythagore est vérifiée, donc <b>EFG est rectangle en E</b>.</p>
-   <p><b>b)</b> Le plus grand côté est [OE].</p><div class="figs"><p class="calc">OE² = 10²<br>OE² = 100</p><p class="calc">EA² + OA² = 7,8² + 6,6²<br>EA² + OA² = 60,84 + 43,56<br>EA² + OA² = 104,4</p></div><p>OE² ≠ EA² + OA² : l'égalité de Pythagore n'est pas vérifiée, donc <b>OEA n'est pas rectangle</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Deux murs perpendiculaires ?", w:"Sur ton cahier", h:`${ex("e1","Photo : les deux murs autour de la piscine, avec les points M, U et R",340)}
    <p>Nathan a construit un mur autour de sa piscine.</p><p>Un ami est venu voir son travail et lui dit : « Je pense que tes murs ne sont pas perpendiculaires. »</p>
    <p>Pour vérifier qui a raison, ils mesurent les segments [MU], [UR] et [MR] :</p><p>MU = 96 cm, UR = 80 cm et MR = 120 cm.</p><p>Qui a raison ?</p>`,
-   c:`<p>Dans le triangle MUR, le plus grand côté est [MR].</p><div class="figs"><p class="calc">MR² = 120²<br>MR² = 14 400</p><p class="calc">MU² + UR² = 96² + 80²<br>MU² + UR² = 9 216 + 6 400<br>MU² + UR² = 15 616</p></div>
-   <p>MR² ≠ MU² + UR² : l'égalité de Pythagore n'est pas vérifiée, donc le triangle MUR n'est pas rectangle.</p><p>L'angle ${ang("MUR")} n'est pas droit : les murs ne sont pas perpendiculaires. <b>C'est l'ami qui a raison.</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Installation d'une étagère", w:"Sur ton cahier", h:`${ex("e2","Mur vertical, étagère [ET] de 36 cm, support [AT] de 45 cm, EA = 27 cm",200)}
    <p>Sur un mur vertical, Jules a posé une étagère.</p><p>On a ET = 36 cm, EA = 27 cm et AT = 45 cm.</p><p>L'étagère est-elle horizontale ?</p>`,
-   c:`<p>Dans le triangle AET, le plus grand côté est [AT].</p><div class="figs"><p class="calc">AT² = 45²<br>AT² = 2 025</p><p class="calc">EA² + ET² = 27² + 36²<br>EA² + ET² = 729 + 1 296<br>EA² + ET² = 2 025</p></div>
-   <p>AT² = EA² + ET² : l'égalité de Pythagore est vérifiée, donc le triangle AET est rectangle en E.</p><p>L'étagère [ET] est perpendiculaire au mur, qui est vertical : <b>l'étagère est horizontale</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Triangles rectangles ?", w:"Sur ton cahier", h:`<p><b>a)</b> On considère le triangle ABC tel que : AB = 10,8 cm, BC = 14,4 cm et AC = 18 cm.</p><p><b>b)</b> On considère le triangle STU tel que : TU = 20,9 m, SU = 24,1 m et ST = 12 m.</p><p>Ces triangles sont-ils rectangles ? Justifie.</p>`,
-   c:`<p><b>a)</b> Le plus grand côté est [AC].</p><div class="figs"><p class="calc">AC² = 18²<br>AC² = 324</p><p class="calc">AB² + BC² = 10,8² + 14,4²<br>AB² + BC² = 116,64 + 207,36<br>AB² + BC² = 324</p></div><p>AC² = AB² + BC², donc <b>ABC est rectangle en B</b>.</p>
-   <p><b>b)</b> Le plus grand côté est [SU].</p><div class="figs"><p class="calc">SU² = 24,1²<br>SU² = 580,81</p><p class="calc">TU² + ST² = 20,9² + 12²<br>TU² + ST² = 436,81 + 144<br>TU² + ST² = 580,81</p></div><p>SU² = TU² + ST², donc <b>STU est rectangle en T</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Calculer la longueur d'un côté d'un triangle rectangle", e:[
   {n:"Activité rapide", t:"Calculer la longueur d'un côté d'un triangle rectangle", w:"Sur ton cahier", h:`<p>Dans ces deux triangles, calcule la longueur du côté manquant.</p><p>Donne l'arrondi au dixième.</p>
    <div class="figs">${fig("1. Triangle ESM rectangle en S",ex("ar1","Triangle ESM rectangle en S : ES = 30 m, SM = 36 m",210))}${fig("2. Triangle KNL rectangle en N",ex("ar2","Triangle KNL rectangle en N : KL = 8,6 cm, NL = 4 cm",210))}</div>`,
-   c:`<p><b>1.</b> Le triangle ESM est rectangle en S. D'après le théorème de Pythagore :</p><p class="calc">EM² = ES² + SM²<br>EM² = 30² + 36²<br>EM² = 900 + 1 296<br>EM² = 2 196<br>EM = ${rac("2 196")}<br>EM ≈ 46,9</p><p>EM mesure environ <b>46,9 m</b>.</p>
-   <p><b>2.</b> Le triangle KNL est rectangle en N. L'hypoténuse est [KL] :</p><p class="calc">KL² = KN² + NL²<br>KN² = KL² − NL²<br>KN² = 8,6² − 4²<br>KN² = 73,96 − 16<br>KN² = 57,96<br>KN = ${rac("57,96")}<br>KN ≈ 7,6</p><p>KN mesure environ <b>7,6 cm</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2", t:"Calculer la longueur d'un côté dans un triangle rectangle", w:"Sur ton cahier", h:`<p><b>Problème 1 : Taille d'une télévision</b></p>${ex("a2p1","Télévision ABCD : AD = 32,5 cm et DC = 57,6 cm",240)}
    <p>La taille d'une télévision correspond à la longueur de la diagonale de l'écran.</p><p>Détermine la taille de cette télévision.</p>
    <p><b>Problème 2 : Hauteur de la voile</b></p>${ex("a2p2","Voilier : la voile MAT est un triangle rectangle en A",200)}
    <p>La voile MAT de ce bateau peut être assimilée à un triangle rectangle en A, tel que : MT = 3,4 m et MA = 1,6 m.</p><p>Calcule la hauteur [AT] de cette voile.</p>`,
-   c:`<p><b>Problème 1 :</b> on a un triangle ADC rectangle en D. D'après le théorème de Pythagore, on peut écrire :</p><p class="calc">AC² = AD² + DC²<br>AC² = 32,5² + 57,6²<br>AC² = 1 056,25 + 3 317,76<br>AC² = 4 374,01<br>AC = ${rac("4 374,01")}<br>AC ≈ 66 cm</p><p>La taille de la télévision est d'environ <b>66 cm</b>.</p>
-   <p><b>Problème 2 :</b> on a un triangle MAT rectangle en A. D'après le théorème de Pythagore, on peut écrire :</p><p class="calc">MT² = AT² + MA²<br>3,4² = AT² + 1,6²<br>11,56 = AT² + 2,56<br>AT² = 11,56 − 2,56<br>AT² = 9<br>AT = ${rac("9")}<br>AT = 3 m</p><p>La hauteur de la voile est de <b>3 m</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Le fusil sous-marin (Brevet Nouvelle-Calédonie, décembre 2017)", w:"Sur ton cahier", h:`<p>On dispose des informations suivantes :</p>${ex("e4","Dimensions de la remorque : 1 800 mm sur 1 350 mm ; longueur du fusil sous-marin : 2 100 mm",420)}
    <p>Toutes les valeurs présentes sur les schémas sont en millimètres.</p><p>Le fond de la remorque est un rectangle.</p><p>Le fusil sous-marin peut-il être placé « à plat » dans la remorque ? Justifie ta réponse.</p>`,
-   c:`<p>Le fusil le plus long possible « à plat » se place sur une diagonale du fond de la remorque.</p><p>Le fond est un rectangle : la diagonale d est l'hypoténuse d'un triangle rectangle de côtés 1 800 mm et 1 350 mm. D'après le théorème de Pythagore :</p>
-   <p class="calc">d² = 1 800² + 1 350²<br>d² = 3 240 000 + 1 822 500<br>d² = 5 062 500<br>d = ${rac("5 062 500")}<br>d = 2 250 mm</p><p>2 250 mm &gt; 2 100 mm : <b>oui, le fusil peut être placé à plat</b> dans la remorque (en diagonale).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Rampe d'accès", w:"Sur ton cahier", h:`${ex("e5","Panneau : rampe d'accès pour les personnes à mobilité réduite",120)}
    <p>Une rampe d'accès pour les personnes à mobilité réduite mesure 2,50 m de long.</p><p>La porte d'accès est située à 0,80 m du sol.</p><p>De quelle longueur doit-on disposer, au sol, pour pouvoir poser cette rampe ?</p>`,
-   c:`<p>Le sol et le mur sont perpendiculaires : la rampe (2,50 m), la hauteur (0,80 m) et la longueur au sol x forment un triangle rectangle dont l'hypoténuse est la rampe.</p><p>D'après le théorème de Pythagore :</p>
-   <p class="calc">2,5² = 0,8² + x²<br>x² = 2,5² − 0,8²<br>x² = 6,25 − 0,64<br>x² = 5,61<br>x = ${rac("5,61")}<br>x ≈ 2,37 m</p><p>Il faut disposer d'environ <b>2,37 m</b> au sol.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Une tour", w:"Sur ton cahier", h:`<div class="figs">${ex("e6","Photo de la tour et schéma : cylindre de rayon 2,5 m et de hauteur 10 m, surmonté d'un cône de génératrice 4 m",240)}</div>
    <p>Cette tour cylindrique est surmontée d'un toit conique.</p><p><b>a)</b> Vérifie que le toit conique de cette tour a un volume total d'environ 20,42 m³.</p><p><b>b)</b> Calcule le volume total, en m³, de cette tour. Donne un arrondi au centième près.</p>`,
-   c:`<p><b>a)</b> Il faut d'abord la hauteur h du cône. Le rayon (2,5 m), la hauteur h et la génératrice (4 m) forment un triangle rectangle dont l'hypoténuse est la génératrice :</p>
-   <p class="calc">4² = 2,5² + h²<br>h² = 16 − 6,25<br>h² = 9,75<br>h = ${rac("9,75")} ≈ 3,12 m</p>
-   <p class="calc">V<sub>cône</sub> = {π × r² × h/3}<br>V<sub>cône</sub> ≈ {π × 2,5² × 3,12/3}<br>V<sub>cône</sub> ≈ 20,42 m³</p>
-   <p>Remarque : avec la valeur exacte h = ${rac("9,75")}, on trouve V<sub>cône</sub> ≈ 20,44 m³.</p>
-   <p><b>b)</b></p><p class="calc">V<sub>cylindre</sub> = π × r² × h<br>V<sub>cylindre</sub> = π × 2,5² × 10<br>V<sub>cylindre</sub> = 62,5π<br>V<sub>cylindre</sub> ≈ 196,35 m³</p><p class="calc">V<sub>total</sub> ≈ 196,35 + 20,42<br>V<sub>total</sub> ≈ 216,77 m³</p><p>Le volume total de la tour est d'environ <b>216,77 m³</b> (216,79 m³ avec la valeur exacte de h).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Abri de jardin", w:"Sur ton cahier", h:`<p>Mme Dubois vient de faire construire un abri dans son jardin comme sur la photo.</p>${ex("e7","Photo de l'appentis : hauteur 5,70 m contre le mur, 2,80 m à l'avant, profondeur 4,50 m, longueur 6 m",420)}
    <p>Elle souhaite maintenant recouvrir le toit de shingles (couvertures en bitume pour abri) vendus 9,30 € le m².</p>
    <p><b>a)</b> Montre que le toit de l'appentis a une surface de 32,1 m².</p><p><b>b)</b> Quelle somme Mme Dubois devra-t-elle dépenser pour recouvrir son abri ?</p>`,
-   c:`<p><b>a)</b> Le toit est un rectangle de longueur 6 m. Sa largeur ℓ est l'hypoténuse d'un triangle rectangle :</p><ul><li>côté vertical : 5,70 − 2,80 = 2,90 m ;</li><li>côté horizontal : 4,50 m.</li></ul>
-   <p class="calc">ℓ² = 2,9² + 4,5²<br>ℓ² = 8,41 + 20,25<br>ℓ² = 28,66<br>ℓ = ${rac("28,66")} ≈ 5,35 m</p><p>Aire A du toit :</p><p class="calc">A = 6 × ${rac("28,66")}<br>A ≈ 32,1 m²</p>
-   <p class="calc"><b>b)</b> 32,1 × 9,30 = 298,53 €</p><p>Mme Dubois devra dépenser environ <b>298,53 €</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Calculer le côté manquant", w:"Sur ton cahier", h:`<p>Dans chacun de ces triangles, calcule la longueur du côté manquant.</p>
    <div class="figs">${fig("a. JMX rectangle en M : calcule JX.",ex("e8a","Triangle JMX rectangle en M : JM = 4,2 et MX = 5,6",200))}${fig("b. PIF rectangle en I : calcule PI.",ex("e8b","Triangle PIF rectangle en I : IF = 4,2 cm et PF = 5,8 cm",200))}</div>
    <p><b>c.</b> LIN est un triangle rectangle en L tel que : IL = 2,8 cm et LN = 9,6 cm.</p><p><b>d.</b> TER est un triangle rectangle en R tel que : ER = 4,8 cm et TE = 5,2 cm.</p>`,
-   c:`<p><b>a.</b> JMX est rectangle en M : l'hypoténuse est [JX]. D'après le théorème de Pythagore :</p><p class="calc">JX² = JM² + MX²<br>JX² = 4,2² + 5,6²<br>JX² = 17,64 + 31,36<br>JX² = 49<br>JX = ${rac("49")}<br>JX = 7</p><p>JX mesure <b>7</b>.</p>
-   <p><b>b.</b> PIF est rectangle en I : l'hypoténuse est [PF]. D'après le théorème de Pythagore :</p><p class="calc">PF² = PI² + IF²<br>PI² = PF² − IF²<br>PI² = 5,8² − 4,2²<br>PI² = 33,64 − 17,64<br>PI² = 16<br>PI = ${rac("16")}<br>PI = 4</p><p>PI mesure <b>4 cm</b>.</p>
-   <p><b>c.</b> LIN est rectangle en L : l'hypoténuse est [IN]. D'après le théorème de Pythagore :</p><p class="calc">IN² = IL² + LN²<br>IN² = 2,8² + 9,6²<br>IN² = 7,84 + 92,16<br>IN² = 100<br>IN = ${rac("100")}<br>IN = 10</p><p>IN mesure <b>10 cm</b>.</p>
-   <p><b>d.</b> TER est rectangle en R : l'hypoténuse est [TE]. D'après le théorème de Pythagore :</p><p class="calc">TE² = TR² + ER²<br>TR² = TE² − ER²<br>TR² = 5,2² − 4,8²<br>TR² = 27,04 − 23,04<br>TR² = 4<br>TR = ${rac("4")}<br>TR = 2</p><p>TR mesure <b>2 cm</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -280,3 +262,4 @@ exos:[
 ]}; })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-8");

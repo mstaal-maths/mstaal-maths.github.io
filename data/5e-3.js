@@ -95,65 +95,53 @@ exos:[
 {t:"Enchaînements d'opérations", e:[
   {n:"Exercice 0", t:"Enchaînement d'additions et de soustractions", w:"Sur ton cahier", h:`<p>Recopie les calculs sur ton cahier et effectue-les en détaillant tes étapes de calculs.</p>
    ${grid([["A","35 + 26 + 8"],["B","25 − 17 + 2"],["C","12 − 8 − 3"],["D","18 + 47 + 32"],["E","27 − 5 + 12"],["F","36 + 27 + 33"],["G","25 + 11 − 9"],["H","37 − 12 − 6"],["I","1,8 + 4,7 + 3,2"],["J","2,84 + 3,25 + 1,75"]])}`,
-   c:`<p>Quand il n'y a que des additions et des soustractions, on calcule de gauche à droite. Quand il n'y a que des additions, on peut regrouper astucieusement.</p>
-   ${gridC([["A","35 + 26 + 8"],["B","25 − 17 + 2"],["C","12 − 8 − 3"],["D",0,`<p class="calc">D = 18 + 47 + 32<br>D = 18 + 32 + 47<br>D = 50 + 47<br>D = ${V("18 + 47 + 32")}</p>`],["E","27 − 5 + 12"],["F",0,`<p class="calc">F = 36 + 27 + 33<br>F = 27 + 33 + 36<br>F = 60 + 36<br>F = ${V("36 + 27 + 33")}</p>`],["G","25 + 11 − 9"],["H","37 − 12 − 6"],["I",0,`<p class="calc">I = 1,8 + 4,7 + 3,2<br>I = 1,8 + 3,2 + 4,7<br>I = 5 + 4,7<br>I = ${V("1,8 + 4,7 + 3,2")}</p>`],["J",0,`<p class="calc">J = 2,84 + 3,25 + 1,75<br>J = 2,84 + 5<br>J = ${V("2,84 + 3,25 + 1,75")}</p>`]])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Calculer un enchaînement d'opérations", w:"Sur ton cahier", h:`<p>Effectue les calculs suivants en détaillant toutes tes étapes de calculs.</p>
    ${grid([["A","(4 + 5) × 6"],["B","4 + 5 × 6"],["C","1,8 + 4,7 + 3,2"],["D","12 − 8 − 3"],["E","563,7 × 25 × 4"],["F","80 ÷ 8 ÷ 2"],["G","(19 − 7 × 2) + 4"],["H","40 − 6 × 4 + 3"],["I","27 ÷ 3 + 4 × 9"],["J","45 ÷ 9 × (6 − 2)"],["K","(23 + 7) ÷ (3 × 5)"],["L","2,84 + 3,25 + 1,75"],["M","7 + 14 − 3 × 4"],["N","[(5 − 2) × 7 + 3] × 2"],["P","[30 − (5 + 4) × 2] − 10"]])}`,
-   c:gridC([["A","(4 + 5) × 6"],["B","4 + 5 × 6"],["C",0,`<p class="calc">C = 1,8 + 4,7 + 3,2<br>C = 1,8 + 3,2 + 4,7<br>C = 5 + 4,7<br>C = ${V("1,8 + 4,7 + 3,2")}</p>`],["D","12 − 8 − 3"],["E",0,`<p class="calc">E = 563,7 × 25 × 4<br>E = 563,7 × 100<br>E = ${V("563,7 × 25 × 4")}</p>`],["F","80 ÷ 8 ÷ 2"],["G","(19 − 7 × 2) + 4"],["H","40 − 6 × 4 + 3"],["I","27 ÷ 3 + 4 × 9"],["J","45 ÷ 9 × (6 − 2)"],["K","(23 + 7) ÷ (3 × 5)"],["L",0,`<p class="calc">L = 2,84 + 3,25 + 1,75<br>L = 2,84 + 5<br>L = ${V("2,84 + 3,25 + 1,75")}</p>`],["M","7 + 14 − 3 × 4"],["N","[(5 − 2) × 7 + 3] × 2"],["P","[30 − (5 + 4) × 2] − 10"]])}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Utilisation des parenthèses", e:[
   {n:"Exercice 3", t:"Utilisation des parenthèses dans un calcul", w:"Sur ton cahier", h:`<p><b>Partie 1 :</b> pour chaque question, une égalité est vraie et l'autre est fausse. Recopie l'égalité vraie, puis recopie l'égalité fausse en ajoutant des parenthèses pour qu'elle devienne vraie.</p>
    <p>a) 5 × 6 − 2 = 20 &nbsp;et&nbsp; 5 × 6 − 2 = 28<br>b) 2 + 6 × 3 = 20 &nbsp;et&nbsp; 2 + 6 × 3 = 24<br>c) 7 + 3 × 8 = 80 &nbsp;et&nbsp; 7 + 3 × 8 = 31<br>d) 23 − 3 + 7 = 27 &nbsp;et&nbsp; 23 − 3 + 7 = 13<br>e) 50 ÷ 10 ÷ 2 = 2,5 &nbsp;et&nbsp; 50 ÷ 10 ÷ 2 = 10</p>
    <p><b>Partie 2 :</b> même consigne. Cette fois, il y a une égalité vraie et 3 fausses.</p>
    <p>3 × 12 − 5 × 2 = 26 &nbsp;et&nbsp; 3 × 12 − 5 × 2 = 42 &nbsp;et&nbsp; 3 × 12 − 5 × 2 = 62 &nbsp;et&nbsp; 3 × 12 − 5 × 2 = 6</p>`,
-   c:`<p><b>Partie 1</b></p>
-   <p>a) Vraie : 5 × 6 − 2 = ${V("5 × 6 − 2")}. Avec des parenthèses : 5 × (6 − 2) = ${V("5 × (6 − 2)")}.</p>${duo([["A","5 × 6 − 2"],["B","5 × (6 − 2)"]])}
-   <p>b) Vraie : 2 + 6 × 3 = ${V("2 + 6 × 3")}. Avec des parenthèses : (2 + 6) × 3 = ${V("(2 + 6) × 3")}.</p>${duo([["C","2 + 6 × 3"],["D","(2 + 6) × 3"]])}
-   <p>c) Vraie : 7 + 3 × 8 = ${V("7 + 3 × 8")}. Avec des parenthèses : (7 + 3) × 8 = ${V("(7 + 3) × 8")}.</p>${duo([["E","7 + 3 × 8"],["F","(7 + 3) × 8"]])}
-   <p>d) Vraie : 23 − 3 + 7 = ${V("23 − 3 + 7")} (de gauche à droite). Avec des parenthèses : 23 − (3 + 7) = ${V("23 − (3 + 7)")}.</p>${duo([["G","23 − 3 + 7"],["H","23 − (3 + 7)"]])}
-   <p>e) Vraie : 50 ÷ 10 ÷ 2 = ${V("50 ÷ 10 ÷ 2")} (de gauche à droite). Avec des parenthèses : 50 ÷ (10 ÷ 2) = ${V("50 ÷ (10 ÷ 2)")}.</p>${duo([["I","50 ÷ 10 ÷ 2"],["J","50 ÷ (10 ÷ 2)"]])}
-   <p><b>Partie 2</b></p>
-   <p>Vraie : 3 × 12 − 5 × 2 = ${V("3 × 12 − 5 × 2")}.</p>${duo([["K","3 × 12 − 5 × 2"]])}
-   <p>Avec des parenthèses :</p>${duo([["L","3 × (12 − 5) × 2"],["M","(3 × 12 − 5) × 2"],["N","3 × (12 − 5 × 2)"]])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Résoudre un problème avec une seule expression", note:`<b>Consigne pour chaque problème :</b> écris une expression qui donne la solution du problème et nomme-la A. Effectue le calcul en détaillant les étapes (chaque ligne commence par « A = »), puis conclus par une phrase.`, e:[
   {n:"Exercice 2", t:"Résoudre un problème", w:"Sur ton cahier", h:`<p>J'ai 50 €. J'achète trois livres à 8 € l'un et deux CD à 10 € l'un. Quel argent me reste-t-il ? Rédige ta réponse.</p>`,
-   c:`${L("50 − (3 × 8 + 2 × 10)","A")}<p>Il me reste ${V("50 − (3 × 8 + 2 × 10)")} €.</p><p><i>On peut aussi écrire A = 50 − 3 × 8 − 2 × 10, qui donne le même résultat.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"À la papeterie", w:"Sur ton cahier", h:`<p>Anna achète une règle à 0,80 € et deux stylos à 1,50 € l'un. Combien paie-t-elle ?</p>`,
-   c:`${C.html("0,80 + 2 × 1,50","A",true)}<p>Anna paie ${C.txt(C.val("0,80 + 2 × 1,50"),true)} €.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Poids du camion après livraison", w:"Sur ton cahier", h:`<p>Un camion pèse 2 800 kg. On décharge ce camion de quatre caisses de 100 kg. Combien pèse maintenant le camion ?</p>`,
-   c:`${L("2 800 − 4 × 100","A")}<p>Le camion pèse maintenant ${V("2 800 − 4 × 100")} kg.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Argent rendu", w:"Sur ton cahier", h:`<p>Pour Noël, Raphaël veut offrir un cadeau à son frère et à sa sœur. Il a économisé 30 €. Il choisit une peluche à 12 € pour sa sœur et un livre à 5 € pour son frère. Combien d'argent lui reste-t-il après ses achats ?</p>`,
-   c:`${L("30 − (12 + 5)","A")}<p>Il reste ${V("30 − (12 + 5)")} € à Raphaël.</p><p><i>On peut aussi écrire A = 30 − 12 − 5 : de gauche à droite, on trouve aussi ${V("30 − 12 − 5")}.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"À la pâtisserie", w:"Sur ton cahier", h:`<p>Dans une pâtisserie, Léo achète quatre éclairs à 2 € l'un et un sachet de bonbons à 3 €. Léo donne un billet de 20 € à la caissière. Combien va-t-elle lui rendre ?</p>`,
-   c:`${L("20 − (4 × 2 + 3)","A")}<p>La caissière va lui rendre ${V("20 − (4 × 2 + 3)")} €.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Programmes de calcul", e:[
   {n:"Activité 2", t:"Écrire la bonne expression", w:"Sur ton cahier", h:`<p><b>Problème 1 :</b> Hugo choisit le nombre 3 et applique ce programme de calcul. Quel résultat obtient-il ?</p>${progBox([["×",5],["−",8]])}
    <p><b>Problème 2 :</b> Léa choisit le nombre 4 et applique ce programme de calcul. Quel résultat obtient-elle ?</p>${progBox([["+",3],["×",5]])}
    <p><b>Problème 3 :</b> Maud choisit le nombre 2 et applique ce programme de calcul. Quel résultat obtient-elle ?</p>${progBox([["×",5],["+",2],["×",3]])}
    <p>Pour chaque problème :</p><p>a) Calcule mentalement le résultat. b) Écris <b>un seul calcul</b> qui permet de trouver le résultat. Nomme-le A pour le problème 1, B pour le problème 2 et C pour le problème 3. c) Effectue ce calcul en détaillant tes étapes et conclus par une phrase.</p>`,
-   c:`<p><b>Problème 1.</b> Le calcul :</p>${L("3 × 5 − 8","A")}<p>Hugo obtient ${V("3 × 5 − 8")}.</p>
-   <p><b>Problème 2.</b> On ajoute 3 <b>puis</b> on multiplie le résultat : il faut des parenthèses. Le calcul :</p>${L("(4 + 3) × 5","B")}<p>Léa obtient ${V("(4 + 3) × 5")}.</p>
-   <p><b>Problème 3.</b> Le calcul :</p>${L("(2 × 5 + 2) × 3","C")}<p>Maud obtient ${V("(2 × 5 + 2) × 3")}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Quatre programmes de calcul", w:"Sur ton cahier", h:`<div class="progs">${progBox([["−",3],["×",8]],"Programme 1")}${progBox([["×",4],["+",8]],"Programme 2")}${progBox([["+",6],["×",2],["−",7]],"Programme 3")}${progBox([["×",3],["+",5],["×",4]],"Programme 4")}</div>
    <p>Pour chaque programme, on a choisi le nombre 5.</p><p>1. Écris une seule expression qui permet de trouver le résultat de chaque programme de calcul. Nomme-les A, B, C et D. 2. Effectue ensuite tes calculs.</p>`,
-   c:`<div class="calcs"><div><p><b>Programme 1</b></p>${L("(5 − 3) × 8","A")}</div><div><p><b>Programme 2</b></p>${L("5 × 4 + 8","B")}</div><div><p><b>Programme 3</b></p>${L("(5 + 6) × 2 − 7","C")}</div><div><p><b>Programme 4</b></p>${L("(5 × 3 + 5) × 4","D")}</div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Quatre autres programmes", w:"Sur ton cahier", h:`<p>Dans chaque cas, écris l'expression numérique qui permet de résoudre le problème. Nomme-les A, B, C et D. Il n'est pas demandé d'effectuer les calculs, mais tu peux le faire au brouillon pour vérifier ton expression.</p>
    <p><b>Problème 1 :</b> je choisis le nombre 23 et j'applique ce programme de calcul. Quel est le résultat ?</p>${progBox([["−",3],["÷",5]])}
    <p><b>Problème 2 :</b> je choisis le nombre 3 et j'applique ce programme de calcul. Quel est le résultat ?</p>${progBox([["×",5],["+",2],["−",11]])}
    <p><b>Problème 3 :</b> je choisis le nombre 6 et j'applique ce programme de calcul. Quel est le résultat ?</p>${progBox([["×",5],["−",18],["÷",3]])}
    <p><b>Problème 4 :</b> je choisis le nombre 7 et j'applique ce programme de calcul. Quel est le résultat ?</p>${progBox([["+",4],["×",2],["+",9]])}`,
-   c:`<p>La première ligne est l'expression demandée. Les lignes suivantes sont la vérification au brouillon.</p>
-   <div class="calcs"><div><p><b>Problème 1</b></p>${L("(23 − 3) ÷ 5","A")}</div><div><p><b>Problème 2</b></p>${L("3 × 5 + 2 − 11","B")}</div><div><p><b>Problème 3</b></p>${L("(6 × 5 − 18) ÷ 3","C")}</div><div><p><b>Problème 4</b></p>${L("(7 + 4) × 2 + 9","D")}</div></div>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes en plusieurs étapes", e:[
   {n:"Exercice 10", t:"Crédit pour l'achat d'une voiture", w:"Sur ton cahier", h:`<p>Paul est intéressé par l'achat d'une voiture à 16 000 €, mais il ne peut pas payer cette somme en une fois. Son garagiste lui propose la formule de crédit suivante : paiement de 5 000 € quand il va récupérer le véhicule, puis prélèvement de 250 € par mois pendant 48 mois.</p><p>Quelle somme d'argent Paul va-t-il payer en plus s'il achète cette voiture avec ce crédit ?</p>`,
-   c:`<p>Avec le crédit, Paul paie 5 000 + 250 × 48. On enlève le prix de la voiture.</p>${L("5 000 + 250 × 48 − 16 000","A")}<p>Avec ce crédit, Paul va payer ${V("5 000 + 250 × 48 − 16 000")} € en plus.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Prix du casque audio", w:"Sur ton cahier", h:`<p>Perrine et Jules veulent offrir un casque audio à leur sœur. Ils ont économisé respectivement 23,40 € et 37,50 €. S'ils avaient eu 15,90 € de plus, ils auraient pu lui offrir en plus un DVD qui coûte 19,90 €.</p><p>Quel est le prix du casque audio ?</p>`,
-   c:`<p>Avec 15,90 € de plus, ils auraient eu juste assez pour le casque <b>et</b> le DVD. Le prix du casque, c'est cette somme moins le prix du DVD.</p>${C.html("23,40 + 37,50 + 15,90 − 19,90","A",true)}<p>Le casque audio coûte ${C.txt(C.val("23,40 + 37,50 + 15,90 − 19,90"),true)} €.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Combien de bouquets de 5 roses ?", w:"Sur ton cahier", h:`<p>Un fleuriste dispose de 440 roses. Il décide d'en vendre 40 à l'unité, de faire 5 bouquets de 9 roses, 15 bouquets de 7 roses et des bouquets de 5 roses.</p><p>Combien de bouquets de 5 roses peut-il constituer ?</p>`,
-   c:`<p>On enlève les roses vendues à l'unité et celles des autres bouquets, puis on partage le reste en bouquets de 5.</p>${L("(440 − 40 − 5 × 9 − 15 × 7) ÷ 5","A")}<p>Il peut constituer ${V("(440 − 40 − 5 × 9 − 15 × 7) ÷ 5")} bouquets de 5 roses.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -288,3 +276,4 @@ exos:[
   <p>3) Il reste ${V("24 × 3 + 30 − (48 + 18)")} € dans la cagnotte. <i>(0,5 point)</i></p>`}
 ]};
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-3");

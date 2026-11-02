@@ -94,18 +94,17 @@ exos:[
   {n:"Activité 1", t:"L'aire d'un rectangle de deux façons", w:"Sur ton cahier", h:`<p>Si on te demande de développer le produit (4${x} + 5) × (2${x} + 8), tu voudrais commencer par les calculs entre parenthèses. Mais on ne peut pas réduire 4${x} + 5 ni 2${x} + 8 : on est bloqué !</p><p>Pour comprendre comment faire, calcule de deux façons différentes l'aire de ce rectangle ABCD.</p>
    ${rect4(120,90,120,30,{w:["<i>x</i>","3"],h:["<i>x</i>","1"],pts:true,alt:"Rectangle ABCD : AB = x + 3 et AD = x + 1, partagé en un carré de côté x et trois rectangles"})}
    <p><b>1)</b> Exprime l'aire de ABCD à l'aide des longueurs AB et AD.</p><p><b>2)</b> Exprime l'aire de ABCD en additionnant les aires du carré et des trois rectangles.</p><p><b>3)</b> Réduis l'expression obtenue.</p>`,
-   c:`<p><b>1)</b> AB = ${x} + 3 et AD = ${x} + 1, donc aire de ABCD = <b>(${x} + 3) × (${x} + 1)</b>.</p><p><b>2)</b> Aire de ABCD = <b>${x} × ${x} + ${x} × 1 + 3 × ${x} + 3 × 1</b> (on décompose l'aire des trois rectangles et du carré).</p>
-   <p><b>3)</b></p><p class="calc">Aire = ${x}<sup>2</sup> + ${x} + 3${x} + 3<br>Aire = <b>${R([[1,"x2"],[1,"x"],[3,"x"],[3,""]])}</b></p><p>On observe que pour développer (${x} + 3) × (${x} + 1), il faut multiplier chaque terme de la première parenthèse par chaque terme de la seconde :</p><p class="calc">A = (${x} + 3) × (${x} + 1)<br>A = ${x} × ${x} + ${x} × 1 + 3 × ${x} + 3 × 1<br>A = ${x}<sup>2</sup> + 4${x} + 3</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Développer avec la double distributivité", e:[
   {n:"Exercice 1", t:"Développer avec la double distributivité", w:"Sur ton cahier", h:`<p>Recopie les expressions littérales suivantes, puis développe-les et réduis-les.</p><div class="calcs">${EX1.map(([n,A,B])=>`<span>${n} = ${w2(A,B)}</span>`).join("")}</div>`,
-   c:EX1.map(([n,A,B])=>lines(n,w2(A,B),dev2(A,B).L)).join("")},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Développer avec la double distributivité (avec des soustractions)", w:"Sur ton cahier", h:`<p>Recopie les expressions littérales suivantes, puis développe-les et réduis-les.</p><div class="calcs">${EX2.map(([n,A,B])=>`<span>${n} = ${w2(A,B)}</span>`).join("")}</div>`,
-   c:EX2.map(([n,A,B])=>lines(n,w2(A,B),dev2(A,B).L)).join("")+`<p><i>Rappel : −${x} = −1${x}, donc (−${x}) × ${x} = −${x}<sup>2</sup>.</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Développer tous types d'expressions", e:[
   {n:"Exercice 3", t:"Simple ou double distributivité ?", w:"Sur ton cahier", h:`<p>Recopie les expressions littérales suivantes, puis développe-les et réduis-les.</p><div class="calcs">${EX3.map(([n,o])=>`<span>${n} = ${w3(o)}</span>`).join("")}</div>`,
-   c:`<p>M et N : <b>simple</b> distributivité (un seul facteur devant ou derrière la parenthèse). P, Q, R et S : <b>double</b> distributivité.</p>`+EX3.map(c3).join("")}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -165,3 +164,4 @@ exos:[
 /* calculs en chaîne « A = … » dans les explications du QCM (outil défini dans 4e-1.js) */
 CH["4e-13"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)=>{ if(it.g){ const g=it.g; list[i]={g:()=>window.CHN4.qChain(g())}; } else list[i]=window.CHN4.qChain(it); })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-13");

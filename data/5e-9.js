@@ -114,36 +114,36 @@ exos:[
 {t:"Additionner des nombres relatifs", e:[
   {n:"Activité 1", t:"Le jeu des gains et des pertes", w:"Sur ta feuille", h:`<p>Mia joue à un jeu. Elle commence avec un score de 0 point.</p><p>À chaque manche, elle gagne des points (nombre positif) ou elle en perd (nombre négatif).</p><p>Complète le tableau.</p>${actTab(false)}
    <p><b>1)</b> Quelle règle permet de trouver le score après la manche 2 ?</p><p><b>2)</b> Quel est le score final de Mia ?</p>`,
-   c:`${actTab(true)}<p><b>1)</b> Les nombres de la manche 2 sont de signes contraires : on soustrait les valeurs absolues (9 − 6 = 3) et on garde le signe de celui qui a la plus grande valeur absolue (−9) : (+6) + (−9) = −3.</p><p><b>2)</b> Le score final de Mia est de <b>+3 points</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Même signe", w:"Sur ton cahier", h:`<p>Calcule.</p>${cols(["a) A = (+4) + (+9)","b) B = (−6) + (−5)","c) C = (−3,5) + (−2)","d) D = (+7,2) + (+0,8)","e) E = (−12) + (−18)","f) F = (−0,4) + (−0,9)"])}`,
-   c:`<p>On garde le signe commun et on additionne les valeurs absolues.</p><div class="calcs">${[[4,9],[-6,-5],[-3.5,-2],[7.2,0.8],[-12,-18],[-0.4,-0.9]].map(([a,b],i)=>`<div>${addL("abcdef"[i],"ABCDEF"[i],a,b)}</div>`).join("")}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Signes contraires", w:"Sur ton cahier", h:`<p>Calcule.</p>${cols(["a) A = (−7) + (+4)","b) B = (+9) + (−12)","c) C = (−15) + (+15)","d) D = (+6,5) + (−2,5)","e) E = (−8) + (+10)","f) F = (−1,2) + (+0,7)","g) G = (+3) + (−3,8)","h) H = (−20) + (+13)"])}`,
-   c:`<p>On soustrait les valeurs absolues et on garde le signe du nombre qui a la plus grande valeur absolue.</p><div class="calcs">${[[-7,4],[9,-12],[-15,15],[6.5,-2.5],[-8,10],[-1.2,0.7],[3,-3.8],[-20,13]].map(([a,b],i)=>`<div>${addL("abcdefgh"[i],"ABCDEFGH"[i],a,b)}</div>`).join("")}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Le signe du résultat", w:"Sur ta feuille", h:`<p>Sans calculer, donne le signe de chaque somme : coche la bonne case.</p>${e3Tab(false)}`,
-   c:`${e3Tab(true)}<p>On compare les valeurs absolues : le résultat a le signe du nombre qui a la plus grande valeur absolue.</p><p>Il vaut 0 si les nombres sont opposés.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Additions à trous", w:"Sur ta feuille", h:`<p>Complète par le nombre relatif qui convient.</p>${cols(["a) (−3) + (……) = +4","b) (+5) + (……) = −2","c) (……) + (−4) = −10","d) (……) + (+6) = 0","e) (−2,5) + (……) = −4","f) (……) + (+3,5) = +1"])}`,
-   c:`<p>On peut s'aider d'une droite graduée : de combien faut-il avancer (+) ou reculer (−) ?</p><p>a) (−3) + (<b>+7</b>) = +4 &nbsp; <i>(de −3 à +4, on avance de 7)</i></p><p>b) (+5) + (<b>−7</b>) = −2 &nbsp; <i>(de +5 à −2, on recule de 7)</i></p><p>c) (<b>−6</b>) + (−4) = −10 &nbsp; <i>(6 + 4 = 10 et le signe est −)</i></p><p>d) (<b>−6</b>) + (+6) = 0 &nbsp; <i>(deux nombres opposés ont une somme nulle)</i></p><p>e) (−2,5) + (<b>−1,5</b>) = −4 &nbsp; <i>(de −2,5 à −4, on recule de 1,5)</i></p><p>f) (<b>−2,5</b>) + (+3,5) = +1 &nbsp; <i>(on recule de 3,5 depuis +1 : on arrive à −2,5)</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Soustraire un nombre relatif", e:[
   {n:"Exercice 5", t:"Soustraire, c'est ajouter l'opposé", w:"Sur ta feuille", h:`<p>Transforme chaque soustraction en addition, puis calcule.</p>${e5Tab(false)}`,
-   c:`${e5Tab(true)}<p>On remplace « − (nombre) » par « + (son opposé) ».</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Calculer un écart", w:"Sur ton cahier", h:`<p>Pour chaque situation, écris la soustraction qui permet de trouver l'écart, puis calcule.</p>
    <p><b>a)</b> À 6 h, il fait −4 °C. À 14 h, il fait +9 °C. De combien la température a-t-elle augmenté ?</p><p><b>b)</b> Un ascenseur est au niveau −2 (parking). Il monte jusqu'au niveau +6. Combien d'étages a-t-il montés ?</p><p><b>c)</b> Le sommet du mont Blanc est à +4 800 m d'altitude et le bord de la mer Morte à −430 m. Quelle est la différence d'altitude ?</p>`,
-   c:`<p><b>a)</b> (+9) − (−4) = (+9) + (+4) = +13 : la température a augmenté de <b>13 °C</b>.</p><p><b>b)</b> (+6) − (−2) = (+6) + (+2) = +8 : l'ascenseur a monté <b>8 étages</b>.</p><p><b>c)</b> (+4 800) − (−430) = 4 800 + 430 = 5 230 : la différence d'altitude est de <b>5 230 m</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Enchaîner des calculs et simplifier l'écriture", e:[
   {n:"Exercice 7", t:"Supprimer les parenthèses", w:"Sur ton cahier", h:`<p>Écris chaque expression sans parenthèses, puis calcule.</p>${cols(["A = (+5) + (−3) − (−2)","B = (−4) − (+6) + (−1)","C = (−7) − (−7) + (+2)","D = (+2,5) − (−1,5) − (+6)"])}`,
-   c:`<p>+ (+b) devient + b ; + (−b) devient − b ; − (+b) devient − b ; − (−b) devient + b.</p><div class="calcs"><div>${NL("A","(+5) + (−3) − (−2) = 5 − 3 + 2 = <b>4</b>")}</div><div>${NL("B","(−4) − (+6) + (−1) = −4 − 6 − 1 = <b>−11</b>")}</div><div>${NL("C","(−7) − (−7) + (+2) = −7 + 7 + 2 = <b>2</b>")}</div><div>${NL("D","(+2,5) − (−1,5) − (+6) = 2,5 + 1,5 − 6 = <b>−2</b>")}</div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Suites d'additions et de soustractions", w:"Sur ton cahier", h:`<p>Calcule en regroupant astucieusement les nombres.</p>${cols(["F = −3 + 5 − 8 + 2","G = 12 − 15 + 7 − 9","H = −2,5 + 4 − 1,5 + 3","I = −10 + 4 − 6 + 8 − 2","J = 7,5 − 10 + 2,5 − 4","K = −0,8 − 1,2 + 3 − 1"])}`,
-   c:`<p>On regroupe les nombres positifs d'un côté, les nombres négatifs de l'autre.</p><div class="calcs"><div>${NL("F","−3 + 5 − 8 + 2 = (5 + 2) − (3 + 8) = 7 − 11 = <b>−4</b>")}</div><div>${NL("G","12 − 15 + 7 − 9 = (12 + 7) − (15 + 9) = 19 − 24 = <b>−5</b>")}</div><div>${NL("H","−2,5 + 4 − 1,5 + 3 = (4 + 3) − (2,5 + 1,5) = 7 − 4 = <b>3</b>")}</div><div>${NL("I","−10 + 4 − 6 + 8 − 2 = (4 + 8) − (10 + 6 + 2) = 12 − 18 = <b>−6</b>")}</div><div>${NL("J","7,5 − 10 + 2,5 − 4 = (7,5 + 2,5) − (10 + 4) = 10 − 14 = <b>−4</b>")}</div><div>${NL("K","−0,8 − 1,2 + 3 − 1 = 3 − (0,8 + 1,2 + 1) = 3 − 3 = <b>0</b>")}</div></div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Trouver l'erreur", w:"Sur ton cahier", h:`<p>Chaque élève a fait une erreur. Explique laquelle et donne le bon résultat.</p><p><b>1)</b> Léa a écrit : −5 + 3 = −8.</p><p><b>2)</b> Karim a écrit : (+4) − (+6) = +2.</p><p><b>3)</b> Inès a écrit : 7 − (−2) = 5.</p>`,
-   c:`<p><b>1)</b> Léa a additionné les valeurs absolues alors que les signes sont contraires. On soustrait 5 − 3 = 2 et on garde le signe de −5.</p>${NL("A","−5 + 3 = <b>−2</b>")}<p><b>2)</b> Karim a oublié que soustraire +6, c'est ajouter −6. On soustrait 6 − 4 = 2 et on garde le signe −.</p>${NL("B","(+4) − (+6) = (+4) + (−6) = <b>−2</b>")}<p><b>3)</b> Inès n'a pas ajouté l'opposé de −2.</p>${NL("C","7 − (−2) = 7 + 2 = <b>9</b>")}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Problèmes", w:"Sur ton cahier", h:`<p>Écris le calcul, puis réponds.</p><p><b>1)</b> Au début du mois, le compte de M. Durand affiche −45 €. Il reçoit 120 €, puis il paie une facture de 38,50 €, puis une facture de 62 €. Quel est son solde à la fin ?</p><p><b>2)</b> À Chamonix, il fait −7 °C à 6 h. À midi, la température a monté de 12 °C. Le soir, elle a baissé de 15 °C par rapport à midi. Quelle est la température le soir ?</p>`,
-   c:`<p><b>1)</b></p><p class="calc">−45 + 120 − 38,50 − 62 = 75 − 38,50 − 62 = 36,50 − 62 = −25,50</p><p>Le solde est de <b>−25,50 €</b>.</p><p><b>2)</b></p><p class="calc">−7 + 12 − 15 = 5 − 15 = −10</p><p>La température le soir est de <b>−10 °C</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Carré magique", w:"Sur ta feuille", h:`<p>Complète ce carré magique : la somme de chaque ligne, de chaque colonne et de chaque diagonale doit être égale à 0.</p>${carre([[3,null,1],[null,0,null],[-1,null,-3]])}`,
-   c:`${carre([[3,-4,1],[-2,0,2],[-1,4,-3]])}<p>Ligne 1 : 3 + … + 1 = 0, donc −4.</p><p>Colonne 1 : 3 + … + (−1) = 0, donc −2.</p><p>Colonne 3 : 1 + … + (−3) = 0, donc +2.</p><p>Ligne 3 : −1 + … + (−3) = 0, donc +4.</p><p><b>Vérification :</b> ligne 2 : −2 + 0 + 2 = 0 ; colonne 2 : −4 + 0 + 4 = 0 ; diagonales : 3 + 0 − 3 = 0 et 1 + 0 − 1 = 0.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Pour aller plus loin : calcul astucieux", w:"Sur ton cahier", h:`<p>Calcule le plus intelligemment possible.</p><p><b>a)</b> A = (−5) + (−4) + (−3) + (−2) + (−1) + 0 + 1 + 2 + 3 + 4 + 5</p><p><b>b)</b> B = −10 + 9 − 8 + 7 − 6 + 5 − 4 + 3 − 2 + 1</p>`,
-   c:`<p><b>a)</b> On associe chaque nombre à son opposé : (−5) + 5 = 0, (−4) + 4 = 0, …</p>${NL("A","(−5) + (−4) + (−3) + (−2) + (−1) + 0 + 1 + 2 + 3 + 4 + 5 = <b>0</b>")}<p><b>b)</b> On regroupe par deux :</p>${NL("B","−10 + 9 − 8 + 7 − 6 + 5 − 4 + 3 − 2 + 1 = (−10 + 9) + (−8 + 7) + (−6 + 5) + (−4 + 3) + (−2 + 1) = 5 × (−1) = <b>−5</b>")}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -285,3 +285,4 @@ CH["5e-9"].quiz.forEach(N=>Object.values(N.q).forEach(list=>list.forEach((it,i)=
   if(it.g){ const g=it.g; list[i]={g:()=>Object.assign(g(),{kb:"text"})}; } else it.kb="text";
 })));
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-9");

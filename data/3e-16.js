@@ -137,30 +137,27 @@ cours:[
 exos:[
 {t:"Une identité remarquable", e:[
   {n:"Activité 1", t:"Développer des expressions littérales", w:"Sur ton cahier", h:`<p><b>1 –</b> Développe et réduis les expressions suivantes :</p>${cols([`A = (${$x} − 4)(5${$x} + 2)`,`B = (${$x} + 5)(${$x} − 5)`,`C = (3${$x} − 2)(3${$x} + 2)`])}<p><b>2 –</b> Les calculs B et C ont un point en commun. Que remarques-tu ?</p>`,
-   c:`<p><b>1 –</b></p>${eqs("A",[`(${$x} − 4)(5${$x} + 2)`,`5${sq($x)} + 2${$x} − 20${$x} − 8`,`5${sq($x)} − 18${$x} − 8`])}${eqs("B",[`(${$x} + 5)(${$x} − 5)`,`${sq($x)} − 5${$x} + 5${$x} − 25`,`${sq($x)} − 25`])}${eqs("C",[`(3${$x} − 2)(3${$x} + 2)`,`9${sq($x)} + 6${$x} − 6${$x} − 4`,`9${sq($x)} − 4`])}
-   <p><b>2 –</b> Dans B et C, les deux facteurs sont de la forme (${$a} + ${$b}) et (${$a} − ${$b}) : les termes en ${$x} s'annulent.</p><p>Le résultat est une différence de deux carrés : (${$x} + 5)(${$x} − 5) = ${sq($x)} − ${sq(5)} et (3${$x} − 2)(3${$x} + 2) = ${sq("(3"+$x+")")} − ${sq(2)}.</p><p>C'est l'identité remarquable (${$a} + ${$b})(${$a} − ${$b}) = ${sq($a)} − ${sq($b)}.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Développer en utilisant (a + b)(a − b) = a² − b²", w:"Sur ton cahier", h:`<p>Développe les expressions suivantes en utilisant la propriété découverte : (${$a} + ${$b})(${$a} − ${$b}) = ${sq($a)} − ${sq($b)}.</p>${cols([`A = (${$x} + 6)(${$x} − 6)`,`B = (${$x} − 3)(${$x} + 3)`,`C = (4${$x} + 5)(4${$x} − 5)`,`D = (7${$x} − 1)(7${$x} + 1)`])}`,
-   c:`${eqs("A",devAB(1,6))}${eqs("B",devAB(1,3,0))}${eqs("C",devAB(4,5))}${eqs("D",devAB(7,1,0))}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Activité 2", t:"Factoriser en utilisant a² − b² = (a + b)(a − b)", w:"Sur ton cahier", h:`<p>Nous avons découvert cette propriété : (${$a} + ${$b})(${$a} − ${$b}) = ${sq($a)} − ${sq($b)}.</p>
    <p>Écrite de cette manière, la propriété permet de <b>développer</b> : elle transforme un produit en une soustraction.</p><p>Écrite de cette manière : ${sq($a)} − ${sq($b)} = (${$a} + ${$b})(${$a} − ${$b}), la propriété permet de <b>factoriser</b> : elle transforme une soustraction en un produit.</p>
    <p><b>Exercice :</b> factorise les expressions suivantes.</p>${cols([`A = ${sq($x)} − 81`,`B = 36${sq($x)} − 64`])}`,
-   c:`${eqs("A",facAB(1,9))}${eqs("B",facAB(6,8))}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Factoriser en utilisant a² − b² = (a + b)(a − b)", w:"Sur ton cahier", h:`<p>Factorise les expressions suivantes.</p>${cols([`A = ${sq($x)} − 100`,`B = ${sq($x)} − 9`,`C = 25${sq($x)} − 1`,`D = 4${sq($x)} − 49`])}`,
-   c:`${eqs("A",facAB(1,10))}${eqs("B",facAB(1,3))}${eqs("C",facAB(5,1))}${eqs("D",facAB(2,7))}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Équations « produit nul »", e:[
   {n:"Exercice 3", t:"Résoudre des équations « produit nul »", w:"Sur ton cahier", h:`<p>Résous les équations suivantes.</p>${cols(EX3S.map((s,i)=>`<b>${L6[i]})</b> ${s}`))}`,
-   c:EX3.map(([A,B,o],i)=>`<p><b>${L6[i]})</b> ${EX3S[i]}</p>${pnul(A,B,o||{})}`).join("")}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Équations de la forme <i>x</i>² = a", e:[
   {n:"Exercice 4", t:"Résoudre des équations de la forme x² = a", w:"Sur ton cahier", h:`<p><b>Partie 1 :</b> résous les équations suivantes.</p>${cols([`<b>a)</b> ${sq($x)} = 36`,`<b>b)</b> ${sq($x)} = 40`,`<b>c)</b> ${sq($x)} = 0`])}
    <p><b>Partie 2 :</b> ramène-toi à des équations de la forme ${sq($x)} = a, puis résous-les.</p>${cols([`<b>a)</b> 2${sq($x)} = 18`,`<b>b)</b> ${sq($x)} − 10 = 0`])}`,
-   c:`<p><b>Partie 1 – a)</b> ${sq($x)} = 36</p>${rootSol(36)}<p><b>b)</b> ${sq($x)} = 40</p>${rootSol(40)}<p><b>c)</b> ${sq($x)} = 0</p>${rootSol(0)}
-   <p><b>Partie 2 – a)</b></p>${calc([`2${sq($x)} = 18`,[`${sq($x)} = 9`,"÷ 2"]])}${rootSol(9)}<p><b>b)</b></p>${calc([`${sq($x)} − 10 = 0`,[`${sq($x)} = 10`,"+ 10"]])}${rootSol(10)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Vu au brevet", w:"Sur ton cahier", h:`<p>On considère le programme de calcul suivant.</p>${progDiag("Soustraire 2","Ajouter 5","Programme : choisir un nombre ; d'un côté soustraire 2, de l'autre ajouter 5 ; multiplier les deux nombres obtenus")}
    <p><b>1.</b> Vérifie qu'en choisissant −2 comme nombre de départ, on obtient −12.</p><p><b>2.</b> Avec ce programme, quel nombre faut-il choisir au départ pour obtenir 0 ? Justifie la réponse.</p>`,
-   c:`<p><b>1.</b> −2 − 2 = −4 et −2 + 5 = 3, puis −4 × 3 = −12. On obtient bien −12.</p>
-   <p><b>2.</b> On note ${$x} le nombre de départ. Le résultat est (${$x} − 2)(${$x} + 5). On résout (${$x} − 2)(${$x} + 5) = 0 : c'est une équation « produit nul ».</p>${pnul(f(1,-2),f(1,5))}<p>Il faut choisir <b>2</b> ou <b>−5</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -229,3 +226,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-16");

@@ -192,41 +192,38 @@ exos:[
 {t:"Reconnaître et représenter des solides", e:[
   {n:"Activité 1", t:"Reconnaître des solides", w:"Sur ta feuille", h:`${ex("act1","Quatre solides A, B, C et D en perspective cavalière",640)}
    <p><b>1)</b> Donne le nom de chaque solide : A : ……… B : ……… C : ……… D : ………</p><p><b>2)</b> Lesquels de ces solides sont des prismes droits ?</p><p><b>3)</b> Quelles arêtes sont dessinées en pointillés ? Pourquoi ?</p>`,
-   c:`<p><b>1)</b> A : pavé droit · B : cube · C : prisme droit (à base triangulaire) · D : cylindre</p><p><b>2)</b> A, B (cube) et C sont des prismes droits. Le cylindre n'en est pas un : ses bases sont des disques.</p><p><b>3)</b> Les arêtes cachées, c'est-à-dire celles qu'on ne verrait pas si le solide était opaque, sont en pointillés.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Dessiner en perspective cavalière", w:"Sur ton cahier", h:`<p>Sur ton cahier à petits carreaux, représente en perspective cavalière (angle de fuite 45°, coefficient ${F(1,2)}) :</p><p><b>a)</b> un pavé droit de longueur 4 cm, de largeur 3 cm et de hauteur 2 cm ;</p><p><b>b)</b> un cylindre de rayon 1,5 cm et de hauteur 4 cm.</p>`,
-   c:`<p><b>a)</b> La face avant est un rectangle de 4 cm sur 2 cm, en vraie grandeur. Les arêtes fuyantes mesurent 3 × ${F(1,2)} = 1,5 cm et font 45° avec l'horizontale. On met en pointillés les 3 arêtes cachées.</p>
-   <p><b>b)</b> Le disque de la face avant est en vraie grandeur (rayon 1,5 cm). La hauteur est réduite : 4 × ${F(1,2)} = 2 cm. Le disque arrière est le translaté du disque avant ; sa moitié cachée est en pointillés.</p><div class="figs">${solid("pave",{L:4,l:3,h:2,u:34,lab:{L:"4 cm",h:"2 cm",l:"1,5 cm"},alt:"Pavé droit de 4 cm sur 3 cm sur 2 cm en perspective cavalière"})}${solid("cyl",{r:1.5,h:4,u:34,lab:{r:"1,5 cm",h:"2 cm"},alt:"Cylindre de rayon 1,5 cm et de hauteur 4 cm en perspective cavalière"})}</div>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Patrons d'un cube", w:"Sur ta feuille", h:`<p>Parmi ces six figures, indique lesquelles sont des patrons d'un cube.</p><p>Pour t'aider, tu peux les reproduire sur ton cahier, les découper et les plier.</p><p>Les patrons de cube sont les figures numéros ………</p>${nets(E2N)}`,
-   c:`<p>Les figures <b>1, 3 et 5</b> sont des patrons de cube.</p><p>Les figures 2, 4 et 6 n'en sont pas : en pliant, deux carrés se superposeraient et une face du cube resterait vide (par exemple, un bloc de 2 carrés sur 2 ne peut pas se plier).</p>${nets(E2N,E2ok)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Patron d'un pavé", w:"Sur ton cahier", h:`<p>Un pavé droit mesure 5 cm de longueur, 3 cm de largeur et 2 cm de hauteur.</p><p><b>1)</b> Dessine un patron de ce pavé à l'échelle 1 (carreaux de 1 cm).</p><p><b>2)</b> Combien de faces a ce pavé ? Quelles sont leurs dimensions ?</p><p><b>3)</b> Calcule l'aire totale du patron.</p>`,
-   c:`<p><b>1)</b> Par exemple : une bande de quatre rectangles (5 × 2, 3 × 2, 5 × 2, 3 × 2) avec, au-dessus et en dessous du premier rectangle 5 × 2, un rectangle de 5 × 3 (dimensions en cm).</p>${patPave(5,3,2)}
-   <p><b>2)</b> 6 faces : deux de 5 × 3, deux de 5 × 2, deux de 3 × 2.</p><p><b>3)</b> L'aire totale A :</p>${KC("A",["2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2)","30 + 20 + 12","62 cm²"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Relier un prisme et son patron", w:"Sur ta feuille", h:`<p>Voici un prisme droit dont la base est un triangle rectangle, et un patron de ce prisme. Complète directement sur la fiche.</p>
    <div class="figs">${ex("e4a","Prisme droit : triangle de côtés 3 cm, 4 cm et 5 cm, longueur 6 cm",300)}${ex("e4b","Patron du prisme avec les longueurs a, b, c et d",320)}</div>
    <p><i>a</i> = ……… cm ; <i>b</i> = ……… cm ; <i>c</i> = ……… cm ; <i>d</i> = ……… cm.</p><p>Combien le patron comporte-t-il de faces ? ………</p><p>Quelle est la nature des faces latérales ? ………</p>`,
-   c:`<p><i>a</i> = 3 cm ; <i>b</i> = 6 cm (la hauteur du prisme) ; <i>c</i> = 5 cm ; <i>d</i> = 3 cm.</p><p>Le patron comporte 5 faces : 2 triangles et 3 rectangles. Les faces latérales sont des rectangles.</p>${cr("e4c","Patron du prisme avec les longueurs",320)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Dénombrer des cubes", w:"Sur ton cahier", h:`<p>Voici une pile de cubes identiques, vue de dessus.</p><p>Le nombre dans chaque case donne le nombre de cubes empilés à cet endroit.</p>${pile(E5G)}
    <p><b>a)</b> Combien de cubes la pile contient-elle ?</p><p><b>b)</b> Quelle est la hauteur maximale de la pile (en nombre de cubes) ?</p><p><b>c)</b> Chaque cube a une arête de 2 cm. Calcule le volume de la pile.</p>`,
-   c:`<p><b>a)</b> 3 + 1 + 0 + 2 + 2 + 1 + 1 + 0 + 0 = 10 cubes.</p><p><b>b)</b> 3 cubes.</p><p><b>c)</b> Volume d'un cube : 2³ = 8 cm³. Volume de la pile : 10 × 8 = 80 cm³.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Aire du disque et volumes", e:[
   {n:"Exercice 6", t:"Aire d'un disque", w:"Sur ton cahier", h:`<p>Calcule l'aire de chaque disque.</p><p>Donne la valeur exacte (avec ${PI}), puis une valeur approchée au dixième.</p>
    <div class="scroll"><table class="std"><tbody><tr><td><b>a)</b> rayon 3 cm</td><td><b>b)</b> rayon 5 cm</td><td><b>c)</b> rayon 10 cm</td></tr><tr><td><b>d)</b> diamètre 8 cm</td><td><b>e)</b> rayon 1,5 cm</td><td><b>f)</b> diamètre 14 cm</td></tr></tbody></table></div>`,
-   c:`<p>L'aire A de chaque disque :</p><div class="calcs">${[["3","9","28,3"],["5","25","78,5"],["10","100","314,2"],["4","16","50,3"],["1,5","2,25","7,1"],["7","49","153,9"]].map(([r,e,a],i)=>`<div><p><b>${"abcdef"[i]})</b></p>${KC("A",[`${PI} × ${r}²`,`${e}${PI}`,`≈ ${a} cm²`])}</div>`).join("")}</div>
-   <p>Pour d) et f), le rayon est la moitié du diamètre : 4 cm et 7 cm.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Volume d'un cube et d'un pavé", w:"Sur ton cahier", h:`<p>Calcule le volume de chaque solide.</p><p><b>a)</b> un cube d'arête 6 cm ;</p><p><b>b)</b> un pavé droit de 8 cm de longueur, 5 cm de largeur et 3 cm de hauteur ;</p><p><b>c)</b> un aquarium (pavé droit) de 60 cm de longueur, 30 cm de largeur et 40 cm de hauteur : donne son volume en cm³, puis sa capacité en litres.</p>`,
-   c:`<p><b>a)</b></p>${KC("V",["6³","6 × 6 × 6","216 cm³"])}<p><b>b)</b> 8 × 5 × 3 = 120 cm³.</p><p><b>c)</b></p>${KC("V",["60 × 30 × 40","72 000 cm³","72 dm³"])}<p>Soit une capacité de 72 L.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Convertir des unités", w:"Sur ta feuille", h:`<p>Convertis directement sur la fiche.</p>
    <div class="scroll"><table class="std"><tbody><tr><td><b>a)</b> 3 dm³ = ……… cm³</td><td><b>b)</b> 2 L = ……… cm³</td><td><b>c)</b> 5 000 cm³ = ……… L</td></tr><tr><td><b>d)</b> 0,4 m³ = ……… L</td><td><b>e)</b> 75 cL = ……… L</td><td><b>f)</b> 250 mL = ……… cm³</td></tr></tbody></table></div>`,
-   c:`<p><b>a)</b> 1 dm³ = 1 000 cm³, donc 3 dm³ = 3 × 1 000 = 3 000 cm³.</p><p><b>b)</b> 1 L = 1 000 cm³, donc 2 L = 2 × 1 000 = 2 000 cm³.</p><p><b>c)</b> 1 000 cm³ = 1 L, donc 5 000 cm³ = 5 000 ÷ 1 000 = 5 L.</p><p><b>d)</b> 1 m³ = 1 000 L, donc 0,4 m³ = 0,4 × 1 000 = 400 L.</p><p><b>e)</b> 1 L = 100 cL, donc 75 cL = 75 ÷ 100 = 0,75 L.</p><p><b>f)</b> 1 mL = 1 cm³, donc 250 mL = 250 cm³.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Volume d'un prisme droit", w:"Sur ton cahier", h:`<p>La base d'un prisme droit est un triangle rectangle dont les côtés de l'angle droit mesurent 3 cm et 4 cm. Sa hauteur est de 8 cm.</p><p><b>a)</b> Calcule l'aire de la base.</p><p><b>b)</b> Calcule le volume du prisme.</p><p><b>c)</b> Quelle serait la hauteur d'un prisme de même base et de volume 30 cm³ ?</p>`,
-   c:`<p><b>a)</b> ${F("3 × 4",2)} = 6 cm².</p><p><b>b)</b> 6 × 8 = 48 cm³.</p><p><b>c)</b> 30 ÷ 6 = 5 cm.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Volume d'un cylindre", w:"Sur ton cahier", h:`<p>Pour ${PI}, utilise la touche de ta calculatrice.</p><p><b>a)</b> Un cylindre a pour rayon 5 cm et pour hauteur 10 cm. Calcule son volume (valeur exacte puis arrondi à l'unité), puis sa capacité en litres (arrondie au centième).</p><p><b>b)</b> Une bouteille cylindrique a pour diamètre 6 cm et pour hauteur 20 cm. Peut-elle contenir 0,5 L d'eau ? Justifie.</p><p><b>c)</b> Une boîte de conserve a pour rayon 4 cm et pour hauteur 11 cm. Calcule sa contenance en mL (arrondie à l'unité).</p>`,
-   c:`<p><b>a)</b></p>${KC("<i>V</i>",[`${PI} × 5² × 10`,`250${PI}`,"≈ 785 cm³"])}<p>785 cm³ = 0,785 dm³, soit environ 0,79 L.</p><p><b>b)</b> Rayon : 3 cm.</p>${KC("<i>V</i>",[`${PI} × 3² × 20`,`180${PI}`,"≈ 565 cm³","≈ 0,57 L"])}<p>Comme 0,57 &gt; 0,5 : oui, la bouteille peut contenir 0,5 L.</p><p><b>c)</b></p>${KC("<i>V</i>",[`${PI} × 4² × 11`,`176${PI}`,"≈ 553 cm³"])}<p>Soit environ 553 mL.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"La piscine", w:"Sur ton cahier", h:`<p>Une piscine a la forme d'un pavé droit de 10 m de longueur, 5 m de largeur et 1,5 m de profondeur.</p><p><b>a)</b> Calcule son volume en m³, puis sa contenance en litres.</p><p><b>b)</b> On la remplit avec un robinet dont le débit est de 1 500 L par heure. Combien d'heures faut-il pour la remplir complètement ?</p><p><b>c)</b> La piscine est remplie seulement aux deux tiers. Combien de litres d'eau contient-elle ?</p>`,
-   c:`<p><b>a)</b></p>${KC("V",["10 × 5 × 1,5","75 m³","75 000 L"])}<p><b>b)</b> 75 000 ÷ 1 500 = 50 : il faut 50 heures.</p><p><b>c)</b> ${F(2,3)} × 75 000 = 50 000 L.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Pour aller plus loin : le Flatiron", w:"Sur ton cahier", h:`<p>Le Flatiron Building, à New York, est un célèbre immeuble dont la forme rappelle un prisme droit à base triangulaire.</p><p>On en construit une maquette : la base est un triangle de base 6 cm et de hauteur 4 cm ; la hauteur de la maquette est 25 cm.</p><p><b>a)</b> Calcule l'aire de la base de la maquette.</p><p><b>b)</b> Calcule le volume de la maquette.</p><p><b>c)</b> Dessine la maquette en perspective cavalière (angle 45°, coefficient ${F(1,2)}).</p>`,
-   c:`<p><b>a)</b> ${F("6 × 4",2)} = 12 cm².</p><p><b>b)</b> 12 × 25 = 300 cm³.</p><p><b>c)</b> On dessine le triangle de base 6 cm et de hauteur 4 cm en vraie grandeur. Puis on trace les arêtes fuyantes de 25 × ${F(1,2)} = 12,5 cm à 45°, et on met en pointillés les arêtes cachées.</p>${solid("prisme",{p:6,q:4,s:2,L:25,u:24,lab:{p:"6 cm",t:"4 cm",L:"12,5 cm"},maxw:520,alt:"Maquette en perspective cavalière : triangle de base 6 cm et de hauteur 4 cm, arêtes fuyantes de 12,5 cm"})}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -343,3 +340,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-15");

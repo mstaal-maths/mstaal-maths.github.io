@@ -108,39 +108,31 @@ exos:[
    <p><b>3) Convertis des heures et minutes en heures.</b></p><p><b>a)</b> 1 h 27 = ……. h · <b>b)</b> 2 h 54 = ……. h · <b>c)</b> 2 h 06 = ……. h</p>
    <p><b>4) Convertis des minutes en heures et minutes.</b></p><p><b>a)</b> 74 min · <b>b)</b> 129 min · <b>c)</b> 387 min · <b>d)</b> 514 min · <b>e)</b> 1 352 min</p>
    <p><b>5) Convertis des secondes en heures, minutes et secondes.</b></p><p><b>a)</b> 8 643 s · <b>b)</b> 10 567 s · <b>c)</b> 27 465 s</p>`,
-   c:`<p><b>1)</b> <b>a)</b> 0,3 × 60 = 18 : 1,3 h = <b>1 h 18 min</b> · <b>b)</b> 0,25 × 60 = 15 : 3,25 h = <b>3 h 15 min</b> · <b>c)</b> 0,35 × 60 = 21 : 2,35 h = <b>2 h 21 min</b></p>
-   <p><b>2)</b> <b>a)</b> 24 ÷ 60 = <b>0,4 h</b> · <b>b)</b> 3 ÷ 60 = <b>0,05 h</b> · <b>c)</b> 48 ÷ 60 = <b>0,8 h</b></p>
-   <p><b>3)</b> <b>a)</b> 27 ÷ 60 = 0,45 : 1 h 27 = <b>1,45 h</b> · <b>b)</b> 54 ÷ 60 = 0,9 : 2 h 54 = <b>2,9 h</b> · <b>c)</b> 6 ÷ 60 = 0,1 : 2 h 06 = <b>2,1 h</b></p>
-   <p><b>4)</b> <b>a)</b> 74 = 60 + 14 : <b>1 h 14 min</b> · <b>b)</b> 129 = 2 × 60 + 9 : <b>2 h 9 min</b> · <b>c)</b> 387 = 6 × 60 + 27 : <b>6 h 27 min</b> · <b>d)</b> 514 = 8 × 60 + 34 : <b>8 h 34 min</b> · <b>e)</b> 1 352 = 22 × 60 + 32 : <b>22 h 32 min</b></p>
-   <p><b>5)</b> <b>a)</b> 8 643 = 2 × 3 600 + 1 443 et 1 443 = 24 × 60 + 3 : <b>2 h 24 min 3 s</b></p><p><b>b)</b> 10 567 = 2 × 3 600 + 3 367 et 3 367 = 56 × 60 + 7 : <b>2 h 56 min 7 s</b></p><p><b>c)</b> 27 465 = 7 × 3 600 + 2 265 et 2 265 = 37 × 60 + 45 : <b>7 h 37 min 45 s</b></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Prix au kilo et débits", e:[
   {n:"Activité 1", t:"Le prix des courgettes", w:"Sur ton cahier", h:`<p>J'ai acheté 3 kilos de courgettes à 7,23 €.</p><p><b>a)</b> Quel est le prix d'un kilo de courgettes ?</p><p><b>b)</b> Le prix que tu as trouvé à la question a) est affiché dans les supermarchés. Comment l'appelle-t-on ?</p>`,
-   c:`<p><b>a)</b> 7,23 ÷ 3 = 2,41 : un kilo de courgettes coûte <b>2,41 €</b>.</p><p><b>b)</b> C'est le <b>prix au kilo</b> : 2,41 €/kg. C'est une grandeur quotient (un prix divisé par une masse).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Le débit d'une rivière", w:"Sur ton cahier", h:`<p>En 4 s, la rivière Dordogne a fait couler 1 800 ${M3} d'eau.</p><p><b>a)</b> La quantité d'eau qui coule en 1 s définit le débit. Quel est donc le débit de cette rivière ?</p><p><b>b)</b> Quelle est l'unité qui permet d'exprimer ce débit ?</p>`,
-   c:`<p><b>a)</b> 1 800 ÷ 4 = 450 : le débit est de <b>450 ${M3}</b> par seconde.</p><p><b>b)</b> On l'exprime en <b>${M3}/s</b> (mètres cubes par seconde).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Le débit d'un aqueduc", w:"Sur ton cahier", h:`<p>Le pont du Gard est la partie la plus connue d'un aqueduc long de 50 km qui amenait de l'eau d'Uzès jusqu'à Nîmes.</p><p>Son débit était de 1 620 ${M3}/h au moment de la construction.</p><p>Exprime ce débit en ${M3}/s.</p>`,
-   c:`<p class="calc"><i>D</i> = 1 620 ${M3}/h<br><i>D</i> = ${F("1 620 "+M3,"1 h")}<br><i>D</i> = ${F("1 620 "+M3,"3 600 s")}<br><i>D</i> = 0,45 ${M3}/s</p><p>Le débit était de <b>0,45 ${M3}/s</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Convertir des débits", w:"Sur ton cahier", h:`<p>Convertis :</p><p><b>a)</b> 2 412 ${M3}/h en ${M3}/s.</p><p><b>b)</b> 2 052 ${M3}/h en ${M3}/s, puis en L/s.</p><p><b>c)</b> 3 180 ${M3}/h en L/min.</p><p>Tu peux t'aider du tableau des volumes et des capacités :</p>${VOL}`,
-   c:`<p><b>a)</b></p><p class="calc"><i>D</i> = 2 412 ${M3}/h<br><i>D</i> = ${F("2 412 "+M3,"3 600 s")}<br><i>D</i> = <b>0,67 ${M3}/s</b></p><p><b>b)</b></p><p class="calc"><i>D</i> = 2 052 ${M3}/h<br><i>D</i> = ${F("2 052 "+M3,"3 600 s")}<br><i>D</i> = <b>0,57 ${M3}/s</b></p><p>Et 0,57 ${M3} = 570 L, donc 0,57 ${M3}/s = <b>570 L/s</b>.</p>
-   <p><b>c)</b> 3 180 ${M3} = 3 180 000 L et 1 h = 60 min, donc :</p><p class="calc"><i>D</i> = 3 180 ${M3}/h<br><i>D</i> = ${F("3 180 000 L","60 min")}<br><i>D</i> = <b>53 000 L/min</b></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Vitesses", e:[
   {n:"Exercice 4", t:"La vitesse d'une voiture", w:"Sur ton cahier", h:`<p><b>a)</b> Une voiture roule à 75 km/h. Quelle est sa vitesse en m/s ? Arrondis au centième près.</p><p><b>b)</b> Une voiture roule à 12 m/s. Quelle est sa vitesse en km/h ?</p>`,
-   c:`<p><b>a)</b></p><p class="calc"><i>v</i> = 75 km/h<br><i>v</i> = ${F("75 000 m","3 600 s")}<br><i>v</i> ≈ <b>20,83 m/s</b></p><p><b>b)</b></p><p class="calc"><i>v</i> = 12 m/s<br><i>v</i> = ${F("12 × 3 600 m","3 600 s")}<br><i>v</i> = ${F("43 200 m","1 h")}<br><i>v</i> = <b>43,2 km/h</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Convertir des vitesses", w:"Sur ton cahier", h:`<p>Convertis :</p><p><b>a)</b> 108 km/h en m/s.</p><p><b>b)</b> 50 km/h en m/s.</p><p><b>c)</b> 40 m/s en km/h.</p><p><b>d)</b> 50 m/s en km/h.</p>`,
-   c:`<p><b>a)</b></p><p class="calc"><i>v</i> = 108 km/h<br><i>v</i> = ${F("108 000 m","3 600 s")}<br><i>v</i> = <b>30 m/s</b></p><p><b>b)</b></p><p class="calc"><i>v</i> = 50 km/h<br><i>v</i> = ${F("50 000 m","3 600 s")}<br><i>v</i> ≈ <b>13,89 m/s</b></p><p><b>c)</b> 40 m/s : 40 × 3 600 = 144 000 m en 1 h, soit <b>144 km/h</b></p><p><b>d)</b> 50 m/s : 50 × 3 600 = 180 000 m en 1 h, soit <b>180 km/h</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5 bis", t:"Course à pied", w:"Sur ton cahier", h:`<p>Arrondis chaque résultat au centième.</p><p><b>a)</b> J'ai couru 4 km en 22 min. Quelle est ma vitesse moyenne en m/s ?</p><p><b>b)</b> J'ai couru 9 km en 38 min. Quelle est ma vitesse moyenne en km/h ?</p><p><b>c)</b> Course de 15 km en 1 h 12 min. Vitesse moyenne en m/s ?</p><p><b>d)</b> Course de 20 km en 1 h 28 min. Vitesse moyenne en km/h ?</p>`,
-   c:`<p><b>a)</b> 4 km = 4 000 m et 22 min = 1 320 s :</p><p class="calc"><i>v</i> = ${F("4 000 m","1 320 s")}<br><i>v</i> ≈ <b>3,03 m/s</b></p>
-   <p><b>b)</b> 38 min = ${F(38,60)} h :</p><p class="calc"><i>v</i> = 9 ÷ ${F(38,60)}<br><i>v</i> = ${F("9 × 60",38)}<br><i>v</i> ≈ <b>14,21 km/h</b></p>
-   <p><b>c)</b> 15 km = 15 000 m et :</p><p class="calc"><i>t</i> = 1 h 12 min<br><i>t</i> = 72 min<br><i>t</i> = 4 320 s</p><p class="calc"><i>v</i> = ${F("15 000 m","4 320 s")}<br><i>v</i> ≈ <b>3,47 m/s</b></p>
-   <p><b>d)</b></p><p class="calc"><i>t</i> = 1 h 28 min<br><i>t</i> = 88 min<br><i>t</i> = ${F(88,60)} h</p><p class="calc"><i>v</i> = 20 ÷ ${F(88,60)}<br><i>v</i> = ${F("20 × 60",88)}<br><i>v</i> ≈ <b>13,64 km/h</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Course à pied", w:"Sur ton cahier", h:`<p>Ludivine court en moyenne à 10 km/h.</p><p><b>a)</b> Quelle distance parcourra-t-elle en 24 min ?</p><p><b>b)</b> Combien de temps mettra-t-elle, en heures et minutes, pour parcourir 39 km ?</p>`,
-   c:`${ptab({h1:"Durée (en h)",h2:"Distance (en km)",r1:["1","0,4","!3,9"],r2:["10","!4","39"],side:"× 10"})}<p><b>a)</b> La durée :</p><p class="calc"><i>t</i> = 24 min<br><i>t</i> = 24 ÷ 60 h<br><i>t</i> = 0,4 h</p><p>Distance : 10 × 0,4 = <b>4 km</b>.</p><p><b>b)</b> 39 ÷ 10 = 3,9 h. Et 0,9 × 60 = 54 min. Elle mettra <b>3 h 54 min</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Découvrir d'autres grandeurs composées", e:[
   {n:"Exercice 7", t:"Découverte de grandeurs composées", w:"Sur ton cahier", h:`<p><b>a)</b> Le débit <i><b>D</b></i> d'une connexion Internet est le quotient de la quantité de données <i><b>Q</b></i> (en bits) par la durée <i><b>t</b></i> (en s). Dans quelle unité est exprimé le débit <i><b>D</b></i> ?</p><p><b>b)</b> En physique, l'énergie <i><b>E</b></i> est égale au produit de la puissance <i><b>P</b></i> (en watts) par la durée <i><b>t</b></i> (en h). Dans quelle unité est exprimée l'énergie <i><b>E</b></i> ?</p>`,
-   c:`<p><b>a)</b> <i>D</i> = ${F("Q","t")} : le débit s'exprime en <b>bits/s</b> (bits par seconde). C'est une grandeur quotient.</p><p><b>b)</b> <i>E</i> = <i>P</i> × <i>t</i> : l'énergie s'exprime en W × h = <b>Wh</b> (wattheure). C'est une grandeur produit.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -202,3 +194,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-9");

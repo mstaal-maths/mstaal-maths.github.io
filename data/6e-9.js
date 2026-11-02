@@ -89,50 +89,47 @@ cours:[
 exos:[
 {t:"La notion d'angle", e:[
   {n:"Exercice 1", t:"Le vocabulaire", w:"Sur ta feuille", h:`<p>Voici quatre angles.</p>${ex("e1","Quatre angles : ABC, FED, LKJ, TSR",490)}<p>1) Complète le tableau : sommet, côtés et nom de chaque angle.</p><p>2) Donne deux autres noms possibles pour l'angle n°2.</p>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th></th><th>Angle n°1</th><th>Angle n°2</th><th>Angle n°3</th><th>Angle n°4</th></tr></thead><tbody><tr><th>Sommet</th><td>B</td><td>E</td><td>K</td><td>S</td></tr><tr><th>Côtés</th><td>[BA) et [BC)</td><td>[EF) et [ED)</td><td>[KL) et [KJ)</td><td>[ST) et [SR)</td></tr><tr><th>Nom</th><td>${A("ABC")}</td><td>${A("FED")}</td><td>${A("LKJ")}</td><td>${A("TSR")}</td></tr></tbody></table></div>
-   <p>Chaque angle peut aussi se lire dans l'autre sens : ${A("CBA")}, ${A("DEF")}, ${A("JKL")}, ${A("RST")}.</p><p>2) L'angle n°2 se nomme ${A("FED")} ou ${A("DEF")}. Le sommet E doit toujours rester <b>au milieu</b> : ${A("EFD")} ou ${A("FDE")} sont faux.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Quel angle est le plus grand ?", w:"Sur ta feuille", h:`<p>Les deux personnages regardent devant eux. L'angle orange représente leur champ de vision.</p>${ex("e2","Personnage 1 et personnage 2 avec leur champ de vision",360)}<p>Lequel a le plus grand champ de vision ? Justifie.</p>`,
-   c:`<p><b>Aucun : ils ont le même champ de vision.</b> Les deux angles ont la même ouverture (environ 45°).</p><p>Les côtés de l'angle du personnage 2 sont plus longs, mais la taille d'un angle ne dépend pas de la longueur de ses côtés : elle dépend seulement de son ouverture.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Nature et mesure d'un angle", e:[
   {n:"Exercice 3", t:"La nature d'un angle", w:"Sur ta feuille", h:`<p>À l'aide de ton équerre, indique la nature de chaque angle : aigu, droit ou obtus.</p>${ex("e3","Six angles a à f",400)}`,
-   c:`a) <b>aigu</b> · b) <b>droit</b> · c) <b>obtus</b> · d) <b>aigu</b> · e) <b>obtus</b> · f) <b>droit</b><p><i>On place l'angle droit de l'équerre sur le sommet et sur un côté : si l'autre côté est « dans » l'équerre, l'angle est aigu ; s'il est en dehors, il est obtus.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Un QCM", w:"Sur ta feuille", h:`<p>Sans rapporteur, entoure la bonne mesure de chaque angle. Les angles sont numérotés de 1 à 4.</p>${ex("e4","Quatre angles numérotés de 1 à 4",490)}<p>1) 30° · 80° · 100° &nbsp; 2) 80° · 100° · 150° &nbsp; 3) 80° · 100° · 140° &nbsp; 4) 75° · 85° · 95°</p>`,
-   c:`1) <b>30°</b> (angle très aigu) · 2) <b>100°</b> (un peu plus qu'un angle droit) · 3) <b>140°</b> (obtus, très ouvert) · 4) <b>85°</b> (un peu moins qu'un angle droit)`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Estimer la mesure d'un angle", w:"Sur ta feuille", h:`<p>Sans rapporteur, estime la mesure de chaque angle. Tu as droit à une erreur de 10°. Vérifie ensuite au rapporteur.</p>${ex("e5","Quatre angles numérotés de 1 à 4",490)}`,
-   c:`<p>Mesures au rapporteur (sur la fiche) : 1) <b>25°</b> · 2) <b>65°</b> · 3) <b>120°</b> · 4) <b>160°</b></p><p>Ton estimation est réussie si elle est à 10° près : par exemple, pour l'angle 2, une estimation entre 55° et 75°.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Mesurer un angle avec un rapporteur", e:[
   {n:"Activité 1", t:"Qui a raison ?", w:"Sur ta feuille", h:`${ex("act1","Le rapporteur posé sur l'angle ABC",260)}<p>Arthur dit que l'angle ${A("ABC")} mesure 28°. Clara dit qu'il mesure 152°.</p><p>1) Qui a raison ? Justifie sans mesurer.</p><p>2) Quelle erreur a faite l'autre ?</p>`,
-   c:`<p>1) <b>Arthur a raison.</b> L'angle ${A("ABC")} est aigu (il est plus petit qu'un angle droit) : sa mesure est entre 0° et 90°. 152° est la mesure d'un angle obtus : c'est impossible.</p><p>2) Clara a lu la <b>mauvaise graduation</b> : celle dont le 0 n'est pas sur le côté [BA). On remarque que 28 + 152 = 180.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Mesurer des angles", w:"Sur ta feuille", h:`<p>Mesure chaque angle avec ton rapporteur et complète. Pense à estimer d'abord !</p>${ex("e6","Six angles : xOy, ABC, FED, GHI, KLM, RST",490)}`,
-   c:`<div class="scroll"><table class="std"><tbody><tr><td>${A("xOy")} = <b>50°</b> (aigu)</td><td>${A("ABC")} = <b>125°</b> (obtus)</td><td>${A("FED")} = <b>38°</b> (aigu)</td></tr><tr><td>${A("GHI")} = <b>15°</b> (aigu)</td><td>${A("KLM")} = <b>160°</b> (obtus)</td><td>${A("RST")} = <b>95°</b> (obtus)</td></tr></tbody></table></div><p><i>Mesures faites sur la fiche imprimée. Une différence de 1° est acceptée.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Les angles d'une pendule", w:"Sur ta feuille", h:`<p>La première pendule indique 1 h 30, la seconde indique 2 h. Mesure l'angle codé entre les deux aiguilles.</p>${ex("e7","Deux pendules : 1 h 30 et 2 h",300)}<p>À 1 h 30 : …… ° · À 2 h : …… °</p><p>Sans mesurer, quelle est la mesure de l'angle à 3 h ? Et à 6 h ?</p>`,
-   c:`<p>Le cadran est partagé en 12 parts égales : entre deux nombres, il y a 360° ÷ 12 = 30°.</p><p>À 1 h 30 : la petite aiguille est au milieu entre 1 et 2, la grande sur 6 : 4,5 × 30 = <b>135°</b>.</p><p>À 2 h : 2 × 30 = <b>60°</b>.</p><p>À 3 h : 3 × 30 = <b>90°</b> (un angle droit). À 6 h : 6 × 30 = <b>180°</b> (un angle plat).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Construire un angle", e:[
   {n:"Activité 2", t:"Terminer une construction", w:"Sur ta feuille", h:`${ex("act2","Le rapporteur centré en C, avec des points numérotés",260)}<p>Mahé veut tracer l'angle ${A("BCF")}. Elle a tracé le côté [CB) et placé son rapporteur.</p><p>1) Pour que ${A("BCF")} = 40°, par quel point numéroté doit passer [CF) ?</p><p>2) Et pour que ${A("BCF")} = 130° ?</p><p>3) Le point 4 donne un angle de combien de degrés ?</p>`,
-   c:`<p>Le côté [CB) part vers la droite, sur le 0 de la graduation <b>extérieure</b> (en bleu) : c'est elle qu'il faut lire.</p><p>1) 40° : le <b>point 2</b>.</p><p>2) 130° : le <b>point 3</b>.</p><p>3) Le point 4 donne <b>140°</b>.</p><p><i>Les autres points : le point 1 donne 30°, le point 5 donne 50°.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Construire des angles", w:"Sur la feuille de constructions", h:`<p>Les constructions se font sur la <b>feuille de constructions</b> du chapitre (dans la partie suivante).</p>`,
-   c:`<p>Voir les corrections de la feuille de constructions ci-dessous.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Feuille de constructions", note:"<b>Matériel :</b> règle graduée, rapporteur, crayon bien taillé, gomme. Les figures sont en vraie grandeur sur la feuille imprimée : construis directement dessus, sans effacer tes traits de construction.", e:[
   {n:"Exercice 1", t:"Construire des angles", w:"Sur la feuille de constructions", h:`<p>Pour chaque angle, un côté est déjà tracé. Construis le second côté, puis code l'angle.</p><p>a) [Oy) tel que ${A("xOy")} = 35° · b) [BC) tel que ${A("ABC")} = 110° · c) [EF) tel que ${A("FED")} = 90° · d) [ST) tel que ${A("RST")} = 72° · e) [NP) tel que ${A("MNP")} = 145° · f) [VW) tel que ${A("UVW")} = 18°</p>${kk("k1","Les six côtés déjà tracés",470)}`,
-   c:`<p>Pour chaque angle : centre du rapporteur sur le sommet, 0 sur le côté déjà tracé, petit point en face de la mesure (sur la graduation qui part de ce 0), puis on trace le second côté et on code l'angle.</p>${kk("k1c","Les six angles construits et codés",470)}<p><i>Ici, le second côté est tracé au-dessus du côté donné ; il pourrait aussi être tracé en dessous.</i></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Une ligne brisée", w:"Sur la feuille de constructions", h:`<p>Le segment [AB] de 5 cm est déjà tracé. Construis :</p><p>1) le point C tel que ${A("ABC")} = 120° et BC = 4 cm, au-dessus de la droite (AB) ;</p><p>2) le point D tel que ${A("BCD")} = 75° et CD = 3 cm, comme sur le schéma ;</p><p>3) trace la ligne brisée ABCD.</p>${kk("k2s","Schéma à main levée de la ligne brisée",200)}${kk("k2","Le segment [AB]",440)}`,
-   c:`<p>1) Rapporteur centré en B, 0 sur [BA) : je marque 120°, je trace la demi-droite et je place C à 4 cm de B.</p><p>2) Rapporteur centré en C, 0 sur [CB) : je marque 75° du côté du schéma, puis je place D à 3 cm de C.</p>${kk("k2c","La ligne brisée ABCD construite",440)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Un éventail", w:"Sur la feuille de constructions", h:`<p>1) Construis la demi-droite [Oy) telle que ${A("xOy")} = 50°.</p><p>2) Construis la demi-droite [Oz) telle que ${A("yOz")} = 70°. La demi-droite [Oz) ne doit pas être à l'intérieur de l'angle ${A("xOy")}.</p><p>3) Sans mesurer, quelle doit être la mesure de l'angle ${A("xOz")} ? Vérifie avec ton rapporteur.</p>${kk("k3","La demi-droite [Ox)",440)}`,
-   c:`${kk("k3c","Les demi-droites [Oy) et [Oz)",440)}<p>3) [Oz) est à l'extérieur de l'angle ${A("xOy")} : les deux angles s'ajoutent. ${A("xOz")} = 50° + 70° = <b>120°</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"L'étoile à cinq branches", w:"Sur la feuille de constructions", h:`${kk("k4s","L'étoile ABCDE : pointes de 36°",160)}<p>On veut construire l'étoile ABCDE : ses cinq segments mesurent <b>8 cm</b> et chacune de ses cinq pointes forme un angle de <b>36°</b>. Le segment [AB] est déjà tracé.</p><p>1) Construis le point C tel que ${A("ABC")} = 36° et BC = 8 cm.</p><p>2) Continue de la même façon : ${A("BCD")} = 36° et CD = 8 cm, puis ${A("CDE")} = 36° et DE = 8 cm. Tourne toujours du même côté.</p><p>3) Trace le segment [EA]. Vérifie : si ta construction est précise, EA = 8 cm et ${A("DEA")} = 36°.</p><p>4) Colorie ton étoile.</p>${kk("k4","Le segment [AB]",400)}`,
-   c:`<p>On répète quatre fois la même construction : rapporteur centré sur le dernier point, 0 sur le segment précédent, petit point en face de 36°, puis on reporte 8 cm.</p>${kk("k4c","L'étoile ABCDE construite : ses cinq angles de 36° sont codés",340)}<p>3) Le segment [EA] (en bleu) mesure bien 8 cm, et ${A("DEA")} = 36° : l'étoile se referme.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Programmer un déplacement", e:[
   {n:"Exercice 9", t:"Quel tracé ?", w:"Sur ta feuille", h:`<p>Voici deux programmes Scratch.</p>${ex("e9","Programme A : répéter 3 fois avancer de 80 pas, tourner de 120 degrés. Programme B : répéter 6 fois avancer de 80 pas, tourner de 60 degrés.",490)}<p>1) Dessine, à main levée, la figure tracée par chaque programme.</p><p>2) Le programme A trace un triangle dont les trois angles mesurent 60°. Pourtant, le lutin tourne de 120°. Explique pourquoi à l'aide d'un schéma.</p>`,
-   c:`<div class="cgrid"><figure><figcaption>Programme A : un <b>triangle équilatéral</b> de côté 80 pas.</figcaption><svg class="fig" viewBox="0 0 170 150" width="170" role="img" aria-label="Triangle équilatéral"><polygon points="20,130 150,130 85,17.4" style="fill:none;stroke:${BLUE};stroke-width:2.5"/></svg></figure><figure><figcaption>Programme B : un <b>hexagone régulier</b> (6 côtés de 80 pas).</figcaption><svg class="fig" viewBox="0 0 170 150" width="170" role="img" aria-label="Hexagone régulier"><polygon points="50,135 120,135 155,74.4 120,13.8 50,13.8 15,74.4" style="fill:none;stroke:${BLUE};stroke-width:2.5"/></svg></figure></div>
-   <p>2) Le lutin tourne par rapport à la direction dans laquelle il avançait (le prolongement du côté). L'angle du triangle est entre les deux côtés : 180° − 120° = <b>60°</b>.</p>
-   <svg class="fig" viewBox="0 0 300 150" width="300" role="img" aria-label="Le lutin tourne de 120 degrés, l'angle du triangle mesure 60 degrés"><line x1="20" y1="120" x2="160" y2="120" class="ln"/><line x1="160" y1="120" x2="270" y2="120" style="stroke:#888;stroke-width:2;stroke-dasharray:6 5"/><line x1="160" y1="120" x2="100" y2="16" style="stroke:${BLUE};stroke-width:2.5"/><path d="M190 120 A30 30 0 0 0 145 94" style="fill:none;stroke:${RED};stroke-width:2"/><text x="196" y="96" style="font-size:14px;font-weight:700;fill:${RED}">120°</text><path d="M135 120 A25 25 0 0 1 147.5 98.4" style="fill:${ORANGE};fill-opacity:.25;stroke:${ORANGE};stroke-width:2"/><text x="104" y="112" style="font-size:14px;font-weight:700;fill:${ORANGE}">60°</text></svg>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Écrire un programme", w:"Sur ta feuille", h:`<p>Complète ce programme pour que le lutin trace un rectangle de 120 pas sur 60 pas.</p><p class="calc">quand le drapeau est cliqué<br>stylo en position d'écriture<br>répéter …… fois<br>&nbsp;&nbsp;&nbsp;avancer de …… pas<br>&nbsp;&nbsp;&nbsp;tourner ↻ de …… degrés<br>&nbsp;&nbsp;&nbsp;avancer de …… pas<br>&nbsp;&nbsp;&nbsp;tourner ↻ de …… degrés</p>`,
-   c:`<p class="calc">quand le drapeau est cliqué<br>stylo en position d'écriture<br>répéter <b>2</b> fois<br>&nbsp;&nbsp;&nbsp;avancer de <b>120</b> pas<br>&nbsp;&nbsp;&nbsp;tourner ↻ de <b>90</b> degrés<br>&nbsp;&nbsp;&nbsp;avancer de <b>60</b> pas<br>&nbsp;&nbsp;&nbsp;tourner ↻ de <b>90</b> degrés</p><p>Le motif « une longueur, un angle droit, une largeur, un angle droit » trace la moitié du rectangle : on le répète 2 fois.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -269,3 +266,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-9");

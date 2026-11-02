@@ -196,59 +196,52 @@ exos:[
    <p><b>1)</b> Complète le tableau directement sur la fiche. Compte chaque réponse en la barrant au fur et à mesure.</p>
    ${tab(["Moyen de transport","Bus","Vélo","À pied","Voiture","Total"],[["Effectif","","","","",""]])}
    <p><b>2)</b> Quelle est la fréquence du bus ? Écris-la sous forme d'une fraction irréductible, sur ton cahier.</p>`,
-   c:`<p><b>1)</b></p>${tab(["Moyen de transport","Bus","Vélo","À pied","Voiture","Total"],[["Effectif","9","4","7","4","24"]])}<p><b>2)</b> Fréquence du bus : ${F(9,24)} = ${F(3,8)} (on divise 9 et 24 par 3).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Calculer des fréquences", w:"Sur ta feuille", h:`<p>On a interrogé 25 élèves de la classe sur le nombre de frères et sœurs qu'ils ont. Complète directement sur la fiche.</p>
    ${tab(["Nombre de frères et sœurs","0","1","2","3","Total"],[["Effectif","5","11","6","3",""],["Fréquence (fraction)","","","","",""],["Fréquence (nombre décimal)","","","","",""],["Fréquence (pourcentage)","","","","",""]])}
    <p>Vérifie que la somme des fréquences en pourcentage vaut 100 %.</p>`,
-   c:`${tab(["Nombre de frères et sœurs","0","1","2","3","Total"],[["Effectif","5","11","6","3","25"],["Fréquence (fraction)",F(5,25),F(11,25),F(6,25),F(3,25),"1"],["Fréquence (nombre décimal)","0,2","0,44","0,24","0,12","1"],["Fréquence (pourcentage)","20 %","44 %","24 %","12 %","100 %"]])}
-   <p>20 + 44 + 24 + 12 = 100 : la somme des fréquences est bien 100 %.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Fréquences et comparaison", w:"Sur ton cahier", h:`<p>Dans une classe de 28 élèves, 7 portent des lunettes, 14 ont les cheveux bruns et 21 sont nés avant juillet.</p>
    <p><b>a)</b> Calcule la fréquence de chaque caractéristique sous forme de fraction irréductible, puis en pourcentage.</p>
    <p><b>b)</b> Dans une autre classe, 9 élèves sur 30 portent des lunettes. Dans quelle classe la proportion d'élèves qui portent des lunettes est-elle la plus grande ?</p>`,
-   c:`<p>Fréquence f = ${F("effectif","effectif total")}. On simplifie la fraction, puis on l'écrit sur 100.</p><p><b>a)</b> Lunettes :</p>${KC("f",[F(7,28),F(1,4),F(25,100),"25 %"])}<p>Cheveux bruns :</p>${KC("f",[F(14,28),F(1,2),F(50,100),"50 %"])}<p>Nés avant juillet :</p>${KC("f",[F(21,28),F(3,4),F(75,100),"75 %"])}
-   <p><b>b)</b> Dans l'autre classe :</p>${KC("f",[F(9,30),"0,3","30 %"])}<p>30 % &gt; 25 % : la proportion est plus grande dans l'autre classe.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Lire et construire des représentations", e:[
   {n:"Exercice 3", t:"Lire un diagramme en barres", w:"Sur ton cahier", h:`<p>Le diagramme en barres ci-dessous donne le nombre de livres empruntés au CDI selon les jours de la semaine.</p>${E3}
    <p><b>a)</b> Combien de livres ont été empruntés le jeudi ? le vendredi ?</p><p><b>b)</b> Quel jour y a-t-il eu le plus d'emprunts ? Combien de fois plus que le vendredi ?</p><p><b>c)</b> Quel est le nombre total de livres empruntés ? Calcule la fréquence du lundi en pourcentage.</p>`,
-   c:`<p><b>a)</b> Jeudi : 15 livres ; vendredi : 5 livres.</p><p><b>b)</b> Le jeudi (15 livres). 15 ÷ 5 = 3 : trois fois plus que le vendredi.</p><p><b>c)</b> Total : 12 + 8 + 15 + 5 = 40 livres.</p><p>Fréquence du lundi :</p>${KC("f",[F(12,40),"0,3","30 %"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Construire un diagramme en barres", w:"Sur ton cahier", h:`<p>Les élèves d'un club choisissent leur sport :</p>${tab(["Sport","Football","Basket","Judo","Danse"],[["Nombre d'élèves","12","8","6","4"]])}
    <p>Construis un diagramme en barres :</p><p>axe vertical : 1 cm pour 2 élèves ;</p><p>barres de 1 cm de largeur, espacées de 1 cm.</p><p>N'oublie pas le titre et les graduations.</p>`,
-   c:`<p>1 cm pour 2 élèves : on divise chaque effectif par 2 pour avoir la hauteur de la barre.</p><p>Football : 12 ÷ 2 = 6 cm ; Basket : 8 ÷ 2 = 4 cm.</p><p>Judo : 6 ÷ 2 = 3 cm ; Danse : 4 ÷ 2 = 2 cm.</p>${E4c}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Construire un diagramme circulaire", w:"Sur ta feuille et sur ton cahier", h:`<p>À la cantine, 24 élèves ont choisi leur plat : voici les effectifs. Le diagramme circulaire complet représente 24 élèves, soit 360°.</p>
    ${tab(["Plat","Poisson","Viande","Végétarien","Œufs","Total"],[["Effectif","6","9","6","3","24"],["Angle (en degrés)","","","","","360"]])}
    <p><b>1)</b> Complète directement sur la fiche le tableau des angles (proportionnalité).</p><p><b>2)</b> Construis sur ton cahier le diagramme circulaire (rayon 4 cm, rapporteur).</p>`,
-   c:`${tab(["Plat","Poisson","Viande","Végétarien","Œufs","Total"],[["Effectif","6","9","6","3","24"],["Angle (en degrés)","90","135","90","45","360"]])}
-   <p><b>1)</b> 360 ÷ 24 = 15 : 1 élève correspond à 15°. Donc 6 × 15 = 90°, 9 × 15 = 135°, 3 × 15 = 45°. Vérification : 90 + 135 + 90 + 45 = 360.</p>
-   <p><b>2)</b> On trace un cercle de rayon 4 cm et un rayon. Puis on trace les secteurs de 90°, 135°, 90° et 45° les uns à la suite des autres.</p>${E5c}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Lire un diagramme circulaire", w:"Sur ton cahier", h:`<p>Le diagramme circulaire représente le moyen de transport des 200 élèves d'un collège.</p>${E6}
    <p><b>a)</b> Quel moyen de transport est le plus utilisé ? le moins utilisé ?</p><p><b>b)</b> Calcule le nombre d'élèves pour chaque moyen de transport.</p><p><b>c)</b> Quelle fraction des élèves vient à pied ou à vélo ?</p>`,
-   c:`<p><b>a)</b> Le plus utilisé : le bus (40 %). Le moins utilisé : le vélo (15 %).</p>
-   <p><b>b)</b> Bus : 200 × ${F(40,100)} = 80 élèves.</p><p>Vélo : 200 × ${F(15,100)} = 30 élèves.</p><p>À pied : 200 × ${F(25,100)} = 50 élèves.</p><p>Voiture : 200 × ${F(20,100)} = 40 élèves.</p><p>Total : 80 + 30 + 50 + 40 = 200.</p>
-   <p><b>c)</b> La fraction f des élèves qui viennent à pied ou à vélo :</p>${KC("f",["25 % + 15 %","40 %",F(40,100),F(2,5)])}<p>${F(2,5)} des élèves viennent à pied ou à vélo.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Lire un graphique cartésien", w:"Sur ton cahier", h:`<p>On a relevé la température à Cholet un jour de printemps.</p>${E7}
    <p><b>a)</b> Quelle était la température à 10 h ? à 16 h ?</p><p><b>b)</b> À quelle heure la température relevée est-elle maximale ? Quelle est cette température ?</p><p><b>c)</b> Pendant quelle période de relevés la température a-t-elle baissé ?</p><p><b>d)</b> De combien de degrés la température a-t-elle augmenté entre 6 h et 14 h ?</p>`,
-   c:`<p><b>a)</b> À 10 h : 13 °C ; à 16 h : 17 °C.</p><p><b>b)</b> Maximum à 14 h : 18 °C.</p><p><b>c)</b> Entre 14 h et 18 h (de 18 °C à 13 °C).</p><p><b>d)</b> 18 − 7 = 11 : la température a augmenté de 11 °C.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Construire un graphique cartésien", w:"Sur ton cahier", h:`<p>On mesure la taille d'une plante chaque semaine.</p>${tab(["Semaine","0","1","2","3","4"],[["Taille (cm)","2","5","9","12","14"]])}
    <p>Construis un graphique cartésien :</p><p>en abscisse, la semaine (1 cm pour 1 semaine) ;</p><p>en ordonnée, la taille (1 cm pour 2 cm).</p><p>Place les points puis relie-les.</p>`,
-   c:`<p>On place un point pour chaque colonne du tableau :</p><p>(0 ; 2), (1 ; 5), (2 ; 9), (3 ; 12) et (4 ; 14).</p><p>L'abscisse est la semaine, l'ordonnée est la taille en cm.</p>${E8c}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Choisir une représentation", w:"Sur ton cahier", h:`<p>Pour chaque situation, indique en une phrase la représentation la plus adaptée : diagramme en barres, diagramme circulaire ou graphique cartésien.</p>
    <p><b>a)</b> L'évolution de la population d'une ville de 1950 à 2020.</p><p><b>b)</b> La comparaison du nombre de médailles de 5 pays aux Jeux olympiques.</p><p><b>c)</b> La répartition du budget d'une famille (logement, nourriture, loisirs, autres).</p>`,
-   c:`<p><b>a)</b> Un graphique cartésien : on suit une évolution au cours du temps.</p><p><b>b)</b> Un diagramme en barres : on compare des effectifs.</p><p><b>c)</b> Un diagramme circulaire : on montre la répartition d'un tout.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La moyenne", e:[
   {n:"Exercice 10", t:"Calculer une moyenne", w:"Sur ton cahier", h:`<p>Calcule la moyenne de chaque série.</p><p><b>a)</b> 5 ; 8 ; 11 ; 12 ; 14</p><p><b>b)</b> 7 ; 9 ; 12 ; 8 ; 14</p><p><b>c)</b> 1,52 m ; 1,48 m ; 1,60 m ; 1,56 m</p><p><b>d)</b> 2,5 ; 4 ; 3,5 ; 6</p>`,
-   c:`<p>La moyenne M de chaque série :</p><p><b>a)</b></p>${KC("M",["(5 + 8 + 11 + 12 + 14) ÷ 5","50 ÷ 5","10"])}<p><b>b)</b></p>${KC("M",["(7 + 9 + 12 + 8 + 14) ÷ 5","50 ÷ 5","10"])}<p><b>c)</b></p>${KC("M",["(1,52 + 1,48 + 1,60 + 1,56) ÷ 4","6,16 ÷ 4","1,54 m"])}<p><b>d)</b></p>${KC("M",["(2,5 + 4 + 3,5 + 6) ÷ 4","16 ÷ 4","4"])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Températures de la semaine", w:"Sur ton cahier", h:`<p>Voici les températures maximales relevées pendant une semaine à Cholet :</p><p>14 °C ; 16 °C ; 15 °C ; 11 °C ; 13 °C ; 17 °C ; 18 °C.</p>
    <p><b>a)</b> Quelle est la température maximale moyenne de la semaine ?</p><p><b>b)</b> Quelle est la différence entre la température la plus haute et la plus basse ?</p>`,
-   c:`<p><b>a)</b> Somme : 14 + 16 + 15 + 11 + 13 + 17 + 18 = 104. Moyenne : 104 ÷ 7 ≈ 14,9 °C.</p><p><b>b)</b> 18 − 11 = 7 : l'écart est de 7 °C.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Pour aller plus loin : raisonner avec la moyenne", w:"Sur ton cahier", h:`<p><b>a)</b> Léa a obtenu 11, 14 et 8 à ses trois premiers devoirs. Quelle note doit-elle obtenir au quatrième pour avoir 12 de moyenne ?</p>
    <p><b>b)</b> La moyenne de la classe de 5eA est 12,4 et celle de 5eB est 11,8. Peut-on affirmer que chaque élève de 5eA a une meilleure note que chaque élève de 5eB ? Explique.</p>`,
-   c:`<p><b>a)</b> Pour avoir 12 de moyenne sur 4 devoirs, la somme doit valoir 4 × 12 = 48. Les trois premières notes font 11 + 14 + 8 = 33. Il faut donc 48 − 33 = 15.</p>
-   <p><b>b)</b> Non : la moyenne résume la série par un seul nombre. Un élève de 5eB peut avoir une meilleure note qu'un élève de 5eA, même si la moyenne de 5eA est plus élevée.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Pour aller plus loin : Florence Nightingale", w:"Sur ton cahier", h:`<p>Florence Nightingale (1820-1910), infirmière et statisticienne britannique, a utilisé des diagrammes circulaires colorés. Pendant la guerre de Crimée, elle voulait convaincre les responsables de l'armée que les maladies tuaient plus de soldats que les blessures.</p>
    <p><b>1)</b> Pourquoi un diagramme est-il souvent plus convaincant qu'un tableau de nombres ?</p><p><b>2)</b> Cherche un autre exemple d'une situation où une représentation graphique a servi à mieux comprendre ou à convaincre.</p>`,
-   c:`<p><b>1)</b> Un diagramme permet de comparer les données d'un seul coup d'œil, sans avoir à lire tous les nombres.</p><p><b>2)</b> Réponse libre (par exemple : courbe de température d'un malade, graphique de l'évolution du climat…).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -382,3 +375,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-13");

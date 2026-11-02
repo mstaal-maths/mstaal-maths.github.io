@@ -165,13 +165,11 @@ cours:[
 exos:[
 {t:"Preuve et arithmétique", e:[
   {n:"Activité", t:"Trois nombres consécutifs", w:"Sur ton cahier", h:`<p>« La somme de trois nombres entiers positifs consécutifs est toujours un multiple de 3. »</p><p>Prouve que cette affirmation est vraie.</p>`,
-   c:`<p>Au brouillon : 4 + 5 + 6 = 15 = 3 × 5 ; 10 + 11 + 12 = 33 = 3 × 11.</p><p>Pour le prouver pour tous les nombres, on écrit trois nombres consécutifs : ${n}, ${n} + 1 et ${n} + 2.</p>
-   ${calc([`S = ${n} + (${n} + 1) + (${n} + 2)`,`S = 3${n} + 3`,`S = 3(${n} + 1)`])}<p>La somme est de la forme 3 × (${n} + 1) : c'est toujours un <b>multiple de 3</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Ex 1", t:"Somme de deux nombres pairs", w:"Sur ton cahier", h:`<p>Prouve que la somme de deux nombres pairs est un nombre pair.</p>`,
-   c:`<p>Soit P = 2${n} et P' = 2${n}' deux nombres pairs (${n} et ${n}' sont des nombres entiers).</p>${calc(["S = P + P'",`S = 2${n} + 2${n}'`,`S = 2(${n} + ${n}')`])}<p>La somme est de la forme 2 × (${n} + ${n}') : c'est un <b>nombre pair</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Ex 2", t:"L'affirmation de Zoé", w:"Sur ton cahier", h:`<p>Zoé affirme : « La somme de cinq nombres entiers positifs consécutifs est égale au quintuple du troisième. »</p><p>Qu'en penses-tu ? Explique.</p>`,
-   c:`<p>Exemple : 3 + 4 + 5 + 6 + 7 = 25 et 5 × 5 = 25.</p><p>On écrit cinq nombres consécutifs : ${n}, ${n} + 1, ${n} + 2, ${n} + 3 et ${n} + 4. Le troisième est ${n} + 2.</p>
-   ${calc([`S = ${n} + (${n} + 1) + (${n} + 2) + (${n} + 3) + (${n} + 4)`,`S = 5${n} + 10`,`S = 5(${n} + 2)`])}<p>La somme est égale à 5 × (${n} + 2), le quintuple du troisième nombre : <b>Zoé a raison</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Ex 3", t:"Brevet (septembre 2014, France)", w:"Sur ton cahier", h:`<p>Léa pense qu'en multipliant deux nombres impairs consécutifs (c'est-à-dire qui se suivent) et en ajoutant 1, le résultat obtenu est toujours un multiple de 4.</p>
    <p><b>1. Étude d'un exemple :</b> 5 et 7 sont deux nombres impairs consécutifs.</p><p><b>a.</b> Calcule 5 × 7 + 1.</p><p><b>b.</b> Léa a-t-elle raison pour cet exemple ?</p>
    <p><b>2.</b> Le tableau ci-dessous montre le travail qu'elle a réalisé dans une feuille de calcul.</p>${TAB}
@@ -179,10 +177,7 @@ exos:[
    <p><b>c.</b> Parmi les quatre formules de calcul suivantes, deux formules ont pu être saisies dans la cellule D3. Lesquelles ? Aucune justification n'est attendue.</p>
    <div class="calcs"><span>Formule 1 : =(2*A3+1)*(2*A3+3)</span><span>Formule 2 : =(2*B3+1)*(2*C3+3)</span><span>Formule 3 : =B3*C3</span><span>Formule 4 : =(2*D3+1)*(2*D3+3)</span></div>
    <p><b>3. Étude algébrique :</b></p><p><b>a.</b> Développe et réduis l'expression (2${x} + 1)(2${x} + 3) + 1.</p><p><b>b.</b> Montre que Léa avait raison : le résultat obtenu est toujours un multiple de 4.</p>`,
-   c:`<p><b>1. a.</b> 5 × 7 + 1 = 35 + 1 = 36 = 4 × 9.</p><p><b>b.</b> Oui : 36 est un multiple de 4.</p>
-   <p><b>2. a.</b> 17 est dans la colonne B pour ${x} = 8 : on obtient 17 × 19 + 1 = <b>324</b>.</p><p><b>b.</b> 324 = 320 + 4 = 4 × 80 + 4 × 1 = 4 × (80 + 1) = 4 × 81.</p>
-   <p><b>c.</b> Les formules <b>1 et 3</b> donnent le bon produit : la formule 1 calcule (2${x} + 1)(2${x} + 3) avec ${x} en A3, et la formule 3 multiplie B3 par C3. (La formule 2 calculerait (2 × 1 + 1) × (2 × 3 + 3) = 27 au lieu de 3.)</p>
-   <p><b>3. a.</b></p>${dv("A","(2x+1)(2x+3)+1")}<p><b>b.</b> 4${x}² + 8${x} + 4 = 4 × ${x}² + 4 × 2${x} + 4 × 1 = 4(${x}² + 2${x} + 1).</p><p>Si ${x} est un entier, ${x}² + 2${x} + 1 est un entier : le résultat est toujours un <b>multiple de 4</b>. Léa avait raison.</p><p>On a même (2${x} + 1)(2${x} + 3) + 1 = 4(${x} + 1)².</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -231,3 +226,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("3e-21");

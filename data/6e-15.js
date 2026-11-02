@@ -88,35 +88,35 @@ cours:[
 exos:[
 {t:"Angles adjacents", e:[
   {n:"Exercice 1", t:"Adjacents ou pas ?", w:"Sur ta feuille", h:`<p>Dans chaque cas, les deux angles colorés sont-ils adjacents ? Si non, explique pourquoi.</p>${ex("e1","Quatre paires d'angles colorés",490)}<p>a) ${A("AOB")} et ${A("BOC")} · b) ${A("DOE")} et ${A("DOF")} · c) ${A("IGK")} et ${A("JHK")} · d) ${A("LON")} et ${A("NOM")}</p>`,
-   c:`<p>a) <b>Oui</b> : même sommet O, côté commun [OB), et ils sont de part et d'autre de [OB).</p><p>b) <b>Non</b> : ils ont le même sommet et le côté commun [OD), mais ils sont du même côté de [OD) : ils se chevauchent.</p><p>c) <b>Non</b> : ils n'ont pas le même sommet (G et H).</p><p>d) <b>Oui</b> : même sommet O, côté commun [ON), de part et d'autre. (En plus, ils sont supplémentaires.)</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Ajouter des angles adjacents", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Sur cette figure à main levée, ${A("AOB")} = 35°, ${A("BOC")} = 50° et ${A("AOD")} = 140°.</p><p>1) Calcule ${A("AOC")}.</p><p>2) Calcule ${A("COD")}.</p><p>3) Nomme deux angles adjacents à l'angle ${A("BOC")}.</p></div>${ex("e2","Quatre demi-droites issues de O",230)}</div>`,
-   c:`<p>1) ${A("AOB")} et ${A("BOC")} sont adjacents :</p>${KC(A("AOC"),["35° + 50°","<b>85°</b>"])}<p>2) ${A("AOC")} et ${A("COD")} sont adjacents :</p>${KC(A("COD"),[`${A("AOD")} − ${A("AOC")}`,"140° − 85°","<b>55°</b>"])}<p>3) ${A("AOB")} (côté commun [OB)) et ${A("COD")} (côté commun [OC)).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Angles complémentaires et supplémentaires", e:[
   {n:"Exercice 3", t:"Compléter un tableau", w:"Sur ta feuille", h:`<p>Complète le tableau. Si ce n'est pas possible, écris une croix.</p><div class="scroll"><table class="std"><thead><tr><th>Mesure de l'angle</th><th>30°</th><th>45°</th><th>72°</th><th>89°</th><th>15,5°</th><th>120°</th></tr></thead><tbody><tr><th>Angle complémentaire</th><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>Angle supplémentaire</th><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div><p>Pourquoi un angle de 120° n'a-t-il pas d'angle complémentaire ?</p>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Mesure de l'angle</th><th>30°</th><th>45°</th><th>72°</th><th>89°</th><th>15,5°</th><th>120°</th></tr></thead><tbody><tr><th>Angle complémentaire</th><td>60°</td><td>45°</td><td>18°</td><td>1°</td><td>74,5°</td><td>✗</td></tr><tr><th>Angle supplémentaire</th><td>150°</td><td>135°</td><td>108°</td><td>91°</td><td>164,5°</td><td>60°</td></tr></tbody></table></div><p>120° est déjà plus grand que 90° : aucun angle ne peut s'ajouter à 120° pour faire 90°.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Vrai ou faux ?", w:"Sur ta feuille", h:`<p>Réponds par vrai ou faux, et justifie par un exemple ou une explication.</p><p>a) Deux angles de 45° sont complémentaires.</p><p>b) Deux angles aigus peuvent être supplémentaires.</p><p>c) Deux angles supplémentaires sont toujours adjacents.</p><p>d) Deux angles supplémentaires de même mesure sont des angles droits.</p>`,
-   c:`<p>a) <b>Vrai</b> : 45° + 45° = 90°.</p><p>b) <b>Faux</b> : deux angles aigus mesurent chacun moins de 90°, donc leur somme est plus petite que 180°.</p><p>c) <b>Faux</b> : par exemple, un angle de 60° dans un coin de la feuille et un angle de 120° dans un autre coin sont supplémentaires sans être adjacents.</p><p>d) <b>Vrai</b> : chacun mesure 180° ÷ 2 = 90°.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Calculer un angle", w:"Sur ta feuille", h:`<p>Les figures sont faites à main levée. Dans a) et c), les points A, O et B sont alignés. Calcule la mesure de l'angle marqué « ? » en justifiant.</p>${ex("e5","Trois figures avec un angle inconnu",490)}`,
-   c:`<p>a) ${A("AOC")} et ${A("COB")} sont supplémentaires (A, O et B sont alignés) :</p>${KC(A("COB"),["180° − 47°","<b>133°</b>"])}<p>b) ${A("xOy")} et ${A("yOz")} sont complémentaires (${A("xOz")} est droit) :</p>${KC(A("yOz"),["90° − 28°","<b>62°</b>"])}<p>c) Les trois angles forment un angle plat (A, O et B sont alignés) :</p>${KC(A("DOB"),["180° − (35° + 90°)","180° − 125°","<b>55°</b>"])}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Angles opposés par le sommet", e:[
   {n:"Exercice 6", t:"Deux droites sécantes", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Les droites (AC) et (BD) se coupent en O, et ${A("AOB")} = 63°. Calcule, en justifiant :</p><p>1) ${A("COD")} · 2) ${A("BOC")} · 3) ${A("DOA")}</p></div>${ex("e6","Les droites (AC) et (BD) sécantes en O",200)}</div>`,
-   c:`<p>1) ${A("COD")} = <b>63°</b>, car ${A("COD")} et ${A("AOB")} sont opposés par le sommet.</p><p>2) ${A("AOB")} et ${A("BOC")} sont supplémentaires (A, O et C sont alignés) :</p>${KC(A("BOC"),["180° − 63°","<b>117°</b>"])}<p>3) ${A("DOA")} = <b>117°</b>, car ${A("DOA")} et ${A("BOC")} sont opposés par le sommet.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Défi — trois droites", w:"Sur ta feuille", h:`<div class="cpt"><div><p>Les droites (AD), (BE) et (CF) se coupent en O. On sait que ${A("AOB")} = 40° et ${A("BOC")} = 75°.</p><p>Calcule la mesure des quatre autres angles en justifiant : ${A("COD")}, ${A("DOE")}, ${A("EOF")}, ${A("FOA")}.</p></div>${ex("e7","Trois droites sécantes en O",210)}</div>`,
-   c:`<p>A, O et D sont alignés : ${A("AOB")}, ${A("BOC")} et ${A("COD")} forment un angle plat.</p>${KC(A("COD"),["180° − (40° + 75°)","180° − 115°","<b>65°</b>"])}<p>${A("DOE")} = ${A("AOB")} = <b>40°</b> (opposés par le sommet).</p><p>${A("EOF")} = ${A("BOC")} = <b>75°</b> (opposés par le sommet).</p><p>${A("FOA")} = ${A("COD")} = <b>65°</b> (opposés par le sommet).</p><p><i>Vérification : 40 + 75 + 65 + 40 + 75 + 65 = 360, un tour complet.</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"La bissectrice d'un angle", e:[
   {n:"Activité 1", t:"Le pliage", w:"Sur ta feuille", h:`<p>Découpe un angle dans une feuille de papier. Plie la feuille pour que les deux côtés de l'angle se superposent, puis déplie.</p><p>1) Que peux-tu dire des deux angles formés par le pli ? Vérifie avec ton rapporteur.</p><p>2) Que représente le pli pour l'angle de départ ?</p>`,
-   c:`<p>1) Les deux angles formés par le pli sont <b>adjacents et de même mesure</b> : chacun mesure la moitié de l'angle de départ.</p><p>2) Le pli est la <b>bissectrice</b> de l'angle ; c'est aussi son axe de symétrie.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Avec le rapporteur", w:"Sur ta feuille", h:`<p>Mesure chaque angle, puis construis sa bissectrice avec le rapporteur. Nomme-la [Oz) pour a) et [Sw) pour b).</p>${ex("e8","a) l'angle xOy ; b) l'angle uSv",490)}`,
-   c:`<p>a) ${A("xOy")} = <b>80°</b>, donc ${A("xOz")} = <b>40°</b> ; b) ${A("uSv")} = <b>130°</b>, donc ${A("uSw")} = <b>65°</b>. <i>(À 1° près selon ta mesure : on divise toujours la mesure par 2.)</i></p>${ex("e8c","Les bissectrices [Oz) et [Sw)",490)}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"Avec le compas", w:"Sur ta feuille", h:`<p>Construis la bissectrice de chaque angle avec le compas seulement. Laisse tes traits de construction visibles.</p>${ex("e9","Trois angles de sommets E, F et G",490)}`,
-   c:`${ex("e9c","Les trois bissectrices construites au compas",490)}<p>Arc de centre le sommet (points A et B), puis deux arcs de même rayon de centres A et B (point C), puis la demi-droite issue du sommet et passant par C.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Calculer avec la bissectrice", w:"Sur ta feuille", h:`<p>Dans chaque cas, [Oz) est la bissectrice de l'angle ${A("xOy")}.</p><p>1) ${A("xOz")} = 37°. Calcule ${A("xOy")}.</p><p>2) ${A("xOy")} = 151°. Calcule ${A("zOy")}.</p><p>3) ${A("xOy")} est un angle droit. Calcule ${A("xOz")}.</p>`,
-   c:`<p>[Oz) partage ${A("xOy")} en deux angles de même mesure.</p>${KCS([KC(A("xOy"),["2 × 37°","<b>74°</b>"],"1)"), KC(A("zOy"),["151° ÷ 2","<b>75,5°</b>"],"2)"), KC(A("xOz"),["90° ÷ 2","<b>45°</b>"],"3)")])}`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Pour aller plus loin", w:"Sur ton cahier", h:`<p>1) Construis un triangle ABC tel que AB = 7 cm, BC = 6 cm et AC = 5 cm.</p><p>2) Construis les bissectrices des trois angles du triangle (avec la méthode de ton choix).</p><p>3) Que remarques-tu ? Compare avec les médiatrices d'un triangle (chapitre 6).</p>`,
-   c:`${tri11}<p>1) Règle et compas, comme au chapitre 6 (trois longueurs).</p><p>2) Les trois bissectrices sont tracées en rouge sur la figure.</p><p>3) Les trois bissectrices se coupent <b>en un même point</b>, comme les trois médiatrices. Ce point est le centre d'un cercle qui touche les trois côtés du triangle (en pointillés), à l'intérieur du triangle. <i>(Le point de rencontre des médiatrices, lui, est le centre du cercle qui passe par les trois sommets.)</i></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -215,3 +215,4 @@ exos:[
 })()
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("6e-15");

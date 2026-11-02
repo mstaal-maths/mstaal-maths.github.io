@@ -231,70 +231,55 @@ exos:[
 {t:"Rappels : unités de volume et conversions", e:[
   {n:"Activité 1", t:"Différentes tailles de sac poubelle", w:"Sur ton cahier", h:`<div class="figs">${ex("poubelle.png","Poubelle cylindrique",110)}</div>
    <p>Mathilde vient d'acheter une poubelle de forme cylindrique.</p><p>Sa hauteur est 55 cm et son diamètre est 26,5 cm.</p><p>Elle hésite sur la capacité des sacs-poubelles à mettre à l'intérieur.</p><p>Doit-elle choisir des sacs de 10 L, 30 L ou 50 L ?</p>`,
-   c:`<p>Rayon : 26,5 ÷ 2 = 13,25 cm.</p><p class="calc">V = π × r² × h<br>V = π × 13,25² × 55<br>V ≈ 30 335 cm³</p><p>1 L = 1 dm³ = 1 000 cm³, donc V ≈ 30,3 L.</p><p>Elle doit choisir des <b>sacs de 30 L</b> (10 L est trop petit, 50 L est beaucoup trop grand).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 1", t:"Conversions", w:"Sur ta feuille", h:`<p><b>Partie 1</b></p><p>a) 45 m³ = ………… dm³</p><p>b) 3,1 m³ = ………… dm³</p><p>c) 500 dm³ = ………… m³</p><p>d) 0,0053 m³ = ………… dm³</p><p>e) 48,5 dm³ = ………… m³</p><p>f) 5,67 cm³ = ………… mm³</p><p>g) 78 dam³ = ………… m³</p><p>h) 0,00024 m³ = ………… cm³</p><p>i) 86 cm³ = ………… dm³</p>
    <p><b>Partie 2</b></p><p>a) 86 dm³ = ………… L</p><p>b) 4 m³ = ………… L</p><p>c) 500 cm³ = ………… L</p><p>d) 63 L = ………… m³</p><p>e) 7 854 cm³ = ………… L</p><p>f) 3 000 cm³ = ………… mL</p><p>g) 12,5 hL = ………… cm³</p><p>h) 0,73 dL = ………… dm³</p><p>i) 25 cm³ = ………… L</p>`,
-   c:`<p><b>Partie 1</b> (1 m³ = 1 000 dm³ ; 1 dm³ = 1 000 cm³ ; 1 cm³ = 1 000 mm³ ; 1 dam³ = 1 000 m³)</p><p>a) 45 × 1 000 = 45 000 : 45 m³ = <b>45 000 dm³</b> · b) 3,1 × 1 000 = 3 100 : 3,1 m³ = <b>3 100 dm³</b> · c) 500 ÷ 1 000 = 0,5 : 500 dm³ = <b>0,5 m³</b> · d) 0,0053 × 1 000 = 5,3 : 0,0053 m³ = <b>5,3 dm³</b> · e) 48,5 ÷ 1 000 = 0,0485 : 48,5 dm³ = <b>0,0485 m³</b> · f) 5,67 × 1 000 = 5 670 : 5,67 cm³ = <b>5 670 mm³</b> · g) 78 × 1 000 = 78 000 : 78 dam³ = <b>78 000 m³</b> · h) 1 m³ = 1 000 000 cm³ et 0,00024 × 1 000 000 = 240 : 0,00024 m³ = <b>240 cm³</b> · i) 86 ÷ 1 000 = 0,086 : 86 cm³ = <b>0,086 dm³</b></p>
-   <p><b>Partie 2</b> (1 L = 1 dm³ ; 1 m³ = 1 000 L ; 1 cm³ = 1 mL)</p><p>a) 1 dm³ = 1 L : 86 dm³ = <b>86 L</b> · b) 4 × 1 000 = 4 000 : 4 m³ = <b>4 000 L</b> · c) 500 cm³ = 0,5 dm³ (500 ÷ 1 000) : 500 cm³ = <b>0,5 L</b> · d) 63 L = 63 dm³ et 63 ÷ 1 000 = 0,063 : 63 L = <b>0,063 m³</b> · e) 7 854 cm³ = 7,854 dm³ (7 854 ÷ 1 000) : 7 854 cm³ = <b>7,854 L</b> · f) 1 cm³ = 1 mL : 3 000 cm³ = <b>3 000 mL</b> · g) 1 hL = 100 L : 12,5 hL = 1 250 L = 1 250 dm³ = <b>1 250 000 cm³</b> (1 250 × 1 000) · h) 1 L = 10 dL : 0,73 dL = 0,073 L = <b>0,073 dm³</b> · i) 25 cm³ = 25 mL et 1 L = 1 000 mL : 25 cm³ = <b>0,025 L</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Un intrus", w:"Sur ton cahier", h:`<p>Parmi la liste de volumes suivante, il y a un intrus ! Retrouve-le.</p>
    <p class="calc">380 000 dm³ &nbsp;·&nbsp; 3 800 000 dL &nbsp;·&nbsp; 0,380 dam³ &nbsp;·&nbsp; 380 m³ &nbsp;·&nbsp; 380 000 L &nbsp;·&nbsp; 3 800 000 cm³</p>`,
-   c:`<p>On convertit tout en m³ :</p><p>380 000 dm³ = 380 m³ · 3 800 000 dL = 380 000 L = 380 m³ · 0,380 dam³ = 380 m³ · 380 000 L = 380 m³</p><p>Mais 3 800 000 cm³ = 3 800 dm³ = 3,8 m³.</p><p>L'intrus est <b>3 800 000 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"Grandeurs égales", w:"Sur ta feuille", h:`<p>Trouve un chemin qui permet d'aller de A à B en reliant les bulles correspondant à des grandeurs égales.</p>${ex("chemin.png","Réseau de bulles de A (72 dm³) à B (72 000 cm³)",560)}`,
-   c:`<p>72 dm³ = 72 L = 0,072 m³ = 720 dL = 72 000 mL = 72 000 cm³.</p><p>Les autres bulles ne conviennent pas : 7,2 m³ = 7 200 L ; 7,2 cm³ = 0,0072 L ; 72 dL = 7,2 L ; 720 cL = 7,2 L.</p>
-   <p>Un chemin : <b>72 dm³ → 0,072 m³ → 72 L → 720 dL → 72 000 cm³</b> (on peut aussi passer par 72 000 mL avant d'arriver en B).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Capacité d'une casserole", w:"Sur ton cahier", h:`${ex("casserole.png","Casserole : diamètre 14 cm, hauteur 7 cm, contenance 1 L",250)}<p>Les indications données pour cette casserole de forme cylindrique sont-elles cohérentes ?</p>`,
-   c:`<p>Rayon : 14 ÷ 2 = 7 cm ; hauteur : 7 cm.</p><p class="calc">V = π × 7² × 7<br>V = 343 × π<br>V ≈ 1 077,6 cm³</p><p>1 000 cm³ = 1 L, donc V ≈ 1,08 L.</p><p>La casserole remplie jusqu'au bord contient environ 1,08 L : une contenance de 1 L est <b>cohérente</b> (on ne la remplit pas jusqu'au bord).</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Révisions : pavé droit, prisme droit et cylindre", e:[
   {n:"Exercice 5", t:"Une plaquette de beurre", w:"Sur ton cahier", h:`${ex("beurre.png","Plaquette de beurre",200)}<p>Une plaquette de beurre a pour longueur 11,5 cm, pour largeur 6,5 cm et pour hauteur 4 cm.</p><p>Quel est le volume d'une plaquette de beurre en cm³ ?</p>`,
-   c:`<p>La plaquette est un pavé droit.</p><p class="calc">V = L × l × h<br>V = 11,5 × 6,5 × 4<br>V = 299 cm³</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Une tente", w:"Sur ton cahier", h:`${ex("tente.png","Tente en forme de prisme droit : base triangulaire de 1,20 m et de hauteur 0,90 m, longueur 2,10 m",180)}<p>Cette tente a la forme d'un prisme droit.</p><p>Calcule son volume.</p>`,
-   c:`<p>La base est un triangle de base 1,20 m et de hauteur 0,90 m :</p><p class="calc">B = 1,20 × 0,90 ÷ 2<br>B = 0,54 m²</p><p>La hauteur du prisme est 2,10 m :</p><p class="calc">V = B × h<br>V = 0,54 × 2,10<br>V = 1,134 m³</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Le château d'eau de Luçon", w:"Sur ton cahier", h:`<p>Le château d'eau de Luçon est assimilé à un cylindre de diamètre 5 m et de hauteur 25 m.</p><p>Combien de litres d'eau peut contenir ce château d'eau ? Arrondis au centième près.</p>`,
-   c:`<p>Rayon : 5 ÷ 2 = 2,5 m.</p><p class="calc">V = π × 2,5² × 25<br>V = 156,25 × π<br>V ≈ 490,873 85 m³</p><p>1 m³ = 1 000 L, donc le château d'eau peut contenir environ <b>490 873,85 L</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"La piscine de Sylvia", w:"Sur ton cahier", h:`<div class="figs">${ex("piscine.png","La piscine en perspective",300)}${fig("La piscine vue de haut (partie colorée)",F_PISC)}</div>
    <p>Combien de litres d'eau Sylvia doit-elle mettre dans sa piscine, si elle veut une hauteur d'eau de 1,60 m ?</p><p><b>Données :</b> ACFH est un rectangle ; AC = 10 m ; AH = 4 m ; BC = 2 m ; CD = 1,5 m.</p>`,
-   c:`<p>La piscine est un prisme droit : sa base est le rectangle ACFH auquel on enlève les deux triangles rectangles BCD et EFG.</p>
-   <p class="calc">Aire de ACFH : 10 × 4 = 40 m²<br>Aire d'un triangle : 2 × 1,5 ÷ 2 = 1,5 m²<br>Aire de la base : 40 − 2 × 1,5 = 37 m²</p>
-   <p class="calc">V = 37 × 1,60<br>V = 59,2 m³</p><p>1 m³ = 1 000 L : Sylvia doit mettre <b>59 200 L</b> d'eau.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Volumes de la pyramide et du cône", e:[
   {n:"Exercice 9", t:"Baraque à frites", w:"Sur ton cahier", h:`<p>Michel vend ses frites dans des cornets de forme conique alors que chez Léon, les cornets ont la forme d'une pyramide à base carrée.</p>${ex("frites.png","Cornet conique de diamètre 12 cm et cornet pyramidal à base carrée de côté 11 cm, tous les deux de hauteur 13 cm",400)}<p>Quel est le cornet de frites de plus grand volume ?</p>`,
-   c:`<p><b>Chez Michel</b> (cône) : rayon 12 ÷ 2 = 6 cm, hauteur 13 cm.</p><p class="calc">V = {π × 6² × 13/3}<br>V = 156 × π<br>V ≈ 490,1 cm³</p>
-   <p><b>Chez Léon</b> (pyramide) : base carrée de côté 11 cm, hauteur 13 cm.</p><p class="calc">B = 11 × 11<br>B = 121 cm²</p><p class="calc">V = {121 × 13/3}<br>V = {1 573/3}<br>V ≈ 524,3 cm³</p><p>Le cornet de <b>Léon</b> a le plus grand volume.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Tétraèdre", w:"Sur ton cahier", h:`${ex("tetra.png","Tétraèdre SABC : le triangle ABC est rectangle en A et [SA] est perpendiculaire à la base",220)}<p><b>Données :</b> AB = 2 cm ; AC = 4,8 cm ; SA = 9 cm.</p><p>Quel est le volume du tétraèdre en cm³ ?</p>`,
-   c:`<p>La base est le triangle ABC, rectangle en A :</p><p class="calc">B = {AB × AC/2}<br>B = {2 × 4,8/2}<br>B = 4,8 cm²</p><p>La hauteur est SA = 9 cm (le codage montre que [SA] est perpendiculaire à la base).</p><p class="calc">V = {B × h/3}<br>V = {4,8 × 9/3}<br>V = 14,4 cm³</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 11", t:"Un berlingot de lait concentré", w:"Sur ton cahier", h:`${ex("berlingot.png","Berlingot de lait en forme de pyramide",180)}<p>Un berlingot de lait concentré a la forme d'une pyramide régulière SABCD à base carrée de 5 cm de côté et de hauteur 3 cm.</p><p>Combien de berlingots vais-je pouvoir préparer avec 1 L de lait concentré ?</p>`,
-   c:`<p class="calc">V = {5 × 5 × 3/3}<br>V = 25 cm³</p><p>1 L = 1 dm³ = 1 000 cm³ et 1 000 ÷ 25 = 40.</p><p>Je pourrai préparer <b>40 berlingots</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 12", t:"Une tour", w:"Sur ton cahier", h:`${ex("tour.png","Tour : cylindre de rayon 2,5 m et de hauteur 10 m surmonté d'un cône de hauteur 5 m",100)}<p>Cette tour cylindrique est surmontée d'un toit conique.</p><p>Donne le volume de cette tour en m³. Donne un arrondi au centième.</p>`,
-   c:`<p><b>Le cylindre</b> : rayon 2,5 m, hauteur 10 m.</p><p class="calc">V₁ = π × 2,5² × 10<br>V₁ = 62,5 × π<br>V₁ ≈ 196,35 m³</p><p><b>Le cône</b> : rayon 2,5 m, hauteur 5 m.</p><p class="calc">V₂ = {π × 2,5² × 5/3}<br>V₂ ≈ 32,72 m³</p>
-   <p class="calc">V = V₁ + V₂<br>V ≈ 229,07 m³</p><p>Le volume de la tour est environ <b>229,07 m³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 13", t:"Des muffins", w:"Sur ton cahier", h:`<div class="figs">${ex("moule.png","Moule à 9 muffins",200)}${ex("muffin.png","Tronc de cône : diamètre 7,5 cm en haut, rayon 2,5 cm en bas, hauteur 4 cm ; cône complet de hauteur 12 cm",190)}</div>
    <p>Un moule à muffins est constitué de 9 cavités identiques.</p><p>Elles ont la forme d'un tronc de cône (cône coupé par un plan parallèle à sa base) représenté ci-dessus.</p><p>Pour cuisiner des muffins, Léa a préparé 1 litre de pâte.</p><p>A-t-elle suffisamment de pâte pour remplir entièrement les 9 cavités du moule ?</p>`,
-   c:`<p>Le tronc de cône est un grand cône auquel on enlève un petit cône.</p><p><b>Grand cône</b> : rayon 7,5 ÷ 2 = 3,75 cm, hauteur 12 cm.</p><p class="calc">V₁ = {π × 3,75² × 12/3}<br>V₁ = 56,25 × π<br>V₁ ≈ 176,71 cm³</p>
-   <p><b>Petit cône</b> : rayon 2,5 cm, hauteur 12 − 4 = 8 cm.</p><p class="calc">V₂ = {π × 2,5² × 8/3}<br>V₂ ≈ 52,36 cm³</p>
-   <p class="calc">Une cavité : V₁ − V₂ ≈ 124,35 cm³</p><p>Pour les 9 cavités :</p><p class="calc">V = 9 × 124,35<br>V ≈ 1 119 cm³<br>V ≈ 1,12 L</p><p>1,12 L &gt; 1 L : <b>non</b>, Léa n'a pas assez de pâte pour remplir entièrement les 9 cavités.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 14", t:"Récolte de blé", w:"Sur ton cahier", h:`<p>Un agriculteur vient de récolter son blé. Il a rempli sa remorque entièrement à 13 reprises et souhaite déposer son grain dans son silo à grain.</p>
    <p><b>Document 1 :</b> dimensions de la remorque.</p><p>l = 2,20 m ; L = 7,50 m ; h = 2,10 m</p>${ex("remorque.png","Tracteur et remorque",300)}
    <p><b>Document 2 :</b> caractéristiques du silo. Le silo à grain est formé :</p><p>– d'un cylindre de 4 m de rayon et d'une hauteur égale à 8 m ;</p><p>– d'un cône de rayon 4 m et de 2,5 m de hauteur.</p>${ex("silo.png","Silo à grain : un cylindre posé sur un cône",130)}
    <p>Aura-t-il suffisamment de place dans son silo pour stocker son grain ?</p><p><i>On considérera que le blé récolté occupe exactement le volume de la remorque. Le blé ne dépassera donc pas la hauteur de la remorque.</i></p>`,
-   c:`<p><b>Le blé</b> : une remorque contient 2,20 × 7,50 × 2,10 = 34,65 m³.</p><p class="calc">13 × 34,65 = 450,45 m³</p>
-   <p><b>Le silo</b> :</p><p>Cylindre :</p><p class="calc">V₁ = π × 4² × 8<br>V₁ = 128 × π<br>V₁ ≈ 402,12 m³</p><p>Cône :</p><p class="calc">V₂ = {π × 4² × 2,5/3}<br>V₂ ≈ 41,89 m³</p><p class="calc">Silo : 402,12 + 41,89 ≈ 444,01 m³</p>
-   <p>444,01 m³ &lt; 450,45 m³ : <b>non</b>, il n'aura pas assez de place pour stocker tout son grain.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 15", t:"Quand on connaît le volume !", w:"Sur ton cahier", h:`<p><b>1)</b> Cette sculpture de Ruth Francken est une pyramide d'un volume égal à 11 026 cm³. Elle est posée sur sa base, un triangle équilatéral d'aire 894 cm².</p><p>Quelle est la hauteur de la sculpture ?</p>
    <p><b>2)</b> Un cône de révolution a un volume de 200 cm³ et sa hauteur mesure 12 cm.</p><p>Quelle est l'aire de sa base ?</p>`,
-   c:`<p><b>1)</b> V = {B × h/3}, donc 3 × V = B × h et h = {3 × V/B}.</p><p class="calc">h = {3 × 11 026/894}<br>h = {33 078/894}<br>h = 37 cm</p><p>La sculpture mesure <b>37 cm</b> de haut.</p>
-   <p><b>2)</b> De même, B = {3 × V/h}.</p><p class="calc">B = {3 × 200/12}<br>B = {600/12}<br>B = 50 cm²</p><p>L'aire de sa base est <b>50 cm²</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Pour les plus rapides", e:[
   {n:"Exercice 16", t:"Cuboctaèdre", w:"Sur ton cahier", h:`${ex("cubocta.png","Cuboctaèdre dans un cube",220)}<p>Ce solide (appelé cuboctaèdre) a été obtenu en retirant d'un cube d'arête 6 cm huit pyramides identiques.</p><p>Calcule le volume du cuboctaèdre.</p>`,
-   c:`<p>Chaque pyramide retirée est dans un coin du cube : ses trois arêtes issues du coin mesurent 6 ÷ 2 = 3 cm et sont perpendiculaires deux à deux.</p>
-   <p class="calc">Base (triangle rectangle) : 3 × 3 ÷ 2 = 4,5 cm²<br>Une pyramide : {4,5 × 3/3} = 4,5 cm³<br>Huit pyramides : 8 × 4,5 = 36 cm³</p>
-   <p class="calc">Cube : 6 × 6 × 6 = 216 cm³<br>Cuboctaèdre : 216 − 36 = 180 cm³</p><p>Le volume du cuboctaèdre est <b>180 cm³</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 17", t:"Une cuve", w:"Sur ton cahier", h:`${F_CUVE}<p>Une cuve a la forme ci-contre.</p><p>Sa partie supérieure est un cube de 2,5 m d'arête.</p><p>Sa partie inférieure est une pyramide régulière à base carrée de 3 m de hauteur.</p><p>La cuve contient 17 500 L d'eau.</p><p>À quelle distance du bord supérieur se trouve le niveau d'eau ?</p>`,
-   c:`<p>Pyramide :</p><p class="calc">V₁ = {2,5 × 2,5 × 3/3}<br>V₁ = 6,25 m³<br>V₁ = 6 250 L</p><p>Cube :</p><p class="calc">V₂ = 2,5 × 2,5 × 2,5<br>V₂ = 15,625 m³<br>V₂ = 15 625 L</p>
-   <p>La pyramide est pleine : il reste 17 500 − 6 250 = 11 250 L d'eau dans le cube.</p><p>Il reste vide dans le cube un volume V :</p><p class="calc">V = 15 625 − 11 250<br>V = 4 375 L<br>V = 4,375 m³</p>
-   <p>Cette partie vide est un pavé droit de base 2,5 × 2,5 = 6,25 m² :</p><p>La hauteur vide h :</p><p class="calc">h = 4,375 ÷ 6,25<br>h = 0,7 m</p><p>Le niveau d'eau est à <b>0,7 m (70 cm)</b> du bord supérieur.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -372,3 +357,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-10");

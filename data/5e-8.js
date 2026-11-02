@@ -139,43 +139,32 @@ exos:[
    <p><b>1)</b> Nomme un angle opposé par le sommet à ${an("AOB")} : …………</p><p>Nomme deux angles adjacents à ${an("AOB")} : ………… et …………</p>
    <p><b>2)</b> Complète : ${an("AOB")} et ${an("BOC")} sont ……………… car leur somme est égale à ………°.</p>
    <p><b>3)</b> Quelle est la nature de l'angle ${an("AOB")} ? ……………</p><p>Et celle de l'angle ${an("AOC")} ? ……………</p>`,
-   c:`<p><b>1)</b> L'angle opposé par le sommet à ${an("AOB")} est <b>${an("COD")}</b>.</p><p>Les angles adjacents à ${an("AOB")} sont <b>${an("BOC")}</b> et <b>${an("DOA")}</b>.</p>
-   <p><b>2)</b> ${an("AOB")} et ${an("BOC")} sont <b>supplémentaires</b> car leur somme est égale à <b>180°</b> (ils forment l'angle plat ${an("AOC")}).</p>
-   <p><b>3)</b> L'angle ${an("AOB")} est un angle <b>aigu</b> (il mesure 50°).</p><p>L'angle ${an("AOC")} est un angle <b>plat</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Calculer avec des angles supplémentaires", w:"Sur ton cahier", h:`<p>Calcule la mesure de chaque angle demandé et justifie.</p>
    <p><b>1)</b> Les droites (AC) et (BD) se coupent en O.</p><p>Calcule ${an("BOC")}, ${an("COD")} et ${an("DOA")}.</p>${exi("e2a","Droites (AC) et (BD) sécantes en O avec l'angle AOB de 65°",300)}
    <p><b>2)</b> Les points A, O et C sont alignés. Calcule ${an("DOC")}.</p>${al3F(38,59)}`,
-   c:`<p><b>1)</b> ${an("AOB")} et ${an("BOC")} sont supplémentaires :</p><p class="calc">${an("BOC")} = 180° − 65° = 115°</p>
-   <p>${an("COD")} et ${an("AOB")} sont opposés par le sommet : ${an("COD")} = ${an("AOB")} = <b>65°</b>.</p>
-   <p>${an("DOA")} et ${an("BOC")} sont opposés par le sommet : ${an("DOA")} = ${an("BOC")} = <b>115°</b>.</p>
-   <p><b>2)</b> Les trois angles forment l'angle plat ${an("AOC")} :</p><p class="calc">${an("DOC")} = 180° − 38° − 59° = 83°</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 3", t:"La bissectrice", w:"Sur ta feuille", h:`<p>Dans chaque cas, [OB) est la bissectrice de l'angle ${an("AOC")}. Complète.</p>
    <p><b>a)</b> ${an("AOB")} = 34° donc ${an("AOC")} = ………°</p><p><b>b)</b> ${an("AOC")} = 112° donc ${an("BOC")} = ………°</p><p><b>c)</b> ${an("BOC")} = 27,5° donc ${an("AOC")} = ………°</p>`,
-   c:`<p><b>a)</b> ${an("AOC")} = 2 × 34° = <b>68°</b></p><p><b>b)</b> ${an("BOC")} = 112° ÷ 2 = <b>56°</b></p><p><b>c)</b> ${an("AOC")} = 2 × 27,5° = <b>55°</b></p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Angles et droites parallèles", e:[
   {n:"Activité 1", t:"Mesurer des angles", w:"Sur ta feuille", h:`<p>Les droites (d) et (d') sont parallèles.</p><p>Utilise ton rapporteur sur la figure.</p>${exi("act1","Droites parallèles (d) et (d') coupées par la sécante (ST)",420)}
    <p><b>1)</b> Mesure ${an("DAB")} et ${an("ABE")}. Que remarques-tu ?</p><p><b>2)</b> Mesure ${an("SAD")} et ${an("ABF")}. Que remarques-tu ?</p>`,
-   c:`<p><b>1)</b> ${an("DAB")} = 60° et ${an("ABE")} = 60° : ces angles alternes-internes sont <b>égaux</b>.</p>
-   <p><b>2)</b> ${an("SAD")} = 120° et ${an("ABF")} = 120° : ces angles correspondants sont <b>égaux</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Alternes-internes ou correspondants ?", w:"Sur ta feuille", h:`<p>Sur la figure, (d) // (d') et ${an("DAB")} = 60°. Complète le tableau.</p>${exi("e4","Droites parallèles (d) et (d'), angle DAB de 60°",420)}
    <div class="scroll"><table class="std"><thead><tr><th>Angle</th><th>Alterne-interne ou correspondant à ${an("DAB")} ?</th><th>Mesure</th></tr></thead><tbody><tr><td>${an("ABE")}</td><td></td><td></td></tr><tr><td>${an("FBT")}</td><td></td><td></td></tr><tr><td>${an("SAC")}</td><td></td><td></td></tr></tbody></table></div>`,
-   c:`<div class="scroll"><table class="std"><thead><tr><th>Angle</th><th>Position par rapport à ${an("DAB")}</th><th>Mesure</th></tr></thead><tbody><tr><td>${an("ABE")}</td><td>alterne-interne</td><td>60°</td></tr><tr><td>${an("FBT")}</td><td>correspondant</td><td>60°</td></tr><tr><td>${an("SAC")}</td><td>opposé par le sommet à ${an("DAB")}</td><td>60°</td></tr></tbody></table></div>
-   <p>${an("ABE")} et ${an("DAB")} sont alternes-internes et (d) // (d'), donc ils sont égaux : ${an("ABE")} = 60°.</p><p>${an("FBT")} et ${an("DAB")} sont correspondants et (d) // (d'), donc ils sont égaux : ${an("FBT")} = 60°.</p><p>${an("SAC")} et ${an("DAB")} sont opposés par le sommet, donc ils ont la même mesure : ${an("SAC")} = 60°.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Calculer des angles", w:"Sur ton cahier", h:`<p>Sur la figure, (d) // (d') et ${an("ABE")} = 70°.</p><p>Calcule ${an("DAB")}, ${an("SAD")} et ${an("ABF")} en justifiant chaque réponse.</p>${exi("e5","Droites parallèles (d) et (d'), angle ABE de 70°",420)}`,
-   c:`<p>${an("DAB")} et ${an("ABE")} sont alternes-internes et (d) // (d'), donc ${an("DAB")} = ${an("ABE")} = <b>70°</b>.</p>
-   <p>${an("DAB")} et ${an("SAD")} sont supplémentaires :</p><p class="calc">${an("SAD")} = 180° − 70° = 110°</p>
-   <p>${an("SAD")} et ${an("ABF")} sont correspondants et (d) // (d'), donc ${an("ABF")} = ${an("SAD")} = <b>110°</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Démontrer un parallélisme", w:"Sur ton cahier", h:`<p>Les droites (d) et (d') sont-elles parallèles ?</p><p>Justifie en nommant les angles utilisés.</p>
    <div class="figs">${fig("a)",exi("e6a","Figure a : angles de 75° et 75°",360))}${fig("b)",exi("e6b","Figure b : angles de 70° et 80°",360))}</div>`,
-   c:`<p><b>a)</b> ${an("DAB")} et ${an("ABE")} sont alternes-internes et ${an("DAB")} = ${an("ABE")} = 75°.</p><p><b>Si</b> deux droites coupées par une sécante forment des angles alternes-internes égaux, <b>alors</b> elles sont parallèles.</p><p>Donc <b>(d) // (d')</b>.</p>
-   <p><b>b)</b> ${an("DAB")} = 70° et ${an("ABE")} = 80° : ces angles alternes-internes ne sont pas égaux.</p><p>Si (d) et (d') étaient parallèles, ils seraient égaux : (d) et (d') ne sont <b>pas parallèles</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Somme des angles d'un triangle", e:[
   {n:"Activité 2", t:"Mesurer les angles d'un triangle", w:"Sur ta feuille", h:`<p>Voici un triangle ABC.</p>${exi("act2","Triangle ABC",330)}
    <p><b>1)</b> Avec ton rapporteur, mesure ${an("BAC")}, ${an("ABC")} et ${an("ACB")}.</p><p><b>2)</b> Calcule la somme des trois angles. Que remarques-tu ?</p>`,
-   c:`<p><b>1)</b> ${an("BAC")} = 61°, ${an("ABC")} = 52°, ${an("ACB")} = 67°.</p>
-   <p><b>2)</b> 61° + 52° + 67° = 180° : la somme des angles du triangle vaut <b>180°</b> (aux erreurs de mesure près).</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Calculer le troisième angle", w:"Sur ton cahier", h:`<p>Calcule le troisième angle de chaque triangle et rédige.</p>
    <p><b>a)</b> Dans le triangle ABC, ${an("ABC")} = 50° et ${an("ACB")} = 60°. Calcule ${an("BAC")}.</p>
    <p><b>b)</b> Dans le triangle DEG, ${an("DEG")} = 35° et ${an("DGE")} = 90°. Calcule ${an("EDG")}.</p>
@@ -183,27 +172,19 @@ exos:[
    <p><b>d)</b> Dans le triangle JKL, ${an("JKL")} = 108° et ${an("JLK")} = 25°. Calcule ${an("KJL")}.</p>
    <p><b>e)</b> Dans le triangle MNO, ${an("NMO")} = 60° et ${an("MON")} = 60°. Calcule ${an("MNO")}.</p>
    <p><b>f)</b> Dans le triangle PQR, ${an("PQR")} = 123° et ${an("PRQ")} = 28°. Calcule ${an("QPR")}.</p>`,
-   c:`<p>La somme des angles d'un triangle est égale à 180°, donc :</p>
-   <p><b>a)</b> ${an("BAC")} = 180° − 50° − 60° = <b>70°</b></p><p><b>b)</b> ${an("EDG")} = 180° − 35° − 90° = <b>55°</b></p><p><b>c)</b> ${an("GHI")} = 180° − 72° − 41° = <b>67°</b></p>
-   <p><b>d)</b> ${an("KJL")} = 180° − 108° − 25° = <b>47°</b></p><p><b>e)</b> ${an("MNO")} = 180° − 60° − 60° = <b>60°</b></p><p><b>f)</b> ${an("QPR")} = 180° − 123° − 28° = <b>29°</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Triangles particuliers", w:"Sur ton cahier", h:`<p>Réponds en justifiant.</p>
    <p><b>1)</b> Le triangle RST est rectangle en R et ${an("RST")} = 37°. Calcule ${an("RTS")}.</p>
    <p><b>2)</b> Le triangle équilatéral UVW a trois angles égaux. Quelle est la mesure de chacun ?</p>
    <p><b>3)</b> Un triangle peut-il avoir deux angles obtus ? Justifie.</p>`,
-   c:`<p><b>1)</b> La somme des angles du triangle vaut 180° :</p><p class="calc">${an("RTS")} = 180° − 90° − 37° = 53°</p>
-   <p><b>2)</b> 180° ÷ 3 = 60° : chaque angle mesure <b>60°</b>.</p>
-   <p><b>3)</b> <b>Non</b> : deux angles obtus mesurent chacun plus de 90°, donc leur somme dépasse 180°.</p><p>C'est impossible, puisque les trois angles ont pour somme 180°.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 9", t:"La configuration-clé", w:"Sur ton cahier", h:`<p>Dans le triangle ABC, la droite (xy) est parallèle à (BC).</p><p>On donne ${an("xAB")} = 48° et ${an("yAC")} = 65°. Réponds en justifiant.</p>${F_EX9}
    <p><b>1)</b> Calcule ${an("ABC")} et ${an("ACB")}.</p><p><b>2)</b> Calcule ${an("BAC")} de deux façons.</p>`,
-   c:`${cr("e9c","Les angles de 48°, 65° et 67°",340)}
-   <p><b>1)</b> (xy) // (BC) et ${an("xAB")}, ${an("ABC")} sont alternes-internes : ${an("ABC")} = ${an("xAB")} = <b>48°</b>.</p><p>De même, ${an("ACB")} = ${an("yAC")} = <b>65°</b>.</p>
-   <p><b>2)</b> Avec l'angle plat ${an("xAy")} :</p><p class="calc">${an("BAC")} = 180° − ${an("xAB")} − ${an("yAC")}<br>${an("BAC")} = 180° − 48° − 65°<br>${an("BAC")} = <b>67°</b></p>
-   <p>Avec le triangle :</p><p class="calc">${an("BAC")} = 180° − ${an("ABC")} − ${an("ACB")}<br>${an("BAC")} = 180° − 48° − 65°<br>${an("BAC")} = <b>67°</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 10", t:"Pour aller plus loin : le triangle isocèle", w:"Sur ton cahier", h:`<p>On admet que dans un triangle isocèle, les deux angles situés à la base sont égaux.</p><p>Réponds en justifiant.</p>
    <p><b>1)</b> Le triangle ABC est isocèle en A et ${an("BAC")} = 40°. Calcule ${an("ABC")} et ${an("ACB")}.</p>
    <p><b>2)</b> Le triangle DEG est isocèle en D et ${an("DEG")} = 50°. Calcule ${an("DGE")} et ${an("EDG")}.</p>`,
-   c:`<p><b>1)</b> ${an("ABC")} = ${an("ACB")} et ${an("ABC")} + ${an("ACB")} = 180° − 40° = 140°.</p><p>Donc ${an("ABC")} = ${an("ACB")} = 140° ÷ 2 = <b>70°</b>.</p>
-   <p><b>2)</b> ${an("DGE")} = ${an("DEG")} = <b>50°</b>.</p><p class="calc">${an("EDG")} = 180° − 50° − 50° = 80°</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -366,3 +347,4 @@ quiz:[
 ]
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("5e-8");

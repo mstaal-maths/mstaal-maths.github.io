@@ -133,60 +133,37 @@ exos:[
    <p><b>3) a)</b> Le périmètre d'un carré vaut 36 cm. Quelle est la longueur de son côté ?</p><p><b>b)</b> L'aire d'un carré vaut 36 cm². Quelle est la longueur de son côté ?</p>
    <p><b>4) a)</b> Le périmètre d'un carré vaut 100 cm. Quelle est la longueur de son côté ?</p><p><b>b)</b> L'aire d'un carré vaut 100 cm². Quelle est la longueur de son côté ?</p>
    <p><b>5)</b> Je suis un carré. Mon aire est comprise entre 40 cm² et 50 cm². La longueur de mon côté est un nombre entier. Quelle est la longueur de mes côtés ?</p>`,
-   c:`<p><b>Partie 1 (un exemple parmi d'autres) :</b></p><p><b>1)</b> Un rectangle de 2 carreaux sur 6 et un rectangle de 3 carreaux sur 4 : même aire (12 carreaux), mais périmètres 16 et 14.</p><p><b>2)</b> Un rectangle de 1 carreau sur 5 et un carré de 3 carreaux sur 3 : même périmètre (12), mais aires 5 et 9 carreaux.</p>${(()=>{ const k=24, X=x=>8+x*k, Y=y=>8+y*k, W=25, H=8; let s=`<svg class="fig" viewBox="0 0 ${X(W)+8} ${Y(H)+8}" width="${X(W)+8}" role="img" aria-label="Sur quadrillage : un rectangle de 2 sur 6 et un rectangle de 3 sur 4 (même aire) ; un rectangle de 1 sur 5 et un carré de 3 sur 3 (même périmètre)">`;
-     for(let x=0;x<=W;x++) s+=`<line x1="${X(x)}" y1="${Y(0)}" x2="${X(x)}" y2="${Y(H)}" class="gridl"/>`; for(let y=0;y<=H;y++) s+=`<line x1="${X(0)}" y1="${Y(y)}" x2="${X(W)}" y2="${Y(y)}" class="gridl"/>`;
-     const R=(x,y,w,h,c)=>`<rect x="${X(x)}" y="${Y(y)}" width="${w*k}" height="${h*k}" style="fill:${c}55;stroke:${c};stroke-width:2.2"/>`, T=(x,y,t)=>`<text x="${X(x)}" y="${Y(y)}" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--ink)">${t}</text>`;
-     s+=R(1,1,2,6,"#4a86c5")+R(4,1,4,3,"#4a86c5")+T(4.5,7.75,"1)")+R(14,1,5,1,"#d6457a")+R(14,3,3,3,"#d6457a")+T(16.5,7.75,"2)");
-     return s+"</svg>"; })()}
-   <p><b>Partie 2 :</b></p>
-   <p><b>1) a)</b> 4 × 5 = <b>20 cm</b> · <b>b)</b> 5 × 5 = <b>25 cm²</b></p>
-   <p><b>2) a)</b> 4 × 8 = <b>32 dm</b> · <b>b)</b> 8 × 8 = <b>64 dm²</b></p>
-   <p><b>3) a)</b> 36 ÷ 4 = <b>9 cm</b> · <b>b)</b> 6 × 6 = 36, donc le côté mesure <b>6 cm</b>.</p>
-   <p><b>4) a)</b> 100 ÷ 4 = <b>25 cm</b> · <b>b)</b> 10 × 10 = 100, donc le côté mesure <b>10 cm</b>.</p>
-   <p><b>5)</b> 6 × 6 = 36 (trop petit), 7 × 7 = 49 (entre 40 et 50), 8 × 8 = 64 (trop grand). Le côté mesure <b>7 cm</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 2", t:"Calculs d'aires", w:"Sur ta feuille", h:`<p>L'unité d'aire est l'aire d'un carreau.</p><p>Indique l'aire de chaque figure.</p>${(()=>{ const k=30, X=x=>8+x*k, Y=y=>8+y*k; let s=`<svg class="fig" viewBox="0 0 ${Math.round(X(20)+8)} ${Math.round(Y(6)+8)}" width="${Math.round(X(20)+8)}" role="img" aria-label="Quatre figures sur quadrillage : un rectangle, un triangle, un losange et un carré penché">`;
      for(let x=0;x<=20;x++) s+=`<line x1="${X(x)}" y1="${Y(0)}" x2="${X(x)}" y2="${Y(6)}" class="gridl"/>`; for(let y=0;y<=6;y++) s+=`<line x1="${X(0)}" y1="${Y(y)}" x2="${X(20)}" y2="${Y(y)}" class="gridl"/>`;
      const pg=(P,c)=>`<polygon points="${P.map(([x,y])=>X(x)+","+Y(y)).join(" ")}" style="fill:${c}66;stroke:${c};stroke-width:2;stroke-linejoin:round"/>`, dl=(a,b)=>`<line x1="${X(a[0])}" y1="${Y(a[1])}" x2="${X(b[0])}" y2="${Y(b[1])}" style="stroke:var(--ink);stroke-width:1.4;stroke-dasharray:5 4"/>`;
      s+=pg([[1,2],[4,2],[4,4],[1,4]],"#6aaa3a")+pg([[6,2],[6,4],[9,4]],"#4a86c5")+dl([6,2],[9,2])+dl([9,2],[9,4])+pg([[12,2],[13,3],[12,4],[11,3]],"#d6457a")+dl([11,3],[13,3])+dl([12,2],[12,4])+pg([[16,1],[19,2],[18,5],[15,4]],"#e0b400")+dl([16,1],[16,4])+dl([16,2],[19,2])+dl([18,2],[18,5])+dl([15,4],[18,4]);
      ["①","②","③","④"].forEach((t,i)=>{ s+=`<text x="${X([2.5,7.5,12,17][i])}" y="${Y(5.7)}" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--ink)">${t}</text>`; }); return s+"</svg>"; })()}`,
-   c:`<p><b>①</b> Rectangle de 3 carreaux sur 2 : 3 × 2 = <b>6 carreaux</b>.</p><p><b>②</b> Triangle : la moitié du rectangle de 3 sur 2 : 6 ÷ 2 = <b>3 carreaux</b>.</p><p><b>③</b> Losange : 4 demi-carreaux, soit <b>2 carreaux</b>.</p><p><b>④</b> Carré penché : le carré de 2 sur 2 au centre (4 carreaux) et 4 triangles de 3 sur 1 (1,5 carreau chacun) : 4 + 4 × 1,5 = <b>10 carreaux</b>.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Découvrir la propriété", e:[
   {n:"Activité 1", t:"À quelles conditions le triangle ABC est-il rectangle ?", w:"Sur ton cahier", h:`<p>Dans chacun des cas, on cherche à savoir si le triangle ABC est rectangle.</p><p><b>1)</b> À vue d'œil, tu as peut-être déjà une idée. Indique les cas où tu penses que le triangle ABC est rectangle.</p><p>Cependant, une simple observation ne suffit pas ! Il faut le prouver par le calcul. Pour cela, on a construit, sur les côtés de chaque triangle, trois carrés (bleu, vert et rose).</p><p><b>2)</b> Dans chaque cas, détermine l'aire de chaque carré (l'unité d'aire est l'aire d'un carreau).</p>${ex("act1","Six triangles ABC avec les carrés bleu, vert et rose construits sur leurs côtés",560)}<p><b>3)</b> Dans quel cas le triangle ABC est-il rectangle ? Comment peux-tu le démontrer par le calcul ?</p>`,
-   c:`<p><b>2)</b> Aires des carrés (en carreaux) :</p>
-   <div class="scroll"><table class="std"><thead><tr><th>Cas</th><th>Bleu</th><th>Rose</th><th>Vert</th><th>Somme des deux petits</th><th>Grand carré</th></tr></thead><tbody>
-   <tr><th>①</th><td>4</td><td>16</td><td>20</td><td>4 + 16 = 20</td><td>20 (vert)</td></tr>
-   <tr><th>②</th><td>4</td><td>10</td><td>18</td><td>4 + 10 = 14</td><td>18 (vert)</td></tr>
-   <tr><th>③</th><td>16</td><td>8</td><td>8</td><td>8 + 8 = 16</td><td>16 (bleu)</td></tr>
-   <tr><th>④</th><td>25</td><td>5</td><td>20</td><td>5 + 20 = 25</td><td>25 (bleu)</td></tr>
-   <tr><th>⑤</th><td>4</td><td>9</td><td>13</td><td>4 + 9 = 13</td><td>13 (vert)</td></tr>
-   <tr><th>⑥</th><td>13</td><td>10</td><td>9</td><td>9 + 10 = 19</td><td>13 (bleu)</td></tr></tbody></table></div>
-   <p>Pour un carré penché, on compte le carré du centre et les triangles autour (comme dans l'exercice 2).</p>
-   <p><b>3)</b> Le triangle ABC est rectangle dans les cas <b>①, ③, ④ et ⑤</b> : l'aire du grand carré est égale à la somme des aires des deux petits carrés.</p><p>Dans les cas ② et ⑥, ce n'est pas égal : le triangle n'est pas rectangle.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Le triangle est-il rectangle ?", e:[
   {n:"Exercice 3", t:"Le triangle est-il rectangle ?", w:"Sur ton cahier", h:`<div class="figs">${fig("a) Le triangle EFG est-il rectangle ? Justifie.",ex("e3a","Triangle EFG : carrés de 92,16 cm², 16 cm² et 108,16 cm²",300))}${fig("b) Le triangle OEA est-il rectangle ? Justifie.",ex("e3b","Triangle OEA : carrés de 100 cm², 60,84 cm² et 43,56 cm²",260))}</div>`,
-   c:`<p><b>a)</b> Le grand carré a pour aire 108,16 cm².</p><p class="calc">92,16 + 16 = 108,16</p><p>L'aire du grand carré est égale à la somme des aires des deux petits carrés. Donc <b>le triangle EFG est rectangle en E</b>.</p>
-   <p><b>b)</b> Le grand carré a pour aire 100 cm².</p><p class="calc">60,84 + 43,56 = 104,4</p><p>104,4 ≠ 100 : l'aire du grand carré n'est pas égale à la somme des aires des deux petits carrés. Donc <b>le triangle OEA n'est pas rectangle</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 4", t:"Le triangle est-il rectangle ?", w:"Sur ton cahier", h:`<p><b>a)</b> On considère un triangle dont les côtés mesurent 6 cm, 8 cm et 10 cm. Est-ce que ce triangle est rectangle ? Justifie.</p><p><b>b)</b> On considère un triangle dont les côtés mesurent 6 cm, 2 cm et 5 cm. Est-ce que ce triangle est rectangle ? Justifie.</p>`,
-   c:`<p><b>a)</b> Le plus grand côté mesure 10 cm.</p><p class="calc">D'une part : 10² = 100<br>D'autre part : 6² + 8² = 36 + 64 = 100</p><p>L'égalité de Pythagore est vérifiée : <b>le triangle est rectangle</b> (l'angle droit est en face du côté de 10 cm).</p>
-   <p><b>b)</b> Le plus grand côté mesure 6 cm.</p><p class="calc">D'une part : 6² = 36<br>D'autre part : 2² + 5² = 4 + 25 = 29</p><p>36 ≠ 29 : l'égalité de Pythagore n'est pas vérifiée. <b>Le triangle n'est pas rectangle.</b></p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 5", t:"Triangles rectangles ?", w:"Sur ton cahier", h:`<p>Ces triangles sont-ils rectangles ? Justifie.</p><p><b>a)</b> Le triangle ABC tel que : AB = 10,8 cm, BC = 14,4 cm et AC = 18 cm.</p><p><b>b)</b> Le triangle DEF tel que : DF = 177 cm, DE = 78 cm et EF = 160 cm.</p><p><b>c)</b> Le triangle STU tel que : TU = 20,9 m, SU = 24,1 m et ST = 12 m.</p>`,
-   c:`<p><b>a)</b></p>${redac("ABC",{AC:18,AB:10.8,BC:14.4}).h}<p><b>b)</b></p>${redac("DEF",{DF:177,DE:78,EF:160}).h}<p><b>c)</b></p>${redac("STU",{SU:24.1,TU:20.9,ST:12},"m").h}`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problèmes", e:[
   {n:"Exercice 6", t:"Installation d'une étagère", w:"Sur ton cahier", h:`<p>Sur un mur vertical, Jules a posé une étagère.</p>${ex("e6","Étagère : AE = 27 cm sur le mur, ET = 36 cm, AT = 45 cm",220)}<p>L'étagère est-elle horizontale ?</p>`,
-   c:`<p>Le mur est vertical : l'étagère est horizontale si l'angle ${'<span class="ang">AET</span>'} est droit, c'est-à-dire si le triangle AET est rectangle en E.</p>${redac("AET",{AT:45,AE:27,ET:36}).h}<p>L'étagère est perpendiculaire au mur : <b>elle est horizontale</b>.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Son bureau", w:"Sur ton cahier", h:`${ex("e7","Bureau : 12 sur la paroi, 16 sur le plateau et 21 pour la diagonale",300)}<p>Lucie est perplexe. Ses parents lui ont acheté un bureau et ses stylos roulent et tombent.</p><p>Explique pourquoi.</p>`,
-   c:`<p>On regarde le triangle formé par la paroi (12), le plateau (16) et la diagonale (21). Le plus grand côté mesure 21.</p><p class="calc">D'une part : 21² = 441<br>D'autre part : 12² + 16² = 144 + 256 = 400</p><p>441 ≠ 400 : l'égalité de Pythagore n'est pas vérifiée. Le triangle n'est pas rectangle.</p><p>Le plateau n'est donc pas perpendiculaire à la paroi verticale : <b>le bureau n'est pas horizontal</b>, il penche. C'est pour ça que les stylos roulent et tombent.</p>`},
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 8", t:"Forme de potager", w:"Sur ton cahier", h:`<p>Nathan prétend que son potager est de forme rectangulaire.</p><p>Émilie veut le vérifier. Elle mesure la longueur de deux côtés consécutifs du potager et obtient 3,3 m pour l'un et 5,6 m pour l'autre.</p><p>La diagonale mesure 6,6 m.</p><p>Émilie affirme à Nathan que son potager n'est pas de forme rectangulaire.</p><p>En supposant que les mesures d'Émilie sont exactes, explique son raisonnement.</p>`,
-   c:`<p>Si le potager était un rectangle, ses angles seraient droits : le triangle formé par les deux côtés et la diagonale serait rectangle.</p><p>Le plus grand côté de ce triangle est la diagonale : 6,6 m.</p><p class="calc">D'une part : 6,6² = 6,6 × 6,6 = 43,56<br>D'autre part : 3,3² + 5,6² = 10,89 + 31,36 = 42,25</p><p>43,56 ≠ 42,25 : l'égalité de Pythagore n'est pas vérifiée. Le triangle n'est pas rectangle : l'angle entre les deux côtés n'est pas droit.</p><p><b>Le potager n'est donc pas de forme rectangulaire.</b> Émilie a raison.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Problème ouvert", e:[
   {n:"Exercice 9", t:"Recherche des carrés parfaits", w:"Sur ton cahier", h:`<p>Je suis un triangle rectangle dont les mesures des côtés sont des nombres entiers compris entre 1 et 15.</p><p>Quelles peuvent être les mesures de mes côtés ? Suis-je unique ?</p>`,
-   c:`<p>On cherche trois nombres entiers entre 1 et 15 tels que le carré du plus grand soit égal à la somme des carrés des deux autres.</p><p>Carrés parfaits : 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225.</p>
-   <p class="calc">3² + 4² = 9 + 16 = 25 = 5²<br>6² + 8² = 36 + 64 = 100 = 10²<br>5² + 12² = 25 + 144 = 169 = 13²<br>9² + 12² = 81 + 144 = 225 = 15²</p>
-   <p>Les côtés peuvent mesurer <b>3, 4 et 5</b> ; <b>6, 8 et 10</b> ; <b>5, 12 et 13</b> ou <b>9, 12 et 15</b>. Le triangle n'est donc <b>pas unique</b> : il y a 4 possibilités.</p>`}
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
@@ -238,3 +215,4 @@ exos:[
 ]}
 };
 })();
+;(function(k){var D=typeof CH!=="undefined"&&CH[k],L=[];if(D&&D.exos)D.exos.forEach(function(S){(S.e||[]).forEach(function(e){L.push(e);});});(window.LOCKS=window.LOCKS||{})[k]={D:D,e:L};})("4e-6");
