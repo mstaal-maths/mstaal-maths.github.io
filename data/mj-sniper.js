@@ -260,11 +260,17 @@ const CSS = `
 .mj-sniper-stat span{font-size:.85rem;color:var(--muted);font-weight:600}
 .mj-sniper-dots{display:flex;gap:6px}
 .mj-sniper-dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);display:block}
-.mj-sniper-dots i.p100{background:var(--sn-gold);border-color:var(--sn-gold)}
-.mj-sniper-dots i.p70{background:var(--sn-ok);border-color:var(--sn-ok)}
-.mj-sniper-dots i.p40{background:#7cc38a;border-color:#7cc38a}
-.mj-sniper-dots i.p15{background:#f0b37e;border-color:#f0b37e}
-.mj-sniper-dots i.p0{background:var(--sn-ko);border-color:var(--sn-ko)}
+.mj-sniper{--p100:#1e8e3e;--p70:#79c98a;--p40:#f2c94c;--p15:#f08a3c;--p0:#d93025}
+.mj-sniper-dots i,.mj-sniper-leg i{position:relative}
+.mj-sniper-dots i.p100,.mj-sniper-leg i.p100{background:var(--p100);border-color:var(--p100)}
+.mj-sniper-dots i.p100::after,.mj-sniper-leg i.p100::after{content:"★";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:10px;line-height:1}
+.mj-sniper-dots i.p70,.mj-sniper-leg i.p70{background:var(--p70);border-color:var(--p70)}
+.mj-sniper-dots i.p40,.mj-sniper-leg i.p40{background:var(--p40);border-color:var(--p40)}
+.mj-sniper-dots i.p15,.mj-sniper-leg i.p15{background:var(--p15);border-color:var(--p15)}
+.mj-sniper-dots i.p0,.mj-sniper-leg i.p0{background:var(--p0);border-color:var(--p0)}
+.mj-sniper-leg{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0 0 8px;font-size:.85rem;color:var(--muted);font-weight:600}
+.mj-sniper-leg span{display:inline-flex;align-items:center;gap:5px}
+.mj-sniper-leg i{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);display:inline-block}
 .mj-sniper-dots i.cur{border-color:var(--c);box-shadow:0 0 0 2px color-mix(in srgb,var(--c) 35%,transparent)}
 .mj-sniper-board{border-radius:14px;overflow:hidden;background:#fbfcff;border:1.5px solid #c9d4e3;outline:none;position:relative}
 .mj-sniper-board:focus-visible{box-shadow:0 0 0 3px var(--c)}
@@ -274,6 +280,8 @@ const CSS = `
 .mj-sniper-msg{flex:1;border-radius:12px;padding:10px 14px;background:color-mix(in srgb,var(--c) 8%,var(--surface));border:1.5px solid var(--line);line-height:1.5;font-size:1rem}
 .mj-sniper-msg.ok{border-color:var(--ok);background:var(--okbg)}
 .mj-sniper-msg.ko{border-color:var(--ko);background:var(--kobg)}
+.mj-sniper-msg.mid{border-color:#d4a90a;background:color-mix(in srgb,#f2c94c 20%,var(--surface))}
+.mj-sniper-msg.low{border-color:#f08a3c;background:color-mix(in srgb,#f08a3c 16%,var(--surface))}
 .mj-sniper-msg .vd{font-family:var(--f-display);font-weight:800;font-size:1.15rem;margin-right:8px}
 .mj-sniper-msg .pts{font-weight:800;color:var(--c)}
 .mj-sniper-msg .serie{color:var(--sn-gold);margin-left:6px}
@@ -341,6 +349,7 @@ function init(root){
         <div class="mj-sniper-dots" aria-hidden="true"></div>
         <div class="mj-sniper-stat"><span>Score</span><b class="k-sc"></b></div>
       </div>
+      <div class="mj-sniper-leg" aria-hidden="true"><span><i class="p100"></i>Dans le mille : 100</span><span><i class="p70"></i>Très bon : 70</span><span><i class="p40"></i>Pas loin : 40</span><span><i class="p15"></i>Presque : 15</span><span><i class="p0"></i>Raté : 0</span></div>
       <div class="mj-sniper-board" tabindex="0" aria-label="Droite graduée : clique pour tirer. Au clavier : flèches gauche et droite pour viser, Entrée pour tirer.">
         <svg viewBox="0 0 ${VW} ${VH}" aria-hidden="true"><g class="g-line"></g><g class="g-shot"></g><g class="g-aim"></g></svg>
       </div>
@@ -502,7 +511,7 @@ function init(root){
   function resultat(pts, html){
     G.res.push(pts); G.score += pts; G.n++;
     board.classList.add("done");
-    msg.className = "mj-sniper-msg " + (pts >= 70 ? "ok" : pts === 0 ? "ko" : "");
+    msg.className = "mj-sniper-msg " + (pts >= 70 ? "ok" : pts === 40 ? "mid" : pts === 15 ? "low" : "ko");
     msg.innerHTML = html;
     next.hidden = false;
     next.textContent = G.n < TIRS ? "Tir suivant" : "Voir mon score";
