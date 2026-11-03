@@ -92,6 +92,33 @@ const LV = [
   {titre:"En lettres", desc:"En lettres, en fraction ou en chiffres : le grand mélange.", gen:()=>{ const k = pick(["dix","orig","cent","estc","estd"]);
      return forme(KINDS[k](), pick(["mots","mots","mots","frac","dec"])); }}
 ];
+/* ---------- fractions (6e, chapitre 3) ----------
+   Ici les valeurs sont des entiers en 1/2520 d'unité (2520 est divisible par 2, 3, 4, 5, 6, 8, 9, 10 et 12) :
+   les fractions tombent juste. L.fr = true ; L.U = 2520 ; L.d = nombre de parts de l'unité sur la droite. */
+const U = 2520;
+const pgcd = (a,b) => b ? pgcd(b, a % b) : a;
+function frac(d, span, n, den){ return {fr:true, U, a:0, b:span*U, g:U/d, lab:U, mid:0, d, t:n*U/den, num:n, den, v:U/d/4, T:[1,2,4,6], form:"frac"}; }
+const FRK = {
+  /* l'unité partagée en d, fraction plus petite que 2 ou 3 */
+  part(){ const d = pick([2,3,4,5,6,8,10]), span = d >= 8 ? 2 : pick([2,3]); let n; do n = rnd(1, span*d-1); while(n % d === 0 || (n > d && Math.random() < .5)); return frac(d, span, n, d); },
+  /* plus grande que 1 */
+  sup(){ const d = pick([2,3,4,5,6]), span = d <= 4 ? 5 : 4; let n; do n = rnd(d+1, span*d-1); while(n % d === 0); return frac(d, span, n, d); },
+  /* la graduation ne correspond pas au dénominateur : 2/3 sur une droite graduée en sixièmes */
+  autre(){ const [G, dens] = pick([[6,[2,3]],[8,[2,4]],[10,[2,5]],[12,[2,3,4,6]],[9,[3]]]), den = pick(dens), span = G >= 10 ? 2 : 3;
+    let n; do n = rnd(1, span*den-1); while(n % den === 0 || pgcd(n, den) !== 1); return frac(G, span, n, den); },
+  /* nombre mixte : 2 + 1/3 */
+  mixte(){ let L; do L = FRK.sup(); while(pgcd(L.num % L.den, L.den) !== 1); L.form = "mixte"; L.ent = Math.floor(L.num / L.den); L.rest = L.num % L.den; return L; },
+  /* sans graduations intermédiaires : estimer */
+  est(){ const den = pick([2,3,4,5]); let n; do n = rnd(1, 3*den-1); while(n % den === 0 || pgcd(n, den) !== 1);
+    const L = frac(den, 3, n, den); L.g = U; L.est = true; L.v = U/40; L.T = [1,3,5,8]; return L; }
+};
+LV.push(
+  {titre:"Fractions : l'unité partagée", desc:"L'unité est partagée en parts égales : compte les graduations après 0.", gen:()=>FRK.part()},
+  {titre:"Fractions plus grandes que 1", desc:"Au-delà de 1 : continue de compter les parts, ou repère d'abord l'entier.", gen:()=>FRK.sup()},
+  {titre:"Fractions égales", desc:"La graduation ne correspond pas au dénominateur : écris d'abord une fraction égale.", gen:()=>FRK.autre()},
+  {titre:"Nombres mixtes", desc:"Un entier plus une fraction : repère l'entier, puis compte les parts.", gen:()=>FRK.mixte()},
+  {titre:"Fractions à l'œil", desc:"Seuls les entiers sont marqués : imagine le partage de l'unité.", gen:()=>FRK.est()}
+);
 LV.forEach(l => l.etoiles = [Math.round(MAXPTS*.4), Math.round(MAXPTS*.6), Math.round(MAXPTS*.8)]);
 
 /* ---------- précision du tir ---------- */
@@ -104,7 +131,9 @@ const VERDICT = {100:"Dans le mille !", 70:"Très bon tir !", 40:"Pas loin !", 1
 function etoiles(lv, sc){ return LV[lv].etoiles.filter(s => sc >= s).length; }
 
 /* la cible écrite en HTML (fraction en colonne) ou en texte */
+const frH = (n, d) => `<span class="mj-sniper-fr"><span>${n}</span><span>${d}</span></span>`;
 function cibleHTML(L){
+  if(L.form === "mixte") return `${L.ent} + ${frH(L.rest, L.den)}`;
   if(L.form === "frac") return `<span class="mj-sniper-fr"><span>${L.num}</span><span>${L.den}</span></span>`;
   if(L.form === "mots") return `<span class="mj-sniper-mots">${esc(L.mots)}</span>`;
   return fmt(L.t);
@@ -112,10 +141,27 @@ function cibleHTML(L){
 /* le tir, écrit avec autant de décimales que la précision de la mesure (4,90 face à 4,89) */
 function fmtTir(L, n){ if(L.u >= 1000) return fmt(n); const dec = L.v === 1 ? 3 : L.v === 10 ? 2 : 1, s = fmt(n);
   const [e, d = ""] = s.split(","); return e + "," + d.padEnd(dec, "0"); }
-function cibleTexte(L){ return L.form === "frac" ? L.num + "/" + L.den : L.form === "mots" ? L.mots : fmt(L.t); }
+/* le tir d'une fraction : la graduation la plus proche (« environ 7/6 »), ou un nombre décimal quand il n'y a que les entiers */
+function tirFr(L, tir){ if(L.est){ const t = Math.round(tir * 10 / U) / 10; return "environ " + String(t).replace(".", ","); }
+  const k = Math.round(tir / (U / L.d)); return (k * (U / L.d) === tir ? "" : "environ ") + k + "/" + L.d; }
+function ecartFr(L, ec){ if(!ec) return "0"; if(L.est){ const e = Math.round(ec * 100 / U) / 100; return "environ " + String(e).replace(".", ",") + " unité"; }
+  const k = Math.round(ec / (U / L.d) * 4) / 4; return (k ? String(k).replace(".", ",") : "moins d'un quart de") + " graduation" + (k > 1 ? "s" : ""); }
+function cibleTexte(L){ return L.form === "mixte" ? L.ent + " + " + L.rest + "/" + L.den : L.form === "frac" ? L.num + "/" + L.den : L.form === "mots" ? L.mots : fmt(L.t); }
 const rangG = k => k === 1 ? "1re" : k + "e";
 /* explication courte : où se trouve la cible, et pourquoi */
+function expliqueFr(L){
+  const q = Math.floor(L.num / L.den), r = L.num % L.den, F = frH(L.num, L.den);
+  if(L.est) return `Imagine chaque unité partagée en ${L.den} parts égales. ` + (q ? `${F} = ${q} + ${frH(r, L.den)} : c'est entre ${q} et ${q+1}, à ${r} part${r>1?"s":""} sur ${L.den} après ${q}.` : `${F} est entre 0 et 1, à ${r} part${r>1?"s":""} sur ${L.den} après 0.`);
+  const k = L.d / L.den, g = L.num * k;
+  let s = `L'unité est partagée en ${L.d} parts égales : une graduation = ${frH(1, L.d)}. `;
+  if(L.form === "mixte") s += `${L.ent} + ${frH(L.rest, L.den)} = ${F}. `;
+  if(k !== 1) s += `${F} = ${frH(g, L.d)} (on multiplie le numérateur et le dénominateur par ${k}). `;
+  s += `Je compte ${g} graduation${g>1?"s":""} après 0`;
+  if(g > L.d){ const qq = Math.floor(g / L.d), rr = g % L.d; s += `, c'est-à-dire ${rr} graduation${rr>1?"s":""} après ${qq}`; }
+  return s + ".";
+}
 function explique(L, x){
+  if(L.fr) return expliqueFr(L);
   let pre = "";
   if(L.form === "frac") pre = `${cibleHTML(L)} = ${fmt(L.t)} (${L.num} ${plur(L.num, L.den===10?"dixième":"centième")}). `;
   if(L.form === "mots") pre = `C'est le nombre ${fmt(L.t)}. `;
@@ -235,7 +281,7 @@ function droite(V, opt){                       // V : {a,b,g,lab,mid}, a et b pe
   for(let n = m0; n <= m1; n++){
     const v = n * V.lab, x = X(v); if(x < X0 - 1 || x > X0 + W + 1) continue;
     if(pxl < 46 && n % Math.ceil(46 / pxl)) continue;
-    s += `<text x="${x.toFixed(2)}" y="${Y+52}" text-anchor="middle" font-size="25" font-weight="700" fill="#15213b">${fmt(v)}</text>`;
+    s += `<text x="${x.toFixed(2)}" y="${Y+52}" text-anchor="middle" font-size="25" font-weight="700" fill="#15213b">${V.U ? v / V.U : fmt(v)}</text>`;
   }
   return s;
 }
@@ -367,13 +413,15 @@ function init(root){
     const xt = valX(L.t), xi = viseX;
     let s = "";
     if(M.ec){ const y = Y - 34; s += `<path d="M${Math.min(xi,xt)} ${y}H${Math.max(xi,xt)}" stroke="#e8a200" stroke-width="4" stroke-linecap="round"/>`; }
-    s += drapeau(xt, fmt(L.t), "#1e8e3e") + impact(xi);
-    const et = `ton tir : ${fmtTir(L, M.tir)}`, we = et.length * 10.5 + 18, wd = fmt(L.t).length * 14 + 22;
+    const cT = L.fr ? cibleTexte(L) : fmt(L.t), tT = L.fr ? tirFr(L, M.tir) : fmtTir(L, M.tir);
+    s += drapeau(xt, cT, "#1e8e3e") + impact(xi);
+    const et = `ton tir : ${tT}`, we = et.length * 10.5 + 18, wd = cT.length * 14 + 22;
     if(Math.abs(xi - xt) > (we + wd)/2 + 8) s += etiquette(xi, et);
     gShot.innerHTML = s;
     let serie = 0; if(M.pts === 100){ serie = 1; for(let i = G.res.length-1; i >= 0 && G.res[i] === 100; i--) serie++; }
     let txt = `<span class="vd">${VERDICT[M.pts]}</span> <span class="pts">+${M.pts} point${M.pts>1?"s":""}</span>${serie >= 2 ? ` <b class="serie">${serie} dans le mille d'affilée !</b>` : ""}<br>`
-      + `Ton tir : <span class="num">${fmtTir(L, M.tir)}</span> · cible : <span class="num">${fmt(L.t)}</span> · écart : <span class="num">${fmt(M.ec)}</span>`;
+      + (L.fr ? `Ton tir : <span class="num">${tT}</span> · cible : <span class="num">${cibleHTML(L)}</span> · écart : <span class="num">${ecartFr(L, M.ec)}</span>`
+              : `Ton tir : <span class="num">${fmtTir(L, M.tir)}</span> · cible : <span class="num">${fmt(L.t)}</span> · écart : <span class="num">${fmt(M.ec)}</span>`);
     if(M.pts < 100) txt += `<br>${explique(L, x)}`;
     else if(L.form !== "dec") txt += `<br>${explique(L)}`;
     resultat(M.pts, txt);

@@ -1,8 +1,8 @@
 /* Registre des mini-jeux de maths : window.MJ[clé] = {cls, src, name, titre, tag, badge, desc, intro, ill, wide} — assemblé par SC/mj/build.py */
 window.MJ = {};
 MJ["sniper6"] = {cls:"6e", src:"data/mj-sniper.js", name:"MJ_SNIPER", wide:true,
-  titre:"Le sniper de la droite graduée", tag:"Nombres décimaux", badge:"10 niveaux",
-  desc:"Un nombre décimal s'affiche : vise-le sur la droite graduée. Plus ton tir est précis, plus tu marques !",
+  titre:"Le sniper de la droite graduée", tag:"Décimaux et fractions", badge:"15 niveaux",
+  desc:"Un nombre décimal ou une fraction s'affiche : vise-le sur la droite graduée. Plus ton tir est précis, plus tu marques !",
   intro:"Un nombre s'affiche : clique sur la droite graduée à l'endroit exact où il se trouve. Plus ton tir est précis, plus tu gagnes de points.",
   ill:`<rect width="200" height="110" fill="#f4f7fd"/>
     <path d="M6 74H194" stroke="#15213b" stroke-width="2.2"/><path d="M197 74l-7-4v8z" fill="#15213b"/>
