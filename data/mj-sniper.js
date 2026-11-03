@@ -143,25 +143,56 @@ function fmtTir(L, n){ if(L.u >= 1000) return fmt(n); const dec = L.v === 1 ? 3 
   const [e, d = ""] = s.split(","); return e + "," + d.padEnd(dec, "0"); }
 /* le tir d'une fraction : la graduation la plus proche (« environ 7/6 »), ou un nombre décimal quand il n'y a que les entiers */
 function tirFr(L, tir){ if(L.est){ const t = Math.round(tir * 10 / U) / 10; return "environ " + String(t).replace(".", ","); }
-  const k = Math.round(tir / (U / L.d)); return (k * (U / L.d) === tir ? "" : "environ ") + k + "/" + L.d; }
+  const k = Math.round(tir / (U / L.d)); return (k * (U / L.d) === tir ? "" : "environ ") + (k % L.d === 0 ? k / L.d : k + "/" + L.d); }
 function ecartFr(L, ec){ if(!ec) return "0"; if(L.est){ const e = Math.round(ec * 100 / U) / 100; return "environ " + String(e).replace(".", ",") + " unité"; }
   const k = Math.round(ec / (U / L.d) * 4) / 4; return (k ? String(k).replace(".", ",") : "moins d'un quart de") + " graduation" + (k > 1 ? "s" : ""); }
 function cibleTexte(L){ return L.form === "mixte" ? L.ent + " + " + L.rest + "/" + L.den : L.form === "frac" ? L.num + "/" + L.den : L.form === "mots" ? L.mots : fmt(L.t); }
 const rangG = k => k === 1 ? "1re" : k + "e";
 /* explication courte : où se trouve la cible, et pourquoi */
-function expliqueFr(L){
+/* passage d'une fraction à une fraction égale, avec les flèches « × k » en haut et en bas */
+function transfo(n, d, k){
+  const W = 210, H = 150, a = 52, b = 158, num = n*k, den = d*k, m = (a+b)/2;
+  const t = (x, y, v) => `<text x="${x}" y="${y}" text-anchor="middle" font-size="26" font-weight="700" fill="currentColor">${v}</text>`;
+  const bar = x => `<path d="M${x-22} 75H${x+22}" stroke="currentColor" stroke-width="2.6"/>`;
+  /* flèche courbe de (a+16, y0) à (b-18, y0), sommet vers yc ; pointe orientée selon la tangente */
+  const fl = (y0, yc, ly) => { const ex = b-18, dx = ex - m, dy = y0 - yc, L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, px = -uy, py = ux, h = 11, w = 5;
+    const p1 = [ex - ux*h + px*w, y0 - uy*h + py*w], p2 = [ex - ux*h - px*w, y0 - uy*h - py*w];
+    return `<path d="M${a+16} ${y0}Q${m} ${yc} ${ex - ux*6} ${y0 - uy*6}" fill="none" stroke="#e8710a" stroke-width="2.6"/>`
+      + `<path d="M${ex} ${y0}L${p1[0].toFixed(1)} ${p1[1].toFixed(1)}L${p2[0].toFixed(1)} ${p2[1].toFixed(1)}z" fill="#e8710a"/>`
+      + `<text x="${m}" y="${ly}" text-anchor="middle" font-size="19" font-weight="700" fill="#e8710a">× ${k}</text>`; };
+  return `<span class="mj-sniper-tr"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${n} sur ${d} égale ${num} sur ${den} : on multiplie le numérateur et le dénominateur par ${k}">`
+    + fl(46, 14, 18) + t(a, 64, n) + bar(a) + t(a, 104, d) + t(m, 83, "=") + t(b, 64, num) + bar(b) + t(b, 104, den) + fl(112, 144, 146) + `</svg></span>`;
+}
+/* erreurs fréquentes sur une fraction : x = position du tir (en 1/2520) */
+function diagFr(L, x){
   const q = Math.floor(L.num / L.den), r = L.num % L.den, F = frH(L.num, L.den);
-  if(L.est) return `Imagine chaque unité partagée en ${L.den} parts égales. ` + (q ? `${F} = ${q} + ${frH(r, L.den)} : c'est entre ${q} et ${q+1}, à ${r} part${r>1?"s":""} sur ${L.den} après ${q}.` : `${F} est entre 0 et 1, à ${r} part${r>1?"s":""} sur ${L.den} après 0.`);
+  if(L.est){
+    if(Math.abs(x - L.den*U/L.num) < U/(2*L.den) && L.num !== L.den) return `Attention : tu as placé ${frH(L.den, L.num)}, la fraction à l'envers. Le dénominateur ${L.den} dit en combien de parts on coupe l'unité, le numérateur ${L.num} combien de parts on prend. `;
+    if(q && Math.abs(x - r*U/L.den) < U/(2*L.den)) return `Attention : tu as placé ${frH(r, L.den)}. Or ${F} est plus grand que 1 : ${F} = ${q} + ${frH(r, L.den)}. `;
+    return "";
+  }
+  const k = L.d / L.den, g = L.num * k, G = x / (U / L.d), pres = v => Math.abs(G - v) < .45;
+  if(k !== 1 && pres(L.num)) return `Tu as compté ${L.num} graduation${L.num>1?"s":""}. Mais ici, une graduation ne vaut pas ${frH(1, L.den)}, elle vaut ${frH(1, L.d)} : il faut d'abord écrire ${F} avec le dénominateur ${L.d}. `;
+  if(L.form === "mixte" && pres(L.ent + L.rest * k)) return `Tu as compté ${L.ent} graduation${L.ent>1?"s":""} pour l'entier ${L.ent}. Mais ${L.ent}, c'est ${L.ent} unité${L.ent>1?"s":""}, donc ${L.ent*L.d} graduations. `;
+  if(q && pres(r * k)) return L.form === "mixte" ? `Tu as oublié l'entier : ${L.ent} + ${frH(L.rest, L.den)} est plus grand que ${L.ent}. ` : `Tu as placé ${frH(r, L.den)}. Or ${F} est plus grand que 1 : ${F} = ${q} + ${frH(r, L.den)}. `;
+  if(L.num !== L.den && Math.abs(x - L.den*U/L.num) < U/(2*L.d)) return `Attention : tu as placé ${frH(L.den, L.num)}, la fraction à l'envers. Le dénominateur dit en combien de parts on coupe l'unité, le numérateur combien de parts on prend. `;
+  if(Math.abs(Math.abs(G - g) - 1) < .3) return `Tu es décalé d'une graduation : compte les « bonds » d'une graduation à la suivante, en partant de ${g > L.d ? Math.floor(g / L.d) : 0} (on ne compte pas le point de départ). `;
+  return "";
+}
+function expliqueFr(L, x){
+  const q = Math.floor(L.num / L.den), r = L.num % L.den, F = frH(L.num, L.den), diag = x === undefined ? "" : diagFr(L, x);
+  if(L.est) return diag + `Imagine chaque unité partagée en ${L.den} parts égales (en pointillés sur la droite). ` + (q ? `${F} = ${q} + ${frH(r, L.den)} : c'est entre ${q} et ${q+1}, à ${r} part${r>1?"s":""} sur ${L.den} après ${q}.` : `${F} est entre 0 et 1, à ${r} part${r>1?"s":""} sur ${L.den} après 0.`);
   const k = L.d / L.den, g = L.num * k;
-  let s = `L'unité est partagée en ${L.d} parts égales : une graduation = ${frH(1, L.d)}. `;
-  if(L.form === "mixte") s += `${L.ent} + ${frH(L.rest, L.den)} = ${F}. `;
-  if(k !== 1) s += `${F} = ${frH(g, L.d)} (on multiplie le numérateur et le dénominateur par ${k}). `;
+  let s = diag + `L'unité est partagée en ${L.d} parts égales : une graduation = ${frH(1, L.d)}. `;
+  if(L.form === "mixte") s += `${L.ent} + ${frH(L.rest, L.den)} = ${frH(L.ent*L.den, L.den)} + ${frH(L.rest, L.den)} = ${F}. `;
+  if(k !== 1) s += `Je multiplie le numérateur et le dénominateur par ${k} :${transfo(L.num, L.den, k)}`;
   s += `Je compte ${g} graduation${g>1?"s":""} après 0`;
-  if(g > L.d){ const qq = Math.floor(g / L.d), rr = g % L.d; s += `, c'est-à-dire ${rr} graduation${rr>1?"s":""} après ${qq}`; }
+  if(g > L.d){ const qq = Math.floor(g / L.d), rr = g % L.d; s += `, c'est-à-dire ${rr} graduation${rr>1?"s":""} après ${qq} (les bonds verts)`; }
+  else s += ` (les bonds verts)`;
   return s + ".";
 }
 function explique(L, x){
-  if(L.fr) return expliqueFr(L);
+  if(L.fr) return expliqueFr(L, x);
   let pre = "";
   if(L.form === "frac") pre = `${cibleHTML(L)} = ${fmt(L.t)} (${L.num} ${plur(L.num, L.den===10?"dixième":"centième")}). `;
   if(L.form === "mots") pre = `C'est le nombre ${fmt(L.t)}. `;
@@ -222,6 +253,8 @@ const CSS = `
 .mj-sniper-fr>span{padding:0 .18em}
 .mj-sniper-fr>span:first-child{border-bottom:.08em solid currentColor}
 .mj-sniper-fb .mj-sniper-fr{font-size:.95em}
+.mj-sniper-tr{display:flex;justify-content:center;margin:2px 0 4px}
+.mj-sniper-tr svg{max-width:100%;height:auto;color:var(--ink)}
 .mj-sniper-stat{display:flex;flex-direction:column;line-height:1.2}
 .mj-sniper-stat b{font-family:var(--f-display);font-size:1.5rem}
 .mj-sniper-stat span{font-size:.85rem;color:var(--muted);font-weight:600}
@@ -414,6 +447,7 @@ function init(root){
     let s = "";
     if(M.ec){ const y = Y - 34; s += `<path d="M${Math.min(xi,xt)} ${y}H${Math.max(xi,xt)}" stroke="#e8a200" stroke-width="4" stroke-linecap="round"/>`; }
     const cT = L.fr ? cibleTexte(L) : fmt(L.t), tT = L.fr ? tirFr(L, M.tir) : fmtTir(L, M.tir);
+    if(L.fr) s += bonds(L);
     s += drapeau(xt, cT, "#1e8e3e") + impact(xi);
     const et = `ton tir : ${tT}`, we = et.length * 10.5 + 18, wd = cT.length * 14 + 22;
     if(Math.abs(xi - xt) > (we + wd)/2 + 8) s += etiquette(xi, et);
@@ -425,6 +459,15 @@ function init(root){
     if(M.pts < 100) txt += `<br>${explique(L, x)}`;
     else if(L.form !== "dec") txt += `<br>${explique(L)}`;
     resultat(M.pts, txt);
+  }
+  /* fractions : les bonds comptés depuis l'entier précédent (en vert), ou le partage imaginaire de l'unité (en pointillés) */
+  function bonds(L){
+    if(L.est){ let s = ""; for(let i = 1; i < 3*L.den; i++){ if(i % L.den === 0) continue; const x = valX(i*U/L.den); s += `<path d="M${x} ${Y-16}V${Y+16}" stroke="#1e8e3e" stroke-width="2.2" stroke-dasharray="4 3"/>`; } return s; }
+    const gr = U / L.d, gt = L.t / gr, q = Math.floor(gt / L.d) * L.d; let s = "";
+    for(let i = q; i < gt; i++){ const x1 = valX(i*gr), x2 = valX((i+1)*gr), m = (x1+x2)/2;
+      s += `<path d="M${x1+2} ${Y+6}Q${m} ${Y+30} ${x2-2} ${Y+6}" fill="none" stroke="#1e8e3e" stroke-width="2"/>`
+        + `<text x="${m}" y="${Y+42}" text-anchor="middle" font-size="15" font-weight="700" fill="#1e8e3e">${i-q+1}</text>`; }
+    return s;
   }
   function impact(x){
     return `<g class="drop"><circle cx="${x}" cy="${Y}" r="9" fill="#d93025" stroke="#fff" stroke-width="2.5"/></g>`
@@ -487,7 +530,7 @@ function init(root){
   function voir(){ if(vu) return; vu = true; const c = $(".mj-sniper-card"); const r = c.getBoundingClientRect();
     if(r.bottom > innerHeight && r.top > 0) window.scrollBy({top: Math.min(r.top - 8, r.bottom - innerHeight + 12), behavior: reduit() ? "auto" : "smooth"}); }
   /* lecture seule, pour les tests automatiques */
-  root._mjEtat = () => G && {t:G.L.t, st:G.st, etat:G.etat, stages:G.L.stages||[], a:V.a, b:V.b, n:G.n, score:G.score};
+  root._mjEtat = () => G && {L:G.L, t:G.L.t, st:G.st, etat:G.etat, stages:G.L.stages||[], a:V.a, b:V.b, n:G.n, score:G.score};
   partie();
 }
 return {init, _t:{fmt, fmtTir, lettres, enLettres, KINDS, LV, mesure, explique, alterne, expliqueZoom, etoiles, forme, TIRS, MAXPTS}};
