@@ -30,6 +30,170 @@ const S_CMP = sch("Comparer deux décimaux", `<p class="schN">1) On compare les 
 const S_ENC = sch("Encadrer", `<div class="scroll"><table class="std"><tbody><tr><th>à l'unité</th><td>2 &lt; 2,473 &lt; 3</td></tr><tr><th>au dixième</th><td>2,4 &lt; 2,473 &lt; 2,5</td></tr><tr><th>au centième</th><td>2,47 &lt; 2,473 &lt; 2,48</td></tr></tbody></table></div><p class="schN">Pour intercaler un nombre entre 1,57 et 1,58, on ajoute un chiffre : 1,571 ; 1,575…</p>`);
 const S_ARR = sch("Arrondir", `<p class="schN">J'encadre, puis je garde la borne la plus proche. Au milieu, je prends la borne supérieure.</p><p class="calc">2,4 &lt; 2,473 &lt; 2,5 → 2,473 est plus proche de 2,5 : l'arrondi au dixième est 2,5.</p><p class="schN">Il suffit de regarder le chiffre juste après : 0, 1, 2, 3 ou 4 → je garde ; 5, 6, 7, 8 ou 9 → j'augmente.</p>`);
 
+/* ===================== schémas dessinés du cours (SVG, couleurs lisibles en mode clair et sombre) ===================== */
+const GREEN="#2e8b3a", ORNG="#d97a00";
+const sv = (W,H,lab,body) => `<svg class="fig f65 fsch" viewBox="0 0 ${W} ${H}" width="${W}" style="margin:10px auto" role="img" aria-label="${esc(lab)}">${body}</svg>`;
+const tx = (x,y,t,o={}) => `<text x="${x}" y="${y}" style="text-anchor:${o.a||"middle"};font-size:${o.s||16}px;${o.b?"font-weight:700;":""}${o.c?"fill:"+o.c+";":""}${o.o?"opacity:"+o.o+";":""}">${t}</text>`;
+const ts = (t,c,b) => `<tspan style="${c?"fill:"+c+";":""}${b?"font-weight:700;":""}">${t}</tspan>`;
+const ln = (x1,y1,x2,y2,o={}) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" style="stroke:${o.c||"currentColor"};stroke-width:${o.w||2};${o.d?"stroke-dasharray:"+o.d+";":""}${o.o?"opacity:"+o.o+";":""}stroke-linecap:round"/>`;
+const arw = (x1,y1,x2,y2,o={}) => { const a=Math.atan2(y2-y1,x2-x1), k=o.k||9, c=o.c||"currentColor";
+  const p=(t)=>`${(x2-k*Math.cos(a+t)).toFixed(1)},${(y2-k*Math.sin(a+t)).toFixed(1)}`;
+  return ln(x1,y1,x2,y2,o)+`<polygon points="${x2},${y2} ${p(.45)} ${p(-.45)}" style="fill:${c};stroke:none"/>`; };
+/* accolade horizontale de x1 à x2, posée en y, pointe vers le bas (d=1) ou le haut (d=-1) */
+const brace = (x1,x2,y,o={}) => { const d=o.d||1, h=8*d, m=(x1+x2)/2;
+  return `<path d="M${x1} ${y} Q${x1} ${y+h} ${x1+8} ${y+h} L${m-8} ${y+h} Q${m} ${y+h} ${m} ${y+2*h} Q${m} ${y+h} ${m+8} ${y+h} L${x2-8} ${y+h} Q${x2} ${y+h} ${x2} ${y}" style="fill:none;stroke:${o.c||"currentColor"};stroke-width:2"/>`; };
+/* fraction dessinée (trait horizontal) centrée en x ; y = ligne de base du numérateur */
+const frS = (x,y,a,b,o={}) => { const s=o.s||20, w=Math.max(String(a).length,String(b).length)*s*.62+8;
+  return tx(x,y,a,{s,c:o.c,b:o.b})+ln(x-w/2,y+s*.32,x+w/2,y+s*.32,{c:o.c,w:1.8})+tx(x,y+s*1.25,b,{s,c:o.c,b:o.b}); };
+/* nombre écrit chiffre par chiffre : renvoie {svg, x:[centres]} ; st(i) -> options du caractère i */
+const strip = (str,x,y,s,st=()=>({})) => { const X=[]; let cx=x, out="";
+  [...str].forEach((ch,i)=>{ const w=ch===","?s*.34:ch===" "?s*.28:s*.62; X.push(cx+w/2); out+=tx(cx+w/2,y,ch,Object.assign({s,b:1},st(i))); cx+=w; });
+  return {svg:out, x:X, end:cx}; };
+const barre = (X,i,y,s) => ln(X[i]-s*.3,y-s*.3,X[i]+s*.3,y-s*.3,{c:RED,w:3});
+/* axe horizontal de valeurs v0 à v1 (entre x0 et x1), graduations tous les pas p (grandes tous les P) */
+const axe = (v0,v1,x0,x1,y,p,P,o={}) => { const X=v=>x0+(v-v0)*(x1-x0)/(v1-v0); let s=ln(x0-6,y,x1+(o.fl?28:6),y,{w:2});
+  if(o.fl) s+=`<path d="M${x1+20} ${y-6} L${x1+30} ${y} L${x1+20} ${y+6}" style="fill:none;stroke:currentColor;stroke-width:2"/>`;
+  const n=Math.round((v1-v0)/p); for(let k=0;k<=n;k++){ const v=v0+k*p, big=Math.abs(v/P-Math.round(v/P))<1e-6; s+=ln(X(v),y-(big?11:6),X(v),y+(big?11:6),{w:big?2:1.4}); }
+  return {svg:s, X}; };
+const croix = (x,y,c=RED) => ln(x-6,y-6,x+6,y+6,{c,w:2.6})+ln(x+6,y-6,x-6,y+6,{c,w:2.6});
+
+/* I.1 — 3,07 = 307/100 : autant de zéros que de chiffres après la virgule */
+const F_FRAC = (()=>{ const N=strip("3,07",40,78,42,i=>i>=2?{c:BLUE}:{});
+  let s=N.svg+ln(N.x[2]-14,92,N.x[3]+14,92,{c:BLUE,w:3})+tx((N.x[2]+N.x[3])/2,116,"2 chiffres",{s:15,c:BLUE,b:1})+tx((N.x[2]+N.x[3])/2,134,"après la virgule",{s:14,c:BLUE});
+  s+=tx(172,74,"=",{s:36,b:1});
+  s+=tx(262,58,"307",{s:34,b:1})+ln(222,70,302,70,{w:2.4})+`<text x="262" y="104" style="text-anchor:middle;font-size:34px;font-weight:700">1${ts("00",BLUE)}</text>`;
+  s+=arw(146,112,226,123,{c:BLUE,w:1.8})+tx(278,130,"2 zéros",{s:15,c:BLUE,b:1});
+  return sv(340,145,"3,07 est égal à 307 sur 100 : 2 chiffres après la virgule, 2 zéros au dénominateur",s); })();
+
+/* I.2 — partie entière / partie décimale */
+const F_PART = (()=>{ const N=strip("3,07",70,66,46,i=>i===0?{c:RED}:i>=2?{c:BLUE}:{});
+  let s=N.svg+brace(N.x[0]-14,N.x[0]+14,80,{c:RED})+brace(N.x[2]-14,N.x[3]+14,80,{c:BLUE});
+  s+=tx(N.x[0]-4,124,"partie entière",{s:15,c:RED,b:1})+tx(N.x[0]-4,144,"3",{s:18,c:RED,b:1});
+  s+=tx((N.x[2]+N.x[3])/2+60,124,"partie décimale",{s:15,c:BLUE,b:1})+tx((N.x[2]+N.x[3])/2+60,144,"0,07",{s:18,c:BLUE,b:1});
+  s+=`<text x="230" y="64" style="text-anchor:start;font-size:30px;font-weight:700">= ${ts("3",RED)} + ${ts("0,07",BLUE)}</text>`;
+  return sv(420,154,"3,07 = 3 + 0,07 : la partie entière est 3, la partie décimale est 0,07",s); })();
+
+/* I.3 — les entiers sont dans les décimaux */
+const F_VENN = (()=>{ let s=`<ellipse cx="225" cy="112" rx="215" ry="100" style="fill:${BLUE};fill-opacity:.07;stroke:${BLUE};stroke-width:2.5"/>`;
+  s+=`<ellipse cx="150" cy="128" rx="104" ry="62" style="fill:${RED};fill-opacity:.08;stroke:${RED};stroke-width:2.5"/>`;
+  s+=tx(225,34,"les nombres décimaux",{s:17,c:BLUE,b:1})+tx(150,96,"les nombres entiers",{s:16,c:RED,b:1});
+  s+=tx(105,136,"5",{s:22,b:1})+tx(150,136,"12",{s:22,b:1})+tx(195,136,"0",{s:22,b:1})+tx(150,168,"2&#160;070",{s:22,b:1});
+  s+=tx(320,92,"3,07",{s:22,b:1})+tx(360,140,"0,5",{s:22,b:1})+tx(300,180,"14,8",{s:22,b:1});
+  return sv(450,222,"Les nombres entiers (5, 12, 0, 2 070) sont à l'intérieur des nombres décimaux (3,07 ; 0,5 ; 14,8)",s); })();
+
+/* II.1 — chiffre des dixièmes / nombre de dixièmes */
+const F_DIX = (()=>{ const N=strip("207,045",40,104,44,i=>i===4?{c:BLUE}:i>4?{o:.35}:{});
+  let s=N.svg+`<ellipse cx="${N.x[4]}" cy="89" rx="17" ry="24" style="fill:none;stroke:${BLUE};stroke-width:2.5"/>`;
+  s+=arw(N.x[4]+70,34,N.x[4]+18,66,{c:BLUE,w:2})+tx(N.x[4]+76,30,"le chiffre des dixièmes : 0",{s:16,c:BLUE,b:1,a:"start"});
+  const a=N.x[0]-16, b=N.x[4]+16;
+  s+=`<path d="M${a} 120 L${a} 132 L${b} 132 L${b} 120" style="fill:none;stroke:${RED};stroke-width:2.5"/>`;
+  s+=tx(a,160,"le nombre de dixièmes : 2&#160;070",{s:16,c:RED,b:1,a:"start"});
+  return sv(470,172,"Dans 207,045, le chiffre des dixièmes est 0, mais le nombre de dixièmes est 2 070",s); })();
+
+/* II.2 — les écritures de 3,07 autour du nombre */
+const F_HUB = (()=>{ let s=`<rect x="262" y="104" width="116" height="56" rx="12" style="fill:${BLUE};fill-opacity:.1;stroke:${BLUE};stroke-width:2.5"/>`;
+  s+=tx(320,143,"3,07",{s:32,b:1})+tx(320,96,"écriture décimale",{s:14,c:BLUE,b:1});
+  s+=ln(262,114,200,78,{w:1.8,o:.6})+ln(378,114,440,78,{w:1.8,o:.6})+ln(262,152,200,186,{w:1.8,o:.6})+ln(378,152,440,186,{w:1.8,o:.6});
+  s+=tx(110,22,"fraction décimale",{s:14,c:BLUE,b:1})+frS(110,52,"307","100",{s:24});
+  s+=tx(530,22,"écriture décomposée",{s:14,c:BLUE,b:1})+tx(530,66,"3 + 0,07",{s:24,b:1});
+  s+=tx(530,190,"écriture décomposée",{s:14,c:BLUE,b:1})+tx(510,232,"3 +",{s:24,b:1,a:"end"})+frS(546,218,"7","100",{s:24});
+  s+=tx(110,190,"en lettres",{s:14,c:BLUE,b:1})+tx(110,220,"trois unités",{s:18,b:1})+tx(110,244,"et sept centièmes",{s:18,b:1});
+  return sv(640,268,"Le nombre 3,07 s'écrit aussi 307 sur 100, 3 + 0,07, 3 + 7 sur 100, trois unités et sept centièmes",s); })();
+
+/* II.2 — 3,07 en carrés : 3 unités, 0 dixième, 7 centièmes */
+const F_CARRES = (()=>{ const c=10, Q=(x0,y0,fill,k)=>{ let s=`<rect x="${x0}" y="${y0}" width="${10*c}" height="${10*c}" style="fill:${fill?BLUE:"none"};fill-opacity:${fill?.4:0}"/>`;
+    for(let i=0;i<k;i++) s+=`<rect x="${x0}" y="${y0+i*c}" width="${c}" height="${c}" style="fill:${RED};fill-opacity:.75"/>`;
+    for(let i=1;i<10;i++) s+=ln(x0+i*c,y0,x0+i*c,y0+10*c,{w:.8,o:.45})+ln(x0,y0+i*c,x0+10*c,y0+i*c,{w:.8,o:.45});
+    return s+`<rect x="${x0}" y="${y0}" width="${10*c}" height="${10*c}" style="fill:none;stroke:currentColor;stroke-width:2"/>`; };
+  let s=Q(10,10,1,0)+Q(122,10,1,0)+Q(234,10,1,0)+tx(363,68,"+",{s:30,b:1})+Q(392,10,0,7);
+  s+=brace(10,334,118,{c:BLUE})+tx(172,152,"3 unités",{s:17,c:BLUE,b:1});
+  s+=tx(442,136,"7 centièmes",{s:17,c:RED,b:1})+tx(470,176,"0,07 =",{s:18,b:1,a:"end"})+frS(500,164,"7","100",{s:20,c:RED});
+  s+=tx(506,30,"1 colonne",{s:14,a:"start"})+tx(506,48,"= 1 dixième",{s:14,a:"start",b:1})+tx(506,80,"1 petit carré",{s:14,a:"start"})+tx(506,98,"= 1 centième",{s:14,a:"start",b:1,c:RED});
+  return sv(620,212,"3,07 : trois carrés unités entièrement coloriés et 7 petits carrés (7 centièmes) dans un quatrième carré",s); })();
+
+/* II.3 — zéros inutiles barrés, zéro utile entouré */
+const F_ZERO = (()=>{ let s="";
+  const A=strip("05,30",14,48,30); s+=A.svg+barre(A.x,0,48,30)+barre(A.x,4,48,30)+tx(A.end+10,48,"= 5,3",{s:26,b:1,a:"start"});
+  const B=strip("12,400",224,48,30); s+=B.svg+barre(B.x,4,48,30)+barre(B.x,5,48,30)+tx(B.end+10,48,"= 12,4",{s:26,b:1,a:"start"});
+  const C=strip("070",462,48,30); s+=C.svg+barre(C.x,0,48,30)+tx(C.end+10,48,"= 70",{s:26,b:1,a:"start"});
+  s+=tx(14,80,"zéros inutiles : tout à gauche ou tout à droite",{s:15,c:RED,b:1,a:"start"});
+  const D3=strip("3,07",14,140,30,i=>i===2?{c:GREEN}:{}); s+=D3.svg+`<ellipse cx="${D3.x[2]}" cy="130" rx="12" ry="18" style="fill:none;stroke:${GREEN};stroke-width:2.5"/>`;
+  s+=tx(D3.end+12,140,"≠ 3,7",{s:26,b:1,a:"start"})+tx(D3.end+100,128,"zéro utile : il tient",{s:15,c:GREEN,b:1,a:"start"})+tx(D3.end+100,148,"la place des dixièmes",{s:15,c:GREEN,b:1,a:"start"});
+  return sv(600,160,"05,30 = 5,3 ; 12,400 = 12,4 ; 070 = 70 ; mais dans 3,07 le zéro est utile",s); })();
+
+/* III — demi-droite graduée en dixièmes */
+const F_AXE = (()=>{ const A=axe(0,3,40,550,64,.1,1,{fl:1}); let s=A.svg;
+  s+=ln(A.X(0),64,A.X(.1),64,{c:ORNG,w:6});
+  [["0",0],["1",1],["2",2],["3",3]].forEach(([t,v])=>s+=tx(A.X(v),96,t,{s:18,b:1}));
+  [["A",.4,"0,4"],["B",1.7,"1,7"],["C",2.3,"2,3"]].forEach(([L,v,t])=>s+=croix(A.X(v),64)+tx(A.X(v),40,L,{s:18,c:RED,b:1})+tx(A.X(v),96,t,{s:16,c:RED,b:1}));
+  s+=brace(A.X(0),A.X(1),108,{c:BLUE})+tx(A.X(.5),142,"1 unité = 10 graduations",{s:15,c:BLUE,b:1});
+  s+=arw(A.X(.05)+4,22,A.X(.05)+2,54,{c:ORNG,w:1.8})+tx(A.X(.05)+12,18,"1 graduation = 0,1",{s:15,c:ORNG,b:1,a:"start"});
+  return sv(600,152,"Demi-droite graduée en dixièmes : A(0,4), B(1,7), C(2,3) ; une graduation vaut 0,1",s); })();
+
+/* III — zoom entre 1,6 et 1,7 : graduation en centièmes */
+const F_ZOOM = (()=>{ const T=axe(1,2,40,560,46,.1,1), B=axe(1.6,1.7,40,560,176,.01,.1); let s="";
+  s+=`<polygon points="${T.X(1.6)},50 ${T.X(1.7)},50 560,170 40,170" style="fill:${BLUE};fill-opacity:.07"/>`;
+  s+=ln(T.X(1.6),50,40,170,{c:BLUE,w:1.4,d:"5 5"})+ln(T.X(1.7),50,560,170,{c:BLUE,w:1.4,d:"5 5"});
+  s+=T.svg+ln(T.X(1.6),46,T.X(1.7),46,{c:BLUE,w:6})+B.svg;
+  s+=tx(T.X(1),24,"1",{s:16,b:1})+tx(T.X(2),24,"2",{s:16,b:1})+tx(T.X(1.6),24,"1,6",{s:15,c:BLUE,b:1})+tx(T.X(1.7),24,"1,7",{s:15,c:BLUE,b:1});
+  s+=tx(320,122,"je partage encore en 10",{s:15,c:BLUE,b:1})+tx(340,142,"1 graduation = 0,01",{s:15,c:BLUE,b:1});
+  s+=tx(40,206,"1,6",{s:17,b:1})+tx(560,206,"1,7",{s:17,b:1})+croix(B.X(1.63),176)+tx(B.X(1.63),154,"M",{s:18,c:RED,b:1})+tx(B.X(1.63),206,"1,63",{s:17,c:RED,b:1});
+  return sv(600,216,"Zoom entre 1,6 et 1,7 : chaque dixième est partagé en 10 centièmes ; M a pour abscisse 1,63",s); })();
+
+/* IV.1 — comparer 5,8 et 5,17 chiffre par chiffre */
+const F_CMP = (()=>{ const cx=[60,92,130,206]; let s="";
+  s+=`<rect x="${cx[0]-22}" y="40" width="44" height="100" rx="8" style="fill:${GREEN};fill-opacity:.13;stroke:${GREEN};stroke-width:2"/>`;
+  s+=`<rect x="${cx[2]-22}" y="40" width="44" height="100" rx="8" style="fill:${RED};fill-opacity:.12;stroke:${RED};stroke-width:2"/>`;
+  s+=tx(cx[0],30,"unités",{s:13,c:GREEN,b:1})+tx(cx[2],30,"dixièmes",{s:13,c:RED,b:1})+tx(cx[3],30,"centièmes",{s:13,o:.75});
+  ["5",",","8","0"].forEach((d,i)=>s+=tx(cx[i],80,d,{s:34,b:1,o:i===3?.4:1}));
+  ["5",",","1","7"].forEach((d,i)=>s+=tx(cx[i],128,d,{s:34,b:1}));
+  s+=tx(cx[3]+22,80,"← j'ajoute un 0",{s:13,a:"start",o:.8});
+  s+=tx(350,62,"① unités : 5 = 5",{s:17,c:GREEN,b:1,a:"start"})+tx(350,96,"② dixièmes : 8 > 1",{s:17,c:RED,b:1,a:"start"})+tx(350,136,"donc 5,8 > 5,17",{s:20,b:1,a:"start"});
+  return sv(580,150,"Comparer 5,80 et 5,17 : les unités sont égales, 8 dixièmes est plus grand que 1 dixième, donc 5,8 > 5,17",s); })();
+
+/* IV.2 — ranger : ordre croissant sur la demi-droite */
+const F_RANG = (()=>{ const A=axe(33.5,35,40,560,70,.1,.5,{fl:1}); let s=A.svg;
+  s+=tx(A.X(33.5),98,"33,5",{s:14,o:.8})+tx(A.X(34),98,"34",{s:15,b:1})+tx(A.X(34.5),98,"34,5",{s:14,o:.8})+tx(A.X(35),98,"35",{s:15,b:1});
+  [["33,68",33.68,22],["33,8",33.8,44],["34",34,44],["34,2",34.2,44],["34,75",34.75,44]].forEach(([t,v,y])=>s+=croix(A.X(v),70)+tx(A.X(v),y,t,{s:15,c:RED,b:1}));
+  s+=arw(60,122,520,122,{c:BLUE,w:2.4})+tx(290,116,"ordre croissant : du plus petit au plus grand",{s:15,c:BLUE,b:1});
+  s+=arw(520,150,60,150,{c:ORNG,w:2.4})+tx(290,144,"ordre décroissant : du plus grand au plus petit",{s:15,c:ORNG,b:1});
+  return sv(600,160,"33,68 < 33,8 < 34 < 34,2 < 34,75 placés sur une demi-droite : ordre croissant de gauche à droite",s); })();
+
+/* IV.3 — encadrer 2,473 : trois zooms */
+const F_ENC = (()=>{ const R=[[2,3,.1,40,"2","3","à l'unité","2 < 2,473 < 3"],[2.4,2.5,.01,124,"2,4","2,5","au dixième","2,4 < 2,473 < 2,5"],[2.47,2.48,.001,208,"2,47","2,48","au centième","2,47 < 2,473 < 2,48"]];
+  let s=""; R.forEach(([a,b,p,y,la,lb,nom,ineq],k)=>{ const A=axe(a,b,40,400,y,p,b-a);
+    if(k<2){ const [a2,b2]=[R[k+1][0],R[k+1][1]], y2=R[k+1][3];
+      s+=`<polygon points="${A.X(a2)},${y+4} ${A.X(b2)},${y+4} 400,${y2-4} 40,${y2-4}" style="fill:${BLUE};fill-opacity:.07"/>`+ln(A.X(a2),y+4,40,y2-4,{c:BLUE,w:1.2,d:"5 5"})+ln(A.X(b2),y+4,400,y2-4,{c:BLUE,w:1.2,d:"5 5"}); }
+    s+=A.svg; if(k<2) s+=ln(A.X(R[k+1][0]),y,A.X(R[k+1][1]),y,{c:BLUE,w:5});
+    s+=tx(40,y+30,la,{s:16,b:1})+tx(400,y+30,lb,{s:16,b:1})+croix(A.X(2.473),y)+tx(A.X(2.473),y-16,"2,473",{s:14,c:RED,b:1});
+    s+=tx(440,y-6,nom,{s:14,c:BLUE,b:1,a:"start"})+tx(440,y+18,ineq,{s:17,b:1,a:"start"}); });
+  return sv(630,246,"Encadrer 2,473 : 2 < 2,473 < 3 ; 2,4 < 2,473 < 2,5 ; 2,47 < 2,473 < 2,48",s); })();
+
+/* IV.4 — intercaler entre 1,57 et 1,58 */
+const F_INT = (()=>{ const A=axe(1.57,1.58,40,520,54,.001,.01); let s=A.svg;
+  s+=tx(40,84,"1,57",{s:16,b:1})+tx(520,84,"1,58",{s:16,b:1})+tx(40,104,"= 1,570",{s:13,o:.75})+tx(520,104,"= 1,580",{s:13,o:.75});
+  [1.571,1.572,1.573,1.574,1.575,1.576,1.577,1.578,1.579].forEach(v=>s+=`<circle cx="${A.X(v)}" cy="54" r="4.5" style="fill:${BLUE}"/>`);
+  s+=croix(A.X(1.573),54)+tx(A.X(1.573),32,"1,573",{s:16,c:RED,b:1})+tx(A.X(1.578),32,"1,578",{s:15,c:BLUE,b:1});
+  s+=tx(280,100,"j'ajoute un chiffre : 1,571 ; 1,572 ; … ; 1,579",{s:15,c:BLUE,b:1});
+  return sv(560,112,"Entre 1,57 et 1,58 on peut intercaler 1,571 ; 1,572 ; … ; 1,579",s); })();
+
+/* V — arrondir 2,473 au dixième : la borne la plus proche */
+const F_ARR = (()=>{ const A=axe(2.4,2.5,40,560,92,.01,.05); let s=A.svg;
+  s+=tx(40,124,"2,4",{s:18,b:1})+`<circle cx="560" cy="118" r="24" style="fill:${GREEN};fill-opacity:.12;stroke:${GREEN};stroke-width:2.5"/>`+tx(560,124,"2,5",{s:18,b:1,c:GREEN});
+  s+=tx(A.X(2.45),124,"2,45",{s:14,o:.7})+tx(A.X(2.45),142,"(milieu)",{s:13,o:.7});
+  s+=croix(A.X(2.473),92)+tx(A.X(2.473),124,"2,473",{s:16,c:RED,b:1});
+  s+=arw(A.X(2.473)-6,60,46,60,{w:2,o:.45})+tx((A.X(2.473)+40)/2,50,"loin",{s:15,o:.6,b:1});
+  s+=arw(A.X(2.473)+6,60,554,60,{c:GREEN,w:2.6})+tx((A.X(2.473)+560)/2,50,"plus proche",{s:15,c:GREEN,b:1});
+  s+=tx(300,24,"l'arrondi au dixième de 2,473 est 2,5",{s:18,b:1});
+  return sv(600,152,"2,473 est entre 2,4 et 2,5, plus proche de 2,5 : son arrondi au dixième est 2,5",s); })();
+
+/* V — la règle du chiffre suivant */
+const F_REGLE = (()=>{ let s="";
+  for(let d=0;d<10;d++){ const x=20+d*46, c=d<5?BLUE:RED; s+=`<rect x="${x}" y="14" width="40" height="40" rx="7" style="fill:${c};fill-opacity:.13;stroke:${c};stroke-width:2"/>`+tx(x+20,42,String(d),{s:22,b:1,c}); }
+  s+=brace(20,244,62,{c:BLUE})+tx(132,98,"je garde",{s:17,c:BLUE,b:1});
+  s+=brace(250,474,62,{c:RED})+tx(362,98,"j'augmente de 1",{s:17,c:RED,b:1});
+  return sv(500,108,"Chiffre suivant 0, 1, 2, 3 ou 4 : je garde ; 5, 6, 7, 8 ou 9 : j'augmente",s); })();
+
 CH["6e-5"] = {
 intro:"Reconnaître un nombre décimal et ses différentes écritures, la valeur des chiffres, les zéros inutiles, la demi-droite graduée, comparer, ranger, encadrer, intercaler et arrondir.",
 savoir:[
@@ -43,55 +207,56 @@ savoir:[
 /* ===================== COURS ===================== */
 cours:[
 {k:"I", t:"Qu'est-ce qu'un nombre décimal ?", h:`
-  <h4>1. Définition</h4>
-  <div class="retenir" data-l="Définition"><p>Un <b>nombre décimal</b> est un nombre qui peut s'écrire sous la forme d'une <b>fraction décimale</b>, c'est-à-dire une fraction dont le dénominateur est 1, 10, 100, 1 000, …</p></div>
-  <p class="calc">3,07 = {307/100} &nbsp;&nbsp; 14,8 = {148/10} &nbsp;&nbsp; 0,64 = {64/100} &nbsp;&nbsp; 5 = {5/1}</p>
-  <p><b>Remarque :</b> l'écriture décimale d'un nombre décimal comporte un nombre fini de chiffres après la virgule.</p>
-  <h4>2. Partie entière et partie décimale</h4>
-  <div class="retenir" data-l="Définition"><p>Un nombre décimal s'écrit comme la somme de sa <b>partie entière</b> (à gauche de la virgule) et de sa <b>partie décimale</b> (à droite de la virgule).</p></div>
-  <p><b>Exemple :</b> 3,07 = 3 + 0,07. La partie entière est 3, la partie décimale est 0,07.</p>
-  <h4>3. Les nombres entiers</h4>
-  <div class="retenir" data-l="Définition"><p>Un <b>nombre entier</b> est un nombre décimal dont la partie décimale est égale à 0.</p></div>
-  <p class="attention"><b>ATTENTION :</b> tous les nombres entiers sont des nombres décimaux, mais tous les nombres décimaux ne sont pas des nombres entiers.</p>`},
+  <div class="keep"><h4>1. Définition</h4>
+  <div class="retenir" data-l="Définition"><p>Un <b>nombre décimal</b> peut s'écrire avec une <b>fraction décimale</b> : une fraction dont le dénominateur est 1, 10, 100, 1 000, …</p></div>
+  ${F_FRAC}
+  <p class="calc">14,8 = {148/10} &nbsp;&nbsp; 0,64 = {64/100} &nbsp;&nbsp; 1,309 = {1 309/1 000} &nbsp;&nbsp; 5 = {5/1}</p></div>
+  <p><b>Remarque :</b> après la virgule, il y a un nombre fini de chiffres.</p>
+  <div class="keep"><h4>2. Partie entière et partie décimale</h4>
+  <div class="retenir" data-l="Définition"><p>Un nombre décimal = sa <b>partie entière</b> (à gauche de la virgule) + sa <b>partie décimale</b> (à droite de la virgule).</p></div>
+  ${F_PART}</div>
+  <div class="keep"><h4>3. Les nombres entiers</h4>
+  <div class="retenir" data-l="Définition"><p>Un <b>nombre entier</b> est un nombre décimal dont la partie décimale est 0.</p></div>
+  ${F_VENN}
+  <p class="attention"><b>ATTENTION :</b> tous les entiers sont des décimaux, mais tous les décimaux ne sont pas des entiers.</p></div>`},
 {k:"II", t:"Les différentes écritures d'un nombre décimal", h:`
-  <h4>1. Le tableau de numération</h4>
+  <div class="keep"><h4>1. Le tableau de numération</h4>
   ${tabNum(207,"045")}
-  <p>Dans 207,045 : le chiffre des dixièmes est 0, celui des centièmes est 4, celui des millièmes est 5.</p>
-  <p class="attention"><b>ATTENTION :</b> ne pas confondre le <b>chiffre</b> des dixièmes (0) et le <b>nombre</b> de dixièmes, qui est 2 070.</p>
-  <h4>2. Écrire un même nombre de plusieurs façons</h4>
-  <p>Le nombre 3,07 peut s'écrire :</p>
-  <div class="scroll"><table class="std"><thead><tr><th>écriture décimale</th><th>fraction décimale</th><th>écriture décomposée</th><th>écriture en lettres</th></tr></thead><tbody><tr><td>3,07</td><td>{307/100}</td><td>3 + 0,07<br>ou 3 + {7/100}</td><td>trois unités et sept centièmes</td></tr></tbody></table></div>
-  ${co("carres","1 unité, 3 dixièmes (0,3 = 3/10), 7 centièmes (0,07 = 7/100)",330)}
-  <h4>3. Les zéros inutiles</h4>
-  <div class="retenir" data-l="Définition"><p>Dans l'écriture décimale d'un nombre, un zéro est <b>inutile</b> lorsqu'on peut le supprimer sans changer la position des autres chiffres.</p></div>
-  <p class="calc">05,30 = 5,3 &nbsp;&nbsp; 12,400 = 12,4 &nbsp;&nbsp; 070 = 70</p>
-  <p class="attention"><b>ATTENTION :</b> dans 3,07 le zéro n'est pas inutile : si on le supprime, on obtient 3,7, qui est un autre nombre.</p>`},
+  ${F_DIX}
+  <p class="attention"><b>ATTENTION :</b> ne pas confondre le <b>chiffre</b> des dixièmes et le <b>nombre</b> de dixièmes.</p></div>
+  <div class="keep"><h4>2. Écrire un même nombre de plusieurs façons</h4>
+  ${F_HUB}</div>
+  ${F_CARRES}
+  <div class="keep"><h4>3. Les zéros inutiles</h4>
+  <div class="retenir" data-l="Définition"><p>Un zéro est <b>inutile</b> si on peut l'enlever sans changer la place des autres chiffres.</p></div>
+  ${F_ZERO}</div>`},
 {k:"III", t:"Repérer un nombre décimal sur une demi-droite graduée", h:`
-  <p>Pour graduer une demi-droite, on choisit une <b>unité de longueur</b> que l'on reporte régulièrement à partir de l'origine. On partage ensuite chaque unité en 10 pour obtenir les dixièmes.</p>
-  ${dix(0,3,[["A",4],["B",17],["C",23]])}
-  <p class="calc">Les abscisses sont : A(0,4) &nbsp; B(1,7) &nbsp; C(2,3)</p>
-  <p>Pour placer un nombre au centième près, on « zoome » entre deux dixièmes et on partage à nouveau en 10.</p>
-  ${cent(16,[["M",163]])}
-  <p><b>Le point M a pour abscisse 1,63.</b> On lit : 1 unité, 6 dixièmes et 3 centièmes.</p>`},
+  <div class="keep"><p>On reporte une <b>unité</b> à partir de l'origine, puis on partage chaque unité en 10 : on obtient les <b>dixièmes</b>.</p>
+  ${F_AXE}</div>
+  <div class="keep"><p>Pour placer un nombre au centième, on « zoome » entre deux dixièmes et on partage à nouveau en 10.</p>
+  ${F_ZOOM}
+  <p class="calc"><b>M(1,63)</b> : 1 unité, 6 dixièmes et 3 centièmes.</p></div>`},
 {k:"IV", t:"Comparer, ranger, encadrer et intercaler", h:`
-  <h4>1. Comparer deux nombres décimaux</h4>
-  <div class="retenir" data-l="Méthode"><ul><li>On compare d'abord les <b>parties entières</b> ;</li><li>si elles sont égales, on compare les chiffres des <b>dixièmes</b>, puis ceux des <b>centièmes</b>, et ainsi de suite.</li></ul></div>
-  <p class="calc">9,6 &gt; 2,73 &nbsp;&nbsp; 13,9 &gt; 13,27 &nbsp;&nbsp; 5,17 &lt; 5,8</p>
-  <p class="attention"><b>ATTENTION :</b> 5,8 n'est pas plus petit que 5,17 : on écrit 5,8 = 5,80, et comme 80 &gt; 17, on a bien 5,8 &gt; 5,17.</p>
-  <h4>2. Ranger des nombres décimaux</h4>
-  <div class="retenir" data-l="Définitions"><ul><li>ranger dans l'<b>ordre croissant</b>, c'est ranger du plus petit au plus grand ;</li><li>ranger dans l'<b>ordre décroissant</b>, c'est ranger du plus grand au plus petit.</li></ul></div>
-  <p><b>Exemple</b> dans l'ordre croissant : 33,68 &lt; 33,8 &lt; 34 &lt; 34,2 &lt; 34,75.</p>
-  <h4>3. Encadrer un nombre décimal</h4>
-  <div class="retenir" data-l="Définition"><p><b>Encadrer</b> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que lui. Encadrer à l'unité, au dixième ou au centième près, c'est donner les deux nombres les plus proches de cette précision.</p></div>
-  <div class="scroll"><table class="std"><thead><tr><th colspan="3">Exemple avec 2,473</th></tr><tr><th>à l'unité près</th><th>au dixième près</th><th>au centième près</th></tr></thead><tbody><tr><td>2 &lt; 2,473 &lt; 3</td><td>2,4 &lt; 2,473 &lt; 2,5</td><td>2,47 &lt; 2,473 &lt; 2,48</td></tr></tbody></table></div>
-  <h4>4. Intercaler un nombre décimal</h4>
-  <div class="retenir" data-l="Définition"><p><b>Intercaler</b> un nombre entre deux autres, c'est trouver un nombre compris entre ces deux nombres.</p></div>
-  <p class="calc">6 &lt; 6,5 &lt; 7 &nbsp;&nbsp; 13,5 &lt; 13,57 &lt; 13,6 &nbsp;&nbsp; 1,57 &lt; 1,573 &lt; 1,58</p>
-  <p><b>Remarque :</b> il suffit d'ajouter un chiffre après la virgule : entre 1,57 et 1,58 on peut écrire 1,571 ; 1,572 ; 1,573 …</p>`},
+  <div class="keep"><h4>1. Comparer deux nombres décimaux</h4>
+  <div class="retenir" data-l="Méthode"><ol><li>Je compare les <b>parties entières</b>.</li><li>Si elles sont égales, je compare les <b>dixièmes</b>, puis les <b>centièmes</b>, …</li></ol></div>
+  ${F_CMP}
+  <p class="calc">9,6 &gt; 2,73 &nbsp;&nbsp; 13,9 &gt; 13,27 &nbsp;&nbsp; 5,17 &lt; 5,8</p></div>
+  <div class="keep"><h4>2. Ranger des nombres décimaux</h4>
+  ${F_RANG}
+  <p class="calc">Ordre croissant : 33,68 &lt; 33,8 &lt; 34 &lt; 34,2 &lt; 34,75</p></div>
+  <div class="keep"><h4>3. Encadrer un nombre décimal</h4>
+  <div class="retenir" data-l="Définition"><p><b>Encadrer</b> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que lui. À l'unité, au dixième ou au centième près : on prend les deux plus proches.</p></div>
+  ${F_ENC}</div>
+  <div class="keep"><h4>4. Intercaler un nombre décimal</h4>
+  <div class="retenir" data-l="Définition"><p><b>Intercaler</b> un nombre entre deux autres, c'est trouver un nombre compris entre les deux.</p></div>
+  ${F_INT}
+  <p class="calc">6 &lt; 6,5 &lt; 7 &nbsp;&nbsp; 13,5 &lt; 13,57 &lt; 13,6 &nbsp;&nbsp; 1,57 &lt; 1,573 &lt; 1,58</p></div>`},
 {k:"V", t:"Donner un arrondi (valeur approchée)", h:`
-  <div class="retenir" data-l="Définition"><p>L'<b>arrondi</b> d'un nombre est, parmi les deux bornes de son encadrement, celle dont il est le plus proche.</p></div>
-  <div class="retenir" data-l="Méthode"><ul><li>j'encadre le nombre à la précision demandée ;</li><li>je garde la borne dont le nombre est le plus proche ;</li><li>si le nombre est exactement au milieu, je prends la borne supérieure.</li></ul></div>
-  <div class="scroll"><table class="std"><thead><tr><th colspan="3">Exemple avec 2,473</th></tr><tr><th>à l'unité</th><th>au dixième</th><th>au centième</th></tr></thead><tbody><tr><td>2</td><td>2,5<br><small>(2,473 est plus proche de 2,5 que de 2,4)</small></td><td>2,47</td></tr></tbody></table></div>`}
+  <div class="keep"><div class="retenir" data-l="Définition"><p>L'<b>arrondi</b> d'un nombre est la borne de son encadrement <b>la plus proche</b>. Au milieu exact, on prend la borne supérieure.</p></div>
+  ${F_ARR}</div>
+  <div class="keep"><p><b>Astuce :</b> je regarde le chiffre juste après la précision demandée.</p>
+  ${F_REGLE}
+  <div class="scroll"><table class="std"><thead><tr><th colspan="3">Arrondis de 2,473</th></tr><tr><th>à l'unité</th><th>au dixième</th><th>au centième</th></tr></thead><tbody><tr><td>2</td><td>2,5</td><td>2,47</td></tr></tbody></table></div></div>`}
 ],
 
 /* ===================== EXERCICES (dans l'ordre de la fiche) ===================== */
