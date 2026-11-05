@@ -126,6 +126,9 @@ const CSS=`.anim{margin:14px 0;border:1.5px solid var(--line,#d5dde8);border-rad
 .anim .an-steps li.now .n{border-color:var(--c,#1e5aa8);background:var(--c,#1e5aa8);color:#fff}
 .anim .an-steps li.past .n{border-color:#0b6b47;color:#0b6b47}
 .anim button:focus-visible{outline:3px solid var(--c,#1e5aa8);outline-offset:2px}
+.anim.an-compact .an-g{grid-template-columns:1fr}
+.anim.an-compact .an-steps{display:none}
+.anim.an-compact .an-cap{font-size:1.15em}
 .sheet .anim,.pdoc .anim{display:none!important}
 @media print{.anim{display:none!important}}`;
 function injectCSS(){ if(document.getElementById('anim-css')) return; const s=document.createElement('style'); s.id='anim-css'; s.textContent=CSS; document.head.appendChild(s); }
@@ -133,7 +136,7 @@ const reduce=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').ma
 
 function mount(el){
   if(el.dataset.mounted) return; const id=el.dataset.anim, def=DEFS[id]; if(!def) return;
-  el.dataset.mounted='1'; injectCSS();
+  el.dataset.mounted='1'; injectCSS(); if(def.compact) el.classList.add('an-compact');
   const W=def.W||640, H=def.H||400, S=def.steps(K);
   let i=0, p=0, playing=false, raf=0, last=0, waitUntil=0;
   el.innerHTML=`<p class="an-h"><span class="an-ic" aria-hidden="true">🎬</span>${def.titre}${def.sub?` <span style="font-weight:400">— ${def.sub}</span>`:''}</p>
@@ -1283,6 +1286,9 @@ ANIM.add('6e9-construire-angle',{titre:'Construire un angle de mesure donnée', 
   ]; }});
 })();
 
+
+
+
 /* ---- 5e-4 · Exercice 4 ---- */
 /* 5e-4 — Exercice 4 « Tracés de parallélogrammes » : une construction animée par figure (a à g), en vraie grandeur (1 cm = 40 px) */
 (function(){
@@ -1298,34 +1304,41 @@ function ruled(a,b,t,on,o={}){
   const org=[a[0]-u[0]*lead+v[0]*3,a[1]-u[1]*lead+v[1]*3], len=Math.max(2,Math.ceil((dist(a,b)+lead+10)/CM));
   return P.op(o.ro??1,ruler(org,angTo(a,b),len,body))+line+(t>0&&t<1?pencil(lerp(a,b,t)):'');
 }
-function build(id,spec){ ANIM.add(id,{titre:spec.titre, sub:spec.sub, W:spec.W||640, H:spec.H||420, steps:()=>{
+function build(id,spec){ ANIM.add(id,{titre:spec.titre, sub:spec.sub, compact:true, W:spec.W||640, H:spec.H||420, steps:()=>{
   const S={}; for(const k in spec.pts){ const q=spec.pts[k]; S[k]=[spec.org[0]+q[0]*CM, spec.org[1]-q[1]*CM]; }
   const G=Object.values(S).reduce((a,q)=>[a[0]+q[0]/Object.keys(S).length,a[1]+q[1]/Object.keys(S).length],[0,0]);
   const lab=(n,c)=>{ const q=S[n], u=unit(G,q), o=(spec.lab&&spec.lab[n])||[u[0]*24,u[1]*24]; return P.label(q,n,o[0],o[1],{c:c||C.ink}); };
   const res=n=>P.cross(S[n],{c:C.res})+lab(n,C.res);
+  /* longueur écrite à côté d'un segment, du côté opposé au centre de la figure */
+  const lenLab=(A,B,txt,c,off=22,tt=.5,fixe=false)=>{ const a=S[A]||A, b=S[B]||B, m=lerp(a,b,tt), u=unit(a,b); let v=[-u[1],u[0]];
+    if(!fixe && (m[0]-G[0])*v[0]+(m[1]-G[1])*v[1]<0) v=[-v[0],-v[1]];
+    return P.label([m[0]+v[0]*off,m[1]+v[1]*off],txt,0,0,{s:18,c:c||C.arc}); };
   const shown=new Set(), out=[];
   const after=[];   /* éléments définitifs (dessinés en permanence) — gérés par le moteur via f(1,false) */
   spec.do.forEach(a=>{
     if(a.seg){ const [A,B]=a.seg, newA=!shown.has(A); shown.add(A); shown.add(B);
       out.push({t:a.t, d:a.d||3400, f:(p,on)=>{ const t=on?seg(p,.18,.85):1;
-        return ruled(S[A],S[B],t,on,{c:C.ink,w:2.6,zero:true,body:a.body||1,ro:on?fade(p,0,1):1})+(newA?lab(A):'')+P.op(on?seg(p,.85,1):1,lab(B)); }}); }
+        return ruled(S[A],S[B],t,on,{c:C.ink,w:2.6,zero:true,body:a.body||1,ro:on?fade(p,0,1):1})+(newA?lab(A):'')+P.op(on?seg(p,.85,1):1,lab(B)+(a.len?lenLab(A,B,a.len):'')); }}); }
     else if(a.proto){ const [V,X,Y]=a.proto, base=angTo(S[V],S[X]), tgt=angTo(S[V],S[Y]), dl=nrm(tgt-base), side=dl>0?1:-1, R=a.R||110;
       if(Math.abs(Math.abs(dl)-a.deg)>0.6) console.warn('angle', id, dl, a.deg);
       const mk=pt(S[V],R+8,tgt);
-      out.push({t:a.t, d:a.d||4600, f:(p,on)=>{ if(!on) return P.dot(mk,{r:4,c:C.arc});
+      const angL=()=>P.angArc(S[V],Math.min(base,base+dl),Math.max(base,base+dl),26,C.orange)+P.label(pt(S[V],a.lr||48,base+dl/2),a.deg+'°',0,0,{s:18,c:C.orange});
+      out.push({t:a.t, d:a.d||4600, f:(p,on)=>{ if(!on) return P.dot(mk,{r:4,c:C.arc})+angL();
         const sw=seg(p,.3,.75), e=base+dl*sw, q=pt(S[V],R+20,e), dir=[Math.cos(K.rad(e+90*side)),Math.sin(K.rad(e+90*side))];
         return P.op(fade(p,0,1.05),rapporteur(S[V],base,R,side))+(sw>0?P.arc(S[V],R+20,base,e,1,{c:C.orange,w:2.6})+(sw>.1?P.arrow([q[0]-dir[0]*7,q[1]-dir[1]*7],q,{c:C.orange,w:2.6,k:9}):''):'')
-          +P.op(seg(p,.8,.95),P.dot(mk,{r:4,c:C.arc})); }}); }
+          +P.op(seg(p,.8,.95),P.dot(mk,{r:4,c:C.arc})+angL()); }}); }
     else if(a.ray){ const [V,Y]=a.ray, u=unit(S[V],S[Y]), L=Math.max(dist(S[V],S[Y]),(a.R||110)+8)+(a.ext||45), F=[S[V][0]+u[0]*L,S[V][1]+u[1]*L];
       out.push({t:a.t, d:a.d||3000, f:(p,on)=>ruled(S[V],F,on?seg(p,.18,.85):1,on,{w:2,body:a.body||1,ro:on?fade(p,0,1):1})}); }
     else if(a.onray){ const [V,Y]=a.onray; shown.add(Y);
-      out.push({t:a.t, d:a.d||3000, f:(p,on)=>{ const m=P.op(on?seg(p,.5,.75):1,P.cross(S[Y])+lab(Y));
+      out.push({t:a.t, d:a.d||3000, f:(p,on)=>{ const m=P.op(on?seg(p,.5,.75):1,P.cross(S[Y])+lab(Y)+(a.len?(a.lp?lenLab(a.lp[0],a.lp[1],a.len,C.arc,18,a.lp[2],true):lenLab(V,Y,a.len,C.arc,a.loff||22)):''));
         if(!on) return m; const u=unit(S[V],S[Y]), body=a.body||1, v=[-u[1]*body,u[0]*body], org=[S[V][0]+v[0]*3,S[V][1]+v[1]*3];
         return P.op(fade(p,0,1),ruler(org,angTo(S[V],S[Y]),Math.ceil(dist(S[V],S[Y])/CM)+1,body))+m+(p>.2&&p<.78?pencil(lerp(lerp(S[V],S[Y],.6),S[Y],seg(p,.2,.5))):''); }}); }
     else if(a.arc){ const [O,X]=a.arc, r=dist(S[O],S[X]), aX=angTo(S[O],S[X]), sp=a.sp||13, a0=aX-sp, a1=aX+sp, side=a.side||1, done=a.res;
       out.push({t:a.t, d:a.d||4200, f:(p,on)=>{ const t=on?seg(p,.42,.86):1;
         let s=P.arc(S[O],r,a0,a1,t);
-        if(on&&p<.9) s+= p<.38 ? compass(S[O],pt(S[O],14+(r-14)*seg(p,.04,.3),a0),side) : compass(S[O],pt(S[O],r,a0+(a1-a0)*t),side);
+        if(on&&p<.9){ const tip = p<.38 ? pt(S[O],14+(r-14)*seg(p,.04,.3),a0) : pt(S[O],r,a0+(a1-a0)*t);
+          s+= P.line(S[O],tip,{c:C.orange,w:2,dash:'6 5'}) + (a.r && p>.25 ? P.op(seg(p,.25,.38), lenLab(S[O],tip,a.r,C.orange,-20)) : '');
+          s+= compass(S[O],tip,side); }
         if(done){ shown.add(done); s+=P.op(on?seg(p,.86,1):1,res(done)); }
         return s; }}); }
     else if(a.sides){ const L=a.sides, n=L.length;
@@ -1334,99 +1347,99 @@ function build(id,spec){ ANIM.add(id,{titre:spec.titre, sub:spec.sub, W:spec.W||
     else if(a.line){ const [X,Y]=a.line, u=unit(S[X],S[Y]), e=a.ext||40, A1=[S[X][0]-u[0]*e,S[X][1]-u[1]*e], B1=[S[Y][0]+u[0]*e,S[Y][1]+u[1]*e];
       out.push({t:a.t, d:a.d||3000, f:(p,on)=>ruled(A1,B1,on?seg(p,.18,.85):1,on,{w:2,body:a.body||1,ro:on?fade(p,0,1):1})}); }
     else if(a.fin){ out.push({t:a.t, d:a.d||3000, f:(p,on)=>{ let s=P.op(on?seg(p,0,.25):1,P.poly(spec.poly.map(n=>S[n]),{c:C.res,w:3,fill:'#c62828',fo:.07}));
-        s+=P.op(on?seg(p,.2,.55):1,(a.ticks||[]).map(([X,Y,k])=>P.ticks(S[X],S[Y],k)).join(''));
-        s+=P.op(on?seg(p,.5,.9):1,a.lines.map((L,k)=>P.label([a.at[0],a.at[1]+k*30],L,0,0,{s:19,a:a.al||'middle'})).join(''));
+        s+=P.op(on?seg(p,.2,.55):1,(a.lens||[]).map(([X,Y,L,tt])=>tt?lenLab(X,Y,L,C.res,18,tt,true):lenLab(X,Y,L,C.res)).join(''));
+        s+=P.op(on?seg(p,.5,.9):1,a.lines.map((L,k)=>P.label([a.at[0],a.at[1]+k*30],L,0,0,{s:20,a:a.al||'middle'})).join(''));
         return s; }}); }
   });
   return out; }}); }
 
 /* a) OINL : OI = 4 cm, OL = 2,5 cm, angle IOL = 117° */
-build('5e4-ex4-a',{titre:"Exercice 4 a) Le parallélogramme OINL", sub:"OI = 4 cm, OL = 2,5 cm et l'angle IOL mesure 117°", W:640, H:400, org:[300,135], poly:['O','I','N','L'],
+build('5e4-ex4-a',{titre:"a) Le parallélogramme OINL", sub:"OI = 4 cm · OL = 2,5 cm · angle IOL = 117°", W:640, H:400, org:[300,135], poly:['O','I','N','L'],
   pts:{O:[0,0], I:[4,0], L:[2.5*Math.cos(-117*Math.PI/180),2.5*Math.sin(-117*Math.PI/180)], N:[4+2.5*Math.cos(-117*Math.PI/180),2.5*Math.sin(-117*Math.PI/180)]}, do:[
-  {seg:['O','I'], t:"Je pose le 0 de la règle sur O et je trace le côté [OI] de 4 cm.", body:-1},
-  {proto:['O','I','L'], deg:117, t:"Je place le centre du rapporteur sur O et le 0 sur [OI). Je marque 117°."},
-  {ray:['O','L'], t:"Avec la règle, je trace la demi-droite qui part de O et passe par la marque."},
-  {onray:['O','L'], t:"Je place L sur cette demi-droite, à 2,5 cm de O."},
-  {arc:['I','N'], side:1, t:"Côtés opposés de même longueur : IN = OL = 2,5 cm. Je pique en I avec un écartement de 2,5 cm et je trace un arc."},
-  {arc:['L','N'], side:-1, res:'N', t:"LN = OI = 4 cm. Je pique en L avec un écartement de 4 cm et je trace un arc : il coupe le premier arc en N."},
-  {sides:[['I','N'],['L','N']], t:"Avec la règle, je trace les côtés [IN] et [LN]."},
-  {fin:1, ticks:[['O','I',1],['L','N',1],['O','L',2],['I','N',2]], at:[320,345], lines:["OINL est un parallélogramme : OI = LN et OL = IN.","(OI) // (LN) et (OL) // (IN)"], t:"Les côtés opposés ont la même longueur : OINL est un parallélogramme."}]});
+  {seg:['O','I'], len:"4 cm", t:"Je trace [OI] : 4 cm.", body:-1},
+  {proto:['O','I','L'], deg:117, t:"Je mesure 117° en O."},
+  {ray:['O','L'], t:"Je trace la demi-droite."},
+  {onray:['O','L'], len:"2,5 cm", t:"Je place L : OL = 2,5 cm."},
+  {arc:['I','N'], r:"2,5 cm", side:1, t:"IN = OL : compas 2,5 cm en I."},
+  {arc:['L','N'], r:"4 cm", side:-1, res:'N', t:"LN = OI : compas 4 cm en L."},
+  {sides:[['I','N'],['L','N']], t:"Je trace [IN] et [LN]."},
+  {fin:1, lens:[['O','I',"4 cm"],['L','N',"4 cm"],['O','L',"2,5 cm"],['I','N',"2,5 cm"]], at:[320,345], lines:["Côtés opposés de même longueur","(OI) // (LN) et (OL) // (IN)"], t:"OINL est un parallélogramme."}]});
 
 /* b) LKJI : IJ = 6 cm, JK = 4 cm, IK = 7 cm (diagonale) */
 (()=>{ const K2=[(49-16+36)/12,0]; K2[1]=Math.sqrt(49-K2[0]*K2[0]);
-build('5e4-ex4-b',{titre:"Exercice 4 b) Le parallélogramme LKJI", sub:"IJ = 6 cm, JK = 4 cm et IK = 7 cm", W:640, H:430, org:[200,330], poly:['L','K','J','I'],
+build('5e4-ex4-b',{titre:"b) Le parallélogramme LKJI", sub:"IJ = 6 cm · JK = 4 cm · IK = 7 cm", W:640, H:430, org:[200,330], poly:['L','K','J','I'],
   pts:{I:[0,0], J:[6,0], K:K2, L:[K2[0]-6,K2[1]]}, do:[
-  {seg:['I','J'], t:"Je trace le côté [IJ] de 6 cm.", body:1},
-  {arc:['J','K'], side:-1, t:"JK = 4 cm : je pique en J avec un écartement de 4 cm et je trace un arc."},
-  {arc:['I','K'], side:1, res:'K', t:"IK = 7 cm : je pique en I avec un écartement de 7 cm et je trace un arc. Les deux arcs se coupent en K."},
-  {sides:[['J','K'],['I','K']], c:C.arc, dash:'8 6', t:"Je trace [JK] et la diagonale [IK] (en pointillés : c'est un trait de construction)."},
-  {arc:['K','L'], side:1, t:"KL = IJ = 6 cm : je pique en K avec un écartement de 6 cm et je trace un arc."},
-  {arc:['I','L'], side:-1, res:'L', t:"IL = JK = 4 cm : je pique en I avec un écartement de 4 cm et je trace un arc. Les deux arcs se coupent en L."},
-  {sides:[['J','K'],['K','L'],['L','I']], t:"Avec la règle, je trace [JK], [KL] et [LI]."},
-  {fin:1, ticks:[['I','J',1],['K','L',1],['J','K',2],['L','I',2]], at:[320,388], lines:["LKJI est un parallélogramme : IJ = KL et JK = LI.","(IJ) // (KL) et (JK) // (LI)"], t:"Les côtés opposés ont la même longueur : LKJI est un parallélogramme."}]}); })();
+  {seg:['I','J'], len:"6 cm", t:"Je trace [IJ] : 6 cm.", body:1},
+  {arc:['J','K'], r:"4 cm", side:-1, t:"JK = 4 cm : compas en J."},
+  {arc:['I','K'], r:"7 cm", side:1, res:'K', t:"IK = 7 cm : compas en I."},
+  {sides:[['J','K'],['I','K']], c:C.arc, dash:'8 6', t:"Je trace [JK] et [IK] en pointillés."},
+  {arc:['K','L'], r:"6 cm", side:1, t:"KL = IJ : compas 6 cm en K."},
+  {arc:['I','L'], r:"4 cm", side:-1, res:'L', t:"IL = JK : compas 4 cm en I."},
+  {sides:[['J','K'],['K','L'],['L','I']], t:"Je trace les côtés."},
+  {fin:1, lens:[['I','J',"6 cm"],['K','L',"6 cm"],['J','K',"4 cm"],['L','I',"4 cm"]], at:[320,388], lines:["Côtés opposés de même longueur","(IJ) // (KL) et (JK) // (LI)"], t:"LKJI est un parallélogramme."}]}); })();
 
 /* c) GRIS : GS = 2 cm, SI = 5 cm, angle GSI = 50° */
-build('5e4-ex4-c',{titre:"Exercice 4 c) Le parallélogramme GRIS", sub:"GS = 2 cm, SI = 5 cm et l'angle GSI mesure 50°", W:640, H:380, org:[170,270], poly:['G','R','I','S'],
+build('5e4-ex4-c',{titre:"c) Le parallélogramme GRIS", sub:"GS = 2 cm · SI = 5 cm · angle GSI = 50°", W:640, H:380, org:[170,270], poly:['G','R','I','S'],
   pts:{S:[0,0], I:[5,0], G:[2*Math.cos(50*Math.PI/180),2*Math.sin(50*Math.PI/180)], R:[5+2*Math.cos(50*Math.PI/180),2*Math.sin(50*Math.PI/180)]}, do:[
-  {seg:['S','I'], t:"Je trace le côté [SI] de 5 cm.", body:1},
-  {proto:['S','I','G'], deg:50, t:"Je place le centre du rapporteur sur S et le 0 sur [SI). Je marque 50°."},
-  {ray:['S','G'], t:"Avec la règle, je trace la demi-droite qui part de S et passe par la marque."},
-  {onray:['S','G'], body:-1, t:"Je place G sur cette demi-droite, à 2 cm de S."},
-  {arc:['G','R'], side:-1, t:"GR = SI = 5 cm : je pique en G avec un écartement de 5 cm et je trace un arc."},
-  {arc:['I','R'], side:1, res:'R', t:"IR = SG = 2 cm : je pique en I avec un écartement de 2 cm et je trace un arc. Les deux arcs se coupent en R."},
-  {sides:[['G','R'],['I','R']], t:"Avec la règle, je trace [GR] et [IR]."},
-  {fin:1, ticks:[['S','I',1],['G','R',1],['G','S',2],['R','I',2]], at:[320,325], lines:["GRIS est un parallélogramme : SI = GR et GS = RI.","(SI) // (GR) et (GS) // (RI)"], t:"Les côtés opposés ont la même longueur : GRIS est un parallélogramme."}]});
+  {seg:['S','I'], len:"5 cm", t:"Je trace [SI] : 5 cm.", body:1},
+  {proto:['S','I','G'], deg:50, t:"Je mesure 50° en S."},
+  {ray:['S','G'], t:"Je trace la demi-droite."},
+  {onray:['S','G'], len:"2 cm", body:-1, t:"Je place G : SG = 2 cm."},
+  {arc:['G','R'], r:"5 cm", side:-1, t:"GR = SI : compas 5 cm en G."},
+  {arc:['I','R'], r:"2 cm", side:1, res:'R', t:"IR = SG : compas 2 cm en I."},
+  {sides:[['G','R'],['I','R']], t:"Je trace [GR] et [IR]."},
+  {fin:1, lens:[['S','I',"5 cm"],['G','R',"5 cm"],['G','S',"2 cm"],['R','I',"2 cm"]], at:[320,325], lines:["Côtés opposés de même longueur","(SI) // (GR) et (GS) // (RI)"], t:"GRIS est un parallélogramme."}]});
 
 /* d) FGHI de centre J : FG = 6 cm, FJ = 4,3 cm, JG = 3 cm */
 (()=>{ const r=Math.PI/180, th=Math.acos((4.3*4.3+9-36)/(2*4.3*3))/r, F=[4.3*Math.cos(100*r),4.3*Math.sin(100*r)], Gp=[3*Math.cos((100-th)*r),3*Math.sin((100-th)*r)];
-build('5e4-ex4-d',{titre:"Exercice 4 d) Le parallélogramme FGHI de centre J", sub:"FG = 6 cm, FJ = 4,3 cm et JG = 3 cm", W:640, H:490, org:[330,230], poly:['F','G','H','I'],
+build('5e4-ex4-d',{titre:"d) Le parallélogramme FGHI de centre J", sub:"FG = 6 cm · FJ = 4,3 cm · JG = 3 cm", W:640, H:490, org:[330,230], poly:['F','G','H','I'],
   pts:{J:[0,0], F, G:Gp, H:[-F[0],-F[1]], I:[-Gp[0],-Gp[1]]}, lab:{J:[-22,14]}, do:[
-  {seg:['F','G'], t:"Je trace [FG] de 6 cm.", body:-1},
-  {arc:['F','J'], side:-1, t:"FJ = 4,3 cm : je pique en F avec un écartement de 4,3 cm et je trace un arc."},
-  {arc:['G','J'], side:1, res:'J', t:"JG = 3 cm : je pique en G avec un écartement de 3 cm et je trace un arc. Les deux arcs se coupent en J."},
-  {ray:['F','H'], ext:30, t:"J est le centre : les diagonales se coupent en leur milieu. Avec la règle, je trace la demi-droite [FJ)."},
-  {onray:['J','H'], t:"J est le milieu de [FH] : je place H sur [FJ), à 4,3 cm de J."},
-  {ray:['G','I'], ext:30, t:"Avec la règle, je trace la demi-droite [GJ)."},
-  {onray:['J','I'], body:-1, t:"J est le milieu de [GI] : je place I sur [GJ), à 3 cm de J."},
-  {sides:[['G','H'],['H','I'],['I','F']], t:"Avec la règle, je trace [GH], [HI] et [IF]."},
-  {fin:1, ticks:[['F','J',1],['J','H',1],['G','J',2],['J','I',2]], at:[320,448], lines:["Les diagonales [FH] et [GI] ont le même milieu J.","(FG) // (HI) et (GH) // (IF)"], t:"Les diagonales ont le même milieu J : FGHI est un parallélogramme."}]}); })();
+  {seg:['F','G'], len:"6 cm", t:"Je trace [FG] : 6 cm.", body:-1},
+  {arc:['F','J'], r:"4,3 cm", side:-1, t:"FJ = 4,3 cm : compas en F."},
+  {arc:['G','J'], r:"3 cm", side:1, res:'J', t:"JG = 3 cm : compas en G."},
+  {ray:['F','H'], ext:30, t:"Je prolonge [FJ)."},
+  {onray:['J','H'], len:"4,3 cm", lp:['H','J',.35], t:"J est le milieu : JH = 4,3 cm."},
+  {ray:['G','I'], ext:30, t:"Je prolonge [GJ)."},
+  {onray:['J','I'], len:"3 cm", lp:['I','J',.4], body:-1, t:"J est le milieu : JI = 3 cm."},
+  {sides:[['G','H'],['H','I'],['I','F']], t:"Je trace les côtés."},
+  {fin:1, lens:[['F','J',"4,3 cm",.35],['H','J',"4,3 cm",.35],['G','J',"3 cm",.4],['I','J',"3 cm",.4]], at:[320,448], lines:["Les diagonales ont le même milieu J","(FG) // (HI) et (GH) // (IF)"], t:"FGHI est un parallélogramme."}]}); })();
 
 /* e) ABCD de centre E : DE = 5 cm, EC = 2,5 cm, angle DEC = 80° */
 (()=>{ const r=Math.PI/180, D=[5*Math.cos(200*r),5*Math.sin(200*r)], Cc=[2.5*Math.cos(280*r),2.5*Math.sin(280*r)];
-build('5e4-ex4-e',{titre:"Exercice 4 e) Le parallélogramme ABCD de centre E", sub:"DE = 5 cm, EC = 2,5 cm et l'angle DEC mesure 80°", W:640, H:400, org:[320,190], poly:['A','B','C','D'],
+build('5e4-ex4-e',{titre:"e) Le parallélogramme ABCD de centre E", sub:"DE = 5 cm · EC = 2,5 cm · angle DEC = 80°", W:640, H:400, org:[320,190], poly:['A','B','C','D'],
   pts:{E:[0,0], D, B:[-D[0],-D[1]], C:Cc, A:[-Cc[0],-Cc[1]]}, lab:{E:[22,-14]}, do:[
-  {seg:['D','B'], t:"E est le milieu de [DB] : DB = 2 × 5 = 10 cm. Je trace [DB] de 10 cm.", body:1},
-  {onray:['D','E'], body:1, t:"Je place son milieu E, à 5 cm de D."},
-  {proto:['E','D','C'], deg:80, R:95, t:"Je place le centre du rapporteur sur E et le 0 sur [ED). Je marque 80°."},
-  {line:['A','C'], ext:45, t:"Avec la règle, je trace la droite qui passe par E et par la marque."},
-  {arc:['E','C'], side:1, sp:10, res:'C', t:"E est aussi le milieu de [AC] : je pique en E avec un écartement de 2,5 cm et je marque C."},
-  {arc:['E','A'], side:1, sp:10, res:'A', t:"Avec le même écartement, je marque A de l'autre côté de E."},
-  {sides:[['A','B'],['B','C'],['C','D'],['D','A']], t:"Avec la règle, je trace les quatre côtés."},
-  {fin:1, ticks:[['D','E',1],['E','B',1],['A','E',2],['E','C',2]], at:[320,350], lines:["Les diagonales [AC] et [BD] ont le même milieu E.","(AB) // (DC) et (AD) // (BC)"], t:"Les diagonales ont le même milieu E : ABCD est un parallélogramme."}]}); })();
+  {seg:['D','B'], t:"DB = 2 × 5 = 10 cm.", body:1},
+  {onray:['D','E'], len:"5 cm", lp:['D','E',.4], body:1, t:"Je place le milieu E à 5 cm de D."},
+  {proto:['E','D','C'], deg:80, R:95, lr:40, t:"Je mesure 80° en E."},
+  {line:['A','C'], ext:45, t:"Je trace la droite."},
+  {arc:['E','C'], r:"2,5 cm", side:1, sp:10, res:'C', t:"EC = 2,5 cm : compas en E."},
+  {arc:['E','A'], r:"2,5 cm", side:1, sp:10, res:'A', t:"EA = 2,5 cm de l'autre côté."},
+  {sides:[['A','B'],['B','C'],['C','D'],['D','A']], t:"Je trace les côtés."},
+  {fin:1, lens:[['D','E',"5 cm",.4],['B','E',"5 cm",.4],['A','E',"2,5 cm",.45],['C','E',"2,5 cm",.45]], at:[320,350], lines:["Les diagonales ont le même milieu E","(AB) // (DC) et (AD) // (BC)"], t:"ABCD est un parallélogramme."}]}); })();
 
 /* f) ROME : RO = 4 cm, RM = 6 cm, OM = 5 cm */
 (()=>{ const x=(36-25+16)/8, M=[x,Math.sqrt(36-x*x)];
-build('5e4-ex4-f',{titre:"Exercice 4 f) Le parallélogramme ROME", sub:"RO = 4 cm, RM = 6 cm et OM = 5 cm", W:640, H:440, org:[250,330], poly:['R','O','M','E'],
+build('5e4-ex4-f',{titre:"f) Le parallélogramme ROME", sub:"RO = 4 cm · RM = 6 cm · OM = 5 cm", W:640, H:440, org:[250,330], poly:['R','O','M','E'],
   pts:{R:[0,0], O:[4,0], M, E:[M[0]-4,M[1]]}, do:[
-  {seg:['R','O'], t:"Je trace le côté [RO] de 4 cm.", body:1},
-  {arc:['R','M'], side:1, t:"RM = 6 cm : je pique en R avec un écartement de 6 cm et je trace un arc."},
-  {arc:['O','M'], side:-1, res:'M', t:"OM = 5 cm : je pique en O avec un écartement de 5 cm et je trace un arc. Les deux arcs se coupent en M."},
-  {sides:[['O','M'],['R','M']], c:C.arc, dash:'8 6', t:"Je trace [OM] et la diagonale [RM] (en pointillés : c'est un trait de construction)."},
-  {arc:['M','E'], side:-1, t:"ME = RO = 4 cm : je pique en M avec un écartement de 4 cm et je trace un arc."},
-  {arc:['R','E'], side:1, res:'E', t:"RE = OM = 5 cm : je pique en R avec un écartement de 5 cm et je trace un arc. Les deux arcs se coupent en E."},
-  {sides:[['O','M'],['M','E'],['E','R']], t:"Avec la règle, je trace [OM], [ME] et [ER]."},
-  {fin:1, ticks:[['R','O',1],['M','E',1],['O','M',2],['E','R',2]], at:[320,385], lines:["ROME est un parallélogramme : RO = ME et OM = ER.","(RO) // (ME) et (OM) // (ER)"], t:"Les côtés opposés ont la même longueur : ROME est un parallélogramme."}]}); })();
+  {seg:['R','O'], len:"4 cm", t:"Je trace [RO] : 4 cm.", body:1},
+  {arc:['R','M'], r:"6 cm", side:1, t:"RM = 6 cm : compas en R."},
+  {arc:['O','M'], r:"5 cm", side:-1, res:'M', t:"OM = 5 cm : compas en O."},
+  {sides:[['O','M'],['R','M']], c:C.arc, dash:'8 6', t:"Je trace [OM] et [RM] en pointillés."},
+  {arc:['M','E'], r:"4 cm", side:-1, t:"ME = RO : compas 4 cm en M."},
+  {arc:['R','E'], r:"5 cm", side:1, res:'E', t:"RE = OM : compas 5 cm en R."},
+  {sides:[['O','M'],['M','E'],['E','R']], t:"Je trace les côtés."},
+  {fin:1, lens:[['R','O',"4 cm"],['M','E',"4 cm"],['O','M',"5 cm"],['E','R',"5 cm"]], at:[320,385], lines:["Côtés opposés de même longueur","(RO) // (ME) et (OM) // (ER)"], t:"ROME est un parallélogramme."}]}); })();
 
 /* g) LUNE : LU = 3 cm, UN = 5,5 cm, angle LUN = 108° */
 (()=>{ const r=Math.PI/180, L=[3*Math.cos(108*r),3*Math.sin(108*r)];
-build('5e4-ex4-g',{titre:"Exercice 4 g) Le parallélogramme LUNE", sub:"LU = 3 cm, UN = 5,5 cm et l'angle LUN mesure 108°", W:640, H:400, org:[220,280], poly:['L','U','N','E'],
+build('5e4-ex4-g',{titre:"g) Le parallélogramme LUNE", sub:"LU = 3 cm · UN = 5,5 cm · angle LUN = 108°", W:640, H:400, org:[220,280], poly:['L','U','N','E'],
   pts:{U:[0,0], N:[5.5,0], L, E:[L[0]+5.5,L[1]]}, do:[
-  {seg:['U','N'], t:"Je trace le côté [UN] de 5,5 cm.", body:1},
-  {proto:['U','N','L'], deg:108, t:"Je place le centre du rapporteur sur U et le 0 sur [UN). Je marque 108°."},
-  {ray:['U','L'], t:"Avec la règle, je trace la demi-droite qui part de U et passe par la marque."},
-  {onray:['U','L'], body:-1, t:"Je place L sur cette demi-droite, à 3 cm de U."},
-  {arc:['L','E'], side:-1, t:"LE = UN = 5,5 cm : je pique en L avec un écartement de 5,5 cm et je trace un arc."},
-  {arc:['N','E'], side:1, res:'E', t:"NE = LU = 3 cm : je pique en N avec un écartement de 3 cm et je trace un arc. Les deux arcs se coupent en E."},
-  {sides:[['L','E'],['N','E']], t:"Avec la règle, je trace [LE] et [NE]."},
-  {fin:1, ticks:[['U','N',1],['L','E',1],['L','U',2],['E','N',2]], at:[320,342], lines:["LUNE est un parallélogramme : UN = LE et LU = EN.","(UN) // (LE) et (LU) // (EN)"], t:"Les côtés opposés ont la même longueur : LUNE est un parallélogramme."}]}); })();
+  {seg:['U','N'], len:"5,5 cm", t:"Je trace [UN] : 5,5 cm.", body:1},
+  {proto:['U','N','L'], deg:108, t:"Je mesure 108° en U."},
+  {ray:['U','L'], t:"Je trace la demi-droite."},
+  {onray:['U','L'], len:"3 cm", body:-1, t:"Je place L : UL = 3 cm."},
+  {arc:['L','E'], r:"5,5 cm", side:-1, t:"LE = UN : compas 5,5 cm en L."},
+  {arc:['N','E'], r:"3 cm", side:1, res:'E', t:"NE = LU : compas 3 cm en N."},
+  {sides:[['L','E'],['N','E']], t:"Je trace [LE] et [NE]."},
+  {fin:1, lens:[['U','N',"5,5 cm"],['L','E',"5,5 cm"],['L','U',"3 cm"],['E','N',"3 cm"]], at:[320,342], lines:["Côtés opposés de même longueur","(UN) // (LE) et (LU) // (EN)"], t:"LUNE est un parallélogramme."}]}); })();
 })();
