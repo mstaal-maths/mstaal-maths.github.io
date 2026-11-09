@@ -207,7 +207,34 @@ const L6 = [
  {titre:"La boucle au milieu", dir:"E", max:11, blocs:MVR,
   map:["##########","#R..######","###..#####","####..####","#####...D#","##########"],
   aide:"Trois parties : 2 cases tout droit puis un virage vers le bas (AVANT la boucle) ; un escalier qui descend (DANS la boucle) ; puis un virage et 2 cases jusqu'au drapeau (APRÈS la boucle).",
-  sol:[["avancer"],["avancer"],["droite"],["repeter",3,[["avancer"],["gauche"],["avancer"],["droite"]]],["gauche"],["avancer"],["avancer"]]}
+  sol:[["avancer"],["avancer"],["droite"],["repeter",3,[["avancer"],["gauche"],["avancer"],["droite"]]],["gauche"],["avancer"],["avancer"]]},
+ /* ---- niveaux SECRETS de la 6e (44 à 48) : la zone cachée, ouverte quand toute la séance 1 est réussie ; tous dans le noir ----
+    noir : seules les cases autour du robot sont éclairées (true : elles restent éclairées ; "oubli" : le noir revient derrière lui) · miroir : « gauche » et « droite » sont inversés */
+ {titre:"Dans le noir", secret:true, noir:true, dir:"E", max:8, blocs:MVR,
+  map:["###########","#########D#","#######...#","###.#...#.#","###...#####","#R...######","###########"],
+  consigne:"Le labyrinthe est plongé dans le <b>noir</b> : tu ne vois que les cases autour du robot. Le chemin est long et tu n'as droit qu'à <b>8 blocs</b>. Lance ton programme pour explorer : les cases découvertes restent éclairées. Attention aux culs-de-sac !",
+  aide:"Explore avec quelques blocs, regarde ce qui s'éclaire, puis continue. Note le chemin sur une feuille. Tu verras qu'un même morceau de chemin revient plusieurs fois : mets-le dans un « répéter ».",
+  sol:[["repeter",4,[["avancer"],["avancer"],["gauche"],["avancer"],["droite"]]]]},
+ {titre:"Le miroir dans le noir", secret:true, noir:true, miroir:true, dir:"E", max:8, blocs:MVR,
+  map:["##########","#R...#####","###.######","##....####","#####.####","#####....#","#######.##","#######D##","##########"],
+  consigne:"Toujours dans le <b>noir</b>… et ce labyrinthe est un <b>miroir</b> : quand le programme dit « tourner à gauche », le robot tourne à droite, et inversement ! Tu as droit à <b>8 blocs</b>.",
+  aide:"Avant chaque virage, demande-toi d'abord de quel côté le robot doit VRAIMENT tourner, puis prends le bloc contraire. Le chemin descend comme un escalier : cherche le motif qui se répète.",
+  sol:[["repeter",3,[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"]]]]},
+ {titre:"Le serpent", secret:true, noir:true, dir:"E", max:14, blocs:MVR,
+  map:["########","#R.....#","#####.##","#......#","#.######","#......#","#####.##","#D.....#","########"],
+  consigne:"Dans le <b>noir</b>, le chemin serpente de gauche à droite, avec des <b>culs-de-sac</b> au bout des couloirs. Tu as droit à <b>14 blocs</b> : il faudra peut-être mettre une boucle… dans une boucle !",
+  aide:"Note la longueur de chaque couloir. Un aller-retour (vers la droite, puis vers la gauche) se répète deux fois. Dans cet aller-retour, chaque couloir peut lui-même se faire avec un « répéter ».",
+  sol:[["repeter",2,[["repeter",4,[["avancer"]]],["droite"],["avancer"],["avancer"],["droite"],["repeter",4,[["avancer"]]],["gauche"],["avancer"],["avancer"],["gauche"]]]]},
+ {titre:"Le robot à l'envers", secret:true, noir:true, dir:"O", max:5, blocs:MVR,
+  map:["###########","#######..R#","#######..##","######..###","#####..####","###...#####","####D######","###########"],
+  consigne:"Dans le <b>noir</b>, le robot regarde vers la <b>gauche de l'écran</b> : sa gauche à lui n'est donc pas ta gauche ! Tu n'as droit qu'à <b>5 blocs</b>.",
+  aide:"Mets-toi à la place du robot : s'il regarde vers la gauche de l'écran, « tourner à gauche » le fait regarder vers le bas. Le chemin est un escalier qui descend : écris une marche, puis répète-la.",
+  sol:[["repeter",5,[["avancer"],["gauche"],["avancer"],["droite"]]]]},
+ {titre:"La nuit sans lune", secret:true, noir:"oubli", dir:"E", max:14, blocs:MVR,
+  map:["###############","#######.#######","##...#...#...##","##.#.#.#.#.#.##","#R.#...#...#.D#","#####.###.#####","###############"],
+  consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> : rien ne reste éclairé ! Tu as droit à <b>14 blocs</b>. Note le chemin sur une feuille.",
+  aide:"Fais un plan sur une feuille quadrillée : à chaque essai, dessine les cases que tu as vues. Le chemin fait trois créneaux pareils : monter, aller à droite, redescendre. Écris un créneau une seule fois, puis mets-le dans un « répéter ».",
+  sol:[["repeter",3,[["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"],["avancer"]]]]}
 ];
 
 /* ==================================================================
