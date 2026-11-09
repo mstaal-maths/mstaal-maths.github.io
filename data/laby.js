@@ -234,7 +234,33 @@ const L6 = [
   map:["###############","#######.#######","##...#...#...##","##.#.#.#.#.#.##","#R.#...#...#.D#","#####.###.#####","###############"],
   consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> : rien ne reste éclairé ! Tu as droit à <b>14 blocs</b>. Note le chemin sur une feuille.",
   aide:"Fais un plan sur une feuille quadrillée : à chaque essai, dessine les cases que tu as vues. Le chemin fait trois créneaux pareils : monter, aller à droite, redescendre. Écris un créneau une seule fois, puis mets-le dans un « répéter ».",
-  sol:[["repeter",3,[["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"],["avancer"]]]]}
+  sol:[["repeter",3,[["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"],["avancer"]]]]},
+ /* ---- niveaux SECRETS 2 de la 6e (49 à 53) : la deuxième zone cachée, ouverte quand toute la séance 2 est réussie ; tous dans le noir ---- */
+ {titre:"Trois boucles dans le noir", secret:true, noir:true, dir:"E", max:8, blocs:MVR,
+  map:["############","######....D#","######.#####","###.##.#####","#R......####","############"],
+  consigne:"Dans le <b>noir</b>, le chemin est fait de trois longues lignes droites, avec des culs-de-sac pour te piéger. Tu n'as droit qu'à <b>8 blocs</b>.",
+  aide:"Explore et compte les cases de chaque ligne droite. Chaque ligne droite peut se faire avec un « répéter » : trois boucles à la suite, avec un virage entre deux boucles.",
+  sol:[["repeter",5,[["avancer"]]],["gauche"],["repeter",3,[["avancer"]]],["droite"],["repeter",4,[["avancer"]]]]},
+ {titre:"Le miroir et l'escalier", secret:true, noir:true, miroir:true, dir:"E", max:9, blocs:MVR,
+  map:["##########","#####...D#","####..####","###..#####","#R...#####","##########"],
+  consigne:"Dans le <b>noir</b> et dans un <b>miroir</b> : « tourner à gauche » fait tourner le robot à droite, et inversement ! Il y a des blocs avant la boucle, dans la boucle et après. Tu as droit à <b>9 blocs</b>.",
+  aide:"Trois parties : une ligne droite (AVANT la boucle), un escalier qui monte (DANS la boucle), une ligne droite (APRÈS). Pour chaque virage, cherche d'abord le vrai sens, puis prends le bloc contraire.",
+  sol:[["avancer"],["avancer"],["repeter",3,[["droite"],["avancer"],["gauche"],["avancer"]]],["avancer"],["avancer"]]},
+ {titre:"Les grandes marches", secret:true, noir:true, dir:"E", max:7, blocs:MVR,
+  map:["##########","#######D##","#######.##","#######.##","####.....#","####.#####","####.#####","#R....####","##########"],
+  consigne:"Dans le <b>noir</b>, un escalier géant : chaque marche fait plusieurs cases. Tu n'as droit qu'à <b>7 blocs</b>… il faudra une boucle dans une boucle !",
+  aide:"Compte les cases d'une marche : vers la droite, puis vers le haut. Chaque morceau de marche se fait avec un « répéter ». Ensuite, mets toute la marche dans un grand « répéter ».",
+  sol:[["repeter",2,[["repeter",3,[["avancer"]]],["gauche"],["repeter",3,[["avancer"]]],["droite"]]]]},
+ {titre:"Le robot qui regarde en bas", secret:true, noir:true, dir:"S", max:9, blocs:MVR,
+  map:["########","#R######","#..#####","#.######","#.######","#..#####","##..####","###..###","####.D##","########"],
+  consigne:"Dans le <b>noir</b>, le robot regarde vers le <b>bas de l'écran</b> : sa gauche à lui, c'est ta droite ! Une ligne droite, puis un escalier. Tu as droit à <b>9 blocs</b>.",
+  aide:"Mets-toi à la place du robot : s'il regarde vers le bas, « tourner à gauche » le fait regarder vers la droite de l'écran. La ligne droite se fait avec une boucle, l'escalier avec une autre.",
+  sol:[["repeter",4,[["avancer"]]],["gauche"],["repeter",3,[["avancer"],["droite"],["avancer"],["gauche"]]],["avancer"]]},
+ {titre:"Le serpent de la nuit", secret:true, noir:"oubli", dir:"E", max:14, blocs:MVR,
+  map:["#######","#R....#","####.##","#.....#","#.#####","#.....#","####.##","#D...##","#######"],
+  consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> ! Le chemin serpente, avec des culs-de-sac au bout des couloirs. Tu as droit à <b>14 blocs</b>.",
+  aide:"Dessine le plan sur une feuille à chaque essai. Un aller-retour (droite, descente, gauche, descente) se répète deux fois. Chaque couloir peut lui-même se faire avec un « répéter ».",
+  sol:[["repeter",2,[["repeter",3,[["avancer"]]],["droite"],["repeter",2,[["avancer"]]],["droite"],["repeter",3,[["avancer"]]],["gauche"],["repeter",2,[["avancer"]]],["gauche"]]]]}
 ];
 
 /* ==================================================================
@@ -495,7 +521,33 @@ const L5 = [
   map:["#############","###........##","#.#.###.#####","#.#.###P#.PD#","#R....#.#.###","#.#####.....#","#.#####.#####","#.....#.#####","#############"], doors:[20,13],
   consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> : rien ne reste éclairé ! Il part avec le nombre <b>4</b>. Note le chemin et les codes sur une feuille.",
   aide:"Fais un plan sur une feuille quadrillée : à chaque essai, dessine les cases que tu as vues. Avance par petits bouts : quelques blocs, lance, note, puis ajoute la suite. Il y a deux portes et plusieurs culs-de-sac.",
-  sol:[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["multiplier",5],["avancer"],["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["enlever",7],["avancer"],["avancer"]]}
+  sol:[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["multiplier",5],["avancer"],["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["enlever",7],["avancer"],["avancer"]]},
+ /* ---- niveaux SECRETS 2 de la 5e (54 à 58) : la deuxième zone cachée, ouverte quand toute la séance 2 est réussie ; tous dans le noir, avec des boucles ---- */
+ {titre:"Les portes en escalier", secret:true, noir:true, v0:3, dir:"E", max:8, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["########","#####.D#","####.P.#","###.P###","#..P####","#RP#####","########"], doors:[19,15,11,7],
+  consigne:"Dans le <b>noir</b>, un escalier de <b>portes</b> ! Le robot part avec le nombre <b>3</b>. Chaque marche a sa porte, et les codes suivent une règle. Tu n'as droit qu'à <b>8 blocs</b>.",
+  aide:"Note les codes des portes au fur et à mesure : de combien augmentent-ils à chaque marche ? Une marche = un calcul, puis le déplacement. Mets tout ça dans un « répéter ».",
+  sol:[["repeter",4,[["ajouter",4],["avancer"],["gauche"],["avancer"],["droite"]]],["avancer"]]},
+ {titre:"Le miroir qui triple", secret:true, noir:true, miroir:true, v0:1, dir:"E", max:9, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["######","#RP..#","####P#","#D##.#","#..P.#","######"], doors:[3,9,27],
+  consigne:"Dans le <b>noir</b> et dans un <b>miroir</b> : « gauche » et « droite » sont inversés ! Le robot part avec le nombre <b>1</b> et fait le tour d'un massif. Tu as droit à <b>9 blocs</b>.",
+  aide:"Chaque côté du tour se fait pareil : un calcul, puis trois cases, puis un virage. Regarde les codes 3, 9… : par combien faut-il multiplier à chaque fois ? Pour le virage, cherche le vrai sens puis prends le bloc contraire.",
+  sol:[["repeter",3,[["multiplier",3],["avancer"],["avancer"],["avancer"],["gauche"]]],["avancer"]]},
+ {titre:"Deux boucles, deux calculs", secret:true, noir:true, v0:2, dir:"E", max:10, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["#######","#####D#","#####P#","####..#","###.#P#","#RPPP.#","#######"], doors:[44,22,5,8,11],
+  consigne:"Dans le <b>noir</b>, cinq <b>portes</b> : d'abord une ligne vers la droite, puis une ligne vers le haut. Le robot part avec le nombre <b>2</b>. Tu as droit à <b>10 blocs</b>.",
+  aide:"Les trois premières portes : leurs codes augmentent toujours du même nombre. Les deux dernières : le code double. Une boucle pour chaque ligne droite, avec le bon calcul dedans.",
+  sol:[["repeter",3,[["ajouter",3],["avancer"]]],["avancer"],["gauche"],["repeter",2,[["multiplier",2],["avancer"],["avancer"]]]]},
+ {titre:"La porte effacée", secret:true, noir:true, muet:true, v0:1, dir:"E", max:14, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["#########","###.P.PD#","###.#.###","#R...####","#########"], doors:["f",40], fn:v=>32,
+  consigne:"Dans le <b>noir</b>, le code de la première porte a été <b>effacé</b> ! Un indice est gravé dessus : <b>« Pars de 1 et double, double, double… Je suis le premier nombre plus grand que 30 que tu obtiens. »</b> Le robot part avec le nombre <b>1</b>. Tu as droit à <b>14 blocs</b>.",
+  aide:"Double à partir de 1 : 2, 4, 8… Combien de fois faut-il doubler pour dépasser 30 ? Un « répéter » fera tous ces doublements. La deuxième porte a un code écrit : tu le verras en t'approchant.",
+  sol:[["repeter",5,[["multiplier",2]]],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["ajouter",8],["avancer"],["avancer"]]},
+ {titre:"La nuit des trois portes", secret:true, noir:"oubli", v0:5, dir:"E", max:15, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier","repeter"],
+  map:["###############","#######.#######","##...#...#...##","##.#.#.#.#.#.##","#RP#..P#..P#.D#","#####.###.#####","###############"], doors:[10,15,20],
+  consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> ! Il part avec le nombre <b>5</b>. Trois créneaux, trois portes. Tu as droit à <b>15 blocs</b>.",
+  aide:"Fais un plan sur une feuille. Chaque créneau commence par une porte : de combien augmentent les codes ? Écris un créneau une seule fois (calcul, porte, monter, droite, descendre), puis mets-le dans un « répéter ».",
+  sol:[["repeter",3,[["ajouter",5],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"],["avancer"]]]]}
 ];
 
 /* on retire les rangées de haies inutiles en haut et en bas (une seule rangée de bordure suffit) */

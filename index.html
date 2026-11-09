@@ -1671,6 +1671,9 @@ const JEUX = {
     secret:{titre:"Les niveaux secrets", apres:"s1", mot:"BLOCS", badge:"Explorateur du noir", niv:[44,45,46,47,48],
        phrase:"Cinq niveaux cachés, tous dans le noir, pour ceux qui ont réussi toute la séance 1 : des culs-de-sac, un miroir, un serpent, un robot à l'envers… et une nuit sans lune.",
        appris:["Dans le noir, on explore petit à petit : on lance, on observe, on note, puis on complète son programme.", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs.", "Pour tourner du bon côté, on se met à la place du robot, même quand il regarde vers la gauche de l'écran.", "Une boucle peut contenir une autre boucle : le programme devient très court."]},
+    secret2:{titre:"Le deuxième passage", sous:"Deuxième passage", apres:"s2", mot:"LUEUR", badge:"Gardien de la lueur", niv:[49,50,51,52,53],
+       phrase:"Cinq nouveaux niveaux cachés, tous dans le noir, pour ceux qui ont réussi toute la séance 2 : des boucles à la suite, un miroir, des marches géantes, un robot qui regarde en bas… et un serpent dans la nuit.",
+       appris:["Dans le noir, on explore petit à petit : on lance, on observe, on note, puis on complète son programme.", "On peut mettre plusieurs boucles à la suite, avec des blocs avant, entre et après.", "Une boucle peut contenir d'autres boucles : le programme devient très court.", "Pour tourner du bon côté, on se met à la place du robot, quelle que soit la direction où il regarde."]},
     intro:"Assemble les blocs pour guider le robot jusqu'au drapeau, puis clique sur « Lancer le programme ». Les blocs ont les mêmes couleurs et les mêmes noms que dans Scratch."},
   tableur:{cls:"6e", tab:"6e", store:"staal-tableur6-etat", titre:"Le tableur",
     carte:{tag:"Tableur", h:"Le tableur · Proportionnalité", p:"Découvre le tableur : formules, recopie, et un test pour savoir si un tableau est de proportionnalité."},
@@ -1713,6 +1716,9 @@ const JEUX = {
     secret:{titre:"Les niveaux secrets", apres:"s1", mot:"ROBOT", badge:"Maître du labyrinthe", niv:[49,50,51,52,53],
        phrase:"Cinq niveaux cachés, tous dans le noir, pour ceux qui ont réussi toute la séance 1 : des culs-de-sac, un miroir, trois portes, un code effacé… et une nuit sans lune.",
        appris:["Dans le noir, on explore petit à petit : on lance, on observe, on note, puis on complète son programme.", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs.", "On peut trouver un code caché grâce aux multiples : 63 est le plus grand multiple de 9 avant 70."]},
+    secret2:{titre:"Le deuxième passage", sous:"Deuxième passage", apres:"s2", mot:"FORGE", badge:"Maître de la forge", niv:[54,55,56,57,58],
+       phrase:"Cinq nouveaux niveaux cachés, tous dans le noir, pour ceux qui ont réussi toute la séance 2 : des boucles qui calculent, un miroir qui triple, une porte effacée… et une nuit à trois portes.",
+       appris:["Dans le noir, on explore petit à petit : on lance, on observe, on note, puis on complète son programme.", "Quand des codes augmentent toujours du même nombre, une boucle peut faire le calcul à chaque tour.", "Doubler plusieurs fois de suite, c'est répéter « multiplier par 2 » : 1, 2, 4, 8, 16, 32…", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs."]},
     intro:"Le robot transporte un nombre. Les portes ne s'ouvrent que s'il affiche le bon code : programme ses déplacements et ses calculs. Les blocs ont les mêmes couleurs et les mêmes noms que dans Scratch."},
   stylo4:{cls:"4e", mod:{src:"data/scratch.js", name:"SCRATCH", pack:"4e"}, wide:true, eyebrow:"programmation", store:"staal-scratch4-done", titre:"Le lutin dessinateur",
     carte:{tag:"Programmation", h:"Le lutin dessinateur", p:"Programme le stylo du lutin, comme dans Scratch : polygones, frise par translation, variables."},
@@ -1772,8 +1778,8 @@ if(window.MJ) Object.entries(MJ).forEach(([k,m])=>{ JEUX[k]={cls:m.cls, mod:{src
 const UNITE = J => J.tab ? ["mission","missions"] : ["niveau","niveaux"];
 const reussis = (n, J) => J.tab ? `${n} mission${n>1?"s":""} réussie${n>1?"s":""}` : `${n} niveau${n>1?"x":""} réussi${n>1?"s":""}`;
 function badgeSeances(J){ const n=J.seances.length; return n===1 ? (J.libre?"1 séance + autonomie":"1 séance d'1 h") : `${n} séances${J.libre?" + autonomie":""}`; }
-function seanceDe(J, sid){ if(sid==="libre") return J.libre||null; if(sid==="secret"||sid==="secret-staal") return J.secret||null; const m=/^s(\d)$/.exec(sid||""); return m ? J.seances[+m[1]-1]||null : null; }
-const nomSeance = (J, sid) => /^secret/.test(sid) ? "Zone secrète" : sid==="libre" ? "En autonomie" : J.seances.length>1 ? "Séance "+sid.slice(1) : "Séance";
+function seanceDe(J, sid){ if(sid==="libre") return J.libre||null; const z=skDe(J,sid); if(z) return z; const m=/^s(\d)$/.exec(sid||""); return m ? J.seances[+m[1]-1]||null : null; }
+const nomSeance = (J, sid) => /^secret2/.test(sid) ? "Zone secrète 2" : /^secret/.test(sid) ? "Zone secrète" : sid==="libre" ? "En autonomie" : J.seances.length>1 ? "Séance "+sid.slice(1) : "Séance";
 /* progression enregistrée par le jeu (mêmes clés qu'avant : rien n'est perdu) */
 function faits(J){ try{ const v=JSON.parse(localStorage.getItem(J.store)||"null"); const d=J.tab ? (v&&v.done) : v; return Array.isArray(d) ? d : []; }catch(e){ return []; } }
 const moteur = J => J.mod ? window[J.mod.name] : J.tab ? window.TABLEUR : window.LABY;
@@ -1797,7 +1803,7 @@ function outil(jeu){
       <ol class="sniv" data-niv="${S.niv.join(",")}" aria-label="${U[1]} de cette ${libre?"partie":"séance"}">${S.niv.map((i,k)=>`<li class="${d.includes(i)?"ok":""}"><b>${k+1}</b></li>`).join("")}</ol>
       <div class="sft"><span class="sprog${ok===tot?" ok":""}">${ok===tot?`Tout est réussi : ${tot} sur ${tot} ✓`:ok?`${reussis(ok,J)} sur ${tot}`:`${tot} ${U[1]}`}</span><span class="btn primary">${ok===tot?"Revoir":ok?"Continuer":"Commencer"} →</span></div></a>`; };
   app.innerHTML = `<div class="head"><span class="eyebrow">Informatique · ${J.eyebrow||(J.tab?"tableur":"programmation")}</span><h1>${J.carte.h}</h1><p>${intro}</p></div>
-    <div class="seances">${J.seances.map((S,i)=>bloc(S,"s"+(i+1))).join("")}${J.libre?bloc(J.libre,"libre"):""}${secretOuvert(J)?`<a class="seance sk-carte" href="#${jeu}/secret"><div class="shd"><span class="snum">Zone secrète</span><span class="pastille">${secretFini(J)?"Badge : "+esc(J.secret.badge):"Accès réservé"}</span></div><h2>${esc(J.secret.titre)}</h2><p class="sphr">Tu as trouvé le passage secret. Garde-le pour toi !</p><div class="sk-mot sk-mini">${skLettres(J,d)}</div><div class="sft"><span class="sprog">${J.secret.niv.filter(i=>d.includes(i)).length} sur ${J.secret.niv.length}</span><span class="btn primary">Entrer →</span></div></a>`:""}</div>`;
+    <div class="seances">${J.seances.map((S,i)=>bloc(S,"s"+(i+1))).join("")}${J.libre?bloc(J.libre,"libre"):""}${ZONES(J).filter(Z=>secretOuvert(J,Z)).map(Z=>`<a class="seance sk-carte" href="#${jeu}/${Z.id}"><div class="shd"><span class="snum">${nomSeance(J,Z.id)}</span><span class="pastille">${secretFini(J,Z)?"Badge : "+esc(Z.badge):"Accès réservé"}</span></div><h2>${esc(Z.titre)}</h2><p class="sphr">Tu as trouvé le passage secret de la séance ${Z.apres.slice(1)}. Garde-le pour toi !</p><div class="sk-mot sk-mini">${skLettres(Z,d)}</div><div class="sft"><span class="sprog">${Z.niv.filter(i=>d.includes(i)).length} sur ${Z.niv.length}</span><span class="btn primary">Entrer →</span></div></a>`).join("")}</div>`;
   /* noms des niveaux, lus dans le jeu lui-même */
   chargerMoteur(J, false).then(()=>{ const M=moteur(J); if(!M || !M.levels || location.hash.slice(1)!==jeu) return; const T=M.levels(packDe(J));
     app.querySelectorAll(".sniv").forEach(ol=>{ ol.dataset.niv.split(",").map(Number).forEach((i,k)=>{ const li=ol.children[k], t=T[i]; if(!li||!t) return; li.innerHTML=`<b>${k+1}</b> ${esc(t.t)}`; if(t.defi) li.classList.add("defi"); }); }); }).catch(()=>{});
@@ -1805,17 +1811,17 @@ function outil(jeu){
 function seancePage(jeu, sid){
   const J=JEUX[jeu], C=CLASSES[J.cls], S=seanceDe(J,sid), libre=sid==="libre", nom=nomSeance(J,sid), U=UNITE(J), tot=S.niv.length;
   const secret=/^secret/.test(sid);
-  if(sid==="secret" && !secretOuvert(J)){ secretRefus(jeu); return; }
+  if(/^secret2?$/.test(sid) && !secretOuvert(J,S)){ secretRefus(jeu, sid); return; }
   document.documentElement.classList.toggle("secret", secret);
   document.documentElement.style.setProperty("--c", secret ? "#ff6a1a" : C.couleur);
   crumbs.innerHTML = `<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${J.cls}">${C.nom}</a><span aria-hidden="true">›</span><a href="#${jeu}">${J.titre}</a><span aria-hidden="true">›</span><span>${nom}</span>`;
   app.innerHTML = (secret ? skBraises() + `<div class="head shead"><span class="eyebrow">Zone secrète · accès réservé</span><h1>${esc(S.titre)}</h1><p>${S.phrase}</p></div>`
     : `<div class="head shead"><span class="eyebrow">${J.carte.h} · ${libre?"quand tu veux, chez toi":"1 h en salle informatique"}</span><h1>${(libre?"En autonomie":nom)+" · "+esc(S.titre)}</h1><p>${S.phrase}</p><p class="sintro">${J.intro}</p></div>`) + `
-    <div class="sbarw">${secret ? skTitre() : `<span class="sfs-t">${J.carte.h}<b>${libre?"En autonomie":nom}</b></span>`}<div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div><button class="btn primary sfs-go" id="sfsgo" type="button" aria-pressed="false"></button></div>
+    <div class="sbarw">${secret ? skTitre(S) : `<span class="sfs-t">${J.carte.h}<b>${libre?"En autonomie":nom}</b></span>`}<div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div><button class="btn primary sfs-go" id="sfsgo" type="button" aria-pressed="false"></button></div>
     <div id="labyroot"><p class="where">Chargement du jeu…</p></div>`;
   SFS.auto();
   const barre = (cur, d) => { const el=document.getElementById("sbar"); if(!el) return; const k=S.niv.indexOf(cur)+1, ok=S.niv.filter(i=>d.includes(i)).length;
-    if(secret){ el.innerHTML = `<span class="sbn">Niveau secret ${k} sur ${tot}</span><span class="sk-mot sk-mini" aria-label="Mot de passe">${skLettres(J,d)}</span><span class="sbd">${ok===tot?`Mot de passe complet ✓`:`Chaque niveau réussi révèle une lettre`}</span>`; return; }
+    if(secret){ el.innerHTML = `<span class="sbn">Niveau secret ${k} sur ${tot}</span><span class="sk-mot sk-mini" aria-label="Mot de passe">${skLettres(S,d)}</span><span class="sbd">${ok===tot?`Mot de passe complet ✓`:`Chaque niveau réussi révèle une lettre`}</span>`; return; }
     el.innerHTML = `<span class="sbn">${U[0]==="mission"?"Mission":"Niveau"} ${k} sur ${tot}</span><span class="sbtrack" role="progressbar" aria-label="Progression" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${ok}"><i style="width:${Math.round(100*ok/tot)}%"></i></span><span class="sbd">${ok===tot?`Tout est réussi ✓`:`${reussis(ok,J)} sur ${tot}`}</span>`; };
   barre(S.niv[0], faits(J));
   const opts = {niv:S.niv.slice(), fin: libre||secret?"Voir mon bilan":"Terminer la séance", onChange:barre, onFin:d=>bilan(jeu, sid, d)};
@@ -1824,19 +1830,22 @@ function seancePage(jeu, sid){
 }
 /* ---------- Zone secrète (5e, Le labyrinthe des nombres) : ouverte quand toute la séance « apres » est réussie ----------
    #nombres/secret : la zone (refusée tant qu'elle n'est pas ouverte) · #nombres/secret-staal : accès direct pour M. Staal (essai) */
-const secretOuvert = J => !!(J && J.secret && seanceDe(J, J.secret.apres).niv.every(i => faits(J).includes(i)));
-const secretFini = J => !!(J && J.secret && J.secret.niv.every(i => faits(J).includes(i)));
+/* zones secrètes d'un jeu : « secret » (après la séance 1) et « secret2 » (après la séance 2) */
+const ZONES = J => ["secret","secret2"].filter(k=>J && J[k]).map(k=>Object.assign(J[k],{id:k}));
+const skDe = (J, sid) => { const m=/^(secret2?)(?:-staal)?$/.exec(sid||""); return m && J[m[1]] ? Object.assign(J[m[1]],{id:m[1]}) : null; };
+const secretOuvert = (J, Z) => !!(J && Z && seanceDe(J, Z.apres).niv.every(i => faits(J).includes(i)));
+const secretFini = (J, Z) => !!(J && Z && Z.niv.every(i => faits(J).includes(i)));
 const ICO_COFFRE = `<svg class="sk-vault" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="92" fill="#1a0f0b" stroke="#3a2017" stroke-width="5"/><circle cx="100" cy="100" r="78" fill="none" stroke="#ffb347" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 8"/><circle class="sk-light" cx="100" cy="100" r="66" fill="#ff6a1a"/><g class="sk-door"><circle cx="100" cy="100" r="66" fill="#2a1712" stroke="#5a3424" stroke-width="4"/><circle cx="100" cy="100" r="22" fill="#3a1d10" stroke="#ffb347" stroke-width="3"/><path d="M100 78v44M78 100h44M85 85l30 30M115 85l-30 30" stroke="#ffb347" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="100" r="6" fill="#ffb347"/><circle cx="100" cy="42" r="5" fill="#5a3424"/><circle cx="158" cy="100" r="5" fill="#5a3424"/><circle cx="100" cy="158" r="5" fill="#5a3424"/><circle cx="42" cy="100" r="5" fill="#5a3424"/></g></svg>`;
-function skLettres(J, d){ const S=J.secret; return S.mot.split("").map((c,k)=>{ const ok=d.includes(S.niv[k]); return `<span class="sk-l${ok?" ok":""}" aria-label="${ok?"lettre "+c:"lettre cachée"}">${ok?c:"?"}</span>`; }).join(""); }
+function skLettres(S, d){ return S.mot.split("").map((c,k)=>{ const ok=d.includes(S.niv[k]); return `<span class="sk-l${ok?" ok":""}" aria-label="${ok?"lettre "+c:"lettre cachée"}">${ok?c:"?"}</span>`; }).join(""); }
 /* le titre de la zone secrète entre deux torches, et les braises du fond */
-function skTitre(){ const t="Zone secrète";
-  return `<span class="sfs-t sk-titre"><span class="sk-torche" aria-hidden="true"><i></i></span><span class="sk-tt"><span class="sr">${t}</span><span class="sk-nom" aria-hidden="true">${[...t].map((c,i)=>`<span class="c" aria-hidden="true" style="animation-delay:${(.15+i*.06).toFixed(2)}s">${c===" "?"&#160;":c}</span>`).join("")}</span><b>Niveaux cachés</b></span><span class="sk-torche" aria-hidden="true"><i style="animation-delay:.3s,1.1s"></i></span></span>`; }
+function skTitre(S){ const t="Zone secrète";
+  return `<span class="sfs-t sk-titre"><span class="sk-torche" aria-hidden="true"><i></i></span><span class="sk-tt"><span class="sr">${t}</span><span class="sk-nom" aria-hidden="true">${[...t].map((c,i)=>`<span class="c" aria-hidden="true" style="animation-delay:${(.15+i*.06).toFixed(2)}s">${c===" "?"&#160;":c}</span>`).join("")}</span><b>${S && S.sous || "Niveaux cachés"}</b></span><span class="sk-torche" aria-hidden="true"><i style="animation-delay:.3s,1.1s"></i></span></span>`; }
 function skBraises(){ let s=""; for(let i=0;i<28;i++){ const d=5+(i*7)%6; s+=`<i style="left:${((i*29.3)%100).toFixed(1)}%;--dx:${((i%5)-2)*30}px;animation-duration:${d}s;animation-delay:${(-((i*1.37)%d)).toFixed(2)}s"></i>`; } return `<div class="sk-braises" aria-hidden="true">${s}</div>`; }
 /* le portail : quand la séance est finie, la page se fige, un vortex de braises s'ouvre, la page se brise en éclats aspirés dedans,
    et on plonge dans la zone secrète (qu'on aperçoit déjà au cœur du portail). Aucun bouton. Un clic permet de passer. */
-function passageSecret(jeu, sid, d){
+function passageSecret(jeu, zid){
   document.querySelectorAll(".sfin,.skp").forEach(x=>x.remove());
-  const cible="#"+jeu+"/secret", app=document.getElementById("app"), root=document.documentElement;
+  const cible="#"+jeu+"/"+zid, app=document.getElementById("app"), root=document.documentElement;
   const reduit=matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ov=document.createElement("div"); ov.className="skp"; ov.setAttribute("role","status"); ov.setAttribute("aria-label","Un passage secret s'ouvre…");
   ov.innerHTML=`<canvas class="skp-fond"></canvas><div class="skp-eclats"></div><canvas class="skp-feu"></canvas><span class="skp-passer">Clic : passer</span>`;
@@ -1917,19 +1926,19 @@ function passageSecret(jeu, sid, d){
   at(T.fin+1000, ()=>{ fini=true; ov.remove(); });
 }
 /* page refusée : la zone n'est pas encore ouverte */
-function secretRefus(jeu){
-  const J=JEUX[jeu]; document.documentElement.classList.add("secret");
+function secretRefus(jeu, sid){
+  const J=JEUX[jeu], n=(seanceDe(J,sid)||{apres:"s1"}).apres.slice(1); document.documentElement.classList.add("secret");
   crumbs.innerHTML = `<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${J.cls}">${CLASSES[J.cls].nom}</a><span aria-hidden="true">›</span><a href="#${jeu}">${J.titre}</a>`;
   app.innerHTML = `<div class="sk-refus"><p class="sk-term">&gt; Recherche du passage…<br>&gt; ERREUR : accès refusé.<br>&gt; Ce passage n'existe pas… pour l'instant.<span class="sk-cur"></span></p>
-    <p>Il paraît qu'un endroit caché s'ouvre quand on a réussi <b>tous</b> les niveaux de la séance 1. Mais ce n'est peut-être qu'une rumeur…</p>
-    <a class="btn primary" href="#${jeu}/s1">Aller à la séance 1</a></div>`;
+    <p>Il paraît qu'un endroit caché s'ouvre quand on a réussi <b>tous</b> les niveaux de la séance ${n}. Mais ce n'est peut-être qu'une rumeur…</p>
+    <a class="btn primary" href="#${jeu}/s${n}">Aller à la séance ${n}</a></div>`;
 }
 /* bilan de fin de séance (fenêtre par-dessus le jeu) */
 function bilan(jeu, sid, d, direct){
   document.querySelectorAll(".sfin").forEach(x=>x.remove());
   const J=JEUX[jeu], S=seanceDe(J,sid), libre=sid==="libre", nom=nomSeance(J,sid), U=UNITE(J), tot=S.niv.length;
   const reste=S.niv.map((i,k)=>d.includes(i)?null:k+1).filter(x=>x);
-  if(!direct && !reste.length && J.secret && sid===J.secret.apres){ passageSecret(jeu, sid, d); return; }
+  const Z=ZONES(J).find(z=>z.apres===sid); if(!direct && !reste.length && Z){ passageSecret(jeu, Z.id); return; }
   if(/^secret/.test(sid)) return bilanSecret(jeu, sid, d, reste);
   const idx=libre ? -1 : +sid.slice(1)-1, suite = libre || J.libre ? null : J.seances[idx+1] ? [`#${jeu}/s${idx+2}`, `Séance ${idx+2}`] : null;
   const plus = !libre && J.libre ? `<div class="sfinplus"><h3>Tu as terminé avant la fin de l'heure ?</h3><p>Bravo ! Continue en autonomie : d'autres ${U[1]} t'attendent, à ton rythme.</p><a class="btn primary" href="#${jeu}/libre">Continuer en autonomie →</a></div>` : "";
@@ -1950,12 +1959,12 @@ function bilan(jeu, sid, d, direct){
 }
 /* bilan de la zone secrète : le mot de passe et le badge */
 function bilanSecret(jeu, sid, d, reste){
-  const J=JEUX[jeu], S=J.secret;
+  const J=JEUX[jeu], S=seanceDe(J,sid);
   const box=document.createElement("div"); box.className="sfin sk-unlock"; box.setAttribute("role","dialog"); box.setAttribute("aria-modal","true"); box.setAttribute("aria-labelledby","skt");
   box.innerHTML = `<div class="sk-box sk-fin"><div class="sk-txt">` + (reste.length
-    ? `<p class="sk-term">&gt; Mot de passe incomplet…</p><h2 id="skt">Encore <span>${reste.length} niveau${reste.length>1?"x":""}</span> secret${reste.length>1?"s":""} !</h2><p class="sk-p">Il te reste ${reste.length>1?"les niveaux":"le niveau"} n° ${reste.join(", ")} à réussir pour découvrir tout le mot de passe.</p><div class="sk-mot">${skLettres(J,d)}</div><div class="sk-btns"><button class="sk-go" type="button" data-x>Continuer</button></div>`
+    ? `<p class="sk-term">&gt; Mot de passe incomplet…</p><h2 id="skt">Encore <span>${reste.length} niveau${reste.length>1?"x":""}</span> secret${reste.length>1?"s":""} !</h2><p class="sk-p">Il te reste ${reste.length>1?"les niveaux":"le niveau"} n° ${reste.join(", ")} à réussir pour découvrir tout le mot de passe.</p><div class="sk-mot">${skLettres(S,d)}</div><div class="sk-btns"><button class="sk-go" type="button" data-x>Continuer</button></div>`
     : `<p class="sk-term">&gt; Mot de passe complet. Zone secrète terminée.<span class="sk-cur"></span></p><h2 id="skt">Tu es <span>${esc(S.badge)}</span> !</h2>
-       <div class="sk-mot">${skLettres(J,d)}</div>
+       <div class="sk-mot">${skLettres(S,d)}</div>
        <p class="sk-p">Le mot de passe est <b>${S.mot}</b>. Va le dire discrètement à M. Staal : il saura que tu as trouvé et réussi la zone secrète.</p>
        <div class="sk-btns"><a class="sk-go" href="#${jeu}/libre">Continuer en autonomie →</a><a class="sk-later" href="#${jeu}">Retour à la page des séances</a></div>
        <p class="sk-chut">Garde le secret pour les autres !</p>`) + `</div><div class="sk-art">${ICO_COFFRE.replace('class="sk-vault"','class="sk-vault ouvert"')}</div></div>`;
