@@ -1669,8 +1669,8 @@ const JEUX = {
     libre:{titre:"20 niveaux pour aller plus loin", phrase:"20 niveaux, du plus facile au plus difficile : des calculs au bon moment, des nombres négatifs et à virgule, des formules, des boucles dans des boucles, et trois défis pour finir.", niv:[23,18,24,25,26,27,28,29,19,30,31,22,21,32,20,33,34,13,35,14],
        appris:["Un calcul doit être fait avant que le robot arrive devant la porte.", "On peut mélanger déplacements, virages, calculs et boucles.", "Multiplier par 0 donne toujours 0 ; en ajoutant 2 ou en multipliant par 3, un nombre impair reste impair.", "5 × x + 10 et 5 × (x + 2) donnent toujours le même résultat ; 3 × (x + 4) + 3 × x se réduit en 6 × x + 12."]},
     secret:{titre:"Les niveaux secrets", apres:"s1", mot:"ROBOT", badge:"Maître du labyrinthe", niv:[49,50,51,52,53],
-       phrase:"Cinq niveaux cachés, pour ceux qui ont réussi toute la séance 1 : un labyrinthe dans le noir, un miroir, des portes sous zéro, un code effacé… et la porte finale.",
-       appris:["Dans le noir, on explore petit à petit : on lance, on observe, on complète son programme.", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs.", "On peut trouver un code caché grâce aux multiples : 48 est un multiple de 6 et de 8."]},
+       phrase:"Cinq niveaux cachés, tous dans le noir, pour ceux qui ont réussi toute la séance 1 : des culs-de-sac, un miroir, des portes sous zéro, un code effacé… et une nuit sans lune.",
+       appris:["Dans le noir, on explore petit à petit : on lance, on observe, on note, puis on complète son programme.", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs.", "On peut trouver un code caché grâce aux multiples : 63 est le plus grand multiple de 9 avant 70."]},
     intro:"Le robot transporte un nombre. Les portes ne s'ouvrent que s'il affiche le bon code : programme ses déplacements et ses calculs. Les blocs ont les mêmes couleurs et les mêmes noms que dans Scratch."},
   stylo4:{cls:"4e", mod:{src:"data/scratch.js", name:"SCRATCH", pack:"4e"}, wide:true, eyebrow:"programmation", store:"staal-scratch4-done", titre:"Le lutin dessinateur",
     carte:{tag:"Programmation", h:"Le lutin dessinateur", p:"Programme le stylo du lutin, comme dans Scratch : polygones, frise par translation, variables."},
@@ -1794,7 +1794,7 @@ function passageSecret(jeu, sid, d){
   box.innerHTML = `<div class="sk-box"><div class="sk-txt">
       <div class="sk-term"><p class="sk-t1">&gt; ${esc(J.titre)} · Séance 1 : ${n} niveaux sur ${n} réussis.</p><p class="sk-t2">&gt; Analyse du labyrinthe…</p><p class="sk-t3">&gt; ALERTE : un passage caché a été détecté.</p><p class="sk-t4">&gt; Accès autorisé<span class="sk-cur"></span></p></div>
       <h2 id="skt">Tu as trouvé<br>le <span>passage secret.</span></h2>
-      <p class="sk-p">Derrière cette porte : 5 niveaux que presque personne ne verra. Les règles changent un peu… à toi de les découvrir.</p>
+      <p class="sk-p">Derrière cette porte : 5 niveaux que presque personne ne verra, tous plongés dans le noir. Prends une feuille et un crayon : tu vas en avoir besoin…</p>
       <div class="sk-btns"><a class="sk-go" href="#${jeu}/secret">Entrer dans la zone secrète →</a><button class="sk-later" type="button" data-bilan>Voir le bilan de la séance</button></div>
       <p class="sk-chut">Garde le secret : ne dis pas aux autres comment on y entre !</p></div>
     <div class="sk-art">${ICO_COFFRE}</div></div>`;

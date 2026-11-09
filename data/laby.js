@@ -441,33 +441,34 @@ const L5 = [
   prog:[["repeter",3,[["enlever",2]]],["multiplier",5],["repeter",4,[["avancer"]]],["avancer"]], rep:14,
   aide:"Remonte le programme à l'envers. Avant « multiplier par 5 », le robot affichait 40 ÷ 5 = 8. Avant la boucle, qui enlève 2 trois fois de suite (donc 6 en tout), il affichait… ?",
   sol:null},
- /* ---- niveaux SECRETS de la 5e (49 à 53) : la zone cachée, ouverte quand toute la séance 1 est réussie ----
-    noir : le labyrinthe n'est éclairé qu'autour du robot · miroir : « gauche » et « droite » sont inversés · muet : le code de la porte est effacé */
- {titre:"Dans le noir", secret:true, noir:true, v0:4, dir:"E", max:13, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
-  map:["#########","#..#..PD#","#.##.####","#R...####","####.####","#########"], doors:[12],
-  consigne:"Le labyrinthe est plongé dans le <b>noir</b> : tu ne vois que les cases autour du robot. Il part avec le nombre <b>4</b>. Lance ton programme pour explorer : les cases découvertes restent éclairées.",
-  aide:"Explore petit à petit : écris quelques blocs, lance, regarde ce qui s'éclaire, puis continue ton programme. Attention aux culs-de-sac ! Quand tu découvres la porte, son code apparaît : fais le bon calcul AVANT d'arriver devant elle.",
-  sol:[["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["multiplier",3],["avancer"],["avancer"],["avancer"]]},
- {titre:"Le miroir", secret:true, miroir:true, v0:2, dir:"E", max:11, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
-  map:["#######","#R..###","###.###","###P..D","#######"], doors:[10],
-  consigne:"Ce labyrinthe est un <b>miroir</b> : quand le programme dit « tourner à gauche », le robot tourne à droite… et inversement ! Il part avec le nombre <b>2</b>. Ouvre la porte et amène-le au drapeau.",
-  aide:"Pour descendre, le robot doit tourner à droite… donc dans le miroir, il faut le bloc « tourner à gauche » ! Fais pareil au deuxième virage. Et pour la porte : quel calcul transforme 2 en 10 ?",
-  sol:[["multiplier",5],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["avancer"]]},
- {titre:"Les portes glacées", secret:true, v0:3, dir:"E", max:11, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
-  map:["########","#R.P..##","#####.##","#####P##","#####D##","########"], doors:[-5,4],
-  consigne:"Les codes de ces portes sont <b>sous zéro</b>… ou presque ! Le robot part avec le nombre <b>3</b>. Ouvre les deux portes et amène-le au drapeau.",
-  aide:"Pour passer de 3 à −5, il faut enlever beaucoup : compte sur une droite graduée, de 3 jusqu'à −5. Ensuite, de −5 à 4 : combien faut-il ajouter ? Pense aussi au virage.",
-  sol:[["enlever",8],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["ajouter",9],["avancer"],["avancer"]]},
- {titre:"Le coffre muet", secret:true, muet:true, v0:5, dir:"E", max:7, blocs:["avancer","ajouter","enlever","multiplier"],
-  map:["########","#R..P.D#","########"], doors:["f"], fn:v=>48,
-  consigne:"Le code de la porte a été <b>effacé</b> ! Un indice est gravé dessus : <b>« Je suis un nombre entre 40 et 50, multiple de 6 et multiple de 8 à la fois. »</b> Le robot part avec le nombre <b>5</b>.",
-  aide:"Écris les multiples de 8 entre 40 et 50 : 40 et 48. Lequel est aussi un multiple de 6 ? Ensuite, trouve comment passer de 5 à ce nombre avec deux calculs : par exemple, ajouter un petit nombre puis multiplier.",
-  sol:[["ajouter",1],["multiplier",8],["avancer"],["avancer"],["avancer"],["avancer"],["avancer"]]},
- {titre:"La porte finale", secret:true, noir:true, miroir:true, v0:6, dir:"E", max:14, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
-  map:["#########","#...#..D#","###.#P###","#R.P..###","#########"], doors:[14,2],
-  consigne:"La porte finale : le labyrinthe est dans le <b>noir</b> ET c'est un <b>miroir</b> ! Le robot part avec le nombre <b>6</b>. Tout ce que tu as appris dans la zone secrète va te servir.",
-  aide:"Explore d'abord dans le noir, avec peu de blocs, pour découvrir le chemin et les codes. N'oublie pas : dans le miroir, « tourner à gauche » fait tourner le robot à droite. Il y a deux portes : fais chaque calcul juste avant la bonne porte.",
-  sol:[["enlever",4],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["multiplier",7],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"]]}
+ /* ---- niveaux SECRETS de la 5e (49 à 53) : la zone cachée, ouverte quand toute la séance 1 est réussie ; tous dans le noir ----
+    noir : seules les cases autour du robot sont éclairées (true : elles restent éclairées ; "oubli" : le noir revient derrière lui)
+    miroir : « gauche » et « droite » sont inversés · muet : un code de porte est effacé (indice dans la consigne) */
+ {titre:"Dans le noir", secret:true, noir:true, v0:2, dir:"E", max:20, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["###########","#...###..D#","#.#.###P###","###...P...#","###.#####.#","#R....###.#","###########"], doors:[7,10],
+  consigne:"Le labyrinthe est plongé dans le <b>noir</b> : tu ne vois que les cases autour du robot. Il part avec le nombre <b>2</b>. Il y a <b>deux portes</b> et des culs-de-sac. Lance ton programme pour explorer : les cases découvertes restent éclairées.",
+  aide:"Explore petit à petit : écris quelques blocs, lance, regarde ce qui s'éclaire, puis continue. Note sur une feuille ce que tu découvres (les virages, les codes). Chaque calcul doit être fait AVANT d'arriver devant sa porte.",
+  sol:[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["multiplier",5],["avancer"],["avancer"],["avancer"],["avancer"],["gauche"],["enlever",3],["avancer"],["avancer"],["droite"],["avancer"],["avancer"]]},
+ {titre:"Le miroir dans le noir", secret:true, noir:true, miroir:true, v0:3, dir:"E", max:19, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["#########","#R...####","###.#..D#","###P#P###","###.....#","###.#####","#########"], doors:[12,5],
+  consigne:"Toujours dans le <b>noir</b>… et ce labyrinthe est un <b>miroir</b> : quand le programme dit « tourner à gauche », le robot tourne à droite, et inversement ! Il part avec le nombre <b>3</b>.",
+  aide:"Avant chaque virage, demande-toi d'abord de quel côté le robot doit VRAIMENT tourner, puis prends le bloc contraire. Explore avec peu de blocs, et note les codes des portes dès qu'ils apparaissent.",
+  sol:[["multiplier",4],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["droite"],["enlever",7],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"]]},
+ {titre:"Les portes glacées", secret:true, noir:true, v0:5, dir:"E", max:21, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["###########","#R.P.....##","#####.#####","###....P..#","###.####.##","########PD#","###########"], doors:[-3,-12,0],
+  consigne:"Dans le <b>noir</b>, trois portes dont les codes sont <b>sous zéro</b>… ou presque ! Le robot part avec le nombre <b>5</b>.",
+  aide:"Pour les nombres négatifs, aide-toi d'une droite graduée : de 5 à −3, on recule de 8 ; de −3 à −12, on recule encore ; pour revenir à 0, on avance. Explore d'abord pour découvrir les trois codes.",
+  sol:[["enlever",8],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["gauche"],["enlever",9],["avancer"],["avancer"],["avancer"],["droite"],["ajouter",12],["avancer"],["avancer"],["gauche"],["avancer"]]},
+ {titre:"Le coffre muet", secret:true, noir:true, muet:true, v0:7, dir:"N", max:19, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["###########","#..##...PD#","#.###.#####","#...P...###","#.#.###.###","#R#..######","###########"], doors:[60,"f"], fn:v=>63,
+  consigne:"Dans le <b>noir</b>, et le code de la première porte a été <b>effacé</b> ! Un indice est gravé dessus : <b>« Je suis le plus grand multiple de 9 qui est plus petit que 70. »</b> Le robot part avec le nombre <b>7</b> et regarde vers le haut.",
+  aide:"Récite la table de 9 : 9, 18, 27… Lequel est le plus grand avant 70 ? Ensuite, trouve le calcul qui transforme 7 en ce nombre. La deuxième porte a un code écrit : tu le verras en t'approchant.",
+  sol:[["avancer"],["avancer"],["droite"],["multiplier",9],["avancer"],["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["enlever",3],["avancer"],["avancer"],["avancer"],["avancer"]]},
+ {titre:"La nuit sans lune", secret:true, noir:"oubli", v0:4, dir:"E", max:30, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["#############","###........##","#.#.###.#####","#.#.###P#.PD#","#R....#.#.###","#.#####.....#","#.#####.#####","#.....#.#####","#############"], doors:[20,13],
+  consigne:"La porte finale : une <b>nuit sans lune</b>. Le robot ne voit que les cases autour de lui, et <b>le noir revient derrière lui</b> : rien ne reste éclairé ! Il part avec le nombre <b>4</b>. Note le chemin et les codes sur une feuille.",
+  aide:"Fais un plan sur une feuille quadrillée : à chaque essai, dessine les cases que tu as vues. Avance par petits bouts : quelques blocs, lance, note, puis ajoute la suite. Il y a deux portes et plusieurs culs-de-sac.",
+  sol:[["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["multiplier",5],["avancer"],["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["enlever",7],["avancer"],["avancer"]]}
 ];
 
 /* on retire les rangées de haies inutiles en haut et en bas (une seule rangée de bordure suffit) */
@@ -686,6 +687,7 @@ function load(i){
   const s0=WS.getBlocksByType(P.start)[0]; s0.setDeletable(false);
   if(P.start==="l_start5"){ s0.setFieldValue(L.type==="formule"?"?":String(L.v0), "V"); }
   Blockly.Events.enable();
+  WS.updateToolbox({kind:"flyoutToolbox", contents:L.blocs.map(TB)});   /* la palette est recalculée une fois l'espace vidé (sinon elle peut rester grisée) */
   Blockly.svgResize(WS); showStart();
   WS.getAllBlocks(false).forEach(b=>{ if(b.type!==P.start) b.setEnabled(!!b.getRootBlock() && b.getRootBlock().type===P.start); });
   count(); place();
@@ -736,9 +738,12 @@ function place(x, y, d, anim){
   const val=document.getElementById("lval"); if(val){ val.style.transition=tr; val.style.transform=`translate(${x*CELL+CELL/2}px, ${y*CELL+CELL/2}px)`; }
 }
 /* niveaux « dans le noir » : les cases autour du robot s'éclairent, et restent éclairées (gardées pour ce niveau) */
-function eclaire(x, y){ let vu; try{ vu=JSON.parse(store.get("vu-"+cur)||"[]"); }catch(e){ vu=[]; } let neuf=false;
-  for(let dy=-1; dy<=1; dy++) for(let dx=-1; dx<=1; dx++){ const k=(x+dx)+"-"+(y+dy); if(!vu.includes(k)){ vu.push(k); neuf=true; } }
-  vu.forEach(k=>{ const r=document.getElementById("fg-"+k); if(r) r.classList.add("vu"); }); if(neuf) store.set("vu-"+cur, JSON.stringify(vu)); }
+function eclaire(x, y){
+  const ici=[]; for(let dy=-1; dy<=1; dy++) for(let dx=-1; dx<=1; dx++) ici.push((x+dx)+"-"+(y+dy));
+  if(LEVELS[cur].noir==="oubli"){ document.querySelectorAll(".lfogc.vu").forEach(r=>r.classList.remove("vu")); ici.forEach(k=>{ const r=document.getElementById("fg-"+k); if(r) r.classList.add("vu"); }); return; }
+  let vu; try{ vu=JSON.parse(store.get("vu2-"+cur)||"[]"); }catch(e){ vu=[]; } let neuf=false;
+  ici.forEach(k=>{ if(!vu.includes(k)){ vu.push(k); neuf=true; } });
+  vu.forEach(k=>{ const r=document.getElementById("fg-"+k); if(r) r.classList.add("vu"); }); if(neuf) store.set("vu2-"+cur, JSON.stringify(vu)); }
 function setVal(v){ const t=document.getElementById("lvalt"); if(t) t.textContent = (v===undefined?"":fmtN(v)); }
 function doorsReset(){ document.querySelectorAll(".ldoor").forEach(g=>g.classList.remove("open","shut")); }
 function msg(h, kind){ const el=document.getElementById("lmsg"); if(!el) return; el.hidden=!h; el.className="lmsg "+(kind||""); el.innerHTML=h; }
