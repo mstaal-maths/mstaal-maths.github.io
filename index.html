@@ -976,6 +976,31 @@ html.sheetmode #sheetpage{display:block;max-width:182mm;margin:0 auto;padding:0}
 @media (max-width:1000px){ .tabl .tlay{grid-template-columns:minmax(0,1fr)} .tabl .tpanel{position:static;order:-1} }
 @media (max-width:600px){ .tabl .tmenus{display:none} .tabl .tright .tround{display:none} .tabl .tshare{padding:6px 10px} .tabl .ttitle{font-size:15px} .tabl .tscroll{height:440px} }
 @media (max-width:760px){ .laby .lgrid{grid-template-columns:minmax(0,1fr)} .laby .lws{height:480px} .laby .lleft{max-width:420px} }
+/* ---------- plein écran des séances informatiques (ordinateur) : le jeu occupe toute la fenêtre, sans défilement ---------- */
+.sbarw{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:-8px 0 18px}
+.sbarw .sbar{flex:1 1 420px;margin:0}
+.sfs-go{flex:none;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;min-height:48px}
+.sfs-go svg{flex:none}
+.sfs-t{display:none}
+html.sfs .sfs-t{display:flex;flex-direction:column;justify-content:center;flex:none;padding:4px 16px;border-radius:14px;background:var(--c);color:#fff;font-weight:600;font-size:14px;line-height:1.3}
+html.sfs .sfs-t b{font-family:var(--f-display);font-size:17px}
+html.sfs,html.sfs body{overflow:hidden;height:100%}
+html.sfs .top,html.sfs #aff,html.sfs .sitefoot,html.sfs .backbtn,html.sfs .shead{display:none!important}
+html.sfs #app{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;max-width:none;margin:0;padding:12px 18px;background:var(--paper);overflow:hidden}
+html.sfs .sbarw{flex:none;margin:0 0 12px}
+html.sfs #labyroot{flex:1 1 auto;min-height:0;overflow:auto}
+html.sfs #labyroot>.laby,html.sfs #labyroot>.scr{height:100%;display:flex;flex-direction:column}
+html.sfs .laby .lgrid,html.sfs .scr .sgrid2{flex:1 1 auto;min-height:0;align-items:stretch}
+html.sfs .laby .lleft,html.sfs .scr .sleft{min-height:0;overflow-y:auto;overflow-x:hidden}
+html.sfs .laby .lright,html.sfs .scr .sright{min-height:0;display:flex;flex-direction:column}
+html.sfs .laby .lws,html.sfs .scr .sws{flex:1 1 auto;height:auto;min-height:280px}
+html.sfs #labyroot>.tabl,html.sfs .tabl .tlay{height:100%}
+html.sfs .tabl .tlay{align-items:stretch}
+html.sfs .tabl .tlay>*{min-height:0;overflow-y:auto}
+html.sfs .scr .sstage,html.sfs .laby .lmaze{width:auto;height:auto;max-width:100%;max-height:40vh;margin:0 auto}
+.sfinplus{margin-top:18px;padding:16px 18px;border-radius:14px;background:color-mix(in srgb,var(--c) 10%,var(--surface));border:2px dashed var(--c)}
+.sfinplus h3{margin:0 0 6px}
+.sfinplus p{margin:0 0 12px}
 /* ---------- plein écran des mini-jeux de maths : bouton visible seulement sur téléphone et tablette ---------- */
 .mjfs-go,.mjfs-flot{display:none}
 @media (max-width:900px),(pointer:coarse){ .head .mjfs-go{display:inline-flex;align-items:center;gap:10px;justify-self:start;padding:12px 18px}
@@ -1687,13 +1712,14 @@ function seancePage(jeu, sid){
   document.documentElement.style.setProperty("--c", C.couleur);
   crumbs.innerHTML = `<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${J.cls}">${C.nom}</a><span aria-hidden="true">›</span><a href="#${jeu}">${J.titre}</a><span aria-hidden="true">›</span><span>${nom}</span>`;
   app.innerHTML = `<div class="head shead"><span class="eyebrow">${J.carte.h} · ${libre?"quand tu veux, chez toi":"1 h en salle informatique"}</span><h1>${(libre?"En autonomie":nom)+" · "+esc(S.titre)}</h1><p>${S.phrase}</p><p class="sintro">${J.intro}</p></div>
-    <div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div>
+    <div class="sbarw"><span class="sfs-t">${J.carte.h}<b>${libre?"En autonomie":nom}</b></span><div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div><button class="btn primary sfs-go" id="sfsgo" type="button" aria-pressed="false"></button></div>
     <div id="labyroot"><p class="where">Chargement du jeu…</p></div>`;
+  SFS.auto();
   const barre = (cur, d) => { const el=document.getElementById("sbar"); if(!el) return; const k=S.niv.indexOf(cur)+1, ok=S.niv.filter(i=>d.includes(i)).length;
     el.innerHTML = `<span class="sbn">${U[0]==="mission"?"Mission":"Niveau"} ${k} sur ${tot}</span><span class="sbtrack" role="progressbar" aria-label="Progression" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${ok}"><i style="width:${Math.round(100*ok/tot)}%"></i></span><span class="sbd">${ok===tot?`Tout est réussi ✓`:`${reussis(ok,J)} sur ${tot}`}</span>`; };
   barre(S.niv[0], faits(J));
   const opts = {niv:S.niv.slice(), fin: libre?"Voir mon bilan":"Terminer la séance", onChange:barre, onFin:d=>bilan(jeu, sid, d)};
-  chargerMoteur(J, true).then(()=>{ const root=document.getElementById("labyroot"); if(!root || location.hash.slice(1)!==jeu+"/"+sid) return; moteur(J).init(root, packDe(J), opts); })
+  chargerMoteur(J, true).then(()=>{ const root=document.getElementById("labyroot"); if(!root || location.hash.slice(1)!==jeu+"/"+sid) return; moteur(J).init(root, packDe(J), opts); SFS.ajuste(); })
     .catch(()=>{ const r=document.getElementById("labyroot"); if(r) r.innerHTML=`<p class="where">Le jeu n'a pas pu se charger. Vérifie ta connexion, puis recharge la page.</p>`; });
 }
 /* bilan de fin de séance (fenêtre par-dessus le jeu) */
@@ -1701,15 +1727,16 @@ function bilan(jeu, sid, d){
   document.querySelectorAll(".sfin").forEach(x=>x.remove());
   const J=JEUX[jeu], S=seanceDe(J,sid), libre=sid==="libre", nom=nomSeance(J,sid), U=UNITE(J), tot=S.niv.length;
   const reste=S.niv.map((i,k)=>d.includes(i)?null:k+1).filter(x=>x);
-  const idx=libre ? -1 : +sid.slice(1)-1, suite = libre ? null : J.seances[idx+1] ? [`#${jeu}/s${idx+2}`, `Séance ${idx+2}`] : J.libre ? [`#${jeu}/libre`, "En autonomie"] : null;
+  const idx=libre ? -1 : +sid.slice(1)-1, suite = libre || J.libre ? null : J.seances[idx+1] ? [`#${jeu}/s${idx+2}`, `Séance ${idx+2}`] : null;
+  const plus = !libre && J.libre ? `<div class="sfinplus"><h3>Tu as terminé avant la fin de l'heure ?</h3><p>Bravo ! Continue en autonomie : d'autres ${U[1]} t'attendent, à ton rythme.</p><a class="btn primary" href="#${jeu}/libre">Continuer en autonomie →</a></div>` : "";
   const liste = l => l.length===1 ? `le n° ${l[0]}` : `les n° ${l.slice(0,-1).join(", ")} et ${l[l.length-1]}`;
   const box=document.createElement("div"); box.className="sfin"; box.setAttribute("role","dialog"); box.setAttribute("aria-modal","true"); box.setAttribute("aria-labelledby","sfint");
   box.innerHTML = `<div class="sfinbox"><p class="eyebrow">${J.carte.h} · ${libre?"En autonomie":nom}</p>`
     + (reste.length ? `<h2 id="sfint">Encore un petit effort !</h2><p>Il te reste ${reste.length} ${reste.length>1?U[1]:U[0]} à réussir : ${liste(reste)}. Clique sur ${reste.length>1?"leur":"son"} numéro, en haut du jeu.</p>
         <div class="sfinbtns"><button class="btn primary" type="button" data-x>D'accord</button></div>`
       : `<h2 id="sfint">${libre?"Bravo, tu as tout réussi !":"Séance terminée !"}</h2><p>Tu as réussi ${tot>1?`les ${tot} ${U[1]}`:`la ${U[0]}`} ${libre?"en autonomie":"de la séance"}. Bravo !</p>
-        <h3>${libre?"Ce que tu sais faire maintenant":"Ce que tu as appris"}</h3><ul>${S.appris.map(a=>`<li>${a}</li>`).join("")}</ul>
-        <div class="sfinbtns">${suite?`<a class="btn primary" href="${suite[0]}">${suite[1]} →</a>`:""}<a class="btn${suite?"":" primary"}" href="#${jeu}">Retour à la page des séances</a><button class="btn" type="button" data-x>Revoir les ${U[1]}</button></div>`)
+        ${plus}<h3>${libre?"Ce que tu sais faire maintenant":"Ce que tu as appris"}</h3><ul>${S.appris.map(a=>`<li>${a}</li>`).join("")}</ul>
+        <div class="sfinbtns">${suite?`<a class="btn primary" href="${suite[0]}">${suite[1]} →</a>`:""}<a class="btn${suite||plus?"":" primary"}" href="#${jeu}">Retour à la page des séances</a><button class="btn" type="button" data-x>Revoir les ${U[1]}</button></div>`)
     + `</div>`;
   const fermer=()=>{ box.remove(); document.removeEventListener("keydown", esc1); };
   const esc1=e=>{ if(e.key==="Escape") fermer(); };
@@ -1737,6 +1764,57 @@ async function labyrinthe(jeu){
   if(fsb && flot){ flot.onclick=()=>MJFS.on(jeu);
     if(window.IntersectionObserver) new IntersectionObserver(es=>es.forEach(e=>{ const v=!e.isIntersecting; flot.classList.toggle("cache", !v); flot.tabIndex=v?0:-1; flot.setAttribute("aria-hidden", v?"false":"true"); })).observe(fsb); }
 }
+/* ---------- Plein écran des séances informatiques ----------
+   Bouton « Plein écran » à côté de la barre de progression : on cache l'en-tête du site, le titre et le pied de page,
+   la fenêtre du navigateur passe en plein écran (API Fullscreen), et le jeu occupe toute la hauteur
+   (l'espace des blocs s'allonge ou se raccourcit ; le reste est réduit seulement s'il ne tient pas).
+   Le mode est gardé en passant d'une séance à « En autonomie » ; on le quitte avec le bouton ou la touche Échap. */
+const SFS = (() => {
+  let on = false, apiOn = false, ro = null, raf = 0;
+  const D = document.documentElement;
+  const ICO_IN = `<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 7V2.5H7M13 2.5h4.5V7M17.5 13v4.5H13M7 17.5H2.5V13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const ICO_OUT = `<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 2.5V7H2.5M17.5 7H13V2.5M13 17.5V13h4.5M2.5 13H7v4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
+  function bouton(){ const b = document.getElementById("sfsgo"); if(!b) return;
+    b.innerHTML = (on ? ICO_OUT : ICO_IN) + (on ? "Quitter le plein écran" : "Plein écran");
+    b.setAttribute("aria-pressed", on ? "true" : "false"); b.onclick = () => on ? off() : go();
+    if(on){ ecoute(); ajuste(); } }
+  /* le jeu tient dans la hauteur : on réduit d'abord la colonne de gauche (consigne, scène), sinon tout le jeu */
+  function ajuste(){ if(!on) return; cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+    const root = document.getElementById("labyroot"), k = root && root.firstElementChild; if(!k) return;
+    if(k !== suivi) ecoute();
+    if(k.matches(".tabl")) return;   /* tableur : la feuille reste à taille réelle, la colonne des consignes défile */
+    const blocs = k.matches(".laby,.scr"), E = blocs ? k.querySelector(".lleft,.sleft") : k, B = blocs ? E : root; if(!E) return;
+    const MIN = blocs ? 0.84 : 0.7; let z = 1; E.style.zoom = "";
+    for(let i = 0; i < 4; i++){ const r = B.clientHeight / B.scrollHeight; if(r >= 0.998 || z <= MIN) break;
+      z = Math.max(MIN, z * r - 0.004); E.style.zoom = z.toFixed(3); }
+  }); }
+  let suivi = null;
+  function ecoute(){ const root = document.getElementById("labyroot"); if(!root || !window.ResizeObserver) return;
+    if(ro) ro.disconnect(); ro = new ResizeObserver(() => ajuste()); ro.observe(root);
+    const k = root.firstElementChild; suivi = k; if(!k) return;
+    const L = k.querySelector(".lleft,.sleft"); (L ? [...L.children] : [...k.children]).forEach(c => ro.observe(c)); }
+  const auFs = () => { if(fsEl()) apiOn = true; else if(apiOn){ apiOn = false; if(on) off(true); } };
+  const memo = v => { try{ v===undefined ? sessionStorage.removeItem("staal-sfs-non") : sessionStorage.setItem("staal-sfs-non", "1"); }catch(e){} };
+  const refuse = () => { try{ return sessionStorage.getItem("staal-sfs-non")==="1"; }catch(e){ return false; } };
+  /* plein écran du navigateur : il faut un geste de l'élève ; s'il n'y en a pas eu (lien ouvert directement), on attend son premier clic */
+  function api(){ const req = D.requestFullscreen || D.webkitRequestFullscreen; if(!req || fsEl()) return;
+    try{ const p = req.call(D); if(p && p.catch) p.catch(() => { if(on) document.addEventListener("pointerdown", premier, {capture:true, once:true}); }); }catch(e){} }
+  const premier = () => { if(on && !fsEl()) api(); };
+  function go(){ on = true; memo(); D.classList.add("sfs"); bouton();
+    document.addEventListener("fullscreenchange", auFs); document.addEventListener("webkitfullscreenchange", auFs);
+    window.addEventListener("resize", ajuste);
+    api(); window.scrollTo(0, 0); }
+  /* à l'ouverture d'une séance : plein écran automatique, sauf si l'élève l'a quitté dans cet onglet */
+  function auto(){ if(on){ bouton(); if(!fsEl()) document.addEventListener("pointerdown", premier, {capture:true, once:true}); } else if(!refuse()) go(); else bouton(); }
+  function off(viaApi, garder){ on = false; D.classList.remove("sfs"); if(!garder) memo(1); document.removeEventListener("pointerdown", premier, {capture:true});
+    if(ro){ ro.disconnect(); ro = null; } window.removeEventListener("resize", ajuste);
+    document.removeEventListener("fullscreenchange", auFs); document.removeEventListener("webkitfullscreenchange", auFs);
+    document.querySelectorAll("#labyroot .lleft,#labyroot .sleft,#labyroot>*").forEach(e => e.style.zoom = "");
+    if(!viaApi && fsEl()){ apiOn = false; try{ const p = (document.exitFullscreen || document.webkitExitFullscreen).call(document); if(p && p.catch) p.catch(() => {}); }catch(e){} }
+    bouton(); }
+  return { bouton, auto, ajuste, off: () => { if(on) off(false, true); }, get actif(){ return on; } };
+})();
 /* ---------- Plein écran des mini-jeux de maths (téléphone et tablette) ----------
    Le bouton « Plein écran » n'est visible que sur un écran étroit ou tactile : sur ordinateur, rien ne change.
    En plein écran : on cache l'en-tête du site, le fil d'Ariane et les textes autour du jeu ; le jeu occupe toute la fenêtre.
@@ -2504,6 +2582,7 @@ function splitFeuilles(){ Object.values(typeof CH!=="undefined"?CH:{}).forEach(D
   if(F.length) D.feuille=F; }); }
 function route(){ splitFeuilles();
   if(MJFS.actif) MJFS.off(true);
+  { const h0=location.hash.slice(1).split("/"); if(SFS.actif && !(JEUX[h0[0]] && JEUX[h0[0]].seances && h0[1])) SFS.off(); }
   if(TIMER){ clearInterval(TIMER); TIMER=null; }
   PRINT.cur=null; document.documentElement.classList.remove("hasprint");
   const sm = location.hash.match(/^#sheet:((?:6e|5e|4e|3e)-\d+):(\w+)(?::([\d,]+))?$/); if(sm){ sheetPage(sm[1], sm[2], sm[3]); return; }
