@@ -440,7 +440,34 @@ const L5 = [
   map:["########","#R...PD#","########"], doors:[40],
   prog:[["repeter",3,[["enlever",2]]],["multiplier",5],["repeter",4,[["avancer"]]],["avancer"]], rep:14,
   aide:"Remonte le programme à l'envers. Avant « multiplier par 5 », le robot affichait 40 ÷ 5 = 8. Avant la boucle, qui enlève 2 trois fois de suite (donc 6 en tout), il affichait… ?",
-  sol:null}
+  sol:null},
+ /* ---- niveaux SECRETS de la 5e (49 à 53) : la zone cachée, ouverte quand toute la séance 1 est réussie ----
+    noir : le labyrinthe n'est éclairé qu'autour du robot · miroir : « gauche » et « droite » sont inversés · muet : le code de la porte est effacé */
+ {titre:"Dans le noir", secret:true, noir:true, v0:4, dir:"E", max:13, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["#########","#..#..PD#","#.##.####","#R...####","####.####","#########"], doors:[12],
+  consigne:"Le labyrinthe est plongé dans le <b>noir</b> : tu ne vois que les cases autour du robot. Il part avec le nombre <b>4</b>. Lance ton programme pour explorer : les cases découvertes restent éclairées.",
+  aide:"Explore petit à petit : écris quelques blocs, lance, regarde ce qui s'éclaire, puis continue ton programme. Attention aux culs-de-sac ! Quand tu découvres la porte, son code apparaît : fais le bon calcul AVANT d'arriver devant elle.",
+  sol:[["avancer"],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["multiplier",3],["avancer"],["avancer"],["avancer"]]},
+ {titre:"Le miroir", secret:true, miroir:true, v0:2, dir:"E", max:11, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["#######","#R..###","###.###","###P..D","#######"], doors:[10],
+  consigne:"Ce labyrinthe est un <b>miroir</b> : quand le programme dit « tourner à gauche », le robot tourne à droite… et inversement ! Il part avec le nombre <b>2</b>. Ouvre la porte et amène-le au drapeau.",
+  aide:"Pour descendre, le robot doit tourner à droite… donc dans le miroir, il faut le bloc « tourner à gauche » ! Fais pareil au deuxième virage. Et pour la porte : quel calcul transforme 2 en 10 ?",
+  sol:[["multiplier",5],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"],["droite"],["avancer"],["avancer"],["avancer"]]},
+ {titre:"Les portes glacées", secret:true, v0:3, dir:"E", max:11, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["########","#R.P..##","#####.##","#####P##","#####D##","########"], doors:[-5,4],
+  consigne:"Les codes de ces portes sont <b>sous zéro</b>… ou presque ! Le robot part avec le nombre <b>3</b>. Ouvre les deux portes et amène-le au drapeau.",
+  aide:"Pour passer de 3 à −5, il faut enlever beaucoup : compte sur une droite graduée, de 3 jusqu'à −5. Ensuite, de −5 à 4 : combien faut-il ajouter ? Pense aussi au virage.",
+  sol:[["enlever",8],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["avancer"],["ajouter",9],["avancer"],["avancer"]]},
+ {titre:"Le coffre muet", secret:true, muet:true, v0:5, dir:"E", max:7, blocs:["avancer","ajouter","enlever","multiplier"],
+  map:["########","#R..P.D#","########"], doors:["f"], fn:v=>48,
+  consigne:"Le code de la porte a été <b>effacé</b> ! Un indice est gravé dessus : <b>« Je suis un nombre entre 40 et 50, multiple de 6 et multiple de 8 à la fois. »</b> Le robot part avec le nombre <b>5</b>.",
+  aide:"Écris les multiples de 8 entre 40 et 50 : 40 et 48. Lequel est aussi un multiple de 6 ? Ensuite, trouve comment passer de 5 à ce nombre avec deux calculs : par exemple, ajouter un petit nombre puis multiplier.",
+  sol:[["ajouter",1],["multiplier",8],["avancer"],["avancer"],["avancer"],["avancer"],["avancer"]]},
+ {titre:"La porte finale", secret:true, noir:true, miroir:true, v0:6, dir:"E", max:14, blocs:["avancer","gauche","droite","ajouter","enlever","multiplier"],
+  map:["#########","#...#..D#","###.#P###","#R.P..###","#########"], doors:[14,2],
+  consigne:"La porte finale : le labyrinthe est dans le <b>noir</b> ET c'est un <b>miroir</b> ! Le robot part avec le nombre <b>6</b>. Tout ce que tu as appris dans la zone secrète va te servir.",
+  aide:"Explore d'abord dans le noir, avec peu de blocs, pour découvrir le chemin et les codes. N'oublie pas : dans le miroir, « tourner à gauche » fait tourner le robot à droite. Il y a deux portes : fais chaque calcul juste avant la bonne porte.",
+  sol:[["enlever",4],["avancer"],["avancer"],["avancer"],["avancer"],["droite"],["multiplier",7],["avancer"],["avancer"],["gauche"],["avancer"],["avancer"]]}
 ];
 
 /* on retire les rangées de haies inutiles en haut et en bas (une seule rangée de bordure suffit) */
@@ -470,8 +497,7 @@ function simulate(L, prog, v0){
             if(st.v!==code){ acts.push({t:"locked", id, x:st.x, y:st.y, d:st.d, code, v:st.v}); end="porte"; return; }
             opened[k]=1; acts.push({t:"open", id, k}); }
           st.x=nx; st.y=ny; acts.push({t:"move", id, x:nx, y:ny, d:st.d}); if(!flagMode && at()){ end="ok"; return; } break; }
-        case "gauche": st.d=(st.d+3)%4; acts.push({t:"turn", id, k:-1, x:st.x, y:st.y, d:st.d}); break;
-        case "droite": st.d=(st.d+1)%4; acts.push({t:"turn", id, k:1, x:st.x, y:st.y, d:st.d}); break;
+        case "gauche": case "droite": { const k=(n[0]==="droite"?1:-1)*(L.miroir?-1:1); st.d=(st.d+4+k)%4; acts.push({t:"turn", id, k, x:st.x, y:st.y, d:st.d}); break; }
         case "ajouter": st.v+=n[1]; acts.push({t:"calc", id, v:st.v}); break;
         case "enlever": st.v-=n[1]; acts.push({t:"calc", id, v:st.v}); break;
         case "multiplier": st.v*=n[1]; acts.push({t:"calc", id, v:st.v}); break;
@@ -549,6 +575,7 @@ function mazeSVG(L){
   for(const k in doors){ const [x,y]=k.split(",").map(Number), X=x*CELL, Y=y*CELL, code=doors[k];
     s+=`<g class="ldoor" data-k="${k}"><rect x="${X+5}" y="${Y+3}" width="${CELL-10}" height="${CELL-6}" rx="4" fill="#9a6a3a" stroke="#6b4423" stroke-width="2"/><circle cx="${X+CELL-12}" cy="${Y+CELL/2+2}" r="2.4" fill="#f5d36b"/>
       <rect x="${X+8}" y="${Y+9}" width="${CELL-16}" height="18" rx="3" fill="#fff8e1"/><text class="ldcode" x="${X+CELL/2}" y="${Y+23}" text-anchor="middle" style="font:800 13px Arial;fill:#5a3a1a">${code==="f"?"?":fmtN(code)}</text></g>`; }
+  if(L.noir){ s+=`<g class="lfog" aria-hidden="true">`; L.map.forEach((row,y)=>[...row].forEach((c,x)=>{ s+=`<rect id="fg-${x}-${y}" class="lfogc" x="${x*CELL-0.5}" y="${y*CELL-0.5}" width="${CELL+1}" height="${CELL+1}" fill="#0c1430" stroke="#18224a" stroke-width="1"/>`; })); s+="</g>"; }
   s+=`<g class="lbot" id="lbot"><g transform="translate(${-CELL/2} ${-CELL/2})">
      <rect x="9" y="11" width="24" height="22" rx="7" fill="#4C97FF" stroke="#2c5fb3" stroke-width="2"/>
      <rect x="31" y="17" width="6" height="10" rx="2" fill="#2c5fb3"/>
@@ -611,6 +638,7 @@ const TB = k => { const t={kind:"block", type:"l_"+k}; const L=LEVELS[cur];
   return t; };
 const statique = L => ["prevois","coffre"].includes(L.type);
 function consigne(L){
+  if(L.consigne) return L.consigne;
   if(L.type==="prevois") return L.v0!==undefined ? "Sans lancer le programme, prévois le nombre qu'affichera le robot en arrivant au drapeau." : "Sans lancer le programme, prévois sur quel drapeau (A, B ou C) le robot va s'arrêter.";
   if(L.type==="coffre") return "Le programme est déjà écrit. Trouve avec quel nombre le robot doit partir pour ouvrir la porte.";
   if(L.type==="bug") return "Ce programme ne marche pas. Corrige-le pour que le robot arrive au drapeau.";
@@ -701,11 +729,16 @@ function nb(){ return WS.getAllBlocks(false).filter(b=>b.type!==P.start).length;
 function count(){ if(!WS) return; const L=LEVELS[cur]; if(statique(L)) return; const el=document.getElementById("lcount"); if(el) el.innerHTML = `Blocs utilisés : <b>${nb()}</b> sur ${L.max} au maximum`; }
 function place(x, y, d, anim){
   const L=LEVELS[cur], {R}=parse(L); if(x===undefined){ x=R[0]; y=R[1]; d=DIRS[L.dir]; angle=d*90; setVal(L.type==="coffre"||L.type==="formule"?"?":L.v0); doorsReset(); }
+  if(L.noir) eclaire(x, y);
   const bot=document.getElementById("lbot"); if(!bot) return;
   const tr = anim ? "transform .32s ease-in-out" : "none";
   bot.style.transition = tr; bot.style.transform = `translate(${x*CELL+CELL/2}px, ${y*CELL+CELL/2}px) rotate(${angle}deg)`;
   const val=document.getElementById("lval"); if(val){ val.style.transition=tr; val.style.transform=`translate(${x*CELL+CELL/2}px, ${y*CELL+CELL/2}px)`; }
 }
+/* niveaux « dans le noir » : les cases autour du robot s'éclairent, et restent éclairées (gardées pour ce niveau) */
+function eclaire(x, y){ let vu; try{ vu=JSON.parse(store.get("vu-"+cur)||"[]"); }catch(e){ vu=[]; } let neuf=false;
+  for(let dy=-1; dy<=1; dy++) for(let dx=-1; dx<=1; dx++){ const k=(x+dx)+"-"+(y+dy); if(!vu.includes(k)){ vu.push(k); neuf=true; } }
+  vu.forEach(k=>{ const r=document.getElementById("fg-"+k); if(r) r.classList.add("vu"); }); if(neuf) store.set("vu-"+cur, JSON.stringify(vu)); }
 function setVal(v){ const t=document.getElementById("lvalt"); if(t) t.textContent = (v===undefined?"":fmtN(v)); }
 function doorsReset(){ document.querySelectorAll(".ldoor").forEach(g=>g.classList.remove("open","shut")); }
 function msg(h, kind){ const el=document.getElementById("lmsg"); if(!el) return; el.hidden=!h; el.className="lmsg "+(kind||""); el.innerHTML=h; }
@@ -740,7 +773,7 @@ function win(extra){
 }
 function failMsg(res){
   if(res.end==="mur") return "<b>Aïe !</b> Le robot s'est cogné contre une haie. Regarde où il s'est arrêté, puis corrige ton programme.";
-  if(res.end==="porte"){ const a=res.acts[res.acts.length-1]; return `<b>La porte reste fermée !</b> Le robot affiche ${fmtN(a.v)}, mais le code de la porte est ${fmtN(a.code)}.`; }
+  if(res.end==="porte"){ const a=res.acts[res.acts.length-1]; if(LEVELS[cur].muet) return `<b>La porte reste fermée !</b> Le robot affiche ${fmtN(a.v)}, mais ce n'est pas le code. Relis l'indice gravé sur la porte.`; return `<b>La porte reste fermée !</b> Le robot affiche ${fmtN(a.v)}, mais le code de la porte est ${fmtN(a.code)}.`; }
   if(res.end==="boucle") return "<b>Le programme est beaucoup trop long !</b> Vérifie le nombre de répétitions.";
   return "<b>Presque !</b> Le programme est fini, mais le robot n'est pas sur le drapeau. Il manque des blocs ?";
 }

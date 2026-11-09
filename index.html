@@ -976,6 +976,56 @@ html.sheetmode #sheetpage{display:block;max-width:182mm;margin:0 auto;padding:0}
 @media (max-width:1000px){ .tabl .tlay{grid-template-columns:minmax(0,1fr)} .tabl .tpanel{position:static;order:-1} }
 @media (max-width:600px){ .tabl .tmenus{display:none} .tabl .tright .tround{display:none} .tabl .tshare{padding:6px 10px} .tabl .ttitle{font-size:15px} .tabl .tscroll{height:440px} }
 @media (max-width:760px){ .laby .lgrid{grid-template-columns:minmax(0,1fr)} .laby .lws{height:480px} .laby .lleft{max-width:420px} }
+/* ---------- zone secrète ---------- */
+html.secret{--paper:#050816;--grid:#0d1530;--surface:#0b1230;--ink:#e8f1ff;--muted:#9fb0d2;--line:#1d2b57;--okbg:#0f2a1f;--ok:#39ff88;--kobg:#2a0f18;--ko:#ff8095;color-scheme:dark}
+html.secret body{background-color:#050816;background-image:radial-gradient(rgba(62,230,255,.18) 1.2px,transparent 1.4px);background-size:28px 28px}
+html.secret .head .eyebrow{color:#39ff88;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;letter-spacing:.2em}
+html.secret .btn.primary{background:#39ff88;border-color:#39ff88;color:#04140b}
+html.secret .laby .lmaze{border-color:#1d2b57}
+html.secret .laby .lws{border-color:#1d2b57}
+html.secret .sbar{border-left-color:#39ff88}
+.laby .lfogc{transition:opacity .45s}
+.laby .lfogc.vu{opacity:0}
+.sk-mot{display:flex;gap:8px;flex-wrap:wrap}
+.sk-l{display:inline-grid;place-items:center;width:46px;height:52px;border-radius:10px;border:2px solid #2c3f7a;background:#0b1230;color:#6f80a6;font:800 24px ui-monospace,Consolas,monospace}
+.sk-l.ok{border-color:#39ff88;color:#39ff88;box-shadow:0 0 14px rgba(57,255,136,.35)}
+.sk-mini .sk-l{width:30px;height:34px;font-size:17px;border-radius:7px}
+.sk-unlock{background:rgba(3,5,14,.92)}
+.sk-box{position:relative;overflow:hidden;width:100%;max-width:1080px;max-height:calc(100vh - 32px);overflow-y:auto;display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px;padding:44px 48px;border-radius:24px;background:#050816;color:#e8f1ff;border:2px solid #1d2b57;box-shadow:0 0 80px rgba(57,255,136,.18);
+  background-image:linear-gradient(rgba(62,230,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(62,230,255,.07) 1px,transparent 1px);background-size:34px 34px}
+.sk-txt{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.sk-term{margin:0;font:400 16px/1.9 ui-monospace,"Cascadia Mono",Consolas,monospace;color:#7ef9b3}
+.sk-term p{margin:0}
+.sk-t3{color:#ffd166}
+.sk-cur{display:inline-block;width:10px;height:18px;background:#7ef9b3;vertical-align:-3px;margin-left:6px;animation:skblink 1s steps(1) infinite}
+.sk-box h2{margin:0;font-family:var(--f-display);font-size:clamp(34px,5vw,58px);line-height:1.04;letter-spacing:-1px;color:#e8f1ff}
+.sk-box h2 span{color:#39ff88;text-shadow:0 0 22px rgba(57,255,136,.5)}
+.sk-p{margin:0;font-size:18px;line-height:1.6;color:#c4d1ea}
+.sk-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sk-go{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:14px;border:0;background:#39ff88;color:#04140b;font:inherit;font-weight:700;font-size:18px;text-decoration:none;cursor:pointer;box-shadow:0 0 30px rgba(57,255,136,.4)}
+.sk-later{display:inline-flex;align-items:center;min-height:52px;padding:0 18px;border-radius:14px;border:2px solid #2c3f7a;background:transparent;color:#c4d1ea;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.sk-chut{margin:0;font:400 14px ui-monospace,Consolas,monospace;color:#8a9bbd}
+.sk-art{flex:0 1 300px;margin:0 auto}
+.sk-vault{display:block;width:100%;max-width:300px;height:auto}
+.sk-door{transform-box:view-box;transform-origin:100px 100px;animation:skdoor 1.8s 1.2s ease-in-out both}
+.sk-light{opacity:0;animation:sklight 1.8s 1.2s ease-in-out both}
+.sk-vault.ouvert .sk-door{animation:none;transform:translateX(-70px) scale(.92);opacity:.45}
+.sk-vault.ouvert .sk-light{animation:none;opacity:.32}
+.sk-unlock .sk-term p{opacity:0;animation:skline .01s both}
+.sk-unlock .sk-t1{animation-delay:.1s!important}.sk-unlock .sk-t2{animation-delay:.6s!important}.sk-unlock .sk-t3{animation-delay:1.1s!important}.sk-unlock .sk-t4{animation-delay:1.6s!important}
+@keyframes skline{to{opacity:1}}
+@keyframes skblink{50%{opacity:0}}
+@keyframes skdoor{0%{transform:rotate(0)}55%{transform:rotate(180deg)}100%{transform:translateX(-70px) rotate(180deg) scale(.92);opacity:.45}}
+@keyframes sklight{0%,50%{opacity:0}100%{opacity:.32}}
+@media (prefers-reduced-motion: reduce){ .sk-door,.sk-light,.sk-cur,.sk-unlock .sk-term p{animation:none;opacity:1} .sk-light{opacity:.32} }
+.seance.sk-carte{background:#050816;color:#e8f1ff;border:2px solid #39ff88;box-shadow:0 0 24px rgba(57,255,136,.25);background-image:radial-gradient(rgba(62,230,255,.18) 1.2px,transparent 1.4px);background-size:24px 24px}
+.seance.sk-carte h2,.seance.sk-carte .sphr{color:#e8f1ff}
+.seance.sk-carte .snum{color:#39ff88}
+.seance.sk-carte .pastille{background:#0f2a1f;color:#39ff88;border-color:#39ff88}
+.seance.sk-carte .btn.primary{background:#39ff88;border-color:#39ff88;color:#04140b}
+.seance.sk-carte .sprog{color:#9fb0d2}
+.sk-refus{max-width:720px;margin:20px auto;display:flex;flex-direction:column;gap:18px;padding:32px;border-radius:20px;background:#050816;border:2px solid #1d2b57;color:#c4d1ea}
+.sk-refus .sk-term{color:#ff8095}
 /* ---------- plein écran des séances informatiques (ordinateur) : le jeu occupe toute la fenêtre, sans défilement ---------- */
 .sbarw{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:-8px 0 18px}
 .sbarw .sbar{flex:1 1 420px;margin:0}
@@ -1618,6 +1668,9 @@ const JEUX = {
     ],
     libre:{titre:"20 niveaux pour aller plus loin", phrase:"20 niveaux, du plus facile au plus difficile : des calculs au bon moment, des nombres négatifs et à virgule, des formules, des boucles dans des boucles, et trois défis pour finir.", niv:[23,18,24,25,26,27,28,29,19,30,31,22,21,32,20,33,34,13,35,14],
        appris:["Un calcul doit être fait avant que le robot arrive devant la porte.", "On peut mélanger déplacements, virages, calculs et boucles.", "Multiplier par 0 donne toujours 0 ; en ajoutant 2 ou en multipliant par 3, un nombre impair reste impair.", "5 × x + 10 et 5 × (x + 2) donnent toujours le même résultat ; 3 × (x + 4) + 3 × x se réduit en 6 × x + 12."]},
+    secret:{titre:"Les niveaux secrets", apres:"s1", mot:"ROBOT", badge:"Maître du labyrinthe", niv:[49,50,51,52,53],
+       phrase:"Cinq niveaux cachés, pour ceux qui ont réussi toute la séance 1 : un labyrinthe dans le noir, un miroir, des portes sous zéro, un code effacé… et la porte finale.",
+       appris:["Dans le noir, on explore petit à petit : on lance, on observe, on complète son programme.", "Dans le miroir, il faut inverser « gauche » et « droite » dans sa tête avant de placer les blocs.", "On peut trouver un code caché grâce aux multiples : 48 est un multiple de 6 et de 8."]},
     intro:"Le robot transporte un nombre. Les portes ne s'ouvrent que s'il affiche le bon code : programme ses déplacements et ses calculs. Les blocs ont les mêmes couleurs et les mêmes noms que dans Scratch."},
   stylo4:{cls:"4e", mod:{src:"data/scratch.js", name:"SCRATCH", pack:"4e"}, wide:true, eyebrow:"programmation", store:"staal-scratch4-done", titre:"Le lutin dessinateur",
     carte:{tag:"Programmation", h:"Le lutin dessinateur", p:"Programme le stylo du lutin, comme dans Scratch : polygones, frise par translation, variables."},
@@ -1677,8 +1730,8 @@ if(window.MJ) Object.entries(MJ).forEach(([k,m])=>{ JEUX[k]={cls:m.cls, mod:{src
 const UNITE = J => J.tab ? ["mission","missions"] : ["niveau","niveaux"];
 const reussis = (n, J) => J.tab ? `${n} mission${n>1?"s":""} réussie${n>1?"s":""}` : `${n} niveau${n>1?"x":""} réussi${n>1?"s":""}`;
 function badgeSeances(J){ const n=J.seances.length; return n===1 ? (J.libre?"1 séance + autonomie":"1 séance d'1 h") : `${n} séances${J.libre?" + autonomie":""}`; }
-function seanceDe(J, sid){ if(sid==="libre") return J.libre||null; const m=/^s(\d)$/.exec(sid||""); return m ? J.seances[+m[1]-1]||null : null; }
-const nomSeance = (J, sid) => sid==="libre" ? "En autonomie" : J.seances.length>1 ? "Séance "+sid.slice(1) : "Séance";
+function seanceDe(J, sid){ if(sid==="libre") return J.libre||null; if(sid==="secret"||sid==="secret-staal") return J.secret||null; const m=/^s(\d)$/.exec(sid||""); return m ? J.seances[+m[1]-1]||null : null; }
+const nomSeance = (J, sid) => /^secret/.test(sid) ? "Zone secrète" : sid==="libre" ? "En autonomie" : J.seances.length>1 ? "Séance "+sid.slice(1) : "Séance";
 /* progression enregistrée par le jeu (mêmes clés qu'avant : rien n'est perdu) */
 function faits(J){ try{ const v=JSON.parse(localStorage.getItem(J.store)||"null"); const d=J.tab ? (v&&v.done) : v; return Array.isArray(d) ? d : []; }catch(e){ return []; } }
 const moteur = J => J.mod ? window[J.mod.name] : J.tab ? window.TABLEUR : window.LABY;
@@ -1702,31 +1755,70 @@ function outil(jeu){
       <ol class="sniv" data-niv="${S.niv.join(",")}" aria-label="${U[1]} de cette ${libre?"partie":"séance"}">${S.niv.map((i,k)=>`<li class="${d.includes(i)?"ok":""}"><b>${k+1}</b></li>`).join("")}</ol>
       <div class="sft"><span class="sprog${ok===tot?" ok":""}">${ok===tot?`Tout est réussi : ${tot} sur ${tot} ✓`:ok?`${reussis(ok,J)} sur ${tot}`:`${tot} ${U[1]}`}</span><span class="btn primary">${ok===tot?"Revoir":ok?"Continuer":"Commencer"} →</span></div></a>`; };
   app.innerHTML = `<div class="head"><span class="eyebrow">Informatique · ${J.eyebrow||(J.tab?"tableur":"programmation")}</span><h1>${J.carte.h}</h1><p>${intro}</p></div>
-    <div class="seances">${J.seances.map((S,i)=>bloc(S,"s"+(i+1))).join("")}${J.libre?bloc(J.libre,"libre"):""}</div>`;
+    <div class="seances">${J.seances.map((S,i)=>bloc(S,"s"+(i+1))).join("")}${J.libre?bloc(J.libre,"libre"):""}${secretOuvert(J)?`<a class="seance sk-carte" href="#${jeu}/secret"><div class="shd"><span class="snum">Zone secrète</span><span class="pastille">${secretFini(J)?"Badge : "+esc(J.secret.badge):"Accès réservé"}</span></div><h2>${esc(J.secret.titre)}</h2><p class="sphr">Tu as trouvé le passage secret. Garde-le pour toi !</p><div class="sk-mot sk-mini">${skLettres(J,d)}</div><div class="sft"><span class="sprog">${J.secret.niv.filter(i=>d.includes(i)).length} sur ${J.secret.niv.length}</span><span class="btn primary">Entrer →</span></div></a>`:""}</div>`;
   /* noms des niveaux, lus dans le jeu lui-même */
   chargerMoteur(J, false).then(()=>{ const M=moteur(J); if(!M || !M.levels || location.hash.slice(1)!==jeu) return; const T=M.levels(packDe(J));
     app.querySelectorAll(".sniv").forEach(ol=>{ ol.dataset.niv.split(",").map(Number).forEach((i,k)=>{ const li=ol.children[k], t=T[i]; if(!li||!t) return; li.innerHTML=`<b>${k+1}</b> ${esc(t.t)}`; if(t.defi) li.classList.add("defi"); }); }); }).catch(()=>{});
 }
 function seancePage(jeu, sid){
   const J=JEUX[jeu], C=CLASSES[J.cls], S=seanceDe(J,sid), libre=sid==="libre", nom=nomSeance(J,sid), U=UNITE(J), tot=S.niv.length;
-  document.documentElement.style.setProperty("--c", C.couleur);
+  const secret=/^secret/.test(sid);
+  if(sid==="secret" && !secretOuvert(J)){ secretRefus(jeu); return; }
+  document.documentElement.classList.toggle("secret", secret);
+  document.documentElement.style.setProperty("--c", secret ? "#39ff88" : C.couleur);
   crumbs.innerHTML = `<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${J.cls}">${C.nom}</a><span aria-hidden="true">›</span><a href="#${jeu}">${J.titre}</a><span aria-hidden="true">›</span><span>${nom}</span>`;
-  app.innerHTML = `<div class="head shead"><span class="eyebrow">${J.carte.h} · ${libre?"quand tu veux, chez toi":"1 h en salle informatique"}</span><h1>${(libre?"En autonomie":nom)+" · "+esc(S.titre)}</h1><p>${S.phrase}</p><p class="sintro">${J.intro}</p></div>
-    <div class="sbarw"><span class="sfs-t">${J.carte.h}<b>${libre?"En autonomie":nom}</b></span><div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div><button class="btn primary sfs-go" id="sfsgo" type="button" aria-pressed="false"></button></div>
+  app.innerHTML = (secret ? `<div class="head shead"><span class="eyebrow">Zone secrète · accès réservé</span><h1>${esc(S.titre)}</h1><p>${S.phrase}</p></div>`
+    : `<div class="head shead"><span class="eyebrow">${J.carte.h} · ${libre?"quand tu veux, chez toi":"1 h en salle informatique"}</span><h1>${(libre?"En autonomie":nom)+" · "+esc(S.titre)}</h1><p>${S.phrase}</p><p class="sintro">${J.intro}</p></div>`) + `
+    <div class="sbarw"><span class="sfs-t">${secret?"Zone secrète":J.carte.h}<b>${secret?"Accès réservé":libre?"En autonomie":nom}</b></span><div class="sbar${libre?" libre":""}" id="sbar" aria-live="polite"></div><button class="btn primary sfs-go" id="sfsgo" type="button" aria-pressed="false"></button></div>
     <div id="labyroot"><p class="where">Chargement du jeu…</p></div>`;
   SFS.auto();
   const barre = (cur, d) => { const el=document.getElementById("sbar"); if(!el) return; const k=S.niv.indexOf(cur)+1, ok=S.niv.filter(i=>d.includes(i)).length;
+    if(secret){ el.innerHTML = `<span class="sbn">Niveau secret ${k} sur ${tot}</span><span class="sk-mot sk-mini" aria-label="Mot de passe">${skLettres(J,d)}</span><span class="sbd">${ok===tot?`Mot de passe complet ✓`:`Chaque niveau réussi révèle une lettre`}</span>`; return; }
     el.innerHTML = `<span class="sbn">${U[0]==="mission"?"Mission":"Niveau"} ${k} sur ${tot}</span><span class="sbtrack" role="progressbar" aria-label="Progression" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${ok}"><i style="width:${Math.round(100*ok/tot)}%"></i></span><span class="sbd">${ok===tot?`Tout est réussi ✓`:`${reussis(ok,J)} sur ${tot}`}</span>`; };
   barre(S.niv[0], faits(J));
-  const opts = {niv:S.niv.slice(), fin: libre?"Voir mon bilan":"Terminer la séance", onChange:barre, onFin:d=>bilan(jeu, sid, d)};
+  const opts = {niv:S.niv.slice(), fin: libre||secret?"Voir mon bilan":"Terminer la séance", onChange:barre, onFin:d=>bilan(jeu, sid, d)};
   chargerMoteur(J, true).then(()=>{ const root=document.getElementById("labyroot"); if(!root || location.hash.slice(1)!==jeu+"/"+sid) return; moteur(J).init(root, packDe(J), opts); SFS.ajuste(); })
     .catch(()=>{ const r=document.getElementById("labyroot"); if(r) r.innerHTML=`<p class="where">Le jeu n'a pas pu se charger. Vérifie ta connexion, puis recharge la page.</p>`; });
 }
+/* ---------- Zone secrète (5e, Le labyrinthe des nombres) : ouverte quand toute la séance « apres » est réussie ----------
+   #nombres/secret : la zone (refusée tant qu'elle n'est pas ouverte) · #nombres/secret-staal : accès direct pour M. Staal (essai) */
+const secretOuvert = J => !!(J && J.secret && seanceDe(J, J.secret.apres).niv.every(i => faits(J).includes(i)));
+const secretFini = J => !!(J && J.secret && J.secret.niv.every(i => faits(J).includes(i)));
+const ICO_COFFRE = `<svg class="sk-vault" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="92" fill="#0b1230" stroke="#1d2b57" stroke-width="5"/><circle cx="100" cy="100" r="78" fill="none" stroke="#3ee6ff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 8"/><circle class="sk-light" cx="100" cy="100" r="66" fill="#39ff88"/><g class="sk-door"><circle cx="100" cy="100" r="66" fill="#121c44" stroke="#2c3f7a" stroke-width="4"/><circle cx="100" cy="100" r="22" fill="#1a275a" stroke="#3ee6ff" stroke-width="3"/><path d="M100 78v44M78 100h44M85 85l30 30M115 85l-30 30" stroke="#3ee6ff" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="100" r="6" fill="#3ee6ff"/><circle cx="100" cy="42" r="5" fill="#2c3f7a"/><circle cx="158" cy="100" r="5" fill="#2c3f7a"/><circle cx="100" cy="158" r="5" fill="#2c3f7a"/><circle cx="42" cy="100" r="5" fill="#2c3f7a"/></g></svg>`;
+function skLettres(J, d){ const S=J.secret; return S.mot.split("").map((c,k)=>{ const ok=d.includes(S.niv[k]); return `<span class="sk-l${ok?" ok":""}" aria-label="${ok?"lettre "+c:"lettre cachée"}">${ok?c:"?"}</span>`; }).join(""); }
+/* l'écran qui s'ouvre quand la séance est finie : « tu as trouvé le passage secret » */
+function passageSecret(jeu, sid, d){
+  document.querySelectorAll(".sfin").forEach(x=>x.remove());
+  const J=JEUX[jeu], n=seanceDe(J,sid).niv.length;
+  const box=document.createElement("div"); box.className="sfin sk-unlock"; box.setAttribute("role","dialog"); box.setAttribute("aria-modal","true"); box.setAttribute("aria-labelledby","skt");
+  box.innerHTML = `<div class="sk-box"><div class="sk-txt">
+      <div class="sk-term"><p class="sk-t1">&gt; ${esc(J.titre)} · Séance 1 : ${n} niveaux sur ${n} réussis.</p><p class="sk-t2">&gt; Analyse du labyrinthe…</p><p class="sk-t3">&gt; ALERTE : un passage caché a été détecté.</p><p class="sk-t4">&gt; Accès autorisé<span class="sk-cur"></span></p></div>
+      <h2 id="skt">Tu as trouvé<br>le <span>passage secret.</span></h2>
+      <p class="sk-p">Derrière cette porte : 5 niveaux que presque personne ne verra. Les règles changent un peu… à toi de les découvrir.</p>
+      <div class="sk-btns"><a class="sk-go" href="#${jeu}/secret">Entrer dans la zone secrète →</a><button class="sk-later" type="button" data-bilan>Voir le bilan de la séance</button></div>
+      <p class="sk-chut">Garde le secret : ne dis pas aux autres comment on y entre !</p></div>
+    <div class="sk-art">${ICO_COFFRE}</div></div>`;
+  const fermer=()=>{ box.remove(); document.removeEventListener("keydown", esc1); };
+  const esc1=e=>{ if(e.key==="Escape") fermer(); };
+  box.addEventListener("click", e=>{ if(e.target.closest("[data-bilan]")){ fermer(); bilan(jeu, sid, d, true); } else if(e.target.closest("a")) fermer(); });
+  document.addEventListener("keydown", esc1);
+  document.body.appendChild(box); const f=box.querySelector(".sk-go"); if(f) f.focus({preventScroll:true});
+}
+/* page refusée : la zone n'est pas encore ouverte */
+function secretRefus(jeu){
+  const J=JEUX[jeu]; document.documentElement.classList.add("secret");
+  crumbs.innerHTML = `<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${J.cls}">${CLASSES[J.cls].nom}</a><span aria-hidden="true">›</span><a href="#${jeu}">${J.titre}</a>`;
+  app.innerHTML = `<div class="sk-refus"><p class="sk-term">&gt; Recherche du passage…<br>&gt; ERREUR : accès refusé.<br>&gt; Ce passage n'existe pas… pour l'instant.<span class="sk-cur"></span></p>
+    <p>Il paraît qu'un endroit caché s'ouvre quand on a réussi <b>tous</b> les niveaux de la séance 1. Mais ce n'est peut-être qu'une rumeur…</p>
+    <a class="btn primary" href="#${jeu}/s1">Aller à la séance 1</a></div>`;
+}
 /* bilan de fin de séance (fenêtre par-dessus le jeu) */
-function bilan(jeu, sid, d){
+function bilan(jeu, sid, d, direct){
   document.querySelectorAll(".sfin").forEach(x=>x.remove());
   const J=JEUX[jeu], S=seanceDe(J,sid), libre=sid==="libre", nom=nomSeance(J,sid), U=UNITE(J), tot=S.niv.length;
   const reste=S.niv.map((i,k)=>d.includes(i)?null:k+1).filter(x=>x);
+  if(!direct && !reste.length && J.secret && sid===J.secret.apres){ passageSecret(jeu, sid, d); return; }
+  if(/^secret/.test(sid)) return bilanSecret(jeu, sid, d, reste);
   const idx=libre ? -1 : +sid.slice(1)-1, suite = libre || J.libre ? null : J.seances[idx+1] ? [`#${jeu}/s${idx+2}`, `Séance ${idx+2}`] : null;
   const plus = !libre && J.libre ? `<div class="sfinplus"><h3>Tu as terminé avant la fin de l'heure ?</h3><p>Bravo ! Continue en autonomie : d'autres ${U[1]} t'attendent, à ton rythme.</p><a class="btn primary" href="#${jeu}/libre">Continuer en autonomie →</a></div>` : "";
   const liste = l => l.length===1 ? `le n° ${l[0]}` : `les n° ${l.slice(0,-1).join(", ")} et ${l[l.length-1]}`;
@@ -1743,6 +1835,23 @@ function bilan(jeu, sid, d){
   box.addEventListener("click", e=>{ if(e.target===box || e.target.closest("[data-x]")) fermer(); else if(e.target.closest("a")) fermer(); });
   document.addEventListener("keydown", esc1);
   document.body.appendChild(box); const f=box.querySelector(".btn"); if(f) f.focus({preventScroll:true});
+}
+/* bilan de la zone secrète : le mot de passe et le badge */
+function bilanSecret(jeu, sid, d, reste){
+  const J=JEUX[jeu], S=J.secret;
+  const box=document.createElement("div"); box.className="sfin sk-unlock"; box.setAttribute("role","dialog"); box.setAttribute("aria-modal","true"); box.setAttribute("aria-labelledby","skt");
+  box.innerHTML = `<div class="sk-box sk-fin"><div class="sk-txt">` + (reste.length
+    ? `<p class="sk-term">&gt; Mot de passe incomplet…</p><h2 id="skt">Encore <span>${reste.length} niveau${reste.length>1?"x":""}</span> secret${reste.length>1?"s":""} !</h2><p class="sk-p">Il te reste ${reste.length>1?"les niveaux":"le niveau"} n° ${reste.join(", ")} à réussir pour découvrir tout le mot de passe.</p><div class="sk-mot">${skLettres(J,d)}</div><div class="sk-btns"><button class="sk-go" type="button" data-x>Continuer</button></div>`
+    : `<p class="sk-term">&gt; Mot de passe complet. Zone secrète terminée.<span class="sk-cur"></span></p><h2 id="skt">Tu es <span>${esc(S.badge)}</span> !</h2>
+       <div class="sk-mot">${skLettres(J,d)}</div>
+       <p class="sk-p">Le mot de passe est <b>${S.mot}</b>. Va le dire discrètement à M. Staal : il saura que tu as trouvé et réussi la zone secrète.</p>
+       <div class="sk-btns"><a class="sk-go" href="#${jeu}/libre">Continuer en autonomie →</a><a class="sk-later" href="#${jeu}">Retour à la page des séances</a></div>
+       <p class="sk-chut">Garde le secret pour les autres !</p>`) + `</div><div class="sk-art">${ICO_COFFRE.replace('class="sk-vault"','class="sk-vault ouvert"')}</div></div>`;
+  const fermer=()=>{ box.remove(); document.removeEventListener("keydown", esc1); };
+  const esc1=e=>{ if(e.key==="Escape") fermer(); };
+  box.addEventListener("click", e=>{ if(e.target===box || e.target.closest("[data-x]") || e.target.closest("a")) fermer(); });
+  document.addEventListener("keydown", esc1);
+  document.body.appendChild(box); const f=box.querySelector(".sk-go"); if(f) f.focus({preventScroll:true});
 }
 async function labyrinthe(jeu){
   const J=JEUX[jeu], cls=J.cls;
@@ -2589,7 +2698,7 @@ function route(){ splitFeuilles();
   document.documentElement.classList.remove("sheetmode");
   const h = location.hash.slice(1), m = h.match(/^(6e|5e|4e|3e)(?:-ch(\d+))?$/);
   document.documentElement.style.removeProperty("--c");
-  document.querySelectorAll(".sfin").forEach(x=>x.remove());
+  document.querySelectorAll(".sfin").forEach(x=>x.remove()); document.documentElement.classList.remove("secret");
   const hb=h.split("/")[0], JS=JEUX[hb] && JEUX[hb].seances ? JEUX[hb] : null, sid=JS && seanceDe(JS, h.split("/")[1]) ? h.split("/")[1] : null;
   if(window.LABY) LABY.destroy(); if(window.SCRATCH) SCRATCH.destroy(); if(window.TABLEUR) TABLEUR.destroy(); if(window.COMPTE) COMPTE.destroy(); if(window.GEOJEU) GEOJEU.destroy(); if(window.RAPPORTEUR) RAPPORTEUR.destroy(); if(window.MIROIR) MIROIR.destroy(); if(window.BNAV) BNAV.destroy();
   document.documentElement.classList.toggle("wide", JS ? !!(sid && (JS.tab || JS.wide)) : !!(JEUX[h] && (JEUX[h].tab || JEUX[h].wide)));
