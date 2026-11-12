@@ -310,11 +310,11 @@ exos:[
   {n:"Exercice 8", t:"Problèmes de rangement", w:"Sur ton cahier", h:`<p><b>1)</b> Relevé de températures à 6 h : Briançon −8,5 °C ; Lille 1,5 °C ; Strasbourg −3,2 °C ; Brest 4 °C ; Grenoble −3,25 °C ; Nice 9 °C.</p><p>a) Quelle ville est la plus froide ? la plus chaude ?</p><p>b) Range les villes de la plus chaude à la plus froide.</p>
    <p><b>2)</b> Fosse des Mariannes : −10 994 m ; Lac Assal : −155 m ; Mont Blanc : +4 810 m ; Paris : +35 m ; mer Morte : −430 m. Range ces altitudes dans l'ordre croissant, puis dis quel est le point le plus bas.</p>`,
    c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
-  {n:"Exercice 9", t:"Vrai ou faux ?", w:"Sur ton cahier", h:`<p>Réponds sur ton cahier et justifie chaque réponse (par un exemple, une droite graduée ou une propriété).</p>
-   <p>a) −7 &lt; −2</p><p>b) −0,5 &gt; −0,05</p><p>c) Un nombre strictement négatif est toujours plus petit qu'un nombre strictement positif.</p><p>d) 0 est strictement positif.</p><p>e) |−8| est plus petit que |−3|.</p><p>f) Deux nombres opposés ont la même valeur absolue.</p><p>g) |−4,2| = −4,2</p>`,
-   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
-  {n:"Exercice 10", t:"Qui suis-je ? / Intercaler", w:"Sur ton cahier", h:`<p><b>1)</b> Trouve le nombre :</p><p>a) Je suis strictement négatif et ma valeur absolue est 7.</p><p>b) Je suis l'opposé de −3,4.</p><p>c) Je suis à la fois positif et négatif.</p><p>d) Ma valeur absolue est 5 et je suis plus grand que 0.</p><p>e) Je suis le plus petit nombre entier relatif strictement plus grand que −3.</p>
+  {n:"Exercice 9", t:"Qui suis-je ? / Intercaler", w:"Sur ton cahier", h:`<p><b>1)</b> Trouve le nombre :</p><p>a) Je suis strictement négatif et ma valeur absolue est 7.</p><p>b) Je suis l'opposé de −3,4.</p><p>c) Je suis à la fois positif et négatif.</p><p>d) Ma valeur absolue est 5 et je suis plus grand que 0.</p><p>e) Je suis le plus petit nombre entier relatif strictement plus grand que −3.</p>
    <p><b>2)</b> Écris un nombre relatif compris entre :</p>${cols(["a) −3 et −2","b) −0,4 et −0,3","c) 1 et 1,1","d) −5 et −4,9"])}`,
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
+  {n:"Exercice 10", t:"Vrai ou faux ?", w:"Sur ton cahier", h:`<p>Réponds sur ton cahier et justifie chaque réponse (par un exemple, une droite graduée ou une propriété).</p>
+   <p>a) −7 &lt; −2</p><p>b) −0,5 &gt; −0,05</p><p>c) Un nombre strictement négatif est toujours plus petit qu'un nombre strictement positif.</p><p>d) 0 est strictement positif.</p><p>e) |−8| est plus petit que |−3|.</p><p>f) Deux nombres opposés ont la même valeur absolue.</p><p>g) |−4,2| = −4,2</p>`,
    c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]},
 {t:"Repérage dans le plan (activité 3)", e:[

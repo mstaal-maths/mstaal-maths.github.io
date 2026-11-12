@@ -413,6 +413,16 @@ exos:[
    <figure><figcaption>2. Le rectangle ABCD de centre O</figcaption>${fq({pts:X9b, poly:["A","B","C","D"], segs:[["A","C"],["B","D"]], marks:["O"],  s:24})}<p class="dat">${"AD = "+"6 cm"} · ${"AO = "+"3,5 cm"}</p></figure>
    <figure><figcaption>3. Le carré MNOP</figcaption>${fq({pts:X9c, poly:["M","N","O","P"], segs:[["P","N","ln"]],  hide:["K"], s:34})}<p class="dat">${"PN = "+"4 cm"}</p></figure></div>`,
    c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
+ ]},
+{t:"Aire d'un parallélogramme", e:[
+  {n:"Exercice 10", t:"Calculer l'aire de parallélogrammes", w:"Sur ta feuille", h:`<p>Les quadrilatères ABCD, EFGH, MNOP et QRST sont des parallélogrammes. Calcule leur aire : écris le calcul, puis la réponse avec l'unité. <i>Les figures ne sont pas en vraie grandeur.</i></p>
+   <div class="cgrid">
+    <figure><figcaption><b>a)</b> Calcule l'aire de ABCD.</figcaption>${ex("aire_a","Parallélogramme ABCD : AB = 8 cm, AD = 5 cm, hauteur issue de D : 4 cm",300)}</figure>
+    <figure><figcaption><b>b)</b> Calcule l'aire de EFGH.</figcaption>${ex("aire_b","Parallélogramme EFGH : EF = 9 cm, EH = 5 cm, hauteur tracée à l'extérieur : 4 cm",320)}</figure>
+    <figure><figcaption><b>c)</b> Calcule l'aire de MNOP de deux façons : avec la base [MN], puis avec la base [MP]. Que remarques-tu ?</figcaption>${ex("aire_c","Parallélogramme MNOP : MN = 9 cm avec sa hauteur 5 cm, MP = 6 cm avec sa hauteur 7,5 cm",330)}</figure>
+    <figure><figcaption><b>d)</b> Calcule l'aire de QRST en cm² (1 m = 100 cm).</figcaption>${ex("aire_d","Parallélogramme QRST : QR = 1,5 m, hauteur 80 cm",270)}</figure>
+   </div>`,
+   c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."}
  ]}
 ],
 
