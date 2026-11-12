@@ -301,7 +301,7 @@ exos:[
    <p>Classe ces jours dans l'ordre croissant de leur température (du plus petit au plus grand). Tu indiqueras les températures.</p><p>………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; …………</p>`,
    c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 6", t:"Comparaison de nombres relatifs", w:"Sur ta feuille", h:`<p>Compare avec &lt;, &gt; ou = (complète directement).</p>
-   ${cols(["a) −3,5 …… 3,2","b) −10 …… −2","c) 5,8 …… 5,17","d) −7,3 …… −7,9","e) −4 …… −6","f) 9,2 …… 9,20","g) 1,4 …… 1,04","h) −6,1 …… −6,25"])}`,
+   ${cols(["a) −3,5 …… 3,2","b) −10 …… −2","c) −4 …… −6","d) 5,8 …… 5,17","e) 9,2 …… 9,20","f) 1,4 …… 1,04","g) −7,3 …… −7,9","h) −6,1 …… −6,25"])}`,
    c:"\u2063\ud83d\udd12 Correction prot\u00e9g\u00e9e par un code."},
   {n:"Exercice 7", t:"Ranger des nombres relatifs", w:"Sur ta feuille", h:`<p>Complète directement.</p>
    <p><b>1)</b> Range dans l'ordre croissant : 3,25 ; −3,12 ; 3,6 ; 3,09 ; −3,7 ; −3</p><p>………… &lt; ………… &lt; ………… &lt; ………… &lt; ………… &lt; …………</p>
