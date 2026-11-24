@@ -534,6 +534,7 @@ function partie(B, root){
 ===================================================================== */
 window.BOOST = window.BOOST || {};
 BOOST["6e-5"] = {key:"6e-5", cls:"6e", ch:5, titre:"Le fil des décimaux"};
+BOOST["6e-6"] = {key:"6e-6", cls:"6e", ch:6, titre:"Triangula, l’archipel des cartographes", url:"boost/6e-6-triangula.html"};   /* jeu autonome (fichier à part) */
 
 function page(k){
   const B=BOOST[k], C=CLASSES[B.cls]; document.documentElement.style.setProperty("--c", C.couleur);
@@ -559,13 +560,13 @@ function liste(cls){
   crumbs.innerHTML=`<a href="#accueil">Accueil</a><span aria-hidden="true">›</span><a href="#${cls}">${C.nom}</a><span aria-hidden="true">›</span><span>BOOST</span>`;
   const L=Object.values(BOOST).filter(B=>B.cls===cls).sort((a,b)=>a.ch-b.ch);
   app().innerHTML=`<div class="head"><span class="eyebrow">${C.nom} · BOOST</span><h1>Les séances BOOST</h1><p>Un fil de défis qui ne s'arrête jamais, pour retravailler le chapitre en jouant : questions flash, jeux express, erreurs à trouver…</p></div>
-    <div class="chaps">${L.map(B=>{ const R=jg("boost-"+B.key, null); return `<a class="chap" href="#boost-${B.key}"><div class="row"><span class="n">Chapitre ${B.ch}</span><span class="st on">Disponible</span></div>
+    <div class="chaps">${L.map(B=>{ const R=jg("boost-"+B.key, null); return `<a class="chap" href="${B.url ? B.url : "#boost-"+B.key}"><div class="row"><span class="n">Chapitre ${B.ch}</span><span class="st on">Disponible</span></div>
       <h3>${B.titre}</h3><p class="where">${esc(C.chapitres[B.ch-1][0])}${R?` · record : palier ${R.pal}`:""}</p></a>`; }).join("")}</div>
     <p style="color:var(--muted)">Les séances des autres chapitres arriveront au fil de l'année.</p>`;
 }
 window.PAGES = window.PAGES || {};
 ["6e"].forEach(cls=>{ PAGES["boost-"+cls]={show:()=>liste(cls), back:["#"+cls,"Retour aux chapitres"]}; });
-Object.keys(BOOST).forEach(k=>{ PAGES["boost-"+k]={show:()=>page(k), back:["#boost-"+BOOST[k].cls,"Retour aux séances BOOST"]}; });
+Object.keys(BOOST).filter(k=>!BOOST[k].url).forEach(k=>{ PAGES["boost-"+k]={show:()=>page(k), back:["#boost-"+BOOST[k].cls,"Retour aux séances BOOST"]}; });
 
 /* encadré « Séances BOOST » à la fin de la liste des chapitres (comme un chapitre de plus, d'une autre couleur) */
 const _classe = window.classe;
