@@ -5412,5 +5412,29 @@ window.__triangula = { ouvrirStation, retourCarte, get R() { return R; }, ST3, S
 })();
 
 </script>
+
+<!-- Ajout du site : bouton retour et plein écran -->
+<style>
+#laats-bar{position:fixed;left:12px;bottom:12px;z-index:2147483000;display:flex;gap:8px;font-family:Arial,sans-serif}
+#laats-bar a,#laats-bar button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid #15213b;background:#ffffff;color:#15213b;font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px rgba(21,33,59,.25)}
+#laats-bar a:hover,#laats-bar button:hover{background:#fff4d6}
+#laats-bar svg{width:18px;height:18px}
+</style>
+<div id="laats-bar">
+  <a href="../index.html#boost-6e" aria-label="Retour aux séances BOOST"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Retour</a>
+  <button type="button" id="laats-fs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Plein écran</span></button>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('laats-fs'), t=b.querySelector('span'), d=document, e=d.documentElement;
+  var on=function(){ return d.fullscreenElement||d.webkitFullscreenElement; };
+  var maj=function(){ t.textContent = on() ? 'Quitter le plein écran' : 'Plein écran'; };
+  b.addEventListener('click', function(){
+    if(on()){ (d.exitFullscreen||d.webkitExitFullscreen).call(d); }
+    else{ var r=e.requestFullscreen||e.webkitRequestFullscreen; if(r) r.call(e); }
+  });
+  d.addEventListener('fullscreenchange', maj); d.addEventListener('webkitfullscreenchange', maj);
+})();
+</script>
 </body>
 </html>
